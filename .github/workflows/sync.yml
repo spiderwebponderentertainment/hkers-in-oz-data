@@ -6,7 +6,7 @@ on:
   workflow_dispatch:       # 允許手動觸發
 
 permissions:
-  contents: write          # 允許 workflow 寫入/開 PR
+  contents: write          # 允許 workflow 寫入 / 開 PR
 
 jobs:
   sync:
@@ -16,6 +16,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas
 
       - name: Fetch Google Sheet CSV
         run: |
@@ -30,11 +40,6 @@ jobs:
           echo "==== sheet.csv meta ===="
           wc -l sheet.csv || true
           echo "---- head ----" && head -n 5 sheet.csv || true
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
 
       - name: Convert CSV to JSON
         run: |
