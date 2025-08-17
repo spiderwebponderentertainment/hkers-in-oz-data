@@ -3,7 +3,7 @@
     "name": "港味小館",
     "category": "food_drink",
     "tags": ["cha-chan-teng"],
-    "state": "NSW",                 // 舊寫法 OK
+    "state": "NSW",                 
     "city": "Sydney",
     "area": "CBD",
     "address": "123 George St, Sydney NSW",
@@ -14,8 +14,8 @@
     "name": "Spiderweb Ponder Entertainment",
     "category": "media",
     "tags": ["film","cinema"],
-    "states": ["NSW","VIC","QLD","SA","WA","NT","TAS","ACT"],  // 新寫法
-    "cities": [],                                               // 空陣列 = 全州
+    "states": ["NSW","VIC","QLD","SA","WA","NT","TAS","ACT"],  
+    "cities": [],                                               
     "area": "",
     "address": "全澳洲戲院合作放映",
     "website": "https://example.com"
