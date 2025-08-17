@@ -1,0 +1,34 @@
+name: Sync Google Sheet to JSON
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # 每小時執行一次
+  workflow_dispatch:       # 可以手動 trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Fetch Google Sheet CSV
+        run: curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?gid=0&single=true&output=csv
+
+
+      - name: Convert CSV to JSON
+        run: |
+          pip install pandas
+          python - <<EOF
+          import pandas as pd
+          df = pd.read_csv("sheet.csv")
+          df.to_json("businesses.json", orient="records", force_ascii=False, indent=2)
+          EOF
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add businesses.json
+          git commit -m "Update businesses.json from Google Sheet" || echo "No changes"
+          git push
