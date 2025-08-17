@@ -14,10 +14,19 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # 確保可以比較與推送
 
       - name: Fetch Google Sheet CSV
         run: |
-          curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?gid=0&single=true&output=csv" -o sheet.csv
+          set -e
+          curl -sSL -w "HTTP_STATUS=%{http_code}
+" \
+            "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?gid=0&single=true&output=csv" \
+            -o sheet.csv | tee /dev/stderr
+          echo "==== sheet.csv meta ===="
+          wc -l sheet.csv || true
+          echo "---- head ----" && head -n 5 sheet.csv || true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -27,14 +36,16 @@ jobs:
       - name: Convert CSV to JSON
         run: |
           python - <<'PY'
-          import pandas as pd, json
-
-          # 讀取 CSV（空白欄位以空字串代替）
-          df = pd.read_csv('sheet.csv').fillna('')
+          import pandas as pd, json, sys
+          try:
+              df = pd.read_csv('sheet.csv').fillna('')
+          except Exception as e:
+              print('CSV read error:', e)
+              sys.exit(1)
+          print(f'Rows loaded: {len(df)}')
 
           def split_list(val):
               if isinstance(val, str) and val.strip():
-                  # 支援中英標點分隔
                   s = val.replace('；',';').replace('，',',')
                   parts = []
                   for token in s.replace(';',',').split(','):
@@ -63,34 +74,35 @@ jobs:
                   'phone': r.get('phone',''),
                   'website': r.get('website',''),
               }
-
-              # 新欄位（多州/多市）優先
               states = split_states(r.get('states',''))
               cities = split_list(r.get('cities',''))
-
-              # 舊欄位（單一州/市）作為後備
-              state = r.get('state','')
-              city  = r.get('city','')
-
+              state  = r.get('state','')
+              city   = r.get('city','')
               if states:
                   item['states'] = states
               elif state:
                   item['state'] = state
-
               if cities:
                   item['cities'] = cities
               elif city:
                   item['city'] = city
-
               out.append(item)
 
           with open('businesses.json','w',encoding='utf-8') as f:
-              json.dump(out, f, ensure_ascii=False, indent=2)
+              json.dump(out, f, ensure_ascii=False, indent=2, sort_keys=True)
+          print('Wrote businesses.json with', len(out), 'items')
           PY
+
+      - name: Show diff
+        run: |
+          echo "==== git status ===="
+          git status --porcelain
+          echo "==== diff ===="
+          git --no-pager diff -- businesses.json || true
 
       - name: Commit changes (only if changed)
         run: |
-          if git diff --quiet businesses.json 2>/dev/null; then
+          if git diff --quiet -- businesses.json; then
             echo "No changes."
           else
             git config user.name "github-actions[bot]"
@@ -99,4 +111,3 @@ jobs:
             git commit -m "Update businesses.json from Google Sheet"
             git push
           fi
-
