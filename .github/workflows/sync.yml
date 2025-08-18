@@ -6,8 +6,8 @@ on:
   workflow_dispatch:               # 允許手動觸發
 
 permissions:
-  contents: write                  # 需要開 PR
-  pull-requests: write
+  contents: write                  # 需要推送內容/更新分支
+  pull-requests: write             # 需要建立/合併 PR
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
       - name: Fetch Google Sheet CSV
         run: |
           set -e
-          # 👉 換成你 Google Sheet「發佈為 CSV」的連結
+          # 👉 換成你 Google Sheet「發佈為 CSV」連結
           URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?gid=0&single=true&output=csv"
           CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$URL")
           echo "HTTP_STATUS=$CODE"
@@ -48,12 +48,11 @@ jobs:
           python - <<'PY'
           import pandas as pd, json, re, sys
 
-          # 1) 全欄位按字串讀，避免電話/郵遞區號被轉為數字
+          # 1) 全欄位以字串載入，避免電話被去掉 leading 0
           try:
               df = pd.read_csv('sheet.csv', dtype=str, keep_default_na=False)
           except Exception as e:
-              print('CSV read error:', e)
-              sys.exit(1)
+              print('CSV read error:', e); sys.exit(1)
           print(f'Rows loaded: {len(df)}')
 
           def norm_str(v):
@@ -62,7 +61,6 @@ jobs:
               return s if s else None
 
           def split_list(v):
-              """以 , ; | / 、 分隔，輸出清潔字串陣列"""
               s = norm_str(v)
               if not s: return []
               s = s.replace('；',';').replace('，',',')
@@ -74,9 +72,8 @@ jobs:
               return [x.upper() for x in split_list(v)]
 
           def norm_phone(v):
-              """電話保持原樣（只修剪頭尾空白），保留 leading 0 / +61 等"""
-              s = norm_str(v)
-              return s
+              # 保留原樣，避免 0 / +61 被吃掉
+              return norm_str(v)
 
           def norm_website(v):
               s = norm_str(v)
@@ -94,8 +91,7 @@ jobs:
           out = []
           for _, r in df.iterrows():
               name = norm_str(r.get('name'))
-              if not name:
-                  continue  # 無名稱的行跳過
+              if not name: continue
 
               item = {
                   'name': name,
@@ -111,20 +107,13 @@ jobs:
               # states / state
               states = norm_states(r.get('states'))
               state  = norm_str(r.get('state'))
-              if states:
-                  item['states'] = states
-              elif state:
-                  item['states'] = [state.upper()]
-              else:
-                  item['states'] = []
+              item['states'] = states if states else ([state.upper()] if state else [])
 
               # cities / city
               cities = split_list(r.get('cities'))
               city   = norm_str(r.get('city'))
-              if cities:
-                  item['cities'] = cities
-              elif city:
-                  item['cities'] = [city]
+              if cities: item['cities'] = cities
+              elif city: item['cities'] = [city]
 
               # 座標（如有）
               lat = norm_str(r.get('lat')); lng = norm_str(r.get('lng'))
@@ -132,16 +121,14 @@ jobs:
                   item['lat'] = to_float(lat)
                   item['lng'] = to_float(lng)
 
-              # 廣告相關（可選）
+              # 廣告欄位（可選）
               isSponsored = norm_str(r.get('isSponsored'))
               if isSponsored is not None:
                   item['isSponsored'] = isSponsored.lower() in ('1','true','yes','y')
               for k in ['sponsorTier','sponsorStart','sponsorEnd','adLink','adNote']:
                   v = norm_str(r.get(k))
-                  if k == 'adLink':
-                      v = norm_website(v)
-                  if v is not None:
-                      item[k] = v
+                  if k == 'adLink': v = norm_website(v)
+                  if v is not None: item[k] = v
 
               out.append(item)
 
@@ -168,15 +155,13 @@ jobs:
             - Source: Google Sheet (published CSV)
             - Output: `businesses.json`
           branch: automation/sheet-sync
+          token: ${{ secrets.GITHUB_TOKEN }}
           delete-branch: true
+          add-paths: |
+            businesses.json
 
-      - name: Show PR info (if created)
-        if: ${{ steps.cpr.outputs.pull-request-number != '' }}
-        run: |
-          echo "PR #${{ steps.cpr.outputs.pull-request-number }}"
-          echo "${{ steps.cpr.outputs.pull-request-url }}"
-
-      - name: Enable auto-merge
+      # 啟用 auto-merge
+      - name: Enable auto-merge on PR
         if: ${{ steps.cpr.outputs.pull-request-number != '' }}
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
@@ -184,7 +169,8 @@ jobs:
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: squash
 
-      - name: Merge the PR (no pending checks)
+      # 即時嘗試合併（如無受保護規則阻擋）
+      - name: Merge the PR now (best effort)
         if: ${{ steps.cpr.outputs.pull-request-number != '' }}
         uses: peter-evans/merge-pull-request@v3
         with:
