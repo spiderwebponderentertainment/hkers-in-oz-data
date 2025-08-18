@@ -24,7 +24,8 @@
     ],
     "tags": [
       "film",
-      "cinema"
+      "cinema",
+      "production"
     ],
     "website": "https://www.ponder.productions"
   },
@@ -82,7 +83,7 @@
     "tags": [
       "Supermarket"
     ],
-    "website": "https://gogsupermarket.com.au"
+    "website": "https://www.gogsupermarket.com.au"
   },
   {
     "address": "Shop 210, 65 Albert Ave, Chatswood, NSW, Australia",
@@ -122,7 +123,7 @@
     "tags": [
       "Hong Kong Restaurant"
     ],
-    "website": "https://muigkitchen.com.au"
+    "website": "https://www.muigkitchen.com.au"
   },
   {
     "address": null,
@@ -161,7 +162,7 @@
       "podcast",
       "media"
     ],
-    "website": "https://4eb.org.au/shows/durian-club-cantonese"
+    "website": "https://www.4eb.org.au/shows/durian-club-cantonese"
   },
   {
     "address": "5/27 Illaweena St, Drewvale QLD 4116",
@@ -182,5 +183,212 @@
       "Cafe"
     ],
     "website": "https://joandcocafe.com.au/"
+  },
+  {
+    "address": null,
+    "area": null,
+    "category": "media",
+    "email": "wemedia.vic@gmail.com",
+    "name": "We Media Australia",
+    "phone": null,
+    "states": [
+      "NSW",
+      "VIC",
+      "QLD",
+      "SA",
+      "NT",
+      "WA",
+      "TAS",
+      "ACT"
+    ],
+    "tags": [
+      "Music"
+    ],
+    "website": null
+  },
+  {
+    "address": null,
+    "area": null,
+    "category": "organisation",
+    "cities": [
+      "Adelaide"
+    ],
+    "email": "contact@hkcasa.org.au",
+    "name": "Hong Kong Cultural Association of South Australia 南澳香港文化協會",
+    "phone": null,
+    "states": [
+      "SA"
+    ],
+    "tags": [],
+    "website": "https://www.hkcasa.org.au"
+  },
+  {
+    "address": "Shop 341 Centre Road Bentleigh, VIC, Australia, Victoria 3204",
+    "area": "Bentleigh",
+    "category": "health",
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.9204854,
+    "lng": 145.0547614,
+    "name": "Soapmum 平凡媽媽",
+    "phone": null,
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Natural handmade",
+      "skin care"
+    ],
+    "website": "https://www.soapmum-au.com"
+  },
+  {
+    "address": "341/343 High St, Kew VIC 3101",
+    "area": "Kew",
+    "category": "food_drink",
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "Kirakudininggroup@gmail.com",
+    "lat": -37.8022875,
+    "lng": 145.0432836,
+    "name": "Kiraku Japanese All You Can Eat",
+    "phone": "(03) 9191 8812",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Japanese Restaurant"
+    ],
+    "website": "https://www.kirakujapanese.com.au"
+  },
+  {
+    "address": "16 Celestial Avenue, Melbourne VIC 3000",
+    "area": "Chinatown",
+    "category": "food_drink",
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.8118424,
+    "lng": 144.9663001,
+    "name": "喜旺 Heyday Hong Kong Cafe",
+    "phone": "+61 3 9662 1668",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Hong Kong Restaurant"
+    ],
+    "website": null
+  },
+  {
+    "address": "5A 155 franklin street, Carlton, VIC, Australia, Victoria",
+    "area": "Carlton",
+    "category": "food_drink",
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "plus852cafe@gmail.com",
+    "name": "茶檔852 Plus Eight Five Two Cafe",
+    "phone": "+61 424 297 219",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Hong Kong Restaurant"
+    ],
+    "website": null
+  },
+  {
+    "address": "25 Field Street , Adelaide, SA, Australia, South Australia",
+    "area": "Adelaide",
+    "category": "food_drink",
+    "cities": [
+      "Adelaide"
+    ],
+    "email": "Kowloonfood@gmail.com",
+    "name": "九龍茶餐廳 Kowloon Restaurant Adelaide",
+    "phone": "+61 8 7226 3719",
+    "states": [
+      "SA"
+    ],
+    "tags": [
+      "Hong Kong Restaurant"
+    ],
+    "website": null
+  },
+  {
+    "address": "193 Coleman Parade, Glen Waverley Melbourne, VIC, Australia, Victoria 3150",
+    "area": "Glen Waverley",
+    "category": "food_drink",
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "Kowloongroupglen@gmail.com",
+    "name": "行運茶餐廳Glen Waverley",
+    "phone": "+61 3 8524 0589",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Hong Kong Restaurant"
+    ],
+    "website": "https://theluckyguys-cafe-glen.square.site/"
+  },
+  {
+    "address": "191 Russell Street, Melbourne VIC 3000",
+    "area": "Melbourne",
+    "category": "food_drink",
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "peninsulahkcafe.info@gmail.com​",
+    "name": "Peninsula HK cafe 半島冰室",
+    "phone": "+61 451 961 271",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Hong Kong Restaurant"
+    ],
+    "website": "https://www.peninsulahkcafe.com"
+  },
+  {
+    "address": "Shop 8, Little Hay Street, Sydney,NSW 2000, Australia",
+    "area": "Chinatown",
+    "category": "food_drink",
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "name": "香港地甜品",
+    "phone": "(02) 8057 8102",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "Dessert"
+    ],
+    "website": "http://www.hkday.com.au/"
+  },
+  {
+    "address": "Shop2/31/33 Dixon St, Haymarket NSW 2000",
+    "area": "Haymarket",
+    "category": "food_drink",
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "name": "Good Luck Hotpot Sydney 好運打邊爐",
+    "phone": "0403296616",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "Hong Kong Restaurant"
+    ],
+    "website": null
   }
 ]
