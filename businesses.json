@@ -8,7 +8,7 @@
     "email": null,
     "isSponsored": true,
     "name": "Spiderweb Ponder Entertainment",
-    "phone": "0482022932",
+    "phone": "+61 482 022 932",
     "sponsorEnd": "2025-12-31",
     "sponsorStart": "2025-08-01",
     "sponsorTier": "gold",
@@ -34,7 +34,7 @@
     "category": "leisure",
     "email": "BalloonPhyStyle@gmail.com",
     "name": "Phyllis Wu",
-    "phone": "0431189521",
+    "phone": "0431 189 521",
     "states": [
       "VIC"
     ],
@@ -43,5 +43,144 @@
       "派對藝術"
     ],
     "website": null
+  },
+  {
+    "address": "Shop 2, 239 Rowe Street, Eastwood, NSW, Australia, New South Wales",
+    "area": "Eastwood",
+    "category": "food_drink",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "HonKeeHKDessert@gmail.com",
+    "lat": -33.792018,
+    "lng": 151.078362,
+    "name": "漢記甜品 Hon Kee HK Dessert",
+    "phone": null,
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "Dessert"
+    ],
+    "website": null
+  },
+  {
+    "address": "Shop G01, 162 Willoughby Road, Crows Nest, 2065, Sydney, NSW, Australia, New South Wales",
+    "area": "Crows Nest",
+    "category": "retail",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "hello@gogsupermarket.com.au",
+    "lat": -33.82262,
+    "lng": 151.200661,
+    "name": "GOG supermarket",
+    "phone": "+61 451 988 148",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "Supermarket"
+    ],
+    "website": "https://gogsupermarket.com.au"
+  },
+  {
+    "address": "Shop 210, 65 Albert Ave, Chatswood, NSW, Australia",
+    "area": "Chatswood",
+    "category": "food_drink",
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "lat": -33.7979628,
+    "lng": 151.1823175,
+    "name": "Tea Square Cafe 茶仔",
+    "phone": "+61 402 726 179",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "Hong Kong Restaurant"
+    ],
+    "website": null
+  },
+  {
+    "address": "22A/342 McCullough Street, Brisbane, QLD, Australia",
+    "area": "Sunnybank",
+    "category": "food_drink",
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "hello@muigkitchen.com.au",
+    "lat": -27.57155609,
+    "lng": 153.061264,
+    "name": "Mui G妹記",
+    "phone": "+61 423 578 848",
+    "states": [
+      "QLD"
+    ],
+    "tags": [
+      "Hong Kong Restaurant"
+    ],
+    "website": "https://muigkitchen.com.au"
+  },
+  {
+    "address": null,
+    "area": null,
+    "category": "leisure",
+    "cities": [
+      "Gold Coast"
+    ],
+    "email": "gcd269@gmail.com",
+    "name": "Xpress.Gold Coast澳洲黃金海岸包車",
+    "phone": "+61 401 610 813",
+    "states": [
+      "QLD"
+    ],
+    "tags": [
+      "Travel & Transportation",
+      "Travel Service"
+    ],
+    "website": null
+  },
+  {
+    "address": null,
+    "area": null,
+    "category": "media",
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "4ebdurianclub@gmail.com",
+    "name": "榴槤俱樂部 Durian Club",
+    "phone": null,
+    "states": [
+      "QLD"
+    ],
+    "tags": [
+      "radio",
+      "podcast",
+      "media"
+    ],
+    "website": "https://4eb.org.au/shows/durian-club-cantonese"
+  },
+  {
+    "address": "5/27 Illaweena St, Drewvale QLD 4116",
+    "area": "Drewvale",
+    "category": "food_drink",
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "lat": -27.6394841,
+    "lng": 153.0517798,
+    "name": "Jo & Co. Cafe",
+    "phone": "0432 658 822",
+    "states": [
+      "QLD"
+    ],
+    "tags": [
+      "Cafe"
+    ],
+    "website": "https://joandcocafe.com.au/"
   }
 ]
