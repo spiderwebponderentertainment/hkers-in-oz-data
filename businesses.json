@@ -1,10 +1,12 @@
 [
   {
     "adLink": "https://www.ponder.productions",
-    "adNote": "全澳放映港產片",
+    "adNote": "全澳放映亞太區電影",
     "address": null,
     "area": null,
+    "branchName": null,
     "category": "media",
+    "chainId": null,
     "email": null,
     "isSponsored": true,
     "name": "Spiderweb Ponder Entertainment",
@@ -32,7 +34,9 @@
   {
     "address": null,
     "area": null,
+    "branchName": null,
     "category": "leisure",
+    "chainId": null,
     "email": "BalloonPhyStyle@gmail.com",
     "name": "Phyllis Wu",
     "phone": "0431 189 521",
@@ -48,7 +52,9 @@
   {
     "address": "Shop 2, 239 Rowe Street, Eastwood, NSW, Australia, New South Wales",
     "area": "Eastwood",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Sydney"
     ],
@@ -68,7 +74,9 @@
   {
     "address": "Shop G01, 162 Willoughby Road, Crows Nest, 2065, Sydney, NSW, Australia, New South Wales",
     "area": "Crows Nest",
+    "branchName": null,
     "category": "retail",
+    "chainId": null,
     "cities": [
       "Sydney"
     ],
@@ -88,7 +96,9 @@
   {
     "address": "Shop 210, 65 Albert Ave, Chatswood, NSW, Australia",
     "area": "Chatswood",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Sydney"
     ],
@@ -108,7 +118,9 @@
   {
     "address": "22A/342 McCullough Street, Brisbane, QLD, Australia",
     "area": "Sunnybank",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Brisbane"
     ],
@@ -128,7 +140,9 @@
   {
     "address": null,
     "area": null,
+    "branchName": null,
     "category": "leisure",
+    "chainId": null,
     "cities": [
       "Gold Coast"
     ],
@@ -147,7 +161,9 @@
   {
     "address": null,
     "area": null,
+    "branchName": null,
     "category": "media",
+    "chainId": null,
     "cities": [
       "Brisbane"
     ],
@@ -167,7 +183,9 @@
   {
     "address": "5/27 Illaweena St, Drewvale QLD 4116",
     "area": "Drewvale",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Brisbane"
     ],
@@ -187,7 +205,9 @@
   {
     "address": null,
     "area": null,
+    "branchName": null,
     "category": "media",
+    "chainId": null,
     "email": "wemedia.vic@gmail.com",
     "name": "We Media Australia",
     "phone": null,
@@ -202,14 +222,17 @@
       "ACT"
     ],
     "tags": [
-      "Music"
+      "Music",
+      "concert"
     ],
     "website": null
   },
   {
     "address": null,
     "area": null,
+    "branchName": null,
     "category": "organisation",
+    "chainId": null,
     "cities": [
       "Adelaide"
     ],
@@ -225,7 +248,9 @@
   {
     "address": "Shop 341 Centre Road Bentleigh, VIC, Australia, Victoria 3204",
     "area": "Bentleigh",
+    "branchName": null,
     "category": "health",
+    "chainId": null,
     "cities": [
       "Melbourne"
     ],
@@ -246,7 +271,9 @@
   {
     "address": "341/343 High St, Kew VIC 3101",
     "area": "Kew",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Melbourne"
     ],
@@ -266,7 +293,9 @@
   {
     "address": "16 Celestial Avenue, Melbourne VIC 3000",
     "area": "Chinatown",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Melbourne"
     ],
@@ -286,7 +315,9 @@
   {
     "address": "5A 155 franklin street, Carlton, VIC, Australia, Victoria",
     "area": "Carlton",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Melbourne"
     ],
@@ -304,7 +335,9 @@
   {
     "address": "25 Field Street , Adelaide, SA, Australia, South Australia",
     "area": "Adelaide",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Adelaide"
     ],
@@ -322,7 +355,9 @@
   {
     "address": "193 Coleman Parade, Glen Waverley Melbourne, VIC, Australia, Victoria 3150",
     "area": "Glen Waverley",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Melbourne"
     ],
@@ -340,7 +375,9 @@
   {
     "address": "191 Russell Street, Melbourne VIC 3000",
     "area": "Melbourne",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Melbourne"
     ],
@@ -358,7 +395,9 @@
   {
     "address": "Shop 8, Little Hay Street, Sydney,NSW 2000, Australia",
     "area": "Chinatown",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Sydney"
     ],
@@ -376,7 +415,9 @@
   {
     "address": "Shop2/31/33 Dixon St, Haymarket NSW 2000",
     "area": "Haymarket",
+    "branchName": null,
     "category": "food_drink",
+    "chainId": null,
     "cities": [
       "Sydney"
     ],
@@ -390,5 +431,149 @@
       "Hong Kong Restaurant"
     ],
     "website": null
+  },
+  {
+    "address": "42 Walker St, Rhodes NSW 2138",
+    "area": "Rhodes",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@chankunkee.au",
+    "name": "陳根記 Chan Kun Kee",
+    "phone": "0482 826 669",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "Hong Kong Restaurant",
+      "港式大排檔"
+    ],
+    "website": "https://chankunkee.au/zh/home/"
+  },
+  {
+    "address": "Shop 3, 261 Blackburn Road, Doncaster East, VIC 3109, Melbourne, VIC, Australia, Victoria",
+    "area": "Doncaster East",
+    "branchName": null,
+    "category": "retail",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "Info.dbminimart@gmail.com",
+    "name": "東本Mini Mart Doncaster",
+    "phone": "0491 029 566",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Grocery Store"
+    ],
+    "website": null
+  },
+  {
+    "address": "2/ 5 Harcrest Boulevard Wantirna South, VIC, Australia, Victoria 3152",
+    "area": "Wantirna South",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "faishkcafe@gmail.com",
+    "name": "香港仔茶餐廳 Fai's Cafe",
+    "phone": "0478 717 353",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "website": null
+  },
+  {
+    "address": "359-365 Clayton Road Melbourne, VIC, Australia, Victoria 3168",
+    "area": "Clayton",
+    "branchName": null,
+    "category": "retail",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "name": "Hong Kong Supermarket 香港超市",
+    "phone": "(03) 9562 8412",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Supermarket"
+    ],
+    "website": "https://www.hongkongsupermarket.com.au/ongsupermarket.com.au"
+  },
+  {
+    "address": "Unit 3/159 Boronia Rd, Boronia VIC 3155",
+    "area": "Boronia",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "name": "Eric's Kitchen",
+    "phone": "0403 468 933",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Frozen Dim Sum",
+      "Dine In"
+    ],
+    "website": null
+  },
+  {
+    "address": "Blackburn South, VIC, Australia, Victoria",
+    "area": "Blackburn South",
+    "branchName": null,
+    "category": "retail",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "cahola.au@gmail.com",
+    "name": "888港亞百貨",
+    "phone": "0475 699 776",
+    "states": [
+      "VIC"
+    ],
+    "tags": [
+      "Grocery Store"
+    ],
+    "website": "https://hkasiangrocery.com/"
+  },
+  {
+    "address": "2/355 Liverpool Road, Ashfield, NSW, Australia, New South Wales",
+    "area": "Ashfield",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "cs.thslab@gmail.com",
+    "name": "The S lab 心食堂",
+    "phone": "0466 790 395",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "Hong Kong Style Dishes",
+      "Snacks and soup"
+    ],
+    "website": "https://www.theslab.store/"
   }
 ]
