@@ -102,6 +102,12 @@ jobs:
                   'email': norm_str(r.get('email')),
                   'phone': norm_phone(r.get('phone')),
                   'website': norm_website(r.get('website')),
+
+                  # ====== 新增欄位：分店分組／分店名 ======
+                  # chainId：同一品牌/集團用同一個 id（例如 "cha-time" 或 "BUS-001"）
+                  # branchName：顯示分店名稱（例如 "Kogarah 分店"）
+                  'chainId': norm_str(r.get('chainId')),
+                  'branchName': norm_str(r.get('branchName')),
               }
 
               # states / state
@@ -169,7 +175,7 @@ jobs:
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: squash
 
-      # 立即嘗試合併（用 GitHub API）
+      # 立即嘗試合併（可被保護分支規則阻擋）
       - name: Merge PR via API
         if: ${{ steps.cpr.outputs.pull-request-number != '' }}
         uses: actions/github-script@v7
@@ -183,7 +189,7 @@ jobs:
             try {
               const { data } = await github.rest.pulls.merge({
                 owner, repo, pull_number: pr,
-                merge_method: 'squash'   // 'merge' | 'squash' | 'rebase'
+                merge_method: 'squash'
               });
               core.info(`Merged PR #${pr}: ${data.sha}`);
             } catch (e) {
