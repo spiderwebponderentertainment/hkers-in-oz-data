@@ -707,7 +707,7 @@
     "website": "https://www.hongkongbingsutt.com.au/"
   },
   {
-    "address": "Shop 7A-9A/421-429 Sussex St",
+    "address": "Shop 7A-9A/421-429 Sussex St, Sydney",
     "area": "Chinatown",
     "branchName": "Chinatown",
     "category": "food_drink",
@@ -727,7 +727,7 @@
     "website": "https://www.kowlooncafe.com.au"
   },
   {
-    "address": "Shop Lot 11a 27 Belmore St",
+    "address": "Shop Lot 11a 27 Belmore St, Burwood, Australia",
     "area": "Burwood",
     "branchName": "Burwood",
     "category": "food_drink",
@@ -747,7 +747,7 @@
     "website": "https://www.kowlooncafe.com.au"
   },
   {
-    "address": "Shop 1/ 148-150 Rowe St",
+    "address": "Shop 1/ 148-150 Rowe St, Eastwood, Australia",
     "area": "Eastwood",
     "branchName": "Eastwood",
     "category": "food_drink",
@@ -767,7 +767,7 @@
     "website": "https://www.kowlooncafe.com.au"
   },
   {
-    "address": "Shop 3/370 Victoria Ave",
+    "address": "Shop 3/370 Victoria Ave, Chatswood, Australia",
     "area": "Chatswood",
     "branchName": "Chatswood",
     "category": "food_drink",
@@ -1483,7 +1483,7 @@
     "website": "http://hongkongstreetfood.com.au/"
   },
   {
-    "address": "Shop FM6/7, Hawker Lane Food Hall, Lower Ground Floor, Westfield Chatswood",
+    "address": "Shop FM6/7, Hawker Lane Food Hall, Lower Ground Floor, Westfield Chatswood, Australia",
     "area": "Chatswood",
     "branchName": "Claypot Kitchen Chatswood",
     "category": "food_drink",
@@ -1981,5 +1981,205 @@
       "酒樓"
     ],
     "website": "https://oldtownondixon.com.au"
+  },
+  {
+    "address": "477 King Georges Rd, Beverly Hills NSW 2209, Australia",
+    "area": "Beverly Hills",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "name": "Yummy Seafood Chinese Restaurant",
+    "phone": "+61 2 9580 0788",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "酒樓"
+    ],
+    "website": null
+  },
+  {
+    "address": "39/45 Dixon St, Haymarket NSW 2000",
+    "area": "Haymarket",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "name": "Nine Dragons",
+    "phone": "(02) 9211 3549",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "酒樓"
+    ],
+    "website": null
+  },
+  {
+    "address": "8/1 Macquarie St, Sydney NSW 2000",
+    "area": "Sydney",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "reservations@theeast.com.au",
+    "name": "豪紳大酒家 The East Chinese Restaurant",
+    "phone": "+61 2 9252 6868",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "酒樓"
+    ],
+    "website": "https://theeast.com.au/"
+  },
+  {
+    "address": "213-215 Thomas St, Haymarket NSW 2000",
+    "area": "Haymarket",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "name": "皇冠燒臘粥麵 Emperor's Garden B.B.Q. & Noodles",
+    "phone": "(02) 9281 9899",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "燒味"
+    ],
+    "website": "https://revu.website/137865/"
+  },
+  {
+    "address": "25 W Parade, Eastwood NSW 2122, Australia",
+    "area": "Eastwood",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@neblehouseeastwood.com.au",
+    "name": "文華酒樓 Noble House Seafood Restaurant",
+    "phone": "02 9874 1888",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "酒樓"
+    ],
+    "website": "http://noblehouseeastwood.com.au"
+  },
+  {
+    "address": "a7/2-10 Central Ave, Thornleigh NSW 2120",
+    "area": "Thornleigh",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "name": "創潮樓潮州海鮮餐館 Chiu Chou Garden Chinese Seafood Restaurant",
+    "phone": "(02) 9980 2828",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "酒樓"
+    ],
+    "website": null
+  },
+  {
+    "address": "Shop SP101 Carlingford Court Shopping Centre, Carlingford NSW 2118",
+    "area": "Carlingford",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "name": "大三元 Crystal Seafood Restaurant",
+    "phone": "02 9872 3338",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "酒樓"
+    ],
+    "website": "https://crystalseafoodrestaurant.com.au"
+  },
+  {
+    "address": "372 Pennant Hills Rd, Carlingford NSW 2118",
+    "area": "Carlingford",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "name": "福臨門 Fortune Palace",
+    "phone": "(02) 9872 6600",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "酒樓"
+    ],
+    "website": null
+  },
+  {
+    "address": "Level 2/65 Albert Ave, Chatswood NSW 2067",
+    "area": "Chatswood",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "fortuneplacechatswood@gmail.com",
+    "name": "福來門 Fortune Palace",
+    "phone": "(02) 9419 8669",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "酒樓"
+    ],
+    "website": "https://www.fortuneplacechatswood.com"
+  },
+  {
+    "address": "167 Rowe St, Eastwood NSW 2122",
+    "area": "Eastwood",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "name": "伊士活海鮮酒樓 Eastwood Seafood Restaurant",
+    "phone": "(02) 9804 1289",
+    "states": [
+      "NSW"
+    ],
+    "tags": [
+      "酒樓"
+    ],
+    "website": null
   }
 ]
