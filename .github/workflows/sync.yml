@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # ⚠️ 一定要帶 gid，指向「有 nameZh/nameEn」嗰個分頁
-      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?gid=<YOUR_GID>&single=true&output=csv"
+      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?output=csv"
 
     steps:
       - name: Checkout repo
