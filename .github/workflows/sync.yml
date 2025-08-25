@@ -76,7 +76,6 @@ jobs:
           def norm_url(v):
               s = norm_str(v)
               if not s: return None
-              import re
               if not re.match(r'^[a-zA-Z]+://', s):
                   s = 'https://' + s
               return s
@@ -87,22 +86,22 @@ jobs:
           except Exception as e:
               print('CSV read error:', e); sys.exit(1)
 
-          # 建立「大小寫不敏感 + 去空白」嘅欄位映射
+          # 欄位映射（大小寫/空白不敏感）
           colmap = {c.strip().lower(): c for c in df.columns}
-
-          def get_col(*candidates):
-              for cand in candidates:
+          def get_col(*cands):
+              for cand in cands:
                   key = cand.strip().lower()
-                  if key in colmap: 
+                  if key in colmap:
                       return df[colmap[key]]
               return pd.Series(['']*len(df))
 
+          # 取各欄（包含常見別名）
           col_name_zh = get_col('namezh','name_zh','中文名','店名中文')
           col_name_en = get_col('nameen','name_en','英文名','店名英文')
 
           col_tags_zh = get_col('tagszh','tags_zh','中文tag','標籤中文')
           col_tags_en = get_col('tagsen','tags_en','英文tag','標籤英文')
-          col_tags_legacy = get_col('tags')
+          col_tags_legacy = get_col('tags')  #（如有會作英文後備）
 
           col_suburb = get_col('suburb','area','地區','區')
           col_states = get_col('states','state','州')
@@ -137,11 +136,15 @@ jobs:
                   continue
 
               item = {
+                  # 不再輸出 "name"（legacy）
                   'nameZh'   : nameZh,
                   'nameEn'   : nameEn,
                   'category' : norm_str(col_category.iloc[i]) or 'uncategorized',
+
+                  # tags：中文/英文；英文找不到時以舊 tags 補位
                   'tagsZh'   : split_list(col_tags_zh.iloc[i]),
                   'tagsEn'   : (split_list(col_tags_en.iloc[i]) or split_list(col_tags_legacy.iloc[i])),
+
                   'suburb'   : norm_str(col_suburb.iloc[i]) or None,
                   'address'  : norm_str(col_address.iloc[i]),
                   'email'    : norm_str(col_email.iloc[i]),
@@ -152,8 +155,7 @@ jobs:
               }
 
               # states / cities
-              states = norm_states(col_states.iloc[i])
-              item['states'] = states
+              item['states'] = norm_states(col_states.iloc[i])
               cities = split_list(col_cities.iloc[i])
               if cities: item['cities'] = cities
 
@@ -183,5 +185,20 @@ jobs:
           with open('businesses.json','w',encoding='utf-8') as f:
               json.dump(out, f, ensure_ascii=False, indent=2, sort_keys=True)
 
-          print('Wrote businesses.json with', len(out), 'items')
+          # 小檢查：有幾多行有中文名
+          cnt_zh = sum(1 for it in out if it.get('nameZh'))
+          print('Wrote businesses.json with', len(out), 'items; with nameZh =', cnt_zh)
+          PY
+
+                - name: Validate output
+        run: |
+          echo "---- keys check (first 3 items) ----"
+          python - <<'PY'
+          import json
+          data = json.load(open('businesses.json'))
+          for i, it in enumerate(data[:3]):
+              print(i, sorted(it.keys()))
+          # 驗證：不能有 legacy "name"
+          bad = [i for i,it in enumerate(data) if 'name' in it]
+          print("items with legacy 'name' key:", len(bad))
           PY
