@@ -2,7 +2,7 @@ name: Sync Google Sheet to JSON
 
 on:
   schedule:
-    - cron: "0 * * * *"           # 每小時
+    - cron: "0 * * * *"        # 每小時
   workflow_dispatch:
 
 permissions:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # 👉 換成你 Google Sheet「發佈為 CSV」嘅 URL（注意 gid）
-      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-XXX/pub?gid=0&single=true&output=csv"
+      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/REPLACE_ME/pub?gid=0&single=true&output=csv"
 
     steps:
       - name: Checkout repo
@@ -45,7 +45,7 @@ jobs:
           wc -l sheet.csv || true
           echo "---- head ----"; head -n 5 sheet.csv || true
 
-      - name: Convert CSV to JSON (zh/en names & tags, suburb/area compatible)
+      - name: Convert CSV to JSON (new schema with zh/en names & tags)
         run: |
           python - <<'PY'
           import pandas as pd, json, re, sys
@@ -66,6 +66,13 @@ jobs:
           def norm_states(v):
               return [x.upper() for x in split_list(v)]
 
+          def norm_url(v):
+              s = norm_str(v)
+              if not s: return None
+              if not re.match(r'^[a-zA-Z]+://', s):
+                  s = 'https://' + s
+              return s
+
           def to_float(x):
               try:
                   return float(x) if x is not None and str(x).strip() != '' else None
@@ -82,41 +89,53 @@ jobs:
               # 舊 name（保留）
               name_legacy = norm_str(r.get('name'))
 
-              # 新：中英名（接受 name_zh/nameZh、name_en/nameEn）
+              # 新：中英名（接受 nameZh/name_zh、nameEn/name_en）
               nameZh = norm_str(r.get('nameZh')) or norm_str(r.get('name_zh'))
               nameEn = norm_str(r.get('nameEn')) or norm_str(r.get('name_en'))
 
-              # 若只有中文而中文內含 (English) → 拆出來
+              # 若只有中文而中文內含 (English) → 拆出來（同 App 側邊 hotfix 一致）
               if (not nameEn) and nameZh:
                   m = re.match(r'^\s*(.+?)\s*[\(（]\s*([A-Za-z0-9 .,\'+&/-]+)\s*[\)）]\s*$', nameZh)
                   if m:
                       nameZh = m.group(1).strip()
                       nameEn = m.group(2).strip()
 
+              # 無名就 skip
               if not (name_legacy or nameZh or nameEn):
-                  continue  # 無名就 skip
+                  continue
 
               item = {
-                  'name'      : name_legacy or (nameEn or nameZh or ''),  # 兼容舊 App
+                  # 兼容舊 App：name 繼續存在（盡量用英文，fallback 中文／舊）
+                  'name'      : name_legacy or (nameEn or nameZh or ''),
+                  # 新欄位
                   'nameZh'    : nameZh,
                   'nameEn'    : nameEn,
+
                   'category'  : norm_str(r.get('category')) or 'uncategorized',
-                  'tags'      : split_list(r.get('tags')),   # 舊
+
+                  # tags：新中英 + 舊
+                  'tags'      : split_list(r.get('tags')),                                   # 舊
                   'tagsZh'    : split_list(r.get('tagsZh') or r.get('tags_zh')),
-                  'tagsEn'    : split_list(r.get('tagsEn') or r.get('tags_en')),
-                  'suburb'    : norm_str(r.get('suburb')) or norm_str(r.get('area')), # area → suburb
-                  'area'      : norm_str(r.get('area')),  # 仍保留舊 key
+                  'tagsEn'    : split_list(r.get('tagsEn') or r.get('tags_en') or r.get('tags')),
+
+                  # 地域
+                  'suburb'    : norm_str(r.get('suburb')) or norm_str(r.get('area')),        # area → suburb
+                  'area'      : norm_str(r.get('area')),                                     # 保留舊 key 作兼容
                   'address'   : norm_str(r.get('address')),
+
                   'email'     : norm_str(r.get('email')),
                   'phone'     : norm_str(r.get('phone')),
-                  'website'   : norm_str(r.get('website')),
-                  'chainId'   : norm_str(r.get('chainId')),
-                  'branchName': norm_str(r.get('branchName')),
+                  'website'   : norm_url(r.get('website')),
+
+                  # 連鎖
+                  'chainId'   : norm_str(r.get('chainId') or r.get('chain_id')),
+                  'branchName': norm_str(r.get('branchName') or r.get('branch_name')),
               }
 
-              # states / cities
+              # states / cities 兼容
               states = norm_states(r.get('states') or r.get('state'))
               item['states'] = states if states else []
+
               cities = split_list(r.get('cities') or r.get('city'))
               if cities: item['cities'] = cities
 
@@ -126,12 +145,14 @@ jobs:
                   item['lat'] = to_float(lat)
                   item['lng'] = to_float(lng)
 
-              # sponsor
+              # sponsor / ads
               isSponsored = norm_str(r.get('isSponsored') or r.get('is_sponsored'))
               if isSponsored is not None:
                   item['isSponsored'] = isSponsored.lower() in ('1','true','yes','y')
               for k in ['sponsorTier','sponsorStart','sponsorEnd','adLink','adNote']:
-                  v = norm_str(r.get(k))
+                  v = norm_str(r.get(k) or r.get(k.lower()))
+                  if k == 'adLink':
+                      v = norm_url(v)
                   if v: item[k] = v
 
               out.append(item)
@@ -165,21 +186,29 @@ jobs:
           add-paths: |
             businesses.json
 
+      # ✅ 啟用 auto-merge（用點號或單引號取 output key）
       - name: Enable auto-merge on PR
-        if: ${{ steps.cpr.outputs['pull-request-number'] }}
+        if: ${{ steps.cpr.outputs.pull-request-number }}
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request-number: ${{ steps.cpr.outputs['pull-request-number'] }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: squash
 
+      # ✅ 立即嘗試合併（可能會被保護分支阻擋）；用 env 帶 PR 號
       - name: Merge PR via API (best effort)
-        if: ${{ steps.cpr.outputs['pull-request-number'] }}
+        if: ${{ steps.cpr.outputs.pull-request-number }}
         uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const pr = Number(core.getInput('pr') || '${{ steps.cpr.outputs["pull-request-number"] }}');
+            const pr = Number(process.env.PR_NUMBER || '0');
+            if (!pr) {
+              core.info('No PR number; skip merge.');
+              return;
+            }
             try {
               const { data } = await github.rest.pulls.merge({
                 owner: context.repo.owner,
@@ -189,8 +218,5 @@ jobs:
               });
               core.info(`Merged PR #${pr}: ${data.sha}`);
             } catch (e) {
-              core.warning(`Merge failed (branch protection maybe). ${e.message}`);
+              core.warning(`Merge failed (maybe branch protection requires review). ${e.message}`);
             }
-          result-encoding: string
-          with:
-            pr: ${{ steps.cpr.outputs['pull-request-number'] }}
