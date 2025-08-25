@@ -2,16 +2,20 @@ name: Sync Google Sheet to JSON
 
 on:
   schedule:
-    - cron: "0 * * * *"           # 每小時執行一次
-  workflow_dispatch:               # 允許手動觸發
+    - cron: "0 * * * *"           # 每小時
+  workflow_dispatch:
 
 permissions:
-  contents: write                  # 需要推送內容/更新分支
-  pull-requests: write             # 需要建立/合併 PR
+  contents: write
+  pull-requests: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # 👉 換成你 Google Sheet「發佈為 CSV」嘅 URL（注意 gid）
+      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-XXX/pub?gid=0&single=true&output=csv"
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -31,9 +35,7 @@ jobs:
       - name: Fetch Google Sheet CSV
         run: |
           set -e
-          # 👉 換成你 Google Sheet「發佈為 CSV」連結
-          URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?gid=0&single=true&output=csv"
-          CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$URL")
+          CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$SHEET_URL")
           echo "HTTP_STATUS=$CODE"
           if [ "$CODE" -ne 200 ]; then
             echo "Download failed ($CODE)" >&2
@@ -43,18 +45,12 @@ jobs:
           wc -l sheet.csv || true
           echo "---- head ----"; head -n 5 sheet.csv || true
 
-      - name: Convert CSV to JSON
+      - name: Convert CSV to JSON (new schema with zh/en names & tags)
         run: |
           python - <<'PY'
           import pandas as pd, json, re, sys
 
-          # 1) 全欄位以字串載入，避免電話被去掉 leading 0
-          try:
-              df = pd.read_csv('sheet.csv', dtype=str, keep_default_na=False)
-          except Exception as e:
-              print('CSV read error:', e); sys.exit(1)
-          print(f'Rows loaded: {len(df)}')
-
+          # --- helpers ---
           def norm_str(v):
               if v is None: return None
               s = str(v).strip()
@@ -71,11 +67,7 @@ jobs:
           def norm_states(v):
               return [x.upper() for x in split_list(v)]
 
-          def norm_phone(v):
-              # 保留原樣，避免 0 / +61 被吃掉
-              return norm_str(v)
-
-          def norm_website(v):
+          def norm_url(v):
               s = norm_str(v)
               if not s: return None
               if not re.match(r'^[a-zA-Z]+://', s):
@@ -84,62 +76,88 @@ jobs:
 
           def to_float(x):
               try:
-                  return float(x) if x is not None else None
+                  return float(x) if x is not None and str(x).strip() != '' else None
               except Exception:
                   return None
 
+          # --- load csv as strings ---
+          try:
+              df = pd.read_csv('sheet.csv', dtype=str, keep_default_na=False)
+          except Exception as e:
+              print('CSV read error:', e); sys.exit(1)
+
+          if len(df) == 0:
+              print('No rows in CSV, abort.'); sys.exit(1)
+
+          # normalise columns to avoid KeyError
+          cols = {c.lower(): c for c in df.columns}  # case-insensitive map
+          def get(colname):
+              key = colname.lower()
+              if key in cols:
+                  return df[cols[key]]
+              return pd.Series(['']*len(df))
+
           out = []
           for _, r in df.iterrows():
-              name = norm_str(r.get('name'))
-              if not name: continue
+              # --- names (new: nameZh/nameEn; fallback: name) ---
+              nameZh = norm_str(r.get('nameZh') or r.get('namezh'))
+              nameEn = norm_str(r.get('nameEn') or r.get('nameen'))
+              legacyName = norm_str(r.get('name'))
 
+              # 至少要有一個名先收
+              if not (nameZh or nameEn or legacyName):
+                  continue
+
+              # --- basic fields ---
               item = {
-                  'name': name,
-                  'category': norm_str(r.get('category')) or 'uncategorized',
-                  'tags': split_list(r.get('tags')),
-                  'area': norm_str(r.get('area')),
-                  'address': norm_str(r.get('address')),
-                  'email': norm_str(r.get('email')),
-                  'phone': norm_phone(r.get('phone')),
-                  'website': norm_website(r.get('website')),
-
-                  # ====== 新增欄位：分店分組／分店名 ======
-                  # chainId：同一品牌/集團用同一個 id（例如 "cha-time" 或 "BUS-001"）
-                  # branchName：顯示分店名稱（例如 "Kogarah 分店"）
-                  'chainId': norm_str(r.get('chainId')),
-                  'branchName': norm_str(r.get('branchName')),
+                  'chainId'      : norm_str(r.get('chainId') or r.get('chainid')),
+                  'branchName'   : norm_str(r.get('branchName') or r.get('branchname')),
+                  'category'     : norm_str(r.get('category')) or 'uncategorized',
+                  'states'       : norm_states(r.get('states')),
+                  'address'      : norm_str(r.get('address')),
+                  'email'        : norm_str(r.get('email')),
+                  'phone'        : norm_str(r.get('phone')),
+                  'website'      : norm_url(r.get('website')),
+                  # 新欄位
+                  'nameZh'       : nameZh if nameZh else None,
+                  'nameEn'       : nameEn if nameEn else (legacyName or None),
+                  'suburb'       : norm_str(r.get('suburb')) or norm_str(r.get('area')),  # 兼容舊 area
+                  # tags zh/en（兼容舊 tags）
+                  'tagsZh'       : split_list(r.get('tagsZh') or r.get('tagszh')),
+                  'tagsEn'       : split_list(r.get('tagsEn') or r.get('tagsen') or r.get('tags')),
               }
 
-              # states / state
-              states = norm_states(r.get('states'))
-              state  = norm_str(r.get('state'))
-              item['states'] = states if states else ([state.upper()] if state else [])
+              # states 單值後備（舊 sheet 可能有 state）
+              state = norm_str(r.get('state'))
+              if not item['states'] and state:
+                  item['states'] = [state.upper()]
 
-              # cities / city
+              # cities（兼容單值 city）
               cities = split_list(r.get('cities'))
               city   = norm_str(r.get('city'))
               if cities: item['cities'] = cities
               elif city: item['cities'] = [city]
 
-              # 座標（如有）
+              # lat/lng
               lat = norm_str(r.get('lat')); lng = norm_str(r.get('lng'))
               if lat is not None or lng is not None:
                   item['lat'] = to_float(lat)
                   item['lng'] = to_float(lng)
 
-              # 廣告欄位（可選）
-              isSponsored = norm_str(r.get('isSponsored'))
+              # sponsor / ads
+              isSponsored = norm_str(r.get('isSponsored') or r.get('issponsored'))
               if isSponsored is not None:
                   item['isSponsored'] = isSponsored.lower() in ('1','true','yes','y')
               for k in ['sponsorTier','sponsorStart','sponsorEnd','adLink','adNote']:
-                  v = norm_str(r.get(k))
-                  if k == 'adLink': v = norm_website(v)
+                  v = norm_str(r.get(k) or r.get(k.lower()))
+                  if k == 'adLink': v = norm_url(v)
                   if v is not None: item[k] = v
 
               out.append(item)
 
           with open('businesses.json','w',encoding='utf-8') as f:
               json.dump(out, f, ensure_ascii=False, indent=2, sort_keys=True)
+
           print('Wrote businesses.json with', len(out), 'items')
           PY
 
@@ -166,32 +184,32 @@ jobs:
           add-paths: |
             businesses.json
 
-      # 啟用 auto-merge（可選）
       - name: Enable auto-merge on PR
-        if: ${{ steps.cpr.outputs.pull-request-number != '' }}
+        if: ${{ steps.cpr.outputs['pull-request-number'] }}
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          pull-request-number: ${{ steps.cpr.outputs['pull-request-number'] }}
           merge-method: squash
 
-      # 立即嘗試合併（可被保護分支規則阻擋）
-      - name: Merge PR via API
-        if: ${{ steps.cpr.outputs.pull-request-number != '' }}
+      - name: Merge PR via API (best effort)
+        if: ${{ steps.cpr.outputs['pull-request-number'] }}
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const pr = Number('${{ steps.cpr.outputs.pull-request-number }}');
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
-
+            const pr = Number(core.getInput('pr') || '${{ steps.cpr.outputs["pull-request-number"] }}');
             try {
               const { data } = await github.rest.pulls.merge({
-                owner, repo, pull_number: pr,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr,
                 merge_method: 'squash'
               });
               core.info(`Merged PR #${pr}: ${data.sha}`);
             } catch (e) {
-              core.warning(`Merge failed (maybe branch protection requires review). Details: ${e.message}`);
+              core.warning(`Merge failed (branch protection maybe). ${e.message}`);
             }
+          result-encoding: string
+          with:
+            pr: ${{ steps.cpr.outputs['pull-request-number'] }}
