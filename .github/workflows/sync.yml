@@ -48,7 +48,7 @@ jobs:
       - name: Convert CSV to JSON (new schema with zh/en names & tags)
         run: |
           python - <<'PY'
-import pandas as pd, json, re, sys
+          import pandas as pd, json, re, sys
 
 # ---------- helpers ----------
 def norm_str(v):
