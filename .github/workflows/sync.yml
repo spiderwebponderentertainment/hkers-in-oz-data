@@ -45,12 +45,11 @@ jobs:
           wc -l sheet.csv || true
           echo "---- head ----"; head -n 5 sheet.csv || true
 
-      - name: Convert CSV to JSON (new schema with zh/en names & tags)
+      - name: Convert CSV to JSON (zh/en names & tags, suburb/area compatible)
         run: |
           python - <<'PY'
           import pandas as pd, json, re, sys
 
-          # --- helpers ---
           def norm_str(v):
               if v is None: return None
               s = str(v).strip()
@@ -60,19 +59,12 @@ jobs:
               s = norm_str(v)
               if not s: return []
               s = s.replace('；',';').replace('，',',')
-              for sp in ['|',';','/','、']:
+              for sp in ['|',';','/','、','／']:
                   s = s.replace(sp, ',')
               return [p.strip() for p in s.split(',') if p.strip()]
 
           def norm_states(v):
               return [x.upper() for x in split_list(v)]
-
-          def norm_url(v):
-              s = norm_str(v)
-              if not s: return None
-              if not re.match(r'^[a-zA-Z]+://', s):
-                  s = 'https://' + s
-              return s
 
           def to_float(x):
               try:
@@ -80,63 +72,53 @@ jobs:
               except Exception:
                   return None
 
-          # --- load csv as strings ---
           try:
               df = pd.read_csv('sheet.csv', dtype=str, keep_default_na=False)
           except Exception as e:
               print('CSV read error:', e); sys.exit(1)
 
-          if len(df) == 0:
-              print('No rows in CSV, abort.'); sys.exit(1)
-
-          # normalise columns to avoid KeyError
-          cols = {c.lower(): c for c in df.columns}  # case-insensitive map
-          def get(colname):
-              key = colname.lower()
-              if key in cols:
-                  return df[cols[key]]
-              return pd.Series(['']*len(df))
-
           out = []
           for _, r in df.iterrows():
-              # --- names (new: nameZh/nameEn; fallback: name) ---
-              nameZh = norm_str(r.get('nameZh') or r.get('namezh'))
-              nameEn = norm_str(r.get('nameEn') or r.get('nameen'))
-              legacyName = norm_str(r.get('name'))
+              # 舊 name（保留）
+              name_legacy = norm_str(r.get('name'))
 
-              # 至少要有一個名先收
-              if not (nameZh or nameEn or legacyName):
-                  continue
+              # 新：中英名（接受 name_zh/nameZh、name_en/nameEn）
+              nameZh = norm_str(r.get('nameZh')) or norm_str(r.get('name_zh'))
+              nameEn = norm_str(r.get('nameEn')) or norm_str(r.get('name_en'))
 
-              # --- basic fields ---
+              # 若只有中文而中文內含 (English) → 拆出來
+              if (not nameEn) and nameZh:
+                  m = re.match(r'^\s*(.+?)\s*[\(（]\s*([A-Za-z0-9 .,\'+&/-]+)\s*[\)）]\s*$', nameZh)
+                  if m:
+                      nameZh = m.group(1).strip()
+                      nameEn = m.group(2).strip()
+
+              if not (name_legacy or nameZh or nameEn):
+                  continue  # 無名就 skip
+
               item = {
-                  'chainId'      : norm_str(r.get('chainId') or r.get('chainid')),
-                  'branchName'   : norm_str(r.get('branchName') or r.get('branchname')),
-                  'category'     : norm_str(r.get('category')) or 'uncategorized',
-                  'states'       : norm_states(r.get('states')),
-                  'address'      : norm_str(r.get('address')),
-                  'email'        : norm_str(r.get('email')),
-                  'phone'        : norm_str(r.get('phone')),
-                  'website'      : norm_url(r.get('website')),
-                  # 新欄位
-                  'nameZh'       : nameZh if nameZh else None,
-                  'nameEn'       : nameEn if nameEn else (legacyName or None),
-                  'suburb'       : norm_str(r.get('suburb')) or norm_str(r.get('area')),  # 兼容舊 area
-                  # tags zh/en（兼容舊 tags）
-                  'tagsZh'       : split_list(r.get('tagsZh') or r.get('tagszh')),
-                  'tagsEn'       : split_list(r.get('tagsEn') or r.get('tagsen') or r.get('tags')),
+                  'name'      : name_legacy or (nameEn or nameZh or ''),  # 兼容舊 App
+                  'nameZh'    : nameZh,
+                  'nameEn'    : nameEn,
+                  'category'  : norm_str(r.get('category')) or 'uncategorized',
+                  'tags'      : split_list(r.get('tags')),   # 舊
+                  'tagsZh'    : split_list(r.get('tagsZh') or r.get('tags_zh')),
+                  'tagsEn'    : split_list(r.get('tagsEn') or r.get('tags_en')),
+                  'suburb'    : norm_str(r.get('suburb')) or norm_str(r.get('area')), # area → suburb
+                  'area'      : norm_str(r.get('area')),  # 仍保留舊 key
+                  'address'   : norm_str(r.get('address')),
+                  'email'     : norm_str(r.get('email')),
+                  'phone'     : norm_str(r.get('phone')),
+                  'website'   : norm_str(r.get('website')),
+                  'chainId'   : norm_str(r.get('chainId')),
+                  'branchName': norm_str(r.get('branchName')),
               }
 
-              # states 單值後備（舊 sheet 可能有 state）
-              state = norm_str(r.get('state'))
-              if not item['states'] and state:
-                  item['states'] = [state.upper()]
-
-              # cities（兼容單值 city）
-              cities = split_list(r.get('cities'))
-              city   = norm_str(r.get('city'))
+              # states / cities
+              states = norm_states(r.get('states') or r.get('state'))
+              item['states'] = states if states else []
+              cities = split_list(r.get('cities') or r.get('city'))
               if cities: item['cities'] = cities
-              elif city: item['cities'] = [city]
 
               # lat/lng
               lat = norm_str(r.get('lat')); lng = norm_str(r.get('lng'))
@@ -144,14 +126,13 @@ jobs:
                   item['lat'] = to_float(lat)
                   item['lng'] = to_float(lng)
 
-              # sponsor / ads
-              isSponsored = norm_str(r.get('isSponsored') or r.get('issponsored'))
+              # sponsor
+              isSponsored = norm_str(r.get('isSponsored') or r.get('is_sponsored'))
               if isSponsored is not None:
                   item['isSponsored'] = isSponsored.lower() in ('1','true','yes','y')
               for k in ['sponsorTier','sponsorStart','sponsorEnd','adLink','adNote']:
-                  v = norm_str(r.get(k) or r.get(k.lower()))
-                  if k == 'adLink': v = norm_url(v)
-                  if v is not None: item[k] = v
+                  v = norm_str(r.get(k))
+                  if v: item[k] = v
 
               out.append(item)
 
