@@ -10,6 +10,8 @@
     "email": null,
     "isSponsored": true,
     "name": "Spiderweb Ponder Entertainment",
+    "nameEn": "Spiderweb Ponder Entertainment",
+    "nameZh": null,
     "phone": "+61 482 022 932",
     "sponsorEnd": "2025-12-31",
     "sponsorStart": "2025-08-01",
@@ -24,7 +26,13 @@
       "TAS",
       "ACT"
     ],
-    "tags": [
+    "suburb": null,
+    "tags": [],
+    "tagsEn": [
+      "film distribution",
+      "film & tv production"
+    ],
+    "tagsZh": [
       "電影發行",
       "影視製作"
     ],
@@ -38,19 +46,27 @@
     "chainId": null,
     "email": "BalloonPhyStyle@gmail.com",
     "name": "Phyllis Wu",
+    "nameEn": "Phyllis Wu",
+    "nameZh": null,
     "phone": "0431 189 521",
     "states": [
       "VIC"
     ],
-    "tags": [
-      "汔球",
+    "suburb": null,
+    "tags": [],
+    "tagsEn": [
+      "balloon",
+      "event decoration"
+    ],
+    "tagsZh": [
+      "汽球",
       "派對藝術"
     ],
     "website": null
   },
   {
     "address": "Shop 2, 239 Rowe Street, Eastwood, NSW, Australia, New South Wales",
-    "area": "Eastwood",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -60,19 +76,26 @@
     "email": "HonKeeHKDessert@gmail.com",
     "lat": -33.792018,
     "lng": 151.078362,
-    "name": "漢記甜品 Hon Kee HK Dessert",
+    "name": "Hon Kee HK Dessert",
+    "nameEn": "Hon Kee HK Dessert",
+    "nameZh": null,
     "phone": null,
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Eastwood",
+    "tags": [],
+    "tagsEn": [
+      "dessert"
+    ],
+    "tagsZh": [
       "甜品"
     ],
     "website": null
   },
   {
     "address": "Shop G01, 162 Willoughby Road, Crows Nest, 2065, Sydney, NSW, Australia, New South Wales",
-    "area": "Crows Nest",
+    "area": null,
     "branchName": null,
     "category": "retail",
     "chainId": null,
@@ -83,18 +106,25 @@
     "lat": -33.82262,
     "lng": 151.200661,
     "name": "GOG supermarket",
+    "nameEn": "GOG supermarket",
+    "nameZh": null,
     "phone": "+61 451 988 148",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Crows Nest",
+    "tags": [],
+    "tagsEn": [
+      "Asian grocery store"
+    ],
+    "tagsZh": [
       "亞洲超市"
     ],
     "website": "https://www.gogsupermarket.com.au"
   },
   {
     "address": "Shop 210, 65 Albert Ave, Chatswood, NSW, Australia",
-    "area": "Chatswood",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -104,19 +134,26 @@
     "email": null,
     "lat": -33.7979628,
     "lng": 151.1823175,
-    "name": "Tea Square Cafe 茶仔",
+    "name": "Tea Square Cafe",
+    "nameEn": "Tea Square Cafe",
+    "nameZh": null,
     "phone": "+61 402 726 179",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chatswood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "22A/342 McCullough Street, Brisbane, QLD, Australia",
-    "area": "Sunnybank",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -126,12 +163,19 @@
     "email": "hello@muigkitchen.com.au",
     "lat": -27.57155609,
     "lng": 153.061264,
-    "name": "Mui G妹記",
+    "name": "Mui G",
+    "nameEn": "Mui G",
+    "nameZh": null,
     "phone": "+61 423 578 848",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Sunnybank",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.muigkitchen.com.au"
@@ -146,12 +190,19 @@
       "Gold Coast"
     ],
     "email": "gcd269@gmail.com",
-    "name": "Xpress.Gold Coast澳洲黃金海岸包車",
+    "name": "Xpress.Gold Coast",
+    "nameEn": "Xpress.Gold Coast",
+    "nameZh": null,
     "phone": "+61 401 610 813",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": null,
+    "tags": [],
+    "tagsEn": [
+      "Transportation Service"
+    ],
+    "tagsZh": [
       "旅遊服務"
     ],
     "website": null
@@ -166,19 +217,26 @@
       "Brisbane"
     ],
     "email": "4ebdurianclub@gmail.com",
-    "name": "榴槤俱樂部 Durian Club",
+    "name": "Durian Club",
+    "nameEn": "Durian Club",
+    "nameZh": null,
     "phone": null,
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": null,
+    "tags": [],
+    "tagsEn": [
+      "Podcast"
+    ],
+    "tagsZh": [
       "電台"
     ],
     "website": "https://www.4eb.org.au/shows/durian-club-cantonese"
   },
   {
     "address": "5/27 Illaweena St, Drewvale QLD 4116",
-    "area": "Drewvale",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -189,11 +247,18 @@
     "lat": -27.6394841,
     "lng": 153.0517798,
     "name": "Jo & Co. Cafe",
+    "nameEn": "Jo & Co. Cafe",
+    "nameZh": null,
     "phone": "0432 658 822",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Drewvale",
+    "tags": [],
+    "tagsEn": [
+      "Western style Café"
+    ],
+    "tagsZh": [
       "咖啡室"
     ],
     "website": "https://joandcocafe.com.au/"
@@ -206,6 +271,8 @@
     "chainId": null,
     "email": "wemedia.vic@gmail.com",
     "name": "We Media Australia",
+    "nameEn": "We Media Australia",
+    "nameZh": null,
     "phone": null,
     "states": [
       "NSW",
@@ -217,7 +284,12 @@
       "TAS",
       "ACT"
     ],
-    "tags": [
+    "suburb": null,
+    "tags": [],
+    "tagsEn": [
+      "Concert"
+    ],
+    "tagsZh": [
       "演唱會"
     ],
     "website": null
@@ -232,17 +304,22 @@
       "Adelaide"
     ],
     "email": "contact@hkcasa.org.au",
-    "name": "Hong Kong Cultural Association of South Australia 南澳香港文化協會",
+    "name": "Hong Kong Cultural Association of South Australia",
+    "nameEn": "Hong Kong Cultural Association of South Australia",
+    "nameZh": null,
     "phone": null,
     "states": [
       "SA"
     ],
+    "suburb": null,
     "tags": [],
+    "tagsEn": [],
+    "tagsZh": [],
     "website": "https://www.hkcasa.org.au"
   },
   {
     "address": "Shop 341 Centre Road Bentleigh, VIC, Australia, Victoria 3204",
-    "area": "Bentleigh",
+    "area": null,
     "branchName": null,
     "category": "health",
     "chainId": null,
@@ -252,19 +329,26 @@
     "email": null,
     "lat": -37.9204854,
     "lng": 145.0547614,
-    "name": "Soapmum 平凡媽媽",
+    "name": "Soapmum",
+    "nameEn": "Soapmum",
+    "nameZh": null,
     "phone": null,
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Bentleigh",
+    "tags": [],
+    "tagsEn": [
+      "Hand Mand Soap"
+    ],
+    "tagsZh": [
       "手工皂"
     ],
     "website": "https://www.soapmum-au.com"
   },
   {
     "address": "341/343 High St, Kew VIC 3101",
-    "area": "Kew",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -274,19 +358,26 @@
     "email": "Kirakudininggroup@gmail.com",
     "lat": -37.8022875,
     "lng": 145.0432836,
-    "name": "喜樂 Kiraku Japanese All You Can Eat",
+    "name": "Kiraku Japanese All You Can Eat",
+    "nameEn": "Kiraku Japanese All You Can Eat",
+    "nameZh": null,
     "phone": "(03) 9191 8812",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Kew",
+    "tags": [],
+    "tagsEn": [
+      "Japanese Style"
+    ],
+    "tagsZh": [
       "日本餐廳"
     ],
     "website": "https://www.kirakujapanese.com.au"
   },
   {
     "address": "16 Celestial Avenue, Melbourne VIC 3000",
-    "area": "Chinatown",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -296,19 +387,26 @@
     "email": null,
     "lat": -37.8118424,
     "lng": 144.9663001,
-    "name": "喜旺 Heyday Hong Kong Cafe",
+    "name": "Heyday Hong Kong Cafe",
+    "nameEn": "Heyday Hong Kong Cafe",
+    "nameZh": null,
     "phone": "+61 3 9662 1668",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Chinatown",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "5A 155 franklin street, Carlton, VIC, Australia, Victoria",
-    "area": "Carlton",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -316,19 +414,26 @@
       "Melbourne"
     ],
     "email": "plus852cafe@gmail.com",
-    "name": "茶檔852 Plus Eight Five Two Cafe",
+    "name": "Plus Eight Five Two Cafe",
+    "nameEn": "Plus Eight Five Two Cafe",
+    "nameZh": null,
     "phone": "+61 424 297 219",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Carlton",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "25 Field Street , Adelaide, SA, Australia, South Australia",
-    "area": "Adelaide",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -336,39 +441,26 @@
       "Adelaide"
     ],
     "email": "Kowloonfood@gmail.com",
-    "name": "九龍茶餐廳 Kowloon Restaurant Adelaide",
+    "name": "Kowloon Restaurant Adelaide",
+    "nameEn": "Kowloon Restaurant Adelaide",
+    "nameZh": null,
     "phone": "+61 8 7226 3719",
     "states": [
       "SA"
     ],
-    "tags": [
+    "suburb": "Adelaide",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
-    "address": "193 Coleman Parade, Glen Waverley Melbourne, VIC, Australia, Victoria 3150",
-    "area": "Glen Waverley",
-    "branchName": null,
-    "category": "food_drink",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "Kowloongroupglen@gmail.com",
-    "name": "行運茶餐廳Glen Waverley",
-    "phone": "+61 3 8524 0589",
-    "states": [
-      "VIC"
-    ],
-    "tags": [
-      "茶餐廳"
-    ],
-    "website": "https://theluckyguys-cafe-glen.square.site/"
-  },
-  {
     "address": "191 Russell Street, Melbourne VIC 3000",
-    "area": "Melbourne",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -376,39 +468,26 @@
       "Melbourne"
     ],
     "email": "peninsulahkcafe.info@gmail.com​",
-    "name": "Peninsula HK cafe 半島冰室",
+    "name": "Peninsula HK cafe",
+    "nameEn": "Peninsula HK cafe",
+    "nameZh": null,
     "phone": "+61 451 961 271",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Melbourne",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.peninsulahkcafe.com"
   },
   {
-    "address": "Shop 8, Little Hay Street, Sydney,NSW 2000, Australia",
-    "area": "Chinatown",
-    "branchName": null,
-    "category": "food_drink",
-    "chainId": null,
-    "cities": [
-      "Sydney"
-    ],
-    "email": null,
-    "name": "香港地甜品",
-    "phone": "(02) 8057 8102",
-    "states": [
-      "NSW"
-    ],
-    "tags": [
-      "甜品"
-    ],
-    "website": "http://www.hkday.com.au/"
-  },
-  {
     "address": "Shop2/31/33 Dixon St, Haymarket NSW 2000",
-    "area": "Haymarket",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -416,19 +495,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "Good Luck Hotpot Sydney 好運打邊爐",
+    "name": "Good Luck Hotpot Sydney",
+    "nameEn": "Good Luck Hotpot Sydney",
+    "nameZh": null,
     "phone": "0403296616",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Haymarket",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "42 Walker St, Rhodes NSW 2138",
-    "area": "Rhodes",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -436,19 +522,26 @@
       "Sydney"
     ],
     "email": "info@chankunkee.au",
-    "name": "陳根記 Chan Kun Kee",
+    "name": "Chan Kun Kee",
+    "nameEn": "Chan Kun Kee",
+    "nameZh": null,
     "phone": "0482 826 669",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Rhodes",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong Street-side Food"
+    ],
+    "tagsZh": [
       "大排檔"
     ],
     "website": "https://chankunkee.au/zh/home/"
   },
   {
     "address": "Shop 3, 261 Blackburn Road, Doncaster East, VIC 3109, Melbourne, VIC, Australia, Victoria",
-    "area": "Doncaster East",
+    "area": null,
     "branchName": null,
     "category": "retail",
     "chainId": null,
@@ -456,19 +549,26 @@
       "Melbourne"
     ],
     "email": "Info.dbminimart@gmail.com",
-    "name": "東本Mini Mart Doncaster",
+    "name": "Mini Mart Doncaster",
+    "nameEn": "Mini Mart Doncaster",
+    "nameZh": null,
     "phone": "0491 029 566",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Doncaster East",
+    "tags": [],
+    "tagsEn": [
+      "Asian grocery store"
+    ],
+    "tagsZh": [
       "亞洲超市"
     ],
     "website": null
   },
   {
     "address": "2/ 5 Harcrest Boulevard Wantirna South, VIC, Australia, Victoria 3152",
-    "area": "Wantirna South",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -476,19 +576,26 @@
       "Melbourne"
     ],
     "email": "faishkcafe@gmail.com",
-    "name": "香港仔茶餐廳 Fai's Cafe",
+    "name": "Fai's Cafe",
+    "nameEn": "Fai's Cafe",
+    "nameZh": null,
     "phone": "0478 717 353",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Wantirna South",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "359-365 Clayton Road Melbourne, VIC, Australia, Victoria 3168",
-    "area": "Clayton",
+    "area": null,
     "branchName": null,
     "category": "retail",
     "chainId": null,
@@ -496,19 +603,26 @@
       "Melbourne"
     ],
     "email": null,
-    "name": "Hong Kong Supermarket 香港超市",
+    "name": "Hong Kong Supermarket",
+    "nameEn": "Hong Kong Supermarket",
+    "nameZh": null,
     "phone": "(03) 9562 8412",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Clayton",
+    "tags": [],
+    "tagsEn": [
+      "Asian grocery store"
+    ],
+    "tagsZh": [
       "亞洲超市"
     ],
     "website": "https://www.hongkongsupermarket.com.au/ongsupermarket.com.au"
   },
   {
     "address": "Unit 3/159 Boronia Rd, Boronia VIC 3155",
-    "area": "Boronia",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -517,38 +631,25 @@
     ],
     "email": null,
     "name": "Eric's Kitchen",
+    "nameEn": "Eric's Kitchen",
+    "nameZh": null,
     "phone": "0403 468 933",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Boronia",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum"
+    ],
+    "tagsZh": [
       "點心"
     ],
     "website": null
   },
   {
-    "address": "Blackburn South, VIC, Australia, Victoria",
-    "area": "Blackburn South",
-    "branchName": null,
-    "category": "retail",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "cahola.au@gmail.com",
-    "name": "888港亞百貨",
-    "phone": "0475 699 776",
-    "states": [
-      "VIC"
-    ],
-    "tags": [
-      "亞洲超市"
-    ],
-    "website": "https://hkasiangrocery.com/"
-  },
-  {
     "address": "2/355 Liverpool Road, Ashfield, NSW, Australia, New South Wales",
-    "area": "Ashfield",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -556,19 +657,26 @@
       "Sydney"
     ],
     "email": "cs.thslab@gmail.com",
-    "name": "The S lab 心食堂",
+    "name": "The S lab",
+    "nameEn": "The S lab",
+    "nameZh": null,
     "phone": "0466 790 395",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Ashfield",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Restaurant"
+    ],
+    "tagsZh": [
       "港式餐廳"
     ],
     "website": "https://www.theslab.store/"
   },
   {
     "address": "2625 Beaudesert Rd, Calamvale, QLD, Australia, Queensland",
-    "area": "Calamvale",
+    "area": null,
     "branchName": "Calamvale",
     "category": "retail",
     "chainId": "Yuen",
@@ -576,19 +684,26 @@
       "Brisbane"
     ],
     "email": "sales@yuensmarket.com.au",
-    "name": "Yuen's Market 袁氏行",
+    "name": "Yuen's Market",
+    "nameEn": "Yuen's Market",
+    "nameZh": null,
     "phone": "+61 7 3711 3588",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Calamvale",
+    "tags": [],
+    "tagsEn": [
+      "Asian grocery store"
+    ],
+    "tagsZh": [
       "亞洲超市"
     ],
     "website": "https://yuensmarket.com.au/"
   },
   {
     "address": "Shop 16, Mains Road &, McCullough St, Sunnybank QLD 4109",
-    "area": "Sunnybank",
+    "area": null,
     "branchName": "Sunnybank",
     "category": "retail",
     "chainId": "Yuen",
@@ -596,19 +711,26 @@
       "Brisbane"
     ],
     "email": "sales@yuensmarket.com.au",
-    "name": "Yuen's Market 袁氏行",
+    "name": "Yuen's Market",
+    "nameEn": "Yuen's Market",
+    "nameZh": null,
     "phone": "07 3344 3526",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Sunnybank",
+    "tags": [],
+    "tagsEn": [
+      "Asian grocery store"
+    ],
+    "tagsZh": [
       "亞洲超市"
     ],
     "website": "https://yuensmarket.com.au/"
   },
   {
     "address": "155 Wickham St, Fortitude Valley QLD 4006",
-    "area": "Fortitude Valley",
+    "area": null,
     "branchName": "Fortitude Valley",
     "category": "retail",
     "chainId": "Yuen",
@@ -616,12 +738,19 @@
       "Brisbane"
     ],
     "email": "sales@yuensmarket.com.au",
-    "name": "Yuen's Market 袁氏行",
+    "name": "Yuen's Market",
+    "nameEn": "Yuen's Market",
+    "nameZh": null,
     "phone": "07 3852 1283",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Fortitude Valley",
+    "tags": [],
+    "tagsEn": [
+      "Asian grocery store"
+    ],
+    "tagsZh": [
       "亞洲超市"
     ],
     "website": "https://yuensmarket.com.au/"
@@ -636,19 +765,26 @@
       "Brisbane"
     ],
     "email": "chiland_tea@hotmail.com",
-    "name": "馳蘭雜貨 Chiland Grocery",
+    "name": "Chiland Grocery",
+    "nameEn": "Chiland Grocery",
+    "nameZh": null,
     "phone": "+61 490 532 849",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": null,
+    "tags": [],
+    "tagsEn": [
+      "Food Wholesaler"
+    ],
+    "tagsZh": [
       "食物批發商"
     ],
     "website": null
   },
   {
     "address": "Shop 8/11-15 Deane St, Burwood NSW 2134",
-    "area": "Burwood",
+    "area": null,
     "branchName": "Burwood",
     "category": "food_drink",
     "chainId": "HKBingSutt",
@@ -656,19 +792,26 @@
       "Sydney"
     ],
     "email": "info@hongkongbingsutt.com.au",
-    "name": "香港冰室 Hong Kong Bing Sutt",
+    "name": "Hong Kong Bing Sutt",
+    "nameEn": "Hong Kong Bing Sutt",
+    "nameZh": null,
     "phone": "(02) 8387 1820",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Burwood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.hongkongbingsutt.com.au/"
   },
   {
     "address": "172 Rowe St, Eastwood NSW 2122",
-    "area": "EASTWOOD",
+    "area": null,
     "branchName": "Eastwood",
     "category": "food_drink",
     "chainId": "HKBingSutt",
@@ -676,19 +819,26 @@
       "Sydney"
     ],
     "email": "info@hongkongbingsutt.com.au",
-    "name": "香港冰室 Hong Kong Bing Sutt",
+    "name": "Hong Kong Bing Sutt",
+    "nameEn": "Hong Kong Bing Sutt",
+    "nameZh": null,
     "phone": "(02) 8385 8639",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "EASTWOOD",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.hongkongbingsutt.com.au/"
   },
   {
     "address": "shop 7/11-15 Deane St, Burwood NSW 2134",
-    "area": "Burwood",
+    "area": null,
     "branchName": "Burwood Cart Noodle",
     "category": "food_drink",
     "chainId": "HKBingSutt",
@@ -696,19 +846,26 @@
       "Sydney"
     ],
     "email": "info@hongkongbingsutt.com.au",
-    "name": "香港冰室 Hong Kong Bing Sutt",
+    "name": "Hong Kong Bing Sutt",
+    "nameEn": "Hong Kong Bing Sutt",
+    "nameZh": null,
     "phone": "(02) 8040 3880",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Burwood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.hongkongbingsutt.com.au/"
   },
   {
     "address": "Shop 7A-9A/421-429 Sussex St, Sydney",
-    "area": "Chinatown",
+    "area": null,
     "branchName": "Chinatown",
     "category": "food_drink",
     "chainId": "KLNCafe",
@@ -716,19 +873,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "九龍冰室 Kowloon Cafe",
+    "name": "Kowloon Cafe",
+    "nameEn": "Kowloon Cafe",
+    "nameZh": null,
     "phone": "(02) 9211 1998",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chinatown",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.kowlooncafe.com.au"
   },
   {
     "address": "Shop Lot 11a 27 Belmore St, Burwood, Australia",
-    "area": "Burwood",
+    "area": null,
     "branchName": "Burwood",
     "category": "food_drink",
     "chainId": "KLNCafe",
@@ -736,19 +900,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "九龍冰室 Kowloon Cafe",
+    "name": "Kowloon Cafe",
+    "nameEn": "Kowloon Cafe",
+    "nameZh": null,
     "phone": "(02) 9745 3888",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Burwood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.kowlooncafe.com.au"
   },
   {
     "address": "Shop 1/ 148-150 Rowe St, Eastwood, Australia",
-    "area": "Eastwood",
+    "area": null,
     "branchName": "Eastwood",
     "category": "food_drink",
     "chainId": "KLNCafe",
@@ -756,19 +927,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "九龍冰室 Kowloon Cafe",
+    "name": "Kowloon Cafe",
+    "nameEn": "Kowloon Cafe",
+    "nameZh": null,
     "phone": "(02) 9948 0381",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Eastwood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.kowlooncafe.com.au"
   },
   {
     "address": "Shop 3/370 Victoria Ave, Chatswood, Australia",
-    "area": "Chatswood",
+    "area": null,
     "branchName": "Chatswood",
     "category": "food_drink",
     "chainId": "KLNCafe",
@@ -776,12 +954,19 @@
       "Sydney"
     ],
     "email": null,
-    "name": "九龍冰室 Kowloon Cafe",
+    "name": "Kowloon Cafe",
+    "nameEn": "Kowloon Cafe",
+    "nameZh": null,
     "phone": "(02) 9221 9557",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chatswood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.kowlooncafe.com.au"
@@ -793,40 +978,27 @@
     "category": "media",
     "chainId": null,
     "email": "cantonese.program@sbs.com.au",
-    "name": "SBS Cantonese 廣東話節目",
+    "name": "SBS Cantonese",
+    "nameEn": "SBS Cantonese",
+    "nameZh": null,
     "phone": "+61 1800 500 727",
     "states": [
       "NSW",
       "VIC"
     ],
-    "tags": [
+    "suburb": null,
+    "tags": [],
+    "tagsEn": [
+      "Podcast"
+    ],
+    "tagsZh": [
       "電台"
     ],
     "website": "https://www.sbs.com.au/language/chinese/zh-hant"
   },
   {
-    "address": "Level 1, 592-594 Harris Street, Ultimo NSW 2007",
-    "area": "Ultimo",
-    "branchName": null,
-    "category": "media",
-    "chainId": null,
-    "cities": [
-      "Sydney"
-    ],
-    "email": "info@2cr.com.au",
-    "name": "2CR澳洲中文廣播電台",
-    "phone": "02 92115611",
-    "states": [
-      "NSW"
-    ],
-    "tags": [
-      "電台"
-    ],
-    "website": "https://www.2cr.com.au"
-  },
-  {
     "address": "Suite 29 Level 2, 650 George Street, (World Square) Sydney, NSW 2000",
-    "area": "Town Hall",
+    "area": null,
     "branchName": null,
     "category": "media",
     "chainId": null,
@@ -834,39 +1006,26 @@
       "Sydney"
     ],
     "email": "info2acradio@gmail.com",
-    "name": "2ac 澳洲華人電台",
+    "name": "2ac Australian Chinese Radio",
+    "nameEn": "2ac Australian Chinese Radio",
+    "nameZh": null,
     "phone": "02 9267 7533",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Town Hall",
+    "tags": [],
+    "tagsEn": [
+      "Podcast"
+    ],
+    "tagsZh": [
       "電台"
     ],
     "website": "https://2ac.com.au"
   },
   {
-    "address": "19-23 Holland Rd, Blackburn South VIC 3130",
-    "area": "Blackburn South",
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "newlife@nlec.org.au",
-    "name": "新生命宣道堂",
-    "phone": "(03) 9877 9588",
-    "states": [
-      "VIC"
-    ],
-    "tags": [
-      "宗教團體"
-    ],
-    "website": "https://nlec.org.au"
-  },
-  {
     "address": "Shop L01, 154A, Melbourne Central Shopping Centre, VIC 3000",
-    "area": "Melbourne Central",
+    "area": null,
     "branchName": "Melbourne Central",
     "category": "food_drink",
     "chainId": "TamJai",
@@ -874,19 +1033,26 @@
       "Melbourne"
     ],
     "email": null,
-    "name": "譚仔米線 TamJai Mixian",
+    "name": "TamJai Mixian",
+    "nameEn": "TamJai Mixian",
+    "nameZh": null,
     "phone": null,
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Melbourne Central",
+    "tags": [],
+    "tagsEn": [
+      "Rice Noodles"
+    ],
+    "tagsZh": [
       "米線"
     ],
     "website": "https://tamjaimixian.com.au"
   },
   {
     "address": "231 Swanston St, Melbourne, VIC 3000",
-    "area": "Central",
+    "area": null,
     "branchName": "Swanston Street",
     "category": "food_drink",
     "chainId": "TamJai",
@@ -894,19 +1060,26 @@
       "Melbourne"
     ],
     "email": null,
-    "name": "譚仔米線 TamJai Mixian",
+    "name": "TamJai Mixian",
+    "nameEn": "TamJai Mixian",
+    "nameZh": null,
     "phone": null,
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Central",
+    "tags": [],
+    "tagsEn": [
+      "Rice Noodles"
+    ],
+    "tagsZh": [
       "米線"
     ],
     "website": "https://tamjaimixian.com.au"
   },
   {
     "address": "Shop L031 - 235 Springvale Road, Glen Waverley, VIC 3150 3000",
-    "area": "Glen Waverley",
+    "area": null,
     "branchName": "Glen Waverley",
     "category": "food_drink",
     "chainId": "TamJai",
@@ -914,55 +1087,22 @@
       "Melbourne"
     ],
     "email": null,
-    "name": "譚仔米線 TamJai Mixian",
+    "name": "TamJai Mixian",
+    "nameEn": "TamJai Mixian",
+    "nameZh": null,
     "phone": null,
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Glen Waverley",
+    "tags": [],
+    "tagsEn": [
+      "Rice Noodles"
+    ],
+    "tagsZh": [
       "米線"
     ],
     "website": "https://tamjaimixian.com.au"
-  },
-  {
-    "address": "100 Alfred Street, Milsons Point, NSW 2061, Australia",
-    "area": "Milsons Point",
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Sydney"
-    ],
-    "email": "admin@cccmilsonspoint.org",
-    "name": "雪梨華人基督教會",
-    "phone": "02 99552800",
-    "states": [
-      "NSW"
-    ],
-    "tags": [
-      "宗教團體"
-    ],
-    "website": "https://www.chinesechristianchurch.org.au/繁體中文-2/"
-  },
-  {
-    "address": "41 Boundary Road, North Epping, NSW, 2121",
-    "area": "North Epping",
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Sydney"
-    ],
-    "email": "admin@ndcccs.org.au",
-    "name": "北區雪梨華人基督教會",
-    "phone": "(02) 9869 1772",
-    "states": [
-      "NSW"
-    ],
-    "tags": [
-      "宗教團體"
-    ],
-    "website": "https://www.ndcccs.org.au/cn/home"
   },
   {
     "address": "60 Weldon Street, Burwood NSW 2134",
@@ -974,19 +1114,26 @@
       "Sydney"
     ],
     "email": "info@anhf.org.au",
-    "name": "澳華養老",
+    "name": "Australian Nursing Home Foundation",
+    "nameEn": "Australian Nursing Home Foundation",
+    "nameZh": null,
     "phone": "(02) 8741 0218",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": null,
+    "tags": [],
+    "tagsEn": [
+      "Aged Care Services"
+    ],
+    "tagsZh": [
       "高齡服務"
     ],
     "website": "https://www.anhf.org.au/zh_hk/"
   },
   {
     "address": "2 Birmingham Avenue, Villawood, NSW, Australia, New South Wales",
-    "area": "Villawood",
+    "area": null,
     "branchName": null,
     "category": "retail",
     "chainId": null,
@@ -994,19 +1141,26 @@
       "Sydney"
     ],
     "email": "ettason@ettason.com.au",
-    "name": "Ettason Pty Ltd 林和成貿易公司",
+    "name": "Ettason Pty Ltd",
+    "nameEn": "Ettason Pty Ltd",
+    "nameZh": null,
     "phone": "+61 2 9728 2288",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Villawood",
+    "tags": [],
+    "tagsEn": [
+      "Food Wholesaler"
+    ],
+    "tagsZh": [
       "食物批發商"
     ],
     "website": "https://www.ettason.com"
   },
   {
     "address": "Unit 8, 17-21 Henderson Street, Turrella NSW 2205",
-    "area": "Turrella",
+    "area": null,
     "branchName": null,
     "category": "retail",
     "chainId": null,
@@ -1014,19 +1168,26 @@
       "Sydney"
     ],
     "email": "sales@onhing.com.au",
-    "name": "安興號  On Hing Dry Seafood",
+    "name": "On Hing Dry Seafood",
+    "nameEn": "On Hing Dry Seafood",
+    "nameZh": null,
     "phone": "+61 4 7776 9299",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Turrella",
+    "tags": [],
+    "tagsEn": [
+      "Chinese Dried Seafood"
+    ],
+    "tagsZh": [
       "海味"
     ],
     "website": "https://www.onhing.com.au"
   },
   {
     "address": "51 Sherwood Road Toowong, QLD, Australia, Queensland 4066",
-    "area": "Toowong",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1035,18 +1196,25 @@
     ],
     "email": "samuel@josienorth.com",
     "name": "Josie North",
+    "nameEn": "Josie North",
+    "nameZh": null,
     "phone": "+61 466 718 884",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Toowong",
+    "tags": [],
+    "tagsEn": [
+      "Western style Café"
+    ],
+    "tagsZh": [
       "咖啡室"
     ],
     "website": "https://www.josienorth.com"
   },
   {
     "address": "Shop 76/662 Compton Rd, Calamvale QLD 4116, Brisbane, Queensland, Australia 4116",
-    "area": "Calamvale",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1054,39 +1222,26 @@
       "Brisbane"
     ],
     "email": null,
-    "name": "吉祥冰室 Lucky Cafe",
+    "name": "Lucky Cafe",
+    "nameEn": "Lucky Cafe",
+    "nameZh": null,
     "phone": null,
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Calamvale",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
-    "address": "Level 8, 193 North Quay, Brisbane City QLD 4000, Brisbane, QLD, Australia, Queensland",
-    "area": "Brisbane City",
-    "branchName": null,
-    "category": "legal",
-    "chainId": null,
-    "cities": [
-      "Brisbane"
-    ],
-    "email": "stephen@ensurelegal.com.au",
-    "name": "昆士蘭房產商業 郭律師",
-    "phone": "+61 402 937 286",
-    "states": [
-      "QLD"
-    ],
-    "tags": [
-      "律師"
-    ],
-    "website": "https://ensurelegal.com.au"
-  },
-  {
     "address": "George Street Brisbane, QLD, Australia, Queensland 4000",
-    "area": "Brisbane",
+    "area": null,
     "branchName": null,
     "category": "leisure",
     "chainId": null,
@@ -1095,18 +1250,25 @@
     ],
     "email": "gjweddingsolutions@gmail.com",
     "name": "G&J Wedding Solutions",
+    "nameEn": "G&J Wedding Solutions",
+    "nameZh": null,
     "phone": "+61 433 807 719",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Brisbane",
+    "tags": [],
+    "tagsEn": [
+      "Wedding Planner"
+    ],
+    "tagsZh": [
       "婚禮策劃"
     ],
     "website": "https://gjweddingsolutions.com.au/"
   },
   {
     "address": "966 Logan Road, Holland Park West, QLD, Australia, Queensland",
-    "area": "Holland Park West",
+    "area": null,
     "branchName": null,
     "category": "legal",
     "chainId": null,
@@ -1114,35 +1276,22 @@
       "Brisbane"
     ],
     "email": "hello@harmonylegal.com.au",
-    "name": "Harmony Legal & Associates 家和律師事務所 (Hla)",
+    "name": "Harmony Legal & Associates",
+    "nameEn": "Harmony Legal & Associates",
+    "nameZh": null,
     "phone": "+61 406 025 025",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Holland Park West",
+    "tags": [],
+    "tagsEn": [
+      "Law Firm"
+    ],
+    "tagsZh": [
       "律師"
     ],
     "website": "https://harmonylegal.com.au/"
-  },
-  {
-    "address": "71 Annie St, Coopers Plains, QLD, 4108",
-    "area": "Coopers Plains",
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Brisbane"
-    ],
-    "email": "admin@cathay.org.au",
-    "name": "國泰會",
-    "phone": "(07) 3522 0710",
-    "states": [
-      "QLD"
-    ],
-    "tags": [
-      "高齡服務"
-    ],
-    "website": "https://cn.cathay.org.au"
   },
   {
     "address": null,
@@ -1154,17 +1303,22 @@
       "Brisbane"
     ],
     "email": "info@bclionsclub.org.au",
-    "name": "Lions Club of Brisbane Chinese - 布里斯本華人獅子會",
+    "name": "Lions Club of Brisbane Chinese",
+    "nameEn": "Lions Club of Brisbane Chinese",
+    "nameZh": null,
     "phone": "+61 411 529 262",
     "states": [
       "QLD"
     ],
+    "suburb": null,
     "tags": [],
+    "tagsEn": [],
+    "tagsZh": [],
     "website": "https://www.bclionsclub.org.au/"
   },
   {
     "address": "shop 59 Calamvale Central, 662 Compton Rd, Brisbane, Queensland 4116, Australia",
-    "area": "Calamvale",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1172,19 +1326,26 @@
       "Brisbane"
     ],
     "email": "ruyi.calamvale@gmail.com",
-    "name": "如意點心 Ru Yi Dim Sum",
+    "name": "Ru Yi Dim Sum",
+    "nameEn": "Ru Yi Dim Sum",
+    "nameZh": null,
     "phone": "+61 498 380 470",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Calamvale",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum"
+    ],
+    "tagsZh": [
       "點心"
     ],
     "website": "https://ruyidimsum.com.au/"
   },
   {
     "address": "75A Cotham Road Kew, VIC, Australia, Victoria 3101",
-    "area": "Kew",
+    "area": null,
     "branchName": null,
     "category": "organisation",
     "chainId": null,
@@ -1192,59 +1353,26 @@
       "Melbourne"
     ],
     "email": "mcbc@mcbc.org.au",
-    "name": "墨爾本華人浸信會 Melbourne Chinese Baptist Church",
+    "name": "Melbourne Chinese Baptist Church",
+    "nameEn": "Melbourne Chinese Baptist Church",
+    "nameZh": null,
     "phone": "+61 3 9855 2868",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Kew",
+    "tags": [],
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
       "宗教團體"
     ],
     "website": "https://mcbc.org.au/"
   },
   {
-    "address": null,
-    "area": null,
-    "branchName": null,
-    "category": "realestate_home",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "lung821211@gmail.com",
-    "name": "墨爾本香港人搬屋",
-    "phone": "+61 416 158 030",
-    "states": [
-      "VIC"
-    ],
-    "tags": [
-      "搬屋服務"
-    ],
-    "website": null
-  },
-  {
-    "address": null,
-    "area": null,
-    "branchName": null,
-    "category": "realestate_home",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "kewpieexpress.pty.ltd.atf@gmail.com",
-    "name": "搬屋伙計.墨爾本",
-    "phone": "+61 451 756 360",
-    "states": [
-      "VIC"
-    ],
-    "tags": [
-      "搬屋服務"
-    ],
-    "website": null
-  },
-  {
     "address": "Shop 14/2 Delma Dr, Eastgardens NSW 2036",
-    "area": "Burwood",
+    "area": null,
     "branchName": "Burwood",
     "category": "food_drink",
     "chainId": "HKCafe",
@@ -1252,19 +1380,26 @@
       "Sydney"
     ],
     "email": "hongkongkitchencw@gmail.com",
-    "name": "港夠味 Hong Kong Cafe",
+    "name": "Hong Kong Cafe",
+    "nameEn": "Hong Kong Cafe",
+    "nameZh": null,
     "phone": "(02) 80183888",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Burwood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "369 Victoria Ave, Chatswood NSW 2067",
-    "area": "Chatswood",
+    "area": null,
     "branchName": "Chatswood",
     "category": "food_drink",
     "chainId": "HKCafe",
@@ -1272,19 +1407,26 @@
       "Sydney"
     ],
     "email": "hongkongkitchencw@gmail.com",
-    "name": "港夠味 Hong Kong Cafe",
+    "name": "Hong Kong Cafe",
+    "nameEn": "Hong Kong Cafe",
+    "nameZh": null,
     "phone": "(02) 80218038",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chatswood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "Level 2, opposite BWS Cnr, Waterloo Rd, Macquarie Park, North Ryde NSW 2113",
-    "area": "Macquarie Centre",
+    "area": null,
     "branchName": "Macquarie Centre",
     "category": "food_drink",
     "chainId": "HKCafe",
@@ -1292,19 +1434,26 @@
       "Sydney"
     ],
     "email": "hongkongkitchencw@gmail.com",
-    "name": "港夠味 Hong Kong Cafe",
+    "name": "Hong Kong Cafe",
+    "nameEn": "Hong Kong Cafe",
+    "nameZh": null,
     "phone": "(02) 94383282",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Macquarie Centre",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "Shop 1&2/1 Gauthorpe St, Rhodes NSW 2138",
-    "area": "Rhodes",
+    "area": null,
     "branchName": "Rhodes",
     "category": "food_drink",
     "chainId": "HKCafe",
@@ -1312,19 +1461,26 @@
       "Sydney"
     ],
     "email": "hongkongkitchencw@gmail.com",
-    "name": "港夠味 Hong Kong Cafe",
+    "name": "Hong Kong Cafe",
+    "nameEn": "Hong Kong Cafe",
+    "nameZh": null,
     "phone": "(02) 80547668",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Rhodes",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "Shop 3A/ 243-253 Walter Road West,, Morley, WA, Australia, Western Australia",
-    "area": "Morley",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1332,19 +1488,26 @@
       "Perth"
     ],
     "email": "kowlooncafeperth@gmail.com",
-    "name": "九龍冰室 Kowloon Cafe Perth",
+    "name": "Kowloon Cafe Perth",
+    "nameEn": "Kowloon Cafe Perth",
+    "nameZh": null,
     "phone": "+61 425 083 321",
     "states": [
       "WA"
     ],
-    "tags": [
+    "suburb": "Morley",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "Shop 9, 110 Parry Avenue Perth, WA, Australia, Western Australia 6149",
-    "area": "Perth",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1352,19 +1515,26 @@
       "Perth"
     ],
     "email": null,
-    "name": "2樓茶座 Steak and Food Concepts",
+    "name": "Steak and Food Concepts",
+    "nameEn": "Steak and Food Concepts",
+    "nameZh": null,
     "phone": "+61 8 9332 7779",
     "states": [
       "WA"
     ],
-    "tags": [
+    "suburb": "Perth",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "4/800 Albany Highway , East Victoria Park, WA, Australia, Western Australia",
-    "area": "East Victoria Park",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1372,19 +1542,26 @@
       "Perth"
     ],
     "email": null,
-    "name": "榮記冰室 Hong Kong Tea Cafe",
+    "name": "Hong Kong Tea Cafe",
+    "nameEn": "Hong Kong Tea Cafe",
+    "nameZh": null,
     "phone": "+61 8 9361 6653",
     "states": [
       "WA"
     ],
-    "tags": [
+    "suburb": "East Victoria Park",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.hongkongteacafe.com"
   },
   {
     "address": "354 William Street, Northbridge WA 6003, Australia",
-    "area": "Northbridge",
+    "area": null,
     "branchName": "Northbridge",
     "category": "food_drink",
     "chainId": "RoastDuck",
@@ -1392,19 +1569,26 @@
       "Perth"
     ],
     "email": "goodfortuneducknb@gmail.com",
-    "name": "德興燒鴨店 Good Fortune Roast Duck House",
+    "name": "Good Fortune Roast Duck House",
+    "nameEn": "Good Fortune Roast Duck House",
+    "nameZh": null,
     "phone": "08 9228 3293",
     "states": [
       "WA"
     ],
-    "tags": [
+    "suburb": "Northbridge",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "https://www.goodfortuneduckhouse.com.au/"
   },
   {
     "address": "884 Albany Highway, East Victoria Park WA 6101, Australia",
-    "area": "East Victoria Park",
+    "area": null,
     "branchName": "East Victoria Park",
     "category": "food_drink",
     "chainId": "RoastDuck",
@@ -1412,19 +1596,26 @@
       "Perth"
     ],
     "email": "goodfortuneducknb@gmail.com",
-    "name": "德興燒鴨店 Good Fortune Roast Duck House",
+    "name": "Good Fortune Roast Duck House",
+    "nameEn": "Good Fortune Roast Duck House",
+    "nameZh": null,
     "phone": "08 9472 8236",
     "states": [
       "WA"
     ],
-    "tags": [
+    "suburb": "East Victoria Park",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "https://www.goodfortuneduckhouse.com.au/"
   },
   {
     "address": "Shop 204/14 Walker St, Rhodes NSW 2138",
-    "area": "Rhodes",
+    "area": null,
     "branchName": "Rhodes",
     "category": "food_drink",
     "chainId": "HKStreetfood",
@@ -1432,19 +1623,26 @@
       "Sydney"
     ],
     "email": "info@hongkongstreetfood.com.au",
-    "name": "好上好冰室 Hong Kong Street Food",
+    "name": "Hong Kong Street Food",
+    "nameEn": "Hong Kong Street Food",
+    "nameZh": null,
     "phone": "0433 836 628",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Rhodes",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "http://hongkongstreetfood.com.au/"
   },
   {
     "address": "Shop 328-329, Westfield/1 Anderson St, Chatswood NSW 2067",
-    "area": "Chatswood",
+    "area": null,
     "branchName": "Chatswood",
     "category": "food_drink",
     "chainId": "HKStreetfood",
@@ -1452,19 +1650,26 @@
       "Sydney"
     ],
     "email": "info@hongkongstreetfood.com.au",
-    "name": "好上好冰室 Hong Kong Street Food",
+    "name": "Hong Kong Street Food",
+    "nameEn": "Hong Kong Street Food",
+    "nameZh": null,
     "phone": "0430 613 328",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chatswood",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "http://hongkongstreetfood.com.au/"
   },
   {
     "address": "Level 3 Food Court Shop FC10 Westfield Hornsby, 236 Pacific Highway, Hornsby NSW 2077",
-    "area": "Hornsby",
+    "area": null,
     "branchName": "Hornsby King Pot",
     "category": "food_drink",
     "chainId": "HKStreetfood",
@@ -1472,19 +1677,26 @@
       "Sydney"
     ],
     "email": "info@hongkongstreetfood.com.au",
-    "name": "好上好冰室 Hong Kong Street Food",
+    "name": "Hong Kong Street Food",
+    "nameEn": "Hong Kong Street Food",
+    "nameZh": null,
     "phone": "0450 983 083",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Hornsby",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "http://hongkongstreetfood.com.au/"
   },
   {
     "address": "Shop FM6/7, Hawker Lane Food Hall, Lower Ground Floor, Westfield Chatswood, Australia",
-    "area": "Chatswood",
+    "area": null,
     "branchName": "Claypot Kitchen Chatswood",
     "category": "food_drink",
     "chainId": "HKStreetfood",
@@ -1492,19 +1704,26 @@
       "Sydney"
     ],
     "email": "info@hongkongstreetfood.com.au",
-    "name": "好上好冰室 Hong Kong Street Food",
+    "name": "Hong Kong Street Food",
+    "nameEn": "Hong Kong Street Food",
+    "nameZh": null,
     "phone": "0450 882 669",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chatswood",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "http://hongkongstreetfood.com.au/"
   },
   {
     "address": "Shop 2138, Macquarie Centre, Macquarie Park NSW 2113",
-    "area": "Macquarie Centre",
+    "area": null,
     "branchName": "Claypot Kitchen Macquarie Centre",
     "category": "food_drink",
     "chainId": "HKStreetfood",
@@ -1512,19 +1731,26 @@
       "Sydney"
     ],
     "email": "info@hongkongstreetfood.com.au",
-    "name": "好上好冰室 Hong Kong Street Food",
+    "name": "Hong Kong Street Food",
+    "nameEn": "Hong Kong Street Food",
+    "nameZh": null,
     "phone": "0414 668 883",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Macquarie Centre",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "http://hongkongstreetfood.com.au/"
   },
   {
     "address": "Shop 3505 Level 3 Herring &, Waterloo Rd, North Ryde NSW 2113",
-    "area": "North Ryde",
+    "area": null,
     "branchName": "North Ryde F&L Gourmet",
     "category": "food_drink",
     "chainId": "HKStreetfood",
@@ -1532,19 +1758,26 @@
       "Sydney"
     ],
     "email": "info@hongkongstreetfood.com.au",
-    "name": "好上好冰室 Hong Kong Street Food",
+    "name": "Hong Kong Street Food",
+    "nameEn": "Hong Kong Street Food",
+    "nameZh": null,
     "phone": "(02) 9887 2787",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "North Ryde",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "http://hongkongstreetfood.com.au/"
   },
   {
     "address": "3/387 Victoria Ave, Chatswood NSW 2067",
-    "area": "Chatswood",
+    "area": null,
     "branchName": "Chatswood BBQ Kitchen",
     "category": "food_drink",
     "chainId": "HKStreetfood",
@@ -1552,19 +1785,26 @@
       "Sydney"
     ],
     "email": "info@hongkongstreetfood.com.au",
-    "name": "好上好冰室 Hong Kong Street Food",
+    "name": "Hong Kong Street Food",
+    "nameEn": "Hong Kong Street Food",
+    "nameZh": null,
     "phone": "(02) 9419 6532",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chatswood",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "http://hongkongstreetfood.com.au/"
   },
   {
     "address": "133 Gouger Street, Adelaide, South Australia 5000",
-    "area": "Adelaide",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1572,19 +1812,26 @@
       "Adelaide"
     ],
     "email": "theonehkcafe@gmail.com",
-    "name": "壹排檔 The One Hong Kong Cafe",
+    "name": "The One Hong Kong Cafe",
+    "nameEn": "The One Hong Kong Cafe",
+    "nameZh": null,
     "phone": "+61 8 7225 8999",
     "states": [
       "SA"
     ],
-    "tags": [
+    "suburb": "Adelaide",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong Street-side Food"
+    ],
+    "tagsZh": [
       "大排檔"
     ],
     "website": null
   },
   {
     "address": "22/ 113-131 Days Road, Croydon Park Adelaide, SA, Australia, South Australia 5008",
-    "area": "Croydon Park",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1592,19 +1839,26 @@
       "Adelaide"
     ],
     "email": null,
-    "name": "家友站 Mount Lion Cafe",
+    "name": "Mount Lion Cafe",
+    "nameEn": "Mount Lion Cafe",
+    "nameZh": null,
     "phone": "+61 452 016 866",
     "states": [
       "SA"
     ],
-    "tags": [
+    "suburb": "Croydon Park",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "Suite 4B, 4 Redmyre House, 9-13 Redmyre Road, Strathfield, NSW 2135",
-    "area": "Strathfield",
+    "area": null,
     "branchName": null,
     "category": "accounting",
     "chainId": null,
@@ -1613,18 +1867,25 @@
     ],
     "email": null,
     "name": "BEN TSANG & CO",
+    "nameEn": "BEN TSANG & CO",
+    "nameZh": null,
     "phone": "(02) 9763 2300",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Strathfield",
+    "tags": [],
+    "tagsEn": [
+      "Accounting"
+    ],
+    "tagsZh": [
       "會計服務"
     ],
     "website": "https://www.bentsang.com.au/j4/"
   },
   {
     "address": "388 Lane cove rd macquire park, Sydney, Australia 2113",
-    "area": "Macquire Park",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1633,18 +1894,25 @@
     ],
     "email": null,
     "name": "Chill Hub",
+    "nameEn": "Chill Hub",
+    "nameZh": null,
     "phone": null,
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Macquire Park",
+    "tags": [],
+    "tagsEn": [
+      "Western style Café"
+    ],
+    "tagsZh": [
       "咖啡室"
     ],
     "website": null
   },
   {
     "address": "Shop 16 Level 2, 27-31 Belmore Street, Emerald (B1) Square, Burwood NSW 2134",
-    "area": "Burwood",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1652,19 +1920,26 @@
       "Sydney"
     ],
     "email": "RoyalTreasure.SR@gmail.com",
-    "name": "敦煌海鮮酒樓 Royal Treasure Seafood Restaurant",
+    "name": "Royal Treasure Seafood Restaurant",
+    "nameEn": "Royal Treasure Seafood Restaurant",
+    "nameZh": null,
     "phone": "(02) 9747 0288",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Burwood",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://www.royaltreasure.com.au"
   },
   {
     "address": "Hurstville Times Plaza, Level 2/127-141 Forest Rd, Hurstville NSW 2220",
-    "area": "Hurstville",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1672,19 +1947,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "金沙酒樓 Golden Sands Restaurant",
+    "name": "Golden Sands Restaurant",
+    "nameEn": "Golden Sands Restaurant",
+    "nameZh": null,
     "phone": "(02) 9580 3188",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Hurstville",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": "Level 3, Market City, 9-13, Hay St, Sydney, Australia 2000",
-    "area": "Haymarket",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1692,19 +1974,26 @@
       "Sydney"
     ],
     "email": "info@theeightrestaurant.com.au",
-    "name": "八樂居 The Eight Restaurant",
+    "name": "The Eight Restaurant",
+    "nameEn": "The Eight Restaurant",
+    "nameZh": null,
     "phone": "(02) 9282 9988",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Haymarket",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://www.theeightrestaurant.com.au"
   },
   {
     "address": "393-399 Sussex St, Haymarket NSW 2000",
-    "area": "Haymarket",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1712,19 +2001,26 @@
       "Sydney"
     ],
     "email": "info@ausroyalgroup.net",
-    "name": "皇庭海鮮舫 Royal Palace",
+    "name": "Royal Palace",
+    "nameEn": "Royal Palace",
+    "nameZh": null,
     "phone": "(02) 9211 8518",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Haymarket",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://royalpalace.au"
   },
   {
     "address": "The Darling Exchange, Mezzanine Level, 1 Little Pier Street, Sydney NSW 2000",
-    "area": "Sydney",
+    "area": null,
     "branchName": "金唐 XOPP by Golden Century",
     "category": "food_drink",
     "chainId": "GoldenCentury",
@@ -1732,19 +2028,26 @@
       "Sydney"
     ],
     "email": "info@xopp.com.au",
-    "name": "金唐 Golden Century Group",
+    "name": "Golden Century Group",
+    "nameEn": "Golden Century Group",
+    "nameZh": null,
     "phone": "02 8030 0000",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Sydney",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://goldencentury.com.au"
   },
   {
     "address": "The Star (Entry via street level on Pirrama Rd) 80 Pyrmont Street, Pyrmont NSW 2009",
-    "area": "Pyrmont",
+    "area": null,
     "branchName": "金唐薈 The Century by Golden Century",
     "category": "food_drink",
     "chainId": "GoldenCentury",
@@ -1752,19 +2055,26 @@
       "Sydney"
     ],
     "email": "thecentury@goldencentury.com.au",
-    "name": "金唐 Golden Century Group",
+    "name": "Golden Century Group",
+    "nameEn": "Golden Century Group",
+    "nameZh": null,
     "phone": "02 9566 2328",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Pyrmont",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://goldencentury.com.au"
   },
   {
     "address": "Darling Square Exchange, Ground Floor, 1 Little Pier Street, Haymarket, NSW 2000",
-    "area": "Haymarket",
+    "area": null,
     "branchName": "金唐燒臘 Golden Century BBQ",
     "category": "food_drink",
     "chainId": "GoldenCentury",
@@ -1772,19 +2082,26 @@
       "Sydney"
     ],
     "email": "thecentury@goldencentury.com.au",
-    "name": "金唐 Golden Century Group",
+    "name": "Golden Century Group",
+    "nameEn": "Golden Century Group",
+    "nameZh": null,
     "phone": null,
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Haymarket",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "https://goldencentury.com.au"
   },
   {
     "address": "93 Grote Street , Adelaide, SA, Australia, South Australia",
-    "area": "Adelaide",
+    "area": null,
     "branchName": null,
     "category": "retail",
     "chainId": null,
@@ -1792,19 +2109,26 @@
       "Adelaide"
     ],
     "email": "hkggrocery@gmail.com",
-    "name": "香港超市 Hong Kong Grocery",
+    "name": "Hong Kong Grocery",
+    "nameEn": "Hong Kong Grocery",
+    "nameZh": null,
     "phone": "+61 8 8231 4102",
     "states": [
       "SA"
     ],
-    "tags": [
+    "suburb": "Adelaide",
+    "tags": [],
+    "tagsEn": [
+      "Asian grocery store"
+    ],
+    "tagsZh": [
       "亞洲超市"
     ],
     "website": null
   },
   {
     "address": "25 Field Street , Adelaide, South Australia 5000",
-    "area": "Adelaide",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1812,19 +2136,26 @@
       "Adelaide"
     ],
     "email": null,
-    "name": "九龍茶餐廳 Kowloon Restaurant Adelaide",
+    "name": "Kowloon Restaurant Adelaide",
+    "nameEn": "Kowloon Restaurant Adelaide",
+    "nameZh": null,
     "phone": "+61872263719",
     "states": [
       "SA"
     ],
-    "tags": [
+    "suburb": "Adelaide",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "Shop 107/200 Bourke Street Melbourne",
-    "area": "Chinatown",
+    "area": null,
     "branchName": null,
     "category": "health",
     "chainId": null,
@@ -1833,18 +2164,25 @@
     ],
     "email": null,
     "name": "Van's Studio",
+    "nameEn": "Van's Studio",
+    "nameZh": null,
     "phone": "+61406888238",
     "states": [
       "VIC"
     ],
-    "tags": [
+    "suburb": "Chinatown",
+    "tags": [],
+    "tagsEn": [
+      "Hairdressing"
+    ],
+    "tagsZh": [
       "理髮"
     ],
     "website": null
   },
   {
     "address": "36 wright street, Adelaide , Adelaide, SA, Australia, South Australia",
-    "area": "Adelaide",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1852,19 +2190,26 @@
       "Adelaide"
     ],
     "email": null,
-    "name": "頂好酒樓 Ding Hao Restaurant",
+    "name": "Ding Hao Restaurant",
+    "nameEn": "Ding Hao Restaurant",
+    "nameZh": null,
     "phone": "+61 8 8211 7036",
     "states": [
       "SA"
     ],
-    "tags": [
+    "suburb": "Adelaide",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": null,
-    "area": "West Ryde",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1872,19 +2217,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "快意冰室 Feast Asian Cuisine",
+    "name": "Feast Asian Cuisine",
+    "nameEn": "Feast Asian Cuisine",
+    "nameZh": null,
     "phone": null,
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "West Ryde",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": null
   },
   {
     "address": "Inside Campsie RSL - 25 Anglo Road, Campsie 2194",
-    "area": "Campsie",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1892,19 +2244,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "新好酒樓 Sun Ho Restaurant",
+    "name": "Sun Ho Restaurant",
+    "nameEn": "Sun Ho Restaurant",
+    "nameZh": null,
     "phone": "+61 2 9784 0200",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Campsie",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": "R201/1 Central Park Ave, Chippendale NSW 2008",
-    "area": "Chippendale",
+    "area": null,
     "branchName": "Sunny Seafood Flagship",
     "category": "food_drink",
     "chainId": "SunnySeafood",
@@ -1912,19 +2271,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "偉洋海鮮酒樓 Sunny Seafood",
+    "name": "Sunny Seafood",
+    "nameEn": "Sunny Seafood",
+    "nameZh": null,
     "phone": "(02) 8358 4689",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chippendale",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://sunnyseafoodrestaurant.com.au"
   },
   {
     "address": "8 Pitt St, Mortdale, NSW 2223",
-    "area": "Mortdale",
+    "area": null,
     "branchName": "Sunny Seafood Mortdale",
     "category": "food_drink",
     "chainId": "SunnySeafood",
@@ -1932,19 +2298,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "偉洋海鮮酒樓 Sunny Seafood",
+    "name": "Sunny Seafood",
+    "nameEn": "Sunny Seafood",
+    "nameZh": null,
     "phone": "(02) 9570 9929",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Mortdale",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://sunnyseafoodrestaurant.com.au"
   },
   {
     "address": "Central Park Mall, LG, RB06A/1 Central Park Ave, Chippendale NSW 2008",
-    "area": "Chippendale",
+    "area": null,
     "branchName": "Sunny Seafood Bamboo",
     "category": "food_drink",
     "chainId": "SunnySeafood",
@@ -1952,19 +2325,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "偉洋海鮮酒樓 Sunny Seafood",
+    "name": "Sunny Seafood",
+    "nameEn": "Sunny Seafood",
+    "nameZh": null,
     "phone": "(02) 8043 8890",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chippendale",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://sunnyseafoodrestaurant.com.au"
   },
   {
     "address": "10 Dixon Street, Haymarket, NSW, Australia, New South Wales",
-    "area": "Haymarket",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1972,19 +2352,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "大排檔 Old Town Hong Kong Cuisine",
+    "name": "Old Town Hong Kong Cuisine",
+    "nameEn": "Old Town Hong Kong Cuisine",
+    "nameZh": null,
     "phone": "+61 2 9264 3888",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Haymarket",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://oldtownondixon.com.au"
   },
   {
     "address": "477 King Georges Rd, Beverly Hills NSW 2209, Australia",
-    "area": "Beverly Hills",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -1993,18 +2380,25 @@
     ],
     "email": null,
     "name": "Yummy Seafood Chinese Restaurant",
+    "nameEn": "Yummy Seafood Chinese Restaurant",
+    "nameZh": null,
     "phone": "+61 2 9580 0788",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Beverly Hills",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": "39/45 Dixon St, Haymarket NSW 2000",
-    "area": "Haymarket",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2013,18 +2407,25 @@
     ],
     "email": null,
     "name": "Nine Dragons",
+    "nameEn": "Nine Dragons",
+    "nameZh": null,
     "phone": "(02) 9211 3549",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Haymarket",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": "8/1 Macquarie St, Sydney NSW 2000",
-    "area": "Sydney",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2032,19 +2433,26 @@
       "Sydney"
     ],
     "email": "reservations@theeast.com.au",
-    "name": "豪紳大酒家 The East Chinese Restaurant",
+    "name": "The East Chinese Restaurant",
+    "nameEn": "The East Chinese Restaurant",
+    "nameZh": null,
     "phone": "+61 2 9252 6868",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Sydney",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://theeast.com.au/"
   },
   {
     "address": "213-215 Thomas St, Haymarket NSW 2000",
-    "area": "Haymarket",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2052,19 +2460,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "皇冠燒臘粥麵 Emperor's Garden B.B.Q. & Noodles",
+    "name": "Emperor's Garden B.B.Q. & Noodles",
+    "nameEn": "Emperor's Garden B.B.Q. & Noodles",
+    "nameZh": null,
     "phone": "(02) 9281 9899",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Haymarket",
+    "tags": [],
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
       "燒味"
     ],
     "website": "https://revu.website/137865/"
   },
   {
     "address": "25 W Parade, Eastwood NSW 2122, Australia",
-    "area": "Eastwood",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2072,19 +2487,26 @@
       "Sydney"
     ],
     "email": "info@neblehouseeastwood.com.au",
-    "name": "文華酒樓 Noble House Seafood Restaurant",
+    "name": "Noble House Seafood Restaurant",
+    "nameEn": "Noble House Seafood Restaurant",
+    "nameZh": null,
     "phone": "02 9874 1888",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Eastwood",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "http://noblehouseeastwood.com.au"
   },
   {
     "address": "a7/2-10 Central Ave, Thornleigh NSW 2120",
-    "area": "Thornleigh",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2092,19 +2514,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "創潮樓潮州海鮮餐館 Chiu Chou Garden Chinese Seafood Restaurant",
+    "name": "Chiu Chou Garden Chinese Seafood Restaurant",
+    "nameEn": "Chiu Chou Garden Chinese Seafood Restaurant",
+    "nameZh": null,
     "phone": "(02) 9980 2828",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Thornleigh",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": "Shop SP101 Carlingford Court Shopping Centre, Carlingford NSW 2118",
-    "area": "Carlingford",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2112,19 +2541,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "大三元 Crystal Seafood Restaurant",
+    "name": "Crystal Seafood Restaurant",
+    "nameEn": "Crystal Seafood Restaurant",
+    "nameZh": null,
     "phone": "02 9872 3338",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Carlingford",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://crystalseafoodrestaurant.com.au"
   },
   {
     "address": "372 Pennant Hills Rd, Carlingford NSW 2118",
-    "area": "Carlingford",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2132,19 +2568,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "福臨門 Fortune Palace",
+    "name": "Fortune Palace",
+    "nameEn": "Fortune Palace",
+    "nameZh": null,
     "phone": "(02) 9872 6600",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Carlingford",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": "Level 2/65 Albert Ave, Chatswood NSW 2067",
-    "area": "Chatswood",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2152,19 +2595,26 @@
       "Sydney"
     ],
     "email": "fortuneplacechatswood@gmail.com",
-    "name": "福來門 Fortune Palace",
+    "name": "Fortune Palace",
+    "nameEn": "Fortune Palace",
+    "nameZh": null,
     "phone": "(02) 9419 8669",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Chatswood",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://www.fortuneplacechatswood.com"
   },
   {
     "address": "167 Rowe St, Eastwood NSW 2122",
-    "area": "Eastwood",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2172,19 +2622,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "伊士活海鮮酒樓 Eastwood Seafood Restaurant",
+    "name": "Eastwood Seafood Restaurant",
+    "nameEn": "Eastwood Seafood Restaurant",
+    "nameZh": null,
     "phone": "(02) 9804 1289",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Eastwood",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": "Shop 1/78-82 Burwood Road, Burwood NSW 2134",
-    "area": "Burwood",
+    "area": null,
     "branchName": "Burwood",
     "category": "food_drink",
     "chainId": "Canton",
@@ -2192,19 +2649,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "煮意 CANTON",
+    "name": "CANTON",
+    "nameEn": "CANTON",
+    "nameZh": null,
     "phone": "(02) 9519 5658",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Burwood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.cantoncafeau.com"
   },
   {
     "address": null,
-    "area": "Eastwood",
+    "area": null,
     "branchName": "Eastwood",
     "category": "food_drink",
     "chainId": "Canton",
@@ -2212,19 +2676,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "煮意 CANTON",
+    "name": "CANTON",
+    "nameEn": "CANTON",
+    "nameZh": null,
     "phone": "(02) 9874 2226",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Eastwood",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.cantoncafeau.com"
   },
   {
     "address": null,
-    "area": "Haymarket",
+    "area": null,
     "branchName": "Haymarket",
     "category": "food_drink",
     "chainId": "Canton",
@@ -2232,19 +2703,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "煮意 CANTON",
+    "name": "CANTON",
+    "nameEn": "CANTON",
+    "nameZh": null,
     "phone": "(02) 9281 7784",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Haymarket",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://www.cantoncafeau.com"
   },
   {
     "address": "25/1 Lakeside Rd, Eastwood NSW 2122",
-    "area": "Eastwood",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2252,19 +2730,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "億食家 Ginger and Shallots Chinese Cuisine",
+    "name": "Ginger and Shallots Chinese Cuisine",
+    "nameEn": "Ginger and Shallots Chinese Cuisine",
+    "nameZh": null,
     "phone": "(02) 9874 8066",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Eastwood",
+    "tags": [],
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
       "中餐"
     ],
     "website": null
   },
   {
     "address": "Cnr Rutledge street and Shaftsbury Road Sydney, NSW, Australia, New South Wales 2122",
-    "area": "Eastwood",
+    "area": null,
     "branchName": null,
     "category": "organisation",
     "chainId": null,
@@ -2272,19 +2757,26 @@
       "Sydney"
     ],
     "email": "eastwoodchineseclub@gmail.com",
-    "name": "依士活高齡華人友誼會 Eastwood Chinese Senior Citizens Club",
+    "name": "Eastwood Chinese Senior Citizens Club",
+    "nameEn": "Eastwood Chinese Senior Citizens Club",
+    "nameZh": null,
     "phone": "+61 438 437 365",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Eastwood",
+    "tags": [],
+    "tagsEn": [
+      "Senior Social Club"
+    ],
+    "tagsZh": [
       "長者聯誼"
     ],
     "website": null
   },
   {
     "address": "Shop1& 2/1 Gauthorpe St, Rhodes NSW 2138",
-    "area": "Rhodes",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2292,19 +2784,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "海滋味海鮮茶樓 Oceanic Tastes",
+    "name": "Oceanic Tastes",
+    "nameEn": "Oceanic Tastes",
+    "nameZh": null,
     "phone": "0414 490 633",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Rhodes",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": "11 Henley Rd, Homebush West NSW 2140",
-    "area": "Homebush",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2312,19 +2811,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "新口味點心專門店 Best Tastes Dim Sim",
+    "name": "Best Tastes Dim Sim",
+    "nameEn": "Best Tastes Dim Sim",
+    "nameZh": null,
     "phone": "(02) 8746 0498",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Homebush",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum"
+    ],
+    "tagsZh": [
       "點心"
     ],
     "website": null
   },
   {
     "address": "Level 2, 1 Eels Place, Parramatta, NSW, Australia, New South Wales",
-    "area": "Parramatta",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2332,19 +2838,26 @@
       "Sydney"
     ],
     "email": "info@tinghapalace.com.au",
-    "name": "香滿樓 Tingha Palace Restaurant",
+    "name": "Tingha Palace Restaurant",
+    "nameEn": "Tingha Palace Restaurant",
+    "nameZh": null,
     "phone": "+61 2 9890 1688",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Parramatta",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": "https://www.tinghapalace.com.au/"
   },
   {
     "address": "27 Woodstock Rd, Carlingford NSW 2118",
-    "area": "Carlingford",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2352,19 +2865,26 @@
       "Sydney"
     ],
     "email": null,
-    "name": "Lung Kee Dim Sum 龍記點心",
+    "name": "Lung Kee Dim Sum",
+    "nameEn": "Lung Kee Dim Sum",
+    "nameZh": null,
     "phone": "(02) 9871 2066",
     "states": [
       "NSW"
     ],
-    "tags": [
+    "suburb": "Carlingford",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
       "酒樓"
     ],
     "website": null
   },
   {
     "address": "Shop 6/20 Nexus Dr, Pimpama QLD 4209",
-    "area": "Pimpama",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2373,18 +2893,25 @@
     ],
     "email": "Kingsleycakes.gc@gmail.com",
     "name": "Kingsley Cakes",
+    "nameEn": "Kingsley Cakes",
+    "nameZh": null,
     "phone": null,
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Pimpama",
+    "tags": [],
+    "tagsEn": [
+      "Cake Shop"
+    ],
+    "tagsZh": [
       "餅店"
     ],
     "website": null
   },
   {
     "address": "Shop 6/29 Peachey Rd, Ormeau QLD 4208",
-    "area": "Ormeau",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2393,18 +2920,25 @@
     ],
     "email": "simplewokgc@gmail.com",
     "name": "Simple Wok - Asian Fusion Cuisine",
+    "nameEn": "Simple Wok - Asian Fusion Cuisine",
+    "nameZh": null,
     "phone": "+61 468 866 102",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Ormeau",
+    "tags": [],
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
       "中餐"
     ],
     "website": "https://simplewok.yumbojumbo.com.au"
   },
   {
     "address": "103 Foxwell Rd, Coomera QLD 4209",
-    "area": "Coomera",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2412,19 +2946,26 @@
       "Gold Coast"
     ],
     "email": "superwok.coomera@gmail.com",
-    "name": "炒好味 Superwok",
+    "name": "Superwok",
+    "nameEn": "Superwok",
+    "nameZh": null,
     "phone": "+61 451 368 298",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Coomera",
+    "tags": [],
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
       "茶餐廳"
     ],
     "website": "https://super-wok.com.au"
   },
   {
     "address": "Shop 4, 28 Coomera Grand Drive Upper Coomera Gold Coast, QLD, Australia, Queensland 4209",
-    "area": "Upper Coomera",
+    "area": null,
     "branchName": null,
     "category": "food_drink",
     "chainId": null,
@@ -2433,18 +2974,25 @@
     ],
     "email": "toucancoffee4209@hotmail.com",
     "name": "Toucan Coffee Upper Coomera",
+    "nameEn": "Toucan Coffee Upper Coomera",
+    "nameZh": null,
     "phone": "+61 468 853 383",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Upper Coomera",
+    "tags": [],
+    "tagsEn": [
+      "Western style Café"
+    ],
+    "tagsZh": [
       "咖啡室"
     ],
     "website": null
   },
   {
     "address": "Shop 14, 1 Commercial Street, Upper Coomera, QLD, Australia, Queensland",
-    "area": "Upper Coomera",
+    "area": null,
     "branchName": null,
     "category": "retail",
     "chainId": null,
@@ -2453,12 +3001,73 @@
     ],
     "email": "CoomeraAsianMart@gmail.com",
     "name": "Coomera Asian Mart",
+    "nameEn": "Coomera Asian Mart",
+    "nameZh": null,
     "phone": "+61 477 584 377",
     "states": [
       "QLD"
     ],
-    "tags": [
+    "suburb": "Upper Coomera",
+    "tags": [],
+    "tagsEn": [
+      "Asian grocery store"
+    ],
+    "tagsZh": [
       "亞洲超市"
+    ],
+    "website": null
+  },
+  {
+    "address": "Sanctuary Cove, 1 Masthead Way, Hope Island QLD 4212",
+    "area": null,
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Gold Coast"
+    ],
+    "email": "info@dragoncove.com.au",
+    "name": "Dragon Cove Chinese Cuisine",
+    "nameEn": "Dragon Cove Chinese Cuisine",
+    "nameZh": null,
+    "phone": "(07) 55779918",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sanctuary Cove",
+    "tags": [],
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
+      "酒樓"
+    ],
+    "website": "https://www.dragoncove.com.au"
+  },
+  {
+    "address": "2/341 Hope Island Rd, Hope Island QLD 4212",
+    "area": null,
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Gold Coast"
+    ],
+    "email": null,
+    "name": "Tasty Magic Chinese Restaurant",
+    "nameEn": "Tasty Magic Chinese Restaurant",
+    "nameZh": null,
+    "phone": "+61 7 5514 0393",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Hope Island",
+    "tags": [],
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
     ],
     "website": null
   }
