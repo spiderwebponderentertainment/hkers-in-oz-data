@@ -1,5 +1,53 @@
 name: Sync Google Sheet to JSON
 
+on:
+  schedule:
+    - cron: "0 * * * *"        # 每小時
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # 👉 換成你 Google Sheet「發佈為 CSV」嘅 URL（注意 gid）
+      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?output=csv"
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas
+
+      - name: Fetch Google Sheet CSV
+        run: |
+          set -e
+          CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$SHEET_URL")
+          echo "HTTP_STATUS=$CODE"
+          if [ "$CODE" -ne 200 ]; then
+            echo "Download failed ($CODE)" >&2
+            exit 1
+          fi
+          echo "==== sheet.csv meta ===="
+          wc -l sheet.csv || true
+          echo "---- head ----"; head -n 5 sheet.csv || true
+
+      - name: Convert CSV to JSON (new schema with zh/en names & tags)
+        run: |
+          python - <<'PY'
 import pandas as pd, json, re, sys
 
 # ---------- helpers ----------
