@@ -47,6 +47,7 @@ jobs:
 
       - name: Convert CSV to JSON (new schema with zh/en names & tags)
         run: |
+          python - <<'PY'
           import pandas as pd, json, re, sys
 
           # ---------- helpers ----------
@@ -89,19 +90,44 @@ jobs:
           colmap = {c.strip().lower(): c for c in df.columns}
 
           def get_col(*candidates):
-              """按候選名從 df 取 Series；搵唔到就回空字串 Series"""
               for cand in candidates:
                   key = cand.strip().lower()
-                  if key in colmap: 
+                  if key in colmap:
                       return df[colmap[key]]
+              import pandas as pd
               return pd.Series(['']*len(df))
 
-          # 可接受嘅表頭
-          col_name_zh = get_col('namezh','name_zh','中文名','店名中文')
-          col_name_en = get_col('nameen','name_en','英文名','店名英文')
+          # 欄位映射（中英/底線/中文都覆蓋）
+          col_name_zh = get_col('namezh','name_zh','中文名','店名中文','name (zh)','name zh')
+          col_name_en = get_col('nameen','name_en','英文名','店名英文','name (en)','name en')
           col_name_legacy = get_col('name')
 
-          # ...（其餘 code 省略，保持同之前一樣，全部都有兩個空格縮排！）
+          col_tags_zh = get_col('tagszh','tags_zh','中文tag','標籤中文','tags (zh)','tags zh')
+          col_tags_en = get_col('tagsen','tags_en','英文tag','標籤英文','tags (en)','tags en')
+          col_tags_legacy = get_col('tags')
+
+          col_suburb = get_col('suburb','area','地區','區')
+          col_states = get_col('states','state','州','省')
+          col_cities = get_col('cities','city','城市','市')
+
+          col_chainId = get_col('chainid','chain_id','chainId')
+          col_branchName = get_col('branchname','branch_name','branchName')
+
+          col_category = get_col('category','分類','類別')
+          col_address  = get_col('address','地址')
+          col_email    = get_col('email')
+          col_phone    = get_col('phone','電話','聯絡電話')
+          col_website  = get_col('website','網址')
+
+          col_lat = get_col('lat','緯度')
+          col_lng = get_col('lng','經度')
+
+          col_isSponsored = get_col('isSponsored','is_sponsored','sponsored','贊助','是否贊助')
+          col_sponsorTier = get_col('sponsorTier','sponsor_tier','贊助級別')
+          col_sponsorStart= get_col('sponsorStart','sponsor_start','贊助開始')
+          col_sponsorEnd  = get_col('sponsorEnd','sponsor_end','贊助結束')
+          col_adLink      = get_col('adLink','ad_link','廣告連結')
+          col_adNote      = get_col('adNote','ad_note','廣告備註')
 
           out = []
           for i in range(len(df)):
@@ -110,7 +136,7 @@ jobs:
               nameZh = norm_str(col_name_zh.iloc[i])
               nameEn = norm_str(col_name_en.iloc[i])
 
-              # 如果只有中文而中文格式似「中文 (English)」→ 自動拆英文
+              # 若只有中文而格式似「中文 (English)」→ 自動拆英文
               if (not nameEn) and nameZh:
                   m = re.match(r'^\s*(.+?)\s*[\(（]\s*([A-Za-z0-9 .,\'+&/-]+)\s*[\)）]\s*$', nameZh)
                   if m:
@@ -121,10 +147,56 @@ jobs:
                   continue
 
               item = {
-                  'name': name_legacy or (nameEn or nameZh or ''),
-                  'nameZh': nameZh,
-                  'nameEn': nameEn,
+                  # 兼容舊 app
+                  'name'     : name_legacy or (nameEn or nameZh or ''),
+                  # 新 schema
+                  'nameZh'   : nameZh,
+                  'nameEn'   : nameEn,
+                  'category' : norm_str(col_category.iloc[i]) or 'uncategorized',
+
+                  'tagsZh'   : split_list(col_tags_zh.iloc[i]),
+                  'tagsEn'   : (split_list(col_tags_en.iloc[i]) or split_list(col_tags_legacy.iloc[i])),
+
+                  'suburb'   : norm_str(col_suburb.iloc[i]) or None,
+                  'area'     : None,  # 如仍想保留舊 key，可改成：norm_str(get_col('area','地區').iloc[i]) or None
+                  'address'  : norm_str(col_address.iloc[i]),
+                  'email'    : norm_str(col_email.iloc[i]),
+                  'phone'    : norm_str(col_phone.iloc[i]),
+                  'website'  : norm_url(col_website.iloc[i]),
+
+                  'chainId'    : norm_str(col_chainId.iloc[i]),
+                  'branchName' : norm_str(col_branchName.iloc[i]),
               }
+
+              # states / cities
+              item['states'] = norm_states(col_states.iloc[i])
+              cities = split_list(col_cities.iloc[i])
+              if cities: item['cities'] = cities
+
+              # lat/lng
+              lat = norm_str(col_lat.iloc[i]); lng = norm_str(col_lng.iloc[i])
+              if lat is not None or lng is not None:
+                  item['lat'] = to_float(lat)
+                  item['lng'] = to_float(lng)
+
+              # sponsor / ad
+              isSponsored = norm_str(col_isSponsored.iloc[i])
+              if isSponsored is not None:
+                  item['isSponsored'] = isSponsored.lower() in ('1','true','yes','y','是','有')
+              for (k, series) in [
+                  ('sponsorTier',  col_sponsorTier),
+                  ('sponsorStart', col_sponsorStart),
+                  ('sponsorEnd',   col_sponsorEnd),
+                  ('adLink',       col_adLink),
+                  ('adNote',       col_adNote),
+              ]:
+                  v = norm_str(series.iloc[i])
+                  if k == 'adLink': v = norm_url(v)
+                  if v is not None: item[k] = v
+
+              # 完整保留舊 tags（方便 app 廢除前兼容）
+              legacy_tags = split_list(col_tags_legacy.iloc[i])
+              if legacy_tags: item['tags'] = legacy_tags
 
               out.append(item)
 
@@ -132,3 +204,4 @@ jobs:
               json.dump(out, f, ensure_ascii=False, indent=2, sort_keys=True)
 
           print('Wrote businesses.json with', len(out), 'items')
+          PY
