@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # ✅ 指向「Business」tab 的 publish CSV（gid=0 + single=true）
-      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?gid=0&single=true&output=csv"
+      SHEET_URL: "https://docs.google.com/spreadsheets/d/1kHUqAVX7t_HJ4RbKsvbAryeFc3d9XWj_Zw7iU8h4Jfw/export?format=csv&gid=0"
 
     steps:
       - name: Checkout repo
