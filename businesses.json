@@ -137,10 +137,34 @@
     "website": null
   },
   {
-    "address": "22A/342 McCullough Street, Brisbane, QLD, Australia",
-    "branchName": null,
+    "address": "202 Calam Rd, Sunnybank Hills",
+    "branchName": "Sunnybank Hills",
     "category": "food_drink",
-    "chainId": null,
+    "chainId": "MuiG",
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "hello@muigkitchen.com.au",
+    "nameEn": "Mui G",
+    "nameZh": "妹記",
+    "phone": "0412 438 128",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank Hills",
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
+      "茶餐廳"
+    ],
+    "website": "https://muigkitchen.com.au"
+  },
+  {
+    "address": "22A/342 McCullough Street, Brisbane, QLD, Australia",
+    "branchName": "Sunnybank",
+    "category": "food_drink",
+    "chainId": "MuiG",
     "cities": [
       "Brisbane"
     ],
@@ -3283,5 +3307,389 @@
       "中餐"
     ],
     "website": null
+  },
+  {
+    "address": "21g/341 Main Road, Sunnybank Brisbane, QLD, Australia, Queensland 4109",
+    "branchName": "Sunnybank",
+    "category": "food_drink",
+    "chainId": "Woka",
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Woka Woka",
+    "nameZh": "榮記",
+    "phone": "+61 7 3219 6009",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": "https://wokawoka.com.au/"
+  },
+  {
+    "address": "Shop 11 173 Wickham St, Fortitude Valley Brisbane, QLD, Australia, Queensland 4006",
+    "branchName": "Fortitude Valley",
+    "category": "food_drink",
+    "chainId": "Woka",
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Woka Woka",
+    "nameZh": "榮記",
+    "phone": "+61 7 3194 5829",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Fortitude Valley",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": "https://wokawoka.com.au/"
+  },
+  {
+    "address": "Shop 23, 21 Kingston road, Underwood, Queensland Australia Underwood, QLD, Australia, Queensland 4119",
+    "branchName": "Underwood",
+    "category": "food_drink",
+    "chainId": "Woka",
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Woka Woka",
+    "nameZh": "榮記",
+    "phone": "(07) 3841 5987",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Underwood",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": "https://wokawoka.com.au/"
+  },
+  {
+    "address": "Shop 15c, 661 Compton Rd, Sunnybank Hills, APAC 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Excellent Kitchen",
+    "nameZh": null,
+    "phone": "(07) 3272 5743",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank Hills",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": null
+  },
+  {
+    "address": "Shop1/70 Pinelands road, sunnybank hills Brisbane, QLD, Australia, Queensland 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Causeway bay seafood restaurant",
+    "nameZh": "海鮮大排檔",
+    "phone": "+61 7 3150 8415",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank Hills",
+    "tagsEn": [
+      "Hong Kong Street-side Food"
+    ],
+    "tagsZh": [
+      "大排檔"
+    ],
+    "website": null
+  },
+  {
+    "address": "647 Beenleigh Rd, Sunnybank QLD 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Ho Lin Wah Restaurant",
+    "nameZh": "好年華冰室",
+    "phone": "(07) 3345 5621",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank Hills",
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
+      "茶餐廳"
+    ],
+    "website": null
+  },
+  {
+    "address": "Market Square Shopping Centre, Shop 1, Level 1/341 Mains Rd, Sunnybank QLD 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Woka 360",
+    "nameZh": null,
+    "phone": "(07) 3108 6231",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank",
+    "tagsEn": [
+      "Fusion"
+    ],
+    "tagsZh": [
+      "混搭料理"
+    ],
+    "website": null
+  },
+  {
+    "address": "Shop 68, 358 Mains Rd Sunnybank, QLD, Australia, Queensland 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Sunnybank Oriental Restaurant",
+    "nameZh": "東方茶餐廳",
+    "phone": "+61 7 3344 2881",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank",
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
+      "茶餐廳"
+    ],
+    "website": null
+  },
+  {
+    "address": "SHOP 67/358 Mains Rd, Sunnybank QLD 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Sunni Bakery",
+    "nameZh": null,
+    "phone": "(07) 3345 8860",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank",
+    "tagsEn": [
+      "Western style Café"
+    ],
+    "tagsZh": [
+      "咖啡室"
+    ],
+    "website": null
+  },
+  {
+    "address": "Shop 168/358 Mains Road, sunnybank plaza Sunnybank, QLD, Australia, Queensland 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "Ccafebne@gmail.com",
+    "nameEn": "C Cafe",
+    "nameZh": "廚C",
+    "phone": "+61 7 3219 6288",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank",
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
+      "茶餐廳"
+    ],
+    "website": "https://ccafesunnybank.com.au/"
+  },
+  {
+    "address": "Level 3 Shop X31, Westfield Chermside, Gymple Rd, Chermside QLD 4032 Australia",
+    "branchName": "Chermside",
+    "category": "food_drink",
+    "chainId": "Landmark",
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Landmark Chinese Restaurant",
+    "nameZh": "楓林大酒樓",
+    "phone": "+61 412 666 848",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Chermside",
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
+      "酒樓"
+    ],
+    "website": "https://landmarkrestaurant.com.au/"
+  },
+  {
+    "address": "01/358 Mains Rd, Brisbane QLD 4109 Australia",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": "Landmark",
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Landmark Chinese Restaurant",
+    "nameZh": "楓林大酒樓",
+    "phone": "+61 733 443 288",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank",
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
+      "酒樓"
+    ],
+    "website": "https://landmarkrestaurant.com.au/"
+  },
+  {
+    "address": "Shop 109 Sunnybank Plaza, Corner Mains Rd & McCullough St. Sunnybank Brisbane QLD 4109 Sunnybank, QLD, Australia, Queensland 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "reservations@goldenlane.com.au",
+    "nameEn": "Golden Lane Restaurant",
+    "nameZh": "金軒",
+    "phone": "+61 7 3344 1361",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank",
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
+      "酒樓"
+    ],
+    "website": "https://www.goldenlane.com.au"
+  },
+  {
+    "address": "42 Cnr McCullough &, Mains Rd, Sunnybank QLD 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": null,
+    "nameEn": "Burlington BBQ",
+    "nameZh": null,
+    "phone": "(07) 3219 6128",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank",
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
+      "燒味"
+    ],
+    "website": null
+  },
+  {
+    "address": "407 Mains Rd, Sunnybank QLD 4109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "parklandyumcha@hotmail.com",
+    "nameEn": "Parkland Restaurant",
+    "nameZh": "柏林大酒樓",
+    "phone": "+61 7 3345 4588",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sunnybank",
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
+      "酒樓"
+    ],
+    "website": null
+  },
+  {
+    "address": "133 Unley Rd, Unley SA 5061, Australia",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Adelaide"
+    ],
+    "email": null,
+    "nameEn": "Brolly Toasties",
+    "nameZh": "再聚",
+    "phone": null,
+    "states": [
+      "SA"
+    ],
+    "suburb": "Unley",
+    "tagsEn": [
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
+      "茶餐廳"
+    ],
+    "website": "https://www.brollytoasties.com.au"
   }
 ]
