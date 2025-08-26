@@ -13,8 +13,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # ✅ 用 gviz 指向分頁名（唔使 gid；分頁名 Business）
-      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/gviz/tq?tqx=out:csv&sheet=Business"
+      # ① gviz：用分頁名（建議：更耐用）
+      SHEET_URL_1: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/gviz/tq?tqx=out:csv&sheet=Business"
+      # ② pub：你原本嗰條（固定 gid=0）
+      SHEET_URL_2: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?gid=0&single=true&output=csv"
 
     steps:
       - name: Checkout repo
@@ -32,17 +34,27 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas
 
-      - name: Fetch Google Sheet CSV
+      - name: Fetch Google Sheet CSV (try gviz, then fallback to pub)
         run: |
           set -e
-          echo "URL: $SHEET_URL"
-          CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$SHEET_URL")
-          echo "HTTP_STATUS=$CODE"
-          if [ "$CODE" -ne 200 ]; then
-            echo "Download failed ($CODE) — first 500 bytes of response:" >&2
-            head -c 500 sheet.csv >&2 || true
-            exit 1
+          try_fetch () {
+            local url="$1"
+            echo "→ Try: $url"
+            CODE=$(curl -sSL -A "sheet-sync/1.0" -w "%{http_code}" -o sheet.csv "$url")
+            echo "HTTP_STATUS=$CODE"
+            if [ "$CODE" -ne 200 ]; then
+              echo "Download failed ($CODE) — first 500 bytes of response:" >&2
+              head -c 500 sheet.csv >&2 || true
+              return 1
+            fi
+            return 0
+          }
+
+          if ! try_fetch "$SHEET_URL_1"; then
+            echo "Fallback to SHEET_URL_2 ..."
+            try_fetch "$SHEET_URL_2" || exit 1
           fi
+
           echo "==== sheet.csv meta ===="
           wc -l sheet.csv || true
           echo "---- head ----"; head -n 5 sheet.csv || true
@@ -103,7 +115,7 @@ jobs:
 
           col_tags_zh = get_col('tagszh','tags_zh','中文tag','標籤中文')
           col_tags_en = get_col('tagsen','tags_en','英文tag','標籤英文')
-          col_tags_legacy = get_col('tags')  #（如有會作英文後備）
+          col_tags_legacy = get_col('tags')
 
           col_suburb = get_col('suburb','area','地區','區')
           col_states = get_col('states','state','州')
@@ -132,21 +144,15 @@ jobs:
           for i in range(len(df)):
               nameZh = norm_str(col_name_zh.iloc[i])
               nameEn = norm_str(col_name_en.iloc[i])
-
-              # 至少要有任一名稱
               if not (nameZh or nameEn):
                   continue
 
               item = {
-                  # 不再輸出 "name"（legacy）
                   'nameZh'   : nameZh,
                   'nameEn'   : nameEn,
                   'category' : norm_str(col_category.iloc[i]) or 'uncategorized',
-
-                  # tags：中文/英文；英文找不到時以舊 tags 補位
                   'tagsZh'   : split_list(col_tags_zh.iloc[i]),
                   'tagsEn'   : (split_list(col_tags_en.iloc[i]) or split_list(col_tags_legacy.iloc[i])),
-
                   'suburb'   : norm_str(col_suburb.iloc[i]) or None,
                   'address'  : norm_str(col_address.iloc[i]),
                   'email'    : norm_str(col_email.iloc[i]),
@@ -156,18 +162,15 @@ jobs:
                   'branchName' : norm_str(col_branchName.iloc[i]),
               }
 
-              # states / cities
               item['states'] = norm_states(col_states.iloc[i])
               cities = split_list(col_cities.iloc[i])
               if cities: item['cities'] = cities
 
-              # lat/lng
               lat = norm_str(col_lat.iloc[i]); lng = norm_str(col_lng.iloc[i])
               if lat is not None or lng is not None:
                   item['lat'] = to_float(lat)
                   item['lng'] = to_float(lng)
 
-              # sponsor / ad
               isSponsored = norm_str(col_isSponsored.iloc[i])
               if isSponsored is not None:
                   item['isSponsored'] = isSponsored.lower() in ('1','true','yes','y','是','有')
@@ -187,7 +190,6 @@ jobs:
           with open('businesses.json','w',encoding='utf-8') as f:
               json.dump(out, f, ensure_ascii=False, indent=2, sort_keys=True)
 
-          # 小檢查：有幾多行有中文名
           cnt_zh = sum(1 for it in out if it.get('nameZh'))
           print('Wrote businesses.json with', len(out), 'items; with nameZh =', cnt_zh)
           PY
