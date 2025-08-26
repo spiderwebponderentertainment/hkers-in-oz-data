@@ -13,8 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # ⚠️ 一定要帶 gid，指向「有 nameZh/nameEn」嗰個分頁
-      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/pub?gid=0&single=true&output=csv"
+      # ✅ 用 gviz 指向分頁名（唔使 gid；分頁名 Business）
+      SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSpt865HzuchDUxgZIPL3RBbZ-VneXtRFgM0Gt0fDAla2yk_Afh4t5iw-6a2U0lmqSiiQagcSE6Rjk9/gviz/tq?tqx=out:csv&sheet=Business"
 
     steps:
       - name: Checkout repo
@@ -35,10 +35,12 @@ jobs:
       - name: Fetch Google Sheet CSV
         run: |
           set -e
+          echo "URL: $SHEET_URL"
           CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$SHEET_URL")
           echo "HTTP_STATUS=$CODE"
           if [ "$CODE" -ne 200 ]; then
-            echo "Download failed ($CODE)" >&2
+            echo "Download failed ($CODE) — first 500 bytes of response:" >&2
+            head -c 500 sheet.csv >&2 || true
             exit 1
           fi
           echo "==== sheet.csv meta ===="
