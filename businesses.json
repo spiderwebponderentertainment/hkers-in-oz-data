@@ -4685,7 +4685,7 @@
     ],
     "email": "ccac@ccac.org.au",
     "nameEn": "Christ Community Alliance Church",
-    "nameZh": "宣道會·基督堂",
+    "nameZh": "宣道會基督堂",
     "phone": null,
     "states": [
       "VIC"
@@ -5973,18 +5973,21 @@
     "website": "http://www.perthchinesebaptistchurch.com/"
   },
   {
-    "address": "1770 Old Cleveland Road Chandler Q4155",
+    "address": "1770 Old Cleveland Rd, Chandler, Chandler, 4155",
     "branchName": null,
     "category": "organisation",
     "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
     "email": null,
     "nameEn": "Christ's Family Church",
     "nameZh": "基督教主家堂",
-    "phone": null,
+    "phone": "(07) 3343 3689",
     "states": [
       "QLD"
     ],
-    "suburb": null,
+    "suburb": "Chandler",
     "tagsEn": [
       "Religious Group"
     ],
@@ -5992,5 +5995,245 @@
       "宗教團體"
     ],
     "website": null
+  },
+  {
+    "address": "3 Byth Street, Arundel, Queensland 4214, Australia",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Gold Coast"
+    ],
+    "email": "info@gcccc.org.au",
+    "nameEn": "Gold Coast Chinese Christian Church",
+    "nameZh": "黃金海岸華人基督教會",
+    "phone": "(07) 5571-6620",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Arundel",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://www.gcccc.org.au/"
+  },
+  {
+    "address": "1156 Mt-Gravatt Capalaba Rd Mackenzie, QLD, Australia, Queensland 4156",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "logospa@gmail.com",
+    "nameEn": "Logos Christian Church",
+    "nameZh": "基督教恩道會布里斯本教會",
+    "phone": "+61 7 3219 3877",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Mackenzie",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": null
+  },
+  {
+    "address": "745 Rochedale Road Rochedale Qld 4123",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "qac.brisbane.qld@lca.org.au",
+    "nameEn": "Bethlehem Chinese Lutheran Church Brisbane",
+    "nameZh": "澳洲信義會伯利恒堂",
+    "phone": null,
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Rochedale",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://myqac.org/"
+  },
+  {
+    "address": "83 Ryans Rd, St Lucia, Brisbane, QLD, Australia, Queensland 4067",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "info.cccbhet@gmail.com",
+    "nameEn": "Chinese Christian Church Brisbane",
+    "nameZh": "布里斯本華人基督教會懷恩堂",
+    "phone": "+61 435 009 172",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "St Lucia",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://cccbslc.org.au"
+  },
+  {
+    "address": "124 Nemies Road Runcorn, QLD, Australia, Queensland 4113",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "churchofrohi@gmail.com",
+    "nameEn": "Evangelical Formosan Church of Rohi Inc",
+    "nameZh": "羅以台福基督教會",
+    "phone": "+61 7 3160 9453",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Runcorn",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://www.efchurchrohi.org/"
+  },
+  {
+    "address": "Cnr. Nemies & Brandon Roads Runcorn Qld 4113",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "admin@sdbc.org.au",
+    "nameEn": "Sunnybank District Baptist Church",
+    "nameZh": "新利班浸信會",
+    "phone": null,
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Runcorn",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://www.sdbc.org.au"
+  },
+  {
+    "address": "960 Heatherton Rd, Springvale South VIC 3172, Australia",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "ccrchurch@gmail.com",
+    "nameEn": "Christian Chinese Reformed Church",
+    "nameZh": "基督教改革宗華人教會",
+    "phone": "(03) 9701 0484",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Springvale South",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://www.ccrchurch.com.au/TradChinese/"
+  },
+  {
+    "address": "1201 Riversdale Rd Box Hill South, VIC, Australia, Victoria 3128",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "in2png@gmail.com",
+    "nameEn": "Chinese Lutheran Church of Victoria",
+    "nameZh": "維省路德會華人堂",
+    "phone": null,
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Box Hill South",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://clcv.org.au/zh/"
+  },
+  {
+    "address": "1248 High Street Road, Wantirna South VIC 3152",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "cantonese@citylife.church",
+    "nameEn": "City Life Church",
+    "nameZh": "活城中文教會",
+    "phone": "+61 468 316 231",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Wantirna South",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://web.citylife.church/chinese/"
+  },
+  {
+    "address": "Footscray Library – 56 Paisley Street, Footscray Vic. 3011",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "pt1619136@gmail.com",
+    "nameEn": "Cornerstone of Christ Evangelical church",
+    "nameZh": "基督活石教會",
+    "phone": "0409 921 122",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Footscray",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://cornerstoneofchristchurch.org"
   }
 ]
