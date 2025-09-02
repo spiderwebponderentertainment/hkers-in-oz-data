@@ -1,6 +1,7 @@
 [
   {
     "id": "MMM_Roseville",
+    "campaign": "MMM",
     "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/main/ads/MMMRoseville28_8.jpeg",
     "linkURL": "https://www.ponder.productions",
     "startDate": "2025-08-25",
@@ -9,6 +10,7 @@
   },
   {
     "id": "BTS_Perth",
+    "campaign": "BTS",
     "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/main/ads/BTS%20Perth%2014_9.jpg",
     "linkURL": "https://www.ponder.productions",
     "startDate": "2025-08-25",
@@ -17,6 +19,7 @@
   },
   {
     "id": "MMM_Brisbane",
+    "campaign": "MMM",
     "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/main/ads/MMM%20Brisbane%2014%20Sep.jpg",
     "linkURL": "https://www.ponder.productions",
     "startDate": "2025-08-25",
@@ -25,6 +28,7 @@
   },
   {
     "id": "C-anytime",
+    "campaign": "Always On",
     "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/main/ads/BUS%20Perth%2031%20Aug.jpeg",
     "linkURL": "https://www.ponder.productions",
     "weight": 10
