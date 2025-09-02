@@ -110,6 +110,70 @@
     "website": "https://www.sbs.com.au/language/chinese/zh-hant"
   },
   {
+    "address": null,
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "Culture852ltd@gmail.com",
+    "nameEn": "Culture 852",
+    "nameZh": null,
+    "phone": null,
+    "states": [
+      "NSW"
+    ],
+    "suburb": null,
+    "tagsEn": [],
+    "tagsZh": [],
+    "website": null
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@antra.org.au",
+    "nameEn": "ANTRA",
+    "nameZh": "澳紐彩盟",
+    "phone": "+61 403 957 181",
+    "states": [
+      "NSW"
+    ],
+    "suburb": null,
+    "tagsEn": [
+      "LGBTQIA+"
+    ],
+    "tagsZh": [
+      "同志"
+    ],
+    "website": "https://www.antra.org.au/"
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "auhklink@gmail.com",
+    "nameEn": "Australia-Hong Kong Link",
+    "nameZh": "澳港聯",
+    "phone": null,
+    "states": [
+      "NSW"
+    ],
+    "suburb": null,
+    "tagsEn": [],
+    "tagsZh": [],
+    "website": "https://auhklink.com/"
+  },
+  {
     "address": "Shop 2, 239 Rowe Street, Eastwood, NSW, Australia, New South Wales",
     "branchName": null,
     "category": "food_drink",
@@ -812,48 +876,56 @@
     "website": "https://tylawyers.com.au"
   },
   {
-    "address": null,
+    "address": "235 Pennant Hills Rd, Thornleigh NSW 2120",
     "branchName": null,
     "category": "organisation",
     "chainId": null,
     "cities": [
       "Sydney"
     ],
-    "email": "Culture852ltd@gmail.com",
-    "nameEn": "Culture 852",
-    "nameZh": null,
-    "phone": null,
+    "email": "office@cabc-t.org.au",
+    "lat": -33.7283402,
+    "lng": 151.0845659,
+    "nameEn": "Chinese and Australian Baptist Church Thornleigh",
+    "nameZh": "華澳浸信會展信堂",
+    "phone": "(02) 9484 3920",
     "states": [
       "NSW"
     ],
-    "suburb": null,
-    "tagsEn": [],
-    "tagsZh": [],
-    "website": null
-  },
-  {
-    "address": null,
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Sydney"
-    ],
-    "email": "info@antra.org.au",
-    "nameEn": "ANTRA",
-    "nameZh": "澳紐彩盟",
-    "phone": "+61 403 957 181",
-    "states": [
-      "NSW"
-    ],
-    "suburb": null,
+    "suburb": "Thornleigh",
     "tagsEn": [
-      "LGBTQIA+"
+      "Religious Group"
     ],
     "tagsZh": [
-      "同志"
+      "宗教團體"
     ],
-    "website": "https://www.antra.org.au/"
+    "website": "https://www.cabc-t.org.au/tc"
+  },
+  {
+    "address": "Unit 2, 4 Gladstone Road Castle Hill, NSW 2154, Australia",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "admin@bhcac.org.au",
+    "lat": -33.7337214,
+    "lng": 150.9788511,
+    "nameEn": "Baulkham Hills Alliance Church",
+    "nameZh": "基督教華人宣道會迦南堂",
+    "phone": "(02) 9680 7545",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Castle Hill",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://www.bhcac.org.au/zh/chinese/"
   },
   {
     "address": "Suite 802, level 8, 276 Pitt street, Sydney, NSW, Australia, New South Wales",
@@ -1410,6 +1482,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.8853924,
+    "lng": 151.1996077,
     "nameEn": "Sunny Seafood",
     "nameZh": "偉洋海鮮酒樓",
     "phone": "(02) 8043 8890",
@@ -1434,6 +1508,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.876741,
+    "lng": 151.2040503,
     "nameEn": "Old Town Hong Kong Cuisine",
     "nameZh": "大排檔",
     "phone": "+61 2 9264 3888",
@@ -1458,6 +1534,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.9517056,
+    "lng": 151.0822466,
     "nameEn": "Yummy Seafood Chinese Restaurant",
     "nameZh": null,
     "phone": "+61 2 9580 0788",
@@ -1482,6 +1560,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.8783271,
+    "lng": 151.2038526,
     "nameEn": "Nine Dragons",
     "nameZh": null,
     "phone": "(02) 9211 3549",
@@ -1506,6 +1586,8 @@
       "Sydney"
     ],
     "email": "reservations@theeast.com.au",
+    "lat": -33.8620266,
+    "lng": 151.2098749,
     "nameEn": "The East Chinese Restaurant",
     "nameZh": "豪紳大酒家",
     "phone": "+61 2 9252 6868",
@@ -1530,6 +1612,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.8805246,
+    "lng": 151.2042279,
     "nameEn": "Emperor's Garden B.B.Q. & Noodles",
     "nameZh": "皇冠燒臘粥麵",
     "phone": "(02) 9281 9899",
@@ -1554,6 +1638,8 @@
       "Sydney"
     ],
     "email": "info@neblehouseeastwood.com.au",
+    "lat": -33.7911806,
+    "lng": 151.0817445,
     "nameEn": "Noble House Seafood Restaurant",
     "nameZh": "文華酒樓",
     "phone": "02 9874 1888",
@@ -1578,6 +1664,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.7300072,
+    "lng": 151.0817167,
     "nameEn": "Chiu Chou Garden Chinese Seafood Restaurant",
     "nameZh": "創潮樓潮州海鮮餐館",
     "phone": "(02) 9980 2828",
@@ -1602,6 +1690,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.7762455,
+    "lng": 151.0522905,
     "nameEn": "Crystal Seafood Restaurant",
     "nameZh": "大三元",
     "phone": "02 9872 3338",
@@ -1626,6 +1716,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.7793892,
+    "lng": 151.0529904,
     "nameEn": "Fortune Palace Carlingford",
     "nameZh": "福臨門",
     "phone": "(02) 9872 6600",
@@ -1650,6 +1742,8 @@
       "Sydney"
     ],
     "email": "fortuneplacechatswood@gmail.com",
+    "lat": -33.797937,
+    "lng": 151.1823362,
     "nameEn": "Fortune Palace Chatswood",
     "nameZh": "福來門",
     "phone": "(02) 9419 8669",
@@ -1674,6 +1768,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.7915173,
+    "lng": 151.0801378,
     "nameEn": "Eastwood Seafood Restaurant",
     "nameZh": "伊士活海鮮酒樓",
     "phone": "(02) 9804 1289",
@@ -1698,6 +1794,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.8732468,
+    "lng": 151.1048645,
     "nameEn": "CANTON",
     "nameZh": "煮意",
     "phone": "(02) 9519 5658",
@@ -1714,7 +1812,7 @@
     "website": "https://www.cantoncafeau.com"
   },
   {
-    "address": null,
+    "address": "127 Rowe Street, Eastwood NSW 2122",
     "branchName": "Eastwood",
     "category": "food_drink",
     "chainId": "Canton",
@@ -1722,6 +1820,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.7911682,
+    "lng": 151.0815061,
     "nameEn": "CANTON",
     "nameZh": "煮意",
     "phone": "(02) 9874 2226",
@@ -1738,7 +1838,7 @@
     "website": "https://www.cantoncafeau.com"
   },
   {
-    "address": null,
+    "address": "Shop 1/78-82 Burwood Road, Burwood NSW 2134",
     "branchName": "Haymarket",
     "category": "food_drink",
     "chainId": "Canton",
@@ -1746,6 +1846,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.8732468,
+    "lng": 151.1048645,
     "nameEn": "CANTON",
     "nameZh": "煮意",
     "phone": "(02) 9281 7784",
@@ -1770,6 +1872,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.7856905,
+    "lng": 151.0790592,
     "nameEn": "Ginger and Shallots Chinese Cuisine",
     "nameZh": "億食家",
     "phone": "(02) 9874 8066",
@@ -1794,6 +1898,8 @@
       "Sydney"
     ],
     "email": "eastwoodchineseclub@gmail.com",
+    "lat": -33.7934879,
+    "lng": 151.0776812,
     "nameEn": "Eastwood Chinese Senior Citizens Club",
     "nameZh": "依士活高齡華人友誼會",
     "phone": "+61 438 437 365",
@@ -1818,6 +1924,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.8281988,
+    "lng": 151.0862461,
     "nameEn": "Oceanic Tastes",
     "nameZh": "海滋味海鮮茶樓",
     "phone": "0414 490 633",
@@ -1842,6 +1950,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.8655776,
+    "lng": 151.0698821,
     "nameEn": "Best Tastes Dim Sim",
     "nameZh": "新口味點心專門店",
     "phone": "(02) 8746 0498",
@@ -1866,6 +1976,8 @@
       "Sydney"
     ],
     "email": "info@tinghapalace.com.au",
+    "lat": -33.806333,
+    "lng": 151.001662,
     "nameEn": "Tingha Palace Restaurant",
     "nameZh": "香滿樓",
     "phone": "+61 2 9890 1688",
@@ -1890,6 +2002,8 @@
       "Sydney"
     ],
     "email": null,
+    "lat": -33.7706168,
+    "lng": 151.046534,
     "nameEn": "Lung Kee Dim Sum",
     "nameZh": "龍記點心",
     "phone": "(02) 9871 2066",
@@ -1904,26 +2018,6 @@
       "酒樓"
     ],
     "website": null
-  },
-  {
-    "address": null,
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Sydney"
-    ],
-    "email": "auhklink@gmail.com",
-    "nameEn": "Australia-Hong Kong Link",
-    "nameZh": "澳港聯",
-    "phone": null,
-    "states": [
-      "NSW"
-    ],
-    "suburb": null,
-    "tagsEn": [],
-    "tagsZh": [],
-    "website": "https://auhklink.com/"
   },
   {
     "address": null,
@@ -1947,80 +2041,6 @@
       "派對藝術"
     ],
     "website": null
-  },
-  {
-    "address": "Shop 107/200 Bourke Street Melbourne",
-    "branchName": null,
-    "category": "health",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": null,
-    "nameEn": "Van's Studio",
-    "nameZh": null,
-    "phone": "+61406888238",
-    "states": [
-      "VIC"
-    ],
-    "suburb": "Chinatown",
-    "tagsEn": [
-      "Hairdressing"
-    ],
-    "tagsZh": [
-      "理髮"
-    ],
-    "website": null
-  },
-  {
-    "address": "307 Toorak Rd, South Yarra VIC 3141",
-    "branchName": null,
-    "category": "food_drink",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": null,
-    "nameEn": "ICEBERG Bubble Tea & Fast Food",
-    "nameZh": null,
-    "phone": "(03) 9480 2982",
-    "states": [
-      "VIC"
-    ],
-    "suburb": "South Yarra",
-    "tagsEn": [
-      "Fast Food",
-      "Bubble Tea"
-    ],
-    "tagsZh": [
-      "快餐",
-      "珍珠奶茶"
-    ],
-    "website": null
-  },
-  {
-    "address": "75A Cotham Road Kew, VIC, Australia, Victoria 3101",
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "mcbc@mcbc.org.au",
-    "nameEn": "Melbourne Chinese Baptist Church",
-    "nameZh": "墨爾本華人浸信會",
-    "phone": "+61 3 9855 2868",
-    "states": [
-      "VIC"
-    ],
-    "suburb": "Kew",
-    "tagsEn": [
-      "Religious Group"
-    ],
-    "tagsZh": [
-      "宗教團體"
-    ],
-    "website": "https://mcbc.org.au/"
   },
   {
     "address": null,
@@ -2067,6 +2087,286 @@
     ],
     "tagsZh": [
       "搬屋服務"
+    ],
+    "website": null
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "media",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "fsoca.au@gmail.com",
+    "nameEn": "The Film Society of Chinese Australian",
+    "nameZh": "華影社",
+    "phone": null,
+    "states": [
+      "VIC"
+    ],
+    "suburb": null,
+    "tagsEn": [
+      "Film Society"
+    ],
+    "tagsZh": [
+      "電影學會"
+    ],
+    "website": "https://fsoca.org.au/"
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "education",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "storyswallow@gmail.com",
+    "nameEn": "Story Swallow",
+    "nameZh": "故事燕子",
+    "phone": null,
+    "states": [
+      "VIC"
+    ],
+    "suburb": null,
+    "tagsEn": [
+      "Cantonese Course"
+    ],
+    "tagsZh": [
+      "廣東話課"
+    ],
+    "website": "https://suie0407.wixsite.com/suielo"
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "education",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "littlebeancantoneseclass@gmail.com",
+    "nameEn": "Little bean Cantonese",
+    "nameZh": null,
+    "phone": null,
+    "states": [
+      "VIC"
+    ],
+    "suburb": null,
+    "tagsEn": [
+      "Cantonese Course"
+    ],
+    "tagsZh": [
+      "廣東話課"
+    ],
+    "website": "https://littlebeancantonese.com/"
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "education",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "Lizzmoonstudio@gmail.com",
+    "nameEn": "Lizzmoon Studio",
+    "nameZh": null,
+    "phone": "0406267062",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Mount Waverley",
+    "tagsEn": [
+      "Leather Products",
+      "Leather Workshop"
+    ],
+    "tagsZh": [
+      "皮革產品",
+      "皮革教學班"
+    ],
+    "website": "https://www.instagram.com/lizzmoon_studio"
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "retail",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "cahola.au@gmail.com",
+    "nameEn": "Cahola Pty Ltd",
+    "nameZh": "888港亞百貨",
+    "phone": "0475 699 776",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Blackburn South",
+    "tagsEn": [
+      "Asian grocery store"
+    ],
+    "tagsZh": [
+      "亞洲超市"
+    ],
+    "website": "https://hkasiangrocery.com/"
+  },
+  {
+    "address": "Shop 107/200 Bourke Street Melbourne",
+    "branchName": null,
+    "category": "health",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.8124597,
+    "lng": 144.9673078,
+    "nameEn": "Van's Studio",
+    "nameZh": null,
+    "phone": "+61406888238",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Chinatown",
+    "tagsEn": [
+      "Hairdressing"
+    ],
+    "tagsZh": [
+      "理髮"
+    ],
+    "website": null
+  },
+  {
+    "address": "307 Toorak Rd, South Yarra VIC 3141",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.8394394,
+    "lng": 144.9975453,
+    "nameEn": "ICEBERG Bubble Tea & Fast Food",
+    "nameZh": null,
+    "phone": "(03) 9480 2982",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "South Yarra",
+    "tagsEn": [
+      "Fast Food",
+      "Bubble Tea"
+    ],
+    "tagsZh": [
+      "快餐",
+      "珍珠奶茶"
+    ],
+    "website": null
+  },
+  {
+    "address": "75A Cotham Road Kew, VIC, Australia, Victoria 3101",
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "mcbc@mcbc.org.au",
+    "lat": -37.8072271,
+    "lng": 145.0371006,
+    "nameEn": "Melbourne Chinese Baptist Church",
+    "nameZh": "墨爾本華人浸信會",
+    "phone": "+61 3 9855 2868",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Kew",
+    "tagsEn": [
+      "Religious Group"
+    ],
+    "tagsZh": [
+      "宗教團體"
+    ],
+    "website": "https://mcbc.org.au/"
+  },
+  {
+    "address": "Shop 3/24 Wakefield St, Hawthorn VIC 3122",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.8211898,
+    "lng": 145.0381317,
+    "nameEn": "UDLE",
+    "nameZh": null,
+    "phone": null,
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Hawthorn",
+    "tagsEn": [
+      "Western style Café"
+    ],
+    "tagsZh": [
+      "咖啡室"
+    ],
+    "website": "https://udle.org"
+  },
+  {
+    "address": "Shop 2a/35 Elizabeth St, Melbourne, Victoria, Australia 3000",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "info@cremebar.com.au",
+    "lat": -37.8174014,
+    "lng": 144.9643292,
+    "nameEn": "Creme Bar",
+    "nameZh": null,
+    "phone": "(03) 7048 4452",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Melbourne",
+    "tagsEn": [
+      "Hong Kong Street Food"
+    ],
+    "tagsZh": [
+      "香港小食"
+    ],
+    "website": "https://www.cremebar.com.au/"
+  },
+  {
+    "address": "206A, Whitehorse Road, Balwyn, Melbourne, VIC, Australia, Victoria",
+    "branchName": null,
+    "category": "education",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.812575,
+    "lng": 145.0777252,
+    "nameEn": "Cantopia",
+    "nameZh": "港呢啲",
+    "phone": null,
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Balwyn",
+    "tagsEn": [
+      "Cantonese Course"
+    ],
+    "tagsZh": [
+      "廣東話課"
     ],
     "website": null
   },
@@ -2157,6 +2457,8 @@
       "Melbourne"
     ],
     "email": "plus852cafe@gmail.com",
+    "lat": -37.80714505,
+    "lng": 144.9637742,
     "nameEn": "Plus Eight Five Two Cafe",
     "nameZh": "茶檔852",
     "phone": "+61 424 297 219",
@@ -2181,6 +2483,8 @@
       "Melbourne"
     ],
     "email": "Kowloongroupglen@gmail.com",
+    "lat": -37.8808724,
+    "lng": 145.1651637,
     "nameEn": "The Lucky Guys Café",
     "nameZh": "行運茶餐廳",
     "phone": "+61 3 8524 0589",
@@ -2205,6 +2509,8 @@
       "Melbourne"
     ],
     "email": "peninsulahkcafe.info@gmail.com​",
+    "lat": -37.8120706,
+    "lng": 144.9674399,
     "nameEn": "Peninsula HK cafe",
     "nameZh": "半島冰室",
     "phone": "+61 451 961 271",
@@ -2229,6 +2535,8 @@
       "Melbourne"
     ],
     "email": "Info.dbminimart@gmail.com",
+    "lat": -37.7811028,
+    "lng": 145.16308,
     "nameEn": "Mini Mart Doncaster",
     "nameZh": "東本",
     "phone": "0491 029 566",
@@ -2253,6 +2561,8 @@
       "Melbourne"
     ],
     "email": "faishkcafe@gmail.com",
+    "lat": -37.8819359,
+    "lng": 145.2338072,
     "nameEn": "Fai's Cafe",
     "nameZh": "香港仔茶餐廳",
     "phone": "0478 717 353",
@@ -2277,6 +2587,8 @@
       "Melbourne"
     ],
     "email": null,
+    "lat": -37.9262629,
+    "lng": 145.1191,
     "nameEn": "Hong Kong Supermarket",
     "nameZh": "香港超市",
     "phone": "(03) 9562 8412",
@@ -2301,6 +2613,8 @@
       "Melbourne"
     ],
     "email": null,
+    "lat": -37.8620316,
+    "lng": 145.2829237,
     "nameEn": "Eric's Kitchen",
     "nameZh": null,
     "phone": "0403 468 933",
@@ -2317,28 +2631,26 @@
     "website": null
   },
   {
-    "address": "Blackburn South, VIC, Australia, Victoria",
+    "address": "Suite 537, 1 Queens Road, Melbourne, VIC 3004",
     "branchName": null,
-    "category": "retail",
+    "category": "organisation",
     "chainId": null,
     "cities": [
       "Melbourne"
     ],
-    "email": "cahola.au@gmail.com",
-    "nameEn": "Cahola Pty Ltd",
-    "nameZh": "888港亞百貨",
-    "phone": "0475 699 776",
+    "email": "info@ahbca.org.au",
+    "lat": -37.8358278,
+    "lng": 144.9738139,
+    "nameEn": "Australia Hong Kong Business & Culture Association",
+    "nameZh": "澳洲香港商業及文化協會",
+    "phone": null,
     "states": [
       "VIC"
     ],
-    "suburb": "Blackburn South",
-    "tagsEn": [
-      "Asian grocery store"
-    ],
-    "tagsZh": [
-      "亞洲超市"
-    ],
-    "website": "https://hkasiangrocery.com/"
+    "suburb": "Melbourne",
+    "tagsEn": [],
+    "tagsZh": [],
+    "website": "https://www.ahbca.org.au/"
   },
   {
     "address": "19-23 Holland Rd, Blackburn South VIC 3130",
@@ -2349,6 +2661,8 @@
       "Melbourne"
     ],
     "email": "newlife@nlec.org.au",
+    "lat": -37.8344882,
+    "lng": 145.1525469,
     "nameEn": "New Life Evangelical Church",
     "nameZh": "新生命宣道堂",
     "phone": "(03) 9877 9588",
@@ -2373,6 +2687,8 @@
       "Melbourne"
     ],
     "email": null,
+    "lat": -37.5597011,
+    "lng": 143.9066082,
     "nameEn": "TamJai Mixian",
     "nameZh": "譚仔米線",
     "phone": null,
@@ -2397,6 +2713,8 @@
       "Melbourne"
     ],
     "email": null,
+    "lat": -37.8127431,
+    "lng": 144.9649392,
     "nameEn": "TamJai Mixian",
     "nameZh": "譚仔米線",
     "phone": null,
@@ -2421,6 +2739,8 @@
       "Melbourne"
     ],
     "email": null,
+    "lat": -37.87618,
+    "lng": 145.1652755,
     "nameEn": "TamJai Mixian",
     "nameZh": "譚仔米線",
     "phone": null,
@@ -2437,6 +2757,70 @@
     "website": "https://tamjaimixian.com.au"
   },
   {
+    "address": null,
+    "branchName": null,
+    "category": "media",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "4ebdurianclub@gmail.com",
+    "nameEn": "Durian Club",
+    "nameZh": "榴槤俱樂部",
+    "phone": null,
+    "states": [
+      "QLD"
+    ],
+    "suburb": null,
+    "tagsEn": [
+      "Podcast"
+    ],
+    "tagsZh": [
+      "電台"
+    ],
+    "website": "https://www.4eb.org.au/shows/durian-club-cantonese"
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "info@bclionsclub.org.au",
+    "nameEn": "Lions Club of Brisbane Chinese",
+    "nameZh": "布里斯本華人獅子會",
+    "phone": "+61 411 529 262",
+    "states": [
+      "QLD"
+    ],
+    "suburb": null,
+    "tagsEn": [],
+    "tagsZh": [],
+    "website": "https://www.bclionsclub.org.au/"
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "connect@uhker.com",
+    "nameEn": "Uniting HongKongers",
+    "nameZh": "港人同行",
+    "phone": null,
+    "states": [
+      "QLD"
+    ],
+    "suburb": null,
+    "tagsEn": [],
+    "tagsZh": [],
+    "website": null
+  },
+  {
     "address": "202 Calam Rd, Sunnybank Hills",
     "branchName": "Sunnybank Hills",
     "category": "food_drink",
@@ -2445,6 +2829,8 @@
       "Brisbane"
     ],
     "email": "hello@muigkitchen.com.au",
+    "lat": -27.6093311,
+    "lng": 153.0551881,
     "nameEn": "Mui G",
     "nameZh": "妹記",
     "phone": "0412 438 128",
@@ -2487,52 +2873,56 @@
     "website": "https://www.muigkitchen.com.au"
   },
   {
-    "address": null,
+    "address": "2/708 boundary Road, coopers Plains Brisbane, QLD, Australia, Queensland 4108",
     "branchName": null,
-    "category": "leisure",
-    "chainId": null,
-    "cities": [
-      "Gold Coast"
-    ],
-    "email": "gcd269@gmail.com",
-    "nameEn": "Xpress.Gold Coast",
-    "nameZh": "澳洲黃金海岸包車",
-    "phone": "+61 401 610 813",
-    "states": [
-      "QLD"
-    ],
-    "suburb": null,
-    "tagsEn": [
-      "Transportation Service"
-    ],
-    "tagsZh": [
-      "旅遊服務"
-    ],
-    "website": null
-  },
-  {
-    "address": null,
-    "branchName": null,
-    "category": "media",
+    "category": "auto_repair",
     "chainId": null,
     "cities": [
       "Brisbane"
     ],
-    "email": "4ebdurianclub@gmail.com",
-    "nameEn": "Durian Club",
-    "nameZh": "榴槤俱樂部",
-    "phone": null,
+    "email": "etech.autotint@gmail.com",
+    "lat": -27.5684051,
+    "lng": 153.0272752,
+    "nameEn": "E-Tech AUTO Car Tint",
+    "nameZh": null,
+    "phone": "+61 412 830 020",
     "states": [
       "QLD"
     ],
-    "suburb": null,
+    "suburb": "Coopers Plains",
     "tagsEn": [
-      "Podcast"
+      "Car Tint"
     ],
     "tagsZh": [
-      "電台"
+      "汽車貼膜"
     ],
-    "website": "https://www.4eb.org.au/shows/durian-club-cantonese"
+    "website": "https://www.etechtint.com.au/"
+  },
+  {
+    "address": "u5/39 Secam St, Mansfield QLD 4122",
+    "branchName": null,
+    "category": "auto_repair",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "mcautotechau@gmail.com",
+    "lat": -27.5310224,
+    "lng": 153.0985533,
+    "nameEn": "MC Auto Tech",
+    "nameZh": null,
+    "phone": "+61 481 355 881",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Mansfield",
+    "tagsEn": [
+      "auto repair"
+    ],
+    "tagsZh": [
+      "汽車維修"
+    ],
+    "website": "https://mcautotech.com.au/"
   },
   {
     "address": "5/27 Illaweena St, Drewvale QLD 4116",
@@ -2569,6 +2959,8 @@
       "Brisbane"
     ],
     "email": "sales@yuensmarket.com.au",
+    "lat": -27.6315981,
+    "lng": 153.0457025,
     "nameEn": "Yuen's Market",
     "nameZh": "袁氏行",
     "phone": "+61 7 3711 3588",
@@ -2593,6 +2985,8 @@
       "Brisbane"
     ],
     "email": "sales@yuensmarket.com.au",
+    "lat": -27.5718305,
+    "lng": 153.0639559,
     "nameEn": "Yuen's Market",
     "nameZh": "袁氏行",
     "phone": "07 3344 3526",
@@ -2617,6 +3011,8 @@
       "Brisbane"
     ],
     "email": "sales@yuensmarket.com.au",
+    "lat": -27.4583846,
+    "lng": 153.0329865,
     "nameEn": "Yuen's Market",
     "nameZh": "袁氏行",
     "phone": "07 3852 1283",
@@ -2641,6 +3037,8 @@
       "Brisbane"
     ],
     "email": "chiland_tea@hotmail.com",
+    "lat": -27.5910561,
+    "lng": 153.0374481,
     "nameEn": "Chiland Grocery",
     "nameZh": "馳蘭雜貨",
     "phone": "+61 490 532 849",
@@ -2665,6 +3063,8 @@
       "Brisbane"
     ],
     "email": "samuel@josienorth.com",
+    "lat": -27.485139,
+    "lng": 152.9909622,
     "nameEn": "Josie North",
     "nameZh": null,
     "phone": "+61 466 718 884",
@@ -2689,6 +3089,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.6131226,
+    "lng": 153.0539259,
     "nameEn": "Lucky Cafe",
     "nameZh": "吉祥冰室",
     "phone": null,
@@ -2713,6 +3115,8 @@
       "Brisbane"
     ],
     "email": "stephen@ensurelegal.com.au",
+    "lat": -27.4681547,
+    "lng": 153.0189027,
     "nameEn": null,
     "nameZh": "昆士蘭房產商業 郭律師",
     "phone": "+61 402 937 286",
@@ -2737,6 +3141,8 @@
       "Brisbane"
     ],
     "email": "gjweddingsolutions@gmail.com",
+    "lat": -27.4710635,
+    "lng": 153.0236548,
     "nameEn": "G&J Wedding Solutions",
     "nameZh": null,
     "phone": "+61 433 807 719",
@@ -2761,6 +3167,8 @@
       "Brisbane"
     ],
     "email": "hello@harmonylegal.com.au",
+    "lat": -27.5197185,
+    "lng": 153.0614795,
     "nameEn": "Harmony Legal & Associates",
     "nameZh": "家和律師事務所 (Hla)",
     "phone": "+61 406 025 025",
@@ -2785,6 +3193,8 @@
       "Brisbane"
     ],
     "email": "admin@cathay.org.au",
+    "lat": -27.5661628,
+    "lng": 153.0321343,
     "nameEn": "Cathay Community Association",
     "nameZh": "國泰會",
     "phone": "(07) 3522 0710",
@@ -2801,24 +3211,30 @@
     "website": "https://cn.cathay.org.au"
   },
   {
-    "address": null,
+    "address": "Shop 2/21 Farne street sunnybank hills Brisbane, QLD, Australia, Queensland 4109",
     "branchName": null,
-    "category": "organisation",
+    "category": "food_drink",
     "chainId": null,
     "cities": [
       "Brisbane"
     ],
-    "email": "info@bclionsclub.org.au",
-    "nameEn": "Lions Club of Brisbane Chinese",
-    "nameZh": "布里斯本華人獅子會",
-    "phone": "+61 411 529 262",
+    "email": null,
+    "lat": -27.5891291,
+    "lng": 153.0615218,
+    "nameEn": "Nine seafood restaurant",
+    "nameZh": "新竺海鮮酒家",
+    "phone": "+61 420 980 238",
     "states": [
       "QLD"
     ],
-    "suburb": null,
-    "tagsEn": [],
-    "tagsZh": [],
-    "website": "https://www.bclionsclub.org.au/"
+    "suburb": "Sunnybank Hills",
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
+      "酒樓"
+    ],
+    "website": null
   },
   {
     "address": "shop 59 Calamvale Central, 662 Compton Rd, Brisbane, Queensland 4116, Australia",
@@ -2829,6 +3245,8 @@
       "Brisbane"
     ],
     "email": "ruyi.calamvale@gmail.com",
+    "lat": -27.613148,
+    "lng": 153.053894,
     "nameEn": "Ru Yi Dim Sum",
     "nameZh": "如意點心",
     "phone": "+61 498 380 470",
@@ -2845,6 +3263,54 @@
     "website": "https://ruyidimsum.com.au/"
   },
   {
+    "address": null,
+    "branchName": null,
+    "category": "leisure",
+    "chainId": null,
+    "cities": [
+      "Gold Coast"
+    ],
+    "email": "gcd269@gmail.com",
+    "nameEn": "Xpress.Gold Coast",
+    "nameZh": "澳洲黃金海岸包車",
+    "phone": "+61 401 610 813",
+    "states": [
+      "QLD"
+    ],
+    "suburb": null,
+    "tagsEn": [
+      "Transportation Service"
+    ],
+    "tagsZh": [
+      "旅遊服務"
+    ],
+    "website": null
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "health",
+    "chainId": null,
+    "cities": [
+      "Gold Coast"
+    ],
+    "email": null,
+    "nameEn": "Ben Yeung",
+    "nameZh": null,
+    "phone": "0403359032",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Coomera",
+    "tagsEn": [
+      "Physiotherapist"
+    ],
+    "tagsZh": [
+      "物理治療師"
+    ],
+    "website": null
+  },
+  {
     "address": "Shop 6/20 Nexus Dr, Pimpama QLD 4209",
     "branchName": null,
     "category": "food_drink",
@@ -2853,6 +3319,8 @@
       "Gold Coast"
     ],
     "email": "Kingsleycakes.gc@gmail.com",
+    "lat": -27.8217004,
+    "lng": 153.2980902,
     "nameEn": "Kingsley Cakes",
     "nameZh": null,
     "phone": null,
@@ -2877,6 +3345,8 @@
       "Gold Coast"
     ],
     "email": "simplewokgc@gmail.com",
+    "lat": -27.7858465,
+    "lng": 153.2509218,
     "nameEn": "Simple Wok - Asian Fusion Cuisine",
     "nameZh": null,
     "phone": "+61 468 866 102",
@@ -2927,6 +3397,8 @@
       "Gold Coast"
     ],
     "email": "toucancoffee4209@hotmail.com",
+    "lat": -27.8492567,
+    "lng": 153.2996772,
     "nameEn": "Toucan Coffee Upper Coomera",
     "nameZh": null,
     "phone": "+61 468 853 383",
@@ -2951,6 +3423,8 @@
       "Gold Coast"
     ],
     "email": "CoomeraAsianMart@gmail.com",
+    "lat": -27.8497358,
+    "lng": 153.3019169,
     "nameEn": "Coomera Asian Mart",
     "nameZh": null,
     "phone": "+61 477 584 377",
@@ -2975,6 +3449,8 @@
       "Gold Coast"
     ],
     "email": "info@dragoncove.com.au",
+    "lat": -27.8540118,
+    "lng": 153.3596777,
     "nameEn": "Dragon Cove Chinese Cuisine",
     "nameZh": "龍軒",
     "phone": "(07) 55779918",
@@ -2999,6 +3475,8 @@
       "Gold Coast"
     ],
     "email": null,
+    "lat": -27.8803807,
+    "lng": 153.3346213,
     "nameEn": "Tasty Magic Chinese Restaurant",
     "nameZh": "鍾菜館",
     "phone": "+61 7 5514 0393",
@@ -3023,6 +3501,8 @@
       "Gold Coast"
     ],
     "email": "relishcornercafe@gmail.com",
+    "lat": -27.8862935,
+    "lng": 153.3203364,
     "nameEn": "Relish Corner",
     "nameZh": null,
     "phone": "+61 7 5519 9977",
@@ -3047,6 +3527,8 @@
       "Gold Coast"
     ],
     "email": "hello@humblecafe.au",
+    "lat": -27.9784788,
+    "lng": 153.4125132,
     "nameEn": "Humble Cafe",
     "nameZh": null,
     "phone": null,
@@ -3071,6 +3553,8 @@
       "Gold Coast"
     ],
     "email": "info@jasmineroom.com.au",
+    "lat": -27.9745447,
+    "lng": 153.4195769,
     "nameEn": "Jasmine Room",
     "nameZh": "百莉軒",
     "phone": "(07) 56280470",
@@ -3095,6 +3579,8 @@
       "Gold Coast"
     ],
     "email": "yuyinchinesecuisine@gmail.com",
+    "lat": -27.9693021,
+    "lng": 153.4140329,
     "nameEn": "Yuyin Chinese Cuisine",
     "nameZh": "御宴",
     "phone": "+61 7 5503 1551",
@@ -3119,6 +3605,8 @@
       "Gold Coast"
     ],
     "email": null,
+    "lat": -27.9685017,
+    "lng": 153.4134546,
     "nameEn": "HongKongDessert",
     "nameZh": "喜記甜品",
     "phone": "0490 092 838",
@@ -3143,6 +3631,8 @@
       "Gold Coast"
     ],
     "email": "kenleenohair@gmail.com",
+    "lat": -27.9718025,
+    "lng": 153.4074831,
     "nameEn": "Ken Lee no Hair",
     "nameZh": null,
     "phone": null,
@@ -3167,6 +3657,8 @@
       "Gold Coast"
     ],
     "email": "kaffe.european@gmail.com",
+    "lat": -27.9925534,
+    "lng": 153.3316475,
     "nameEn": "Kaffe Europa",
     "nameZh": null,
     "phone": "+61 492 835 680",
@@ -3191,6 +3683,8 @@
       "Gold Coast"
     ],
     "email": "info@noodlebroadbeach.com.au",
+    "lat": -28.023515,
+    "lng": 153.4291831,
     "nameEn": "Noodle Broadbeach",
     "nameZh": null,
     "phone": "(07) 5592 0638",
@@ -3215,6 +3709,8 @@
       "Gold Coast"
     ],
     "email": "Info@yumchagallery.com.au",
+    "lat": -28.0996452,
+    "lng": 153.4249285,
     "nameEn": "Yum Cha Gallery",
     "nameZh": null,
     "phone": "+61 7 5568 0927",
@@ -3239,6 +3735,8 @@
       "Gold Coast"
     ],
     "email": null,
+    "lat": -28.0650813,
+    "lng": 153.4043919,
     "nameEn": "Dim Sum Delights",
     "nameZh": "德記茶居",
     "phone": "+61 7 5593 1298",
@@ -3263,6 +3761,8 @@
       "Gold Coast"
     ],
     "email": "thefishad@outlook.com",
+    "lat": -28.0785352,
+    "lng": 153.414913,
     "nameEn": "The Fish food with a difference",
     "nameZh": null,
     "phone": "+61 7 5575 7555",
@@ -3287,6 +3787,8 @@
       "Gold Coast"
     ],
     "email": "Ahsokitchen@gmail.com",
+    "lat": -28.0776307,
+    "lng": 153.4138626,
     "nameEn": "Ah So Kitchen",
     "nameZh": "亞嫂廚房",
     "phone": "+61 406 235 608",
@@ -3311,6 +3813,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.5726905,
+    "lng": 153.06462,
     "nameEn": "Woka Woka",
     "nameZh": "榮記",
     "phone": "+61 7 3219 6009",
@@ -3335,6 +3839,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.4581207,
+    "lng": 153.0333316,
     "nameEn": "Woka Woka",
     "nameZh": "榮記",
     "phone": "+61 7 3194 5829",
@@ -3359,6 +3865,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.6093379,
+    "lng": 153.1104572,
     "nameEn": "Woka Woka",
     "nameZh": "榮記",
     "phone": "(07) 3841 5987",
@@ -3383,6 +3891,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.6104154,
+    "lng": 153.0556524,
     "nameEn": "Excellent Kitchen",
     "nameZh": null,
     "phone": "(07) 3272 5743",
@@ -3407,6 +3917,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.6104154,
+    "lng": 153.0556524,
     "nameEn": "Causeway bay seafood restaurant",
     "nameZh": "海鮮大排檔",
     "phone": "+61 7 3150 8415",
@@ -3431,6 +3943,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.588367,
+    "lng": 153.0613006,
     "nameEn": "Ho Lin Wah Restaurant",
     "nameZh": "好年華冰室",
     "phone": "(07) 3345 5621",
@@ -3455,6 +3969,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.5726905,
+    "lng": 153.06462,
     "nameEn": "Woka 360",
     "nameZh": null,
     "phone": "(07) 3108 6231",
@@ -3479,6 +3995,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.5697987,
+    "lng": 153.0626594,
     "nameEn": "Sunnybank Oriental Restaurant",
     "nameZh": "東方茶餐廳",
     "phone": "+61 7 3344 2881",
@@ -3503,6 +4021,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.5697987,
+    "lng": 153.0626594,
     "nameEn": "Sunni Bakery",
     "nameZh": null,
     "phone": "(07) 3345 8860",
@@ -3527,6 +4047,8 @@
       "Brisbane"
     ],
     "email": "Ccafebne@gmail.com",
+    "lat": -27.5697987,
+    "lng": 153.0626594,
     "nameEn": "C Cafe",
     "nameZh": "廚C",
     "phone": "+61 7 3219 6288",
@@ -3551,6 +4073,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.3833344,
+    "lng": 153.032487,
     "nameEn": "Landmark Chinese Restaurant",
     "nameZh": "楓林大酒樓",
     "phone": "+61 412 666 848",
@@ -3575,6 +4099,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.5697987,
+    "lng": 153.0626594,
     "nameEn": "Landmark Chinese Restaurant",
     "nameZh": "楓林大酒樓",
     "phone": "+61 733 443 288",
@@ -3599,6 +4125,8 @@
       "Brisbane"
     ],
     "email": "reservations@goldenlane.com.au",
+    "lat": -27.5718305,
+    "lng": 153.0639559,
     "nameEn": "Golden Lane Restaurant",
     "nameZh": "金軒",
     "phone": "+61 7 3344 1361",
@@ -3623,6 +4151,8 @@
       "Brisbane"
     ],
     "email": null,
+    "lat": -27.5700462,
+    "lng": 153.0525618,
     "nameEn": "Burlington BBQ",
     "nameZh": null,
     "phone": "(07) 3219 6128",
@@ -3647,6 +4177,8 @@
       "Brisbane"
     ],
     "email": "parklandyumcha@hotmail.com",
+    "lat": -27.5709375,
+    "lng": 153.0648794,
     "nameEn": "Parkland Restaurant",
     "nameZh": "柏林大酒樓",
     "phone": "+61 7 3345 4588",
@@ -3661,6 +4193,26 @@
       "酒樓"
     ],
     "website": null
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Adelaide"
+    ],
+    "email": "contact@hkcasa.org.au",
+    "nameEn": "Hong Kong Cultural Association of South Australia",
+    "nameZh": "南澳香港文化協會",
+    "phone": null,
+    "states": [
+      "SA"
+    ],
+    "suburb": null,
+    "tagsEn": [],
+    "tagsZh": [],
+    "website": "https://www.hkcasa.org.au"
   },
   {
     "address": "133 Gouger Street, Adelaide, South Australia 5000",
@@ -3697,6 +4249,8 @@
       "Adelaide"
     ],
     "email": null,
+    "lat": -34.8760683,
+    "lng": 138.567171,
     "nameEn": "Mount Lion Cafe",
     "nameZh": "家友站",
     "phone": "+61 452 016 866",
@@ -3721,6 +4275,8 @@
       "Adelaide"
     ],
     "email": "hkggrocery@gmail.com",
+    "lat": -34.9291167,
+    "lng": 138.5956765,
     "nameEn": "Hong Kong Grocery",
     "nameZh": "香港超市",
     "phone": "+61 8 8231 4102",
@@ -3745,6 +4301,8 @@
       "Adelaide"
     ],
     "email": null,
+    "lat": -34.9312046,
+    "lng": 138.5961761,
     "nameEn": "Kowloon Restaurant Adelaide",
     "nameZh": "九龍茶餐廳",
     "phone": "+61872263719",
@@ -3769,6 +4327,8 @@
       "Adelaide"
     ],
     "email": null,
+    "lat": -34.9314221,
+    "lng": 138.5986495,
     "nameEn": "Ding Hao Restaurant",
     "nameZh": "頂好酒樓",
     "phone": "+61 8 8211 7036",
@@ -3785,26 +4345,6 @@
     "website": null
   },
   {
-    "address": null,
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Adelaide"
-    ],
-    "email": "contact@hkcasa.org.au",
-    "nameEn": "Hong Kong Cultural Association of South Australia",
-    "nameZh": "南澳香港文化協會",
-    "phone": null,
-    "states": [
-      "SA"
-    ],
-    "suburb": null,
-    "tagsEn": [],
-    "tagsZh": [],
-    "website": "https://www.hkcasa.org.au"
-  },
-  {
     "address": "25 Field Street , Adelaide, SA, Australia, South Australia",
     "branchName": null,
     "category": "food_drink",
@@ -3813,6 +4353,8 @@
       "Adelaide"
     ],
     "email": "Kowloonfood@gmail.com",
+    "lat": -34.8583625,
+    "lng": 138.6464763,
     "nameEn": "Kowloon Restaurant Adelaide",
     "nameZh": "九龍茶餐廳",
     "phone": "+61 8 7226 3719",
@@ -3837,6 +4379,8 @@
       "Adelaide"
     ],
     "email": null,
+    "lat": -34.9480191,
+    "lng": 138.6069936,
     "nameEn": "Brolly Toasties",
     "nameZh": "再聚",
     "phone": null,
@@ -3861,6 +4405,8 @@
       "Adelaide"
     ],
     "email": null,
+    "lat": -34.9302659,
+    "lng": 138.5933394,
     "nameEn": "Hong Kong Cart Noodles",
     "nameZh": "添記車仔麵",
     "phone": "0493 966 641",
@@ -3911,6 +4457,8 @@
       "Perth"
     ],
     "email": null,
+    "lat": -31.9233102,
+    "lng": 115.8839843,
     "nameEn": "Golden Star BBQ Seafood Chinese Restaurant",
     "nameZh": null,
     "phone": null,
@@ -3935,6 +4483,8 @@
       "Perth"
     ],
     "email": "kowlooncafeperth@gmail.com",
+    "lat": -31.8945668,
+    "lng": 115.8951912,
     "nameEn": "Kowloon Cafe Perth",
     "nameZh": "九龍冰室",
     "phone": "+61 425 083 321",
@@ -3959,6 +4509,8 @@
       "Perth"
     ],
     "email": null,
+    "lat": -32.0568459,
+    "lng": 115.8637151,
     "nameEn": "Steak and Food Concepts",
     "nameZh": "2樓茶座",
     "phone": "+61 8 9332 7779",
@@ -3983,6 +4535,8 @@
       "Perth"
     ],
     "email": null,
+    "lat": -31.9834584,
+    "lng": 115.9025963,
     "nameEn": "Hong Kong Tea Cafe",
     "nameZh": "榮記冰室",
     "phone": "+61 8 9361 6653",
@@ -4007,6 +4561,8 @@
       "Perth"
     ],
     "email": "goodfortuneducknb@gmail.com",
+    "lat": -31.94559,
+    "lng": 115.86187,
     "nameEn": "Good Fortune Roast Duck House",
     "nameZh": "德興燒鴨店",
     "phone": "08 9228 3293",
@@ -4031,6 +4587,8 @@
       "Perth"
     ],
     "email": "goodfortuneducknb@gmail.com",
+    "lat": -31.98579,
+    "lng": 115.9043,
     "nameEn": "Good Fortune Roast Duck House",
     "nameZh": "德興燒鴨店",
     "phone": "08 9472 8236",
@@ -4277,23 +4835,6 @@
     "website": "https://www.aushkconnex.net/zh"
   },
   {
-    "address": "Suite 537, 1 Queens Road, Melbourne, VIC 3004",
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "email": "info@ahbca.org.au",
-    "nameEn": "Australia Hong Kong Business & Culture Association",
-    "nameZh": "澳洲香港商業及文化協會",
-    "phone": null,
-    "states": [
-      "VIC"
-    ],
-    "suburb": null,
-    "tagsEn": [],
-    "tagsZh": [],
-    "website": "https://www.ahbca.org.au/"
-  },
-  {
     "address": "Level 3, 240 Queen Street, Brisbane City, QLD, Australia, Queensland",
     "branchName": null,
     "category": "education",
@@ -4340,78 +4881,6 @@
       "廣東話課"
     ],
     "website": null
-  },
-  {
-    "address": null,
-    "branchName": null,
-    "category": "education",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "littlebeancantoneseclass@gmail.com",
-    "nameEn": "Little bean Cantonese",
-    "nameZh": null,
-    "phone": null,
-    "states": [
-      "VIC"
-    ],
-    "suburb": null,
-    "tagsEn": [
-      "Cantonese Course"
-    ],
-    "tagsZh": [
-      "廣東話課"
-    ],
-    "website": "https://littlebeancantonese.com/"
-  },
-  {
-    "address": "206A, Whitehorse Road, Balwyn, Melbourne, VIC, Australia, Victoria",
-    "branchName": null,
-    "category": "education",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": null,
-    "nameEn": "Cantopia",
-    "nameZh": "港呢啲",
-    "phone": null,
-    "states": [
-      "VIC"
-    ],
-    "suburb": "Balwyn",
-    "tagsEn": [
-      "Cantonese Course"
-    ],
-    "tagsZh": [
-      "廣東話課"
-    ],
-    "website": null
-  },
-  {
-    "address": null,
-    "branchName": null,
-    "category": "education",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "storyswallow@gmail.com",
-    "nameEn": "Story Swallow",
-    "nameZh": "故事燕子",
-    "phone": null,
-    "states": [
-      "VIC"
-    ],
-    "suburb": null,
-    "tagsEn": [
-      "Cantonese Course"
-    ],
-    "tagsZh": [
-      "廣東話課"
-    ],
-    "website": "https://suie0407.wixsite.com/suielo"
   },
   {
     "address": "Shop 2 / 78 Merivale Street, South Brisbane, QLD, Australia, Queensland 4101",
@@ -4968,32 +5437,6 @@
   {
     "address": null,
     "branchName": null,
-    "category": "education",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "Lizzmoonstudio@gmail.com",
-    "nameEn": "Lizzmoon Studio",
-    "nameZh": null,
-    "phone": "0406267062",
-    "states": [
-      "VIC"
-    ],
-    "suburb": "Mount Waverley",
-    "tagsEn": [
-      "Leather Products",
-      "Leather Workshop"
-    ],
-    "tagsZh": [
-      "皮革產品",
-      "皮革教學班"
-    ],
-    "website": "https://www.instagram.com/lizzmoon_studio"
-  },
-  {
-    "address": null,
-    "branchName": null,
     "category": "leisure",
     "chainId": null,
     "email": "info@hkffa.com.au",
@@ -5231,54 +5674,6 @@
     "website": "https://www.toowongbc.org.au"
   },
   {
-    "address": "235 Pennant Hills Rd, Thornleigh NSW 2120",
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Sydney"
-    ],
-    "email": "office@cabc-t.org.au",
-    "nameEn": "Chinese and Australian Baptist Church Thornleigh",
-    "nameZh": "華澳浸信會展信堂",
-    "phone": "(02) 9484 3920",
-    "states": [
-      "NSW"
-    ],
-    "suburb": "Thornleigh",
-    "tagsEn": [
-      "Religious Group"
-    ],
-    "tagsZh": [
-      "宗教團體"
-    ],
-    "website": "https://www.cabc-t.org.au/tc"
-  },
-  {
-    "address": "Unit 2, 4 Gladstone Road Castle Hill, NSW 2154, Australia",
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Sydney"
-    ],
-    "email": "admin@bhcac.org.au",
-    "nameEn": "Baulkham Hills Alliance Church",
-    "nameZh": "基督教華人宣道會迦南堂",
-    "phone": "(02) 9680 7545",
-    "states": [
-      "NSW"
-    ],
-    "suburb": "Castle Hill",
-    "tagsEn": [
-      "Religious Group"
-    ],
-    "tagsZh": [
-      "宗教團體"
-    ],
-    "website": "https://www.bhcac.org.au/zh/chinese/"
-  },
-  {
     "address": "146 Flamborough St, Doubleview WA 6018",
     "branchName": "Main Church",
     "category": "organisation",
@@ -5373,54 +5768,6 @@
       "宗教團體"
     ],
     "website": "https://www.pacn.au/"
-  },
-  {
-    "address": "Shop 3/24 Wakefield St, Hawthorn VIC 3122",
-    "branchName": null,
-    "category": "food_drink",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": null,
-    "nameEn": "UDLE",
-    "nameZh": null,
-    "phone": null,
-    "states": [
-      "VIC"
-    ],
-    "suburb": "Hawthorn",
-    "tagsEn": [
-      "Western style Café"
-    ],
-    "tagsZh": [
-      "咖啡室"
-    ],
-    "website": "https://udle.org"
-  },
-  {
-    "address": "Shop 2a/35 Elizabeth St, Melbourne, Victoria, Australia 3000",
-    "branchName": null,
-    "category": "food_drink",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "info@cremebar.com.au",
-    "nameEn": "Creme Bar",
-    "nameZh": null,
-    "phone": "(03) 7048 4452",
-    "states": [
-      "VIC"
-    ],
-    "suburb": "Melbourne",
-    "tagsEn": [
-      "Hong Kong Street Food"
-    ],
-    "tagsZh": [
-      "香港小食"
-    ],
-    "website": "https://www.cremebar.com.au/"
   },
   {
     "address": "Shop F3, 1/F, 683-689 George Street Haymarket, NSW, Australia, New South Wales 2000",
@@ -6601,30 +6948,6 @@
     "website": "https://iradarway.com.au/"
   },
   {
-    "address": null,
-    "branchName": null,
-    "category": "media",
-    "chainId": null,
-    "cities": [
-      "Melbourne"
-    ],
-    "email": "fsoca.au@gmail.com",
-    "nameEn": "The Film Society of Chinese Australian",
-    "nameZh": "華影社",
-    "phone": null,
-    "states": [
-      "VIC"
-    ],
-    "suburb": null,
-    "tagsEn": [
-      "Film Society"
-    ],
-    "tagsZh": [
-      "電影學會"
-    ],
-    "website": "https://fsoca.org.au/"
-  },
-  {
     "address": "180 Whatley Cres, Maylands WA 6051",
     "branchName": null,
     "category": "food_drink",
@@ -6741,122 +7064,6 @@
     ],
     "tagsZh": [
       "車仔麵"
-    ],
-    "website": null
-  },
-  {
-    "address": "2/708 boundary Road, coopers Plains Brisbane, QLD, Australia, Queensland 4108",
-    "branchName": null,
-    "category": "auto_repair",
-    "chainId": null,
-    "cities": [
-      "Brisbane"
-    ],
-    "email": "etech.autotint@gmail.com",
-    "nameEn": "E-Tech AUTO Car Tint",
-    "nameZh": null,
-    "phone": "+61 412 830 020",
-    "states": [
-      "QLD"
-    ],
-    "suburb": "Coopers Plains",
-    "tagsEn": [
-      "Car Tint"
-    ],
-    "tagsZh": [
-      "汽車貼膜"
-    ],
-    "website": "https://www.etechtint.com.au/"
-  },
-  {
-    "address": "u5/39 Secam St, Mansfield QLD 4122",
-    "branchName": null,
-    "category": "auto_repair",
-    "chainId": null,
-    "cities": [
-      "Brisbane"
-    ],
-    "email": "mcautotechau@gmail.com",
-    "nameEn": "MC Auto Tech",
-    "nameZh": null,
-    "phone": "+61 481 355 881",
-    "states": [
-      "QLD"
-    ],
-    "suburb": "Mansfield",
-    "tagsEn": [
-      "auto repair"
-    ],
-    "tagsZh": [
-      "汽車維修"
-    ],
-    "website": "https://mcautotech.com.au/"
-  },
-  {
-    "address": null,
-    "branchName": null,
-    "category": "organisation",
-    "chainId": null,
-    "cities": [
-      "Brisbane"
-    ],
-    "email": "connect@uhker.com",
-    "nameEn": "Uniting HongKongers",
-    "nameZh": "港人同行",
-    "phone": null,
-    "states": [
-      "QLD"
-    ],
-    "suburb": null,
-    "tagsEn": [],
-    "tagsZh": [],
-    "website": null
-  },
-  {
-    "address": "Shop 2/21 Farne street sunnybank hills Brisbane, QLD, Australia, Queensland 4109",
-    "branchName": null,
-    "category": "food_drink",
-    "chainId": null,
-    "cities": [
-      "Brisbane"
-    ],
-    "email": null,
-    "nameEn": "Nine seafood restaurant",
-    "nameZh": "新竺海鮮酒家",
-    "phone": "+61 420 980 238",
-    "states": [
-      "QLD"
-    ],
-    "suburb": "Sunnybank Hills",
-    "tagsEn": [
-      "Dim Sum Restaurant"
-    ],
-    "tagsZh": [
-      "酒樓"
-    ],
-    "website": null
-  },
-  {
-    "address": null,
-    "branchName": null,
-    "category": "health",
-    "chainId": null,
-    "cities": [
-      "Gold Coast"
-    ],
-    "email": null,
-    "nameEn": "Ben Yeung",
-    "nameZh": null,
-    "phone": "0403359032",
-    "states": [
-      "QLD"
-    ],
-    "suburb": "Coomera",
-    "tagsEn": [
-      "Physiotherapist"
-    ],
-    "tagsZh": [
-      "物理治療師"
     ],
     "website": null
   },
