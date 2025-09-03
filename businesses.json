@@ -10014,6 +10014,8 @@
       "Adelaide"
     ],
     "email": null,
+    "lat": -34.8317179,
+    "lng": 138.6915135,
     "nameEn": "Big Bite",
     "nameZh": null,
     "phone": null,
@@ -10040,6 +10042,8 @@
       "Adelaide"
     ],
     "email": null,
+    "lat": -34.9290651,
+    "lng": 138.5965641,
     "nameEn": "852 Studio",
     "nameZh": null,
     "phone": "0426 788 852",
@@ -10112,6 +10116,8 @@
       "Adelaide"
     ],
     "email": "hello@phoenixsweets.com.au",
+    "lat": -34.9507988,
+    "lng": 138.5999916,
     "nameEn": "Phoenix Sweets Cakery",
     "nameZh": null,
     "phone": "+61 04 7581 1313",
@@ -10136,6 +10142,8 @@
       "Adelaide"
     ],
     "email": null,
+    "lat": -34.9397783,
+    "lng": 138.6356938,
     "nameEn": "LaBelle charm",
     "nameZh": "港嘜叉",
     "phone": "+61 430 833 820",
@@ -10150,5 +10158,83 @@
       "香港小食"
     ],
     "website": null
+  },
+  {
+    "address": "Rundle Mall, Adelaide SA 5000",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Adelaide"
+    ],
+    "email": null,
+    "lat": -34.9224988,
+    "lng": 138.6023569,
+    "nameEn": "LaMala kitchen",
+    "nameZh": null,
+    "phone": "+61 466 876 603",
+    "states": [
+      "SA"
+    ],
+    "suburb": "Adelaide",
+    "tagsEn": [
+      "Cake Shop"
+    ],
+    "tagsZh": [
+      "餅店"
+    ],
+    "website": null
+  },
+  {
+    "address": "Prince Bandroom, 29 Fitzroy St, St Kilda VIC 3182",
+    "branchName": "Melbourne",
+    "category": "leisure",
+    "chainId": "KIRIT",
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.8619107,
+    "lng": 144.9741638,
+    "nameEn": "KIRI T – RIDICULOUSLY DOWN UNDER TOUR 2025",
+    "nameZh": null,
+    "phone": null,
+    "states": [
+      "VIC"
+    ],
+    "suburb": "St Kilda",
+    "tagsEn": [
+      "Concert"
+    ],
+    "tagsZh": [
+      "演唱會"
+    ],
+    "website": "https://princebandroom.oztix.com.au/outlet/event/2dd0c526-78f6-4a12-9d8d-951ac4aec114"
+  },
+  {
+    "address": "Universal 85-91 Oxford St, Darlinghurst,  NSW 2010",
+    "branchName": "Sydney",
+    "category": "leisure",
+    "chainId": "KIRIT",
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "lat": -33.8790159,
+    "lng": 151.2145329,
+    "nameEn": "KIRI T – RIDICULOUSLY DOWN UNDER TOUR 2025",
+    "nameZh": null,
+    "phone": null,
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Darlinghurst",
+    "tagsEn": [
+      "Concert"
+    ],
+    "tagsZh": [
+      "演唱會"
+    ],
+    "website": "https://events.ticketbooth.com.au/event/kiritsydney"
   }
 ]
