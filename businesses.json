@@ -10418,21 +10418,23 @@
     "website": null
   },
   {
-    "address": "Shop 2020 Shellharbour Stockland Wollongong, NSW, Australia, New South Wales 2529",
-    "branchName": null,
+    "address": "Shop 2020 Shellharbour Stockland, NSW 2529",
+    "branchName": "Shellharbour",
     "category": "food_drink",
-    "chainId": null,
+    "chainId": "HKChef",
     "cities": [
       "Wollongong"
     ],
     "email": "hkcshellharbour@gmail.com",
+    "lat": -34.5650252,
+    "lng": 150.8389431,
     "nameEn": "Hong Kong Chef",
     "nameZh": "港廚",
-    "phone": "(02) 4244 7978",
+    "phone": "0401 390 060",
     "states": [
       "NSW"
     ],
-    "suburb": "Wollongong",
+    "suburb": "Shellharbour City",
     "tagsEn": [
       "Chinese Cuisine"
     ],
@@ -10440,5 +10442,707 @@
       "中餐"
     ],
     "website": "https://hongkongchef.com.au/"
+  },
+  {
+    "address": "89 Park Ave, Kotara NSW 2289",
+    "branchName": "Kotara",
+    "category": "food_drink",
+    "chainId": "HKChef",
+    "cities": [
+      "Newcastle"
+    ],
+    "email": "jackson831112@hotmail.com",
+    "lat": -32.9422747,
+    "lng": 151.7111091,
+    "nameEn": "Hong Kong Chef",
+    "nameZh": "港廚",
+    "phone": "(02) 4957 6084",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Kotara",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": "https://hongkongchef.com.au/"
+  },
+  {
+    "address": "1 Molly Morgan Dr, East Maitland NSW 2323",
+    "branchName": "East Maitland",
+    "category": "food_drink",
+    "chainId": "HKChef",
+    "cities": [
+      "Maitland"
+    ],
+    "email": "hongkongchefgreenhill@gmail.com",
+    "lat": -32.7617169,
+    "lng": 151.5922964,
+    "nameEn": "Hong Kong Chef",
+    "nameZh": "港廚",
+    "phone": "0426 403 905",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "East Maitland",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": "https://hongkongchef.com.au/"
+  },
+  {
+    "address": "50 Wyong Rd, Tuggerah NSW 2259",
+    "branchName": "Tuggerah",
+    "category": "food_drink",
+    "chainId": "HKChef",
+    "cities": [
+      "Central Coast"
+    ],
+    "email": null,
+    "lat": -33.3085469,
+    "lng": 151.4114488,
+    "nameEn": "Hong Kong Chef",
+    "nameZh": "港廚",
+    "phone": "0402 776 560",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Tuggerah",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": "https://hongkongchef.com.au/"
+  },
+  {
+    "address": "Wollongong Central, Shop GD W118/200 Crown St, Wollongong NSW 2500",
+    "branchName": "Wollongong",
+    "category": "food_drink",
+    "chainId": "HKChef",
+    "cities": [
+      "Wollongong"
+    ],
+    "email": null,
+    "lat": -34.4247129,
+    "lng": 150.8942161,
+    "nameEn": "Hong Kong Chef",
+    "nameZh": "港廚",
+    "phone": "0422 535 500",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "0422 535 500",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": "https://hongkongchef.com.au/"
+  },
+  {
+    "address": "Level 35, Tower One Barangaroo International Towers Sydney, 100 Barangaroo Ave, Barangaroo NSW 2000",
+    "branchName": "Sydney",
+    "category": "accounting",
+    "chainId": "HKCG",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "hello@hkcg.com.au",
+    "lat": -33.8638596,
+    "lng": 151.2021004,
+    "nameEn": "HK Consulting Group",
+    "nameZh": null,
+    "phone": "(02) 8937 3699",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Sydney",
+    "tagsEn": [
+      "Accounting"
+    ],
+    "tagsZh": [
+      "會計服務"
+    ],
+    "website": "https://www.hkcg.com.au/"
+  },
+  {
+    "address": "43 Bridge St, Hurstville NSW 2220",
+    "branchName": "Hurtsville",
+    "category": "accounting",
+    "chainId": "HKCG",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "hello@hkcg.com.au",
+    "lat": -33.9644426,
+    "lng": 151.0946366,
+    "nameEn": "HK Consulting Group",
+    "nameZh": null,
+    "phone": "(02) 8937 3699",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Hurstville",
+    "tagsEn": [
+      "Accounting"
+    ],
+    "tagsZh": [
+      "會計服務"
+    ],
+    "website": "https://www.hkcg.com.au/"
+  },
+  {
+    "address": "Unit 4, 18-22 Lilian Fowler Place, Marrickville NSW 2204",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@hongkongdimsim.com.au",
+    "lat": -33.9103306,
+    "lng": 151.1685906,
+    "nameEn": "Hong Kong Dim Sim Kitchen",
+    "nameZh": "香港點心廠",
+    "phone": "02 9516 4097",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Marrickville",
+    "tagsEn": [
+      "Dim Sum"
+    ],
+    "tagsZh": [
+      "點心"
+    ],
+    "website": "https://www.hongkongdimsim.com.au/"
+  },
+  {
+    "address": "Shop k0012, The Glen Shopping Centre, 235 Springvale Road Glen Waverley 3150",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "d1cafe.media@gmail.com",
+    "lat": -37.87618,
+    "lng": 145.1652755,
+    "nameEn": "D1 Cafe",
+    "nameZh": null,
+    "phone": "0490 852 676",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Glen Waverley",
+    "tagsEn": [
+      "Western style Café"
+    ],
+    "tagsZh": [
+      "咖啡室"
+    ],
+    "website": "https://d1cafe.com.au/"
+  },
+  {
+    "address": "206 Bourke Street Melbourne, VIC, Australia, Victoria 3000",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.812589,
+    "lng": 144.9668787,
+    "nameEn": "Tim Ho Wan",
+    "nameZh": "添好運",
+    "phone": "(03) 9663 9691",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Melbourne",
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
+      "酒樓"
+    ],
+    "website": "https://www.timhowanaustralia.com.au/"
+  },
+  {
+    "address": "225 Forest Rd, Hurstville NSW 2220",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "lat": -33.9671434,
+    "lng": 151.1029001,
+    "nameEn": "Hong Kong Delight",
+    "nameZh": "九記",
+    "phone": "0404 849 898",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Hurstville",
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
+      "燒味"
+    ],
+    "website": null
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": "Nunawading@xpresso.com.au",
+    "nameEn": "Xpresso Nunawading",
+    "nameZh": null,
+    "phone": "0431405429",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Nunawading",
+    "tagsEn": [
+      "Mobile Cafe",
+      "Coffee Van"
+    ],
+    "tagsZh": [
+      "流動咖啡鋪",
+      "咖啡車"
+    ],
+    "website": "https://www.instagram.com/xpresso_nunawading?igsh=MWI5NGZjYnVpZjl5ZA%3D%3D&utm_source=qr"
+  },
+  {
+    "address": "145-149 Church Street Parramatta, NSW, Australia, New South Wales 2150",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sydney"
+    ],
+    "email": null,
+    "lat": -33.8178842,
+    "lng": 151.0034163,
+    "nameEn": "Sun Ming B.B.Q Restaurant",
+    "nameZh": "新明燒臘茶餐廳",
+    "phone": "(02) 9689 2178",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Parramatta",
+    "tagsEn": [
+      "Cantonese BBQ",
+      "Hong Kong–style Café"
+    ],
+    "tagsZh": [
+      "燒味",
+      "茶餐廳"
+    ],
+    "website": null
+  },
+  {
+    "address": "327A Doncaster Rd, Balwyn North Melbourne, VIC, Australia, Victoria 3104",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.7906482,
+    "lng": 145.095854,
+    "nameEn": "Mankee Yum Cha",
+    "nameZh": "民記",
+    "phone": "0422 962 328",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Balwyn North",
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
+      "酒樓"
+    ],
+    "website": null
+  },
+  {
+    "address": "982 Doncaster Road. Doncaster East, Melbourne, Victoria, Australia 3109",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.789125,
+    "lng": 145.1589054,
+    "nameEn": "Hong Kong Dim Sum",
+    "nameZh": "香港點心",
+    "phone": "(03) 9120 8863",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Box Hill",
+    "tagsEn": [
+      "Dim Sum"
+    ],
+    "tagsZh": [
+      "點心"
+    ],
+    "website": "https://hongkongdimsum.com.au/"
+  },
+  {
+    "address": "639-641 Warrigal Rd, Chadstone VIC 3148",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.8750233,
+    "lng": 145.092034,
+    "nameEn": "Tung Wo Restaurant",
+    "nameZh": "同和·港式粥面",
+    "phone": "(03) 9568 0113",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Chadstone",
+    "tagsEn": [
+      "Hong Kong–style Congee & Noodles"
+    ],
+    "tagsZh": [
+      "港式粥粉麵食"
+    ],
+    "website": null
+  },
+  {
+    "address": "Suite 14, First Floor, Moonah Business Centre, 113 Main Road, Moonah, TAS 7009",
+    "branchName": null,
+    "category": "realestate_home",
+    "chainId": null,
+    "cities": [
+      "Hobart"
+    ],
+    "email": "info@jameshoarchitecture.com.au",
+    "lat": -42.8459364,
+    "lng": 147.2948183,
+    "nameEn": "James Ho Architecture",
+    "nameZh": null,
+    "phone": "0489 183 999",
+    "states": [
+      "TAS"
+    ],
+    "suburb": "Moonah",
+    "tagsEn": [
+      "Architecture Firm"
+    ],
+    "tagsZh": [
+      "建築設計公司"
+    ],
+    "website": "https://www.jameshoarchitecture.com.au/"
+  },
+  {
+    "address": "53-55 Main Rd, Moonah TAS",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Hobart"
+    ],
+    "email": null,
+    "lat": -42.8480287,
+    "lng": 147.2962332,
+    "nameEn": "Hong Kong Restaurant",
+    "nameZh": null,
+    "phone": "(03) 6228 3985",
+    "states": [
+      "TAS"
+    ],
+    "suburb": "Moonah",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": null
+  },
+  {
+    "address": "Shop 15, TheGalleria Shopping Centre, 37-39 Smith Street Mall, Darwin, NT, Australia, Northern Territory 0800",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Darwin"
+    ],
+    "email": "info@ran328.com",
+    "lat": -12.4638913,
+    "lng": 130.8419946,
+    "nameEn": "Roast and Noodle 328",
+    "nameZh": "食",
+    "phone": "08 8981 6598",
+    "states": [
+      "NT"
+    ],
+    "suburb": "Darwin",
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
+      "燒味"
+    ],
+    "website": "https://roastandnoodle.com/"
+  },
+  {
+    "address": "157-159 GOUGER ST,ADELAIDE SA 5000",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Adelaide"
+    ],
+    "email": null,
+    "lat": -34.9307487,
+    "lng": 138.5932336,
+    "nameEn": "Ming's Palace",
+    "nameZh": null,
+    "phone": "(08) 8231 9970",
+    "states": [
+      "SA"
+    ],
+    "suburb": "Adelaide",
+    "tagsEn": [
+      "Dim Sum Restaurant"
+    ],
+    "tagsZh": [
+      "酒樓"
+    ],
+    "website": "https://mingspalace.com.au/"
+  },
+  {
+    "address": "57C Bray St, Plympton Park SA 5038",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Adelaide"
+    ],
+    "email": null,
+    "lat": -34.9804885,
+    "lng": 138.5488447,
+    "nameEn": "Dack Kee Hong Kong",
+    "nameZh": "德記",
+    "phone": "0422 861 140",
+    "states": [
+      "SA"
+    ],
+    "suburb": "Plympton Park",
+    "tagsEn": [
+      "Hong Kong–style Restaurant"
+    ],
+    "tagsZh": [
+      "港式餐廳"
+    ],
+    "website": null
+  },
+  {
+    "address": "Shop 9 Chinatown, 66 Roe Street, Northbridge Perth, WA, Australia, Western Australia 6003",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Perth"
+    ],
+    "email": "uncle.billys@gmail.com",
+    "lat": -31.9489927,
+    "lng": 115.8572743,
+    "nameEn": "Uncle Billy's Chinese Restaurant",
+    "nameZh": "真真",
+    "phone": "(08) 9228 9388",
+    "states": [
+      "WA"
+    ],
+    "suburb": "Northbridge",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": "https://www.uncle-billys.com.au/"
+  },
+  {
+    "address": "118 Hopkins St, Footscray VIC 3011, Australia",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.7997606,
+    "lng": 144.9013865,
+    "nameEn": "Hong Kong BBQ Restaurant",
+    "nameZh": null,
+    "phone": "+61 3 9687 8488",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Footscray",
+    "tagsEn": [
+      "Cantonese BBQ"
+    ],
+    "tagsZh": [
+      "燒味"
+    ],
+    "website": null
+  },
+  {
+    "address": "5/7-9 Leeds St, Footscray VIC 3011",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "lat": -37.7988161,
+    "lng": 144.9013918,
+    "nameEn": "Yummie Hong Kong Dim Sum",
+    "nameZh": "佳味",
+    "phone": "(03) 9687 1738",
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Footscray",
+    "tagsEn": [
+      "Dim Sum"
+    ],
+    "tagsZh": [
+      "點心"
+    ],
+    "website": null
+  },
+  {
+    "address": "1 Scholars Dr, Sippy Downs QLD 4556",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Sunshine Coast"
+    ],
+    "email": null,
+    "lat": -26.7225673,
+    "lng": 153.0586932,
+    "nameEn": "Hong Kong Tea Chinese Restaurant",
+    "nameZh": null,
+    "phone": "(07) 5476 6018",
+    "states": [
+      "QLD"
+    ],
+    "suburb": "Sippy Downs",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": null
+  },
+  {
+    "address": "257 Soldiers Point Road Salamander Bay, NSW, Australia, New South Wales 2317",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Newcastle"
+    ],
+    "email": null,
+    "lat": -32.7214926,
+    "lng": 152.0771343,
+    "nameEn": "Oceanic Chinese Restaurant",
+    "nameZh": null,
+    "phone": "(02) 4982 7625",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Port Stephen",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": null
+  },
+  {
+    "address": "Burbury Hotel – 1 Burbury Cl, Barton ACT 2600",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Canberra"
+    ],
+    "email": "chairmanandyip@gmail.com",
+    "lat": -35.3118409,
+    "lng": 149.133974,
+    "nameEn": "Chairman & Yip",
+    "nameZh": null,
+    "phone": "(02) 6162 1220",
+    "states": [
+      "ACT"
+    ],
+    "suburb": "Barton",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": "https://chairmangroup.com.au/"
+  },
+  {
+    "address": "Shop 2, 28 Challis St Dickson Dickson, ACT, Australia, Australian Capital Territory 2602",
+    "branchName": null,
+    "category": "food_drink",
+    "chainId": null,
+    "cities": [
+      "Canberra"
+    ],
+    "email": null,
+    "nameEn": "The East Kitchen",
+    "nameZh": null,
+    "phone": "(02) 6262 6889",
+    "states": [
+      "ACT"
+    ],
+    "suburb": "Dickson",
+    "tagsEn": [
+      "Chinese Cuisine"
+    ],
+    "tagsZh": [
+      "中餐"
+    ],
+    "website": null
   }
 ]
