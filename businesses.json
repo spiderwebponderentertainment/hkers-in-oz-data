@@ -724,9 +724,9 @@
   },
   {
     "address": "60 Weldon Street, Burwood NSW 2134",
-    "branchName": null,
+    "branchName": "Office",
     "category": "organisation",
-    "chainId": null,
+    "chainId": "ANHF",
     "cities": [
       "Sydney"
     ],
@@ -11130,6 +11130,8 @@
       "Canberra"
     ],
     "email": null,
+    "lat": -35.2493253,
+    "lng": 149.1364346,
     "nameEn": "The East Kitchen",
     "nameZh": null,
     "phone": "(02) 6262 6889",
@@ -11144,5 +11146,337 @@
       "中餐"
     ],
     "website": null
+  },
+  {
+    "address": "Level 4, 741 George Street, Haymarket NSW 2000",
+    "branchName": "Sydney City Centre",
+    "category": "health",
+    "chainId": "CanRevive",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@canrevive.com",
+    "lat": -33.8794929,
+    "lng": 151.2058492,
+    "nameEn": "CanRevive",
+    "nameZh": "更生會",
+    "phone": "(02) 9212 7789",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Haymarket",
+    "tagsEn": [
+      "Cancer Support Service"
+    ],
+    "tagsZh": [
+      "癌症支援服務"
+    ],
+    "website": "https://www.canrevive.com/"
+  },
+  {
+    "address": "8 Park Road, Hurstville NSW 2220",
+    "branchName": "Southern Sydney Centre",
+    "category": "health",
+    "chainId": "CanRevive",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@canrevive.com",
+    "lat": -33.9666921,
+    "lng": 151.1063602,
+    "nameEn": "CanRevive",
+    "nameZh": "更生會",
+    "phone": "(02) 9139 3236",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Hurstville",
+    "tagsEn": [
+      "Cancer Support Service"
+    ],
+    "tagsZh": [
+      "癌症支援服務"
+    ],
+    "website": "https://www.canrevive.com/"
+  },
+  {
+    "address": "L1 North Shore House, 65 Archer Street, Chatswood NSW 2067",
+    "branchName": "Northern Sydney Centre",
+    "category": "health",
+    "chainId": "CanRevive",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@canrevive.com",
+    "lat": -33.796321,
+    "lng": 151.1861172,
+    "nameEn": "CanRevive",
+    "nameZh": "更生會",
+    "phone": "(02) 9139 3233",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Chatswood",
+    "tagsEn": [
+      "Cancer Support Service"
+    ],
+    "tagsZh": [
+      "癌症支援服務"
+    ],
+    "website": "https://www.canrevive.com/"
+  },
+  {
+    "address": "Room J.2.23, Building J, Western Sydney University - Westmead Campus, 158 Hawkesbury Road, Westmead NSW 2145",
+    "branchName": "Western Sydney Centre",
+    "category": "health",
+    "chainId": "CanRevive",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@canrevive.com",
+    "lat": -33.8074024,
+    "lng": 150.9868306,
+    "nameEn": "CanRevive",
+    "nameZh": "更生會",
+    "phone": "(02) 7240 3607",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Westmead",
+    "tagsEn": [
+      "Cancer Support Service"
+    ],
+    "tagsZh": [
+      "癌症支援服務"
+    ],
+    "website": "https://www.canrevive.com/"
+  },
+  {
+    "address": "58 Weldon Street, Burwood NSW 2134",
+    "branchName": "Bernard Chan Nursing Home",
+    "category": "health",
+    "chainId": "ANHF",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@anhf.org.au",
+    "lat": -33.8865042,
+    "lng": 151.1060258,
+    "nameEn": "Bernard Chan Nursing Home",
+    "nameZh": "陳秉達療養院",
+    "phone": "(02) 8741 0288",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Burwood",
+    "tagsEn": [
+      "Nursing Home"
+    ],
+    "tagsZh": [
+      "療養院"
+    ],
+    "website": "https://www.anhf.org.au/zh_hk/"
+  },
+  {
+    "address": "113-115 Homer Street, Earlwood NSW 2206",
+    "branchName": "Chow Cho Poon Nursing Home",
+    "category": "health",
+    "chainId": "ANHF",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@anhf.org.au",
+    "lat": -33.9236418,
+    "lng": 151.1352189,
+    "nameEn": "Chow Cho Poon Nursing Home",
+    "nameZh": "周藻泮療養院",
+    "phone": "(02) 9559 4088",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Earlwood",
+    "tagsEn": [
+      "Nursing Home"
+    ],
+    "tagsZh": [
+      "療養院"
+    ],
+    "website": "https://www.anhf.org.au/zh_hk/"
+  },
+  {
+    "address": "8-14 Romani Avenue, Hurstville NSW 2220",
+    "branchName": "Lucy Chieng Aged Care Centre",
+    "category": "health",
+    "chainId": "ANHF",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@anhf.org.au",
+    "lat": -33.9584588,
+    "lng": 151.1078478,
+    "nameEn": "Lucy Chieng Aged Care Centre",
+    "nameZh": "錢梁秀容療養院",
+    "phone": "(02) 8558 8088",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Hurstville",
+    "tagsEn": [
+      "Nursing Home"
+    ],
+    "tagsZh": [
+      "療養院"
+    ],
+    "website": "https://www.anhf.org.au/zh_hk/"
+  },
+  {
+    "address": "25 Bushlands Avenue, Gordon NSW 2072",
+    "branchName": "Huang Ying Jung Nursing Home",
+    "category": "health",
+    "chainId": "ANHF",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@anhf.org.au",
+    "lat": -33.7590809,
+    "lng": 151.1498478,
+    "nameEn": "Huang Ying Jung Nursing Home",
+    "nameZh": "黃應榮療養院",
+    "phone": "(02) 8376 0700",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Gordon",
+    "tagsEn": [
+      "Nursing Home"
+    ],
+    "tagsZh": [
+      "療養院"
+    ],
+    "website": "https://www.anhf.org.au/zh_hk/"
+  },
+  {
+    "address": "3 Hillmont Avenue, Thornleigh NSW 2120",
+    "branchName": "Thornleigh Nursing Home",
+    "category": "health",
+    "chainId": "ANHF",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@anhf.org.au",
+    "lat": -33.7304401,
+    "lng": 151.0834059,
+    "nameEn": "Thornleigh Nursing Home",
+    "nameZh": null,
+    "phone": "(02) 9875 9900",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Thornleigh",
+    "tagsEn": [
+      "Nursing Home"
+    ],
+    "tagsZh": [
+      "療養院"
+    ],
+    "website": "https://www.anhf.org.au/zh_hk/"
+  },
+  {
+    "address": "413-425 Beamish Street, Campsie NSW 2194",
+    "branchName": "Lucy Chieng Gardens",
+    "category": "realestate_home",
+    "chainId": "ANHF",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@anhf.org.au",
+    "lat": -33.9172057,
+    "lng": 151.1046079,
+    "nameEn": "Lucy Chieng Gardens",
+    "nameZh": "錢梁秀容頤康苑",
+    "phone": "(02) 9784 0888",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Campsie",
+    "tagsEn": [
+      "Seniors Housing"
+    ],
+    "tagsZh": [
+      "長者房屋"
+    ],
+    "website": "https://www.anhf.org.au/zh_hk/"
+  },
+  {
+    "address": "2 Poplar Street, Surry Hills 2010",
+    "branchName": "Poplar Street Community Housing",
+    "category": "realestate_home",
+    "chainId": "ANHF",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@anhf.org.au",
+    "lat": -33.8780367,
+    "lng": 151.2125066,
+    "nameEn": "Poplar Street Community Housing",
+    "nameZh": "白楊街社區房屋",
+    "phone": "(02) 9211 6018",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Surry Hills",
+    "tagsEn": [
+      "Seniors Housing"
+    ],
+    "tagsZh": [
+      "長者房屋"
+    ],
+    "website": "https://www.anhf.org.au/zh_hk/"
+  },
+  {
+    "address": "528-538 Jones Street, Ultimo NSW 2007",
+    "branchName": "Jones Street Community Housing",
+    "category": "realestate_home",
+    "chainId": "ANHF",
+    "cities": [
+      "Sydney"
+    ],
+    "email": "info@anhf.org.au",
+    "lat": -33.8805701,
+    "lng": 151.1982466,
+    "nameEn": "Jones Street Community Housing",
+    "nameZh": "鍾氏街社區房屋",
+    "phone": "(02) 9211 6018",
+    "states": [
+      "NSW"
+    ],
+    "suburb": "Ultimo",
+    "tagsEn": [
+      "Seniors Housing"
+    ],
+    "tagsZh": [
+      "長者房屋"
+    ],
+    "website": "https://www.anhf.org.au/zh_hk/"
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Melbourne"
+    ],
+    "email": null,
+    "nameEn": "The Hong Kong Club VIC Inc",
+    "nameZh": "維省香港會",
+    "phone": null,
+    "states": [
+      "VIC"
+    ],
+    "suburb": "Melbourne",
+    "tagsEn": [],
+    "tagsZh": [],
+    "website": "https://hongkongclub.com.au/"
   }
 ]
