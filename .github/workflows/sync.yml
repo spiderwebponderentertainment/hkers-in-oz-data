@@ -131,7 +131,7 @@ jobs:
           col_hkOwnerZh = get_col('hkownerstatuszh','hk_owner_status_zh')
           col_hkOwnerEn = get_col('hkownerstatusen','hk_owner_status_en')
           col_hkFeatZh  = get_col('hkfeatureszh','hk_features_zh')
-          col_hkFeatEn  = get_col('hkfeaturesen','hk_features_en')
+          col_hkFeatEn = get_col('hkFeaturesEn', 'hkFeaturesEN', 'hkfeatureen', 'hk_features_en')
 
           out = []
           cnt_en_feat_rows = 0
