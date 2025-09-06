@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # ✅ 指向「Business」tab 的 publish CSV（gid=0 + single=true）
+      # ✅ 指向「Business」tab 的 publish CSV（請確認 gid 正確）
       SHEET_URL: "https://docs.google.com/spreadsheets/d/1kHUqAVX7t_HJ4RbKsvbAryeFc3d9XWj_Zw7iU8h4Jfw/export?format=csv&gid=0"
 
     steps:
@@ -47,26 +47,32 @@ jobs:
           wc -l sheet.csv || true
           echo "---- head ----"; head -n 5 sheet.csv || true
 
-      - name: Convert CSV to JSON (with HK fields)
+      - name: Convert CSV to JSON (with HK fields, robust split)
         run: |
           python - <<'PY'
           import pandas as pd, json, re, sys
 
           def norm_str(v):
               if v is None: return None
-              s = str(v).strip()
+              s = str(v).replace('\u00A0',' ').strip()  # NBSP -> space
               return s if s else None
 
+          # 支援 逗號/分號/直線/斜線/中文分隔符/換行/Tab
+          SEP_PATTERN = re.compile(r'[,\|;/、／\n\r\t]+')
           def split_list(v):
               s = norm_str(v)
               if not s: return []
               s = s.replace('；',';').replace('，',',')
-              for sp in ['|',';','/','、','／']:
-                  s = s.replace(sp, ',')
-              return [p.strip() for p in s.split(',') if p.strip()]
+              parts = [p.strip() for p in SEP_PATTERN.split(s)]
+              uniq, seen = [], set()
+              for p in parts:
+                  k = p.lower()
+                  if p and k not in seen:
+                      seen.add(k)
+                      uniq.append(p)
+              return uniq
 
-          def norm_states(v):
-              return [x.upper() for x in split_list(v)]
+          def norm_states(v): return [x.upper() for x in split_list(v)]
 
           def to_float(x):
               try:
@@ -113,25 +119,29 @@ jobs:
           col_lat = get_col('lat')
           col_lng = get_col('lng')
 
-          # sponsor / ad
-          col_isSponsored = get_col('isSponsored')
-          col_sponsorTier = get_col('sponsorTier')
-          col_sponsorStart= get_col('sponsorStart')
-          col_sponsorEnd  = get_col('sponsorEnd')
-          col_adLink      = get_col('adLink')
-          col_adNote      = get_col('adNote')
+          # sponsor / ad（容錯）
+          col_isSponsored = get_col('issponsored','is_sponsored','sponsored','贊助')
+          col_sponsorTier = get_col('sponsortier','sponsor_tier','贊助級別')
+          col_sponsorStart= get_col('sponsorstart','sponsor_start','贊助開始')
+          col_sponsorEnd  = get_col('sponsorend','sponsor_end','贊助結束')
+          col_adLink      = get_col('adlink','ad_link','廣告連結')
+          col_adNote      = get_col('adnote','ad_note','廣告備註')
 
-          # 🔥 新增 HK owner / features
-          col_hkOwnerZh = get_col('hkOwnerStatusZh')
-          col_hkOwnerEn = get_col('hkOwnerStatusEn')
-          col_hkFeatZh  = get_col('hkFeaturesZh')
-          col_hkFeatEn  = get_col('hkFeaturesEn')
+          # 香港元素（容錯名）
+          col_hkOwnerZh = get_col('hkownerstatuszh','hk_owner_status_zh')
+          col_hkOwnerEn = get_col('hkownerstatusen','hk_owner_status_en')
+          col_hkFeatZh  = get_col('hkfeatureszh','hk_features_zh')
+          col_hkFeatEn  = get_col('hkfeaturesen','hk_features_en')
 
           out = []
+          cnt_en_feat_rows = 0
+          samples = []
+
           for i in range(len(df)):
               nameZh = norm_str(col_name_zh.iloc[i])
               nameEn = norm_str(col_name_en.iloc[i])
-              if not (nameZh or nameEn): continue
+              if not (nameZh or nameEn):
+                  continue
 
               item = {
                 'nameZh'   : nameZh,
@@ -174,15 +184,20 @@ jobs:
                   if k == 'adLink': v = norm_url(v)
                   if v is not None: item[k] = v
 
-              # ✅ 新增香港相關
+              # 香港元素（無 fallback；英文列有就寫）
               hkOwnerZh = norm_str(col_hkOwnerZh.iloc[i])
               hkOwnerEn = norm_str(col_hkOwnerEn.iloc[i])
+              featsZh   = split_list(col_hkFeatZh.iloc[i])
+              featsEn   = split_list(col_hkFeatEn.iloc[i])
+
               if hkOwnerZh: item['hkOwnerStatusZh'] = hkOwnerZh
               if hkOwnerEn: item['hkOwnerStatusEn'] = hkOwnerEn
-              featsZh = split_list(col_hkFeatZh.iloc[i])
-              featsEn = split_list(col_hkFeatEn.iloc[i])
-              if featsZh: item['hkFeaturesZh'] = featsZh
-              if featsEn: item['hkFeaturesEn'] = featsEn
+              if featsZh:   item['hkFeaturesZh']    = featsZh
+              if featsEn:
+                  item['hkFeaturesEn'] = featsEn
+                  cnt_en_feat_rows += 1
+                  if len(samples) < 5:
+                      samples.append((nameEn or nameZh or 'N/A', featsEn))
 
               out.append(item)
 
@@ -190,6 +205,11 @@ jobs:
               json.dump(out, f, ensure_ascii=False, indent=2, sort_keys=True)
 
           print('Wrote businesses.json with', len(out), 'items')
+          print('Rows containing hkFeaturesEn:', cnt_en_feat_rows)
+          if samples:
+              print('Samples of hkFeaturesEn:')
+              for s in samples:
+                  print(' -', s[0], '=>', s[1])
           PY
 
       - name: Validate output
@@ -218,4 +238,3 @@ jobs:
           delete-branch: true
           add-paths: |
             businesses.json
-
