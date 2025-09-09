@@ -37,8 +37,12 @@ def fetch(url: str) -> requests.Response:
     r.raise_for_status()
     return r
 
-def is_zh_hant_page(html_text: str) -> bool:
-    # 盡量涵蓋 zh-Hant / zh-hant / zh_Hant 變體
+def looks_zh_hant_by_url(url: str) -> bool:
+    # URL 層面的繁體判別：/zh-hant/ 視為繁體
+    return "/zh-hant/" in url
+
+def is_zh_hant_by_html(html_text: str) -> bool:
+    # HTML 層面的繁體判別（寬鬆）
     patterns = [
         r'<html[^>]+lang=["\']zh-?Hant(?:-[A-Z]{2})?["\']',
         r'property=["\']og:locale["\']\s+content=["\']zh_?Hant',
@@ -48,6 +52,45 @@ def is_zh_hant_page(html_text: str) -> bool:
         if re.search(pat, html_text, re.I):
             return True
     return False
+
+def parse_json_ld(html_text: str):
+    """從 JSON-LD 抽取 NewsArticle 資訊（headline/description/datePublished/url）"""
+    out = {}
+    try:
+        soup = BeautifulSoup(html_text, "html.parser")
+        for tag in soup.find_all("script", type=lambda t: t and "ld+json" in t):
+            txt = tag.string or tag.get_text() or ""
+            try:
+                data = json.loads(txt)
+            except Exception:
+                continue
+            # 可能是 list 或單個 object；統一成 list 迭代
+            candidates = data if isinstance(data, list) else [data]
+            for obj in candidates:
+                # 一些頁面會把內容放在 graph 裏
+                if isinstance(obj, dict) and "@graph" in obj:
+                    for g in obj["@graph"]:
+                        if isinstance(g, dict) and g.get("@type") in ("NewsArticle", "Article"):
+                            out = {
+                                "headline": g.get("headline") or "",
+                                "description": g.get("description") or "",
+                                "datePublished": g.get("datePublished") or g.get("dateCreated") or "",
+                                "url": g.get("url") or "",
+                            }
+                            if out["headline"] or out["description"]:
+                                return out
+                if isinstance(obj, dict) and obj.get("@type") in ("NewsArticle", "Article"):
+                    out = {
+                        "headline": obj.get("headline") or "",
+                        "description": obj.get("description") or "",
+                        "datePublished": obj.get("datePublished") or obj.get("dateCreated") or "",
+                        "url": obj.get("url") or "",
+                    }
+                    if out["headline"] or out["description"]:
+                        return out
+    except Exception:
+        pass
+    return out
 
 def extract_meta_from_html(html_text: str):
     soup = BeautifulSoup(html_text, "html.parser")
@@ -64,18 +107,32 @@ def extract_meta_from_html(html_text: str):
     return clean(title), clean(desc), pub
 
 def make_item(url: str, html_text: str):
-    title, summary, pub = extract_meta_from_html(html_text)
+    # 先試 JSON-LD
+    ld = parse_json_ld(html_text)
+    if ld:
+        title = clean(ld.get("headline", "")) or None
+        desc = clean(ld.get("description", "")) or ""
+        pub = ld.get("datePublished") or None
+        if not title:
+            # 再 fallback 去 og/meta
+            t2, d2, p2 = extract_meta_from_html(html_text)
+            title = t2
+            desc = desc or d2
+            pub = pub or p2
+    else:
+        title, desc, pub = extract_meta_from_html(html_text)
+
     return {
         "id": hashlib.md5(url.encode()).hexdigest(),
         "title": title or url,
         "link": url,
-        "summary": summary,
+        "summary": desc,
         "publishedAt": pub,  # 可能為 ISO8601 或缺失
         "source": "SBS 中文（繁體）",
         "fetchedAt": iso_now(),
     }
 
-# ---------------- A) 由 robots.txt 拎所有 sitemap，再篩中文文章 ----------------
+# ---------------- A) 由 robots.txt 拎所有 sitemap ----------------
 SITEMAP_RE = re.compile(r"(?im)^\s*Sitemap:\s*(https?://\S+)\s*$")
 
 def sitemaps_from_robots() -> list[str]:
@@ -87,7 +144,6 @@ def sitemaps_from_robots() -> list[str]:
     return SITEMAP_RE.findall(txt)
 
 def parse_sitemap_urls(xml_text: str) -> list[str]:
-    # 支援 urlset / sitemapindex；若 namespace 搞唔掂，fallback 正則
     ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     urls = []
     try:
@@ -116,7 +172,6 @@ def collect_from_sitemaps() -> list[str]:
         except Exception as e:
             print(f"[WARN] sitemap fail {sm}: {e}", file=sys.stderr)
             continue
-        # 避免無限膨脹
         if len(out) >= 10 * MAX_ITEMS:
             break
     # 去重
@@ -126,7 +181,7 @@ def collect_from_sitemaps() -> list[str]:
             seen.add(u); uniq.append(u)
     return uniq
 
-# ---------------- B) 入口頁直抓（連 script/json 內的 link 都抽） ----------------
+# ---------------- B) 入口頁直抓（包括 script/JSON 內的 link） ----------------
 ARTICLE_HREF_RE = re.compile(
     r'https?://www\.sbs\.com\.au(?:/language/chinese(?:/zh-hant)?)?/article/[A-Za-z0-9\-/_]+'
 )
@@ -136,15 +191,15 @@ REL_ARTICLE_RE = re.compile(
 
 def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
     links = set()
-    # 1) 普通 <a>
     soup = BeautifulSoup(html_text, "html.parser")
+    # 1) <a>
     for a in soup.find_all("a", href=True):
         href = a["href"]
         if href.startswith("/"):
             href = urljoin(base, href)
         if "/language/chinese/" in href and "/article/" in href:
             links.add(href)
-    # 2) 原始文本 / script / JSON 內的 URL
+    # 2) script/JSON 文字內的 URL
     for m in ARTICLE_HREF_RE.finditer(html_text):
         links.add(m.group(0))
     for m in REL_ARTICLE_RE.finditer(html_text):
@@ -159,7 +214,7 @@ def collect_from_entrypages() -> list[str]:
             html_text = fetch(page).text
             out += links_from_html_anywhere(html_text, base=page)
         except Exception as e:
-            print(f"[WARN] entry scrape fail {page}: {e}", file=sys.stderr)
+            print(f="[WARN] entry scrape fail {page}: {e}", file=sys.stderr)
             continue
     # 去重
     seen = set(); uniq = []
@@ -179,15 +234,12 @@ def extract_sbs_url_from_text(text: str) -> str | None:
     return None
 
 def decode_gn_item_to_article_url(link_text: str, guid_text: str | None, desc_html: str | None) -> str | None:
-    # 1) 直接係 SBS
     if link_text and SBS_HOST in link_text:
         return link_text.strip()
     if guid_text and SBS_HOST in guid_text:
         return guid_text.strip()
-    # 2) description 裏面抽
     u = extract_sbs_url_from_text(desc_html or "")
     if u: return u
-    # 3) 解析 news.google.com 的 redirect 參數
     if link_text and "news.google.com" in link_text:
         try:
             p = urlparse(link_text); qs = parse_qs(p.query)
@@ -268,17 +320,17 @@ if __name__ == "__main__":
         if u not in seen:
             seen.add(u); merged.append(u)
 
-    # 逐篇抓，**只保留繁體頁面**
+    # 逐篇抓，只保留「文字文章」
     articles = []
     for u in merged:
+        if "/podcast-episode/" in u:
+            continue
         try:
             html_text = fetch(u).text
-            if not is_zh_hant_page(html_text):
+            # 放寬：URL 有 /zh-hant/ 視為繁體；否則才用 HTML 檢查
+            if not (looks_zh_hant_by_url(u) or is_zh_hant_by_html(html_text)):
                 continue
             item = make_item(u, html_text)
-            # 避免個別頁面係 podcast（保險檢查一次）
-            if "/podcast-episode/" in item["link"]:
-                continue
             articles.append(item)
             if len(articles) >= MAX_ITEMS:
                 break
@@ -292,13 +344,13 @@ if __name__ == "__main__":
         urls_c = collect_from_google_news()
         print(f"[INFO] google news urls: {len(urls_c)}", file=sys.stderr)
         for u in urls_c:
+            if "/podcast-episode/" in u:
+                continue
             try:
                 html_text = fetch(u).text
-                if not is_zh_hant_page(html_text):
+                if not (looks_zh_hant_by_url(u) or is_zh_hant_by_html(html_text)):
                     continue
                 item = make_item(u, html_text)
-                if "/podcast-episode/" in item["link"]:
-                    continue
                 articles.append(item)
                 if len(articles) >= MAX_ITEMS:
                     break
@@ -310,4 +362,3 @@ if __name__ == "__main__":
     json_out(articles, "sbs_zh_hant.json")
     rss_out(articles,  "sbs_zh_hant.xml")
     print(f"[DONE] output {len(articles)} items", file=sys.stderr)
-
