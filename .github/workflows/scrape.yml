@@ -2,14 +2,14 @@ name: Scrape SBS zh-Hant
 
 on:
   schedule:
-    - cron: "15 * * * *"   # 每小時跑一次
-  workflow_dispatch:
+    - cron: "15 * * * *"   # 每小時第 15 分跑
+  workflow_dispatch: {}     # 允許手動 Run
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write       # 允許 commit 回 repo
     steps:
       - uses: actions/checkout@v4
 
@@ -32,4 +32,6 @@ jobs:
             git add sbs_zh_hant.json sbs_zh_hant.xml
             git commit -m "Update SBS zh-Hant feed"
             git push
+          else
+            echo "No changes."
           fi
