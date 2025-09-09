@@ -3,7 +3,10 @@ from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 from feedgen.feed import FeedGenerator
 
-LIST_URL = "https://www.sbs.com.au/language/chinese/zh-hant/latest"
+CANDIDATE_LIST_URLS = [
+    "https://www.sbs.com.au/language/chinese/zh-hant/topic/news",  # 優先用：新聞專頁
+    "https://www.sbs.com.au/language/chinese/zh-hant",             # 後備：入口頁
+]
 HEADERS = {"User-Agent": "HKersInOZBot/1.0"}
 
 def clean(s): return re.sub(r"\s+", " ", s or "").strip()
