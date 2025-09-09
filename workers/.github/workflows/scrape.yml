@@ -2,7 +2,7 @@ name: Scrape SBS zh-Hant
 
 on:
   schedule:
-    - cron: "15 * * * *"   # 每小時第 15 分鐘跑一次
+    - cron: "15 * * * *"   # 每小時跑一次
   workflow_dispatch:
 
 jobs:
@@ -29,9 +29,7 @@ jobs:
           if [[ -n "$(git status --porcelain)" ]]; then
             git config user.name "news-bot"
             git config user.email "news-bot@users.noreply.github.com"
-            git add public/sbs_zh_hant.json public/sbs_zh_hant.xml
+            git add sbs_zh_hant.json sbs_zh_hant.xml
             git commit -m "Update SBS zh-Hant feed"
             git push
-          else
-            echo "No changes"
           fi
