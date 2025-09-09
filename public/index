@@ -1,4 +1,0 @@
-echo "{}" > public/test.json
-git add public/test.json
-git commit -m "test: add file to public folder"
-git push
