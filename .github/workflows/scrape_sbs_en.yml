@@ -2,26 +2,73 @@ name: Scrape SBS EN
 
 on:
   schedule:
-    - cron: "30 * * * *"
+    - cron: "35 * * * *"    # ⏰ 同其他 workflow 錯開時間
   workflow_dispatch: {}
 
+concurrency:
+  group: scrape-sbs-en      # 🚦 避免重疊執行
+  cancel-in-progress: false
+
 jobs:
-  scrape:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+        with:
+          fetch-depth: 0     # ✅ 需要完整歷史做 rebase
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -r workers/requirements.txt
-      - run: python workers/scrape_sbs_en.py
-      - run: |
+
+      - name: Install dependencies
+        run: pip install -r workers/requirements.txt
+
+      - name: Run scraper
+        run: python workers/scrape_sbs_en.py
+
+      - name: Configure git
+        run: |
+          git config user.name  "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+
+      - name: Pull (rebase) before commit
+        run: |
+          # 先與遠端同步，解決「fetch first」問題
+          git fetch origin main
+          # 若本地冇任何更改，rebase 會快速完成
+          git rebase origin/main || (git rebase --abort && echo "Rebase conflict, aborting." && exit 1)
+
+      - name: Commit changes
+        run: |
+          # 只 add 實際存在嘅輸出檔，避免 pathspec error
+          git add -A
           if [[ -n "$(git status --porcelain)" ]]; then
-            git config user.name "news-bot"
-            git config user.email "news-bot@users.noreply.github.com"
-            git add sbs_en.json sbs_en.xml
             git commit -m "chore: update SBS EN feeds"
-            git push
+          else
+            echo "No changes to commit."
+          fi
+
+      - name: Push with retry
+        run: |
+          if [[ -n "$(git log origin/main..HEAD)" ]]; then
+            n=0
+            until [ $n -ge 3 ]
+            do
+              git push && break
+              echo "Push failed, pulling & rebasing then retry…"
+              git pull --rebase origin main || true
+              n=$((n+1))
+              sleep 3
+            done
+            if [ $n -ge 3 ]; then
+              echo "Push still failing after retries." >&2
+              exit 1
+            fi
+          else
+            echo "Nothing to push."
           fi
