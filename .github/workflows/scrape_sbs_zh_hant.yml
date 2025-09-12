@@ -2,22 +2,30 @@ name: Scrape SBS zh-Hant
 
 on:
   schedule:
-    - cron: "15 * * * *"     # 每小時第 15 分跑
+    - cron: "15 * * * *"
   workflow_dispatch: {}
-
-concurrency:
-  group: scrape-sbs-zh-hant
-  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # ✅ 要完整歷史先做到 rebase
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+
+      # ✅ 先拉最新 main
+      - name: Rebase onto latest main
+        run: |
+          git fetch origin main
+          git rebase origin/main || (git rebase --abort && echo "Rebase conflict, aborting." && exit 1)
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,16 +37,6 @@ jobs:
 
       - name: Run scraper
         run: python workers/scrape_sbs_zh_hant.py
-
-      - name: Configure git
-        run: |
-          git config user.name "news-bot"
-          git config user.email "news-bot@users.noreply.github.com"
-
-      - name: Pull (rebase) before commit
-        run: |
-          git fetch origin main
-          git rebase origin/main || (git rebase --abort && echo "Rebase conflict, aborting." && exit 1)
 
       - name: Commit changes
         run: |
