@@ -2,23 +2,34 @@ name: Scrape ABC EN
 
 on:
   schedule:
-    - cron: "25 * * * *"      # 每小時第 25 分跑（避開其它 job）
+    - cron: "25 * * * *"     # 每小時第 25 分跑（和 SBS 任務錯開）
   workflow_dispatch: {}
 
-# ✅ 跟其他 scraper 用同一個 concurrency group，避免互相撞 push
 concurrency:
-  group: news-scrapers
-  cancel-in-progress: true
+  group: scrape-abc-en
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # ✅ 需要完整歷史先可以 rebase
+          fetch-depth: 0  # ✅ 要完整歷史先做到 rebase
+
+      - name: Configure git
+        run: |
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+
+      # ✅ 先把本地分支 rebase 到最新 main，避免之後 push 被拒
+      - name: Rebase onto latest main
+        run: |
+          git fetch origin main
+          git rebase origin/main || (git rebase --abort && echo "Rebase conflict, aborting." && exit 1)
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,23 +42,31 @@ jobs:
       - name: Run scraper
         run: python workers/scrape_abc_en.py
 
-      - name: Configure git
+      - name: Commit changes
         run: |
-          git config user.name "news-bot"
-          git config user.email "news-bot@users.noreply.github.com"
-
-      # ✅ 先同步遠端，解決 non-fast-forward
-      - name: Pull latest (rebase)
-        run: |
-          git fetch origin main
-          git pull --rebase origin main
-
-      - name: Commit and push (if changed)
-        run: |
-          git add abc_en.json abc_en.xml || true
-          if git diff --cached --quiet; then
-            echo "No changes."
-          else
+          git add -A
+          if [[ -n "$(git status --porcelain)" ]]; then
             git commit -m "chore: update ABC EN feeds"
-            git push origin HEAD:main
+          else
+            echo "No changes."
+          fi
+
+      - name: Push with retry
+        run: |
+          if [[ -n "$(git log origin/main..HEAD)" ]]; then
+            n=0
+            until [ $n -ge 3 ]
+            do
+              git push && break
+              echo "Push failed, retrying…"
+              git pull --rebase origin main || true
+              n=$((n+1))
+              sleep 3
+            done
+            if [ $n -ge 3 ]; then
+              echo "Push still failing after retries." >&2
+              exit 1
+            fi
+          else
+            echo "Nothing to push."
           fi
