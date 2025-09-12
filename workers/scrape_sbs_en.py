@@ -56,3 +56,6 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"[FATAL] feed fetch fail: {e}", file=sys.stderr)
         sys.exit(1)
+
+    json_out(articles, "sbs_en.json")
+    rss_out(articles,  "sbs_en.xml")
