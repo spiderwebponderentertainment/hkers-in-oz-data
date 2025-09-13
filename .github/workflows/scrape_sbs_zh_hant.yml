@@ -38,11 +38,15 @@ jobs:
       - name: Run scraper
         run: python workers/scrape_sbs_zh_hant.py
 
+      # 🆕 新增：補齊 missing dates
+      - name: Fix missing dates
+        run: python workers/fix_dates_sbs_zh_hant.py
+
       - name: Commit changes
         run: |
           git add -A
           if [[ -n "$(git status --porcelain)" ]]; then
-            git commit -m "chore: update SBS zh-Hant feeds"
+            git commit -m "chore: update SBS zh-Hant feeds (with fixed dates)"
           else
             echo "No changes."
           fi
@@ -63,6 +67,10 @@ jobs:
               echo "Push still failing after retries." >&2
               exit 1
             fi
+          else
+            echo "Nothing to push."
+          fi
+
           else
             echo "Nothing to push."
           fi
