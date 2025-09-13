@@ -1,0 +1,42 @@
+name: Scrape SBS zh-Hant (RSS)
+
+on:
+  schedule:
+    - cron: "10 * * * *"    # 每小時第 10 分（與 EN 錯開）
+  workflow_dispatch: {}
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r workers/requirements.txt
+
+      - name: Run scraper (ZH-Hant)
+        run: python workers/scrape_sbs_zh_hant_rss.py
+
+      - name: Commit & push with rebase
+        run: |
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+
+          # 同步遠端
+          git fetch origin main
+          git pull --rebase origin main || true
+
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add sbs_zh_hant.json
+            git commit -m "chore: update SBS zh-Hant (RSS)"
+            git push origin HEAD:main
+          else
+            echo "No changes."
+          fi
