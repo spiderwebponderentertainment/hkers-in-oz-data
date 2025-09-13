@@ -278,6 +278,8 @@ def sanitize_sbs_url(u: str, base: str) -> str | None:
         u0 = u0[:pos]
     # 去掉尾部常見標點
     u0 = u0.rstrip('"\')]>.,')
+    # 去掉尾部編碼空白（%20、%09、%0A、%0D）
+    u0 = re.sub(r'(?:%20|%09|%0A|%0D)+$', '', u0, flags=re.IGNORECASE)
     # 基本合法性
     p = urlparse(u0)
     if not (p.scheme in ("http", "https") and p.netloc):
@@ -408,7 +410,7 @@ def collect_from_google_news() -> list[str]:
     try:
         xml = fetch(GN_URL).text
     except Exception as e:
-        print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
+        print(f"[WARN] google news rss fetch fail: {e}", file=sys.stderr)
         return []
     urls = []
     try:
@@ -492,7 +494,7 @@ if __name__ == "__main__":
                 break
             time.sleep(FETCH_SLEEP)
         except Exception as e:
-            print(f("[WARN] fetch article fail {u}: {e}"), file=sys.stderr)
+            print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
 
     # D) 如果仍然未夠 → Google News 補位（同樣抓多啲）
     if len(articles) < MAX_ITEMS // 2:
@@ -534,3 +536,4 @@ if __name__ == "__main__":
     json_out(latest, "sbs_zh_hant.json")
     rss_out(latest,  "sbs_zh_hant.xml")
     print(f"[DONE] output {len(latest)} items", file=sys.stderr)
+
