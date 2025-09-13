@@ -16,8 +16,10 @@ MAX_ITEMS = 250
 FEED_CANDIDATES = [
     "https://www.2cr.com.au/feed/",
     "https://www.2cr.com.au/category/news/feed/",
-    "https://2cr.com.au/feed/"
+    "https://2cr.com.au/feed/",
     "https://www.2cr.com.au/category/%E8%B3%87%E8%A8%8A/%E6%9C%80%E6%96%B0%E6%B6%88%E6%81%AF/feed/",
+    "https://www.2cr.com.au/category/%E8%B3%87%E8%A8%8A/%E7%A4%BE%E5%9C%98%E6%B6%88%E6%81%AF/feed/",
+    "https://www.2cr.com.au/category/%E8%B3%87%E8%A8%8A/%E7%B6%9C%E5%90%88%E6%96%B0%E8%81%9E/feed/",
 ]
 
 # WordPress 通常支援 ?paged=2、3…；有啲唔支援就會回 404 或返同一頁
