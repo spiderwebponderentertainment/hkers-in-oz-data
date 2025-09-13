@@ -11,9 +11,9 @@ from xml.etree import ElementTree as ET
 # ---------------- 基本設定 ----------------
 HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
 TIMEOUT = 25
-MAX_ITEMS = 300            # 👈 要 300
+MAX_ITEMS = 300            # 要 300
 FETCH_SLEEP = 0.5          # 抓單篇之間小睡，對站方友善
-PAGES_EACH = 5             # 👈 每個入口試 5 頁
+PAGES_EACH = 5             # 每個入口試 5 頁
 
 SBS_HOST = "www.sbs.com.au"
 ROBOTS_URL = "https://www.sbs.com.au/robots.txt"
@@ -92,10 +92,46 @@ def fetch(url: str) -> requests.Response:
     r.raise_for_status()
     return r
 
+# ---------------- Category 判斷（URL 優先） ----------------
+def _slug_title(slug: str) -> str:
+    m = {
+        "just-in": "Just In",
+        "top-stories": "Top Stories",
+        "cost-of-living": "Cost of Living",
+        "australia": "Australia",
+        "hamas-israel-war": "Hamas-Israel War",
+        "world": "World",
+        "politics": "Politics",
+        "immigration": "Immigration",
+        "indigenous": "Indigenous",
+        "environment": "Environment",
+        "life": "Life",
+    }
+    if slug in m: return m[slug]
+    # fallback: Title Case by hyphen
+    return " ".join(w.capitalize() for w in slug.split("-") if w)
+
+def category_from_url(u: str) -> str | None:
+    try:
+        p = urlparse(u)
+        parts = [x for x in (p.path or "").strip("/").split("/") if x]
+        # /news/topic/<slug>/...
+        if len(parts) >= 3 and parts[0] == "news" and parts[1] == "topic":
+            return _slug_title(parts[2])
+        # /news/collection/<slug>/...
+        if len(parts) >= 3 and parts[0] == "news" and parts[1] == "collection":
+            return _slug_title(parts[2])
+    except Exception:
+        pass
+    return None
+
+# ---------------- JSON-LD / meta 解析 ----------------
 def parse_json_ld(html_text: str):
     """
-    由 JSON-LD 取標題/描述/日期/url（支援 NewsArticle/Article/PodcastEpisode/AudioObject）
-    日期欄位優先：datePublished > uploadDate > dateCreated > dateModified
+    由 JSON-LD 取標題/描述/日期/url/分類。
+    支援: NewsArticle / Article / BlogPosting / PodcastEpisode / AudioObject。
+    日期欄位優先：
+      datePublished > uploadDate > dateCreated > dateModified
     """
     try:
         soup = BeautifulSoup(html_text, "html.parser")
@@ -121,11 +157,16 @@ def parse_json_ld(html_text: str):
                     or obj.get("dateModified")
                     or ""
                 )
+                # 分類（可能在 articleSection）
+                section = obj.get("articleSection")
+                if isinstance(section, list):
+                    section = next((x for x in section if isinstance(x, str)), None)
                 return {
                     "headline": obj.get("headline") or obj.get("name") or "",
                     "description": obj.get("description") or "",
                     "datePublished": date,
                     "url": obj.get("url") or "",
+                    "articleSection": section or "",
                 }
 
             # 掃描物件 / 陣列 / @graph
@@ -161,7 +202,6 @@ def extract_meta_from_html(html_text: str):
     desc = (soup.find("meta", property="og:description") or {}).get("content") \
         or (soup.find("meta", attrs={"name": "description"}) or {}).get("content") \
         or ""
-    # 日期多路徑（含 podcast）
     pub = (
         (soup.find("meta", property="article:published_time") or {}).get("content")
         or (soup.find("meta", property="og:article:published_time") or {}).get("content")
@@ -176,20 +216,32 @@ def extract_meta_from_html(html_text: str):
         t = soup.find("time", attrs={"datetime": True})
         if t and t.get("datetime"):
             pub = t["datetime"]
-    return clean(title), clean(desc), pub
+    # Section 後備
+    section = (
+        (soup.find("meta", property="article:section") or {}).get("content")
+        or (soup.find("meta", attrs={"name": "section"}) or {}).get("content")
+        or ""
+    )
+    return clean(title), clean(desc), pub, (section or None)
 
-def make_item(url: str, html_text: str):
+def make_item(url: str, html_text: str, hint_section: str | None = None):
+    # 1) URL 優先
+    section = category_from_url(url) or hint_section
+
+    # 2) 內容頁解析（日期 + 可能的分類後備）
     ld = parse_json_ld(html_text)
     if ld:
         title = clean(ld.get("headline", "")) or None
         desc = clean(ld.get("description", "")) or ""
         pub = normalize_date(ld.get("datePublished") or None)
+        section = section or (ld.get("articleSection") or None)
         if not title:
-            t2, d2, p2 = extract_meta_from_html(html_text)
-            title = t2; desc = desc or d2; pub = pub or normalize_date(p2)
+            t2, d2, p2, s2 = extract_meta_from_html(html_text)
+            title = t2; desc = desc or d2; pub = pub or normalize_date(p2); section = section or s2
     else:
-        t2, d2, p2 = extract_meta_from_html(html_text)
-        title = t2; desc = d2; pub = normalize_date(p2)
+        t2, d2, p2, s2 = extract_meta_from_html(html_text)
+        title = t2; desc = d2; pub = normalize_date(p2); section = section or s2
+
     return {
         "id": hashlib.md5(url.encode()).hexdigest(),
         "title": title or url,
@@ -198,6 +250,7 @@ def make_item(url: str, html_text: str):
         "publishedAt": pub,
         "source": "SBS English",
         "fetchedAt": iso_now(),
+        "sourceCategory": section,   # 👈 輸出分類
     }
 
 # ---------------- A) robots.txt ➜ 所有 sitemap ----------------
@@ -292,24 +345,36 @@ def pagination_candidates(base_url: str, pages_each: int) -> list[str]:
             seen.add(u); uniq.append(u)
     return uniq
 
-def collect_from_entrypages() -> list[str]:
-    """對每個入口 + 分頁候選頁抓連結"""
-    out = []
+def category_from_entry_base(base: str) -> str | None:
+    """由入口 base URL 推斷該入口對應的 Category（hint）"""
+    try:
+        p = urlparse(base)
+        parts = [x for x in (p.path or "").strip("/").split("/") if x]
+        if len(parts) >= 3 and parts[0] == "news" and parts[1] in ("topic", "collection"):
+            return _slug_title(parts[2])
+    except Exception:
+        pass
+    return None
+
+def collect_from_entrypages() -> dict[str, str | None]:
+    """
+    對每個入口 + 分頁候選頁抓連結，並帶上入口推斷的 category hint。
+    回傳：{ article_url: category_hint_or_None }
+    """
+    out: dict[str, str | None] = {}
     for base in ENTRY_BASES:
+        hint = category_from_entry_base(base)
         for page in pagination_candidates(base, PAGES_EACH):
             try:
                 html_text = fetch(page).text
-                out += links_from_html_anywhere(html_text, base=page)
+                for u in links_from_html_anywhere(html_text, base=page):
+                    if u not in out:
+                        out[u] = hint
             except Exception as e:
                 print(f"[WARN] entry scrape fail {page}: {e}", file=sys.stderr)
                 continue
             time.sleep(0.2)
-    # 去重
-    seen = set(); uniq = []
-    for u in out:
-        if u not in seen:
-            seen.add(u); uniq.append(u)
-    return uniq
+    return out
 
 # ---------------- C) 英文新聞區淺層 BFS 爬（擴大覆蓋） ----------------
 def should_visit(url: str) -> bool:
@@ -446,11 +511,12 @@ if __name__ == "__main__":
     urls_a = collect_from_sitemaps()
     print(f"[INFO] sitemap urls: {len(urls_a)}", file=sys.stderr)
 
-    # B) 入口頁直抓（含 script/JSON 內 link），含每入口試分頁
+    # B) 入口頁直抓（含分頁 & category hint）
     seed_pages = []
     for base in ENTRY_BASES:
         seed_pages += pagination_candidates(base, PAGES_EACH)
-    urls_b = collect_from_entrypages()
+    url_to_hint = collect_from_entrypages()
+    urls_b = list(url_to_hint.keys())
     print(f"[INFO] entry page urls: {len(urls_b)}", file=sys.stderr)
 
     # C) /news/ 淺層 BFS（擴大覆蓋）
@@ -460,18 +526,20 @@ if __name__ == "__main__":
     )
     print(f"[INFO] crawl urls: {len(urls_crawl)}", file=sys.stderr)
 
-    # 合併去重
+    # 合併去重（保留從入口頁得到的 category hint）
+    hint_map = dict(url_to_hint)  # article_url -> category_hint
     seen, merged = set(), []
     for u in urls_a + urls_b + urls_crawl:
         if u not in seen:
             seen.add(u); merged.append(u)
 
-    # 逐篇抓內容（含 Podcast 日期）
+    # 逐篇抓內容（含 Podcast 日期），並套用 URL 優先的 Category
     articles = []
     for u in merged:
         try:
             html_text = fetch(u).text
-            item = make_item(u, html_text)
+            hint = hint_map.get(u)  # 入口頁帶來的分類提示
+            item = make_item(u, html_text, hint_section=hint)
             articles.append(item)
             time.sleep(FETCH_SLEEP)
         except Exception as e:
