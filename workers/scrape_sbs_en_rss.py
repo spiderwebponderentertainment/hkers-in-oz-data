@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
 TIMEOUT = 20
-MAX_ITEMS = 60
+MAX_ITEMS = 120
 FEED_URL = "https://www.sbs.com.au/news/feed"
 SOURCE_NAME = "SBS English"
 
