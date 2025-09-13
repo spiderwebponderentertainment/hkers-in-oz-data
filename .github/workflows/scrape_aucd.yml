@@ -1,0 +1,69 @@
+name: Scrape AUCD
+
+on:
+  schedule:
+    - cron: "25 * * * *"   # 每小時第 25 分
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+
+      - name: Rebase onto latest main
+        run: |
+          git fetch origin main
+          git rebase origin/main || (git rebase --abort && echo "Rebase conflict, aborting." && exit 1)
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r workers/requirements.txt
+
+      - name: Run AUCD scraper
+        run: |
+          python workers/scrape_aucd_rss.py
+
+      - name: Commit changes
+        run: |
+          git add -A
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git commit -m "chore: update AUCD feed"
+          else
+            echo "No changes."
+          fi
+
+      - name: Push with retry
+        run: |
+          if [[ -n "$(git log origin/main..HEAD)" ]]; then
+            n=0
+            until [ $n -ge 3 ]
+            do
+              git push && break
+              echo "Push failed, retrying…"
+              git pull --rebase origin main || true
+              n=$((n+1))
+              sleep 3
+            done
+            if [ $n -ge 3 ]; then
+              echo "Push still failing after retries." >&2
+              exit 1
+            fi
+          else
+            echo "Nothing to push."
+          fi
