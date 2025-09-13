@@ -11,15 +11,27 @@ from xml.etree import ElementTree as ET
 # ---------------- 基本設定 ----------------
 HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
 TIMEOUT = 25
-MAX_ITEMS = 120            # 想多啲就加大
+MAX_ITEMS = 200            # 想多啲就加大
 FETCH_SLEEP = 0.5         # 抓單篇之間小睡，對站方友善
+PAGES_EACH = 5            # 👈 每個入口試 5 頁
 
 SBS_HOST = "www.sbs.com.au"
 ROBOTS_URL = "https://www.sbs.com.au/robots.txt"
-ENTRY_PAGES = [
+
+# 入口頁（繁中）
+ENTRY_BASES = [
     "https://www.sbs.com.au/language/chinese/zh-hant/",
     "https://www.sbs.com.au/language/chinese/",
+
+    # 你新增嘅入口
+    "https://www.sbs.com.au/language/chinese/zh-hant/topic/news",
+    "https://www.sbs.com.au/language/chinese/zh-hant/australian-chinese",
+    "https://www.sbs.com.au/language/chinese/zh-hant/collection/sbs50",
+    "https://www.sbs.com.au/language/chinese/zh-hant/topic/life-in-australia",
+    "https://www.sbs.com.au/language/chinese/zh-hant/collection/first-nations-stories-in-traditional-chinese",
+    "https://www.sbs.com.au/language/chinese/zh-hant/collection/cantonese-community-notices",
 ]
+
 SECTION_ALLOWED_PREFIXES = (
     "https://www.sbs.com.au/language/chinese/",
 )
@@ -87,9 +99,45 @@ def is_zh_hant_by_html(html_text: str) -> bool:
     ]
     return any(re.search(p, html_text, re.I) for p in patterns)
 
+# ---------------- 分類（以 URL 為先） ----------------
+def _slug_title_zh(slug: str) -> str:
+    """將已知 slug 轉成中文分類名；未知則回傳 slug 本身（保證有值）"""
+    m = {
+        "news": "新聞",
+        "australian-chinese": "澳洲華人",
+        "sbs50": "SBS50",
+        "life-in-australia": "在澳生活",
+        "first-nations-stories-in-traditional-chinese": "第一民族故事",
+        "cantonese-community-notices": "粵語社區通告",
+    }
+    return m.get(slug, slug)
+
+def category_from_url(u: str) -> str | None:
+    """
+    /language/chinese/zh-hant/topic/<slug>/...
+    /language/chinese/zh-hant/collection/<slug>/...
+    /language/chinese/zh-hant/australian-chinese
+    """
+    try:
+        p = urlparse(u)
+        parts = [x for x in (p.path or "").strip("/").split("/") if x]
+        # .../zh-hant/topic/<slug>/...
+        if len(parts) >= 5 and parts[0] == "language" and parts[1] == "chinese" and parts[2] == "zh-hant" and parts[3] == "topic":
+            return _slug_title_zh(parts[4])
+        # .../zh-hant/collection/<slug>/...
+        if len(parts) >= 5 and parts[0] == "language" and parts[1] == "chinese" and parts[2] == "zh-hant" and parts[3] == "collection":
+            return _slug_title_zh(parts[4])
+        # 特例：/zh-hant/australian-chinese
+        if len(parts) >= 4 and parts[0] == "language" and parts[1] == "chinese" and parts[2] == "zh-hant" and parts[3] == "australian-chinese":
+            return _slug_title_zh("australian-chinese")
+    except Exception:
+        pass
+    return None
+
+# ---------------- JSON-LD / meta 解析 ----------------
 def parse_json_ld(html_text: str):
     """
-    由 JSON-LD 取標題/描述/日期/url。
+    由 JSON-LD 取標題/描述/日期/url/分類。
     支援: NewsArticle / Article / BlogPosting / PodcastEpisode / AudioObject。
     日期欄位優先順序：
       datePublished > uploadDate > dateCreated > dateModified
@@ -118,11 +166,15 @@ def parse_json_ld(html_text: str):
                     or obj.get("dateModified")
                     or ""
                 )
+                section = obj.get("articleSection")
+                if isinstance(section, list):
+                    section = next((x for x in section if isinstance(x, str)), None)
                 return {
                     "headline": obj.get("headline") or obj.get("name") or "",
                     "description": obj.get("description") or "",
                     "datePublished": date,
                     "url": obj.get("url") or "",
+                    "articleSection": section or "",
                 }
 
             # 掃描物件 / 陣列 / @graph
@@ -160,7 +212,7 @@ def extract_meta_from_html(html_text: str):
     desc = (soup.find("meta", property="og:description") or {}).get("content") \
         or (soup.find("meta", attrs={"name": "description"}) or {}).get("content") \
         or ""
-    # 日期：盡量多路徑
+    # 日期：盡量多路徑（含 podcast）
     pub = (
         (soup.find("meta", property="article:published_time") or {}).get("content")
         or (soup.find("meta", property="og:article:published_time") or {}).get("content")
@@ -168,6 +220,7 @@ def extract_meta_from_html(html_text: str):
         or (soup.find("meta", property="article:modified_time") or {}).get("content")   # 後備
         or (soup.find("meta", property="og:updated_time") or {}).get("content")        # 後備
         or (soup.find("meta", attrs={"itemprop": "datePublished"}) or {}).get("content")
+        or (soup.find("meta", attrs={"itemprop": "uploadDate"}) or {}).get("content")
         or (soup.find("meta", attrs={"name": "date"}) or {}).get("content")            # 最舊式
         or None
     )
@@ -176,22 +229,38 @@ def extract_meta_from_html(html_text: str):
         t = soup.find("time", attrs={"datetime": True})
         if t and t.get("datetime"):
             pub = t["datetime"]
-    return clean(title), clean(desc), pub
+    # 分類後備
+    section = (
+        (soup.find("meta", property="article:section") or {}).get("content")
+        or (soup.find("meta", attrs={"name": "section"}) or {}).get("content")
+        or ""
+    )
+    return clean(title), clean(desc), pub, (section or None)
 
-def make_item(url: str, html_text: str):
+def make_item(url: str, html_text: str, hint_section: str | None = None):
+    # 1) URL 優先
+    section = category_from_url(url) or hint_section
+
+    # 2) 內容頁解析（日期 + 可能的分類後備）
     ld = parse_json_ld(html_text)
     if ld:
         title = clean(ld.get("headline", "")) or None
         desc = clean(ld.get("description", "")) or ""
         pub = normalize_date(ld.get("datePublished") or None)
+        section = section or (ld.get("articleSection") or None)
         if not title:
-            t2, d2, p2 = extract_meta_from_html(html_text)
+            t2, d2, p2, s2 = extract_meta_from_html(html_text)
             title = t2
             desc = desc or d2
             pub = pub or normalize_date(p2)
+            section = section or s2
     else:
-        title, desc, pub_raw = extract_meta_from_html(html_text)
-        pub = normalize_date(pub_raw)
+        t2, d2, p2, s2 = extract_meta_from_html(html_text)
+        title = t2
+        desc = d2
+        pub = normalize_date(p2)
+        section = section or s2
+
     return {
         "id": hashlib.md5(url.encode()).hexdigest(),
         "title": title or url,
@@ -200,6 +269,7 @@ def make_item(url: str, html_text: str):
         "publishedAt": pub,
         "source": "SBS 中文（繁體）",
         "fetchedAt": iso_now(),
+        "sourceCategory": section,  # 👈 新增分類
     }
 
 # ---------------- A) robots.txt ➜ 所有 sitemap ----------------
@@ -259,7 +329,7 @@ REL_ARTICLE_RE = re.compile(
     r'/(?:language/chinese(?:/zh-hant)?)/(?:article|podcast-episode)/[A-Za-z0-9\-/_]+'
 )
 
-# --- 規範化/清洗 SBS 連結（處理“兩條URL連住”/ 空白 / 尾標點 等）---
+# --- 規範化/清洗 SBS 連結 ---
 def sanitize_sbs_url(u: str, base: str) -> str | None:
     if not u:
         return None
@@ -271,14 +341,13 @@ def sanitize_sbs_url(u: str, base: str) -> str | None:
     if u.startswith("/"):
         u = urljoin(base, u)
     # 取第一段（防止 'url1 %20http://url2' / 'url1 http://url2'）
-    # 先用空白切，再從第一段截至第二個 'http' 出現之前
     u0 = u.split()[0]
     pos = u0.find("http", 1)
     if pos > 0:
         u0 = u0[:pos]
-    # 去掉尾部常見標點
+    # 去尾部標點
     u0 = u0.rstrip('"\')]>.,')
-    # 去掉尾部編碼空白（%20、%09、%0A、%0D）
+    # 去尾部編碼空白（%20、%09、%0A、%0D）
     u0 = re.sub(r'(?:%20|%09|%0A|%0D)+$', '', u0, flags=re.IGNORECASE)
     # 基本合法性
     p = urlparse(u0)
@@ -312,20 +381,52 @@ def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
             seen.add(u); links.append(u)
     return links
 
-def collect_from_entrypages() -> list[str]:
-    out = []
-    for page in ENTRY_PAGES:
-        try:
-            html_text = fetch(page).text
-            out += links_from_html_anywhere(html_text, base=page)
-        except Exception as e:
-            print(f"[WARN] entry scrape fail {page}: {e}", file=sys.stderr)
-            continue
+def pagination_candidates(base_url: str, pages_each: int) -> list[str]:
+    """常見分頁 URL：?page=N、?pg=N、/page/N/；第 1 頁係 base 本身"""
+    out = [base_url]
+    b = base_url.rstrip("/")
+    for n in range(2, pages_each + 1):
+        out.append(f"{b}?page={n}")
+        out.append(f"{b}?pg={n}")
+        out.append(f"{b}/page/{n}/")
+    # 去重保持順序
     seen = set(); uniq = []
     for u in out:
         if u not in seen:
             seen.add(u); uniq.append(u)
     return uniq
+
+def category_from_entry_base(base: str) -> str | None:
+    """由入口 base URL 推斷分類（hint）"""
+    try:
+        p = urlparse(base)
+        parts = [x for x in (p.path or "").strip("/").split("/") if x]
+        if len(parts) >= 5 and parts[0]=="language" and parts[1]=="chinese" and parts[2]=="zh-hant" and parts[3] in ("topic","collection"):
+            return _slug_title_zh(parts[4])
+        if len(parts) >= 4 and parts[0]=="language" and parts[1]=="chinese" and parts[2]=="zh-hant" and parts[3]=="australian-chinese":
+            return _slug_title_zh("australian-chinese")
+    except Exception:
+        pass
+    return None
+
+def collect_from_entrypages() -> dict[str, str | None]:
+    """
+    對每個入口 + 分頁候選頁抓連結，回傳 { article_url: category_hint_or_None }
+    """
+    out: dict[str, str | None] = {}
+    for base in ENTRY_BASES:
+        hint = category_from_entry_base(base)
+        for page in pagination_candidates(base, PAGES_EACH):
+            try:
+                html_text = fetch(page).text
+                for u in links_from_html_anywhere(html_text, base=page):
+                    if u not in out:
+                        out[u] = hint
+            except Exception as e:
+                print(f"[WARN] entry scrape fail {page}: {e}", file=sys.stderr)
+                continue
+            time.sleep(0.2)
+    return out
 
 # ---------------- C) 中文區淺層 BFS 爬（擴大覆蓋） ----------------
 def should_visit(url: str) -> bool:
@@ -454,7 +555,6 @@ def rss_out(items, path):
         fe = fg.add_entry()
         fe.id(it["id"]); fe.title(it["title"]); fe.link(href=it["link"])
         fe.description(it["summary"] or it["title"])
-        # feedgen 可接受 pubDate，但呢度我哋保持簡單：輸出 JSON 為主
     fg.rss_file(path)
 
 # ---------------- 主程式 ----------------
@@ -463,18 +563,23 @@ if __name__ == "__main__":
     urls_a = collect_from_sitemaps()
     print(f"[INFO] sitemap urls: {len(urls_a)}", file=sys.stderr)
 
-    # B) 入口頁直抓（含 script/JSON 內 link）
-    urls_b = collect_from_entrypages()
+    # B) 入口頁直抓（含分頁 & category hint）
+    seed_pages = []
+    for base in ENTRY_BASES:
+        seed_pages += pagination_candidates(base, PAGES_EACH)
+    url_to_hint = collect_from_entrypages()
+    urls_b = list(url_to_hint.keys())
     print(f"[INFO] entry page urls: {len(urls_b)}", file=sys.stderr)
 
     # C) 中文區淺層 BFS（擴大覆蓋）
     urls_crawl = crawl_chinese_section(
-        seeds=ENTRY_PAGES,   # 兩個入口
-        max_pages=80         # 想再多就加到 120；會慢啲
+        seeds=seed_pages,   # 入口 + 分頁
+        max_pages=80
     )
     print(f"[INFO] crawl urls: {len(urls_crawl)}", file=sys.stderr)
 
-    # 合併去重（保持先 sitemap → entry → crawl 的順序）
+    # 合併去重（保留入口分類 hint）
+    hint_map = dict(url_to_hint)  # article_url -> category_hint
     seen, merged = set(), []
     for u in (urls_a + urls_b + urls_crawl):
         if u not in seen:
@@ -488,7 +593,8 @@ if __name__ == "__main__":
             html_text = fetch(u).text
             if not (looks_zh_hant_by_url(u) or is_zh_hant_by_html(html_text)):
                 continue
-            item = make_item(u, html_text)
+            hint = hint_map.get(u)
+            item = make_item(u, html_text, hint_section=hint)
             articles.append(item)
             if len(articles) >= HARD_CAP:
                 break
@@ -523,8 +629,7 @@ if __name__ == "__main__":
         if not s:
             return datetime.min.replace(tzinfo=timezone.utc)
         try:
-            # 支援有/無 Z、以及毫秒
-            ss = s.replace("Z", "+00:00")
+            ss = s.replace("Z", "+00:00")  # 支援有/無 Z
             return datetime.fromisoformat(ss)
         except Exception:
             return datetime.min.replace(tzinfo=timezone.utc)
@@ -536,4 +641,3 @@ if __name__ == "__main__":
     json_out(latest, "sbs_zh_hant.json")
     rss_out(latest,  "sbs_zh_hant.xml")
     print(f"[DONE] output {len(latest)} items", file=sys.stderr)
-
