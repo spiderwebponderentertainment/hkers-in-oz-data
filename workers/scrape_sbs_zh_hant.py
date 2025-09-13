@@ -259,26 +259,54 @@ REL_ARTICLE_RE = re.compile(
     r'/(?:language/chinese(?:/zh-hant)?)/(?:article|podcast-episode)/[A-Za-z0-9\-/_]+'
 )
 
+# --- 規範化/清洗 SBS 連結（處理“兩條URL連住”/ 空白 / 尾標點 等）---
+def sanitize_sbs_url(u: str, base: str) -> str | None:
+    if not u:
+        return None
+    u = html.unescape(u).strip()
+    # //xxx → https://xxx
+    if u.startswith("//"):
+        u = "https:" + u
+    # 相對路徑 → 絕對
+    if u.startswith("/"):
+        u = urljoin(base, u)
+    # 取第一段（防止 'url1 %20http://url2' / 'url1 http://url2'）
+    # 先用空白切，再從第一段截至第二個 'http' 出現之前
+    u0 = u.split()[0]
+    pos = u0.find("http", 1)
+    if pos > 0:
+        u0 = u0[:pos]
+    # 去掉尾部常見標點
+    u0 = u0.rstrip('"\')]>.,')
+    # 基本合法性
+    p = urlparse(u0)
+    if not (p.scheme in ("http", "https") and p.netloc):
+        return None
+    if SBS_HOST not in p.netloc:
+        return None
+    # 只收中文區文章/Podcast
+    if "/language/chinese/" not in u0 or ("/article/" not in u0 and "/podcast-episode/" not in u0):
+        return None
+    return u0
+
 def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
     links: list[str] = []
     seen: set[str] = set()
     soup = BeautifulSoup(html_text, "html.parser")
     # 1) <a>
     for a in soup.find_all("a", href=True):
-        href = a["href"]
-        if href.startswith("/"):
-            href = urljoin(base, href)
-        if "/language/chinese/" in href and ("/article/" in href or "/podcast-episode/" in href):
-            if href not in seen:
-               seen.add(href); links.append(href)
+         href_raw = a["href"]
+        href = sanitize_sbs_url(href_raw, base)
+        if href and href not in seen:
+            seen.add(href); links.append(href)
     # 2) script/JSON 文字內的 URL
     for m in ARTICLE_HREF_RE.finditer(html_text):
-        u = m.group(0)
-        if u not in seen:
+        u = sanitize_sbs_url(m.group(0), base)
+        if u and u not in seen:
             seen.add(u); links.append(u)
     for m in REL_ARTICLE_RE.finditer(html_text):
-        u = urljoin(base, m.group(0))
-        if u not in seen:
+        u = sanitize_sbs_url(urljoin(base, m.group(0)), base)
+        if u and u not in seen:
             seen.add(u); links.append(u)
     return links
 
@@ -380,7 +408,7 @@ def collect_from_google_news() -> list[str]:
     try:
         xml = fetch(GN_URL).text
     except Exception as e:
-        print(f"[WARN] google news fetch fail: {e}", file=sys.stderr)
+            print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
         return []
     urls = []
     try:
@@ -395,7 +423,7 @@ def collect_from_google_news() -> list[str]:
             if "/language/chinese/" in real and ("/article/" in real or "/podcast-episode/" in real):
                 urls.append(real)
     except Exception as e:
-        print(f"[WARN] parse google news rss fail: {e}", file=sys.stderr)
+        print(f"[WARN] GN article fetch fail {u}: {e}", file=sys.stderr)
         return []
     seen = set(); uniq = []
     for u in urls:
