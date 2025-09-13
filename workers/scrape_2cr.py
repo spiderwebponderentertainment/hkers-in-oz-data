@@ -16,11 +16,12 @@ MAX_ITEMS = 250
 FEED_CANDIDATES = [
     "https://www.2cr.com.au/feed/",
     "https://www.2cr.com.au/category/news/feed/",
-    "https://2cr.com.au/feed/",
+    "https://2cr.com.au/feed/
+    https://www.2cr.com.au/category/%E8%B3%87%E8%A8%8A/%E6%9C%80%E6%96%B0%E6%B6%88%E6%81%AF/feed/",
 ]
 
 # WordPress 通常支援 ?paged=2、3…；有啲唔支援就會回 404 或返同一頁
-MAX_PAGES = 8
+MAX_PAGES = 12
 
 OUT_PATH = "twocr.json"
 SOURCE_NAME = "2CR 澳華之聲"
