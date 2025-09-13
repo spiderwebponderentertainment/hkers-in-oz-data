@@ -12,7 +12,8 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -21,9 +22,11 @@ jobs:
           git config user.name "news-bot"
           git config user.email "news-bot@users.noreply.github.com"
 
-      # ✅ 先拉最新 main
+      # Keep local main up to date before we run anything
       - name: Rebase onto latest main
+        shell: bash
         run: |
+          set -e
           git fetch origin main
           git rebase origin/main || (git rebase --abort && echo "Rebase conflict, aborting." && exit 1)
 
@@ -38,39 +41,46 @@ jobs:
       - name: Run scraper
         run: python workers/scrape_sbs_zh_hant.py
 
-      # 🆕 新增：補齊 missing dates
-      - name: Fix missing dates
-        run: python workers/fix_dates_sbs_zh_hant.py
-
       - name: Commit changes
+        shell: bash
         run: |
+          set -e
           git add -A
           if [[ -n "$(git status --porcelain)" ]]; then
-            git commit -m "chore: update SBS zh-Hant feeds (with fixed dates)"
+            git commit -m "chore: update SBS zh-Hant feeds"
           else
-            echo "No changes."
+            echo "No changes to commit."
           fi
 
       - name: Push with retry
+        shell: bash
         run: |
-          if [[ -n "$(git log origin/main..HEAD)" ]]; then
-            n=0
-            until [ $n -ge 3 ]
-            do
-              git push && break
-              echo "Push failed, retrying…"
-              git pull --rebase origin main || true
-              n=$((n+1))
-              sleep 3
-            done
-            if [ $n -ge 3 ]; then
-              echo "Push still failing after retries." >&2
-              exit 1
-            fi
-          else
+          set -e
+          # If there are no commits ahead of origin/main, skip pushing
+          AHEAD=$(git rev-list --count origin/main..HEAD || echo 0)
+          if [[ "$AHEAD" -eq 0 ]]; then
             echo "Nothing to push."
+            exit 0
           fi
 
-          else
-            echo "Nothing to push."
-          fi
+          n=0
+          until [[ $n -ge 3 ]]; do
+            if git push; then
+              echo "Pushed successfully."
+              exit 0
+            fi
+            echo "Push failed, retrying… ($((n+1))/3)"
+            # Bring remote changes in, keep our commits on top
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              echo "Rebase conflict — stopping to avoid an infinite loop."
+              exit 1
+            fi
+            n=$((n+1))
+            sleep 3
+          done
+
+          echo "Push still failing after retries."
+          exit 1
+
