@@ -16,7 +16,7 @@ SOURCE_NAME = "澳洲新報"
 MAX_PAGES = 8           # RSS 翻頁嘗試上限
 MAX_ITEMS = 300         # 總輸出上限
 
-# —— 新增：分類連結 & 每類要爬幾頁 ——
+# —— 分類連結 & 每類要爬幾頁 ——
 CATEGORY_URLS = [
     "https://aucd.com.au/category/australian-news/",
     "https://aucd.com.au/category/chinese-news/",
@@ -39,6 +39,29 @@ CATEGORY_URLS = [
     "https://aucd.com.au/category/seniors/",
 ]
 CATEGORY_PAGES = 5
+
+# —— 將 AUCD 的 category slug 映射到你 App 方便用嘅英文主類名（可再擴充）——
+CATEGORY_SLUG_MAP = {
+    "australian-news": "Australia",          # 你 Swift 映射有 "Australia" → .local
+    "chinese-news": "China",                 # 視乎站內語境，如更貼近「中國」新聞
+    "world-news": "World",
+    "chinese-community-news": "Community",
+    "financial-news": "Finance",
+    "property-news": "Property",
+    "entertainment-news": "Entertainment",
+    "sport": "Sport",
+    "food-and-beverage": "Food",
+    "health": "Health",
+    "holidays": "Travel",
+    "education": "Education",
+    "pets": "Pets",
+    "immigration": "Immigration",
+    "forum": "Opinion",
+    "culture": "Culture",
+    "motoring": "Automotive",
+    "technology": "Technology",
+    "seniors": "Seniors",
+}
 
 def iso_now() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -179,6 +202,26 @@ def parse_feed(url: str) -> list[dict]:
         if not summary:
             summary = getattr(e, "summary", None)
 
+        # RSS 分類（可能多個）
+        source_categories = []
+        try:
+            if getattr(e, "tags", None):
+                for t in e.tags:
+                    term = getattr(t, "term", None)
+                    if term:
+                        term = str(term).strip()
+                        if term and term not in source_categories:
+                            source_categories.append(term)
+        except Exception:
+            pass
+        # 有些 feed 會用 e.category
+        if not source_categories:
+            cat = getattr(e, "category", None)
+            if cat:
+                source_categories = [str(cat).strip()]
+
+        source_category = source_categories[0] if source_categories else None
+
         published = getattr(e, "published", None) or getattr(e, "updated", None)
         pub_norm = normalize_date(published) if published else None
         if not pub_norm and link:
@@ -192,6 +235,9 @@ def parse_feed(url: str) -> list[dict]:
             "publishedAt": pub_norm,
             "source": SOURCE_NAME,
             "fetchedAt": iso_now(),
+            "sourceCategory": source_category,         # 👈 新增
+            "sourceCategories": source_categories or None,  # 👈 新增（可空）
+            "sourceSectionPath": None,                 # RSS 未必有分區 path
         }
         items.append(item)
     return items
@@ -237,25 +283,43 @@ def extract_article_links_from_category_page(url: str) -> list[str]:
             seen.add(u); out.append(u)
     return out
 
-def crawl_categories(category_urls: list[str], pages_each: int) -> list[str]:
-    found = []
+def _slug_from_category_url(cat_base: str) -> str | None:
+    try:
+        p = urlparse(cat_base)
+        parts = [x for x in (p.path or "").strip("/").split("/") if x]
+        # 期望 ['category', '<slug>'] 或 ['category', '<slug>', 'page', '2']
+        if len(parts) >= 2 and parts[0] == "category":
+            return parts[1]
+        return None
+    except Exception:
+        return None
+
+def crawl_categories(category_urls: list[str], pages_each: int) -> list[tuple[str, str | None, str | None]]:
+    """
+    回傳 list of (link, sourceCategory, sourceSectionPath)
+    """
+    found: list[tuple[str, str | None, str | None]] = []
     for base in category_urls:
+        slug = _slug_from_category_url(base)
+        human = CATEGORY_SLUG_MAP.get(slug) if slug else None
         # 第 1 頁就係 base，本身已是末尾帶 /
-        pages = [base.rstrip("/")+ "/"] + [
+        pages = [base.rstrip("/") + "/"] + [
             f"{base.rstrip('/')}/page/{i}/" for i in range(2, pages_each + 1)
         ]
         for pg in pages:
             links = extract_article_links_from_category_page(pg)
-            found.extend(links)
+            for link in links:
+                found.append((link, human, "/category/" + (slug or "" ) + "/"))
             time.sleep(SLEEP)
-    # 去重保持順序
+    # 去重保持順序（按 link）
     seen = set(); uniq = []
-    for u in found:
-        if u not in seen:
-            seen.add(u); uniq.append(u)
+    for link, cat, sec in found:
+        if link in seen: 
+            continue
+        seen.add(link); uniq.append((link, cat, sec))
     return uniq
 
-def make_item_from_article(url: str) -> dict | None:
+def make_item_from_article(url: str, source_category: str | None, source_section_path: str | None) -> dict:
     title, desc = extract_title_desc_from_page(url)
     pub = fetch_date_from_page(url)
     return {
@@ -266,6 +330,9 @@ def make_item_from_article(url: str) -> dict | None:
         "publishedAt": pub,
         "source": SOURCE_NAME,
         "fetchedAt": iso_now(),
+        "sourceCategory": source_category,                 # 👈 由分類 URL 推斷
+        "sourceCategories": [source_category] if source_category else None,
+        "sourceSectionPath": source_section_path,          # 👈 例如 /category/financial-news/
     }
 
 def merge_dedupe(all_items: list[dict]) -> list[dict]:
@@ -309,11 +376,11 @@ if __name__ == "__main__":
             print(f"[WARN] parse fail: {u}: {e}")
         time.sleep(SLEEP)
 
-    # B) 分類頁逐頁抽連 + 入文補資料
+    # B) 分類頁逐頁抽連 + 入文補資料（帶 sourceCategory / sourceSectionPath）
     cat_links = crawl_categories(CATEGORY_URLS, CATEGORY_PAGES)
-    for link in cat_links:
+    for link, cat, sec in cat_links:
         try:
-            item = make_item_from_article(link)
+            item = make_item_from_article(link, cat, sec)
             bag.append(item)
         except Exception as e:
             print(f"[WARN] article parse fail: {link}: {e}")
@@ -323,3 +390,4 @@ if __name__ == "__main__":
     merged = merge_dedupe(bag)[:MAX_ITEMS]
     json_out(merged, "aucd.json")
     print(f"[DONE] AUCD items: {len(merged)}")
+
