@@ -8,8 +8,8 @@ TIMEOUT = 20
 MAX_ITEMS = 120
 # 逐個試：繁中 → 中文總頁 → 語言中文頁（不同路徑都可能有 feed）
 FEED_URLS = [
-    "https://www.sbs.com.au/language/chinese/zh-hant/feed",
-    "https://www.sbs.com.au/language/chinese/feed",
+    "https://www.sbs.com.au/language/chinese/zh-hant/",
+    "https://www.sbs.com.au/language/chinese/",
 ]
 SOURCE_NAME = "SBS 中文（繁體）"
 
