@@ -260,7 +260,8 @@ REL_ARTICLE_RE = re.compile(
 )
 
 def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
-    links = set()
+    links: list[str] = []
+    seen: set[str] = set()
     soup = BeautifulSoup(html_text, "html.parser")
     # 1) <a>
     for a in soup.find_all("a", href=True):
@@ -268,13 +269,18 @@ def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
         if href.startswith("/"):
             href = urljoin(base, href)
         if "/language/chinese/" in href and ("/article/" in href or "/podcast-episode/" in href):
-            links.add(href)
+            if href not in seen:
+               seen.add(href); links.append(href)
     # 2) script/JSON 文字內的 URL
     for m in ARTICLE_HREF_RE.finditer(html_text):
-        links.add(m.group(0))
+        u = m.group(0)
+        if u not in seen:
+            seen.add(u); links.append(u)
     for m in REL_ARTICLE_RE.finditer(html_text):
-        links.add(urljoin(base, m.group(0)))
-    return list(links)
+        u = urljoin(base, m.group(0))
+        if u not in seen:
+            seen.add(u); links.append(u)
+    return links
 
 def collect_from_entrypages() -> list[str]:
     out = []
@@ -302,7 +308,8 @@ def should_visit(url: str) -> bool:
 def crawl_chinese_section(seeds: list[str], max_pages: int = 80) -> list[str]:
     q = deque()
     seen_pages = set()
-    found_articles = set()
+    found_articles: list[str] = []
+    seen_articles: set[str] = set()
 
     for s in seeds:
         if should_visit(s):
@@ -319,7 +326,9 @@ def crawl_chinese_section(seeds: list[str], max_pages: int = 80) -> list[str]:
 
         # 1) 抽文章 + podcast-episode link
         for art in links_from_html_anywhere(html_text, base=url):
-            found_articles.add(art)
+            if art not in seen_articles:
+                seen_articles.add(art)
+                found_articles.append(art)
 
         # 2) 將頁面內可巡航 link 入隊
         soup = BeautifulSoup(html_text, "html.parser")
@@ -336,7 +345,7 @@ def crawl_chinese_section(seeds: list[str], max_pages: int = 80) -> list[str]:
         pages_visited += 1
         time.sleep(FETCH_SLEEP)
 
-    return list(found_articles)
+    return found_articles
 
 # ---------------- D) Google News 補位（解 redirect） ----------------
 def extract_sbs_url_from_text(text: str) -> str | None:
@@ -435,14 +444,15 @@ if __name__ == "__main__":
     )
     print(f"[INFO] crawl urls: {len(urls_crawl)}", file=sys.stderr)
 
-    # 合併去重
+    # 合併去重（保持先 sitemap → entry → crawl 的順序）
     seen, merged = set(), []
-    for u in urls_a + urls_b + urls_crawl:
+    for u in (urls_a + urls_b + urls_crawl):
         if u not in seen:
             seen.add(u); merged.append(u)
 
-    # 逐篇抓（文字 + podcast），保留繁體（URL含 zh-hant 或 HTML 判斷）
+    # 逐篇抓：抓多啲先（例如 3 倍），之後再按日期排序截 MAX_ITEMS
     articles = []
+    HARD_CAP = MAX_ITEMS * 3
     for u in merged:
         try:
             html_text = fetch(u).text
@@ -450,13 +460,13 @@ if __name__ == "__main__":
                 continue
             item = make_item(u, html_text)
             articles.append(item)
-            if len(articles) >= MAX_ITEMS:
+            if len(articles) >= HARD_CAP:
                 break
             time.sleep(FETCH_SLEEP)
         except Exception as e:
             print(f("[WARN] fetch article fail {u}: {e}"), file=sys.stderr)
 
-    # D) 如果仍然未夠 → Google News 補位
+    # D) 如果仍然未夠 → Google News 補位（同樣抓多啲）
     if len(articles) < MAX_ITEMS // 2:
         print("[INFO] few items; fallback Google News", file=sys.stderr)
         urls_gn = collect_from_google_news()
@@ -471,13 +481,28 @@ if __name__ == "__main__":
                 if any(x["link"] == item["link"] for x in articles):
                     continue
                 articles.append(item)
-                if len(articles) >= MAX_ITEMS:
+                if len(articles) >= HARD_CAP:
                     break
                 time.sleep(FETCH_SLEEP)
             except Exception as e:
                 print(f"[WARN] GN article fetch fail {u}: {e}", file=sys.stderr)
 
-    # 輸出到 repo root（配合 Pages: root）
-    json_out(articles, "sbs_zh_hant.json")
-    rss_out(articles,  "sbs_zh_hant.xml")
-    print(f"[DONE] output {len(articles)} items", file=sys.stderr)
+    # 以 publishedAt（ISO 字串）排序（desc）；無日期放最後
+    def key_dt(it):
+        s = it.get("publishedAt")
+        if not s:
+            return datetime.min.replace(tzinfo=timezone.utc)
+        try:
+            # 支援有/無 Z、以及毫秒
+            ss = s.replace("Z", "+00:00")
+            return datetime.fromisoformat(ss)
+        except Exception:
+            return datetime.min.replace(tzinfo=timezone.utc)
+
+    articles.sort(key=key_dt, reverse=True)
+    latest = articles[:MAX_ITEMS]
+
+    # 輸出
+    json_out(latest, "sbs_zh_hant.json")
+    rss_out(latest,  "sbs_zh_hant.xml")
+    print(f"[DONE] output {len(latest)} items", file=sys.stderr)
