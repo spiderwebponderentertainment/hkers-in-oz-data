@@ -11,7 +11,7 @@ from xml.etree import ElementTree as ET
 # ---------------- 基本設定 ----------------
 HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
 TIMEOUT = 25
-MAX_ITEMS = 200            # 要 300
+MAX_ITEMS = 200            # 要 200
 FETCH_SLEEP = 0.5          # 抓單篇之間小睡，對站方友善
 PAGES_EACH = 5             # 每個入口試 5 頁
 
