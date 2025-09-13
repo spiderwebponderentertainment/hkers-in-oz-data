@@ -295,7 +295,7 @@ def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
     soup = BeautifulSoup(html_text, "html.parser")
     # 1) <a>
     for a in soup.find_all("a", href=True):
-         href_raw = a["href"]
+        href_raw = a["href"]
         href = sanitize_sbs_url(href_raw, base)
         if href and href not in seen:
             seen.add(href); links.append(href)
@@ -408,7 +408,7 @@ def collect_from_google_news() -> list[str]:
     try:
         xml = fetch(GN_URL).text
     except Exception as e:
-            print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
+        print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
         return []
     urls = []
     try:
@@ -423,7 +423,7 @@ def collect_from_google_news() -> list[str]:
             if "/language/chinese/" in real and ("/article/" in real or "/podcast-episode/" in real):
                 urls.append(real)
     except Exception as e:
-        print(f"[WARN] GN article fetch fail {u}: {e}", file=sys.stderr)
+        print(f"[WARN] parse google news rss fail: {e}", file=sys.stderr)
         return []
     seen = set(); uniq = []
     for u in urls:
