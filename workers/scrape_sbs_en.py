@@ -11,22 +11,26 @@ from xml.etree import ElementTree as ET
 # ---------------- 基本設定 ----------------
 HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
 TIMEOUT = 25
-MAX_ITEMS = 120            # 想多啲就加大
-FETCH_SLEEP = 0.5         # 抓單篇之間小睡，對站方友善
+MAX_ITEMS = 300            # 👈 要 300
+FETCH_SLEEP = 0.5          # 抓單篇之間小睡，對站方友善
+PAGES_EACH = 5             # 👈 每個入口試 5 頁
 
 SBS_HOST = "www.sbs.com.au"
 ROBOTS_URL = "https://www.sbs.com.au/robots.txt"
 
-# 英文入口頁（盡量涵蓋主要流量入口）
-ENTRY_PAGES = [
-    "https://www.sbs.com.au/news",
-    "https://www.sbs.com.au/news/latest",        # 最新
-    "https://www.sbs.com.au/news/topic/australia",  # 澳洲
-    "https://www.sbs.com.au/news/topic/world",      # 國際
-    "https://www.sbs.com.au/news/topic/business",   # 商業/財經
-    "https://www.sbs.com.au/news/topic/technology", # 科技
-    "https://www.sbs.com.au/news/topic/sport",      # 體育
-    "https://www.sbs.com.au/news/topic/entertainment", # 娛樂/生活
+# 英文入口頁（你提供的）
+ENTRY_BASES = [
+    "https://www.sbs.com.au/news/collection/just-in",
+    "https://www.sbs.com.au/news/collection/top-stories",
+    "https://www.sbs.com.au/news/topic/cost-of-living",
+    "https://www.sbs.com.au/news/topic/australia",
+    "https://www.sbs.com.au/news/topic/hamas-israel-war",
+    "https://www.sbs.com.au/news/topic/world",
+    "https://www.sbs.com.au/news/topic/politics",
+    "https://www.sbs.com.au/news/topic/immigration",
+    "https://www.sbs.com.au/news/topic/indigenous",
+    "https://www.sbs.com.au/news/topic/environment",
+    "https://www.sbs.com.au/news/topic/life",
 ]
 
 # 只巡航 /news/ 範圍
@@ -42,8 +46,46 @@ GN_URL = (
 )
 
 # ---------------- 小工具 ----------------
-def iso_now(): return datetime.now(timezone.utc).isoformat()
-def clean(s: str) -> str: return re.sub(r"\s+", " ", (s or "")).strip()
+def iso_now() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def clean(s: str) -> str:
+    return re.sub(r"\s+", " ", (s or "")).strip()
+
+def normalize_date(raw: str | None) -> str | None:
+    """標準化常見日期格式為 UTC ISO8601。"""
+    if not raw:
+        return None
+    s = raw.strip()
+    if not s:
+        return None
+    # 已是 UTC Z
+    if s.endswith("Z"):
+        return s
+    # ISO 8601 與帶時區
+    try:
+        dt = None
+        try:
+            dt = datetime.fromisoformat(s.replace("Z", ""))
+        except Exception:
+            dt = None
+        if dt:
+            if not dt.tzinfo:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(timezone.utc).isoformat()
+    except Exception:
+        pass
+    # RFC822/1123 後備
+    try:
+        from email.utils import parsedate_to_datetime
+        dt = parsedate_to_datetime(s)
+        if not dt:
+            return None
+        if not dt.tzinfo:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc).isoformat()
+    except Exception:
+        return None
 
 def fetch(url: str) -> requests.Response:
     r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
@@ -51,7 +93,10 @@ def fetch(url: str) -> requests.Response:
     return r
 
 def parse_json_ld(html_text: str):
-    """由 JSON-LD 取 NewsArticle headline/description/datePublished/url（英文版）"""
+    """
+    由 JSON-LD 取標題/描述/日期/url（支援 NewsArticle/Article/PodcastEpisode/AudioObject）
+    日期欄位優先：datePublished > uploadDate > dateCreated > dateModified
+    """
     try:
         soup = BeautifulSoup(html_text, "html.parser")
         for tag in soup.find_all("script", type=lambda t: t and "ld+json" in t):
@@ -60,24 +105,50 @@ def parse_json_ld(html_text: str):
                 data = json.loads(txt)
             except Exception:
                 continue
-            candidates = data if isinstance(data, list) else [data]
-            for obj in candidates:
-                if isinstance(obj, dict) and "@graph" in obj:
-                    for g in obj["@graph"]:
-                        if isinstance(g, dict) and g.get("@type") in ("NewsArticle", "Article"):
-                            return {
-                                "headline": g.get("headline") or "",
-                                "description": g.get("description") or "",
-                                "datePublished": g.get("datePublished") or g.get("dateCreated") or "",
-                                "url": g.get("url") or "",
-                            }
-                if isinstance(obj, dict) and obj.get("@type") in ("NewsArticle", "Article"):
-                    return {
-                        "headline": obj.get("headline") or "",
-                        "description": obj.get("description") or "",
-                        "datePublished": obj.get("datePublished") or obj.get("dateCreated") or "",
-                        "url": obj.get("url") or "",
-                    }
+
+            def select(obj: dict) -> dict | None:
+                if not isinstance(obj, dict):
+                    return None
+                t = obj.get("@type")
+                if isinstance(t, list):
+                    t = next((x for x in t if isinstance(x, str)), None)
+                if t not in ("NewsArticle", "Article", "BlogPosting", "PodcastEpisode", "AudioObject"):
+                    return None
+                date = (
+                    obj.get("datePublished")
+                    or obj.get("uploadDate")
+                    or obj.get("dateCreated")
+                    or obj.get("dateModified")
+                    or ""
+                )
+                return {
+                    "headline": obj.get("headline") or obj.get("name") or "",
+                    "description": obj.get("description") or "",
+                    "datePublished": date,
+                    "url": obj.get("url") or "",
+                }
+
+            # 掃描物件 / 陣列 / @graph
+            def scan(o):
+                if isinstance(o, dict):
+                    if "@graph" in o and isinstance(o["@graph"], list):
+                        for g in o["@graph"]:
+                            got = select(g)
+                            if got:
+                                return got
+                    got = select(o)
+                    if got:
+                        return got
+                if isinstance(o, list):
+                    for each in o:
+                        got = scan(each)
+                        if got:
+                            return got
+                return None
+
+            candidate = scan(data)
+            if candidate:
+                return candidate
     except Exception:
         pass
     return {}
@@ -85,15 +156,26 @@ def parse_json_ld(html_text: str):
 def extract_meta_from_html(html_text: str):
     soup = BeautifulSoup(html_text, "html.parser")
     title = (soup.find("meta", property="og:title") or {}).get("content") \
-        or (soup.title.string if soup.title else "")
+        or (soup.title.string if soup.title else "") \
+        or ""
     desc = (soup.find("meta", property="og:description") or {}).get("content") \
         or (soup.find("meta", attrs={"name": "description"}) or {}).get("content") \
         or ""
+    # 日期多路徑（含 podcast）
     pub = (
         (soup.find("meta", property="article:published_time") or {}).get("content")
+        or (soup.find("meta", property="og:article:published_time") or {}).get("content")
+        or (soup.find("meta", property="og:published_time") or {}).get("content")
+        or (soup.find("meta", attrs={"itemprop": "datePublished"}) or {}).get("content")
+        or (soup.find("meta", attrs={"itemprop": "uploadDate"}) or {}).get("content")
         or (soup.find("meta", attrs={"name": "date"}) or {}).get("content")
         or None
     )
+    # <time datetime="...">
+    if not pub:
+        t = soup.find("time", attrs={"datetime": True})
+        if t and t.get("datetime"):
+            pub = t["datetime"]
     return clean(title), clean(desc), pub
 
 def make_item(url: str, html_text: str):
@@ -101,12 +183,13 @@ def make_item(url: str, html_text: str):
     if ld:
         title = clean(ld.get("headline", "")) or None
         desc = clean(ld.get("description", "")) or ""
-        pub = ld.get("datePublished") or None
+        pub = normalize_date(ld.get("datePublished") or None)
         if not title:
             t2, d2, p2 = extract_meta_from_html(html_text)
-            title = t2; desc = desc or d2; pub = pub or p2
+            title = t2; desc = desc or d2; pub = pub or normalize_date(p2)
     else:
-        title, desc, pub = extract_meta_from_html(html_text)
+        t2, d2, p2 = extract_meta_from_html(html_text)
+        title = t2; desc = d2; pub = normalize_date(p2)
     return {
         "id": hashlib.md5(url.encode()).hexdigest(),
         "title": title or url,
@@ -152,7 +235,6 @@ def collect_from_sitemaps() -> list[str]:
             urls = parse_sitemap_urls(xml)
             for u in urls:
                 # 目標：英語新聞/節目文章
-                # 常見 pattern：/news/article/..., /news/podcast-episode/..., /news/story/...
                 if "/news/" in u and any(seg in u for seg in ("/article/", "/podcast-episode/", "/story/")):
                     out.append(u)
         except Exception as e:
@@ -192,15 +274,37 @@ def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
         links.add(urljoin(base, m.group(0)))
     return list(links)
 
+def pagination_candidates(base_url: str, pages_each: int) -> list[str]:
+    """
+    生成常見的分頁 URL 嘗試：?page=N、?pg=N、/page/N/
+    第 1 頁回傳 base 本身
+    """
+    out = [base_url]
+    b = base_url.rstrip("/")
+    for n in range(2, pages_each + 1):
+        out.append(f"{b}?page={n}")
+        out.append(f"{b}?pg={n}")
+        out.append(f"{b}/page/{n}/")
+    # 去重保持順序
+    seen = set(); uniq = []
+    for u in out:
+        if u not in seen:
+            seen.add(u); uniq.append(u)
+    return uniq
+
 def collect_from_entrypages() -> list[str]:
+    """對每個入口 + 分頁候選頁抓連結"""
     out = []
-    for page in ENTRY_PAGES:
-        try:
-            html_text = fetch(page).text
-            out += links_from_html_anywhere(html_text, base=page)
-        except Exception as e:
-            print(f"[WARN] entry scrape fail {page}: {e}", file=sys.stderr)
-            continue
+    for base in ENTRY_BASES:
+        for page in pagination_candidates(base, PAGES_EACH):
+            try:
+                html_text = fetch(page).text
+                out += links_from_html_anywhere(html_text, base=page)
+            except Exception as e:
+                print(f"[WARN] entry scrape fail {page}: {e}", file=sys.stderr)
+                continue
+            time.sleep(0.2)
+    # 去重
     seen = set(); uniq = []
     for u in out:
         if u not in seen:
@@ -215,7 +319,10 @@ def should_visit(url: str) -> bool:
         return False
     return True
 
-def crawl_news_section(seeds: list[str], max_pages: int = 80) -> list[str]:
+def crawl_news_section(seeds: list[str], max_pages: int = 120) -> list[str]:
+    """
+    用 BFS 擴大覆蓋；從入口 seeds（已含分頁候選）開始
+    """
     q = deque()
     seen_pages = set()
     found_articles = set()
@@ -339,14 +446,17 @@ if __name__ == "__main__":
     urls_a = collect_from_sitemaps()
     print(f"[INFO] sitemap urls: {len(urls_a)}", file=sys.stderr)
 
-    # B) 入口頁直抓（含 script/JSON 內 link）
+    # B) 入口頁直抓（含 script/JSON 內 link），含每入口試分頁
+    seed_pages = []
+    for base in ENTRY_BASES:
+        seed_pages += pagination_candidates(base, PAGES_EACH)
     urls_b = collect_from_entrypages()
     print(f"[INFO] entry page urls: {len(urls_b)}", file=sys.stderr)
 
     # C) /news/ 淺層 BFS（擴大覆蓋）
     urls_crawl = crawl_news_section(
-        seeds=ENTRY_PAGES,
-        max_pages=80
+        seeds=seed_pages,
+        max_pages=120
     )
     print(f"[INFO] crawl urls: {len(urls_crawl)}", file=sys.stderr)
 
@@ -356,15 +466,13 @@ if __name__ == "__main__":
         if u not in seen:
             seen.add(u); merged.append(u)
 
-    # 逐篇抓內容
+    # 逐篇抓內容（含 Podcast 日期）
     articles = []
     for u in merged:
         try:
             html_text = fetch(u).text
             item = make_item(u, html_text)
             articles.append(item)
-            if len(articles) >= MAX_ITEMS:
-                break
             time.sleep(FETCH_SLEEP)
         except Exception as e:
             print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
@@ -382,14 +490,24 @@ if __name__ == "__main__":
                 if any(x["link"] == item["link"] for x in articles):
                     continue
                 articles.append(item)
-                if len(articles) >= MAX_ITEMS:
-                    break
                 time.sleep(FETCH_SLEEP)
             except Exception as e:
                 print(f"[WARN] GN article fetch fail {u}: {e}", file=sys.stderr)
 
-    # 輸出到 repo root（配合 Pages: root）
-    json_out(articles, "sbs_en.json")
-    rss_out(articles,  "sbs_en.xml")
-    print(f"[DONE] output {len(articles)} items", file=sys.stderr)
+    # 以 publishedAt 排序（desc）；無日期放最後
+    def key_dt(it):
+        s = it.get("publishedAt")
+        if not s:
+            return datetime.min.replace(tzinfo=timezone.utc)
+        try:
+            return datetime.fromisoformat(s.replace("Z", "+00:00"))
+        except Exception:
+            return datetime.min.replace(tzinfo=timezone.utc)
 
+    articles.sort(key=key_dt, reverse=True)
+    latest = articles[:MAX_ITEMS]
+
+    # 輸出到 repo root（配合 Pages: root）
+    json_out(latest, "sbs_en.json")
+    rss_out(latest,  "sbs_en.xml")
+    print(f"[DONE] output {len(latest)} items", file=sys.stderr)
