@@ -32,8 +32,44 @@ GN_URL = (
 )
 
 # ---------------- 小工具 ----------------
-def iso_now(): return datetime.now(timezone.utc).isoformat()
-def clean(s: str) -> str: return re.sub(r"\s+", " ", (s or "")).strip()
+def iso_now() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def clean(s: str) -> str:
+    return re.sub(r"\s+", " ", (s or "")).strip()
+
+def normalize_date(raw: str | None) -> str | None:
+    """標準化常見日期格式為 UTC ISO8601。"""
+    if not raw:
+        return None
+    raw = raw.strip()
+    if not raw:
+        return None
+    # 已是 UTC Z
+    if raw.endswith("Z"):
+        return raw
+    # ISO 8601 與帶時區
+    try:
+        dt = None
+        try:
+            dt = datetime.fromisoformat(raw.replace("Z", ""))
+        except Exception:
+            dt = None
+        if dt:
+            if not dt.tzinfo:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(timezone.utc).isoformat()
+    except Exception:
+        pass
+    # RFC822/1123 後備
+    try:
+        from email.utils import parsedate_to_datetime
+        dt = parsedate_to_datetime(raw)
+        if not dt.tzinfo:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc).isoformat()
+    except Exception:
+        return None
 
 def fetch(url: str) -> requests.Response:
     r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
@@ -52,7 +88,12 @@ def is_zh_hant_by_html(html_text: str) -> bool:
     return any(re.search(p, html_text, re.I) for p in patterns)
 
 def parse_json_ld(html_text: str):
-    """由 JSON-LD 取 NewsArticle headline/description/datePublished/url"""
+    """
+    由 JSON-LD 取標題/描述/日期/url。
+    支援: NewsArticle / Article / BlogPosting / PodcastEpisode / AudioObject。
+    日期欄位優先順序：
+      datePublished > uploadDate > dateCreated > dateModified
+    """
     try:
         soup = BeautifulSoup(html_text, "html.parser")
         for tag in soup.find_all("script", type=lambda t: t and "ld+json" in t):
@@ -61,40 +102,80 @@ def parse_json_ld(html_text: str):
                 data = json.loads(txt)
             except Exception:
                 continue
-            candidates = data if isinstance(data, list) else [data]
-            for obj in candidates:
-                if isinstance(obj, dict) and "@graph" in obj:
-                    for g in obj["@graph"]:
-                        if isinstance(g, dict) and g.get("@type") in ("NewsArticle", "Article"):
-                            return {
-                                "headline": g.get("headline") or "",
-                                "description": g.get("description") or "",
-                                "datePublished": g.get("datePublished") or g.get("dateCreated") or "",
-                                "url": g.get("url") or "",
-                            }
-                if isinstance(obj, dict) and obj.get("@type") in ("NewsArticle", "Article"):
-                    return {
-                        "headline": obj.get("headline") or "",
-                        "description": obj.get("description") or "",
-                        "datePublished": obj.get("datePublished") or obj.get("dateCreated") or "",
-                        "url": obj.get("url") or "",
-                    }
+
+            def select(obj: dict) -> dict | None:
+                if not isinstance(obj, dict):
+                    return None
+                t = obj.get("@type")
+                if isinstance(t, list):
+                    t = next((x for x in t if isinstance(x, str)), None)
+                if t not in ("NewsArticle", "Article", "BlogPosting", "PodcastEpisode", "AudioObject"):
+                    return None
+                date = (
+                    obj.get("datePublished")
+                    or obj.get("uploadDate")
+                    or obj.get("dateCreated")
+                    or obj.get("dateModified")
+                    or ""
+                )
+                return {
+                    "headline": obj.get("headline") or obj.get("name") or "",
+                    "description": obj.get("description") or "",
+                    "datePublished": date,
+                    "url": obj.get("url") or "",
+                }
+
+            # 掃描物件 / 陣列 / @graph
+            def scan(o):
+                if isinstance(o, dict):
+                    if "@graph" in o and isinstance(o["@graph"], list):
+                        for g in o["@graph"]:
+                            got = select(g)
+                            if got:
+                                return got
+                    got = select(o)
+                    if got:
+                        return got
+                if isinstance(o, list):
+                    for each in o:
+                        got = scan(each)
+                        if got:
+                            return got
+                return None
+
+            candidate = scan(data)
+            if candidate:
+                return candidate
     except Exception:
         pass
     return {}
 
 def extract_meta_from_html(html_text: str):
     soup = BeautifulSoup(html_text, "html.parser")
+    # 標題
     title = (soup.find("meta", property="og:title") or {}).get("content") \
-        or (soup.title.string if soup.title else "")
+        or (soup.title.string if soup.title else "") \
+        or ""
+    # 描述
     desc = (soup.find("meta", property="og:description") or {}).get("content") \
         or (soup.find("meta", attrs={"name": "description"}) or {}).get("content") \
         or ""
+    # 日期：盡量多路徑
     pub = (
         (soup.find("meta", property="article:published_time") or {}).get("content")
-        or (soup.find("meta", attrs={"name": "date"}) or {}).get("content")
+        or (soup.find("meta", property="og:article:published_time") or {}).get("content")
+        or (soup.find("meta", property="og:published_time") or {}).get("content")
+        or (soup.find("meta", property="article:modified_time") or {}).get("content")   # 後備
+        or (soup.find("meta", property="og:updated_time") or {}).get("content")        # 後備
+        or (soup.find("meta", attrs={"itemprop": "datePublished"}) or {}).get("content")
+        or (soup.find("meta", attrs={"name": "date"}) or {}).get("content")            # 最舊式
         or None
     )
+    # <time datetime="...">
+    if not pub:
+        t = soup.find("time", attrs={"datetime": True})
+        if t and t.get("datetime"):
+            pub = t["datetime"]
     return clean(title), clean(desc), pub
 
 def make_item(url: str, html_text: str):
@@ -102,12 +183,15 @@ def make_item(url: str, html_text: str):
     if ld:
         title = clean(ld.get("headline", "")) or None
         desc = clean(ld.get("description", "")) or ""
-        pub = ld.get("datePublished") or None
+        pub = normalize_date(ld.get("datePublished") or None)
         if not title:
             t2, d2, p2 = extract_meta_from_html(html_text)
-            title = t2; desc = desc or d2; pub = pub or p2
+            title = t2
+            desc = desc or d2
+            pub = pub or normalize_date(p2)
     else:
-        title, desc, pub = extract_meta_from_html(html_text)
+        title, desc, pub_raw = extract_meta_from_html(html_text)
+        pub = normalize_date(pub_raw)
     return {
         "id": hashlib.md5(url.encode()).hexdigest(),
         "title": title or url,
@@ -331,6 +415,7 @@ def rss_out(items, path):
         fe = fg.add_entry()
         fe.id(it["id"]); fe.title(it["title"]); fe.link(href=it["link"])
         fe.description(it["summary"] or it["title"])
+        # feedgen 可接受 pubDate，但呢度我哋保持簡單：輸出 JSON 為主
     fg.rss_file(path)
 
 # ---------------- 主程式 ----------------
@@ -369,7 +454,7 @@ if __name__ == "__main__":
                 break
             time.sleep(FETCH_SLEEP)
         except Exception as e:
-            print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
+            print(f("[WARN] fetch article fail {u}: {e}"), file=sys.stderr)
 
     # D) 如果仍然未夠 → Google News 補位
     if len(articles) < MAX_ITEMS // 2:
@@ -396,4 +481,3 @@ if __name__ == "__main__":
     json_out(articles, "sbs_zh_hant.json")
     rss_out(articles,  "sbs_zh_hant.xml")
     print(f"[DONE] output {len(articles)} items", file=sys.stderr)
-
