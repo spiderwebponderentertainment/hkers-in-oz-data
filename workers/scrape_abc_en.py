@@ -89,6 +89,21 @@ def extract_links(html_text, base):
             urls.add(u)
     return urls
 
+# 由 ABC 文章 URL 取尾段數字 ID（愈大愈新）
+def _id_from_url(u: str) -> int:
+    m = re.search(r"/(\d+)/?$", u)
+    return int(m.group(1)) if m else -1
+
+# 由 URL 補回 YYYY-MM-DD 日期
+def _date_from_url(u: str):
+    m = re.search(r"/news/(\d{4}-\d{2}-\d{2})/", u)
+    if not m:
+        return None
+    try:
+        dt = datetime.fromisoformat(m.group(1) + "T00:00:00+00:00")
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
 
 # ---------------- 文章解析 ----------------
 def _text(x):
@@ -160,6 +175,10 @@ def parse_article(url: str, html_text: str):
         if t and t.get("datetime"):
             published = _parse_datetime(t["datetime"].strip())
 
+    # 冇 meta 就用 URL 日期兜底
+    if not published:
+        published = _date_from_url(url)
+
     # 內容：盡量由正文容器抽 <p>
     body = ""
     body_root = _first(
@@ -218,7 +237,9 @@ def crawl():
             entry_urls |= links
         except Exception as e:
             print(f"[WARN] entry scrape fail {seed}: {e}")
-    entry_urls = sorted(entry_urls)
+    
+    # 用尾段數字 ID 倒序（最新優先），再裁 MAX_CRAWL
+    entry_urls = sorted(entry_urls, key=_id_from_url, reverse=True)
     print(f"[INFO] entry page urls: {len(entry_urls)}")
 
     # 限制爬取數量（避免跑太耐）
@@ -250,6 +271,13 @@ def main():
     items = crawl()
 
     # 依發佈時間降序
+    # 先用 id 去重，避免同一篇多個變體
+    uniq = {}
+    for it in items:
+        iid = it.get("id") or hashlib.md5(it["url"].encode("utf-8")).hexdigest()
+        if iid not in uniq:
+            uniq[iid] = it
+    items = list(uniq.values())
     items.sort(key=_published_key, reverse=True)
 
     # 只輸出最新 150 條
