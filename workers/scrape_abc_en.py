@@ -16,6 +16,9 @@ MAX_ITEMS = 200  # 想再多可以加大
 FETCH_SLEEP = 0.4
 ABC_HOST = "www.abc.net.au"
 ROBOTS_URL = "https://www.abc.net.au/robots.txt"
+# URL 正規化：固定 Host / Scheme 及移除 tracking 參數
+CANON_HOST = "www.abc.net.au"
+CANON_SCHEME = "https"
 
 # 入口頁（已剔走 environment / technology 兩條經常 404/403 的入口）
 ENTRY_BASES = [
@@ -62,6 +65,38 @@ def iso_now():
 
 def clean(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
+
+def canonical_abc_url(u: str) -> str:
+    """
+    把 ABC 文章 URL 正規化：
+      - 強制 https://www.abc.net.au
+      - 移除 fragment
+      - 剷走常見 tracking query（utm_*、?sf、?WT.* 等）
+      - 去除多餘的結尾斜線（但保留 path 本身）
+    """
+    try:
+        p = urlparse(u)
+        # 只處理 abc.net.au 範圍，其餘照樣回傳
+        if "abc.net.au" not in (p.netloc or ""):
+            return u
+        # 設定規範 host/scheme
+        netloc = CANON_HOST
+        scheme = CANON_SCHEME
+        # 清理 query
+        qs = parse_qs(p.query, keep_blank_values=False)
+        cleaned = {}
+        for k, v in qs.items():
+            lk = k.lower()
+            if lk.startswith("utm_") or lk in {"WT.mc_id", "WT.tsrc", "sf"}:
+                continue
+            cleaned[k] = v
+        # 重新組裝
+        from urllib.parse import urlencode
+        new_q = urlencode({k: vals[0] for k, vals in cleaned.items()}) if cleaned else ""
+        path = p.path.rstrip("/")  # 多數 ABC 內容頁無尾斜線
+        return f"{scheme}://{netloc}{path}" + (f"?{new_q}" if new_q else "")
+    except Exception:
+        return u
 
 def normalize_date(raw: str | None) -> str | None:
     """把常見日期字串統一為 UTC ISO8601。"""
@@ -116,9 +151,14 @@ def _slug_title_en(slug: str) -> str:
 def category_from_url(u: str) -> str | None:
     """ /news/<section>/... 或 /news（主頁） """
     try:
-        p = urlparse(u)
+        # 用正規化後 URL 再判斷
+        p = urlparse(canonical_abc_url(u))
         parts = [x for x in (p.path or "").strip("/").split("/") if x]
         if len(parts) >= 2 and parts[0] == "news":
+            # /news/YYYY-MM-DD/... → 其實無分欄，當作 News
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", parts[1]):
+                return _slug_title_en("news")
+            # /news/<section>/... → 取 section
             return _slug_title_en(parts[1])
         if len(parts) == 1 and parts[0] == "news":
             return _slug_title_en("news")
@@ -232,7 +272,8 @@ def extract_meta_from_html(html_text: str):
 
 def make_item(url: str, html_text: str, hint_section: str | None = None, source_hint: str = "ABC News"):
     # 1) URL 優先 section
-    section = category_from_url(url) or hint_section
+    canon = canonical_abc_url(url)
+    section = category_from_url(canon) or hint_section
 
     # 2) 內容頁解析（日期 + 可能的分類後備）
     ld = parse_json_ld(html_text)
@@ -249,7 +290,7 @@ def make_item(url: str, html_text: str, hint_section: str | None = None, source_
         title = t2; desc = d2; pub = normalize_date(p2); section = section or s2
 
     return {
-        "id": hashlib.md5(url.encode()).hexdigest(),
+        "id": hashlib.md5(canon.encode()).hexdigest(),
         "title": title or url,
         "link": url,
         "summary": desc,
@@ -369,7 +410,8 @@ def collect_from_entrypages() -> dict[str, str | None]:
         try:
             html_text = fetch(base).text
             for u in links_from_html_anywhere(html_text, base=base):
-                out.setdefault(u, hint)
+                cu = canonical_abc_url(u)
+                out.setdefault(cu, hint)
         except Exception as e:
             print(f"[WARN] entry scrape fail {base}: {e}", file=sys.stderr)
             continue
@@ -558,23 +600,30 @@ if __name__ == "__main__":
     print(f"[INFO] crawl urls: {len(urls_crawl)}", file=sys.stderr)
 
     # 合併 URL 去重（保留入口分類 hint）
-    hint_map = dict(url_to_hint)  # article_url -> category_hint
+    # 以正規化 URL 作 key
+    hint_map = {canonical_abc_url(u): h for u, h in url_to_hint.items()}
     seen, merged_urls = set(), []
     for u in urls_a + urls_b + urls_crawl:
-        if u not in seen:
-            seen.add(u); merged_urls.append(u)
+        cu = canonical_abc_url(u)
+        if cu not in seen:
+            seen.add(cu); merged_urls.append(cu)
 
     # 逐篇抓
     articles = []
+    fetched = set()  # 避免同一篇抓兩次（http/https、帶參數等）
     for u in merged_urls:
         try:
-            html_text = fetch(u).text
-            hint = hint_map.get(u)
-            item = make_item(u, html_text, hint_section=hint, source_hint="ABC News")
+            cu = canonical_abc_url(u)
+            if cu in fetched:
+                continue
+            html_text = fetch(cu).text
+            hint = hint_map.get(cu)
+            item = make_item(cu, html_text, hint_section=hint, source_hint="ABC News")
             # 去重 by link
             if any(x["link"] == item["link"] for x in articles):
                 continue
             articles.append(item)
+            fetched.add(cu)
             time.sleep(FETCH_SLEEP)
         except Exception as e:
             print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
@@ -586,11 +635,15 @@ if __name__ == "__main__":
         for it in rss_items:
             link = it["link"]
             try:
-                html_text = fetch(link).text
-                item = make_item(link, html_text, source_hint=it.get("source") or "ABC News (RSS)")
+                cu = canonical_abc_url(link)
+                if cu in fetched:
+                    continue
+                html_text = fetch(cu).text
+                item = make_item(cu, html_text, source_hint=it.get("source") or "ABC News (RSS)")
                 if any(x["link"] == item["link"] for x in articles):
                     continue
                 articles.append(item)
+                fetched.add(cu)
                 if len(articles) >= MAX_ITEMS:
                     break
                 time.sleep(FETCH_SLEEP)
@@ -604,11 +657,15 @@ if __name__ == "__main__":
         print(f"[INFO] google news urls: {len(urls_gn)}", file=sys.stderr)
         for u in urls_gn:
             try:
-                html_text = fetch(u).text
-                item = make_item(u, html_text, source_hint="ABC via Google News")
+                cu = canonical_abc_url(u)
+                if cu in fetched:
+                    continue
+                html_text = fetch(cu).text
+                item = make_item(cu, html_text, source_hint="ABC via Google News")
                 if any(x["link"] == item["link"] for x in articles):
                     continue
                 articles.append(item)
+                fetched.add(cu)
                 if len(articles) >= MAX_ITEMS:
                     break
                 time.sleep(FETCH_SLEEP)
