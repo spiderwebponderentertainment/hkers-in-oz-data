@@ -71,9 +71,13 @@ def _google_news_rss_url():
 
 
 # ---------------- HTTP Helpers ----------------
+# 取代原本的 _normalize_https
 def _normalize_https(u: str) -> str:
-    # 強制 https，去除 fragment
-    return u.replace("http://", "https://").split("#", 1)[0]
+    # 強制 https，去除 fragment + query（utm 等）
+    u = u.replace("http://", "https://")
+    u = u.split("#", 1)[0]
+    u = u.split("?", 1)[0]   # 👈 新增：移除 ?utm=... 等 querystring
+    return u
 
 def get(url, **kw):
     """
