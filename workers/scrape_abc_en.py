@@ -86,17 +86,47 @@ def get(url, **kw):
     raise requests.RequestException("Unknown fetch error")
 
 # ---------------- 種子頁（不做分頁） ----------------
-SEED_PAGES = [
-    "https://www.abc.net.au/news/",
-    "https://www.abc.net.au/news/justin/",
-    "https://www.abc.net.au/news/politics/",
-    "https://www.abc.net.au/news/world/",
-    "https://www.abc.net.au/news/business/",
-    "https://www.abc.net.au/news/sport/",
-    "https://www.abc.net.au/news/health/",
-    "https://www.abc.net.au/news/science/",
-    "https://www.abc.net.au/news/environment/",
-]
+ABC_HOST = "www.abc.net.au" 
+ROBOTS_URL = "https://www.abc.net.au/robots.txt" 
+# 入口頁（你提供的） 
+ENTRY_BASES = [ 
+    "https://www.abc.net.au/news", 
+    "https://www.abc.net.au/news/justin", 
+    "https://www.abc.net.au/news/politics", 
+    "https://www.abc.net.au/news/world", 
+    "https://www.abc.net.au/news/business", 
+    "https://www.abc.net.au/news/sport", 
+    "https://www.abc.net.au/news/health", 
+    "https://www.abc.net.au/news/science", 
+    "https://www.abc.net.au/news/environment", 
+] 
+# 只巡航 /news/，避免去到 iview 等大區域 
+SECTION_ALLOWED_PREFIXES = ( 
+    "https://www.abc.net.au/news/", 
+) 
+# 官方 RSS（作補位/增量） 
+ABC_FEEDS = [ 
+    # Top / Just In 
+    "https://www.abc.net.au/news/feed/45910/rss.xml", # Top Stories 
+    "https://www.abc.net.au/news/feed/51120/rss.xml", # Just In 
+    # 主欄 
+    "https://www.abc.net.au/news/feed/52278/rss.xml", # Australia 
+    "https://www.abc.net.au/news/feed/51892/rss.xml", # World 
+    "https://www.abc.net.au/news/feed/51800/rss.xml", # Business 
+    "https://www.abc.net.au/news/feed/53446/rss.xml", # Science 
+    "https://www.abc.net.au/news/feed/43606/rss.xml", # Health 
+    "https://www.abc.net.au/news/feed/45924/rss.xml", # Technology 
+    "https://www.abc.net.au/news/feed/45926/rss.xml", # Sport 
+    "https://www.abc.net.au/news/feed/45920/rss.xml", # Politics 
+    "https://www.abc.net.au/news/feed/45922/rss.xml", # Analysis & Opinion 
+] 
+
+# Google News（English + AU）作最後補位
+GN_URL = ( 
+    "https://news.google.com/rss/search"
+    "?q=site:abc.net.au/news" 
+    "&hl=en-AU&gl=AU&ceid=AU:en" 
+)
 
 
 # ---------------- Link 抽取與篩選 ----------------
