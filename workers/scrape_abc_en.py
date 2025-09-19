@@ -1,270 +1,379 @@
 # workers/scrape_abc_en.py
-# -*- coding: utf-8 -*-
-import re, sys, json, time, hashlib, html
+"""
+ABC English scraper (lean)
+- Crawl up to MAX_CRAWL = 250 candidates (latest-first frontier)
+- Output newest MAX_OUTPUT = 150
+- No paging brute-force. Seeds are the "latest" hubs + RSS (best-effort).
+- Strong dedupe by canonical/content-id + url-normalization.
+"""
+
+import json, re, sys, html, hashlib, time
 from datetime import datetime, timezone
-from urllib.parse import urljoin
+from urllib.parse import urlparse, urljoin, urlunparse, parse_qs
+from collections import deque
+import heapq
+
 import requests
 from bs4 import BeautifulSoup
 
 # ---------------- 基本設定 ----------------
 HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) "
-        "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 "
-        "Mobile/15E148 Safari/604.1"
-    ),
+    "User-Agent": "HKersInOZBot/1.0 (+https://example.com/hkersinoz; scraping latest index only)",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-AU,en;q=0.9",
 }
-REQ_TIMEOUT = (8, 20)  # (connect, read)
-MAX_CRAWL = 250        # 最多嘗試抓取的文章 URL 數
-MAX_OUTPUT = 150       # 輸出數量上限（最新優先）
+TIMEOUT = 15
+SESSION = requests.Session()
 
-session = requests.Session()
-session.headers.update(HEADERS)
+MAX_CRAWL  = 250
+MAX_OUTPUT = 150
 
-# 只允許「正文」頁面：/news/YYYY-MM-DD/.../<numeric-id>
-GOOD_URL_RE = re.compile(
-    r"^https?://www\.abc\.net\.au/news/\d{4}-\d{2}-\d{2}/[^?#]+/\d+/?$"
-)
+# 可選：時間截停（小時）。0 = 不設
+SINCE_HOURS = 0  # e.g. 72
 
-# 已知不需要或容易 403/404 的前綴
-BAD_PREFIXES = (
-    "https://www.abc.net.au/news/topic/",
-    "https://www.abc.net.au/news/subscribe",
-    "https://www.abc.net.au/news/emergency",
-    "https://www.abc.net.au/news/chinese",
-    "https://www.abc.net.au/news/indonesian",
-    "https://www.abc.net.au/news/tok-pisin",
-)
-
-# 丟棄含有以下關鍵字的鏈接
-BAD_KEYWORDS = ("live-blog", "/page/", "#")
-
-
-# ---------------- HTTP Helper ----------------
-def get(url, **kw):
-    """帶輕量重試的 GET。"""
-    for attempt in range(3):
-        try:
-            return session.get(url, timeout=REQ_TIMEOUT, **kw)
-        except requests.RequestException as e:
-            if attempt == 2:
-                raise
-            time.sleep(0.6 * (attempt + 1))
-
-
-# ---------------- 種子頁（不做分頁） ----------------
-SEED_PAGES = [
+# 入口（避免 page/2..）：僅最新匯總與主要欄目首頁
+SEEDS = [
     "https://www.abc.net.au/news/",
     "https://www.abc.net.au/news/justin/",
-    "https://www.abc.net.au/news/politics/",
     "https://www.abc.net.au/news/world/",
+    "https://www.abc.net.au/news/politics/",
     "https://www.abc.net.au/news/business/",
-    "https://www.abc.net.au/news/sport/",
-    "https://www.abc.net.au/news/health/",
     "https://www.abc.net.au/news/science/",
+    "https://www.abc.net.au/news/health/",
+    "https://www.abc.net.au/news/sport/",
     "https://www.abc.net.au/news/environment/",
 ]
+# 一條 Top stories RSS（若失效亦不影響主流程）
+RSS_TRY = [
+    "https://www.abc.net.au/news/feed/51120/rss",  # Top Stories (commonly used id)
+]
 
+ABC_HOSTS = {"www.abc.net.au", "abc.net.au"}
 
-# ---------------- Link 抽取與篩選 ----------------
-def _looks_like_article(u: str) -> bool:
-    if any(k in u for k in BAD_KEYWORDS):
-        return False
-    if u.startswith(BAD_PREFIXES):
-        return False
-    return bool(GOOD_URL_RE.match(u))
+# ---------------- 通用工具 ----------------
+def now_ts() -> float:
+    return time.time()
 
+def to_iso8601(dt: datetime | None) -> str | None:
+    if not dt:
+        return None
+    if not dt.tzinfo:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
 
-def extract_links(html_text, base):
-    soup = BeautifulSoup(html_text, "lxml")
-    urls = set()
-    for a in soup.select("a[href]"):
-        href = a["href"].strip()
-        u = urljoin(base, href)
-        # 清理 fragment
-        u = u.split("#", 1)[0]
-        if _looks_like_article(u):
-            urls.add(u)
-    return urls
-
-
-# ---------------- 文章解析 ----------------
-def _text(x):
-    if not x:
-        return ""
-    return " ".join(x.get_text(" ", strip=True).split())
-
-
-def _first(soup, selectors):
-    for sel in selectors:
-        el = soup.select_one(sel)
-        if el:
-            return el
+def parse_date_str(s: str) -> datetime | None:
+    s = s.strip()
+    # 常見格式：2025-09-19T06:18:00Z / 2025-09-19T06:18:00+00:00
+    fmts = [
+        "%Y-%m-%dT%H:%M:%SZ",
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%d %H:%M:%S%z",
+        "%Y-%m-%d",
+    ]
+    for f in fmts:
+        try:
+            dt = datetime.strptime(s, f)
+            if not dt.tzinfo:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt
+        except Exception:
+            pass
     return None
 
-
-def _parse_datetime(s: str):
-    # 嘗試 ISO8601
+def norm_url(u: str, base: str | None = None) -> str | None:
+    if not u:
+        return None
+    if base:
+        u = urljoin(base, u)
     try:
-        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
-        return dt.astimezone(timezone.utc)
+        p = urlparse(u)
+        if p.scheme not in ("http", "https"):
+            return None
+        # 只保留 ABC 網域
+        if p.netloc not in ABC_HOSTS:
+            return None
+        # 去 query / fragment（ABC 文章 URL 不依賴 query）
+        clean = p._replace(query="", fragment="")
+        return urlunparse(clean)
     except Exception:
-        pass
-    # 兜底：抽出數字時間戳（ABC 不常用）
-    return None
-
-
-def parse_article(url: str, html_text: str):
-    """
-    回傳統一結構：
-    {
-      "url": str,
-      "title": str,
-      "published_at": iso8601 (UTC) | None,
-      "content": str,
-      "source": "abc_en",
-      "id": str  # 穩定ID
-    }
-    """
-    soup = BeautifulSoup(html_text, "lxml")
-
-    # 標題：優先 og:title / <meta name="title"> / <h1>
-    title = ""
-    ogt = soup.select_one('meta[property="og:title"]')
-    if ogt and ogt.get("content"):
-        title = ogt["content"].strip()
-    if not title:
-        mt = soup.select_one('meta[name="title"]')
-        if mt and mt.get("content"):
-            title = mt["content"].strip()
-    if not title:
-        h1 = _first(soup, ["h1", "header h1", "article h1"])
-        title = _text(h1) if h1 else ""
-
-    # 發佈時間：og:article:published_time / article:published_time / time[datetime]
-    published = None
-    for sel in [
-        'meta[property="article:published_time"]',
-        'meta[name="article:published_time"]',
-        'meta[property="og:article:published_time"]',
-    ]:
-        m = soup.select_one(sel)
-        if m and m.get("content"):
-            published = _parse_datetime(m["content"].strip())
-            if published:
-                break
-    if not published:
-        t = soup.select_one("time[datetime]")
-        if t and t.get("datetime"):
-            published = _parse_datetime(t["datetime"].strip())
-
-    # 內容：盡量由正文容器抽 <p>
-    body = ""
-    body_root = _first(
-        soup,
-        [
-            "article",
-            '[data-component="article-body"]',
-            ".article",
-            ".story",
-            ".article-body",
-            "main",
-        ],
-    )
-    if body_root:
-        paras = [p for p in body_root.select("p") if _text(p)]
-        body = "\n".join(_text(p) for p in paras)
-    if not body:
-        # 兜底：全頁 p
-        paras = [p for p in soup.select("p") if _text(p)]
-        body = "\n".join(_text(p) for p in paras[:50])
-
-    # 需要最少有標題或內容先算有效
-    if not title and not body:
         return None
 
-    # 穩定 id：用 URL / 或最後數字ID
-    m = re.search(r"/(\d+)/?$", url)
-    stable_id = m.group(1) if m else hashlib.md5(url.encode("utf-8")).hexdigest()
+def content_id_from_url(u: str) -> str | None:
+    """
+    ABC 文章常見尾段數字，如 .../105792346
+    """
+    m = re.search(r"/(\d{6,})/?$", u)
+    return m.group(1) if m else None
 
-    item = {
-        "url": url,
-        "title": title,
-        "published_at": published.isoformat().replace("+00:00", "Z") if published else None,
-        "content": body,
-        "source": "abc_en",
-        "id": stable_id,
-    }
-    return item
+def get(url: str) -> requests.Response | None:
+    try:
+        r = SESSION.get(url, headers=HEADERS, timeout=TIMEOUT)
+        if r.status_code >= 400:
+            print(f"[WARN] GET {url} -> {r.status_code}", file=sys.stderr)
+            return None
+        return r
+    except Exception as e:
+        print(f"[WARN] GET fail {url}: {e}", file=sys.stderr)
+        return None
 
+# ---------------- 列表頁抽連結 + 列表級時間 ----------------
+def extract_time_on_card(el) -> datetime | None:
+    # 1) <time datetime="...">
+    t = el.find("time")
+    if t and t.has_attr("datetime"):
+        dt = parse_date_str(t["datetime"])
+        if dt:
+            return dt
+    # 2) data-* 里頭可能藏時間（保守抓）
+    for attr in ("data-timestamp", "data-published", "data-updated"):
+        if el.has_attr(attr):
+            dt = parse_date_str(el[attr])
+            if dt:
+                return dt
+    # 3) meta in card
+    meta = el.find("meta", attrs={"itemprop": "datePublished"})
+    if meta and meta.has_attr("content"):
+        dt = parse_date_str(meta["content"])
+        if dt:
+            return dt
+    return None
 
-# ---------------- 抓取主流程 ----------------
-def fetch_article(url):
-    resp = get(url)
-    resp.raise_for_status()
-    return parse_article(url, resp.text)
+def parse_list(url: str, html_text: str) -> list[tuple[str, datetime | None]]:
+    soup = BeautifulSoup(html_text, "html.parser")
+    out: list[tuple[str, datetime | None]] = []
 
+    # ABC 列表卡片常用 a[href]，先廣義取，再在父級找時間
+    for a in soup.find_all("a", href=True):
+        href = norm_url(a["href"], base=url)
+        if not href:
+            continue
+        # 粗略篩：只接受看似文章的路徑（有數字 ID）
+        if not content_id_from_url(href):
+            continue
 
-def crawl():
-    print(f"[INFO] entry page urls: {len(SEED_PAGES)}")
-    entry_urls = set()
-    for seed in SEED_PAGES:
-        try:
-            r = get(seed)
-            r.raise_for_status()
-            links = extract_links(r.text, seed)
-            entry_urls |= links
-        except Exception as e:
-            print(f"[WARN] entry scrape fail {seed}: {e}")
-    entry_urls = sorted(entry_urls)
-    print(f"[INFO] entry page urls: {len(entry_urls)}")
+        # 嘗試從就近容器抽列表級時間
+        dt = None
+        candidates = [a]
+        # 逐層向上找最多 3 層
+        parent = a.parent
+        hops = 0
+        while parent is not None and hops < 3 and dt is None:
+            dt = extract_time_on_card(parent)
+            parent = parent.parent
+            hops += 1
 
-    # 限制爬取數量（避免跑太耐）
-    entry_urls = entry_urls[:MAX_CRAWL]
+        out.append((href, dt))
+    return dedupe_links(out)
 
-    print(f"[INFO] crawl urls: {len(entry_urls)}")
+def dedupe_links(pairs: list[tuple[str, datetime | None]]):
+    seen = set()
     out = []
-    for u in entry_urls:
-        try:
-            art = fetch_article(u)
-            if art:
-                out.append(art)
-        except Exception as e:
-            print(f"[WARN] fetch article fail {u}: {e}")
+    for href, dt in pairs:
+        key = href
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append((href, dt))
     return out
 
+# ---------------- 文章頁解析 ----------------
+def parse_article(url: str, html_text: str) -> dict | None:
+    soup = BeautifulSoup(html_text, "html.parser")
 
-def _published_key(x):
-    ts = x.get("published_at")
-    if not ts:
-        return 0
-    try:
-        return int(datetime.fromisoformat(ts.replace("Z", "+00:00")).timestamp())
-    except Exception:
-        return 0
+    # canonical 作為主鍵優先
+    canon = soup.find("link", rel="canonical")
+    if canon and canon.has_attr("href"):
+        cu = norm_url(canon["href"], base=url)
+        if cu:
+            url = cu
 
+    title = None
+    ogt = soup.find("meta", property="og:title")
+    if ogt and ogt.has_attr("content"):
+        title = ogt["content"]
+    if not title:
+        t = soup.find("title")
+        title = t.get_text(strip=True) if t else None
 
+    # description
+    desc = None
+    ogd = soup.find("meta", property="og:description")
+    if ogd and ogd.has_attr("content"):
+        desc = ogd["content"]
+    if not desc:
+        md = soup.find("meta", attrs={"name": "description"})
+        if md and md.has_attr("content"):
+            desc = md["content"]
+
+    # published time
+    pub = None
+    for sel in [
+        ("meta", {"property": "article:published_time"}, "content"),
+        ("meta", {"itemprop": "datePublished"}, "content"),
+        ("time", {"itemprop": "datePublished"}, "datetime"),
+        ("time", {}, "datetime"),
+    ]:
+        tag, attrs, attr_name = sel
+        el = soup.find(tag, attrs=attrs)
+        if el and el.has_attr(attr_name):
+            pub = parse_date_str(el[attr_name])
+            if pub:
+                break
+
+    if not title:
+        # 非標準頁或特殊專題頁就跳過
+        return None
+
+    id_hint = content_id_from_url(url) or hashlib.md5(url.encode()).hexdigest()
+
+    return {
+        "id": id_hint,
+        "title": title,
+        "link": url,
+        "summary": desc or "",
+        "publishedAt": to_iso8601(pub),
+        "source": "ABC News (EN)",
+    }
+
+# ---------------- RSS 輔助（可沒有亦不影響） ----------------
+def try_rss_seed() -> list[tuple[str, datetime | None]]:
+    out = []
+    for u in RSS_TRY:
+        r = get(u)
+        if not r:
+            continue
+        try:
+            soup = BeautifulSoup(r.text, "xml")
+            for item in soup.find_all("item"):
+                link = item.find("link")
+                pubd = item.find("pubDate")
+                href = norm_url(link.get_text(strip=True)) if link else None
+                if not href:
+                    continue
+                dt = None
+                if pubd:
+                    try:
+                        dt = datetime.strptime(pubd.get_text(strip=True), "%a, %d %b %Y %H:%M:%S %z")
+                    except Exception:
+                        dt = None
+                out.append((href, dt))
+        except Exception:
+            pass
+    return dedupe_links(out)
+
+# ---------------- 主流程 ----------------
 def main():
-    items = crawl()
+    start = now_ts()
 
-    # 依發佈時間降序
-    items.sort(key=_published_key, reverse=True)
+    # 時間截停
+    cutoff_dt = None
+    if SINCE_HOURS and SINCE_HOURS > 0:
+        cutoff_dt = datetime.now(timezone.utc) - timedelta(hours=SINCE_HOURS)
 
-    # 只輸出最新 150 條
-    items = items[:MAX_OUTPUT]
+    # 建立「最新優先」frontier：(-epoch, seq, url)
+    seq = 0
+    frontier = []
+    pushed = set()
 
-    print(f"[DONE] output {len(items)} items")
+    def push_link(href: str, hint_dt: datetime | None):
+        nonlocal seq
+        if href in pushed:
+            return
+        if cutoff_dt and hint_dt and hint_dt < cutoff_dt:
+            return
+        score = -(hint_dt.timestamp() if hint_dt else (now_ts() - 3600 - seq))  # 沒時間就按發現序
+        heapq.heappush(frontier, (score, seq, href))
+        pushed.add(href)
+        seq += 1
 
-    # 如果你需要把 JSON 輸出到檔案，可取消以下兩行註解：
-    # with open("abc_en_out.json", "w", encoding="utf-8") as f:
-    #     json.dump(items, f, ensure_ascii=False, indent=2)
+    # 先放 RSS（最新）
+    for (href, dt) in try_rss_seed():
+        push_link(href, dt)
 
-    # 有啲 pipeline 會從 stdout 讀，呢度一拼輸出 JSON
-    # （如果你唔想經 stdout，註解呢兩行）
-    print(json.dumps(items, ensure_ascii=False))
+    # 再放各 hub 首頁（從中抽連結 + 列表級時間再入 frontier）
+    for s in SEEDS:
+        r = get(s)
+        if not r:
+            continue
+        pairs = parse_list(s, r.text)
+        for href, dt in pairs:
+            push_link(href, dt)
 
+    visited = set()
+    results: dict[str, dict] = {}
+
+    crawled = 0
+    while frontier and crawled < MAX_CRAWL:
+        _, _, url = heapq.heappop(frontier)
+        if url in visited:
+            continue
+        visited.add(url)
+
+        r = get(url)
+        if not r:
+            continue
+        art = parse_article(url, r.text)
+        crawled += 1
+
+        if art:
+            # canonical 去重（以 link 作 key）
+            key = art["link"]
+            results[key] = art
+
+        # 從文章頁再嘗試挖少量「相關連結」（同站且含 ID），但不過度擴散
+        if crawled < MAX_CRAWL:
+            try:
+                soup = BeautifulSoup(r.text, "html.parser")
+                # 只抽最多 10 條相關
+                picked = 0
+                for a in soup.find_all("a", href=True):
+                    if picked >= 10:
+                        break
+                    href = norm_url(a["href"], base=url)
+                    if not href:
+                        continue
+                    if not content_id_from_url(href):
+                        continue
+                    # 用列表順序近似時間（冇卡片時間）
+                    push_link(href, None)
+                    picked += 1
+            except Exception:
+                pass
+
+    # 輸出前整理：去重 → 按 publishedAt DESC → 取前 MAX_OUTPUT
+    items = list(results.values())
+
+    # 再以 id 去重（保險）
+    seen_ids = set()
+    uniq = []
+    for it in items:
+        iid = it.get("id") or hashlib.md5(it["link"].encode()).hexdigest()
+        if iid in seen_ids:
+            continue
+        seen_ids.add(iid)
+        uniq.append(it)
+
+    def sort_key(it):
+        pa = it.get("publishedAt")
+        try:
+            return datetime.strptime(pa, "%Y-%m-%dT%H:%M:%SZ") if pa else datetime.min.replace(tzinfo=timezone.utc)
+        except Exception:
+            try:
+                # 容忍 +00:00 形式
+                return datetime.fromisoformat(pa.replace("Z", "+00:00")) if pa else datetime.min.replace(tzinfo=timezone.utc)
+            except Exception:
+                return datetime.min.replace(tzinfo=timezone.utc)
+
+    uniq.sort(key=sort_key, reverse=True)
+    output = uniq[:MAX_OUTPUT]
+
+    took = now_ts() - start
+    print(f"[INFO] frontier seeds={len(pushed)} crawled={crawled} kept={len(output)} took={took:.1f}s", file=sys.stderr)
+
+    print(json.dumps(output, ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":
+    try:
+        from datetime import timedelta  # lazy import for cutoff option
+    except Exception:
+        pass
     main()
