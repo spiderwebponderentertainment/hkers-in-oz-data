@@ -126,6 +126,24 @@ def category_from_url(u: str) -> str | None:
         pass
     return None
 
+def category_from_entry_base(base: str) -> str | None:
+    """
+    由入口 base URL 推斷分類（/news/<section> ➜ 標題化；/news ➜ News）
+    用於 collect_from_entrypages() 當 hint。
+    """
+    try:
+        p = urlparse(base)
+        parts = [x for x in (p.path or "").strip("/").split("/") if x]
+        # /news/<section>/...
+        if len(parts) >= 2 and parts[0] == "news":
+            return _slug_title_en(parts[1])
+        # /news
+        if len(parts) == 1 and parts[0] == "news":
+            return _slug_title_en("news")
+    except Exception:
+        pass
+    return None
+
 # ---------------- JSON-LD / meta 解析 ----------------
 def parse_json_ld(html_text: str):
     """由 JSON-LD 取 headline/description/date/url/section（NewsArticle/Article）。"""
@@ -342,7 +360,7 @@ def pagination_candidates(base_url: str, pages_each: int) -> list[str]:
 
 def collect_from_entrypages() -> dict[str, str | None]:
     """
-    對每個入口 + 分頁候選頁抓連結，並帶上入口分類 hint。
+    對每個入口首頁抓連結，並帶上入口分類 hint。
     回傳：{ article_url: category_hint_or_None }
     """
     out: dict[str, str | None] = {}
