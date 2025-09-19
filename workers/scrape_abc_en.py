@@ -14,6 +14,7 @@ HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@examp
 TIMEOUT = 25
 MAX_ITEMS = 200  # 想再多可以加大
 FETCH_SLEEP = 0.4
+PAGES_EACH = 5  # 👈 每個入口試 5 頁
 ABC_HOST = "www.abc.net.au"
 ROBOTS_URL = "https://www.abc.net.au/robots.txt"
 
