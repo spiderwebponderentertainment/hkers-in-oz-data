@@ -8,13 +8,14 @@ from bs4 import BeautifulSoup
 
 # ---------------- 基本設定 ----------------
 HEADERS = {
+    # 預設用 Desktop Chrome（比較少被擋）
     "User-Agent": (
-        "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) "
-        "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 "
-        "Mobile/15E148 Safari/604.1"
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
     ),
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-AU,en;q=0.9",
+    "Referer": "https://www.google.com/",
 }
 REQ_TIMEOUT = (8, 20)  # (connect, read)
 MAX_CRAWL = 250        # 最多嘗試抓取的文章 URL 數
@@ -43,16 +44,46 @@ BAD_KEYWORDS = ("live-blog", "/page/", "#")
 
 
 # ---------------- HTTP Helper ----------------
-def get(url, **kw):
-    """帶輕量重試的 GET。"""
-    for attempt in range(3):
-        try:
-            return session.get(url, timeout=REQ_TIMEOUT, **kw)
-        except requests.RequestException as e:
-            if attempt == 2:
-                raise
-            time.sleep(0.6 * (attempt + 1))
+def _normalize_https(u: str) -> str:
+    # 強制 https，去除多餘 fragment
+    u = u.replace("http://", "https://").split("#", 1)[0]
+    return u
 
+def get(url, **kw):
+    """帶 fallback 的 GET：403/406 會嘗試 AMP/不同 UA。"""
+    url = _normalize_https(url)
+    variants = [url]
+    # 可能存在 AMP 版
+    if not url.endswith("?amp"):
+        variants.append(url + ("&amp" if "?" in url else "?amp"))
+    if not url.rstrip("/").endswith("/output=amp"):
+        variants.append(url.rstrip("/") + "/?output=amp")
+
+    # 兩套 UA：Desktop（預設）→ Mobile Safari
+    ua_desktop = HEADERS["User-Agent"]
+    ua_mobile = ("Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) "
+                 "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 "
+                 "Mobile/15E148 Safari/604.1")
+
+    last_exc = None
+    for ua in (ua_desktop, ua_mobile):
+        session.headers["User-Agent"] = ua
+        for v in variants:
+            for attempt in range(2):
+                try:
+                    r = session.get(v, timeout=REQ_TIMEOUT, **kw)
+                    # 403/406 再試下一個變體
+                    if r.status_code in (403, 406):
+                        time.sleep(0.3)
+                        continue
+                    r.raise_for_status()
+                    return r
+                except requests.RequestException as e:
+                    last_exc = e
+                    time.sleep(0.4 * (attempt + 1))
+    if last_exc:
+        raise last_exc
+    raise requests.RequestException("Unknown fetch error")
 
 # ---------------- 種子頁（不做分頁） ----------------
 SEED_PAGES = [
@@ -84,7 +115,7 @@ def extract_links(html_text, base):
         href = a["href"].strip()
         u = urljoin(base, href)
         # 清理 fragment
-        u = u.split("#", 1)[0]
+        u = _normalize_https(u)
         if _looks_like_article(u):
             urls.add(u)
     return urls
