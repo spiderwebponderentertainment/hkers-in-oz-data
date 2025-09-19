@@ -13,7 +13,6 @@ HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@examp
 TIMEOUT = 25
 MAX_ITEMS = 200            # 要 200
 FETCH_SLEEP = 0.5          # 抓單篇之間小睡，對站方友善
-PAGES_EACH = 5             # 每個入口試 5 頁
 
 SBS_HOST = "www.sbs.com.au"
 ROBOTS_URL = "https://www.sbs.com.au/robots.txt"
@@ -327,24 +326,6 @@ def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
         links.add(urljoin(base, m.group(0)))
     return list(links)
 
-def pagination_candidates(base_url: str, pages_each: int) -> list[str]:
-    """
-    生成常見的分頁 URL 嘗試：?page=N、?pg=N、/page/N/
-    第 1 頁回傳 base 本身
-    """
-    out = [base_url]
-    b = base_url.rstrip("/")
-    for n in range(2, pages_each + 1):
-        out.append(f"{b}?page={n}")
-        out.append(f"{b}?pg={n}")
-        out.append(f"{b}/page/{n}/")
-    # 去重保持順序
-    seen = set(); uniq = []
-    for u in out:
-        if u not in seen:
-            seen.add(u); uniq.append(u)
-    return uniq
-
 def category_from_entry_base(base: str) -> str | None:
     """由入口 base URL 推斷該入口對應的 Category（hint）"""
     try:
@@ -364,16 +345,16 @@ def collect_from_entrypages() -> dict[str, str | None]:
     out: dict[str, str | None] = {}
     for base in ENTRY_BASES:
         hint = category_from_entry_base(base)
-        for page in pagination_candidates(base, PAGES_EACH):
-            try:
-                html_text = fetch(page).text
-                for u in links_from_html_anywhere(html_text, base=page):
-                    if u not in out:
-                        out[u] = hint
-            except Exception as e:
-                print(f"[WARN] entry scrape fail {page}: {e}", file=sys.stderr)
-                continue
-            time.sleep(0.2)
+        try:
+            # 只抓入口首頁；不再嘗試分頁
+            html_text = fetch(base).text
+            for u in links_from_html_anywhere(html_text, base=base):
+                if u not in out:
+                    out[u] = hint
+        except Exception as e:
+            print(f"[WARN] entry scrape fail {base}: {e}", file=sys.stderr)
+            continue
+        time.sleep(0.2)
     return out
 
 # ---------------- C) 英文新聞區淺層 BFS 爬（擴大覆蓋） ----------------
@@ -511,15 +492,13 @@ if __name__ == "__main__":
     urls_a = collect_from_sitemaps()
     print(f"[INFO] sitemap urls: {len(urls_a)}", file=sys.stderr)
 
-    # B) 入口頁直抓（含分頁 & category hint）
-    seed_pages = []
-    for base in ENTRY_BASES:
-        seed_pages += pagination_candidates(base, PAGES_EACH)
+    # B) 入口頁直抓（只抓入口首頁；不再嘗試分頁）
+    seed_pages = ENTRY_BASES[:]
     url_to_hint = collect_from_entrypages()
     urls_b = list(url_to_hint.keys())
     print(f"[INFO] entry page urls: {len(urls_b)}", file=sys.stderr)
 
-    # C) /news/ 淺層 BFS（擴大覆蓋）
+    # C) /news/ 淺層 BFS（擴大覆蓋；以入口首頁作為 seeds）
     urls_crawl = crawl_news_section(
         seeds=seed_pages,
         max_pages=120
