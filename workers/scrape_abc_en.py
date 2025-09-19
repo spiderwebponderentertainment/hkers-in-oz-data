@@ -289,13 +289,29 @@ def crawl():
 
 
 def _published_key(x):
+    """
+    排序鍵：優先用 published_at；冇嘅話用 URL 裏面嘅 YYYY-MM-DD 作回退（設 12:00Z）。
+    """
+    # 1) 正常路：用 published_at
     ts = x.get("published_at")
-    if not ts:
-        return 0
-    try:
-        return int(datetime.fromisoformat(ts.replace("Z", "+00:00")).timestamp())
-    except Exception:
-        return 0
+    if ts:
+        try:
+            return int(datetime.fromisoformat(ts.replace("Z", "+00:00")).timestamp())
+        except Exception:
+            pass
+    # 2) 回退：由 URL 取日期
+    url = x.get("url", "")
+    m = re.search(r"/(\d{4})-(\d{2})-(\d{2})/", url)
+    if m:
+        y, mo, d = map(int, m.groups())
+        try:
+            # 中午 12:00Z，避免凌晨邊界；只用嚟比大小
+            dt = datetime(y, mo, d, 12, 0, 0, tzinfo=timezone.utc)
+            return int(dt.timestamp())
+        except Exception:
+            pass
+    # 3) 冇辦法就最尾
+    return 0
 
 
 def main():
