@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
+from xml.etree import ElementTree as ET
 
 # ---------------- 基本設定 ----------------
 HEADERS = {
@@ -42,10 +43,52 @@ BAD_PREFIXES = (
 # 丟棄含有以下關鍵字的鏈接
 BAD_KEYWORDS = ("live-blog", "/page/", "#")
 
+# ---------------- 入口設定（你保留嘅常量） ----------------
+ABC_HOST = "www.abc.net.au"
+ROBOTS_URL = "https://www.abc.net.au/robots.txt"
+
+ENTRY_BASES = [
+    "https://www.abc.net.au/news",
+    "https://www.abc.net.au/news/justin",
+    "https://www.abc.net.au/news/politics",
+    "https://www.abc.net.au/news/world",
+    "https://www.abc.net.au/news/business",
+    "https://www.abc.net.au/news/sport",
+    "https://www.abc.net.au/news/health",
+    "https://www.abc.net.au/news/science",
+    "https://www.abc.net.au/news/environment",
+]
+
+SECTION_ALLOWED_PREFIXES = (
+    "https://www.abc.net.au/news/",
+)
+
+ABC_FEEDS = [
+    # Top / Just In
+    "https://www.abc.net.au/news/feed/45910/rss.xml",  # Top Stories
+    "https://www.abc.net.au/news/feed/51120/rss.xml",  # Just In
+    # 主欄
+    "https://www.abc.net.au/news/feed/52278/rss.xml",  # Australia
+    "https://www.abc.net.au/news/feed/51892/rss.xml",  # World
+    "https://www.abc.net.au/news/feed/51800/rss.xml",  # Business
+    "https://www.abc.net.au/news/feed/53446/rss.xml",  # Science
+    "https://www.abc.net.au/news/feed/43606/rss.xml",  # Health
+    "https://www.abc.net.au/news/feed/45924/rss.xml",  # Technology
+    "https://www.abc.net.au/news/feed/45926/rss.xml",  # Sport
+    "https://www.abc.net.au/news/feed/45920/rss.xml",  # Politics
+    "https://www.abc.net.au/news/feed/45922/rss.xml",  # Analysis & Opinion
+]
+
+# Google News（English + AU）作最後補位
+GN_URL = (
+    "https://news.google.com/rss/search"
+    "?q=site:abc.net.au/news"
+    "&hl=en-AU&gl=AU&ceid=AU:en"
+)
 
 # ---------------- HTTP Helper ----------------
 def _normalize_https(u: str) -> str:
-    # 強制 https，去除多餘 fragment
+    # 強制 https，去除 fragment
     u = u.replace("http://", "https://").split("#", 1)[0]
     return u
 
@@ -85,50 +128,6 @@ def get(url, **kw):
         raise last_exc
     raise requests.RequestException("Unknown fetch error")
 
-# ---------------- 種子頁（不做分頁） ----------------
-ABC_HOST = "www.abc.net.au" 
-ROBOTS_URL = "https://www.abc.net.au/robots.txt" 
-# 入口頁（你提供的） 
-ENTRY_BASES = [ 
-    "https://www.abc.net.au/news", 
-    "https://www.abc.net.au/news/justin", 
-    "https://www.abc.net.au/news/politics", 
-    "https://www.abc.net.au/news/world", 
-    "https://www.abc.net.au/news/business", 
-    "https://www.abc.net.au/news/sport", 
-    "https://www.abc.net.au/news/health", 
-    "https://www.abc.net.au/news/science", 
-    "https://www.abc.net.au/news/environment", 
-] 
-# 只巡航 /news/，避免去到 iview 等大區域 
-SECTION_ALLOWED_PREFIXES = ( 
-    "https://www.abc.net.au/news/", 
-) 
-# 官方 RSS（作補位/增量） 
-ABC_FEEDS = [ 
-    # Top / Just In 
-    "https://www.abc.net.au/news/feed/45910/rss.xml", # Top Stories 
-    "https://www.abc.net.au/news/feed/51120/rss.xml", # Just In 
-    # 主欄 
-    "https://www.abc.net.au/news/feed/52278/rss.xml", # Australia 
-    "https://www.abc.net.au/news/feed/51892/rss.xml", # World 
-    "https://www.abc.net.au/news/feed/51800/rss.xml", # Business 
-    "https://www.abc.net.au/news/feed/53446/rss.xml", # Science 
-    "https://www.abc.net.au/news/feed/43606/rss.xml", # Health 
-    "https://www.abc.net.au/news/feed/45924/rss.xml", # Technology 
-    "https://www.abc.net.au/news/feed/45926/rss.xml", # Sport 
-    "https://www.abc.net.au/news/feed/45920/rss.xml", # Politics 
-    "https://www.abc.net.au/news/feed/45922/rss.xml", # Analysis & Opinion 
-] 
-
-# Google News（English + AU）作最後補位
-GN_URL = ( 
-    "https://news.google.com/rss/search"
-    "?q=site:abc.net.au/news" 
-    "&hl=en-AU&gl=AU&ceid=AU:en" 
-)
-
-
 # ---------------- Link 抽取與篩選 ----------------
 def _looks_like_article(u: str) -> bool:
     if any(k in u for k in BAD_KEYWORDS):
@@ -137,18 +136,37 @@ def _looks_like_article(u: str) -> bool:
         return False
     return bool(GOOD_URL_RE.match(u))
 
-
 def extract_links(html_text, base):
     soup = BeautifulSoup(html_text, "lxml")
     urls = set()
     for a in soup.select("a[href]"):
         href = a["href"].strip()
         u = urljoin(base, href)
-        # 清理 fragment
         u = _normalize_https(u)
         if _looks_like_article(u):
             urls.add(u)
     return urls
+
+def fetch_feed_links(feed_url: str):
+    """從 RSS 取 <link>，只要符合正文規則嘅 ABC 文章。"""
+    out = set()
+    try:
+        r = get(feed_url)
+        r.raise_for_status()
+        root = ET.fromstring(r.content)
+        for item in root.findall(".//item"):
+            link_el = item.find("link")
+            if link_el is not None and link_el.text:
+                u = _normalize_https(link_el.text.strip())
+                if _looks_like_article(u):
+                    out.add(u)
+    except Exception as e:
+        print(f"[WARN] feed fetch fail {feed_url}: {e}")
+    return out
+
+def fetch_google_news_links():
+    """由 Google News RSS 抽返 ABC 正文連結。"""
+    return fetch_feed_links(GN_URL)
 
 # 由 ABC 文章 URL 取尾段數字 ID（愈大愈新）
 def _id_from_url(u: str) -> int:
@@ -172,14 +190,12 @@ def _text(x):
         return ""
     return " ".join(x.get_text(" ", strip=True).split())
 
-
 def _first(soup, selectors):
     for sel in selectors:
         el = soup.select_one(sel)
         if el:
             return el
     return None
-
 
 def _parse_datetime(s: str):
     # 嘗試 ISO8601
@@ -188,9 +204,7 @@ def _parse_datetime(s: str):
         return dt.astimezone(timezone.utc)
     except Exception:
         pass
-    # 兜底：抽出數字時間戳（ABC 不常用）
     return None
-
 
 def parse_article(url: str, html_text: str):
     """
@@ -219,7 +233,7 @@ def parse_article(url: str, html_text: str):
         h1 = _first(soup, ["h1", "header h1", "article h1"])
         title = _text(h1) if h1 else ""
 
-    # 發佈時間：og:article:published_time / article:published_time / time[datetime]
+    # 發佈時間：meta -> time[datetime] -> URL 日期兜底
     published = None
     for sel in [
         'meta[property="article:published_time"]',
@@ -235,8 +249,6 @@ def parse_article(url: str, html_text: str):
         t = soup.select_one("time[datetime]")
         if t and t.get("datetime"):
             published = _parse_datetime(t["datetime"].strip())
-
-    # 冇 meta 就用 URL 日期兜底
     if not published:
         published = _date_from_url(url)
 
@@ -265,7 +277,7 @@ def parse_article(url: str, html_text: str):
     if not title and not body:
         return None
 
-    # 穩定 id：用 URL / 或最後數字ID
+    # 穩定 id：用 URL 尾段數字，否則 md5(url)
     m = re.search(r"/(\d+)/?$", url)
     stable_id = m.group(1) if m else hashlib.md5(url.encode("utf-8")).hexdigest()
 
@@ -279,18 +291,17 @@ def parse_article(url: str, html_text: str):
     }
     return item
 
-
 # ---------------- 抓取主流程 ----------------
 def fetch_article(url):
     resp = get(url)
     resp.raise_for_status()
     return parse_article(url, resp.text)
 
-
 def crawl():
-    print(f"[INFO] entry page urls: {len(SEED_PAGES)}")
+    # 1) 入口頁（你嘅 ENTRY_BASES）
+    print(f"[INFO] entry bases: {len(ENTRY_BASES)}")
     entry_urls = set()
-    for seed in SEED_PAGES:
+    for seed in ENTRY_BASES:
         try:
             r = get(seed)
             r.raise_for_status()
@@ -298,17 +309,27 @@ def crawl():
             entry_urls |= links
         except Exception as e:
             print(f"[WARN] entry scrape fail {seed}: {e}")
-    
+
+    # 2) 官方 RSS
+    feed_links = set()
+    for feed in ABC_FEEDS:
+        feed_links |= fetch_feed_links(feed)
+
+    # 3) Google News RSS 補位
+    gn_links = fetch_google_news_links()
+
+    # 合併，同一規則過濾
+    all_candidates = {u for u in (entry_urls | feed_links | gn_links) if _looks_like_article(u)}
+
     # 用尾段數字 ID 倒序（最新優先），再裁 MAX_CRAWL
-    entry_urls = sorted(entry_urls, key=_id_from_url, reverse=True)
-    print(f"[INFO] entry page urls: {len(entry_urls)}")
+    entry_urls_sorted = sorted(all_candidates, key=_id_from_url, reverse=True)
+    print(f"[INFO] entry page urls: {len(entry_urls_sorted)}")
 
-    # 限制爬取數量（避免跑太耐）
-    entry_urls = entry_urls[:MAX_CRAWL]
+    entry_urls_sorted = entry_urls_sorted[:MAX_CRAWL]
+    print(f"[INFO] crawl urls: {len(entry_urls_sorted)}")
 
-    print(f"[INFO] crawl urls: {len(entry_urls)}")
     out = []
-    for u in entry_urls:
+    for u in entry_urls_sorted:
         try:
             art = fetch_article(u)
             if art:
@@ -316,7 +337,6 @@ def crawl():
         except Exception as e:
             print(f"[WARN] fetch article fail {u}: {e}")
     return out
-
 
 def _published_key(x):
     """
@@ -343,11 +363,9 @@ def _published_key(x):
     # 3) 冇辦法就最尾
     return 0
 
-
 def main():
     items = crawl()
 
-    # 依發佈時間降序
     # 先用 id 去重，避免同一篇多個變體
     uniq = {}
     for it in items:
@@ -355,6 +373,8 @@ def main():
         if iid not in uniq:
             uniq[iid] = it
     items = list(uniq.values())
+
+    # 依發佈時間降序（帶 URL 日期兜底）
     items.sort(key=_published_key, reverse=True)
 
     # 只輸出最新 150 條
@@ -367,9 +387,7 @@ def main():
     #     json.dump(items, f, ensure_ascii=False, indent=2)
 
     # 有啲 pipeline 會從 stdout 讀，呢度一拼輸出 JSON
-    # （如果你唔想經 stdout，註解呢兩行）
     print(json.dumps(items, ensure_ascii=False))
-
 
 if __name__ == "__main__":
     main()
