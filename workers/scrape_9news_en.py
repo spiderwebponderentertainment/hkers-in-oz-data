@@ -272,11 +272,11 @@ def collect_from_sitemaps() -> list[str]:
         try:
             xml = fetch(sm).text
             for u in parse_sitemap_urls(xml):
-                if "9news.com.au" in u:
-                    # 🚫 濾走 sitemap index / 任何 .xml
+                # 只收 9news domain，並濾走所有 .xml 項
+                if "9news.com.au" not in u:
+                    continue
                 if u.lower().endswith(".xml"):
                     continue
-                # ✅ 只保留似文章嘅 URL（9News 文章通常唔係 .xml）
                 out.append(u)
         except Exception as e:
             print(f"[WARN] sitemap fail {sm}: {e}", file=sys.stderr)
@@ -309,24 +309,23 @@ def sanitize_9news(u: str, base: str) -> str | None:
     return u
 
 def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
-    links, seen = [], set()
+    links = set()
     soup = BeautifulSoup(html_text, "html.parser")
     for a in soup.find_all("a", href=True):
         raw = a["href"]
         href = _sanitize_url(raw, base)
-        if not href:
-            continue
-        if "/news/" in href:
+        if href and "/news/" in href:
             links.add(href)
- 2) script/JSON 文字內的 URL
-     for m in ARTICLE_HREF_RE.finditer(html_text):
+    # 2) script/JSON 文字內的 URL
+    for m in ARTICLE_HREF_RE.finditer(html_text):
         u = _sanitize_url(m.group(0), base)
         if u:
             links.add(u)
-     for m in REL_ARTICLE_RE.finditer(html_text):
+    for m in REL_ARTICLE_RE.finditer(html_text):
         u = _sanitize_url(urljoin(base, m.group(0)), base)
         if u:
             links.add(u)
+    return list(links)
 
 def collect_from_entrypages() -> dict[str, str | None]:
     out: dict[str, str | None] = {}
@@ -359,7 +358,7 @@ def crawl_site(seeds: list[str], max_pages: int = 100) -> list[str]:
         except Exception as e:
             print(f"[WARN] crawl fetch fail {url}: {e}", file=sys.stderr); continue
             if not html_text:
-            # 非 HTML（例如 XML sitemap / API）— 跳過，避免用 HTML parser
+            # 非 HTML（例如 XML / API）— 跳過
             pages_visited += 1
             time.sleep(FETCH_SLEEP)
             continue
@@ -475,15 +474,15 @@ if __name__ == "__main__":
            html_text = fetch_html(u)
             if not html_text:
                 continue
-       hint = hint_map.get(u)
-             item = make_item(u, html_text, hint_section=hint)
-             # 以 link 去重（可選）
-             if any(x["link"] == item["link"] for x in articles):
-                 continue
-             articles.append(item)
-             time.sleep(FETCH_SLEEP)
-         except Exception as e:
-             print(f="[WARN] fetch article fail {u}: {e}", file=sys.stderr)
+            hint = hint_map.get(u)
+            item = make_item(u, html_text, hint_section=hint)
+            # 以 link 去重（可選）
+            if any(x["link"] == item["link"] for x in articles):
+                continue
+            articles.append(item)
+            time.sleep(FETCH_SLEEP)
+        except Exception as e:
+            print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
 
     if len(articles) < MAX_ITEMS // 2:
         print("[INFO] few items; fallback Google News", file=sys.stderr)
