@@ -474,7 +474,7 @@ if __name__ == "__main__":
 
     articles = []
     seen_links = set()
-        for u in merged:
+    for u in merged:
         # 🚫 保險：任何 .xml 一律跳過（另外在 fetch_html 亦會擋）
         if u.lower().endswith(".xml"):
             continue
