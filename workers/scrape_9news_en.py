@@ -239,7 +239,11 @@ def collect_from_sitemaps() -> list[str]:
             xml = fetch(sm).text
             for u in parse_sitemap_urls(xml):
                 if "9news.com.au" in u:
-                    out.append(u)
+                    # 🚫 濾走 sitemap index / 任何 .xml
+                if u.lower().endswith(".xml"):
+                    continue
+                # ✅ 只保留似文章嘅 URL（9News 文章通常唔係 .xml）
+                out.append(u)
         except Exception as e:
             print(f"[WARN] sitemap fail {sm}: {e}", file=sys.stderr)
         if len(out) >= 12 * MAX_ITEMS: break
@@ -249,6 +253,10 @@ def collect_from_sitemaps() -> list[str]:
             seen.add(u); uniq.append(u)
     return uniq
 
+def _is_probably_html(resp: requests.Response) -> bool:
+    ct = resp.headers.get("Content-Type", "").lower()
+    return ("text/html" in ct) or ("application/xhtml+xml" in ct)
+    
 # ---------------- B) 入口頁抽 link ----------------
 ARTICLE_HREF_RE = re.compile(r'https?://(?:www\.)?9news\.com\.au/[A-Za-z0-9\-/_.]+')
 REL_ARTICLE_RE = re.compile(r'/[A-Za-z0-9\-/_.]+')
@@ -415,8 +423,15 @@ if __name__ == "__main__":
     articles = []
     seen_links = set()
     for u in merged:
+        # 🚫 保險：任何 .xml 一律跳過
+        if u.lower().endswith(".xml"):
+            continue
         try:
-            html_text = fetch(u).text
+            r = fetch(u)
+            # 🚫 非 HTML（例如 XML / JSON / 影片檔）跳過
+            if not _is_probably_html(r):
+                continue
+            html_text = r.text
             link_final = canonicalize_link(u, html_text)
             if link_final in seen_links: continue
             hint = hint_map.get(u)
