@@ -67,6 +67,40 @@ def fetch(url: str) -> requests.Response:
     r.raise_for_status()
     return r
 
+def _is_probably_html(resp: requests.Response) -> bool:
+    ct = resp.headers.get("Content-Type", "").lower()
+    # 部分站會用 text/html; charset=UTF-8、application/xhtml+xml
+    return ("text/html" in ct) or ("application/xhtml+xml" in ct)
+    
+def fetch_html(url: str) -> str | None:
+    """只在 Content-Type 類似 HTML 時回傳文字；否則回 None（避免用 HTML parser 讀 XML）。"""
+    try:
+        r = fetch(url)
+        if not _is_probably_html(r):
+            return None
+        return r.text
+    except Exception:
+        return None
+
+def _sanitize_url(u: str, base: str) -> str | None:
+    """清理抽到嘅 URL：相對→絕對；去尾部雜訊/標點/多餘連結片段。"""
+    if not u:
+        return None
+    u = html.unescape(u).strip()
+    if u.startswith("//"):
+        u = "https:" + u
+    if u.startswith("/"):
+        u = urljoin(base, u)
+    # 取第一段，防止 "url1 http://url2"
+    u = u.split()[0]
+    # 去尾部常見的符號（包括令 9News video link 404 的尾部 '-'）
+    u = u.rstrip('"\')]>.,;:-')
+    # 簡單合法性
+    p = urlparse(u)
+    if not (p.scheme in ("http", "https") and p.netloc):
+        return None
+    return u
+
 def canonicalize_link(url: str, html_text: str | None = None) -> str:
     if html_text:
         try:
@@ -278,15 +312,21 @@ def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
     links, seen = [], set()
     soup = BeautifulSoup(html_text, "html.parser")
     for a in soup.find_all("a", href=True):
-        u = sanitize_9news(a["href"], base)
-        if u and u not in seen: seen.add(u); links.append(u)
-    for m in ARTICLE_HREF_RE.finditer(html_text):
-        u = sanitize_9news(m.group(0), base)
-        if u and u not in seen: seen.add(u); links.append(u)
-    for m in REL_ARTICLE_RE.finditer(html_text):
-        u = sanitize_9news(urljoin(base, m.group(0)), base)
-        if u and u not in seen: seen.add(u); links.append(u)
-    return links
+        raw = a["href"]
+        href = _sanitize_url(raw, base)
+        if not href:
+            continue
+        if "/news/" in href:
+            links.add(href)
+ 2) script/JSON 文字內的 URL
+     for m in ARTICLE_HREF_RE.finditer(html_text):
+        u = _sanitize_url(m.group(0), base)
+        if u:
+            links.add(u)
+     for m in REL_ARTICLE_RE.finditer(html_text):
+        u = _sanitize_url(urljoin(base, m.group(0)), base)
+        if u:
+            links.add(u)
 
 def collect_from_entrypages() -> dict[str, str | None]:
     out: dict[str, str | None] = {}
@@ -315,9 +355,14 @@ def crawl_site(seeds: list[str], max_pages: int = 100) -> list[str]:
     while q and pages_visited < max_pages:
         url = q.popleft()
         try:
-            html_text = fetch(url).text
+            html_text = fetch_html(url)
         except Exception as e:
             print(f"[WARN] crawl fetch fail {url}: {e}", file=sys.stderr); continue
+            if not html_text:
+            # 非 HTML（例如 XML sitemap / API）— 跳過，避免用 HTML parser
+            pages_visited += 1
+            time.sleep(FETCH_SLEEP)
+            continue
         for art in links_from_html_anywhere(html_text, base=url):
             found_articles.add(art)
         soup = BeautifulSoup(html_text, "html.parser")
@@ -423,25 +468,22 @@ if __name__ == "__main__":
     articles = []
     seen_links = set()
     for u in merged:
-        # 🚫 保險：任何 .xml 一律跳過
+        # 🚫 保險：任何 .xml 一律跳過（另外在 fetch_html 亦會擋）
         if u.lower().endswith(".xml"):
             continue
         try:
-            r = fetch(u)
-            # 🚫 非 HTML（例如 XML / JSON / 影片檔）跳過
-            if not _is_probably_html(r):
+           html_text = fetch_html(u)
+            if not html_text:
                 continue
-            html_text = r.text
-            link_final = canonicalize_link(u, html_text)
-            if link_final in seen_links: continue
-            hint = hint_map.get(u)
-            item = make_item(u, html_text, hint_section=hint)
-            seen_links.add(link_final)
-            articles.append(item)
-            if len(articles) >= MAX_ITEMS * 2: break
-            time.sleep(FETCH_SLEEP)
-        except Exception as e:
-            print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
+       hint = hint_map.get(u)
+             item = make_item(u, html_text, hint_section=hint)
+             # 以 link 去重（可選）
+             if any(x["link"] == item["link"] for x in articles):
+                 continue
+             articles.append(item)
+             time.sleep(FETCH_SLEEP)
+         except Exception as e:
+             print(f="[WARN] fetch article fail {u}: {e}", file=sys.stderr)
 
     if len(articles) < MAX_ITEMS // 2:
         print("[INFO] few items; fallback Google News", file=sys.stderr)
