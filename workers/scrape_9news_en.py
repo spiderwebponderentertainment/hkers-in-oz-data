@@ -349,29 +349,37 @@ def should_visit(url: str) -> bool:
 def crawl_site(seeds: list[str], max_pages: int = 100) -> list[str]:
     q = deque(); seen_pages = set(); found_articles = set()
     for s in seeds:
-        if should_visit(s): q.append(s); seen_pages.add(s)
+        if should_visit(s): 
+            q.append(s); seen_pages.add(s)
     pages_visited = 0
     while q and pages_visited < max_pages:
         url = q.popleft()
         try:
             html_text = fetch_html(url)
         except Exception as e:
-            print(f"[WARN] crawl fetch fail {url}: {e}", file=sys.stderr); continue
-            if not html_text:
+            print(f"[WARN] crawl fetch fail {url}: {e}", file=sys.stderr)
+            continue
+
+        if not html_text:
             # 非 HTML（例如 XML / API）— 跳過
             pages_visited += 1
             time.sleep(FETCH_SLEEP)
             continue
+
         for art in links_from_html_anywhere(html_text, base=url):
             found_articles.add(art)
+
         soup = BeautifulSoup(html_text, "html.parser")
         for a in soup.find_all("a", href=True):
             href = a["href"]
-            if href.startswith("/"): href = urljoin(url, href)
+            if href.startswith("/"): 
+                href = urljoin(url, href)
             if href and href not in seen_pages and should_visit(href):
                 seen_pages.add(href); q.append(href)
+
         pages_visited += 1
         time.sleep(FETCH_SLEEP)
+
     return list(found_articles)
 
 # ---------------- D) Google News 補位 ----------------
