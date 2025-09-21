@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
 TIMEOUT = 20
 SLEEP = 0.3
-MAX_ITEMS = 250
+MAX_ITEMS = 200
 
 # 2CR（WordPress 常見 feed 路徑，可同時試幾個）
 FEED_CANDIDATES = [
