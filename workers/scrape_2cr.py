@@ -6,6 +6,16 @@ from urllib.parse import urljoin
 import requests
 import feedparser
 from bs4 import BeautifulSoup
+try:
+    # 伺服器端統一：簡→繁（香港用字）
+    from opencc import OpenCC
+    _CC_S2HK = OpenCC("s2hk")
+    def to_trad(s: str | None) -> str | None:
+        return _CC_S2HK.convert(s) if s else s
+except Exception:
+    # 無 opencc 時安全降級：直接返回原文
+    def to_trad(s: str | None) -> str | None:
+        return s
 
 HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
 TIMEOUT = 20
@@ -125,9 +135,10 @@ def parse_one_feed(url: str) -> list[dict]:
             _id = hashlib.md5((link or title).encode()).hexdigest()
             item = {
                 "id": _id,
-                "title": title or link,
+                # 後端轉繁（香港）
+                "title": to_trad(title) or link,
                 "link": link,
-                "summary": summary,
+                "summary": to_trad(summary),
                 "publishedAt": pub,
                 "source": SOURCE_NAME,
                 "fetchedAt": iso_now(),
