@@ -1,37 +1,1617 @@
 {
   "source": "9News",
-  "generatedAt": "2025-09-21T18:28:50.134705+00:00",
+  "generatedAt": "2025-09-21T20:53:40.915919+00:00",
   "count": 200,
   "items": [
     {
-      "id": "1ea612832522a7449d1e81d6892384e5",
-      "title": "9News - Latest news and headlines from Australia and the world",
-      "link": "https://www.9news.com.au/",
-      "summary": "Latest news and headlines from Australia and the world",
-      "publishedAt": "2025-09-21T15:22:07Z",
+      "id": "84fe9ee92ac9bddb4ae0dd5bf4ae4c92",
+      "title": "Tyra Stowers, Reporter Gold Coast News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/gold-coast/tyra-stowers",
+      "summary": "Meet Tyra Stowers, Reporter on the Gold Coast News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:18:57.964149+00:00",
-      "sourceCategory": null
-    },
-    {
-      "id": "651678349177c7389330b55b3eb27c8d",
-      "title": "TODAY Show News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/today-show",
-      "summary": "Meet the TODAY Show News Team from 9News Australia",
-      "publishedAt": "2025-09-21T15:22:07Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:24:30.581835+00:00",
+      "fetchedAt": "2025-09-21T20:01:01.871895+00:00",
       "sourceCategory": "Meet-the-team"
     },
     {
-      "id": "35c690083618364e461f370f416eeb22",
-      "title": "Australian National Weather Forecast",
-      "link": "https://www.9news.com.au/weather",
-      "summary": "National weather forecast for Australia including capital city temperatures, rain radar maps, satellite images, synoptic chart, and weather warnings",
-      "publishedAt": "2025-09-21T15:22:07Z",
+      "id": "6cb6dcb74b41d8c7cfa59b5dc32bb3fa",
+      "title": "Jesse Welsh, Associate Video Producer Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/jesse-welsh",
+      "summary": "Meet Jesse Welsh, Associate Video Producer on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:26:41.897252+00:00",
-      "sourceCategory": "Weather"
+      "fetchedAt": "2025-09-21T20:01:59.896239+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "22997c542b59b556fcf8ab28949554ee",
+      "title": "Mark Gottlieb, Sports Reporter Brisbane News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/brisbane/mark-gottlieb",
+      "summary": "Meet Mark Gottlieb, Sports Reporter on the Brisbane News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:04:40.936073+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "0cedc20269b6013a3f6336af81e32047",
+      "title": "Adrian Alaberg, Presenter TODAY Show News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/today-show/adrian-alaberg",
+      "summary": "Meet Adrian Alaberg, Presenter on the TODAY Show News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:05:15.183292+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "1e793b4b457c37e98108d50e62866f2d",
+      "title": "James Bracey, Sports Presenter Sydney News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/sydney/james-bracey",
+      "summary": "Meet James Bracey, Sports Presenter on the Sydney News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:05:41.509116+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "9c768e11484331f4f39d7afbba2e417a",
+      "title": "Good news headlines - 9News",
+      "link": "https://www.9news.com.au/good-news",
+      "summary": "Good news headlines - 9News",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:06:30.809709+00:00",
+      "sourceCategory": "Good-news"
+    },
+    {
+      "id": "5f283f7ee4eaf42e63ad468b6d35995e",
+      "title": "Alicia Muling, Sports Reporter Melbourne News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/melbourne/alicia-muling",
+      "summary": "Meet Alicia Muling, Sports Reporter on the Melbourne News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:06:54.426853+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "20bda46bf6a23c676b6c466ddd5f2c49",
+      "title": "Texas news headlines - 9News",
+      "link": "https://www.9news.com.au/texas",
+      "summary": "Latest Texas news stories including wild weather, crime and accidents, and other political news",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:07:01.783498+00:00",
+      "sourceCategory": "Texas"
+    },
+    {
+      "id": "c43cc7276c437e0e136a5e6369cf7301",
+      "title": "Accident report today & news headlines for cars, motorbikes, trucks and traffic accident around Australia and the world",
+      "link": "https://www.9news.com.au/accidents",
+      "summary": "Traffic accident report & alerts today and recent events, road incidents, collisions and other accident-related breaking news to keep you informed.",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:07:35.168133+00:00",
+      "sourceCategory": "Accidents"
+    },
+    {
+      "id": "c7bfefe623099b82ee78265b277fc14b",
+      "title": "Perth News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/perth",
+      "summary": "Meet the Perth News Team from 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:07:55.653023+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "4addc22d8da7c10525fdffe1f96aa894",
+      "title": "Far North Queensland - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/far-north-queensland",
+      "summary": "Far North Queensland - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:08:09.977000+00:00",
+      "sourceCategory": "Far-north-queensland"
+    },
+    {
+      "id": "cf3bd6f48ea3bf4a03932c8c4c8bab0b",
+      "title": "Ireland news headlines - 9News",
+      "link": "https://www.9news.com.au/ireland",
+      "summary": "Latest Irish news including Ireland politics, sport, St Patrick's Day celebrations, and other Irish news stories and videos",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:08:47.072719+00:00",
+      "sourceCategory": "Ireland"
+    },
+    {
+      "id": "f00bc3d4dc634ce0cce3e24d70ac0eb7",
+      "title": "Heatwave - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/heatwave",
+      "summary": "Heatwave - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:09:18.563747+00:00",
+      "sourceCategory": "Heatwave"
+    },
+    {
+      "id": "2d7b6c87721aa06db3181e1c24b4bce8",
+      "title": "Elana McIntyre, Reporter Melbourne News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/melbourne/elana-mcintyre",
+      "summary": "Meet Elana McIntyre, Reporter on the Melbourne News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:09:46.858143+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "9711a36f5aa8d3377ba9fac87a81136b",
+      "title": "Gareth Parker, Network News Content Director Sydney News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/sydney/gareth-parker",
+      "summary": "Meet Gareth Parker, Network News Content Director on the Sydney News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:09:57.993154+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "abfb564f11b906c15b807a8c0967f1ef",
+      "title": "Babies - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/babies",
+      "summary": "Babies - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:10:52.795730+00:00",
+      "sourceCategory": "Babies"
+    },
+    {
+      "id": "2dcaed9fd8470bd17d58467e18db92db",
+      "title": "Terror Attack - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/terror-attack",
+      "summary": "Terror Attack - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:11:08.727208+00:00",
+      "sourceCategory": "Terror-attack"
+    },
+    {
+      "id": "1349d01a00a3487c52e89ad49f3a5e6f",
+      "title": "WA News - 9News - Latest updates and breaking headlines Western Australia",
+      "link": "https://www.9news.com.au/western-australia/2",
+      "summary": "Latest Western Australian news stories and videos including WA traffic news, crime, political news, mining, and other Perth news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:11:09.620238+00:00",
+      "sourceCategory": "Western-australia"
+    },
+    {
+      "id": "3dc4d81555326606ab2fadb1f1dabc0c",
+      "title": "Tara Brown Anthony Dowsley and Serge Negus, 60 Minutes News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/60-minutes/tara-brown-anthony-dowsley-and-serge-negus",
+      "summary": "Meet Tara Brown Anthony Dowsley and Serge Negus, on the 60 Minutes News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:11:28.829031+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "234a0daa78a1b7f2d090342d2c95e3c1",
+      "title": "Alex Cullen, TODAY Sport Presenter TODAY Show News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/today-show/alex-cullen",
+      "summary": "Meet Alex Cullen, TODAY Sport Presenter on the TODAY Show News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:11:34.140365+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "71f45d09120a88036b2ce786e43aeb13",
+      "title": "Federal election: Updates & live coverage - newspoll, debates, when is the next Australian election",
+      "link": "https://www.9news.com.au/federal-election",
+      "summary": "Check this page for latest Federal Election headlines covering election news polls, debates, policy and budget promises from both sides of government.",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:11:58.908352+00:00",
+      "sourceCategory": "Federal-election"
+    },
+    {
+      "id": "cf97411d7dccc5577570adf4a6b8830d",
+      "title": "Gun news headlines - 9News",
+      "link": "https://www.9news.com.au/guns",
+      "summary": "Latest gun news headlines, gun control, shootings, firearm laws and government legislation news",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:12:15.553041+00:00",
+      "sourceCategory": "Guns"
+    },
+    {
+      "id": "3b623ea3e124f66bff78a219946498ad",
+      "title": "Kate Collins, Presenter Adelaide News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/adelaide/kate-collins",
+      "summary": "Meet Kate Collins, Presenter on the Adelaide News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:12:24.567312+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "530d93042a861c320a7f136ae2404478",
+      "title": "Public Transport - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/bus",
+      "summary": "Public Transport - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:12:27.921053+00:00",
+      "sourceCategory": "Bus"
+    },
+    {
+      "id": "78d60b57ff3099e53e9e988130041475",
+      "title": "Wollongong - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/wollongong",
+      "summary": "Wollongong - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:13:07.006853+00:00",
+      "sourceCategory": "Wollongong"
+    },
+    {
+      "id": "3750a1b1fe69f650400cafd75e7149a7",
+      "title": "Melbourne news - 9News - Latest updates and breaking local news today",
+      "link": "https://www.9news.com.au/melbourne/2",
+      "summary": "Latest news from Melbourne, Australia including, politics, crime, traffic, and sport news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:13:30.461084+00:00",
+      "sourceCategory": "Melbourne"
+    },
+    {
+      "id": "f0c9e9ca7e676647ab540134682aa446",
+      "title": "South America news headlines - 9News",
+      "link": "https://www.9news.com.au/south-america",
+      "summary": "Latest South America news stories including drugs and crime, political news, natural disasters, and sport headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:13:58.873283+00:00",
+      "sourceCategory": "South-america"
+    },
+    {
+      "id": "7f10300cf5c617ee9394aead8fb66456",
+      "title": "Royal family news headlines -9News",
+      "link": "https://www.9news.com.au/royals",
+      "summary": "Latest Royal family news including the Queen, Prince George, Prince William, Prince Harry, Duchess Kate, Princess Mary, Prince Frederick, Prince Philip, and Prince Charles",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:15:02.145616+00:00",
+      "sourceCategory": "Royals"
+    },
+    {
+      "id": "58138327ba73d920a9629ed19a31a638",
+      "title": "Cairns - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/cairns",
+      "summary": "Cairns - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:15:17.988103+00:00",
+      "sourceCategory": "Cairns"
+    },
+    {
+      "id": "5b9978be6d505cda1732a0133ccfc371",
+      "title": "Polly Hanning, Multimedia Producer Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/polly-hanning",
+      "summary": "Meet Polly Hanning, Multimedia Producer on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:15:24.060612+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "79daf65fe6b3ab00574ea52cccd3d6b8",
+      "title": "Pakistan news headlines - 9News",
+      "link": "https://www.9news.com.au/pakistan",
+      "summary": "Latest news from Pakistan including crime, politics, cricket and other sport news",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:15:28.650994+00:00",
+      "sourceCategory": "Pakistan"
+    },
+    {
+      "id": "00e87d14ead747706da235e55b861646",
+      "title": "Westminster - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/westminster",
+      "summary": "Westminster - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:15:40.569220+00:00",
+      "sourceCategory": "Westminster"
+    },
+    {
+      "id": "9be8e3c2a57e8ced18fb1d37b2bbab9a",
+      "title": "Sweden news headlines - 9News",
+      "link": "https://www.9news.com.au/sweden",
+      "summary": "Latest Sweden news stories including Swedish royal news, crime and terrorism, and political news",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:15:52.672447+00:00",
+      "sourceCategory": "Sweden"
+    },
+    {
+      "id": "c679b6c9d8f39616ab77db51fb4899c7",
+      "title": "Gina Rushton, Deputy Editor nine.com.au Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/gina-rushton",
+      "summary": "Meet Gina Rushton, Deputy Editor nine.com.au on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:16:05.977826+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "7e7ddc575e5a4f910c863a93d26de958",
+      "title": "Skydiving - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/skydiving",
+      "summary": "Skydiving - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:16:35.903002+00:00",
+      "sourceCategory": "Skydiving"
+    },
+    {
+      "id": "11361a538a55c8f98a039c6a3e1cb9ad",
+      "title": "Pope Francis - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/pope-francis",
+      "summary": "Pope Francis - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:17:18.560786+00:00",
+      "sourceCategory": "Pope-francis"
+    },
+    {
+      "id": "e1db41b3c56262bc97b9fcc1ff295abd",
+      "title": "Science news headlines - 9News",
+      "link": "https://www.9news.com.au/science",
+      "summary": "Latest science news stories including scientific discoveries, amazing feats of science and technology, space, health and other science news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:17:31.251127+00:00",
+      "sourceCategory": "Science"
+    },
+    {
+      "id": "a861fd01c58fc0c964306dd0f8b78b55",
+      "title": "Shark attack news & alerts",
+      "link": "https://www.9news.com.au/shark-attack",
+      "summary": "Latest shark news including shark attacks, great white sightings, deterrent devices, and other shark-related news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:17:39.598494+00:00",
+      "sourceCategory": "Shark-attack"
+    },
+    {
+      "id": "83d30cd0bae3c4ae240ca4f602518916",
+      "title": "Aircraft news headlines - 9News",
+      "link": "https://www.9news.com.au/aircraft",
+      "summary": "Latest aircraft information including passenger planes, fighter jets, other commercial airplanes, helicopters, crash investigations, aviation technology and news",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:17:45.555433+00:00",
+      "sourceCategory": "Aircraft"
+    },
+    {
+      "id": "bd7f5c229b778ad426a036c11f80d027",
+      "title": "Rebecca Judd, Presenter Melbourne News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/melbourne/rebecca-judd",
+      "summary": "Meet Rebecca Judd, Presenter on the Melbourne News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:18:07.810489+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "8a1b3b80fd0a885c7da91e83b4f59dee",
+      "title": "Photos - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/photos",
+      "summary": "Photos - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:18:10.586121+00:00",
+      "sourceCategory": "Photos"
+    },
+    {
+      "id": "cca86a0ee1e1aa54123d1d3680723976",
+      "title": "Welfare news headlines - 9News",
+      "link": "https://www.9news.com.au/welfare",
+      "summary": "Latest welfare news stories and videos including Centrelink news, welfare cheats, government legislation, and other related news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:18:15.927825+00:00",
+      "sourceCategory": "Welfare"
+    },
+    {
+      "id": "b6dba0cc73c04fde20e24a2cdf9ebc1e",
+      "title": "Jonathan Guildford, Stuff.co.nz Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/jonathan-guildford",
+      "summary": "Meet Jonathan Guildford, Stuff.co.nz on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:18:22.307507+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "68b346524c1f645aa2fba19637790ae2",
+      "title": "Germany news - 9News - Latest updates and breaking news today",
+      "link": "https://www.9news.com.au/germany",
+      "summary": "Latest news headlines from Germany including, political news, terrorism and crime, and sport stories, and videos",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:18:31.393679+00:00",
+      "sourceCategory": "Germany"
+    },
+    {
+      "id": "e7d3bc08084915ef21648dbcfad89d1c",
+      "title": "Brenton Ragless, Presenter Adelaide News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/adelaide/brenton-ragless",
+      "summary": "Meet Brenton Ragless, Presenter on the Adelaide News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:19:43.529812+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "22a1df18fb587fc7500d58c236d988bc",
+      "title": "Fires news headlines - 9News",
+      "link": "https://www.9news.com.au/fires",
+      "summary": "Breaking fire emergency news alerts including house fires, industrial fires, bushfires, arson crime and court cases, and fire rescues and evacuations",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:19:46.063691+00:00",
+      "sourceCategory": "Fire"
+    },
+    {
+      "id": "1ad13a1fdc7db47ae547de3f4c9c1b5e",
+      "title": "Renee Bargh, Entertainment Reporter TODAY Show News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/today-show/renee-bargh",
+      "summary": "Meet Renee Bargh, Entertainment Reporter on the TODAY Show News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:19:58.098267+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "8c9db176ad03e17d9282246db20328fc",
+      "title": "Jye Marshall, Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/jye-marshall",
+      "summary": "Meet Jye Marshall, on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:20:14.076260+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "f9d918307439944c6ad332a06a26fab5",
+      "title": "MH 17 - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/mh17",
+      "summary": "MH 17 - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:20:18.700175+00:00",
+      "sourceCategory": "Mh17"
+    },
+    {
+      "id": "7598d466d43327d331877db9381266ff",
+      "title": "Ukraine - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/ukraine",
+      "summary": "Ukraine - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:20:19.784080+00:00",
+      "sourceCategory": "Ukraine"
+    },
+    {
+      "id": "cf46c7ed7961e3696483568717518233",
+      "title": "Izabella Staskowski, Reporter Melbourne News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/melbourne/izabella-staskowski",
+      "summary": "Meet Izabella Staskowski, Reporter on the Melbourne News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:20:22.773596+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "c551302868fdc193705e931016a3e608",
+      "title": "Navy news headlines - 9News",
+      "link": "https://www.9news.com.au/navy",
+      "summary": "Latest navy news including navy bases, submarines and warships, sailors and high-tech training facilities",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:20:40.686774+00:00",
+      "sourceCategory": "Navy"
+    },
+    {
+      "id": "abbba69ec6abdcf423b483c4eb59b431",
+      "title": "Diana Hayward, Producer Adelaide News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/adelaide/diana-hayward",
+      "summary": "Meet Diana Hayward, Producer on the Adelaide News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:21:20.042607+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "b40be0c77e33127e904d34d5dbcc50db",
+      "title": "Charlotte Goodlet, Reporter Sydney News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/sydney/charlotte-goodlet",
+      "summary": "Meet Charlotte Goodlet, Reporter on the Sydney News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:21:39.813739+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "a9d31b3addff2f7352a49c9880ae0a66",
+      "title": "Mental health news headlines - 9News",
+      "link": "https://www.9news.com.au/mental-health",
+      "summary": "Latest mental health news including suicide prevention, depression, schizophrenia, dementia, psychology, mental health charities and funds raising, and other mental health news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:22:23.770507+00:00",
+      "sourceCategory": "Mental-health"
+    },
+    {
+      "id": "e10bca56bf0c1942b78a8e4737c7f229",
+      "title": "Jessica McCarthy, Stuff Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/jessica-mccarthy",
+      "summary": "Meet Jessica McCarthy, Stuff on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:22:34.735273+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "9fd37b0deef8414aa5fba7096f6c0a10",
+      "title": "Eliza Freeman, Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/eliza-freeman",
+      "summary": "Meet Eliza Freeman, on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:23:05.232938+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "6ee283cae75984c17ba4bfb03a519f7f",
+      "title": "University - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/university",
+      "summary": "University - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:23:10.968710+00:00",
+      "sourceCategory": "University"
+    },
+    {
+      "id": "f7f58e05e0810dae25b42bd8a812a613",
+      "title": "Tony Abbott - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/tony-abbott",
+      "summary": "Tony Abbott - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:23:15.114981+00:00",
+      "sourceCategory": "Tony-abbott"
+    },
+    {
+      "id": "d847185f09d3d62e087903e0cbf61518",
+      "title": "Gaza strip news headlines - 9News",
+      "link": "https://www.9news.com.au/gaza",
+      "summary": "Latest news headlines from the Gaza Strip in the Middle East including terrorism, war, and peace",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:23:18.265712+00:00",
+      "sourceCategory": "Gaza"
+    },
+    {
+      "id": "554fef627a9a7f15f61811702df905d6",
+      "title": "Korea news headlines - 9News",
+      "link": "https://www.9news.com.au/korea",
+      "summary": "Latest news from Korea including North and South Korean headlines, politics, crime, and technology",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:24:00.950641+00:00",
+      "sourceCategory": "Korea"
+    },
+    {
+      "id": "f994e3256983ca07911bead04d861ae7",
+      "title": "Bridge Collapse - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/bridge-collapse",
+      "summary": "Bridge Collapse - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:24:26.267126+00:00",
+      "sourceCategory": "Bridge-collapse"
+    },
+    {
+      "id": "2c5fac34bba8cccf6d313d0e4548ceca",
+      "title": "VIC News - 9News - Latest updates and breaking headlines Victoria",
+      "link": "https://www.9news.com.au/victoria/2",
+      "summary": "Latest Victoria news stories and videos including crime and traffic news, Victorian politics and sport news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:24:29.694049+00:00",
+      "sourceCategory": "Victoria"
+    },
+    {
+      "id": "a992c905583ddafb9c84a69312c1b0a0",
+      "title": "Nat Yoannidis, Sport Reporter Melbourne News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/melbourne/nat-yoannidis",
+      "summary": "Meet Nat Yoannidis, Sport Reporter on the Melbourne News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:25:28.890393+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "222cb2f3bdc99f8ad5daa9f9b54462fa",
+      "title": "Sindy Nguyen, Head of Search, Digital Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/sindy-nguyen",
+      "summary": "Meet Sindy Nguyen, Head of Search, Digital on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:25:38.349850+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "bbeb925bdb7c366afe9f764ef78cf4b2",
+      "title": "Thai cave rescue news and updates",
+      "link": "https://www.9news.com.au/thai-cave-rescue",
+      "summary": "See the latest news about the twelve boys and the coach from a football team trapped in Thailand's Tham Luang cave.",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:25:41.282992+00:00",
+      "sourceCategory": "Thai-cave-rescue"
+    },
+    {
+      "id": "d60578d05f63fe7eadc8dba836fe308b",
+      "title": "Nato - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/nato",
+      "summary": "Nato - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:26:39.218049+00:00",
+      "sourceCategory": "Nato"
+    },
+    {
+      "id": "c3f6677f44ae4fd6a65adef2c31828d3",
+      "title": "Darwin News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/darwin",
+      "summary": "Meet the Darwin News Team from 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:26:49.516939+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "0cc8170e3dbafaf37cfe1c474e2db713",
+      "title": "Zac Bailey, Sports Reporter Sydney News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/sydney/zac-bailey",
+      "summary": "Meet Zac Bailey, Sports Reporter on the Sydney News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:26:57.737135+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "14a13c53ddeedf76bf0a03fd2bf89689",
+      "title": "Monika Kos, 9News Perth Afternoon 4.00 Presenter Perth News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/perth/monika-kos",
+      "summary": "Meet Monika Kos, 9News Perth Afternoon 4.00 Presenter on the Perth News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:27:00.597219+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "b7b2025d918ec18b698b66ce5bd40fcd",
+      "title": "NSW Police breaking news: Latest investigations & incidents - Missing persons, crime stoppers New South Wales",
+      "link": "https://www.9news.com.au/nsw-police",
+      "summary": "NSW Police breaking news: Latest investigations & incidents - Missing persons, crime stoppers New South Wales",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:27:36.334992+00:00",
+      "sourceCategory": "Nsw-police"
+    },
+    {
+      "id": "452fe438fd61b9fee4068fd249890121",
+      "title": "Emergencies news headlines - 9News",
+      "link": "https://www.9news.com.au/emergencies/2",
+      "summary": "Latest emergency news alerts, accident incidents and first respondents, health emergencies, police and fire stories, search and rescues",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:27:38.920472+00:00",
+      "sourceCategory": "Emergencies"
+    },
+    {
+      "id": "4f087acedd243602594f9c5005703aa2",
+      "title": "Trent Kniese, Sports Reporter Melbourne News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/melbourne/trent-kniese",
+      "summary": "Meet Trent Kniese, Sports Reporter on the Melbourne News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:28:32.276863+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "abc92fd33de414b84c60deda38b9c9d0",
+      "title": "Explosions news headlines - 9News",
+      "link": "https://www.9news.com.au/explosions",
+      "summary": "Latest explosion news alerts, faulty devices, industrial fires, fireworks, gas explosions, video footage and photos",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:28:50.193929+00:00",
+      "sourceCategory": "Explosions"
+    },
+    {
+      "id": "1a31d6f96d32129f761a6f4ec85cae41",
+      "title": "Telstra - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/telstra",
+      "summary": "Telstra - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:29:04.286774+00:00",
+      "sourceCategory": "Telstra"
+    },
+    {
+      "id": "7ee1b70226e12891d8318624de323ced",
+      "title": "Imogen Carfrae, Chief of Staff, 9News Sydney Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/imogen-carfrae",
+      "summary": "Meet Imogen Carfrae, Chief of Staff, 9News Sydney on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:29:09.090065+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "6c173b44366d98c8165622b54f3b63a9",
+      "title": "Kidnapped - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/kidnapped",
+      "summary": "Kidnapped - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:29:11.676342+00:00",
+      "sourceCategory": "Kidnapped"
+    },
+    {
+      "id": "81425a410a8074edb57dad6c9c17175a",
+      "title": "60 Minutes - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/60-minutes",
+      "summary": "Latest news and videos from the Australian TV program, 60 Minutes",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:29:29.090900+00:00",
+      "sourceCategory": "60-minutes"
+    },
+    {
+      "id": "90b3845df477b1260d931674c425491a",
+      "title": "Amber Sherlock, Presenter Sydney News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/sydney/amber-sherlock",
+      "summary": "Meet Amber Sherlock, Presenter on the Sydney News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:29:44.114825+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "3ba2518b7c465e7bc57d30bd19cb80d7",
+      "title": "Bali news headlines - 9News",
+      "link": "https://www.9news.com.au/bali",
+      "summary": "Latest news from Bali including holiday and travel destinations, political news, drugs and crime headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:29:49.012326+00:00",
+      "sourceCategory": "Bali"
+    },
+    {
+      "id": "272e7846f3c81746052b927244dae57f",
+      "title": "Tracy Ferrier, AAP Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/tracy-ferrier",
+      "summary": "Meet Tracy Ferrier, AAP on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:30:08.490749+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "e73535410c3bd989ffbf7000e02bab22",
+      "title": "Cyclone - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/cyclone",
+      "summary": "Cyclone - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:30:18.669275+00:00",
+      "sourceCategory": "Cyclone"
+    },
+    {
+      "id": "2cde2caabe47f636c98b81d3edb4bdcf",
+      "title": "Emma Lawrence, Sports Reporter Sydney News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/sydney/emma-lawrence",
+      "summary": "Meet Emma Lawrence, Sports Reporter on the Sydney News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:31:21.115005+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "a241f4ca2f2fb056279f312f0a3ffe00",
+      "title": "Poison - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/poison",
+      "summary": "Poison - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:32:44.448114+00:00",
+      "sourceCategory": "Poison"
+    },
+    {
+      "id": "7d4b1fa1f3976c5f8829449297e15cb4",
+      "title": "Easter news: Latest news updates including holiday trading hours, things to do and Easter celebrations",
+      "link": "https://www.9news.com.au/easter",
+      "summary": "Latest Easter news updates including Royal Easter Show news, Easter celebrations, and all things chocolate",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:33:13.581332+00:00",
+      "sourceCategory": "Easter"
+    },
+    {
+      "id": "952189cff8fc7c25dc175d0f819d470a",
+      "title": "Federal Politics News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/federal-politics",
+      "summary": "Meet the Federal Politics News Team from 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:33:17.550348+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "aa0f73124426e05324b494ad08f6de50",
+      "title": "Terrorism news headlines - 9News",
+      "link": "https://www.9news.com.au/terrorism",
+      "summary": "Latest terrorism news including terror attacks, ISIS, ISIL, suicide bombings, Islamic State, terrorism laws and related political news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:33:22.060209+00:00",
+      "sourceCategory": "Terrorism"
+    },
+    {
+      "id": "dcd6da288b2ebb2ebf465e71170f5beb",
+      "title": "Petrol Prices News: Latest Updates & Headlines, Petrol Prices Near Me and More | 9News",
+      "link": "https://www.9news.com.au/petrol-prices",
+      "summary": "Stay updated on petrol prices in Australia with the latest news and headlines from 9News. Explore price fluctuations, key factors, city cycles and consumer impacts.",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:33:23.974003+00:00",
+      "sourceCategory": "Petrol-prices"
+    },
+    {
+      "id": "1e955a4029465a781cdbce1290e5de2a",
+      "title": "Tik Tok - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/tiktok",
+      "summary": "Tik Tok - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:34:54.597074+00:00",
+      "sourceCategory": "Tiktok"
+    },
+    {
+      "id": "cc62ecea0662cdd20540dd8190f8dafa",
+      "title": "Bonnie Raynor, Sports Reporter Perth News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/perth/bonnie-raynor",
+      "summary": "Meet Bonnie Raynor, Sports Reporter on the Perth News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:34:57.199284+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "e29928d8fe9208e1c333cdef4ebb3a71",
+      "title": "Sean Diddy Combs - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/sean-diddy-combs",
+      "summary": "Sean Diddy Combs - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:35:25.434249+00:00",
+      "sourceCategory": "Sean-diddy-combs"
+    },
+    {
+      "id": "9b78f73413f7a2098e44deb20d7c2360",
+      "title": "Uber news headlines - 9News",
+      "link": "https://www.9news.com.au/uber",
+      "summary": "Latest Uber news stories including taxi accidents and crime, driverless taxis, the legality of Uber taxis, and Uber trending stories and headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:35:56.895641+00:00",
+      "sourceCategory": "Uber"
+    },
+    {
+      "id": "a6523327f791baef0cbda8f7e4509cb8",
+      "title": "Robodebt - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/robodebt",
+      "summary": "Robodebt - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:36:21.062671+00:00",
+      "sourceCategory": "Robodebt"
+    },
+    {
+      "id": "a19123ea09bb90403ea4875dd32fbb0f",
+      "title": "Food recall news and information collection page",
+      "link": "https://www.9news.com.au/food-recall",
+      "summary": "A food recall can be initiated by a food producer if there are concerns that put consumers at risk or cause potential legal complications for the producer. Check this section to stay up to date on the latest news.",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:36:24.647496+00:00",
+      "sourceCategory": "Food-recall"
+    },
+    {
+      "id": "524db946a4e07ae3ce63cc7eed3241fc",
+      "title": "Murder news headlines - 9News",
+      "link": "https://www.9news.com.au/murder",
+      "summary": "Latest murder news including murder convictions and court cases, unsolved cases and investigations, attempted murder, and other murder news stories",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:36:35.808792+00:00",
+      "sourceCategory": "Murder"
+    },
+    {
+      "id": "5fa5c56f4222c2205932b75a7fe6a125",
+      "title": "Pope - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/pope",
+      "summary": "Pope - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:37:28.484458+00:00",
+      "sourceCategory": "Pope"
+    },
+    {
+      "id": "d2dca1a2c802e44937d33304fc58dd57",
+      "title": "James Brennan, Associate Video Producer Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/james-brennan",
+      "summary": "Meet James Brennan, Associate Video Producer on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:37:38.221931+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "8090373e343ab569b5110311118d9ac8",
+      "title": "Libya - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/libya",
+      "summary": "Libya - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:37:44.233196+00:00",
+      "sourceCategory": "Libya"
+    },
+    {
+      "id": "73a72f3fbab76bd47da6542a3219888a",
+      "title": "Nick McKenzie, 60 Minutes News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/60-minutes/nick-mckenzie",
+      "summary": "Meet Nick McKenzie, on the 60 Minutes News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:38:48.412515+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "e52f80aadb21be363552471f6c97fa0c",
+      "title": "Gold Coast News - 9News - Latest updates and breaking local news today",
+      "link": "https://www.9news.com.au/gold-coast/2",
+      "summary": "Latest Gold Coast news headlines, Gold Coast sport news, politics, property and real estate, crime and other coastal Queensland news and videos",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:38:58.941830+00:00",
+      "sourceCategory": "Gold-coast"
+    },
+    {
+      "id": "c7cc52c9d72f0e405a202000780896d8",
+      "title": "Childcare News: Latest Updates & Headlines from Australia and around the world | 9News",
+      "link": "https://www.9news.com.au/childcare",
+      "summary": "Stay up to date with 9News' headlines of early childhood education and care in Australia, covering affordability, accessibility, quality, government policies and sector developments.",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:39:09.455571+00:00",
+      "sourceCategory": "Childcare"
+    },
+    {
+      "id": "741912e891d9a872815fa3495e018ee8",
+      "title": "Associated Press, Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/associated-press",
+      "summary": "Meet Associated Press, on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:39:18.130325+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "9647ef4537af770cd18b3812b50653b4",
+      "title": "6 Pm News - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/6pm-news",
+      "summary": "6 Pm News - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:39:20.336849+00:00",
+      "sourceCategory": "6pm-news"
+    },
+    {
+      "id": "5a18150c815e394a2338b09363f675ee",
+      "title": "Public Holidays - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/public-holidays",
+      "summary": "Public Holidays - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:39:25.381793+00:00",
+      "sourceCategory": "Public-holidays"
+    },
+    {
+      "id": "5bd0a06dcc44e35801c527264525afe2",
+      "title": "Kevin Rudd - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/kevin-rudd",
+      "summary": "Kevin Rudd - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:39:29.225809+00:00",
+      "sourceCategory": "Kevin-rudd"
+    },
+    {
+      "id": "846f46f7e0db35554e06a2111dddbb95",
+      "title": "Education news headlines - 9News",
+      "link": "https://www.9news.com.au/education",
+      "summary": "Latest education news including government policies and funding, schooling curriculum, university degrees, student loans and debt, and other education news",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:39:34.327406+00:00",
+      "sourceCategory": "Education"
+    },
+    {
+      "id": "bf87cb00e70a8d1ab0148299c292d462",
+      "title": "Retail news headlines - 9News",
+      "link": "https://www.9news.com.au/retail",
+      "summary": "Latest retail news including retail bargains, business sales figures, consumer confidence news, and shopping centre news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:40:07.157813+00:00",
+      "sourceCategory": "Retail"
+    },
+    {
+      "id": "15120dd4eed46f4738c455c30da34efe",
+      "title": "Jetstar - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/jetstar",
+      "summary": "Jetstar - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:40:33.402501+00:00",
+      "sourceCategory": "Jetstar"
+    },
+    {
+      "id": "6d68a4713564fd2f7e7ddf8e2990fab4",
+      "title": "Xi Jinping - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/xi-jinping",
+      "summary": "Xi Jinping - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:40:43.139339+00:00",
+      "sourceCategory": "Xi-jinping"
+    },
+    {
+      "id": "fe8569ffab685605f946e3deb4f065ce",
+      "title": "Royal Family - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/royal-family/2",
+      "summary": "Royal Family - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:41:01.291752+00:00",
+      "sourceCategory": "Royal-family"
+    },
+    {
+      "id": "cedbc7b9526c6795c680d02bd8df3e52",
+      "title": "Prisons - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/prison",
+      "summary": "Prisons - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:41:30.141432+00:00",
+      "sourceCategory": "Prison"
+    },
+    {
+      "id": "eaa5ddfc4845bfc167c57bbb23bf4731",
+      "title": "Property news headlines - 9News",
+      "link": "https://www.9news.com.au/property",
+      "summary": "Latest property news including real estate prices, property bubble predictions, mortgages and bank lending, and capital city market news and trends",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:42:21.521496+00:00",
+      "sourceCategory": "Property"
+    },
+    {
+      "id": "2761a8fd435ee3d3952e63b209aa3fc2",
+      "title": "Storms - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/storms",
+      "summary": "Storms - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:42:24.103438+00:00",
+      "sourceCategory": "Storms"
+    },
+    {
+      "id": "f741688eafd8c8e450c49188a9870409",
+      "title": "Ben Terry, Producer Adelaide News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/adelaide/ben-terry",
+      "summary": "Meet Ben Terry, Producer on the Adelaide News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:42:57.895000+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "8a279a70fb20a45437433225327c0f5e",
+      "title": "Travel news headlines - 9News",
+      "link": "https://www.9news.com.au/travel",
+      "summary": "Latest travel news stories including travel alerts, holiday destination information, tourism, airfares and airline news, and other travel photos, videos and headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:43:04.945378+00:00",
+      "sourceCategory": "Travel"
+    },
+    {
+      "id": "f2a4db71826a8bff0c26e9d71584e18e",
+      "title": "Julia Gillard - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/julia-gillard",
+      "summary": "Julia Gillard - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:43:25.732066+00:00",
+      "sourceCategory": "Julia-gillard"
+    },
+    {
+      "id": "833c4460d7fc91fbb09a247b0b5ebacc",
+      "title": "Ben Dobbin, Sports Reporter Brisbane News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/brisbane/ben-dobbin",
+      "summary": "Meet Ben Dobbin, Sports Reporter on the Brisbane News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:44:08.784576+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "9dcb3880034f90e8c695d7dcadc92e68",
+      "title": "Defence News: Latest Updates & Headlines from Australia and around the world | 9News",
+      "link": "https://www.9news.com.au/defence",
+      "summary": "Stay informed with the latest defence updates from 9News, featuring headlines on the Australian Army, Navy, Air Force, military spending, global conflicts and Australia's role in international alliances.",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:44:13.329006+00:00",
+      "sourceCategory": "Defence"
+    },
+    {
+      "id": "fab17b71a4a95796541c2fc916cd4236",
+      "title": "Kathleen Tong, Optimisation Producer Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/kathleen-tong",
+      "summary": "Meet Kathleen Tong, Optimisation Producer on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:44:17.142368+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "d06ecccad124aaecdc0dd7d006d9995f",
+      "title": "Portugal - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/portugal",
+      "summary": "Portugal - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:44:18.111860+00:00",
+      "sourceCategory": "Portugal"
+    },
+    {
+      "id": "a9bb372d9a97c78209cd534eefa9ae9d",
+      "title": "Africa news headlines - 9News",
+      "link": "https://www.9news.com.au/africa/2",
+      "summary": "News from Africa, including South Africa, Botswana, Zimbabwe, Kenya, and the rest of the continent",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:44:20.496250+00:00",
+      "sourceCategory": "Africa"
+    },
+    {
+      "id": "10141d198e11c92ad67b3ad758bc2d3a",
+      "title": "Palestine news headlines - 9News",
+      "link": "https://www.9news.com.au/palestine",
+      "summary": "Latest Palestinian news from the West Bank including Israeli-Palestinian peace efforts",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:44:30.764117+00:00",
+      "sourceCategory": "Palestine"
+    },
+    {
+      "id": "bd25cbedc435a42053f4e01c8e0a64e1",
+      "title": "Natural disasters news alerts - 9News",
+      "link": "https://www.9news.com.au/natural-disasters",
+      "summary": "Latest news on natural disasters including wild weather, volcanic eruptions, tsunamis, landslides, bushfires, floods, plagues and other acts of God",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:44:43.887094+00:00",
+      "sourceCategory": "Natural-disasters"
+    },
+    {
+      "id": "54e7f41064f0edcb19ad7611cd7a1c40",
+      "title": "Hannah Bowers, Producer 60 Minutes News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/60-minutes/hannah-bowers",
+      "summary": "Meet Hannah Bowers, Producer on the 60 Minutes News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:45:03.008839+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "4f232261669661b56a9d8e84733c35aa",
+      "title": "Melbourne News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/melbourne",
+      "summary": "Meet the Melbourne News Team from 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:45:16.653472+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "e4dff12a0e029dc0eb7b54bf5e6cdb1a",
+      "title": "UK Politics - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/uk-politics",
+      "summary": "UK Politics - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:45:38.391927+00:00",
+      "sourceCategory": "Uk-politics"
+    },
+    {
+      "id": "32e5f0be4db889d67240816188e499f3",
+      "title": "China - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/china/2",
+      "summary": "China - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:45:49.965340+00:00",
+      "sourceCategory": "China"
+    },
+    {
+      "id": "0595656230156607b75ff93962ecf2a0",
+      "title": "Radio news headlines - 9News",
+      "link": "https://www.9news.com.au/radio",
+      "summary": "Latest radio news stories including radio broadcast news, radio ratings, digital radio, talkback radio shock-jocks and other radio news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:46:26.647314+00:00",
+      "sourceCategory": "Alan-jones"
+    },
+    {
+      "id": "7137cb49e4f16ea26f6ac36797cba22f",
+      "title": "Coronavirus updates, latest news and important information on the outbreak",
+      "link": "https://www.9news.com.au/coronavirus",
+      "summary": "Check this page for latest news updates and breaking headlines on the coronavirus 'COVID-19' pandemic and its impact in Australia and around the world.",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:46:32.236210+00:00",
+      "sourceCategory": "Coronavirus"
+    },
+    {
+      "id": "9aa292cf6e0eecc53a855ca31acae732",
+      "title": "Spider - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/spider",
+      "summary": "Spider - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:46:46.184345+00:00",
+      "sourceCategory": "Spider"
+    },
+    {
+      "id": "b0e6c7bffc20f9a8226d3fc0685110ae",
+      "title": "Russia news headlines - 9News",
+      "link": "https://www.9news.com.au/russia/2",
+      "summary": "Latest news from Russia and Moscow including global politics and conflict, crime, and other Russian news headlines",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:47:02.547566+00:00",
+      "sourceCategory": "Russia"
+    },
+    {
+      "id": "e240f8243a9bee527f5b8642c348e21a",
+      "title": "Bourke Street - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/bourke-street",
+      "summary": "Bourke Street - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:47:15.883803+00:00",
+      "sourceCategory": "Bourke-street"
+    },
+    {
+      "id": "9ffc2f1c3866ccdefa2d34c10206a917",
+      "title": "Lindt Café Siege news headlines - 9News",
+      "link": "https://www.9news.com.au/lindt-cafe-siege",
+      "summary": "Latest news on the Lindt Café Siege in Martin Place, Sydney",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:47:20.242256+00:00",
+      "sourceCategory": "Lindt-cafe-siege"
+    },
+    {
+      "id": "593e533f6e55440ea85f2baf42269b41",
+      "title": "Steve Larkin, AAP Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/steve-larkin",
+      "summary": "Meet Steve Larkin, AAP on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:47:32.405887+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "244eb8e9641f56e0130036b7e09710d4",
+      "title": "Peter Malinauskas - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/peter-malinauskas",
+      "summary": "Peter Malinauskas - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:47:37.515159+00:00",
+      "sourceCategory": "Peter-malinauskas"
+    },
+    {
+      "id": "e42f631fd372c5aa6f3abfc234e254be",
+      "title": "Thomas, Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/thomas",
+      "summary": "Meet Thomas, on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:48:22.082882+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "1f286c3cfec708e8e8b4015e354cbeac",
+      "title": "John Howard - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/john-howard",
+      "summary": "John Howard - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:48:29.971432+00:00",
+      "sourceCategory": "John-howard"
+    },
+    {
+      "id": "354f19d6e42d180aa7a04e1f4d6ceb6c",
+      "title": "Volcano - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/volcano",
+      "summary": "Volcano - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:49:16.005663+00:00",
+      "sourceCategory": "Volcano"
+    },
+    {
+      "id": "679487275ec2a10e64aba2d703557169",
+      "title": "SA news - 9News - Latest updates and breaking headlines South Australia",
+      "link": "https://www.9news.com.au/south-australia/2",
+      "summary": "Latest news stories from South Australia and Adelaide including crime news, traffic incidents, and politics",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:49:38.114734+00:00",
+      "sourceCategory": "South-australia"
+    },
+    {
+      "id": "aa03b9e0ce2294bb3d3ec937b3d38ff2",
+      "title": "Coffee - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/coffee",
+      "summary": "Coffee - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:50:08.667314+00:00",
+      "sourceCategory": "Coffee"
+    },
+    {
+      "id": "80d4a6de582372afc5f81fe8ab7dc600",
+      "title": "Kate Middleton - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/kate-middleton",
+      "summary": "Kate Middleton - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:50:23.045089+00:00",
+      "sourceCategory": "Kate-middleton"
+    },
+    {
+      "id": "f59f8c3cd649ea476bdca1c563f6ff2d",
+      "title": "Tom Morris, Chief Football Reporter Melbourne News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/melbourne/tom-morris",
+      "summary": "Meet Tom Morris, Chief Football Reporter on the Melbourne News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:50:33.834637+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "6803e672361512701bfc72807b897141",
+      "title": "Jack Hahn, Reporter TODAY Show News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/today-show/jack-hahn",
+      "summary": "Meet Jack Hahn, Reporter on the TODAY Show News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:50:41.675825+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "00a954997c41c46d699c79b7d2b76641",
+      "title": "Sydney News - 9News - Latest updates and breaking local news today",
+      "link": "https://www.9news.com.au/sydney/2",
+      "summary": "Latest breaking news headlines from Sydney, New South Wales including traffic news, politics, crime and sport news",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:51:48.961521+00:00",
+      "sourceCategory": "Sydney"
+    },
+    {
+      "id": "6b20211a1331ee6f72616f6e1129de62",
+      "title": "Nick Toscano, Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/nick-toscano",
+      "summary": "Meet Nick Toscano, on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:52:28.930151+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "08846fd33e92272f613e104fcd8d6d57",
+      "title": "Bathurst - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/bathurst",
+      "summary": "Bathurst - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:52:39.992373+00:00",
+      "sourceCategory": "Bathurst"
+    },
+    {
+      "id": "5a2ba8a1fdc152e7f69cff8d4f165884",
+      "title": "Queen Elizabeth - 9News - Latest news and headlines from Australia and the world",
+      "link": "https://www.9news.com.au/queen-elizabeth",
+      "summary": "Queen Elizabeth - 9News - Latest news and headlines from Australia and the world",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:52:40.965563+00:00",
+      "sourceCategory": "Queen-elizabeth"
+    },
+    {
+      "id": "bb77620e5a821d83eecb71ecda2356dc",
+      "title": "Cordelia Hsu, Producer Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/cordelia-hsu",
+      "summary": "Meet Cordelia Hsu, Producer on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:52:49.556643+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "d28786412bca39f43c311997ef1bb7a8",
+      "title": "Connect with 9News | Link in Bio | 9News",
+      "link": "https://www.9news.com.au/link-in-bio",
+      "summary": "Thanks for connecting with 9News. Coming from our Instagram page? You can also sign up for our breaking newsletter here and download our app here to receive breaking, localised news alerts and livestreams straight to your smartphone.",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:53:20.097452+00:00",
+      "sourceCategory": "Link-in-bio"
+    },
+    {
+      "id": "f1bf32c0abf0b77b71b2efefd329bd41",
+      "title": "Rebecca Peppiatt, Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/rebecca-peppiatt",
+      "summary": "Meet Rebecca Peppiatt, on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:57:03Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:53:29.726955+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "0ac4347157c73a170e6f85d0e326834b",
+      "title": "Heather McNeill, WA Today Reporter Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/heather-mcneill",
+      "summary": "Meet Heather McNeill, WA Today Reporter on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:23:12Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:45:51.577777+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "262ad2fdc8e2245bbe2bb47c6ed028b8",
+      "title": "Scherri Lee Biggs, Weather Presenter Perth News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/perth/scherri-lee-biggs",
+      "summary": "Meet Scherri Lee Biggs, Weather Presenter on the Perth News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:23:12Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:46:12.679866+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "18dc1cbb62e44e4bae9baed9bf72d65e",
+      "title": "Foreign News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/foreign",
+      "summary": "Meet the Foreign News Team from 9News Australia",
+      "publishedAt": "2025-09-21T19:23:12Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:47:25.013740+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "fbabc5c40d1f470ef31987892b9591f7",
+      "title": "Donne Lee Biddle, Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/donne-lee-biddle",
+      "summary": "Meet Donne Lee Biddle, on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:23:12Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:51:27.831956+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "e49c1d377bb2930e0b36337ef718cb25",
+      "title": "Gold Coast News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/gold-coast",
+      "summary": "Meet the Gold Coast News Team from 9News Australia",
+      "publishedAt": "2025-09-21T19:23:12Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:51:44.204395+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "bfa5a35826a280ce6226e4b4b90b33ab",
+      "title": "Chloe Robinson, Reporter Gold Coast News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/gold-coast/chloe-robinson",
+      "summary": "Meet Chloe Robinson, Reporter on the Gold Coast News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:23:12Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:52:33.579153+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "d1bcba98fcf931f771a3ebac6a6d0928",
+      "title": "John Crouch, AAP Contributors News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/contributors/john-crouch",
+      "summary": "Meet John Crouch, AAP on the Contributors News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:23:12Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:56:45.325288+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "0af0d3ab81ae8bff94a19718fd97dbf3",
+      "title": "60 Minutes News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/60-minutes",
+      "summary": "Meet the 60 Minutes News Team from 9News Australia",
+      "publishedAt": "2025-09-21T19:23:12Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:57:25.412782+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "b1db614a40040b421c0ad746243146f0",
+      "title": "Stevie Jacobs, TODAY Weather Presenter TODAY Show News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/today-show/stevie-jacobs",
+      "summary": "Meet Stevie Jacobs, TODAY Weather Presenter on the TODAY Show News Team, 9News Australia",
+      "publishedAt": "2025-09-21T19:23:12Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:58:23.493720+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "cd49b2aaec0f7cf8c14c571f2f5c6b9c",
+      "title": "Watch TV Shows Online | Stream & Download TV Series on Stan",
+      "link": "https://www.stan.com.au/watch/tv-shows",
+      "summary": "With exclusive new TV shows from Australia and around the world, iconic TV series, Stan Originals and kids entertainment, there's countless hours to enjoy on Stan. Browse our TV Shows and sign up now.",
+      "publishedAt": "2025-09-21T16:28:19Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T18:35:47.217824+00:00",
+      "sourceCategory": "0mgcno"
+    },
+    {
+      "id": "52c0003153c15d52bef66439efc5cfb5",
+      "title": "Watch Stan Original Productions | Stream and Download Exclusive Titles",
+      "link": "https://www.stan.com.au/watch/stan-originals",
+      "summary": "Watch Original Series and Productions exclusively on Stan. Enjoy the latest Australian productions and global collaborations with your Stan account.",
+      "publishedAt": "2025-09-21T16:28:07Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T18:35:16.619811+00:00",
+      "sourceCategory": "Jtthia"
     },
     {
       "id": "0d6f4b698d2dcfdd000e3932463cccef",
@@ -40,28 +1620,8 @@
       "summary": "&lt;p&gt;A gunman opened fire in a New Hampshire, USA country club on Saturday (Sunday AEST) as a wedding was taking place, killing one person and wounding two others, authorities said. &lt;/p&gt;",
       "publishedAt": "2025-09-21T15:22:07Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:29.649177+00:00",
+      "fetchedAt": "2025-09-21T18:39:09.692628+00:00",
       "sourceCategory": "World"
-    },
-    {
-      "id": "4db47851499afa23be5dec40b7796cba",
-      "title": "Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital",
-      "summary": "Meet the Digital News Team from 9News Australia",
-      "publishedAt": "2025-09-21T15:22:07Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:33.611323+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "741912e891d9a872815fa3495e018ee8",
-      "title": "Associated Press, Contributors News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/contributors/associated-press",
-      "summary": "Meet Associated Press, on the Contributors News Team, 9News Australia",
-      "publishedAt": "2025-09-21T15:22:07Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:07:06.357992+00:00",
-      "sourceCategory": "Meet-the-team"
     },
     {
       "id": "cca6809339625ffaca852ba7fcb88fe7",
@@ -70,28 +1630,8 @@
       "summary": "Watch movies online, stream HD movies & download films on Stan. Watch the best films from Australia & around the world, start watching now.",
       "publishedAt": "2025-09-21T14:01:19Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:25:09.787159+00:00",
+      "fetchedAt": "2025-09-21T18:33:36.360946+00:00",
       "sourceCategory": "955oe1"
-    },
-    {
-      "id": "0ed3bc79a5d9840d404926b2374eb1ac",
-      "title": "nine.com.au -- the new ninemsn - News, Sport, TV, Entertainment, Lifestyle | Latest Breaking News Headlines from Australia and the world",
-      "link": "https://www.nine.com.au/",
-      "summary": "Meet the new nine.com.au. Get the latest news, sport, TV, travel, fashion, fitness, recipes, celebrity news and exclusive content, all for free at nine.com.au, the home of Nine",
-      "publishedAt": "2025-09-21T14:00:21Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:27:32.761508+00:00",
-      "sourceCategory": null
-    },
-    {
-      "id": "cd49b2aaec0f7cf8c14c571f2f5c6b9c",
-      "title": "Watch TV Shows Online | Stream & Download TV Series on Stan",
-      "link": "https://www.stan.com.au/watch/tv-shows",
-      "summary": "With exclusive new TV shows from Australia and around the world, iconic TV series, Stan Originals and kids entertainment, there's countless hours to enjoy on Stan. Browse our TV Shows and sign up now.",
-      "publishedAt": "2025-09-21T14:00:11Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:15.933683+00:00",
-      "sourceCategory": "0mgcno"
     },
     {
       "id": "78aaf28bb0484bbbea94ed54fd36a2cd",
@@ -100,7 +1640,7 @@
       "summary": "&lt;p&gt;Australia as well as the UK and Canada have formally recognised a Palestinian state.&lt;/p&gt;",
       "publishedAt": "2025-09-21T13:45:39Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:19:14.938235+00:00",
+      "fetchedAt": "2025-09-21T18:40:16.416326+00:00",
       "sourceCategory": "World"
     },
     {
@@ -110,7 +1650,7 @@
       "summary": "&lt;p&gt;A 17-year old boy has been charged following a wild police pursuit through Sydney that saw a police officer injured and a shot fired at an allegedly stolen car.﻿&lt;/p&gt;",
       "publishedAt": "2025-09-21T12:47:49Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:22:03.889876+00:00",
+      "fetchedAt": "2025-09-21T18:32:12.469496+00:00",
       "sourceCategory": "National"
     },
     {
@@ -120,7 +1660,7 @@
       "summary": "",
       "publishedAt": "2025-09-21T10:33:40+00:00",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:27:55.238801+00:00",
+      "fetchedAt": "2025-09-21T18:36:58.977784+00:00",
       "sourceCategory": "60-minutes"
     },
     {
@@ -130,7 +1670,7 @@
       "summary": "",
       "publishedAt": "2025-09-21T10:32:59+00:00",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:23:28.178549+00:00",
+      "fetchedAt": "2025-09-21T18:36:40.686284+00:00",
       "sourceCategory": "60-minutes"
     },
     {
@@ -140,7 +1680,7 @@
       "summary": "&lt;p&gt;Footage shows punches being thrown by spectators and players.&lt;/p&gt;",
       "publishedAt": "2025-09-21T09:55:03Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:03.560882+00:00",
+      "fetchedAt": "2025-09-21T18:41:44.867744+00:00",
       "sourceCategory": "National"
     },
     {
@@ -150,7 +1690,7 @@
       "summary": "&lt;p&gt;Emergency services were called to a house on Hilltop Road in Avalon Beach about 1am on Friday following reports of a fire.&lt;/p&gt;",
       "publishedAt": "2025-09-21T09:19:21Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:25:49.943380+00:00",
+      "fetchedAt": "2025-09-21T18:35:51.498872+00:00",
       "sourceCategory": "National"
     },
     {
@@ -160,7 +1700,7 @@
       "summary": "&lt;p&gt;She could not get through, saying her phone was hit by the Optus outage.&lt;/p&gt;",
       "publishedAt": "2025-09-21T09:08:50Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:36.885372+00:00",
+      "fetchedAt": "2025-09-21T18:35:11.852741+00:00",
       "sourceCategory": "National"
     },
     {
@@ -170,7 +1710,7 @@
       "summary": "&lt;p&gt;The FIFO worker was hoping to relax﻿ on a fun getaway, but his body was found in the plunge pool of his villa in May.&lt;/p&gt;",
       "publishedAt": "2025-09-21T08:48:52Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:29:07.578633+00:00",
+      "fetchedAt": "2025-09-21T18:39:11.241527+00:00",
       "sourceCategory": "National"
     },
     {
@@ -180,7 +1720,7 @@
       "summary": "&lt;p&gt;Emergency services have responded to a crash on the M2 at Macquarie Park in Sydney just after 3.30pm today.﻿&lt;/p&gt;",
       "publishedAt": "2025-09-21T08:22:56Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:21:51.520234+00:00",
+      "fetchedAt": "2025-09-21T18:38:23.391934+00:00",
       "sourceCategory": "National"
     },
     {
@@ -190,7 +1730,7 @@
       "summary": "Penrith Panthers have kept their hopes of a fifth-straight premiership alive, demolishing a poor Canterbury Bulldogs outfit with a first half onslaught on Sunday afternoon.",
       "publishedAt": "2025-09-21T08:13:45Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:21:22.878145+00:00",
+      "fetchedAt": "2025-09-21T18:34:45.960724+00:00",
       "sourceCategory": "Sport"
     },
     {
@@ -200,8 +1740,18 @@
       "summary": "&lt;p&gt;Speaking to media today, Optus CEO Stephen Rue said there were also three complaints about Triple Zero calls failing to connect that were not followed up by the telco. &lt;/p&gt;",
       "publishedAt": "2025-09-21T07:24:56Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:26:49.314431+00:00",
+      "fetchedAt": "2025-09-21T18:37:08.161141+00:00",
       "sourceCategory": "National"
+    },
+    {
+      "id": "fa185d5cd211112db7cc14098e0434db",
+      "title": "Patrick Brischetto, Associate Digital News Producer Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/patrick-brischetto",
+      "summary": "Meet Patrick Brischetto, Associate Digital News Producer on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-21T07:24:56Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:52:24.551896+00:00",
+      "sourceCategory": "Meet-the-team"
     },
     {
       "id": "adc9701d361f8ccbf8ee0d1dcb6672f2",
@@ -210,7 +1760,7 @@
       "summary": "&lt;p&gt;A critical outage in the telco giant&amp;#x27;s network meant Triple Zero calls in South Australia, Western Australia and the Northern Territory were blocked&lt;/p&gt;",
       "publishedAt": "2025-09-21T06:05:02Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:27:48.376552+00:00",
+      "fetchedAt": "2025-09-21T18:42:42.576931+00:00",
       "sourceCategory": "National"
     },
     {
@@ -220,7 +1770,7 @@
       "summary": "&lt;p&gt;Emergency services were called to Kingston Road in Slacks Creek, Logan, about 8.19am today after reports of a street disturbance.&lt;/p&gt;",
       "publishedAt": "2025-09-21T06:04:29Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:31:10.571062+00:00",
+      "fetchedAt": "2025-09-21T18:40:02.302298+00:00",
       "sourceCategory": "National"
     },
     {
@@ -230,7 +1780,7 @@
       "summary": "&lt;p&gt;T﻿he disruptions hit London Heathrow, Berlin, and Brussels.&lt;/p&gt;",
       "publishedAt": "2025-09-21T04:37:27Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:26:35.489984+00:00",
+      "fetchedAt": "2025-09-21T18:32:08.761305+00:00",
       "sourceCategory": "World"
     },
     {
@@ -240,7 +1790,7 @@
       "summary": "&lt;p&gt;The US president ﻿claimed Bondi&amp;#x27;s lack of action in pursuing criminal charges against his adversaries &amp;quot;killing our reputation and credibility&amp;quot;.&lt;/p&gt;",
       "publishedAt": "2025-09-21T04:34:11Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:29:12.625765+00:00",
+      "fetchedAt": "2025-09-21T18:37:48.322197+00:00",
       "sourceCategory": "World"
     },
     {
@@ -250,7 +1800,7 @@
       "summary": "&lt;p&gt;The cash was found after &lt;a href=&quot;https://www.9news.com.au/police&quot; title=&quot;police&quot; target=&quot;_blank&quot; rel=&quot;&quot;&gt;police&lt;/a&gt; conducted an RBT on a car in Triabunna, about 86km north-east of Hobart, last night.&lt;/p&gt;",
       "publishedAt": "2025-09-21T04:02:28Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:07.036090+00:00",
+      "fetchedAt": "2025-09-21T18:43:40.470103+00:00",
       "sourceCategory": "National"
     },
     {
@@ -260,7 +1810,7 @@
       "summary": "&lt;p&gt;The Hochgurtel Fountain outside the Royal Exhibition Building in Carlton Gardens was defaced with the messages &amp;quot;sanction Israel&amp;quot; and &amp;quot;free Gaza&amp;quot; and the water was turned bright red, police said.&lt;/p&gt;",
       "publishedAt": "2025-09-21T03:57:15Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:26:34.301815+00:00",
+      "fetchedAt": "2025-09-21T18:37:10.286662+00:00",
       "sourceCategory": "National"
     },
     {
@@ -270,7 +1820,7 @@
       "summary": "&lt;p&gt;T﻿he US president won&amp;#x27;t be able to meet with Albanese quite yet as he flies to Arizona for Charlie Kirk&amp;#x27;s funeral.&lt;/p&gt;",
       "publishedAt": "2025-09-21T03:28:33Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:19:05.028352+00:00",
+      "fetchedAt": "2025-09-21T18:32:57.608100+00:00",
       "sourceCategory": "National"
     },
     {
@@ -280,7 +1830,7 @@
       "summary": "&lt;p&gt;T﻿he vaunted &amp;quot;algorithm&amp;quot; will exchange hands as part of the landmark deal, which could get final sign-off within days.&lt;/p&gt;",
       "publishedAt": "2025-09-21T02:59:52Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:23:44.391730+00:00",
+      "fetchedAt": "2025-09-21T18:37:18.440274+00:00",
       "sourceCategory": "World"
     },
     {
@@ -290,7 +1840,7 @@
       "summary": "&lt;p&gt;The open letter was signed by 25 Republicans and addressed to Albanese, UK Prime Minister Sir Keir Starmer, French President Emmanuel Macron and Canada&amp;#x27;s Prime Minister Mark Carey.&lt;/p&gt;",
       "publishedAt": "2025-09-21T01:14:29Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:06.541900+00:00",
+      "fetchedAt": "2025-09-21T18:42:33.651649+00:00",
       "sourceCategory": "World"
     },
     {
@@ -300,7 +1850,7 @@
       "summary": "&lt;p&gt;Police have not said d4vd is implicated in the death of Celeste Rivas Hernandez.&lt;/p&gt;",
       "publishedAt": "2025-09-21T01:01:50Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:19.303295+00:00",
+      "fetchedAt": "2025-09-21T18:42:51.685054+00:00",
       "sourceCategory": "World"
     },
     {
@@ -310,7 +1860,7 @@
       "summary": "&lt;p&gt;M﻿ore than 100,000 people could pack into the service for Charlie Kirk, and it has authorities on edge.&lt;/p&gt;",
       "publishedAt": "2025-09-21T00:47:37Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:22:57.416627+00:00",
+      "fetchedAt": "2025-09-21T18:32:00.004650+00:00",
       "sourceCategory": "World"
     },
     {
@@ -320,18 +1870,8 @@
       "summary": "&lt;p&gt;The failure of Optus to provide that essential service is beyond the pale and now tragic in the extreme.&lt;/p&gt;",
       "publishedAt": "2025-09-21T00:33:30Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:23:29.841871+00:00",
+      "fetchedAt": "2025-09-21T18:36:52.114698+00:00",
       "sourceCategory": "National"
-    },
-    {
-      "id": "c381739f0e108a6e9ec3e4aa2fa57c9a",
-      "title": "Deborah Knight, Presenter Sydney News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/sydney/deborah-knight",
-      "summary": "Meet Deborah Knight, Presenter on the Sydney News Team, 9News Australia",
-      "publishedAt": "2025-09-21T00:33:30Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:09:20.716096+00:00",
-      "sourceCategory": "Meet-the-team"
     },
     {
       "id": "1fccfd085e2386e3e334b9cd40a7b8f9",
@@ -340,7 +1880,7 @@
       "summary": "&lt;p&gt;A﻿ South Australian man who desperately tried to call triple zero for an ambulance says he is &amp;quot;absolutely disgusted&amp;quot;.&lt;/p&gt;",
       "publishedAt": "2025-09-20T23:29:32Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:20:49.502418+00:00",
+      "fetchedAt": "2025-09-21T18:35:04.821740+00:00",
       "sourceCategory": "National"
     },
     {
@@ -350,8 +1890,18 @@
       "summary": "&lt;p&gt;C﻿ustomers have been warned about the potential presence of a foreign object in the product.&lt;/p&gt;",
       "publishedAt": "2025-09-20T22:52:33Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:31:41.189388+00:00",
+      "fetchedAt": "2025-09-21T18:45:17.890854+00:00",
       "sourceCategory": "National"
+    },
+    {
+      "id": "5f2dc6f95b07b9ac7f26e6c123a61918",
+      "title": "Sean Thompson, Homepage Editor Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/sean-thompson",
+      "summary": "Meet Sean Thompson, Homepage Editor on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-20T22:52:33Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:23:34.482829+00:00",
+      "sourceCategory": "Meet-the-team"
     },
     {
       "id": "254898fe1df9c931f0cc00dea578f13b",
@@ -360,7 +1910,7 @@
       "summary": "&lt;p&gt;A﻿ baby boy has tragically died after the car he was in was struck while it was parked on the side of a highway.&lt;/p&gt;",
       "publishedAt": "2025-09-20T22:47:09Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:18:58.428920+00:00",
+      "fetchedAt": "2025-09-21T18:40:01.529685+00:00",
       "sourceCategory": "National"
     },
     {
@@ -370,7 +1920,7 @@
       "summary": "Meet Stuart Marsh, Morning Editor on the Digital News Team, 9News Australia",
       "publishedAt": "2025-09-20T22:47:09Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T18:16:43.288898+00:00",
+      "fetchedAt": "2025-09-21T19:49:45.315290+00:00",
       "sourceCategory": "Meet-the-team"
     },
     {
@@ -380,7 +1930,7 @@
       "summary": "&lt;p&gt;Polish and allied military aircraft were scrambled early Saturday after Russia launched a massive aerial assault on Ukraine.&lt;/p&gt;",
       "publishedAt": "2025-09-20T21:56:27Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:10.595380+00:00",
+      "fetchedAt": "2025-09-21T18:44:20.037506+00:00",
       "sourceCategory": "National"
     },
     {
@@ -390,18 +1940,8 @@
       "summary": "&lt;p&gt;Officers surrounded a home in Myrtleford, where they detained and cuffed a hooded man in their hunt for Dezi Freeman in Victoria.&lt;/p&gt;",
       "publishedAt": "2025-09-20T20:41:40Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:24:29.264993+00:00",
+      "fetchedAt": "2025-09-21T18:35:57.274780+00:00",
       "sourceCategory": "National"
-    },
-    {
-      "id": "9f1469ac80d618dec91ed61f8958cf61",
-      "title": "9News Staff, Contributor Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital/9news-staff",
-      "summary": "Meet 9News Staff, Contributor on the Digital News Team, 9News Australia",
-      "publishedAt": "2025-09-20T20:41:40Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:01:17.047750+00:00",
-      "sourceCategory": "Meet-the-team"
     },
     {
       "id": "20c2b253c61363dba8e0d829b9f7eeb4",
@@ -410,7 +1950,7 @@
       "summary": "&lt;p&gt;A death row inmate&amp;#x27;s last meal request was so extravagant on September 21, 2011, that the state of Texas stopped doing them.&lt;/p&gt;",
       "publishedAt": "2025-09-20T20:17:28Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:25:11.295160+00:00",
+      "fetchedAt": "2025-09-21T18:35:33.496251+00:00",
       "sourceCategory": "National"
     },
     {
@@ -420,7 +1960,7 @@
       "summary": "Meet Nick Pearson, 9News Digital Engagement and Audience Lead on the Digital News Team, 9News Australia",
       "publishedAt": "2025-09-20T20:17:28Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T18:08:38.601997+00:00",
+      "fetchedAt": "2025-09-21T19:09:11.447362+00:00",
       "sourceCategory": "Meet-the-team"
     },
     {
@@ -430,8 +1970,28 @@
       "summary": "&lt;p&gt;T﻿he US president insists the lethal actions are needed in the war on drugs, but are they breaching international law?&lt;/p&gt;",
       "publishedAt": "2025-09-20T20:12:59Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:29:14.391819+00:00",
+      "fetchedAt": "2025-09-21T18:37:05.650026+00:00",
       "sourceCategory": "World"
+    },
+    {
+      "id": "2be12a4546e102581fcd2ae06268757a",
+      "title": "Richard Wood, Senior Journalist Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/richard-wood",
+      "summary": "Meet Richard Wood, Senior Journalist on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-20T20:12:59Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T19:24:24.595078+00:00",
+      "sourceCategory": "Meet-the-team"
+    },
+    {
+      "id": "17610919277bc771b1a31896270a8b38",
+      "title": "9NEWS, 9NEWS Digital News Team - 9News",
+      "link": "https://www.9news.com.au/meet-the-team/digital/9news",
+      "summary": "Meet 9NEWS, 9NEWS on the Digital News Team, 9News Australia",
+      "publishedAt": "2025-09-20T12:35:53Z",
+      "source": "9News",
+      "fetchedAt": "2025-09-21T20:09:09.574404+00:00",
+      "sourceCategory": "Meet-the-team"
     },
     {
       "id": "4564287a98baec7825e65a40674839ce",
@@ -440,1568 +2000,8 @@
       "summary": "&lt;p&gt;Estonia summoned a Russian diplomat to protest after three Russian fighter aircraft entered its airspace without permission Friday and stayed there for 12 minutes.&lt;/p&gt;",
       "publishedAt": "2025-09-20T12:20:15Z",
       "source": "9News",
-      "fetchedAt": "2025-09-21T16:20:48.210094+00:00",
+      "fetchedAt": "2025-09-21T18:36:09.776968+00:00",
       "sourceCategory": "World"
-    },
-    {
-      "id": "1a735da7ccfa2db8c6711ff28db37a12",
-      "title": "NRL semi-finals 2025: Cronulla Sharks beat Canberra Raiders as Nicho Hynes, Braydon Trindall, Addin Fonua-Blake star",
-      "link": "https://www.nine.com.au/sport/nrl/semi-finals-2025-cronulla-sharks-v-canberra-raiders-nicho-hynes-braydon-trindall-20250920-p5mwnm.html",
-      "summary": "Canberra's dream has turned to disaster.﻿ Three weeks after winning the club's first minor premiership since 1990, the Raiders have suffered a second consecutive finals defeat to go tumbling out of the title race via the quickest route possible. The Sharks dealt the killer blow in a comprehensive win in Canberra on Saturday night, handing the Raiders a 32-12 defeat.",
-      "publishedAt": "2025-09-20T12:02:50Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:32:10.933731+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "722b1583d8cc795283b7654d6b8ecce1",
-      "title": "AFL preliminary final 2025: Collingwood Magpies defeated by Brisbane Lions, score, highlights, latest news, Scott Pendlebury and Jarrod Berry injured; Rory Sloane and Damien Barrett weigh in",
-      "link": "https://www.nine.com.au/sport/afl/preliminary-final-2025-collingwood-magpies-brisbane-lions-score-video-highlights-latest-news-scott-pendlebury-jarrod-berry-injuries-20250920-p5mwnd.html",
-      "summary": "In a defining moment late in Saturday's preliminary final, Collingwood star Jamie Elliott was denied a clear front-on free kick against Brandon Starcevich that could have put the Pies a goal down with nine minutes remaining. Instead, the ball was raced down the other end and in a two-goal swing, Charlie Cameron put Brisbane 18 points up.﻿",
-      "publishedAt": "2025-09-20T10:26:07Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:26:12.740896+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "428b63f4f4e7d4e7a30a314dff543722",
-      "title": "Devastated family discover Adelaide woman desperately tried to call Triple Zero to save her own life during Op",
-      "link": "https://www.9news.com.au/national/woman-desperately-tried-to-call-triple-zero-to-save-her-own-life-during-optus-outage/a6801031-828e-4666-909a-ec701249c668",
-      "summary": "&lt;p&gt;T﻿he family of a 68-year-old woman who died during the widespread Optus outage realised their loved one was a victim this morning.&lt;/p&gt;",
-      "publishedAt": "2025-09-20T10:03:41Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:29:58.767959+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "ca8b876709384d0a0226319eee7305b4",
-      "title": "Emily Bennett, Producer Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital/emily-bennett",
-      "summary": "Meet Emily Bennett, Producer on the Digital News Team, 9News Australia",
-      "publishedAt": "2025-09-20T10:03:41Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:01:57.326548+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "d32a5019eee2e87a56d78af016798e10",
-      "title": "Cyberattack disrupts check-in systems at major European airports",
-      "link": "https://www.9news.com.au/world/airport-cyberattack-disrupts-check-in-systems-at-major-european-airports/9d6f498d-7f8d-4888-9716-85af0de5f9bf",
-      "summary": "&lt;p&gt;Qantas and Virgin Australia say they&amp;#x27;re not currently impacted by the incident, which is causing delays at some of Europe busiest airports.&lt;/p&gt;",
-      "publishedAt": "2025-09-20T09:33:24Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:34:31.426446+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "8d7df96866a0ba68286e9914b8056b72",
-      "title": "Fourth death confirmed after Optus outage blocked calls to Triple Zero for 13 hours",
-      "link": "https://www.9news.com.au/national/top-politicians-slam-optus-after-outage/49dca135-a533-4807-8ac8-0f5a78f9d357",
-      "summary": "&lt;p&gt;Optus has revealed a botched firewall upgrade blocked calls to Triple Zero in South Australia, Western Australia and the Northern Territory for about 13 hours.&lt;/p&gt;",
-      "publishedAt": "2025-09-20T07:34:42Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:22:05.930144+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "c9a8d8e1153cc5aca878c30e9fea0a4a",
-      "title": "Man charged with murder after alleged altercation at Canberra caravan park",
-      "link": "https://www.9news.com.au/national/man-charged-with-murder-after-alleged-altercation-at-canberra-caravan-park/d95fcda9-b2d9-4957-9310-11d5b8b3b6a5",
-      "summary": "&lt;p&gt;A 49-year-old man has been charged with the murder of a 34-year-old man at a Canberra caravan park. &lt;/p&gt;",
-      "publishedAt": "2025-09-20T03:15:00Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:32:09.359291+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "b6bd70a9f5be55f84db06a39781ba353",
-      "title": "Man arrested after woman found dead in NSW north",
-      "link": "https://www.9news.com.au/national/man-arrested-after-woman-found-dead-in-nsw-north/7dbd1e6d-55e9-4709-b5ab-c0dd34c60558",
-      "summary": "&lt;p&gt;A﻿ 29-year-old man was arrested in New South Wales&amp;#x27; north after a woman was found dead in an apartment.&lt;/p&gt;",
-      "publishedAt": "2025-09-20T01:44:06Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:21:36.603004+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "f585965b004a1f2a392efbd86fab332b",
-      "title": "Trump says US has carried out another fatal strike targeting alleged drug-smuggling boat",
-      "link": "https://www.9news.com.au/world/trump-says-us-has-carried-out-another-fatal-strike-targeting-alleged-drugsmuggling-boat/2b2e5edd-1af3-4980-b5cb-6a5f7b352ba1",
-      "summary": "&lt;p&gt;Donald Trump said the US military has carried out its third fatal strike against an alleged drug smuggling vessel this month.&lt;/p&gt;",
-      "publishedAt": "2025-09-20T01:31:34Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:23:45.740424+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "bcb3dd3bd25d08eaddc823c2b510904f",
-      "title": "Delayed maintenance left CommBank customers unable to access services",
-      "link": "https://www.9news.com.au/national/commbank-customers-hit-by-delayed-planned-maintenance-outage/911053cc-ea20-4134-a2e2-b24b51528877",
-      "summary": "&lt;p&gt;Commonwealth Bank customers were left unable to access services as planned maintenance took longer than expected this morning.&lt;/p&gt;",
-      "publishedAt": "2025-09-20T01:10:13Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:26:25.162665+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "8e6ea377fc1ac43b6ef05e08d9ad417f",
-      "title": "Taking Jimmy Kimmel off air 'unbelievably dangerous', says Trump-aligned senator",
-      "link": "https://www.9news.com.au/world/ted-cruz-denounces-fcc-jimmy-kimmel-axing-abc-disney-donald-trump-news/553002a2-e656-4451-b0ff-d02fe4c35e4d",
-      "summary": "&lt;p&gt;&amp;quot;When it is used to silence every conservative in America, we will regret it.&amp;quot;&lt;/p&gt;",
-      "publishedAt": "2025-09-20T00:22:27Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:36:03.928294+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "80f5bd651158bc90e8f876f2096d33fa",
-      "title": "Man accused of trying to kill Trump says prosecutors haven't proven assassination attempt",
-      "link": "https://www.9news.com.au/world/man-accused-of-trying-to-kill-trump-says-prosecutors-havent-proven-assassination-attempt/d170d219-99a6-43f9-a9d0-27cc68da81c3",
-      "summary": "&lt;p&gt;A man accused of trying to assassinate Donald Trump at his Florida golf course last year told a federal judge on Friday that prosecutors haven&amp;#x27;t proven that an assassination attempt occurred. &lt;/p&gt;",
-      "publishedAt": "2025-09-20T00:06:00Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:36:17.374675+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "2146102aae7cd5d088f9275f084955f2",
-      "title": "P-plater allegedly clocked at 196km/h in Melbourne's east",
-      "link": "https://www.9news.com.au/national/p-plater-caught-speeding-at-196kms/4b52507c-f339-4f51-933c-749a21ff7335",
-      "summary": "&lt;p&gt;A﻿ provisional driver was clocked doing 196 km/h in a 100 km/h zone in Melbourne&amp;#x27;s east overnight, police said.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T23:59:52Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:24:17.551529+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "9e3942eb470f10536aa81432b0e034fc",
-      "title": "Judge tosses Trump's $22B defamation lawsuit against The New York Times",
-      "link": "https://www.9news.com.au/world/florida-federal-judge-tosses-trumps-15b-defamation-lawsuit-against-the-new-york-times/c0bc2310-d2e5-4366-a67a-125506cfdc57",
-      "summary": "&lt;p&gt;A Florida federal judge on Friday tossed out a $22.7 billion defamation lawsuit filed by President Donald Trump against &lt;em&gt;The New York Times&lt;/em&gt;.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T22:05:32Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:55.735283+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "b527badf02b7b14e4c9b576854cf9d66",
-      "title": "Sydney doctor who paints as a hobby takes $20k art prize",
-      "link": "https://www.9news.com.au/national/sydney-doctor-wins-eckersleys-art-and-craft-prize-exhibition-new-south-wales-news/7eae88a7-b602-4ff3-a34c-56ba86d69211",
-      "summary": "&lt;p&gt;Sean Lee beat 43 other finalists and hundreds of entrants with his still life &lt;em&gt;My Pantry Essentials&lt;/em&gt;, which depicts the sauces and ingredients that were commonplace in the kitchen, growing up in Sydney as a child of Chinese and Taiwanese migrants.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T21:21:25Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:24:23.901914+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "82c8e51e21005c3c1c87cc2229b421b4",
-      "title": "Aussies have fewer friends and higher tax bills, major survey reveals",
-      "link": "https://www.9news.com.au/national/aussies-have-fewer-friends-and-higher-tax-bills-major-survey-reveals/9da041ee-614f-4610-b239-d10673fec89a",
-      "summary": "&lt;p&gt;A new report has painted a grim picture of life in Australia, revealing a nation where people are feeling lonelier than ever, are paying more tax and delaying their dreams. &lt;/p&gt;",
-      "publishedAt": "2025-09-19T21:12:47Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:26:26.402675+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "1281db721f05e4e5a9b9ed0a9cea35a7",
-      "title": "Emily McPherson, Senior Journalist Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital/emily-mcpherson",
-      "summary": "Meet Emily McPherson, Senior Journalist on the Digital News Team, 9News Australia",
-      "publishedAt": "2025-09-19T21:12:47Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:26:41.508612+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "0e6b660d2127db06a6f99a508d23f5d0",
-      "title": "Diella is a minister to 2.7 million people. The only issue is she is AI",
-      "link": "https://www.9news.com.au/world/albania-ai-minister-diella-what-is-it-how-does-it-work-everything-to-know-explained/ca056336-fdd2-4ac6-a669-ec4172a2ef95",
-      "summary": "&lt;p&gt;Albania&amp;#x27;s new minister of public procurement is expected to be insusceptible to any form of corruption. That&amp;#x27;s because she is actually an artificially intelligent bot. &lt;/p&gt;",
-      "publishedAt": "2025-09-19T21:12:03Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:37:29.617059+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "bf300f07ed29ff89ce0b128a10b24308",
-      "title": "Yashee Sharma, Producer Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital/yashee-sharma",
-      "summary": "Meet Yashee Sharma, Producer on the Digital News Team, 9News Australia",
-      "publishedAt": "2025-09-19T21:12:03Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:09:27.203128+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "032ac35d09eb4cd7b54a63833b4cf507",
-      "title": "Explainers | Latest news headlines in Australia and around the world explained | 9News",
-      "link": "https://www.9news.com.au/explainer",
-      "summary": "The latest explainers, news, videos and analysis from 9News. We explain everything you need to know about the world today.",
-      "publishedAt": "2025-09-19T21:10:31Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:22:58.881412+00:00",
-      "sourceCategory": "Explainer"
-    },
-    {
-      "id": "9282f104056ebcbd379e3968876a9f6c",
-      "title": "Millions of Aussies to get a cash boost today as Centrelink payments increase",
-      "link": "https://www.9news.com.au/national/centrelink-payments-changes-2025-new-rates-september-20-everything-to-know-explained/7ad1411a-7f1e-4e0d-b1dd-c1dd45803dd6",
-      "summary": "&lt;p&gt;B﻿ut one important payment will only increase by a few dollars.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T21:10:31Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:30:36.419080+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "d12870cc81d6ab54dce773743f2fa21e",
-      "title": "Maddison Leach, Senior Features Writer, nine.com.au. Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital/maddison-leach",
-      "summary": "Meet Maddison Leach, Senior Features Writer, nine.com.au. on the Digital News Team, 9News Australia",
-      "publishedAt": "2025-09-19T21:10:31Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:07:14.248709+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "2cf3a40725b55a5bd8a5de381b73781f",
-      "title": "Explainers | Latest news headlines in Australia and around the world explained | 9News",
-      "link": "https://www.9news.com.au/explainer/2",
-      "summary": "The latest explainers, news, videos and analysis from 9News. We explain everything you need to know about the world today.",
-      "publishedAt": "2025-09-19T21:10:31Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:14:34.892183+00:00",
-      "sourceCategory": "Explainer"
-    },
-    {
-      "id": "6ccb4523856e06b4f7d53a175c24e3c3",
-      "title": "The five maps that show how extreme Australia's weather will become in the coming decades",
-      "link": "https://www.9news.com.au/national/climate-risk-assessment-extreme-weather-maps-show-impact-australia-coming-decades/ccd0eb08-db51-4d5b-bcf5-5a5a3c79db31",
-      "summary": "&lt;p&gt;Higher temperatures, increased deadly heatwaves, more drought, and worse bushfires. Those are just some of the realities Australians can look forward.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T21:04:49Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:31:41.959943+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "7860156a955b5109f482372cf1a27df2",
-      "title": "Daniel Jeffrey, Senior News Producer Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital/daniel-jeffrey",
-      "summary": "Meet Daniel Jeffrey, Senior News Producer on the Digital News Team, 9News Australia",
-      "publishedAt": "2025-09-19T21:04:49Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:08:51.617817+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "4953179affb6cf6b9fd7518011ac4dd3",
-      "title": "Today in History - September 20: Kayaker paddles from Germany to Australia and is promptly arrested",
-      "link": "https://www.9news.com.au/national/today-in-history-september-20-oskar-speck-what-happened-on-this-day/a4afe44d-6c72-40be-aead-18161e80e09f",
-      "summary": "&lt;p&gt;A German kayaker arrived on Australian soil on September 20, 1939, after a seven-year rowing voyage.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T21:01:24Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:31:23.545687+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "4ecd26785ce240f6ec9d7f2729871071",
-      "title": "Truck driver charged following fatal crash in NSW north",
-      "link": "https://www.9news.com.au/national/truck-driver-charged-after-fatal-crash/f1fba3d1-44e1-4a89-9b0d-ad856ecf5b01",
-      "summary": "&lt;p&gt;A﻿ 24-year-old truck driver has been charged following a fatal crash in New South Wales&amp;#x27; north.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T20:49:00Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:32:30.235419+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "52c0003153c15d52bef66439efc5cfb5",
-      "title": "Watch Stan Original Productions | Stream and Download Exclusive Titles",
-      "link": "https://www.stan.com.au/watch/stan-originals",
-      "summary": "Watch Original Series and Productions exclusively on Stan. Enjoy the latest Australian productions and global collaborations with your Stan account.",
-      "publishedAt": "2025-09-19T15:09:58Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:26:51.806904+00:00",
-      "sourceCategory": "Jtthia"
-    },
-    {
-      "id": "587d390434a7379db299db0eda34d281",
-      "title": "Late-night shows address Jimmy Kimmel suspension with humour and solidarity",
-      "link": "https://www.9news.com.au/world/jimmy-kimmel-late-night-shows-address-suspension-with-humour-and-solidarity/1df303b4-4c74-4e7e-afcd-57743de2f250",
-      "summary": "&lt;p&gt;Jon Stewart, Stephen Colbert and Jimmy Fallon opened their late-night shows on Thursday using a mix of humour and solidarity with suspended ABC host Jimmy Kimmel.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T14:51:04Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:34:04.922120+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "e7f3ef255cec39cc785b830acaf9ef5d",
-      "title": "Newborn among the three dead after Optus Triple Zero failure impacted hundreds of calls",
-      "link": "https://www.9news.com.au/national/three-people-dead-after-optus-triple-zero-failure-which-impacted-hundreds-of-calls/a34d3d7a-6447-4aba-8784-a8c823f2922f",
-      "summary": "&lt;p&gt;South Australia Police have identified two of the three people who died after an outage led to 600 emergency service calls unable to go through to Triple Zero across WA, SA and the NT.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T13:45:56Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:26:29.369828+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "ab0ae47224f53733bea090556bfe2495",
-      "title": "AFL Preliminary Final 2025: Geelong defeat Hawthorn, result, video; Patrick Dangerfield masterclass leads Cats into grand final",
-      "link": "https://www.nine.com.au/sport/afl/preliminary-final-2025-geelong-cats-defeat-hawthorn-score-video-highlights-latest-news-tom-stewart-concussion-patrick-dangerfield-masterclass-20250919-p5mwke.html",
-      "summary": "In a thrilling preliminary final marred by injury carnage, Patrick Dangerfield delivered a masterful performance to lead the Geelong Cats to victory over the Hawthorn Hawks.",
-      "publishedAt": "2025-09-19T12:39:39Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:25:56.276035+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "27da8947d03cec650516eb330a931aca",
-      "title": "Parents' mission to stop others losing a child to anaphylaxis",
-      "link": "https://9now.nine.com.au/a-current-affair/max-mckenzies-parents-mission-to-stop-others-losing-a-child-to-anaphylaxis/c104830a-d9cf-4534-b7df-3322ea164597",
-      "summary": "",
-      "publishedAt": "2025-09-19T12:35:58+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:20:03.725113+00:00",
-      "sourceCategory": "A-current-affair"
-    },
-    {
-      "id": "450e0a9c23686622382501fb6bdff117",
-      "title": "'It's a big deal, it's never happened before': SA state government's cabinet reshuffle makes history",
-      "link": "https://www.9news.com.au/national/south-australia-politics-state-government-cabinet-reshuffle-makes-history/3a18c56b-454c-4962-a804-c564f09c172b",
-      "summary": "&lt;p&gt;After the twin resignations of Stephen Mullighan and Susan Close triggered a significant shuffle of the deck of portfolios.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T11:22:51Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:32:59.369221+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "969b20844cc3c48e992148e1ea11f692",
-      "title": "More than $25 million spent on policing protests in Melbourne CBD, report finds",
-      "link": "https://www.9news.com.au/national/report-reveals-cost-to-taxpayer-of-protests-in-melbourne-cbd-victoria-news/b4843f84-a478-448c-92b8-565ca0d61cf1",
-      "summary": "&lt;p&gt;A two-year police operation to keep the peace during the weekly pro-Palestine protests has cost Victorian taxpayers more than $25 million. &lt;/p&gt;",
-      "publishedAt": "2025-09-19T10:33:40Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:51:58.543242+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "204cebe2f0bfb67674c79519841dc552",
-      "title": "Lifesavers warn cyclone erosion has changed the danger spots at Gold Coast beaches",
-      "link": "https://www.9news.com.au/national/lifesaver-patrols-resume-amidst-coastal-changes-on-the-gold-coast-queensland-news/6b212705-4de6-4ccf-8789-250d5cd81ffd",
-      "summary": "&lt;p&gt;As the red and yellow flags return to beaches, lifesavers are highlighting new danger spots resulting from coastal erosion caused by Tropical Cyclone Alfred.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T10:18:12Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:32:28.119295+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "3ac645aa492734ad9975f340ea74b611",
-      "title": "Bella Schwarzenecker, Reporter Gold Coast News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/gold-coast/bella-schwarzenecker",
-      "summary": "Meet Bella Schwarzenecker, Reporter on the Gold Coast News Team, 9News Australia",
-      "publishedAt": "2025-09-19T10:18:12Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:27:36.084213+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "5844349a377a57a98cb06fe7a980493b",
-      "title": "Logan man charged over alleged axe attack on neighbours",
-      "link": "https://www.9news.com.au/national/loganlea-neighbour-attack-grievous-bodily-harm-queensland-crime-news/da5c9225-db83-4b70-92c9-40e3132d9a79",
-      "summary": "&lt;p&gt;A Logan man has been charged with acts intending to cause grievous bodily harm after allegedly attacking his neighbours with an axe.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T10:00:16Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:46:21.758646+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "1efb9968225e1ee36b949abccce7977c",
-      "title": "Ha Teya Gripske, Reporter Gold Coast News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/gold-coast/ha-teya-gripske",
-      "summary": "Meet Ha Teya Gripske, Reporter on the Gold Coast News Team, 9News Australia",
-      "publishedAt": "2025-09-19T10:00:16Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:17:29.232849+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "643a2a949b8b5c900eecc783c5a5e7b1",
-      "title": "Trump and Starmer sign a tech deal before holding private talks on tariffs and war",
-      "link": "https://www.9news.com.au/world/donald-trump-uk-visit-pageantry-to-politics-donald-trump-keir-starmer-melania-trump-princess-of-wales/4576c2dd-6721-41fd-9a68-39a9b45f9a0b",
-      "summary": "&lt;p&gt;The US President signed what he called a historic agreement on science and technology with Britain on day two of his state visit to the UK.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T09:46:04Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:34:23.502774+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "5adc92501130a5f4b6cf5dc427f205fa",
-      "title": "Jimmy Kimmel spotted at lawyer's office as Trump's 'tough guy' warns this won't be 'the last shoe to drop'",
-      "link": "https://www.9news.com.au/world/jimmy-kimmel-update-late-night-talk-show-suspended-indefinitely/17a54932-180a-491a-b4db-d2defaf7ca63",
-      "summary": "&lt;p&gt;Trump&amp;#x27;s broadcasting regulator has made it clear that this isn&amp;#x27;t over.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T09:45:43Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:27.950305+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "165ef8c88b47c87a3a0bb7d9c4c7d910",
-      "title": "Seven teenagers charged with murder over deaths of two Melbourne boys",
-      "link": "https://www.9news.com.au/national/machete-deaths-two-boys-melbourne-cobblebank-seven-arrested/6439ab48-ef3b-401b-af72-f57504639317",
-      "summary": "&lt;p&gt;Dau Akueng, 15, and Chol Achiek, 12, were allegedly attacked by a group of people wielding knives and machetes.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T09:45:14Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:22:11.548425+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "7319c6aac95e4c77c9afe0bc35fc7e32",
-      "title": "'Bit light': NRL player Jack de Belin bemused by cop's perjury sentence",
-      "link": "https://www.9news.com.au/national/nrl-player-jack-de-belin-bemused-by-cops-perjury-sentence/1d38663f-4fab-433a-8823-33d33e4dc1e5",
-      "summary": "&lt;p&gt;An NRL player at the centre of a perjury case against a former police officer believes the sentence handed to the ex-cop should have been harsher.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T09:38:11Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:28:53.795805+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "c30a8fd65bd88d46f574c2d385d47ece",
-      "title": "Tom Wark, AAP Contributors News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/contributors/tom-wark",
-      "summary": "Meet Tom Wark, AAP on the Contributors News Team, 9News Australia",
-      "publishedAt": "2025-09-19T09:38:11Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:46:43.489229+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "4ec8c9910c6a4de689dddf6b8badf11b",
-      "title": "Pilot's body recovered from plane crash wreckage in NSW national park",
-      "link": "https://www.9news.com.au/national/search-to-resume-for-missing-pilot-after-nsw-light-plane-crash/690b45ca-41bc-48cf-8771-82626dc560b6",
-      "summary": "&lt;p&gt;The body of a pilot has been recovered from wreckage in a national park in southern NSW following a light plane crash yesterday, after taking off from Bankstown Airport about 11am.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T09:37:49Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:28:52.459025+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "2bc1ff864a49caa33251d33219be435b",
-      "title": "Woman missing after house fire on Sydney's Northern Beaches",
-      "link": "https://www.9news.com.au/national/avalon-house-fire-person-missing-after-sydney-blaze-overnight/b19f1087-45cc-4170-9a69-ecd605f2d054",
-      "summary": "&lt;p&gt;Rescuers have not yet been able to enter the home, as it has not yet been deemed safe by emergency services.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T09:37:41Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:18:43.860324+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "fa98c0ac21682eae88b487adccbcc8d2",
-      "title": "Adam Vidler, Producer Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital/adam-vidler",
-      "summary": "Meet Adam Vidler, Producer on the Digital News Team, 9News Australia",
-      "publishedAt": "2025-09-19T09:37:41Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:04:23.326913+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "4cfa275d6d20cee51c4046a63a0b0035",
-      "title": "Chaos expected as large hailstones and gusts up to 100km/h forecast for eastern states",
-      "link": "https://www.9news.com.au/national/weather-chaos-expected-as-large-hailstones-and-gusts-up-to-100kmh-forecast-for-eastern-states/33e208a3-6e63-4bcf-adb6-947185fe3768",
-      "summary": "&lt;p&gt;Large hailstones and dangerous winds will batter several eastern states, as storms move over the region.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T06:39:58Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:21:26.872435+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "d0ba0277a149e06051181f9096a36125",
-      "title": "Pharaoh's priceless bracelet stolen from museum, melted down and sold",
-      "link": "https://www.9news.com.au/world/pharaohs-priceless-bracelet-stolen-from-museum-melted-down-and-sold/8ce65a8a-957b-4a76-acab-7404781dccc4",
-      "summary": "&lt;p&gt;A 3,000-year-old gold bracelet was stolen from an Egyptian museum and irreversibly destroyed, authorities say. &lt;/p&gt;",
-      "publishedAt": "2025-09-19T05:30:30Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:34.129091+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "6edd5d4fe2e99ef1007347dc46461160",
-      "title": "Vets issue urgent warning about deadly virus to dog owners in north-east Queensland",
-      "link": "https://www.9news.com.au/national/dog-parvovirus-warning-issued-north-east-queensland/3cdb13ef-4d4d-4d36-bdff-9ebaca651ab4",
-      "summary": "&lt;p&gt;S﻿ome owners are being warned to keep their dogs inside.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T05:18:37Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:24:27.629401+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "fa4d93572ebe8ca80fcce52a850d217b",
-      "title": "Man dies in workplace accident in Melbourne's north",
-      "link": "https://www.9news.com.au/national/man-dies-in-workplace-accident-in-melbournes-north/9b6351c5-af4a-419c-b6c8-c2d6af75b466",
-      "summary": "&lt;p&gt;A﻿ man has been killed in a workplace accident at a Melbourne recycling plant.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T04:24:22Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:41:12.928166+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "f855dfc3ea9be2ec316427fba95002a8",
-      "title": "Ethan James, AAP Contributors News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/contributors/ethan-james",
-      "summary": "Meet Ethan James, AAP on the Contributors News Team, 9News Australia",
-      "publishedAt": "2025-09-19T03:50:39Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:17:26.918315+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "4bc22756cca5443239145f59b3dae56f",
-      "title": "April Cretan, Reporter Adelaide News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/adelaide/april-cretan",
-      "summary": "Meet April Cretan, Reporter on the Adelaide News Team, 9News Australia",
-      "publishedAt": "2025-09-19T02:35:47Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:11:05.121581+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "8b2c787fc62eb07cef83cec23aca3721",
-      "title": "Two more men charged over Anzac Day protests",
-      "link": "https://www.9news.com.au/national/two-more-people-charged-over-anzac-day-disturbance/ae28eb9b-aaef-4ff0-b00e-e76624e74938",
-      "summary": "&lt;p&gt;T﻿wo more people have been charged today over allegedly disrupting this year&amp;#x27;s Anzac Day service at Melbourne&amp;#x27;s Shrine of Remembrance.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T02:24:16Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:54:47.935713+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "b0f27afc7e979796bd8f8c4a6dbf5fca",
-      "title": "Suspicious fire engulfs iconic former entertainment complex in Melbourne",
-      "link": "https://www.9news.com.au/national/melbourne-fire-old-jam-factory-south-yarra-goes-up-in-flames/a44eda2b-d598-4541-87db-19197f770b54",
-      "summary": "&lt;p&gt;An intense and suspicious fire engulfed the well-known old Jam Factory, sending plumes of smoke over the area. &lt;/p&gt;",
-      "publishedAt": "2025-09-19T01:36:23Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:58:17.754991+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "76ff0bf46579a62db73df2c79c447c4f",
-      "title": "Trump pushing to retake Afghan air base from Taliban",
-      "link": "https://www.9news.com.au/world/trump-flags-retaking-bagram-air-base-from-taliban/8f9348b2-f780-4fa7-9194-b5507a63c7e1",
-      "summary": "&lt;p&gt;The US president says his officials are working to find ways of regaining American control.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T01:18:57Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:34:10.799038+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "f092615004be9d1204d36d996c719ca0",
-      "title": "MG rolls out discounts to HS, MG 3, and ZS models, ending this month",
-      "link": "https://www.drive.com.au/news/mg-rolls-out-discounts-to-hs-mg-3-and-zs-models-ending-this-month",
-      "summary": "",
-      "publishedAt": "2025-09-19T00:45:59+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:23:35.679902+00:00",
-      "sourceCategory": "News"
-    },
-    {
-      "id": "4f8cb56c6fc6364a4b7dffd9af253d0b",
-      "title": "Australian city shatters weather record for first time in 18 years",
-      "link": "https://www.9news.com.au/national/perth-weather-update-wa-city-sets-rainfall-streak-not-seen-for-18-years/d6dfb930-cf98-445a-9625-1e584087ad09",
-      "summary": "&lt;p&gt;P﻿erth has recorded four consecutive months of above average rainfall, for the first time since 2007.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T00:35:53Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:23:40.539984+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "35e60ca8291d30d1936c1a502ed7f852",
-      "title": "Woman charged over NSW bridge crash that killed two men",
-      "link": "https://www.9news.com.au/national/woman-charged-over-bridge-crash-that-killed-two-men/da35073b-644b-455c-a88e-f5499780eddf",
-      "summary": "&lt;p&gt;A woman has been charged following a crash where two men died in the state&amp;#x27;s north earlier this year.&lt;/p&gt;",
-      "publishedAt": "2025-09-19T00:22:03Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:12:40.318190+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "9340c14e8e4d63acfbb8e297a06dbbef",
-      "title": "Adelaide mum in tears after op-shop accidentally sells $700 pram",
-      "link": "https://9now.nine.com.au/today/salvation-army-accidentally-sells-adelaide-mum-700-pram-for-12/ce4514da-d19c-4034-87a2-dad6ffe3522c",
-      "summary": "",
-      "publishedAt": "2025-09-19T00:20:37+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:21:39.069122+00:00",
-      "sourceCategory": "Today"
-    },
-    {
-      "id": "596cad6e4913b32ffe5cf0f0694b088e",
-      "title": "An earth-like exoplanet could be habitable, and astronomers may know soon",
-      "link": "https://www.9news.com.au/world/scientists-close-to-confirming-whether-planet-has-earth-like-atmosphere/171b97a7-cbd0-430c-8a74-b6285564dafb",
-      "summary": "&lt;p&gt;Astronomers might be close to confirming the presence of an Earth-like atmosphere on an exoplanet for the first time.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T23:34:45Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:37:19.103286+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "2a2974d6002c268d560303e64aa54aa3",
-      "title": "Brave dad stops traffic to help massive python stuck on motorway",
-      "link": "https://9now.nine.com.au/today/brave-dad-rescues-massive-python-from-busy-sunshine-coast-highway/21e5ac1d-e3d8-4883-9e62-9affe8bc726d",
-      "summary": "",
-      "publishedAt": "2025-09-18T22:49:33+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:12.745572+00:00",
-      "sourceCategory": "Today"
-    },
-    {
-      "id": "8e0fd2b474e37389008b0e78628d5303",
-      "title": "NRL news 2025: Broncos halves battle with Adam Reynolds, Ezra Mam returning in prelim final; Darren Lockyer, Braith Anasta comments",
-      "link": "https://www.nine.com.au/sport/nrl/news-2025-brisbane-broncos-halves-team-adam-reynolds-braith-anasta-darren-lockyer-comments-20250918-p5mwcd.html",
-      "summary": "M﻿ichael Maguire has some huge calls to make heading into Brisbane Broncos prelim final, with the looming return of star halves Adam Reynolds and Ezra Mam causing a potential headache, while Reece Walsh's form is also a factor.",
-      "publishedAt": "2025-09-18T22:43:23Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:21:23.768382+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "c450dd0b09dcf6f82cb5e87e0549fa21",
-      "title": "Macrons to give 'scientific evidence' proving Brigitte is a woman in defamation case",
-      "link": "https://www.9news.com.au/world/brigitte-macron-to-give-court-evidence-she-is-a-woman/553f24f6-99cd-4ef7-9793-1078e05b24c4",
-      "summary": "&lt;p&gt;T﻿he lawyer for the French President and his wife says the material will prove the claims of a US right-wing influencer are false.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T22:37:09Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:37:21.820888+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "2abb5efe7105a4c2aef8e7cf0fb87924",
-      "title": "Gout Gout, Noah Lyles, world athletics championships 2025: 'Crazy' reality dawns on Australian sprint sensation as US megastar hails 'amazing kid'",
-      "link": "https://www.nine.com.au/sport/athletics/gout-gout-noah-lyles-world-championships-2025-tokyo-mens-200m-semi-finals-comments-20250918-p5mwcb.html",
-      "summary": "TOKYO:﻿ Gout Gout shared a stage with Olympic champions this week, strutting his stuff in the company of Noah Lyles and Letsile Tebogo at the world athletics championships. His next competition? A Queensland school meet at Mt Gravatt﻿ in the southern suburbs of Brisbane. And he'll be pulling out his pencil case a few days later, ready to sit his year 12 exams.",
-      "publishedAt": "2025-09-18T22:26:20Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:24.781569+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "e9cd8185f82a1807cf0e77b4e172fc5b",
-      "title": "Tennis news 2025, Bjorn Borg prostate cancer, drug overdose and cocaine addiction in new book Heartbeats",
-      "link": "https://www.nine.com.au/sport/tennis/bjorn-borg-books-2025-news-drug-overdoses-cancer-quitting-tennis-20250919-p5mwc0.html",
-      "summary": "Björn Borg starts his new memoir, Heartbeats, with a story about being rushed to a Dutch hospital in the 1990s after overdosing on \"alcohol, drugs, pills — my preferred ways of self-medication\", and the Swedish tennis great closes it by revealing that he was diagnosed with prostate cancer.",
-      "publishedAt": "2025-09-18T22:14:44Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:25.836701+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "6ca2538d7c3d3ad005ac0f02360f0d5d",
-      "title": "Man dies after riding rollercoaster at new Florida amusement park",
-      "link": "https://www.9news.com.au/world/man-dies-from-blunt-impact-injuries-after-riding-coaster-at-new-florida-amusement-park-epic-universe/6a7ce9c5-fc5e-4579-a914-bdf84d23b97d",
-      "summary": "&lt;p&gt;A man who was unresponsive after riding a rollercoaster at Universal Orlando Resort&amp;#x27;s newest park died from blunt impact injuries, a medical examiner said.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T21:40:11Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:34:00.322995+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "f5ee13ab012809f4d1e6c1bbdda17b93",
-      "title": "Champions League 2025: Manchester City vs Napoli, Erling Haaland 50th goal video, record, news, reaction",
-      "link": "https://www.nine.com.au/sport/football/champions-league-2025-manchester-city-napoli-erling-haaland-50-goals-video-record-news-reaction-20250919-p5mwbt.html",
-      "summary": "Another day, another record for Manchester City's goalscoring freak Erling Haaland.﻿ The giant Norwegian became the fastest player to score 50 Champions League goals on Friday (AEST) when he nodded home a sublime dinked pass from Phil Foden.",
-      "publishedAt": "2025-09-18T21:30:37Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:24:19.274260+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "a7fcc3cc7fbd0251675f397e05ab9703",
-      "title": "What's happening in entertainment news today",
-      "link": "https://9now.nine.com.au/today/celebrities-react-to-jimmy-kimmel-cancellation-other-entertainment-news-on-september-19/499fb6ec-7003-4ad2-811f-3dd98b011efa",
-      "summary": "",
-      "publishedAt": "2025-09-18T21:23:09+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:27:46.532236+00:00",
-      "sourceCategory": "Today"
-    },
-    {
-      "id": "3b6cb9cab0a4d44546837fe9d82624a5",
-      "title": "Trump forced to delay return to US after helicopter technical fault",
-      "link": "https://www.9news.com.au/world/donald-trump-visit-to-uk-president-forced-to-switch-helicopters/5243e7d9-e790-4822-9264-e3f4454deb01",
-      "summary": "&lt;p&gt;A minor hydraulic problem forced the Marine One aircraft to divert and land at an English airfield. &lt;/p&gt;",
-      "publishedAt": "2025-09-18T21:17:13Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:34:42.821931+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "1362332b83bdb268dd4e2fb7a94484fe",
-      "title": "Hundreds of e-bike riders fined for having illegal cycles",
-      "link": "https://www.9news.com.au/national/ebike-riders-fined-over-overpowered-machines/0eed7aa3-1d89-47b2-92c3-bbf3e55dca39",
-      "summary": "&lt;p&gt;R﻿iders can cop a $1018 fine if their cycle exceeds the power regulations. &lt;/p&gt;",
-      "publishedAt": "2025-09-18T20:43:36Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:52:49.276573+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "860fa5b8a97eae4743ec78a1ccadf187",
-      "title": "'Free speech or not': Donald Trump redoubles attack after Jimmy Kimmel axing query",
-      "link": "https://www.9news.com.au/world/donald-trump-doubles-down-on-jimmy-kimmel-cancellation-claims-bad-ratings/04bffe48-60ec-4118-8152-b462838705a7",
-      "summary": "&lt;p&gt;T﻿he US president claimed Kimmel&amp;#x27;s show was axed due to bad ratings, after Kimmel&amp;#x27;s Charlie Kirk comment.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T20:35:33Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:22.413164+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "90a95c08b1227fba1e6675ea9bce299c",
-      "title": "Doctor who raised suspicions around mushroom murderer Erin Patterson sanctioned by medical regulator",
-      "link": "https://www.9news.com.au/national/christopher-webster-doctor-erin-patterson-case-sanctioned/6b60e2f6-7b4a-4883-8338-699b90496d95",
-      "summary": "&lt;p&gt;T﻿he doctor who alerted police to mushroom murderer Erin Patterson has been sanctioned by the medical regulator, which has ordered he undergo &amp;quot;professionalism&amp;quot; education.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T20:17:38Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:47:51.627429+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "2627fb7039102692aaddbdfedebc3f59",
-      "title": "Germany’s forgotten sportscar was a triumph over Communism",
-      "link": "https://www.drive.com.au/caradvice/germanys-forgotten-melkus-rs-1000-was-a-triumph-over-communism",
-      "summary": "",
-      "publishedAt": "2025-09-18T20:00:00+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:13:31.906937+00:00",
-      "sourceCategory": "Caradvice"
-    },
-    {
-      "id": "464a5ed331649f28c85de7919f19f5a7",
-      "title": "Melania Trump and Princess of Wales come together for rare joint engagement",
-      "link": "https://www.9news.com.au/world/donald-trump-uk-visit-best-photos-from-us-president-historic-second-state-visit-to-uk/020ddae7-6573-480c-afbb-e0aff7d000ad",
-      "summary": "The Princess of Wales joined forces with first lady Melania Trump on day two of the US president's state vi...",
-      "publishedAt": "2025-09-18T18:16:34.000Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:47.607006+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "721d0c74eadb9c778a9d264a12b67dd6",
-      "title": "Charlie Kirk's widow, Erika Kirk, named new CEO of Turning Point USA",
-      "link": "https://www.9news.com.au/world/erika-kirk-named-ceo-of-turning-point-usa/51166328-0cb1-4f8a-85d1-4eae5cc70855",
-      "summary": "&lt;p&gt;Erika Kirk has been named CEO of Turning Point USA, taking over the organisation that her husband, Charlie Kirk, helped found and led until his assassination.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T17:40:32Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:45.756647+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "c4b038b9a4e82720f4943bc392531d2e",
-      "title": "Obama calls Kimmel's show suspension 'dangerous' as Trump argues it was over 'bad ratings'",
-      "link": "https://www.9news.com.au/world/jimmy-kimmel-suspension-barack-obama-donald-trump-reactions/b3f6d166-f7a5-49b7-a898-44fe288506ef",
-      "summary": "&lt;p&gt;Although, when Donald Trump was asked about the move, during a press conference on day two of his UK state visit, he said Kimmel was &amp;quot;fired for lack of talent&amp;quot; and over &amp;quot;bad ratings&amp;quot;.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T16:33:27Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:37:26.551746+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "d873ae6957e6d8089bc82eb54c5fedba",
-      "title": "Domestic violence survivor calls for her violent ex to be deported back to the UK",
-      "link": "https://www.9news.com.au/national/terry-phillips-jailed-for-assaulting-former-partner-spending-rest-of-sentence-in-queensland/bcd2843d-cb6e-4ab2-9a51-f4ef58769f79",
-      "summary": "&lt;p&gt;Terry Phillips was allowed to move to Queensland on a community corrections order ﻿after pleading guilty to a long list of charges.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T16:17:23Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:26:22.985558+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "d4922287d7d7e6e4889d05d206d71f2a",
-      "title": "Family of allegedly murdered woman Susan Goodwin say they 'have the answers we've been looking for' after rema",
-      "link": "https://www.9news.com.au/national/susan-goodwin-remains-found-family-issue-statement/75193473-0e0a-4a83-a3be-4b4ae085d12f",
-      "summary": "&lt;p&gt;SA Police said they are very confident they found 39-year-old Susan Goodwin&amp;#x27;s remains.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T13:39:03Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:49:57.236834+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "8e9b9a45d2f45ed747887156d6e2a546",
-      "title": "World athletics championships 2025: Australia's Jessica Hull successfully appeals after falling in women's 800m heat in Tokyo; Abbey Caldwell, Claudia Hollingsworth reach semi-finals",
-      "link": "https://www.nine.com.au/sport/athletics/world-championships-2025-jessica-hull-fall-womens-800m-heats-20250918-p5mwad.html",
-      "summary": "T﻿OKYO: Jessica Hull was sent tumbling in her 800-metre heat at the world athletics championships on Thursday night but a successful protest has ensured the Australian will compete in the semi-finals. Hull was in the thick of congestion midway through the first lap when contact made by another runner sent her falling, ruining her race.",
-      "publishedAt": "2025-09-18T12:23:24Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:25:42.037486+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "c1009c3824a2f393bbf1f9b49c6dde1f",
-      "title": "Gout Gout, world athletics championships 2025: Australian teenager misses 200m final, finishes fourth in semi with 20.36 seconds, video",
-      "link": "https://www.nine.com.au/sport/athletics/world-championships-2025-gout-gout-200-metre-semi-final-result-video-australian-sprinter-20250918-p5mwaa.html",
-      "summary": "Australian teen phenom Gout Gout has missed out on a spot in the 200-metre final﻿ at his maiden senior global championships. The 17-year-old finished fourth in his semi final at the World Athletics Championships in Tokyo with a time of 20.36 seconds.",
-      "publishedAt": "2025-09-18T12:19:39Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:25:51.683550+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "1c0f9c4c2620b1a59cd8aab556b0cd24",
-      "title": "Advertising executive diagnosed with Australia's most deadly disease at just 46",
-      "link": "https://9now.nine.com.au/a-current-affair/dementia-australia-early-onset-diagnosis-aged-46/1f5b4729-ba05-42c6-8c54-9c7716d2f474",
-      "summary": "",
-      "publishedAt": "2025-09-18T11:09:16+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:30:30.654913+00:00",
-      "sourceCategory": "A-current-affair"
-    },
-    {
-      "id": "b3bbf86ed1a5acd9b6df5c3556939c47",
-      "title": "Queensland's oldest family winery up for sale",
-      "link": "https://9now.nine.com.au/a-current-affair/queenslands-oldest-family-winery-ballandean-estate-up-for-sale/b1178bf8-f60e-4f4b-b247-d2a815b21efb",
-      "summary": "",
-      "publishedAt": "2025-09-18T10:56:54+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:31:19.934143+00:00",
-      "sourceCategory": "A-current-affair"
-    },
-    {
-      "id": "52d2f19bbce43061c6feb7926632fc8c",
-      "title": "Fears for pilot after light plane disappears after taking off from Sydney airport",
-      "link": "https://www.9news.com.au/national/plane-crash-nsw-south-bankstown/be1bf098-98a5-4316-84ad-8dbce601f057",
-      "summary": "&lt;p&gt;A pilot in his 60s is missing after a light plane crashed in the rural NSW.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T09:24:31Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:59:36.093694+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "696e93aae240be635e71a3e2127d0c89",
-      "title": "9News Perth Junior Weather Watch",
-      "link": "https://www.9news.com.au/national/9news-perth-junior-weather-watch/6e28f986-747d-42a9-8239-4f7b6cc4b004",
-      "summary": "&lt;p&gt;Junior Weather Watch is coming to Perth schools!&lt;/p&gt;&lt;p&gt;Join 9News Perth&amp;#x27;s Scherri-Lee Biggs for a fun, interactive weather education program.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T09:17:28Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:11:28.935550+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "ce9537e5529675f10f95807480386828",
-      "title": "Distressed mother and baby whale rescued from shark nets off Queensland's coast",
-      "link": "https://www.9news.com.au/national/noosa-beach-whale-rescue-distressed-mother-and-baby-whale-rescued-from-shark-nets-off-queenslands-sunshine-coast/d11bcc2d-b760-4eda-88c4-1a393ee0c750",
-      "summary": "&lt;p&gt;Videos have emerged of a humpback whale duo trapped in shark nets off Queensland&amp;#x27;s Sunshine Coast.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T09:14:26Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:49:54.862814+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "2527a73ecf375158052d829f0eda03e6",
-      "title": "'ZERO talent': Donald Trump reacts after Jimmy Kimmel's show pulled off air",
-      "link": "https://www.9news.com.au/world/jimmy-kimmel-show-pulled-offair-indefinitely-after-charlie-kirk-remarks/2d96c5ce-aa33-4e98-9406-1e9b48a30e0f",
-      "summary": "&lt;p&gt;Kimmel&amp;#x27;s &amp;quot;indefinite&amp;quot; axing came after he accused MAGA figures of trying to score political points off Charlie Kirk&amp;#x27;s death.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T08:57:36Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:34:32.190086+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "689dd552b46c3ce4c51a038e29dd3c3d",
-      "title": "Trump says antifa will be listed as a terror group, despite advice saying it's an ideology, not an organisatio",
-      "link": "https://www.9news.com.au/world/donald-trump-antifa-terror-listing/1a1eb8ff-a8f3-4e02-8b5f-2ece3a537c0e",
-      "summary": "&lt;p&gt;Donald Trump says antifa will be listed as a &amp;quot;major terrorist organisation&amp;quot;, even though the term refers to a general, uncentralised ideology and protest movement rather than an actual specific group.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T08:56:50Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:34:54.551852+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "2859a537528cf1159c75c6c6da5c6bc4",
-      "title": "Sydney on verge of waste disaster as landfills on pace to capacity by 2030",
-      "link": "https://www.9news.com.au/national/sydney-landfill-space-will-run-out-by-2030/c676d156-007e-49d1-a011-bd08e530f9c0",
-      "summary": "&lt;p&gt;S﻿ydney&amp;#x27;s landfill zones are on pace to be filled by 2030 unless action is taken.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T08:55:08Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:57:19.224379+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "d4c3719ca551213b8c93c4adc278a442",
-      "title": "Several sexual abuse charges against Alan Jones withdrawn, others 'downgraded'",
-      "link": "https://www.9news.com.au/national/alan-jones-some-sex-abuse-charges-withdrawn/8046d7af-2d7e-4552-a150-790f3bf8e665",
-      "summary": "&lt;p&gt;The broadcaster now faces 25 charges of indecent assault and two of sexual touching against nine alleged victims.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T08:52:40Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:40:03.221407+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "a5965054f302e76b78e634e053c569ad",
-      "title": "NRL star hit by media scrum before facing court",
-      "link": "https://www.9news.com.au/national/nrl-star-brandon-smith-to-fight-drug-and-betting-charges-in-court/223b02ae-aadc-48e2-a42e-2ec3feb9364f",
-      "summary": "&lt;p&gt;Brandon Smith will fight drug and betting charges he&amp;#x27;s facing, his lawyer confirmed in court today.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T08:52:16Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:16:07.647440+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "90cab50ba3faa86fde9164bbe4435dc8",
-      "title": "Two face court for murder after 'amazing person' shot dead in Melbourne",
-      "link": "https://www.9news.com.au/national/melbourne-murder-shooting-kwar-atel-court/521b6839-7c96-4ccb-a4cb-8ced8c406b79",
-      "summary": "&lt;p&gt;Kwar Ater, 26, was shot on the corner of Elizabeth and Franklin streets, in Melbourne&amp;#x27;s CBD, about 3.40am on September 7.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T07:08:59Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:18:34.714807+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "6fcf2b7d7820be78c22f1aa9967aadb0",
-      "title": "NRL news 2025: Victor Radley handed 10-game suspension by Sydney Roosters amid Brandon Smith saga; Nick Politis comments, salary cap relief",
-      "link": "https://www.nine.com.au/sport/nrl/news-2025-victor-radley-sydney-roosters-10-game-suspension-fine-charity-donation-sanction-brandon-smith-saga-20250918-p5mw8i.html",
-      "summary": "V﻿ictor Radley has copped a 10-game suspension from the Sydney Roosters and will pay $30,000 towards medical research for his involvement in the Brandon Smith saga, with chairman Nick Politis explaining the decision.",
-      "publishedAt": "2025-09-18T06:56:00Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:27:40.923689+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "2768a3c3799b2fe9fdd8e589b0617d3c",
-      "title": "Donald Trump's historic feud with Jimmy Kimmel spans almost 10 years and two presidencies",
-      "link": "https://www.9news.com.au/national/donald-trump-jimmy-kimmel-inside-long-running-feud-insults-barbs-explained/9e141f20-4079-4eeb-88e7-f4ff867cdcaa",
-      "summary": "&lt;p&gt;They were once friends – or at least amicable entertainment industry colleagues.﻿ So, where did it all go wrong for Kimmel and Trump?&lt;/p&gt;",
-      "publishedAt": "2025-09-18T06:09:20Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:27:56.226265+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "25e2b3dcf058d31e638c26781ea8c693",
-      "title": "Want to drive like Daniel Ricciardo? It&#8217;ll cost you $5 million",
-      "link": "https://www.drive.com.au/caradvice/want-to-drive-like-daniel-ricciardo-itll-cost-you-5-million",
-      "summary": "",
-      "publishedAt": "2025-09-18T06:00:00+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:28:08.752103+00:00",
-      "sourceCategory": "Caradvice"
-    },
-    {
-      "id": "e24892a358b03d2876df1b779934eeb9",
-      "title": "Victoria's bail laws are supposed to be a tough stance on youth crime, here's why it may have the opposite eff",
-      "link": "https://www.9news.com.au/national/melbourne-victoria-crime-jacinta-allan-bail-laws/bee17f8a-acbc-4566-804d-05df81fd2222",
-      "summary": "&lt;p&gt;The crime rate in the state has surged, with a 20 per cent increase recorded back in March.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T02:44:34Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:00:02.127520+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "21f185449d6f1fff7866120cac1d9f1c",
-      "title": "Major Australian university cuts over 1000 subjects and 134 full-time staff to plug $100 million hole",
-      "link": "https://www.9news.com.au/national/university-of-technology-sydney-uts-job-cuts-australia-education/66fb453b-bc3c-449e-9735-7386f791d9bc",
-      "summary": "&lt;p&gt;The university, based in the heart of Sydney and boasting 51,000 students, announced the measures last night as it looks to save $100 million.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T02:13:50Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:42:08.679858+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "752ab504429e3c5472d53481d1de2e66",
-      "title": "Why Ben and Jerry's co-founders split after nearly 50 years",
-      "link": "https://www.9news.com.au/world/ben-and-jerrys-ice-cream-partner-leaves-business/f12dfa71-4e61-4895-9e19-51b7137e6634",
-      "summary": "&lt;p&gt;B﻿en and Jerry&amp;#x27;s co-founder Jerry Greenfield has resigned from the ice-cream company he founded.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T01:19:28Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:30.880324+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "1dfb3da6a1ff1277b099c3c4d9b66dc6",
-      "title": "Takeaways from FBI Director Kash Patel's testimony on Jeffrey Epstein",
-      "link": "https://www.9news.com.au/world/usa-jeffrey-epstein-files-kash-patel-fbi/1d498445-f6fa-4410-a280-d732fb60b25a",
-      "summary": "&lt;p&gt;The Trump loyalist was grilled by Congress over the investigation into the notorious sex trafficker.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T01:09:39Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:34:28.201583+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "0ab3cbe55d37d5d33a7ae036be75e8b9",
-      "title": "$36.4 billion sale of Australian oil and gas giant Santos falls through",
-      "link": "https://www.9news.com.au/finance/santos-australia-30-billion-takeover-xrg/6417fb8b-1fc0-4131-9909-e32b7787af45",
-      "summary": "&lt;p&gt;Santos said they had expressed concerns to the consortium surrounding delays in the takeover.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T00:46:17Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:08:04.929423+00:00",
-      "sourceCategory": "Finance"
-    },
-    {
-      "id": "d1924c4e4587110a2b5e6bae7e09f9b2",
-      "title": "Inside Trump's state banquet at Windsor Castle: a who's who of the 160-strong guest list",
-      "link": "https://www.9news.com.au/world/state-banquet-windsor-castle-full-guest-list-everything-to-know-explained/755d38d6-fd10-4c41-9cd9-61e7d2563a93",
-      "summary": "&lt;p&gt;M﻿eet the major players on the 160-strong guest list.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T00:20:13Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:23.943326+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "c5513e1ce259f0123c9dd397bb393ede",
-      "title": "King Charles backs AUKUS submarine deal in hint for Trump",
-      "link": "https://www.9news.com.au/world/donald-trump-uk-visit-king-charles-praises-aukus-pact/5ad02180-e21e-4df9-bd38-febe2007b92d",
-      "summary": "&lt;p&gt;T﻿he monarch&amp;#x27;s expression of support will bolster Prime Minister Anthony Albanese as he prepares to hold talks with the US President.&lt;/p&gt;",
-      "publishedAt": "2025-09-18T00:18:50Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:44.886898+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "a70c230efc65189e19afe0b343a59693",
-      "title": "Three police officers killed, two injured in Pennsylvania shooting",
-      "link": "https://www.9news.com.au/world/usa-united-states-police-shooting-pennsylvania/2944bf12-f106-464b-916b-99389b353679",
-      "summary": "&lt;p&gt;The shooting erupted in the area of North Codorus Township, about 185 km west of Philadelphia.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T23:49:56Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:43.031800+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "db06371a564d24091219d0a8c42c28e5",
-      "title": "Sheriff reveals why Charlie Kirk suspect turned himself in",
-      "link": "https://www.9news.com.au/world/charlie-kirk-shooting-updates-tyler-robinson-feared-being-shot-at-home-turned-himself-in-sheriff-says/03643245-9275-4229-9d35-fe216f769dae",
-      "summary": "&lt;p&gt;T﻿yler Robinson was quiet and sombre when he turned himself in to police.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T22:20:24Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:39.788532+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "37b9f680a8112a2c7f548c9138816d59",
-      "title": "US Federal Reserve cuts interest rates for first time this year",
-      "link": "https://www.9news.com.au/world/us-federal-reserve-cuts-interest-rates/1d5e011a-a587-4964-ab44-a5e804ff1dcd",
-      "summary": "&lt;p&gt;T﻿he Trump administration&amp;#x27;s impacts on jobs and inflations prompted the move.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T22:19:11Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:35:22.546387+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "ae7d626142f51da74050e28447b79342",
-      "title": "Rupert Murdoch attends royal dinner for Trump amid Epstein lawsuit",
-      "link": "https://www.9news.com.au/world/rupert-murdoch-attends-royal-dinner-for-trump-amid-epstein-lawsuit/396b15ec-f89b-477d-8ac1-f87febd07be1",
-      "summary": "&lt;p&gt;As President Donald Trump entered St. George&amp;#x27;s Hall for the grand finale of his state visit at Windsor Castle, someone he is suing was seated at the end of the dinner table: Rupert Murdoch.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T22:18:19Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:35:53.643901+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "7daffb0bcf3c3f8d8697c326f5b6671e",
-      "title": "Two men stabbed in daylight on platform at Sydney train station",
-      "link": "https://www.9news.com.au/national/two-stabbed-merrylands-railway-station-sydney/0195699a-d352-4058-bd01-9a1f3edd6add",
-      "summary": "&lt;p&gt;T﻿he accused attacker allegedly injured both men with a knife in speedily successive incidents yesterday afternoon.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T21:54:09Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:33:13.030173+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "856c7f871588885ec6d72df510861ba8",
-      "title": "'Priceless and eternal': Trump, Charles speak at lavish banquet",
-      "link": "https://www.9news.com.au/world/donald-trump-uk-visit-king-charles-iii-prepares-to-welcome-trump-windsor-castle/3fc8ad29-f31f-4424-9b29-6c6fbd5fe706",
-      "summary": "&lt;p&gt;For the grandeur-loving president, festivities involved 120 horses and 1300 troops - including the largest guard of honour in living memory.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T21:09:11Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:37.567932+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "e47a4217e6a74a5f6351cfcea08dcde6",
-      "title": "'Pay attention': Passenger flight repeatedly warned to steer clear of Air Force One",
-      "link": "https://www.9news.com.au/world/donald-trump-uk-visit-spirit-airlines-plane-too-close-to-air-force-one/1273293a-c92d-46f6-9df1-00706233308c",
-      "summary": "&lt;p&gt;T﻿he pilot was berated by air controllers for flying within 20 kilometres of the jet carrying US President Donald Trump.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T20:37:59Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:29.368512+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "53595ea0fc5e7508fbc574b520f2a4ac",
-      "title": "Woman's fatal fall in Queensland pub sparks investigation",
-      "link": "https://www.9news.com.au/national/woman-dead-after-fall-in-tavern-taranganba-queensland/3e7afc23-9750-4d86-a850-d3c64b8b9017",
-      "summary": "&lt;p&gt;P﻿olice are investigating an incident in the tavern that took place in the hours leading up to the fall.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T20:31:00Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:07:20.338041+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "a35f40460e54a447de84571642b473f8",
-      "title": "The real reason police set up RBTs in the morning",
-      "link": "https://www.drive.com.au/caradvice/the-real-reason-police-set-up-rbts-in-the-morning",
-      "summary": "",
-      "publishedAt": "2025-09-17T20:00:00+00:00",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:17:23.641295+00:00",
-      "sourceCategory": "Caradvice"
-    },
-    {
-      "id": "72148c787b2e38dbc9e2b98a372000aa",
-      "title": "Today in History - September 18: Dropped socket nearly sets off nine megaton nuclear bomb",
-      "link": "https://www.9news.com.au/world/today-in-history-september-18-what-happened-on-this-day/495f90eb-7261-4ec2-b9db-d0879d1a6c97",
-      "summary": "&lt;p&gt;A forgotten torque wrench on September 18, 1980, led to a blast that nearly set off a nuclear warhead.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T19:24:40Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:33:57.776182+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "e8998c8ecf93a1035775dea5e6bd8bd6",
-      "title": "Trump's second state visit to UK meets with protests and arrests",
-      "link": "https://www.9news.com.au/world/donald-trump-uk-visit-trumps-second-state-visit-to-uk-meets-with-protests-and-arrests/91c86d5e-19bb-4b56-9ea1-c8e59c1974c4",
-      "summary": "&lt;p&gt;Dozens of protesters took to the streets of Windsor before his visit to chant, &amp;quot;Hey, hey, ho, ho, Donald Trump has got to go&amp;quot; and &amp;quot;Donald Trump&amp;#x27;s not welcome here&amp;quot;.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T16:05:05Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:35:52.985487+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "a08f2165d9f0838044154c71530981ae",
-      "title": "Sarah Swain, Senior Journalist Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital/sarah-swain",
-      "summary": "Meet Sarah Swain, Senior Journalist on the Digital News Team, 9News Australia",
-      "publishedAt": "2025-09-17T14:00:03Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:39:48.589442+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "e78937e8f90f4845581b3acc6260dda8",
-      "title": "Karishma Sarkari, Journalist Digital News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/digital/karishma-sarkari",
-      "summary": "Meet Karishma Sarkari, Journalist on the Digital News Team, 9News Australia",
-      "publishedAt": "2025-09-17T13:11:09Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:18:11.519148+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "2a78d9a70955794bb81356547ff9144e",
-      "title": "Two men charged with murder over Melbourne CBD shooting",
-      "link": "https://www.9news.com.au/national/melbourne-cbd-shooting-arrests-four-men/56338046-9a2c-47db-84ff-915b2edd1d1c",
-      "summary": "&lt;p&gt;Two men have been charged with murder following police investigations into ﻿a deadly drive-by shooting in Melbourne&amp;#x27;s CBD earlier this month.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T13:11:09Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:26:31.212075+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "7ad120ed78f0c671d39f8fbcad18baf6",
-      "title": "Trevor Long, Technology Expert Contributors News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/contributors/trevor-long",
-      "summary": "Meet Trevor Long, Technology Expert on the Contributors News Team, 9News Australia",
-      "publishedAt": "2025-09-17T13:03:16Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:25:56.031364+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "a725b140afcfe50d6a558d9476bfa821",
-      "title": "Major breakthrough as remains found, man arrested over reopened SA cold case",
-      "link": "https://www.9news.com.au/national/susan-goodwin-search-updates-police-probing-cold-case-disappearance-uncover-bone-in-backyard/7145a1f5-434c-4fa7-b326-e08bb6394486",
-      "summary": "&lt;p&gt;Susan Goodwin was last seen at her local Coles and Woolworths in July 2002.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T11:50:50Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:21:36.957698+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "dfd24acdd4742b51d8edd7406b526db8",
-      "title": "Woman freed on bail over fire that killed two children",
-      "link": "https://www.9news.com.au/national/sydenham-house-fire-woman-charged-with-negligent-manslaughter-following-death-of-two-children/073290af-8122-4bbf-a77c-e2b1b7ac6fd9",
-      "summary": "&lt;p&gt;The shocking details about the deadly 2024 blaze were aired as Lee, 26, successfully applied for bail via video link.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T11:15:39Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:07:13.278151+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "cd9d88ea497aea6ab956daf2a7d11e6a",
-      "title": "Disturbing video surfaces after national park fire in Gold Coast",
-      "link": "https://www.9news.com.au/national/queensland-fire-burleigh-headland-national-park-gold-coast/edb88c6c-dcb7-44ac-b570-7eb84c2e520b",
-      "summary": "&lt;p&gt;Police are investigating the blaze on the Gold Coast.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T09:53:12Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:45:01.912743+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "93c6b777b52560a8184560d6f62f9fb0",
-      "title": "Suspect in Charlie Kirk shooting appears in court",
-      "link": "https://www.9news.com.au/world/charlie-kirk-shooting-tyler-robinson-charged-aggravated-murder-death-penalty-sought/400a4d1f-b702-4572-a3dd-8e202d3a16e2",
-      "summary": "&lt;p&gt;T﻿he charges previously announced mean Tyler Robinson could face the death penalty if he is found guilty.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T09:49:12Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:44:42.324644+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "a5c0a0b0a455e3c1a710f2a39d8c09a1",
-      "title": "Hollywood heartthrob Robert Redford dies, aged 89",
-      "link": "https://www.9news.com.au/world/robert-redford-dead-actor-director-activist-dies-aged-89/9427ebcd-1d60-46e9-98be-99ae9a1d375a",
-      "summary": "&lt;p&gt;The &lt;em&gt;Butch Cassidy and the Sundance Kid&lt;/em&gt; star ﻿died in his sleep at his home in the mountains outside Provo, Utah on Tuesday, according to publicist Cindi Berger.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T09:48:21Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:08:07.256560+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "ea45c3ad44e458fc646563c937b00a3c",
-      "title": "Two teens hospitalised following violent road rage attack in Sydney's west",
-      "link": "https://www.9news.com.au/national/lakemba-road-rage-attack-cctv/1a2a1832-fe26-42cb-96c5-f8df811d4570",
-      "summary": "&lt;p&gt;T﻿wo teenagers were rammed off the road and attacked by a group of people who remain on the run.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T09:40:57Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:27:24.083730+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "7a13bf8bcf0574044edb1fafbc40e6aa",
-      "title": "Teenager arrested following fatal stabbing on NSW north coast",
-      "link": "https://www.9news.com.au/national/teenager-arrested-coffs-harbour-fatal-stabbing/1c8ccb1c-7da8-42a7-8518-8a2230a5fb1e",
-      "summary": "&lt;p&gt;A﻿ 17-year-old male has been arrested by police following a fatal stabbing in Coffs Harbour last night.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T08:19:59Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:25:29.754107+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "b14a8f6cf4eb4e1829f17f344b7b4948",
-      "title": "Reuters, Contributors News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/contributors/reuters",
-      "summary": "Meet Reuters, on the Contributors News Team, 9News Australia",
-      "publishedAt": "2025-09-17T08:07:23Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:47:12.520781+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "618b27ebdc3b847ce19c3fa9ea504683",
-      "title": "Suspect in Madeleine McCann case released from German prison, say police",
-      "link": "https://www.9news.com.au/world/madeleine-mccann-suspect-released-from-german-prison-say-police/9b8d0cc2-62b8-4ce0-9865-c476f3ef1cac",
-      "summary": "&lt;p&gt;Christian Brueckner, the German man who remains a suspect in the 2007 disappearance of British girl Madeleine McCann in Portugal, was released from prison.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T08:07:23Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:23:11.967899+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "5e26520e60b5b4948cda812e770c823a",
-      "title": "Four arrested after Trump, Epstein image projected onto Windsor Castle",
-      "link": "https://www.9news.com.au/world/donald-trump-uk-visit-arrests-epstein-projection-windsor-castle/bf14ff56-afe1-499c-8c59-e465a2e83dc2",
-      "summary": "&lt;p&gt;The stunt happened on the eve of Trump&amp;#x27;s state visit to the UK.﻿&lt;/p&gt;",
-      "publishedAt": "2025-09-17T07:58:27Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:15:32.761126+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "c06fc22a03403b114635b09bce21e488",
-      "title": "Trio charged over alleged arson attack on Melbourne factory",
-      "link": "https://www.9news.com.au/national/derrimut-factory-arson-attack-melbourne-three-people-charged/f0e8ad64-2c61-48eb-8e1d-adf557017ea4",
-      "summary": "&lt;p&gt;Detectives from Taskforce Hawk, which is probing corruption within﻿ the building industry in Victoria, charged three men with criminal damage and motor vehicle theft.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T06:21:21Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:17:39.334402+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "60b56d55f9a4ddd1998f766aa8ee3761",
-      "title": "'Just doing his job': Albanese government backs ABC reporter blasted by Trump",
-      "link": "https://www.9news.com.au/world/donald-trump-sprays-abc-reporter-over-hurting-australia/c8722ca3-cd47-4fe4-90af-6c791665e334",
-      "summary": "&lt;p&gt;T﻿he US president seemingly threatened Australia after he took umbrage at a question.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T05:17:35Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:37:47.638357+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "b2d5b2d64590812c1623bf02f390a71f",
-      "title": "Text exchange between accused Charlie Kirk shooter and roommate revealed",
-      "link": "https://www.9news.com.au/world/charlie-kirk-shooting-updates-tyler-kirk-accused-text-exchanges-with-roommate-revealed/2bee0356-42eb-453f-8854-6374c18d6973",
-      "summary": "&lt;p&gt;Tyler Robinson allegedly discussed his rifle, possible motive and other details.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T00:57:55Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:15:17.581352+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "031806cc66ab1aab014e3b27759339e6",
-      "title": "NSW childcare worker charged with assaulting four-year-old boy",
-      "link": "https://www.9news.com.au/national/childcare-worker-charged-assault-four-year-old-boy-new-south-wales-nsw/c0250823-3ffc-4be2-9c69-6e89dbbdbd3b",
-      "summary": "&lt;p&gt;The 24-year-old woman allegedly forced the boy onto a bed on August 8 at a childcare centre in Kelso.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T00:53:59Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:34:04.499072+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "26cd0aa24cdddccf4ce9df99464e99dc",
-      "title": "Breastfeeding in public: What are your legal rights in Australia?",
-      "link": "https://www.9news.com.au/national/breastfeeding-in-public-legal-rights-explained/e0b21c94-f6a2-47a0-947c-3c1f1ada8b74",
-      "summary": "&lt;p&gt;Questions have been raised about the legality of breastfeeding in public after a mother was allegedly asked to leave a Virgin lounge for expressing.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T00:48:22Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:28:48.808586+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "9846463a603e5846f953a438ac7711bc",
-      "title": "AFL news 2025: Tasmania Devils, Hobart stadium rejection, Tasmanian Planning Commission report",
-      "link": "https://www.nine.com.au/sport/afl/news-2025-tasmania-devils-hobart-stadium-rejected-tasmanian-planning-commission-report-20250917-p5mvpk.html",
-      "summary": "The Tasmania Devils' proposed Hobart stadium has been dealt a major blow after the state's planning commission recommended its rejection.",
-      "publishedAt": "2025-09-17T00:36:01Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:59:04.039246+00:00",
-      "sourceCategory": "Sport"
-    },
-    {
-      "id": "b98d424173b9f577d22dea033d718db0",
-      "title": "Push to reduce speed limit in Sydney CBD to 30km/h",
-      "link": "https://www.9news.com.au/national/sydney-cbd-push-to-reduce-speed-limit-to-30km/4c26b8b2-38f8-4baa-9fd9-058b09b5b427",
-      "summary": "&lt;p&gt;Peak bodies want to reduce the speed ﻿limit in Sydney CBD to 30km/h in a push for increased safety and to bring the city in line with other parts of the world.&lt;/p&gt;",
-      "publishedAt": "2025-09-17T00:15:34Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:38:04.818845+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "4d976522e3b9fd7b350f475b3490b52a",
-      "title": "Neil Mitchell, Contributor Contributors News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/contributors/neil-mitchell",
-      "summary": "Meet Neil Mitchell, Contributor on the Contributors News Team, 9News Australia",
-      "publishedAt": "2025-09-16T23:49:28Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:24:32.223837+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "0652f51fa3d617208a7eb12d33fd0512",
-      "title": "Tesla under investigation in US after parents say faulty door handles trapped their kids in the back",
-      "link": "https://www.9news.com.au/world/tesla-investigation-faulty-door-handles-elon-musk/4c9da5d6-9c26-4c29-8a2d-11d4ae82bb62",
-      "summary": "&lt;p&gt;The company run by billionaire Elon Musk has installed manual door releases inside the vehicles but NHTSA noted that a child may not be able to reach or know how to operate the releases.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T22:19:23Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:26:51.509968+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "c2daaee8f6a1648ded8822c2cbdeb6cc",
-      "title": "Household electricity bills soared 27 per cent higher than inflation: new data",
-      "link": "https://www.9news.com.au/national/household-electricity-bills-soared-faster-than-inflation-new-iselect-data/3592c382-efe9-4c91-bc2c-d95a7fd51f02",
-      "summary": "&lt;p&gt;N﻿ew data has found that electricity bills soared faster than inflation after jumping 7.63 per cent over two years.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T19:44:27Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:59:25.769184+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "9a31d7c110dbff89447d0f2948c47d26",
-      "title": "Today in History - September 17: Chimpanzee blows the minds of art critics",
-      "link": "https://www.9news.com.au/world/today-in-history-september-17-congo-chimpanzee-artist-what-happened-on-this-day/5246144f-2948-4f74-b528-48d5723408b5",
-      "summary": "&lt;p&gt;Art critics were bemused but impressed when an art exhibition from a chimpanzee opened on September 17, 1957.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T19:22:40Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:43:31.401650+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "1a69f1369db066a7048cbcb4d3278923",
-      "title": "Royals gather for historic farewell to the Duchess of Kent at Westminster Cathedral",
-      "link": "https://www.9news.com.au/world/duchess-of-kent-funeral-british-royal-family-gather-westminster-abbey-farewell-oldest-member/3b80ebfb-7071-43e8-867f-1d2641079bc9",
-      "summary": "&lt;p&gt;Katharine, the Duchess of Kent was farewelled at Westminster Cathedral in the first Catholic funeral service held for a member of the royal family in modern British history, after she died at the age of 92.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T15:40:34Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:26:53.745854+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "324d97f3c592669c6238c401412d7375",
-      "title": "New York judge tosses terrorism charges against Luigi Mangione, lets murder count stand",
-      "link": "https://www.9news.com.au/world/luigi-mangione-new-york-judge-tosses-terrorism-charges-against-accused-killer-lets-murder-count-stand/8364d920-7a86-44a1-828d-ed5b323484fb",
-      "summary": "&lt;p&gt;A judge on Tuesday dismissed terrorism charges against Luigi Mangione in New York state&amp;#x27;s case over the killing of UnitedHealthcare CEO Brian Thompson, but he kept the state&amp;#x27;s second-degree murder charges against the Ivy League graduate.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T14:29:52Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:05:57.607118+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "25643c110ed73419184352b2c6f982fd",
-      "title": "Brisbane man allegedly stabbed in his sleep, doused in petrol",
-      "link": "https://www.9news.com.au/national/attempted-murder-man-allegedly-broke-into-victims-home-and-stabbed-him-in-his-sleep-west-end-queensland-news/1f49c58e-6124-4b62-80b4-f30f3c6098e2",
-      "summary": "&lt;p&gt;A man has been stabbed in his sleep by another man known to him, who allegedly broke into his Brisbane home on Saturday morning.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T10:34:23Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:23:52.384861+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "b136152947ef273b91061bc2b4d6c27b",
-      "title": "A Current Affair Staff, A Current Affair News Team - 9News",
-      "link": "https://www.9news.com.au/meet-the-team/a-current-affair/a-current-affair-staff",
-      "summary": "Meet A Current Affair Staff, on the A Current Affair News Team, 9News Australia",
-      "publishedAt": "2025-09-16T09:31:52Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:02:35.328165+00:00",
-      "sourceCategory": "Meet-the-team"
-    },
-    {
-      "id": "230513aff4eb5686b124af7f363f23af",
-      "title": "Police descend on home in search for woman missing since 2002",
-      "link": "https://www.9news.com.au/national/search-missing-woman-south-australia/7607e3ed-f15c-49e0-89a2-9e91cf16e94d",
-      "summary": "&lt;p&gt;Authorities suspect she was murdered, though previous extensive searches have failed to locate her remains.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T09:21:01Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:21:16.733430+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "a8344f8ae43e63a1cbb20f1cc5944c88",
-      "title": "Dog hailed a hero after scaring off intruders from Melbourne home",
-      "link": "https://www.9news.com.au/national/dog-hailed-a-hero-after-scaring-off-intruders-from-melbourne-home/3e167478-8021-4a3c-9cf4-16b6ce613926",
-      "summary": "&lt;p&gt;An eight-year-old Labrador is being hailed a hero, after he scared off a group of would-be home invaders from his family&amp;#x27;s home. &lt;/p&gt;",
-      "publishedAt": "2025-09-16T08:39:14Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:06:25.517776+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "d7dc6a94abc99b21ae26bb0460bc5a33",
-      "title": "Alan Jones facing nine new charges of indecent assault",
-      "link": "https://www.9news.com.au/national/alan-jones-five-new-charges/00f218cd-14a1-4a8f-897d-695d5cd0ccf7",
-      "summary": "&lt;p&gt;T﻿he 84-year-old is set to face court on Thursday at Downing Local Court. &lt;/p&gt;",
-      "publishedAt": "2025-09-16T08:30:30Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:11:40.011267+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "5149604432b7d727de184624bbe25af3",
-      "title": "Bombshell texts allegedly exchanged between Rabbitohs hooker Brandon Smith and Roosters player Victor Radley r",
-      "link": "https://www.9news.com.au/national/charged-nrl-star-brandon-smith-victor-radley-nrl-text-messages/cf8f0035-d012-402a-ab13-1e573806866b",
-      "summary": "&lt;p&gt;Smith will face Southport Magistrates Court on Thursday where he is expected to plead not guilty to unlawfully supplying a dangerous drug and using or disclosing inside knowledge for betting.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T07:51:20Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:01:26.554604+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "b700e1188ecbf3906b6be9cf226c4185",
-      "title": "Australian actor Craig McLachlan drops out of Cluedo stage show after 'aggressive' backlash",
-      "link": "https://www.9news.com.au/national/craig-mclachlan-abandons-stage-comeback-cluedo-after-casting-prompts-aggressive-social-media-campaign/160e1902-7815-41a3-968a-4dc012a073c3",
-      "summary": "&lt;p&gt;The former Neighbours star, 60, claimed news of his casting last week prompted a negative social media campaign against himself and two other actors.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T06:31:51Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:36:58.130900+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "ab4e5bd045d999fd80cde53a158a6570",
-      "title": "Donald Trump to sue New York Times for $22 billion for 'defamation and libel'",
-      "link": "https://www.9news.com.au/world/donald-trump-sues-new-york-times/21a3645c-0ec0-4252-bcd8-4ab528f42764",
-      "summary": "&lt;p&gt;The president accused the newspaper of making false statements about him, his family and his businesses, though he did not elaborate on the allegations.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T05:34:03Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:38:05.690558+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "631f6f8eacb6d9789c6d315364b40f41",
-      "title": "Woman targeted by repeat hooning, damage at Logan home",
-      "link": "https://www.9news.com.au/national/browns-plains-hooning-wilful-damage-logan-woman-target-of-repeat-attacks-police-appeal-queensland-news/a54042b0-292d-45b8-934a-dbbc1868586b",
-      "summary": "&lt;p&gt;Police have released video of a blue Ford Falcon with no registration plates that was used to rip a 68-year-old woman&amp;#x27;s gate and fence from its posts on Sunday night, in the latest in a string of attacks on her home.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T04:23:09Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:03:24.042898+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "66f095007be1b86188bef9eecbb7ee29",
-      "title": "NSW government announces $100 million plan to boost preschools and relieve families, childcare sector",
-      "link": "https://www.9news.com.au/national/nsw-preschool-funding-boost-100-million-childcare/fd44c39f-85b5-47c9-aa91-5dd70bcefd69",
-      "summary": "&lt;p&gt;The funding increase is designed to encourage community preschools to extend their opening hours beyond the typical 9am-3pm, and allow them to cater for children of wider ages.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T03:19:29Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:00:00.541554+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "e771001e8c5b0aec46a717a3fde31718",
-      "title": "How refinancing your mortgage to a lower interest rate can still leave you paying more in the long run",
-      "link": "https://www.9news.com.au/national/refinancing-mortgage-trap-lower-interest-rate-longer-loan-term-interest-payments-cost-of-living-news/9f7a1024-e850-499b-bc69-4de35ad2e9a1",
-      "summary": "&lt;p&gt;A survey has found nearly half of all Aussies who refinance their mortgage opt to extend their loan term.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T03:19:14Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:08:02.440663+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "f6651f2275e7b2cdd6b28c5d935a77d9",
-      "title": "When does daylight saving start in 2025? Everything you need to know",
-      "link": "https://www.9news.com.au/national/daylight-savings-time-2025-australia-when-to-move-clocks-forward-an-hour-when-does-it-start-explainer/b09f1f36-c9b3-4cbf-a7fe-497e49527f1d",
-      "summary": "&lt;p&gt;Millions of Australians will lose an hour of sleep in a few weeks&amp;#x27; time.&lt;/p&gt;",
-      "publishedAt": "2025-09-16T02:47:54Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:03:46.438683+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "3fa51766824dacf583f581295eb7d75a",
-      "title": "Trump says the US military again targeted a boat allegedly carrying drugs from Venezuela",
-      "link": "https://www.9news.com.au/world/donald-trump-usa-united-states-venezuela-strike-drug-boat/96063d6a-987e-4185-b100-21b2f3f86230",
-      "summary": "&lt;p&gt;The strike was carried out nearly two weeks after another military strike on what the Trump administration claimed was a drug-carrying speedboat.&lt;/p&gt;",
-      "publishedAt": "2025-09-15T23:28:48Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T16:53:33.493195+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "44fdb23814afbc5355c4a813f23a0125",
-      "title": "Today in History - September 16: The ingenious tradies who overcame 1400km wall of death",
-      "link": "https://www.9news.com.au/world/today-in-history-september-16-what-happened-on-this-day-east-german-balloon-escape/3f343704-df8d-4c43-92ca-fece1416999d",
-      "summary": "&lt;p&gt;Two families carried out one of the boldest escapes of the Cold War on September 16, 1979.&lt;/p&gt;",
-      "publishedAt": "2025-09-15T20:56:41Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:14:32.609206+00:00",
-      "sourceCategory": "World"
-    },
-    {
-      "id": "8f5ecaaa4946380bcceb73e71f4b4c57",
-      "title": "Father and son face fate over car chase murder",
-      "link": "https://www.9news.com.au/national/jesse-thompson-father-and-son-face-fate-over-car-chase-murder/701a0685-5bcc-4014-a97b-e5619a83f6dc",
-      "summary": "&lt;p&gt;A father and son are bracing for the prospect of a long stint behind bars for murdering a 19-year-old man.&lt;/p&gt;",
-      "publishedAt": "2025-09-15T20:28:41Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:59:44.566303+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "64b4518e2f2405362a16a19124f50fbb",
-      "title": "Catastrophic food and water shortage warning in damning national climate report",
-      "link": "https://www.9news.com.au/national/food-and-water-shortages-predicted-for-australia-in-national-climate-risk-assessment-report/c0c4dfdf-36f8-406e-98ea-2935e5173980",
-      "summary": "&lt;p&gt;The landmark report detailed the severe impacts of climate change on agriculture and food supply in regional Australian communitie.&lt;/p&gt;",
-      "publishedAt": "2025-09-15T20:05:19Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T18:11:20.670873+00:00",
-      "sourceCategory": "National"
-    },
-    {
-      "id": "0ecd2d29f8d938b4f1a7406cdbaa976c",
-      "title": "'Most significant since the Olympics': Sydney Airport reveals huge expansion plans",
-      "link": "https://www.9news.com.au/national/sydney-airport-revamp-plans/41602424-af8b-45b0-b553-dc52c2f2fff1",
-      "summary": "&lt;p&gt;A massive expansion is planned for Sydney Airport to cope with millions more passengers.&lt;/p&gt;",
-      "publishedAt": "2025-09-15T20:03:20Z",
-      "source": "9News",
-      "fetchedAt": "2025-09-21T17:08:15.050177+00:00",
-      "sourceCategory": "National"
     }
   ]
 }
