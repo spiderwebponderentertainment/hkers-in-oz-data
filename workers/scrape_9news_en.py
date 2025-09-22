@@ -518,7 +518,7 @@ if __name__ == "__main__":
         urls_gn = collect_from_google_news()
         print(f"[INFO] google news urls: {len(urls_gn)}", file=sys.stderr)
         for u in urls_gn:
-             同樣在 GN fallback 過濾非新聞頁
+            # 同樣在 GN fallback 過濾非新聞頁
             if is_non_news_url(u):
                 continue
             try:
