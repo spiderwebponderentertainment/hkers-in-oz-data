@@ -2,7 +2,7 @@ name: Scrape 9News EN
 
 on:
   schedule:
-    - cron: "45 * * * *"     # 每小時第 45 分跑（與其他任務錯開）
+    - cron: "0 */3 * * *"   # 每 3 小時 run 一次
   workflow_dispatch: {}
 
 concurrency:
