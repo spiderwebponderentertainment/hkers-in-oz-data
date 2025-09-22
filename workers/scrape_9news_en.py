@@ -38,6 +38,24 @@ GN_URL = (
     "&hl=en-AU&gl=AU&ceid=AU:en"
 )
 
+# ---------------- URL 過濾（來源層擋非新聞） ----------------
+# 9News 上常見的「非新聞」類別（人員介紹、公司資訊、條款等）
+NINE_BLOCKLIST_PARTS = [
+    "/meet-the-team",
+    "/reporter", "/reporters",
+    "/presenter", "/presenters",
+    "/about", "/about-us",
+    "/contact", "/advertise",
+    "/terms", "/privacy",
+]
+
+def is_non_news_url(url: str) -> bool:
+    """判斷 9News URL 是否屬 profile/公司資訊等非新聞頁"""
+    u = (url or "").lower()
+    if "9news.com.au" not in u:
+        return False
+    return any(part in u for part in NINE_BLOCKLIST_PARTS)
+
 # ---------------- 小工具 ----------------
 def iso_now(): return datetime.now(timezone.utc).isoformat()
 def clean(s: str) -> str: return re.sub(r"\s+", " ", (s or "")).strip()
@@ -478,6 +496,9 @@ if __name__ == "__main__":
         # 🚫 保險：任何 .xml 一律跳過（另外在 fetch_html 亦會擋）
         if u.lower().endswith(".xml"):
             continue
+        # 🚫 來源層過濾：剔除 9News 非新聞頁（例如 meet-the-team）
+        if is_non_news_url(u):
+            continue
         try:
             html_text = fetch_html(u)
             if not html_text:
@@ -497,6 +518,9 @@ if __name__ == "__main__":
         urls_gn = collect_from_google_news()
         print(f"[INFO] google news urls: {len(urls_gn)}", file=sys.stderr)
         for u in urls_gn:
+             同樣在 GN fallback 過濾非新聞頁
+            if is_non_news_url(u):
+                continue
             try:
                 html_text = fetch(u).text
                 link_final = canonicalize_link(u, html_text)
