@@ -7,6 +7,7 @@ from collections import deque
 import requests
 from bs4 import BeautifulSoup
 from xml.etree import ElementTree as ET
+from zoneinfo import ZoneInfo
 
 # ---------------- 基本設定 ----------------
 HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
@@ -16,6 +17,7 @@ FETCH_SLEEP = 0.4
 
 SEVEN_HOST = "7news.com.au"
 ROBOTS_URL = "https://7news.com.au/robots.txt"
+SYD = ZoneInfo("Australia/Sydney")
 
 # 入口（首頁 + 常見版塊；只用首頁做 seed，唔試分頁）
 ENTRY_BASES = [
@@ -69,6 +71,14 @@ def fetch(url: str) -> requests.Response:
     r.raise_for_status()
     return r
 
+def ensure_utc(dt: datetime) -> datetime:
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+def as_sydney(dt_utc: datetime) -> datetime:
+    return ensure_utc(dt_utc).astimezone(SYD)
+
 def canonicalize_link(url: str, html_text: str | None = None) -> str:
     # https scheme + strip trailing slash; prefer <link rel="canonical">
     if html_text:
@@ -87,6 +97,31 @@ def canonicalize_link(url: str, html_text: str | None = None) -> str:
     q = ""  # drop query for canonical
     frag = ""
     return f"{scheme}://{netloc}{path}"
+
+# 似係文章嘅 URL（粗略規則）：排除 sitemap/xml、明顯非內容頁、媒體檔
+NON_ARTICLE_SEGMENTS = (
+    "/sitemap/", "/tag/", "/category/", "/live/", "/weather/", "/privacy", "/terms",
+)
+MEDIA_EXTS = (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".webp",".svg",".webm",".m3u8")
+
+def looks_like_article_url(u: str) -> bool:
+    try:
+        if not u or u.endswith(".xml"):
+            return False
+        if any(seg in u for seg in NON_ARTICLE_SEGMENTS):
+            return False
+        p = urlparse(u)
+        if p.scheme not in ("http","https"):
+            return False
+        if SEVEN_HOST not in (p.netloc or ""):
+            return False
+        if any(u.lower().endswith(ext) for ext in MEDIA_EXTS):
+            return False
+        # 7NEWS 文章通常係 /{section}/{slug} 結構；至少要有一段 section
+        parts = [x for x in (p.path or "").strip("/").split("/") if x]
+        return len(parts) >= 1
+    except Exception:
+        return False
 
 # ---------------- Category 判斷（URL 優先） ----------------
 def _slug_title(slug: str) -> str:
@@ -204,6 +239,7 @@ def make_item(url: str, html_text: str, hint_section: str | None = None):
         title = t2; desc = d2; pub = normalize_date(p2); section = section or s2
 
     link_final = canonicalize_link(url, html_text)
+    now_utc = ensure_utc(datetime.now(timezone.utc))
     return {
         "id": hashlib.md5(link_final.encode()).hexdigest(),
         "title": title or link_final,
@@ -245,7 +281,11 @@ def collect_from_sitemaps() -> list[str]:
         try:
             xml = fetch(sm).text
             for u in parse_sitemap_urls(xml):
-                if "7news.com.au" in u:
+                # 🚫 跳過 sitemap 本身或任何 .xml
+                if u.endswith(".xml") or "/sitemap/" in u:
+                    continue
+                # ✅ 只收似係文章的 URL
+                if "7news.com.au" in u and looks_like_article_url(u):
                     out.append(u)
         except Exception as e:
             print(f"[WARN] sitemap fail {sm}: {e}", file=sys.stderr)
@@ -281,15 +321,15 @@ def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
     soup = BeautifulSoup(html_text, "html.parser")
     for a in soup.find_all("a", href=True):
         u = sanitize_7news(a["href"], base)
-        if u and u not in seen:
+        if u and u not in seen and looks_like_article_url(u):
             seen.add(u); links.append(u)
     for m in ARTICLE_HREF_RE.finditer(html_text):
         u = sanitize_7news(m.group(0), base)
-        if u and u not in seen:
+        if u and u not in seen and looks_like_article_url(u):
             seen.add(u); links.append(u)
     for m in REL_ARTICLE_RE.finditer(html_text):
         u = sanitize_7news(urljoin(base, m.group(0)), base)
-        if u and u not in seen:
+        if u and u not in seen and looks_like_article_url(u):
             seen.add(u); links.append(u)
     return links
 
@@ -374,7 +414,7 @@ def collect_from_google_news() -> list[str]:
             guid_text = (it.findtext("guid") or "").strip()
             desc_html = it.findtext("description") or ""
             real = decode_gn_item(link_text, guid_text, desc_html)
-            if real and SEVEN_HOST in real:
+            if real and SEVEN_HOST in real and looks_like_article_url(real):
                 urls.append(real)
     except Exception as e:
         print(f"[WARN] parse google news rss fail: {e}", file=sys.stderr); return []
@@ -387,7 +427,15 @@ def collect_from_google_news() -> list[str]:
 
 # ---------------- 輸出 ----------------
 def json_out(items, path):
-    payload = {"source": "7NEWS", "generatedAt": iso_now(), "count": len(items), "items": items}
+    now_utc = ensure_utc(datetime.now(timezone.utc))
+    payload = {
+        "source": "7NEWS",
+        "generatedAt": now_utc.isoformat(),
+        "generatedAtLocal": as_sydney(now_utc).isoformat(),
+        "localTimezone": "Australia/Sydney",
+        "count": len(items),
+        "items": items
+    }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
@@ -424,7 +472,8 @@ if __name__ == "__main__":
     hint_map = dict(url_to_hint)
     seen, merged = set(), []
     for u in urls_a + urls_b + urls_crawl:
-        if u not in seen:
+        # 🚫 來源就已經略過 sitemap / .xml
+        if (u not in seen) and looks_like_article_url(u):
             seen.add(u); merged.append(u)
 
     articles = []
