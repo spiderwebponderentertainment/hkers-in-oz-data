@@ -1,5 +1,6 @@
 # workers/scrape_aucd_rss.py
 import json, time, hashlib, requests, feedparser, re
+from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
 from urllib.parse import urljoin, urlparse
@@ -63,8 +64,24 @@ CATEGORY_SLUG_MAP = {
     "seniors": "Seniors",
 }
 
-def iso_now() -> str:
-    return datetime.now(timezone.utc).isoformat()
+SYD = ZoneInfo("Australia/Sydney")
+
+def to_iso(dt: datetime.datetime) -> str:
+    """保證輸出 ISO8601（含偏移）"""
+    return dt.isoformat()
+
+def ensure_utc(dt: datetime.datetime) -> datetime.datetime:
+    """將任何 naive/有別時區嘅 datetime 轉為 UTC aware"""
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=datetime.timezone.utc)
+    return dt.astimezone(datetime.timezone.utc)
+
+def as_sydney(dt_utc: datetime.datetime) -> datetime.datetime:
+    """UTC 轉悉尼時間（自動處理 AEST/AEDT）"""
+    return dt_utc.astimezone(SYD)
+
+def now_iso_utc():
+    return to_iso(datetime.datetime.now(datetime.timezone.utc))
 
 def normalize_date(raw: str | None) -> str | None:
     if not raw:
@@ -227,12 +244,24 @@ def parse_feed(url: str) -> list[dict]:
         if not pub_norm and link:
             pub_norm = fetch_date_from_page(link)
 
+        # published_utc: 以你現有邏輯解析到嘅 UTC 時間（datetime 物件）
+        # fetched_utc:   你爬到個 item 架時嘅 UTC 時間（datetime 物件）
+        published_utc = ensure_utc(published_dt)   # ← 你原本的 published_dt
+        fetched_utc   = ensure_utc(datetime.datetime.now(datetime.timezone.utc))
+
         item = {
             "id": hashlib.md5((link or title).encode()).hexdigest(),
             "title": title or link,
             "link": link,
             "summary": summary,
-            "publishedAt": pub_norm,
+            # 仍然保留 UTC 欄位（排序、比較用）
+            "publishedAt": to_iso(published_utc),
+            "fetchedAt": to_iso(fetched_utc),
+
+            # ✅ 新增：悉尼時間欄位（顯示用；自動 AEST/AEDT）
+            "publishedAtLocal": to_iso(as_sydney(published_utc)),
+            "fetchedAtLocal": to_iso(as_sydney(fetched_utc)),
+            "localTimezone": "Australia/Sydney",
             "source": SOURCE_NAME,
             "fetchedAt": iso_now(),
             "sourceCategory": source_category,         # 👈 新增
@@ -358,7 +387,10 @@ def merge_dedupe(all_items: list[dict]) -> list[dict]:
 def json_out(items: list[dict], path: str):
     payload = {
         "source": SOURCE_NAME,
-        "generatedAt": iso_now(),
+        "generatedAt": now_iso_utc(),
+        # 方便快速檢查 scraper 执行時間（悉尼）
+        "generatedAtLocal": to_iso(as_sydney(datetime.datetime.now(datetime.timezone.utc))),
+        "localTimezone": "Australia/Sydney",
         "count": len(items),
         "items": items
     }
