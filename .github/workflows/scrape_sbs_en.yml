@@ -93,19 +93,22 @@ jobs:
 # ───────── Push 完立即清 CDN，同步預熱 jsDelivr ─────────
       - name: Purge jsDelivr cache
         if: ${{ always() }}
+        shell: bash
         run: |
           set -e
-          for PATH in "$FEED_JSON" "$FEED_XML"; do
-            URL="https://purge.jsdelivr.net/gh/${REPO_SLUG}@main/${PATH}"
+          for FILE in "$FEED_JSON" "$FEED_XML"; do
+            URL="https://purge.jsdelivr.net/gh/${REPO_SLUG}@main/${FILE}"
             echo "Purging: $URL"
             curl -fsS "$URL" || true
           done
 
       - name: Warm jsDelivr edge
         if: ${{ always() }}
+        shell: bash
         run: |
-          for PATH in "$FEED_JSON" "$FEED_XML"; do
-            URL="https://cdn.jsdelivr.net/gh/${REPO_SLUG}@main/${PATH}"
+          set -e
+          for FILE in "$FEED_JSON" "$FEED_XML"; do
+            URL="https://cdn.jsdelivr.net/gh/${REPO_SLUG}@main/${FILE}"
             for i in 1 2 3; do
               echo "Warming $URL (try $i)…"
               curl -fsS -H "Cache-Control: no-cache" "${URL}?warm=$(date +%s%3N)" > /dev/null || true
