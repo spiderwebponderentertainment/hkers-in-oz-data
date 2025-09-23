@@ -2,6 +2,7 @@
 
 import json, re, sys, html, hashlib, time
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from urllib.parse import urlparse, parse_qs, unquote, urljoin
 from collections import deque
 
@@ -19,6 +20,7 @@ ROBOTS_URL = "https://www.abc.net.au/robots.txt"
 # URL 正規化：固定 Host / Scheme 及移除 tracking 參數
 CANON_HOST = "www.abc.net.au"
 CANON_SCHEME = "https"
+SYD = ZoneInfo("Australia/Sydney")
 
 # 入口頁（已剔走 environment / technology 兩條經常 404/403 的入口）
 ENTRY_BASES = [
@@ -65,6 +67,28 @@ def iso_now():
 
 def clean(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
+
+def to_iso(dt: datetime) -> str:
+    """Datetime ➜ ISO8601（保留偏移）"""
+    return dt.isoformat()
+
+def ensure_utc_from_iso(s: str | None) -> datetime | None:
+    """接受 ISO/RFC 常見字串 ➜ 轉成 aware UTC datetime；失敗回 None。"""
+    if not s:
+        return None
+    try:
+        # 支援 '...Z' / 帶偏移
+        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+        if not dt.tzinfo:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+def as_sydney(dt_utc: datetime | None) -> datetime | None:
+    if not dt_utc:
+        return None
+    return dt_utc.astimezone(SYD)
 
 def canonical_abc_url(u: str) -> str:
     """
@@ -289,6 +313,12 @@ def make_item(url: str, html_text: str, hint_section: str | None = None, source_
         t2, d2, p2, s2 = extract_meta_from_html(html_text)
         title = t2; desc = d2; pub = normalize_date(p2); section = section or s2
 
+    # ✅ 本地時間欄位（AEST/AEDT）：以 publishedAt（UTC）為基礎；再加 fetchedAtLocal
+    pub_utc_dt = ensure_utc_from_iso(pub)
+    pub_local_dt = as_sydney(pub_utc_dt)
+    fetched_utc_dt = datetime.now(timezone.utc)
+    fetched_local_dt = as_sydney(fetched_utc_dt)
+    
     return {
         "id": hashlib.md5(canon.encode()).hexdigest(),
         "title": title or url,
@@ -296,8 +326,14 @@ def make_item(url: str, html_text: str, hint_section: str | None = None, source_
         "summary": desc,
         "publishedAt": pub,
         "source": source_hint,
-        "fetchedAt": iso_now(),
-        "sourceCategory": section,  # 👈 新增分類
+        "fetchedAt": to_iso(fetched_utc_dt),
+        # 👇 新增：本地顯示時間（悉尼）
+        "publishedAtLocal": (to_iso(pub_local_dt) if pub_local_dt else None),
+        "fetchedAtLocal": to_iso(fetched_local_dt),
+        "localTimezone": "Australia/Sydney",
+        # 分類（字串）+ 兼容多值（單一就包成陣列，無就 None）
+        "sourceCategory": section,
+        "sourceCategories": ([section] if section else None),
     }
 
 # ---------------- A) robots.txt ➜ 所有 sitemap ----------------
@@ -555,9 +591,12 @@ def collect_from_google_news() -> list[str]:
 
 # ---------------- 輸出 ----------------
 def json_out(items, path):
+    now_utc = datetime.now(timezone.utc)
     payload = {
         "source": "ABC News (EN) Aggregate",
-        "generatedAt": iso_now(),
+        "generatedAt": to_iso(now_utc),
+        "generatedAtLocal": to_iso(as_sydney(now_utc)),
+        "localTimezone": "Australia/Sydney",
         "count": len(items),
         "items": items
     }
