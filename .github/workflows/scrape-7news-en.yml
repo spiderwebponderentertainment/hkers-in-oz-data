@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: scrape-seven-en
-  cancel-in-progress: false
+  cancel-in-progress: true   # ✅ 避免重疊執行造成 push 衝突
 
 jobs:
   build:
