@@ -7,6 +7,7 @@ from collections import deque
 import requests
 from bs4 import BeautifulSoup
 from xml.etree import ElementTree as ET
+from zoneinfo import ZoneInfo
 
 # ---------------- 基本設定 ----------------
 HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
@@ -16,6 +17,7 @@ FETCH_SLEEP = 0.5          # 抓單篇之間小睡，對站方友善
 
 SBS_HOST = "www.sbs.com.au"
 ROBOTS_URL = "https://www.sbs.com.au/robots.txt"
+SYD = ZoneInfo("Australia/Sydney")
 
 # 英文入口頁（你提供的）
 ENTRY_BASES = [
@@ -51,6 +53,22 @@ def iso_now() -> str:
 def clean(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
 
+def to_iso(dt: datetime) -> str:
+    """確保 datetime 轉成 ISO8601（含偏移）"""
+    return dt.astimezone(timezone.utc).isoformat()
+
+def ensure_utc(dt: datetime | None) -> datetime | None:
+    """任何 datetime → UTC-aware；None 直回"""
+    if dt is None:
+        return None
+    return (dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt.astimezone(timezone.utc))
+
+def as_sydney(dt_utc: datetime | None) -> datetime | None:
+    """UTC datetime → 悉尼時間（自動 AEST/AEDT）；None 直回"""
+    if dt_utc is None:
+        return None
+    return dt_utc.astimezone(SYD)
+
 def normalize_date(raw: str | None) -> str | None:
     """標準化常見日期格式為 UTC ISO8601。"""
     if not raw:
@@ -85,6 +103,18 @@ def normalize_date(raw: str | None) -> str | None:
         return dt.astimezone(timezone.utc).isoformat()
     except Exception:
         return None
+
+def parse_iso_dt(s: str | None) -> datetime | None:
+    """ISO8601 字串（可含/不含 Z）→ aware datetime（UTC）"""
+    if not s:
+        return None
+    try:
+        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+    except Exception:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
 
 def fetch(url: str) -> requests.Response:
     r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
@@ -241,15 +271,26 @@ def make_item(url: str, html_text: str, hint_section: str | None = None):
         t2, d2, p2, s2 = extract_meta_from_html(html_text)
         title = t2; desc = d2; pub = normalize_date(p2); section = section or s2
 
+    # 轉回 datetime 以便產出本地時間欄位
+    pub_dt_utc = parse_iso_dt(pub) if pub else None
+    fetched_dt_utc = datetime.now(timezone.utc)
+
     return {
         "id": hashlib.md5(url.encode()).hexdigest(),
         "title": title or url,
         "link": url,
         "summary": desc,
+        # 主要 UTC 欄位（排序、對比用）
         "publishedAt": pub,
         "source": "SBS English",
-        "fetchedAt": iso_now(),
-        "sourceCategory": section,   # 👈 輸出分類
+        "fetchedAt": to_iso(fetched_dt_utc),
+        # 👇 顯示友善：悉尼本地時間（自動 AEST/AEDT）
+        "publishedAtLocal": (to_iso(as_sydney(pub_dt_utc)) if pub_dt_utc else None),
+        "fetchedAtLocal": to_iso(as_sydney(fetched_dt_utc)),
+        "localTimezone": "Australia/Sydney",
+        # 分類（主 + 陣列）
+        "sourceCategory": section,
+        "sourceCategories": [section] if section else None,
     }
 
 # ---------------- A) robots.txt ➜ 所有 sitemap ----------------
@@ -465,7 +506,15 @@ def collect_from_google_news() -> list[str]:
 
 # ---------------- 輸出 ----------------
 def json_out(items, path):
-    payload = {"source": "SBS English", "generatedAt": iso_now(), "count": len(items), "items": items}
+    now_utc = datetime.now(timezone.utc)
+    payload = {
+        "source": "SBS English",
+        "generatedAt": to_iso(now_utc),
+        "generatedAtLocal": to_iso(as_sydney(now_utc)),
+        "localTimezone": "Australia/Sydney",
+        "count": len(items),
+        "items": items
+    }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
