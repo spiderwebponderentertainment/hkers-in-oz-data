@@ -5,21 +5,31 @@ on:
     - cron: "25 * * * *"   # 每小時第 25 分
   workflow_dispatch: {}
 
+concurrency:
+group: scrape-aucd
+cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      REPO_SLUG: spiderwebponderentertainment/hkers-in-oz-data
+      FEED_PATH: aucd.json   # ← 如檔名/路徑不同請改呢個
 
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Configure git
         run: |
           git config user.name "news-bot"
           git config user.email "news-bot@users.noreply.github.com"
+          git config pull.rebase true
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       - name: Rebase onto latest main
         run: |
@@ -30,20 +40,35 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
       - name: Install dependencies
         run: |
           pip install -r workers/requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r workers/requirements.txt
 
       - name: Run AUCD scraper
         run: |
-          python workers/scrape_aucd_rss.py
+          set -e
+          n=0
+          until [ $n -ge 3 ]
+          do
+            python workers/scrape_aucd_rss.py && break
+            n=$((n+1))
+            echo "Scraper failed (attempt $n), retrying in 10s…"
+            sleep 10
+          done
+          if [ $n -ge 3 ]; then
+            echo "Scraper failed after retries." >&2
+            exit 1
+          fi
 
       - name: Commit changes
         run: |
           git add -A
           if [[ -n "$(git status --porcelain)" ]]; then
-            git commit -m "chore: update AUCD feed"
+            git commit -m "chore(aucd): update feed $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           else
             echo "No changes."
           fi
@@ -67,3 +92,22 @@ jobs:
           else
             echo "Nothing to push."
           fi
+
+      # ───────── Push 完立即清 CDN，同步預熱 jsDelivr ─────────
+      - name: Purge jsDelivr cache
+        if: ${{ always() }}
+        run: |
+          set -e
+          PURGE="https://purge.jsdelivr.net/gh/${REPO_SLUG}@main/${FEED_PATH}"
+          echo "Purging: $PURGE"
+          curl -fsS "$PURGE" || true
+
+      - name: Warm jsDelivr edge
+        if: ${{ always() }}
+        run: |
+          WARM="https://cdn.jsdelivr.net/gh/${REPO_SLUG}@main/${FEED_PATH}"
+          for i in 1 2 3; do
+            echo "Warming $WARM (try $i)…"
+            curl -fsS -H "Cache-Control: no-cache" "${WARM}?warm=$(date +%s%3N)" > /dev/null || true
+            sleep 1
+          done
