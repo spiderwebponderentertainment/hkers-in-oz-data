@@ -1,6 +1,7 @@
 # workers/scrape_sbs_zh_hant.py
 import json, re, sys, html, hashlib, time
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from urllib.parse import urlparse, parse_qs, unquote, urljoin
 from collections import deque
 
@@ -9,13 +10,17 @@ from bs4 import BeautifulSoup
 from xml.etree import ElementTree as ET
 
 # ---------------- 基本設定 ----------------
-HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
+HEADERS = {
+    "User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)",
+    "Accept-Language": "zh-HK,zh-TW;q=0.9,zh;q=0.8,en;q=0.5",
+}
 TIMEOUT = 25
 MAX_ITEMS = 200            # 想多啲就加大
 FETCH_SLEEP = 0.5         # 抓單篇之間小睡，對站方友善
 
 SBS_HOST = "www.sbs.com.au"
 ROBOTS_URL = "https://www.sbs.com.au/robots.txt"
+SYD = ZoneInfo("Australia/Sydney")
 
 # 入口頁（繁中）
 ENTRY_BASES = [
@@ -45,6 +50,24 @@ GN_URL = (
 # ---------------- 小工具 ----------------
 def iso_now() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+def to_iso(dt: datetime) -> str:
+    """安全輸出 ISO8601（保留偏移）"""
+    return dt.isoformat()
+
+def ensure_utc(dt: datetime | None) -> datetime | None:
+    """任何 naive/其他時區 datetime → UTC aware"""
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+def as_sydney(dt_utc: datetime | None) -> datetime | None:
+    """UTC → 悉尼時區（自動處理 AEST/AEDT）"""
+    if dt_utc is None:
+        return None
+    return dt_utc.astimezone(SYD)
 
 def clean(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
@@ -260,14 +283,29 @@ def make_item(url: str, html_text: str, hint_section: str | None = None):
         pub = normalize_date(p2)
         section = section or s2
 
+    # 3) 構造時間欄位（UTC + 悉尼本地）
+    pub_iso = pub  # normalize_date 已回傳 UTC ISO 或 None
+    try:
+        pub_dt_utc = ensure_utc(datetime.fromisoformat(pub_iso.replace("Z", "+00:00"))) if pub_iso else None
+    except Exception:
+        pub_dt_utc = None
+    fetched_dt_utc = datetime.now(timezone.utc)
+    pub_local = as_sydney(pub_dt_utc)
+    fetched_local = as_sydney(fetched_dt_utc)
+
     return {
         "id": hashlib.md5(url.encode()).hexdigest(),
         "title": title or url,
         "link": url,
         "summary": desc,
-        "publishedAt": pub,
+        # UTC 欄位（排序/比較用）
+        "publishedAt": pub_iso,
+        "fetchedAt": to_iso(fetched_dt_utc),
+        # 悉尼本地時間（顯示用；自動 AEST/AEDT）
+        "publishedAtLocal": (to_iso(pub_local) if pub_local else None),
+        "fetchedAtLocal": to_iso(fetched_local),
+        "localTimezone": "Australia/Sydney",
         "source": "SBS 中文（繁體）",
-        "fetchedAt": iso_now(),
         "sourceCategory": section,  # 👈 新增分類
     }
 
@@ -518,7 +556,15 @@ def collect_from_google_news() -> list[str]:
 
 # ---------------- 輸出 ----------------
 def json_out(items, path):
-    payload = {"source": "SBS 中文（繁體）", "generatedAt": iso_now(), "count": len(items), "items": items}
+    now_utc = datetime.now(timezone.utc)
+    payload = {
+        "source": "SBS 中文（繁體）",
+        "generatedAt": to_iso(now_utc),
+        "generatedAtLocal": to_iso(as_sydney(now_utc)),
+        "localTimezone": "Australia/Sydney",
+        "count": len(items),
+        "items": items,
+    }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
