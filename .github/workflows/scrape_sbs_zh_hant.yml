@@ -5,22 +5,33 @@ on:
     - cron: "15 * * * *"
   workflow_dispatch: {}
 
+concurrency:
+  group: scrape-sbs-zh-hant
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      REPO_SLUG: spiderwebponderentertainment/hkers-in-oz-data
+      FEED_JSON: sbs_zh_hant.json
+      FEED_XML:  sbs_zh_hant.xml
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Configure git
         run: |
           git config user.name "news-bot"
           git config user.email "news-bot@users.noreply.github.com"
+          git config pull.rebase true
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       # Keep local main up to date before we run anything
       - name: Rebase onto latest main
@@ -34,12 +45,30 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
       - name: Install dependencies
-        run: pip install -r workers/requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r workers/requirements.txt
 
-      - name: Run scraper
-        run: python workers/scrape_sbs_zh_hant.py
+      - name: Run scraper (with retry)
+        shell: bash
+        run: |
+          set -e
+          n=0
+          until [ $n -ge 3 ]; do
+            if python workers/scrape_sbs_zh_hant.py; then
+              break
+            fi
+            n=$((n+1))
+            echo "Scraper failed (attempt $n), retrying in 10s…"
+            sleep 10
+          done
+          if [ $n -ge 3 ]; then
+            echo "Scraper failed after retries." >&2
+            exit 1
+          fi
 
       - name: Commit changes
         shell: bash
@@ -47,7 +76,7 @@ jobs:
           set -e
           git add -A
           if [[ -n "$(git status --porcelain)" ]]; then
-            git commit -m "chore: update SBS zh-Hant feeds"
+            git commit -m "chore(sbs-zh-hant): update feeds $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           else
             echo "No changes to commit."
           fi
@@ -84,3 +113,25 @@ jobs:
           echo "Push still failing after retries."
           exit 1
 
+# ───────── Push 完立即清 CDN，同步預熱 jsDelivr ─────────
+      - name: Purge jsDelivr cache
+        if: ${{ always() }}
+        run: |
+          set -e
+          for path in "$FEED_JSON" "$FEED_XML"; do
+            PURGE="https://purge.jsdelivr.net/gh/${REPO_SLUG}@main/${path}"
+            echo "Purging: $PURGE"
+            curl -fsS "$PURGE" || true
+          done
+
+      - name: Warm jsDelivr edge
+        if: ${{ always() }}
+        run: |
+          for path in "$FEED_JSON" "$FEED_XML"; do
+            WARM="https://cdn.jsdelivr.net/gh/${REPO_SLUG}@main/${path}"
+            for i in 1 2 3; do
+              echo "Warming $WARM (try $i)…"
+              curl -fsS -H "Cache-Control: no-cache" "${WARM}?warm=$(date +%s%3N)" > /dev/null || true
+              sleep 1
+            done
+          done
