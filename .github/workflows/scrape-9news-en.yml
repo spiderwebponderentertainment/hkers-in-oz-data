@@ -2,32 +2,40 @@ name: Scrape 9News EN
 
 on:
   schedule:
-    - cron: "0 */3 * * *"   # 每 3 小時 run 一次
+    - cron: "0 */2 * * *"   # 每 2 小時 run 一次
   workflow_dispatch: {}
 
 concurrency:
   group: scrape-nine-en
-  cancel-in-progress: false
-
+  cancel-in-progress: true   # ✅ 避免重疊執行造成 push 衝突
+  
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      REPO_SLUG: spiderwebponderentertainment/hkers-in-oz-data
+      FEED_PATH: nine_en.json
 
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # ✅ 要完整歷史先做到 rebase
+          ref: main             # ✅ 明確檢出 main，避免 detached HEAD
 
       - name: Configure git
         run: |
           git config user.name "news-bot"
           git config user.email "news-bot@users.noreply.github.com"
+          git config pull.rebase true
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       # ✅ 先把本地分支 rebase 到最新 main，避免之後 push 被拒
       - name: Rebase onto latest main
+        shell: bash
         run: |
+          set -e
           git fetch origin main
           git rebase origin/main || (git rebase --abort && echo "Rebase conflict, aborting." && exit 1)
 
@@ -35,38 +43,76 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"          # ✅ 開啟 pip cache，加快安裝
 
       - name: Install dependencies
-        run: pip install -r workers/requirements.txt
+        shell: bash
+        run: |
+          set -e
+          python -m pip install --upgrade pip
+          pip install -r workers/requirements.txt
 
       - name: Run scraper
-        run: python workers/scrape_9news_en.py
+        shell: bash
+        run: |
+          set -e
+          python workers/scrape_9news_en.py
 
       - name: Commit changes
+        shell: bash
         run: |
+          set -e
           git add -A
           if [[ -n "$(git status --porcelain)" ]]; then
-            git commit -m "chore: update 9News feeds"
+            git commit -m "chore(abc): update 9News feeds $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           else
             echo "No changes."
           fi
 
       - name: Push with retry
+        shell: bash
         run: |
-          if [[ -n "$(git log origin/main..HEAD)" ]]; then
+          set -e
+          AHEAD=$(git rev-list --count origin/main..HEAD || echo 0)
+          if [[ "$AHEAD" -eq 0 ]]; then
+            echo "Nothing to push."
+          else
             n=0
-            until [ $n -ge 3 ]
-            do
-              git push && break
-              echo "Push failed, retrying…"
-              git pull --rebase origin main || true
+            until [[ $n -ge 3 ]]; do
+              if git push; then
+                echo "Pushed successfully."
+                break
+              fi
+              echo "Push failed, retrying… ($((n+1))/3)"
+              git fetch origin main
+              git rebase origin/main || (git rebase --abort && exit 1)
               n=$((n+1))
               sleep 3
             done
-            if [ $n -ge 3 ]; then
+            if [[ $n -ge 3 ]]; then
               echo "Push still failing after retries." >&2
               exit 1
             fi
-          else
-            echo "Nothing to push."
           fi
+
+      # ───────── Push 完立即清 CDN，同步預熱 jsDelivr ─────────
+      - name: Purge jsDelivr cache
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          set -e
+          PURGE="https://purge.jsdelivr.net/gh/${REPO_SLUG}@main/${FEED_PATH}"
+          echo "Purging: $PURGE"
+          curl -fsS "$PURGE" || true
+
+      - name: Warm jsDelivr edge
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          set -e
+          WARM="https://cdn.jsdelivr.net/gh/${REPO_SLUG}@main/${FEED_PATH}"
+          for i in 1 2 3; do
+            echo "Warming $WARM (try $i)…"
+            curl -fsS -H "Cache-Control: no-cache" "${WARM}?warm=$(date +%s%3N)" > /dev/null || true
+            sleep 1
+          done
