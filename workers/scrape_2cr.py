@@ -1,7 +1,8 @@
 # workers/scrape_2cr.py
 import json, hashlib, time, re
-from datetime import datetime, timezone
+import datetime as dt
 from urllib.parse import urljoin
+from zoneinfo import ZoneInfo
 
 import requests
 import feedparser
@@ -21,6 +22,7 @@ HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@examp
 TIMEOUT = 20
 SLEEP = 0.3
 MAX_ITEMS = 200
+SYD = ZoneInfo("Australia/Sydney")
 
 # 2CR（WordPress 常見 feed 路徑，可同時試幾個）
 FEED_CANDIDATES = [
@@ -38,8 +40,27 @@ MAX_PAGES = 12
 OUT_PATH = "twocr.json"
 SOURCE_NAME = "2CR 澳華之聲"
 
+def to_iso(d: dt.datetime) -> str:
+    s = d.isoformat()
+    return s.replace("+00:00", "Z") if d.utcoffset() == dt.timedelta(0) else s
+
+def ensure_utc(d: dt.datetime) -> dt.datetime:
+    if d.tzinfo is None:
+        return d.replace(tzinfo=dt.timezone.utc)
+    return d.astimezone(dt.timezone.utc)
+
+def as_sydney(d_utc: dt.datetime) -> dt.datetime:
+    return d_utc.astimezone(SYD)
+
+def now_utc() -> dt.datetime:
+    return dt.datetime.now(dt.timezone.utc)
+
+def now_iso_utc() -> str:
+    return to_iso(now_utc())
+
 def iso_now() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    # 後向相容
+    return now_iso_utc()
 
 def normalize_date(raw: str | None) -> str | None:
     if not raw:
@@ -48,16 +69,18 @@ def normalize_date(raw: str | None) -> str | None:
     # 1) 先用 email/utils 解析（RSS 常見 RFC822）
     try:
         from email.utils import parsedate_to_datetime
-        dt = parsedate_to_datetime(raw)
-        if not dt.tzinfo:
-            dt = dt.replace(tzinfo=timezone.utc)
-        return dt.astimezone(timezone.utc).isoformat()
+        d = parsedate_to_datetime(raw)
+        if not d:
+             return None
+        if not d.tzinfo:
+              d = d.replace(tzinfo=dt.timezone.utc)
+        return d.astimezone(dt.timezone.utc).isoformat()
     except Exception:
         pass
     # 2) 再試 ISO8601
     for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d %H:%M:%S%z"):
         try:
-            return datetime.strptime(raw, fmt).astimezone(timezone.utc).isoformat()
+            return dt.datetime.strptime(raw, fmt).astimezone(dt.timezone.utc).isoformat()
         except Exception:
             pass
     return None
@@ -126,10 +149,39 @@ def parse_one_feed(url: str) -> list[dict]:
             summary = getattr(entry, "summary", None)
             published = getattr(entry, "published", None) or getattr(entry, "updated", None)
 
+            # 分類／tags（如有）
+            source_categories = []
+            try:
+                if getattr(entry, "tags", None):
+                    for t in entry.tags:
+                        term = getattr(t, "term", None)
+                        if term:
+                            term = str(term).strip()
+                            if term and term not in source_categories:
+                                source_categories.append(term)
+            except Exception:
+                pass
+            if not source_categories:
+                cat = getattr(entry, "category", None)
+                if cat:
+                    source_categories = [str(cat).strip()]
+            source_category = source_categories[0] if source_categories else None
+            
             # 日期：RSS 有就用；沒有就入內頁補
             pub = normalize_date(published) if published else None
             if not pub and link:
                 pub = fetch_date_from_page(link)
+
+            # UTC / Local 雙欄位
+            fetched_utc = now_utc()
+            if pub:
+                try:
+                    published_utc = dt.datetime.fromisoformat(pub.replace("Z", "+00:00"))
+                except Exception:
+                    published_utc = fetched_utc
+            else:
+                published_utc = fetched_utc
+            published_utc = ensure_utc(published_utc)
 
             # 去重 key
             _id = hashlib.md5((link or title).encode()).hexdigest()
@@ -139,9 +191,15 @@ def parse_one_feed(url: str) -> list[dict]:
                 "title": to_trad(title) or link,
                 "link": link,
                 "summary": to_trad(summary),
-                "publishedAt": pub,
+                "publishedAt": to_iso(published_utc),
+                "fetchedAt": to_iso(fetched_utc),
+                "publishedAtLocal": to_iso(as_sydney(published_utc)),
+                "fetchedAtLocal": to_iso(as_sydney(fetched_utc)),
+                "localTimezone": "Australia/Sydney",
                 "source": SOURCE_NAME,
-                "fetchedAt": iso_now(),
+                "sourceCategory": source_category,
+                "sourceCategories": source_categories or None,
+                "sourceSectionPath": None,
             }
             items.append(item)
 
@@ -168,14 +226,21 @@ def fetch_all() -> list[dict]:
     def key_dt(it):
         s = it.get("publishedAt")
         try:
-            return datetime.fromisoformat(s.replace("Z","+00:00")) if s else datetime.min.replace(tzinfo=timezone.utc)
+            return dt.datetime.fromisoformat(s.replace("Z","+00:00")) if s else dt.datetime.min.replace(tzinfo=dt.timezone.utc)
         except Exception:
-            return datetime.min.replace(tzinfo=timezone.utc)
+            return dt.datetime.min.replace(tzinfo=dt.timezone.utc)
     collected.sort(key=key_dt, reverse=True)
     return collected[:MAX_ITEMS]
 
 def json_out(items: list[dict], path: str):
-    payload = {"source": SOURCE_NAME, "generatedAt": iso_now(), "count": len(items), "items": items}
+    payload = {
+        "source": SOURCE_NAME,
+        "generatedAt": now_iso_utc(),
+        "generatedAtLocal": to_iso(as_sydney(now_utc())),
+        "localTimezone": "Australia/Sydney",
+        "count": len(items),
+        "items": items
+    }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
