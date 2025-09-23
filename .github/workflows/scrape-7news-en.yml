@@ -14,16 +14,22 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      REPO_SLUG: spiderwebponderentertainment/hkers-in-oz-data
+      FEED_PATH: seven_en.json
 
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # ✅ 要完整歷史先做到 rebase
+          ref: main
 
       - name: Configure git
         run: |
           git config user.name "news-bot"
           git config user.email "news-bot@users.noreply.github.com"
+          git config pull.rebase true
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       # ✅ 先把本地分支 rebase 到最新 main，避免之後 push 被拒
       - name: Rebase onto latest main
@@ -35,12 +41,29 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
       - name: Install dependencies
-        run: pip install -r workers/requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r workers/requirements.txt
 
       - name: Run scraper
-        run: python workers/scrape_7news_en.py
+        shell: bash
+        run: |
+          set -e
+          n=0
+          until [ $n -ge 3 ]
+          do
+            python workers/scrape_7news_en.py && break
+            n=$((n+1))
+            echo "Scraper failed (attempt $n), retrying in 10s…"
+            sleep 10
+          done
+          if [ $n -ge 3 ]; then
+            echo "Scraper failed after retries." >&2
+            exit 1
+          fi
 
       - name: Commit changes
         run: |
@@ -70,3 +93,22 @@ jobs:
           else
             echo "Nothing to push."
           fi
+
+# ───────── Push 完立即清 CDN，同步預熱 jsDelivr ─────────
+      - name: Purge jsDelivr cache
+        if: ${{ always() }}
+        run: |
+          set -e
+          PURGE="https://purge.jsdelivr.net/gh/${REPO_SLUG}@main/${FEED_PATH}"
+          echo "Purging: $PURGE"
+          curl -fsS "$PURGE" || true
+
+      - name: Warm jsDelivr edge
+        if: ${{ always() }}
+        run: |
+          WARM="https://cdn.jsdelivr.net/gh/${REPO_SLUG}@main/${FEED_PATH}"
+          for i in 1 2 3; do
+            echo "Warming $WARM (try $i)…"
+            curl -fsS -H "Cache-Control: no-cache" "${WARM}?warm=$(date +%s%3N)" > /dev/null || true
+            sleep 1
+          done
