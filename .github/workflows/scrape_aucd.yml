@@ -6,8 +6,8 @@ on:
   workflow_dispatch: {}
 
 concurrency:
-group: scrape-aucd
-cancel-in-progress: true
+  group: scrape-aucd
+  cancel-in-progress: true
 
 jobs:
   build:
