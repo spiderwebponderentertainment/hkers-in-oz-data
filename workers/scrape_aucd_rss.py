@@ -2,7 +2,7 @@
 import json, time, hashlib, requests, feedparser, re
 from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
-from datetime import datetime, timezone
+import datetime as dt
 from urllib.parse import urljoin, urlparse
 
 HEADERS = {
@@ -66,22 +66,31 @@ CATEGORY_SLUG_MAP = {
 
 SYD = ZoneInfo("Australia/Sydney")
 
-def to_iso(dt: datetime.datetime) -> str:
-    """保證輸出 ISO8601（含偏移）"""
-    return dt.isoformat()
+def to_iso(d: dt.datetime) -> str:
+    """保證輸出 ISO8601；UTC 以 Z 結尾，其它時區保留偏移"""
+    s = d.isoformat()
+    # 正規化 UTC 表示
+    return s.replace("+00:00", "Z") if d.utcoffset() == dt.timedelta(0) else s
 
-def ensure_utc(dt: datetime.datetime) -> datetime.datetime:
+def ensure_utc(d: dt.datetime) -> dt.datetime:
     """將任何 naive/有別時區嘅 datetime 轉為 UTC aware"""
-    if dt.tzinfo is None:
-        return dt.replace(tzinfo=datetime.timezone.utc)
-    return dt.astimezone(datetime.timezone.utc)
+    if d.tzinfo is None:
+        return d.replace(tzinfo=dt.timezone.utc)
+    return d.astimezone(dt.timezone.utc)
 
-def as_sydney(dt_utc: datetime.datetime) -> datetime.datetime:
+def as_sydney(dt_utc: dt.datetime) -> dt.datetime:
     """UTC 轉悉尼時間（自動處理 AEST/AEDT）"""
     return dt_utc.astimezone(SYD)
 
-def now_iso_utc():
-    return to_iso(datetime.datetime.now(datetime.timezone.utc))
+def now_utc() -> dt.datetime:
+    return dt.datetime.now(dt.timezone.utc)
+
+def now_iso_utc() -> str:
+    return to_iso(now_utc())
+
+def iso_now() -> str:
+    # 向後相容（舊代碼有用到）
+    return now_iso_utc()
 
 def normalize_date(raw: str | None) -> str | None:
     if not raw:
@@ -92,20 +101,20 @@ def normalize_date(raw: str | None) -> str | None:
     if s.endswith("Z"):
         return s
     try:
-        dt = datetime.fromisoformat(s.replace("Z",""))
-        if not dt.tzinfo:
-            dt = dt.replace(tzinfo=timezone.utc)
-        return dt.astimezone(timezone.utc).isoformat()
+        d = dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
+        if not d.tzinfo:
+            d = d.replace(tzinfo=dt.timezone.utc)
+        return d.astimezone(dt.timezone.utc).isoformat()
     except Exception:
         pass
     try:
         from email.utils import parsedate_to_datetime
-        dt = parsedate_to_datetime(s)
-        if not dt:
+        d = parsedate_to_datetime(s)
+        if not d:
             return None
-        if not dt.tzinfo:
-            dt = dt.replace(tzinfo=timezone.utc)
-        return dt.astimezone(timezone.utc).isoformat()
+        if not d.tzinfo:
+            d = d.replace(tzinfo=dt.timezone.utc)
+        return d.astimezone(dt.timezone.utc).isoformat()
     except Exception:
         return None
 
@@ -244,10 +253,16 @@ def parse_feed(url: str) -> list[dict]:
         if not pub_norm and link:
             pub_norm = fetch_date_from_page(link)
 
-        # published_utc: 以你現有邏輯解析到嘅 UTC 時間（datetime 物件）
-        # fetched_utc:   你爬到個 item 架時嘅 UTC 時間（datetime 物件）
-        published_utc = ensure_utc(published_dt)   # ← 你原本的 published_dt
-        fetched_utc   = ensure_utc(datetime.datetime.now(datetime.timezone.utc))
+        # published_utc: 解析到嘅 UTC（解析失敗就用抓取時間作 fallback）
+        fetched_utc = now_utc()
+        if pub_norm:
+            try:
+                published_utc = dt.datetime.fromisoformat(pub_norm.replace("Z", "+00:00"))
+            except Exception:
+                published_utc = fetched_utc
+        else:
+            published_utc = fetched_utc
+        published_utc = ensure_utc(published_utc)
 
         item = {
             "id": hashlib.md5((link or title).encode()).hexdigest(),
@@ -376,11 +391,11 @@ def merge_dedupe(all_items: list[dict]) -> list[dict]:
     def key_dt(it):
         s = it.get("publishedAt")
         if not s:
-            return datetime.min.replace(tzinfo=timezone.utc)
+            return dt.datetime.min.replace(tzinfo=dt.timezone.utc)
         try:
-            return datetime.fromisoformat(s.replace("Z", "+00:00"))
+            return dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
         except Exception:
-            return datetime.min.replace(tzinfo=timezone.utc)
+            return dt.datetime.min.replace(tzinfo=dt.timezone.utc)
     out.sort(key=key_dt, reverse=True)
     return out
 
@@ -389,7 +404,7 @@ def json_out(items: list[dict], path: str):
         "source": SOURCE_NAME,
         "generatedAt": now_iso_utc(),
         # 方便快速檢查 scraper 执行時間（悉尼）
-        "generatedAtLocal": to_iso(as_sydney(datetime.datetime.now(datetime.timezone.utc))),
+        "generatedAtLocal": to_iso(as_sydney(now_utc())),
         "localTimezone": "Australia/Sydney",
         "count": len(items),
         "items": items
