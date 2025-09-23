@@ -1,6 +1,7 @@
 # workers/scrape_9news_en.py
 import json, re, sys, html, hashlib, time
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from urllib.parse import urlparse, urljoin, parse_qs, unquote
 from collections import deque
 
@@ -37,6 +38,20 @@ GN_URL = (
     "?q=site:9news.com.au"
     "&hl=en-AU&gl=AU&ceid=AU:en"
 )
+
+# ---------------- 時區（悉尼，自動處理 AEST/AEDT） ----------------
+SYD = ZoneInfo("Australia/Sydney")
+
+def to_iso(dt: datetime) -> str:
+    return dt.isoformat()
+
+def ensure_utc(dt: datetime) -> datetime:
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+def as_sydney(dt_utc: datetime) -> datetime:
+    return dt_utc.astimezone(SYD)
 
 # ---------------- URL 過濾（來源層擋非新聞） ----------------
 # 9News 上常見的「非新聞」類別（人員介紹、公司資訊、條款等）
@@ -134,6 +149,20 @@ def canonicalize_link(url: str, html_text: str | None = None) -> str:
     netloc = p.netloc.lower()
     path = (p.path or "/").rstrip("/") or "/"
     return f"{scheme}://{netloc}{path}"
+
+# 由 ISO8601（可帶 Z）還原成 datetime（UTC）
+def parse_iso_to_utc_dt(s: str | None) -> datetime | None:
+    if not s:
+        return None
+    try:
+        # 支援 …Z 或 ±hh:mm
+        ss = s.replace("Z", "+00:00")
+        dt = datetime.fromisoformat(ss)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
 
 # ---------------- Category 判斷（URL 優先） ----------------
 def _slug_title(slug: str) -> str:
@@ -250,14 +279,21 @@ def make_item(url: str, html_text: str, hint_section: str | None = None):
         title = t2; desc = d2; pub = normalize_date(p2); section = section or s2
 
     link_final = canonicalize_link(url, html_text)
+    # ⏱️ 本地時間欄位（以 UTC -> Sydney 顯示）
+    pub_dt_utc = parse_iso_to_utc_dt(pub)
+    fetched_utc = ensure_utc(datetime.now(timezone.utc))
     return {
         "id": hashlib.md5(link_final.encode()).hexdigest(),
-        "title": title or link_final,
-        "link": link_final,
-        "summary": desc,
-        "publishedAt": pub,
-        "source": "9News",
-        "fetchedAt": iso_now(),
+         "title": title or link_final,
+         "link": link_final,
+         "summary": desc,
+         "publishedAt": pub,
+         "source": "9News",
+        "fetchedAt": to_iso(fetched_utc),
+        # 👇 新增：顯示友好用（AEST/AEDT）
+        "publishedAtLocal": to_iso(as_sydney(pub_dt_utc)) if pub_dt_utc else None,
+        "fetchedAtLocal": to_iso(as_sydney(fetched_utc)),
+        "localTimezone": "Australia/Sydney",
         "sourceCategory": section,
     }
 
@@ -358,13 +394,16 @@ def collect_from_entrypages() -> dict[str, str | None]:
         time.sleep(0.2)
     return out
 
-# ---------------- C) 淺層 BFS ----------------
+# ---------------- C) 淺層 BFS（硬上限 8000） ----------------
 def should_visit(url: str) -> bool:
     if not url.startswith(SECTION_ALLOWED_PREFIXES): return False
     if any(x in url for x in [".mp3",".mp4",".jpg",".jpeg",".png",".gif",".pdf",".svg",".webp"]): return False
     return True
 
-def crawl_site(seeds: list[str], max_pages: int = 100) -> list[str]:
+def crawl_site(seeds: list[str], max_pages: int = 8000) -> list[str]:
+    """
+    淺層 BFS；最多巡航 max_pages（預設 8000），避免爆至 20k+。
+    """
     q = deque(); seen_pages = set(); found_articles = set()
     for s in seeds:
         if should_visit(s): 
@@ -451,7 +490,15 @@ def collect_from_google_news() -> list[str]:
 
 # ---------------- 輸出 ----------------
 def json_out(items, path):
-    payload = {"source": "9News", "generatedAt": iso_now(), "count": len(items), "items": items}
+    now_utc = ensure_utc(datetime.now(timezone.utc))
+    payload = {
+        "source": "9News",
+        "generatedAt": to_iso(now_utc),
+        "generatedAtLocal": to_iso(as_sydney(now_utc)),
+        "localTimezone": "Australia/Sydney",
+        "count": len(items),
+        "items": items
+    }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
@@ -481,8 +528,8 @@ if __name__ == "__main__":
     urls_b = list(url_to_hint.keys())
     print(f"[INFO] entry page urls: {len(urls_b)}", file=sys.stderr)
 
-    urls_crawl = crawl_site(seeds=seed_pages, max_pages=100)
-    print(f"[INFO] crawl urls: {len(urls_crawl)}", file=sys.stderr)
+    urls_crawl = crawl_site(seeds=seed_pages, max_pages=8000)
+    print(f"[INFO] crawl urls (capped at 8000): {len(urls_crawl)}", file=sys.stderr)
 
     hint_map = dict(url_to_hint)
     seen, merged = set(), []
