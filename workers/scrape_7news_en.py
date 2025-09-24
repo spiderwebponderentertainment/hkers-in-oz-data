@@ -98,6 +98,18 @@ def canonicalize_link(url: str, html_text: str | None = None) -> str:
     frag = ""
     return f"{scheme}://{netloc}{path}"
 
+def parse_iso_dt(s: str | None) -> datetime | None:
+    """ISO8601（可有/無 Z）→ aware UTC datetime；錯就回 None。"""
+    if not s:
+        return None
+    try:
+        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+    except Exception:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
 # 似係文章嘅 URL（粗略規則）：排除 sitemap/xml、明顯非內容頁、媒體檔
 NON_ARTICLE_SEGMENTS = (
     "/sitemap/", "/tag/", "/category/", "/live/", "/weather/", "/privacy", "/terms",
@@ -240,6 +252,7 @@ def make_item(url: str, html_text: str, hint_section: str | None = None):
 
     link_final = canonicalize_link(url, html_text)
     now_utc = ensure_utc(datetime.now(timezone.utc))
+    pub_dt_utc = parse_iso_dt(pub) if pub else None
     return {
         "id": hashlib.md5(link_final.encode()).hexdigest(),
         "title": title or link_final,
@@ -247,8 +260,13 @@ def make_item(url: str, html_text: str, hint_section: str | None = None):
         "summary": desc,
         "publishedAt": pub,
         "source": "7NEWS",
-        "fetchedAt": iso_now(),
-        "sourceCategory": section,
+        "fetchedAt": now_utc.isoformat(),
+        # 👇 悉尼本地時間（自動 AEST/AEDT）
+        "publishedAtLocal": (as_sydney(pub_dt_utc).isoformat() if pub_dt_utc else None),
+        "fetchedAtLocal": as_sydney(now_utc).isoformat(),
+        "localTimezone": "Australia/Sydney",
+         "sourceCategory": section,
+        "sourceCategories": [section] if section else None,
     }
 
 # ---------------- A) robots.txt ➜ sitemap ----------------
