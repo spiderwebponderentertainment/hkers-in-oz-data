@@ -18,7 +18,7 @@ MAX_ITEMS = 800
 # 每頁之間的 sleep 短啲
 FETCH_SLEEP = 0.12
 # 全流程最長執行時間（秒），例如 25 分鐘
-GLOBAL_DEADLINE_SECS = 10 * 60
+GLOBAL_DEADLINE_SECS = 15 * 60
 # BFS 的硬上限唔需要 8000，實務上 1000-1500 已足夠
 MAX_CRAWL_PAGES = 1200
 # 每頁最多 enqueue 幾多新連結，防止爆炸擴張
