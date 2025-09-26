@@ -129,6 +129,7 @@ def fetch_html(url: str) -> str | None:
         r = fetch(url)
         return r.text if _is_probably_html(r) else None
     except Exception:
+        return None
 
 def _sanitize_url(u: str, base: str) -> str | None:
     """清理抽到嘅 URL：相對→絕對；去尾部雜訊/標點/多餘連結片段。"""
