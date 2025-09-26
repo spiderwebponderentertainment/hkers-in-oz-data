@@ -10,10 +10,19 @@ from bs4 import BeautifulSoup
 from xml.etree import ElementTree as ET
 
 # ---------------- 基本設定 ----------------
-HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
-TIMEOUT = 25
-MAX_ITEMS = 200
-FETCH_SLEEP = 0.4
+HEADERS = {"User-Agent": "HKersInOZBot/1.2 (+news-aggregator; contact: you@example.com)"}
+# 讀取 timeout 收緊，避免費等
+TIMEOUT = 12
+# 夠數即停
+MAX_ITEMS = 800
+# 每頁之間的 sleep 短啲
+FETCH_SLEEP = 0.12
+# 全流程最長執行時間（秒），例如 25 分鐘
+GLOBAL_DEADLINE_SECS = 25 * 60
+# BFS 的硬上限唔需要 8000，實務上 1000-1500 已足夠
+MAX_CRAWL_PAGES = 1200
+# 每頁最多 enqueue 幾多新連結，防止爆炸擴張
+MAX_ENQUEUE_PER_PAGE = 40
 
 NINE_HOST = "www.9news.com.au"
 ROBOTS_URL = "https://www.9news.com.au/robots.txt"
@@ -62,6 +71,8 @@ NINE_BLOCKLIST_PARTS = [
     "/about", "/about-us",
     "/contact", "/advertise",
     "/terms", "/privacy",
+    "/live-blog",
+    "/galleries", "/gallery",
 ]
 
 def is_non_news_url(url: str) -> bool:
@@ -102,18 +113,22 @@ def fetch(url: str) -> requests.Response:
 
 def _is_probably_html(resp: requests.Response) -> bool:
     ct = resp.headers.get("Content-Type", "").lower()
-    # 部分站會用 text/html; charset=UTF-8、application/xhtml+xml
-    return ("text/html" in ct) or ("application/xhtml+xml" in ct)
+    return ("text/html" in ct) or ("application/xhtml+xml" in ct) or ct.startswith("text/htm")
     
 def fetch_html(url: str) -> str | None:
-    """只在 Content-Type 類似 HTML 時回傳文字；否則回 None（避免用 HTML parser 讀 XML）。"""
+    """HEAD 預檢 Content-Type；只在 HTML 類型先 GET 全文。"""
     try:
-        r = fetch(url)
-        if not _is_probably_html(r):
+        h = requests.head(url, headers=HEADERS, timeout=5, allow_redirects=True)
+        if h.status_code >= 400:
             return None
-        return r.text
+        if not _is_probably_html(h):
+            return None
     except Exception:
         return None
+    try:
+        r = fetch(url)
+        return r.text if _is_probably_html(r) else None
+    except Exception:
 
 def _sanitize_url(u: str, base: str) -> str | None:
     """清理抽到嘅 URL：相對→絕對；去尾部雜訊/標點/多餘連結片段。"""
@@ -395,12 +410,27 @@ def collect_from_entrypages() -> dict[str, str | None]:
     return out
 
 # ---------------- C) 淺層 BFS（硬上限 8000） ----------------
+_ASSET_EXTS = (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".svg",".webp",".webm",".m3u8")
 def should_visit(url: str) -> bool:
-    if not url.startswith(SECTION_ALLOWED_PREFIXES): return False
-    if any(x in url for x in [".mp3",".mp4",".jpg",".jpeg",".png",".gif",".pdf",".svg",".webp"]): return False
-    return True
+    if not url.startswith(SECTION_ALLOWED_PREFIXES): 
+        return False
+    u = url.lower()
+    if any(u.endswith(ext) for ext in _ASSET_EXTS): 
+        return False
+    # 濾走非新聞常見路徑
+    if is_non_news_url(u):
+        return False
+    # 限制 path 深度，避免太多導航頁（例如 /topic/...）
+    try:
+        from urllib.parse import urlparse
+        depth = len([p for p in urlparse(u).path.split("/") if p])
+        if depth > 6:
+            return False
+    except Exception:
+        pass
+        return True
 
-def crawl_site(seeds: list[str], max_pages: int = 8000) -> list[str]:
+def crawl_site(seeds: list[str], max_pages: int = MAX_CRAWL_PAGES) -> list[str]:
     """
     淺層 BFS；最多巡航 max_pages（預設 8000），避免爆至 20k+。
     """
@@ -409,7 +439,11 @@ def crawl_site(seeds: list[str], max_pages: int = 8000) -> list[str]:
         if should_visit(s): 
             q.append(s); seen_pages.add(s)
     pages_visited = 0
+    start_ts = time.time()
     while q and pages_visited < max_pages:
+        # 全局時間上限
+        if time.time() - start_ts > GLOBAL_DEADLINE_SECS:
+            break
         url = q.popleft()
         try:
             html_text = fetch_html(url)
@@ -427,12 +461,15 @@ def crawl_site(seeds: list[str], max_pages: int = 8000) -> list[str]:
             found_articles.add(art)
 
         soup = BeautifulSoup(html_text, "html.parser")
+        enq = 0
         for a in soup.find_all("a", href=True):
+            if enq >= MAX_ENQUEUE_PER_PAGE:
+                break
             href = a["href"]
-            if href.startswith("/"): 
+            if href.startswith("/"):
                 href = urljoin(url, href)
             if href and href not in seen_pages and should_visit(href):
-                seen_pages.add(href); q.append(href)
+                seen_pages.add(href); q.append(href); enq += 1
 
         pages_visited += 1
         time.sleep(FETCH_SLEEP)
@@ -539,7 +576,10 @@ if __name__ == "__main__":
 
     articles = []
     seen_links = set()
+    start_ts = time.time()
     for u in merged:
+        if time.time() - start_ts > GLOBAL_DEADLINE_SECS:
+            break
         # 🚫 保險：任何 .xml 一律跳過（另外在 fetch_html 亦會擋）
         if u.lower().endswith(".xml"):
             continue
@@ -556,11 +596,14 @@ if __name__ == "__main__":
             if any(x["link"] == item["link"] for x in articles):
                 continue
             articles.append(item)
+            # 夠數就停，唔好再嘥時間巡航
+            if len(articles) >= MAX_ITEMS:
+                break
             time.sleep(FETCH_SLEEP)
         except Exception as e:
             print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
 
-    if len(articles) < MAX_ITEMS // 2:
+    if len(articles) < MAX_ITEMS // 2 and (time.time() - start_ts) <= GLOBAL_DEADLINE_SECS:
         print("[INFO] few items; fallback Google News", file=sys.stderr)
         urls_gn = collect_from_google_news()
         print(f"[INFO] google news urls: {len(urls_gn)}", file=sys.stderr)
