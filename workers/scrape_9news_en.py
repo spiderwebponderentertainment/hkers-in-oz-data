@@ -110,10 +110,6 @@ def fetch(url: str) -> requests.Response:
     r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
     r.raise_for_status()
     return r
-
-def _is_probably_html(resp: requests.Response) -> bool:
-    ct = resp.headers.get("Content-Type", "").lower()
-    return ("text/html" in ct) or ("application/xhtml+xml" in ct) or ct.startswith("text/htm")
     
 def fetch_html(url: str) -> str | None:
     """HEAD 預檢 Content-Type；只在 HTML 類型先 GET 全文。"""
@@ -433,9 +429,9 @@ def should_visit(url: str) -> bool:
             return False
     except Exception:
         pass
-        return True
+    return True
 
-def crawl_site(seeds: list[str], max_pages: int = MAX_CRAWL_PAGES) -> list[str]:
+urls_crawl = crawl_site(seeds=seed_pages, max_pages=MAX_CRAWL_PAGES)
     """
     淺層 BFS；最多巡航 max_pages（預設 8000），避免爆至 20k+。
     """
@@ -620,11 +616,10 @@ if __name__ == "__main__":
                 continue
             try:
                 html_text = fetch(u).text
-                link_final = canonicalize_link(url, html_text)
-                link_final = canonicalize_link(url, html_text)
-                # 題目質檢：空、像 URL、或已知垃圾題目 → 丟掉
-                if not title or JUNK_TITLE_RE.search(title):
-                    return None
+                link_final = canonicalize_link(u, html_text)
+            # 題目質檢：空、像 URL、或已知垃圾題目 → 丟掉
+            if not title or JUNK_TITLE_RE.search(title):
+                return None
                 # GN fallback 亦套用同樣的垃圾濾波
                 if ("9now.com.au" in link_final) or ("stream.9now.com.au" in link_final):
                     continue
