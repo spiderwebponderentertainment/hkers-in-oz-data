@@ -622,22 +622,24 @@ if __name__ == "__main__":
             if is_non_news_url(u):
                 continue
             try:
-                html_text = fetch(u).text
+                html_text  = fetch(u).text
                 link_final = canonicalize_link(u, html_text)
-            # 題目質檢：空、像 URL、或已知垃圾題目 → 丟掉
-            if not title or JUNK_TITLE_RE.search(title):
-                return None
                 # GN fallback 亦套用同樣的垃圾濾波
                 if ("9now.com.au" in link_final) or ("stream.9now.com.au" in link_final):
-                    continue
-                if link_final in seen_links:
                     continue
                 item = make_item(u, html_text)
                 if not item:
                     continue
+                # 題目質檢：空、像 URL、或已知垃圾題目 → 丟掉
+                title = (item.get("title") or "").strip()
+                if not title or JUNK_TITLE_RE.search(title):
+                    continue
+                if link_final in seen_links:
+                    continue
                 seen_links.add(link_final)
                 articles.append(item)
-                if len(articles) >= MAX_ITEMS: break
+                if len(articles) >= MAX_ITEMS:
+                    break
                 time.sleep(FETCH_SLEEP)
             except Exception as e:
                 print(f"[WARN] GN article fetch fail {u}: {e}", file=sys.stderr)
