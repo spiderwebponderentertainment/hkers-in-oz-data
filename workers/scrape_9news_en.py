@@ -431,20 +431,26 @@ def should_visit(url: str) -> bool:
         pass
     return True
 
-urls_crawl = crawl_site(seeds=seed_pages, max_pages=MAX_CRAWL_PAGES)
+def crawl_site(seeds: list[str], max_pages: int = MAX_CRAWL_PAGES) -> list[str]:
     """
-    淺層 BFS；最多巡航 max_pages（預設 8000），避免爆至 20k+。
+    淺層 BFS；最多巡航 max_pages（預設 1200），並設全局時間限制，避免爆走。
     """
-    q = deque(); seen_pages = set(); found_articles = set()
+    q = deque()
+    seen_pages: set[str] = set()
+    found_articles: set[str] = set()
+
     for s in seeds:
-        if should_visit(s): 
-            q.append(s); seen_pages.add(s)
+        if should_visit(s):
+            q.append(s)
+            seen_pages.add(s)
+
     pages_visited = 0
     start_ts = time.time()
+
     while q and pages_visited < max_pages:
-        # 全局時間上限
         if time.time() - start_ts > GLOBAL_DEADLINE_SECS:
             break
+
         url = q.popleft()
         try:
             html_text = fetch_html(url)
@@ -453,7 +459,6 @@ urls_crawl = crawl_site(seeds=seed_pages, max_pages=MAX_CRAWL_PAGES)
             continue
 
         if not html_text:
-            # 非 HTML（例如 XML / API）— 跳過
             pages_visited += 1
             time.sleep(FETCH_SLEEP)
             continue
@@ -470,7 +475,9 @@ urls_crawl = crawl_site(seeds=seed_pages, max_pages=MAX_CRAWL_PAGES)
             if href.startswith("/"):
                 href = urljoin(url, href)
             if href and href not in seen_pages and should_visit(href):
-                seen_pages.add(href); q.append(href); enq += 1
+                seen_pages.add(href)
+                q.append(href)
+                enq += 1
 
         pages_visited += 1
         time.sleep(FETCH_SLEEP)
