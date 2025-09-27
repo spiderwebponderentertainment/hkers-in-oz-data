@@ -364,6 +364,7 @@ def _is_probably_html(resp: requests.Response) -> bool:
 # ---------------- B) 入口頁抽 link ----------------
 ARTICLE_HREF_RE = re.compile(r'https?://(?:www\.)?9news\.com\.au/[A-Za-z0-9\-/_.]+')
 REL_ARTICLE_RE = re.compile(r'/[A-Za-z0-9\-/_.]+')
+JUNK_TITLE_RE = re.compile(r'^(https?://|SVG namespace\b)', re.I)
 
 def sanitize_9news(u: str, base: str) -> str | None:
     if not u: return None
@@ -374,6 +375,9 @@ def sanitize_9news(u: str, base: str) -> str | None:
     p = urlparse(u)
     if p.scheme not in ("http","https"): return None
     if NINE_HOST not in p.netloc: return None
+    # 直接濾走 9Now/stream 類連結（唔係新聞內文）
+    if "9now.com.au" in p.netloc or "stream.9now.com.au" in p.netloc:
+        return None
     if any(u.lower().endswith(ext) for ext in (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".webp",".svg")):
         return None
     return u
@@ -593,6 +597,8 @@ if __name__ == "__main__":
                 continue
             hint = hint_map.get(u)
             item = make_item(u, html_text, hint_section=hint)
+            if not item:
+                continue
             # 以 link 去重（可選）
             if any(x["link"] == item["link"] for x in articles):
                 continue
@@ -614,9 +620,19 @@ if __name__ == "__main__":
                 continue
             try:
                 html_text = fetch(u).text
-                link_final = canonicalize_link(u, html_text)
-                if link_final in seen_links: continue
+                link_final = canonicalize_link(url, html_text)
+                link_final = canonicalize_link(url, html_text)
+                # 題目質檢：空、像 URL、或已知垃圾題目 → 丟掉
+                if not title or JUNK_TITLE_RE.search(title):
+                    return None
+                # GN fallback 亦套用同樣的垃圾濾波
+                if ("9now.com.au" in link_final) or ("stream.9now.com.au" in link_final):
+                    continue
+                if link_final in seen_links:
+                    continue
                 item = make_item(u, html_text)
+                if not item:
+                    continue
                 seen_links.add(link_final)
                 articles.append(item)
                 if len(articles) >= MAX_ITEMS: break
