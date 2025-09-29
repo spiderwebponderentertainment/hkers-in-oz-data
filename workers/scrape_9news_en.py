@@ -389,7 +389,7 @@ def sanitize_9news(u: str, base: str) -> str | None:
         return None
     if any(u.lower().endswith(ext) for ext in (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".webp",".svg")):
         return None
-    if any(d in p.netloc.lower() for d in _BLOCKED_DOMAINS):
+    if any(d in p.netloc.lower() for d in BLOCKED_DOMAINS):
         return None
     return u
 
@@ -428,6 +428,7 @@ def collect_from_entrypages() -> dict[str, str | None]:
 # ---------------- C) 淺層 BFS（硬上限 8000） ----------------
 _ASSET_EXTS = (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".svg",".webp",".webm",".m3u8")
 BLOCKED_DOMAINS = ("stan.com.au", "9now.com.au", "stream.9now.com.au")
+
 def should_visit(url: str) -> bool:
     if not url.startswith(SECTION_ALLOWED_PREFIXES): 
         return False
@@ -438,11 +439,11 @@ def should_visit(url: str) -> bool:
     if is_non_news_url(u):
         return False
     from urllib.parse import urlparse
-    if urlparse(u).netloc.lower().endswith(_BLOCKED_DOMAINS):
+    host = urlparse(u).netloc.lower()
+    if host.endswith(BLOCKED_DOMAINS):
         return False
-    # 限制 path 深度，避免太多導航頁（例如 /topic/...）
+    # 限制 path 深度
     try:
-        from urllib.parse import urlparse
         depth = len([p for p in urlparse(u).path.split("/") if p])
         if depth > 6:
             return False
