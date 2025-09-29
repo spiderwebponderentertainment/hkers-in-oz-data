@@ -149,6 +149,7 @@ def _sanitize_url(u: str, base: str) -> str | None:
 def canonicalize_link(url: str, html_text: str | None = None) -> str:
     # 只接受 9news.com.au 內部 canonical；去到 Stan/9Now 就忽略
     orig = url
+    if html_text:
         try:
             soup = BeautifulSoup(html_text, "html.parser")
             link_tag = soup.find("link", rel=lambda x: x and "canonical" in x)
