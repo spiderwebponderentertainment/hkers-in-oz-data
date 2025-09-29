@@ -147,12 +147,19 @@ def _sanitize_url(u: str, base: str) -> str | None:
     return u
 
 def canonicalize_link(url: str, html_text: str | None = None) -> str:
-    if html_text:
+    # 只接受 9news.com.au 內部 canonical；去到 Stan/9Now 就忽略
+    orig = url
         try:
             soup = BeautifulSoup(html_text, "html.parser")
             link_tag = soup.find("link", rel=lambda x: x and "canonical" in x)
             if link_tag and link_tag.get("href"):
-                url = link_tag["href"].strip()
+                cand = link_tag["href"].strip()
+                from urllib.parse import urlparse
+                host = urlparse(cand).netloc.lower()
+                if "9news.com.au" in host:
+                    url = cand
+                else:
+                    url = orig  # 忽略外站 canonical（如 stan.com.au / 9now.com.au）
         except Exception:
             pass
     if url.startswith("//"): url = "https:" + url
@@ -291,6 +298,11 @@ def make_item(url: str, html_text: str, hint_section: str | None = None):
         title = t2; desc = d2; pub = normalize_date(p2); section = section or s2
 
     link_final = canonicalize_link(url, html_text)
+    # 最終 domain 白名單：只收 9news.com.au
+    from urllib.parse import urlparse
+    host_final = urlparse(link_final).netloc.lower()
+    if "9news.com.au" not in host_final:
+        return None
     # ⏱️ 本地時間欄位（以 UTC -> Sydney 顯示）
     pub_dt_utc = parse_iso_to_utc_dt(pub)
     fetched_utc = ensure_utc(datetime.now(timezone.utc))
@@ -376,6 +388,8 @@ def sanitize_9news(u: str, base: str) -> str | None:
         return None
     if any(u.lower().endswith(ext) for ext in (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".webp",".svg")):
         return None
+    if any(d in p.netloc.lower() for d in _BLOCKED_DOMAINS):
+        return None
     return u
 
 def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
@@ -412,14 +426,18 @@ def collect_from_entrypages() -> dict[str, str | None]:
 
 # ---------------- C) 淺層 BFS（硬上限 8000） ----------------
 _ASSET_EXTS = (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".svg",".webp",".webm",".m3u8")
+BLOCKED_DOMAINS = ("stan.com.au", "9now.com.au", "stream.9now.com.au")
 def should_visit(url: str) -> bool:
     if not url.startswith(SECTION_ALLOWED_PREFIXES): 
         return False
     u = url.lower()
     if any(u.endswith(ext) for ext in _ASSET_EXTS): 
         return False
-    # 濾走非新聞常見路徑
+    # 濾走非新聞常見路徑 / 外站宣傳域
     if is_non_news_url(u):
+        return False
+    from urllib.parse import urlparse
+    if urlparse(u).netloc.lower().endswith(_BLOCKED_DOMAINS):
         return False
     # 限制 path 深度，避免太多導航頁（例如 /topic/...）
     try:
