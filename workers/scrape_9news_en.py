@@ -1,31 +1,44 @@
 # workers/scrape_9news_en.py
 import json, re, sys, html, hashlib, time
 from datetime import datetime, timezone
-from zoneinfo import ZoneInfo
 from urllib.parse import urlparse, urljoin, parse_qs, unquote
 from collections import deque
+from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
 from xml.etree import ElementTree as ET
 
 # ---------------- 基本設定 ----------------
-HEADERS = {"User-Agent": "HKersInOZBot/1.2 (+news-aggregator; contact: you@example.com)"}
-# 讀取 timeout 收緊，避免費等
-TIMEOUT = 12
-# 夠數即停
-MAX_ITEMS = 800
-# 每頁之間的 sleep 短啲
-FETCH_SLEEP = 0.12
-# 全流程最長執行時間（秒），例如 25 分鐘
-GLOBAL_DEADLINE_SECS = 15 * 60
-# BFS 的硬上限唔需要 8000，實務上 1000-1500 已足夠
-MAX_CRAWL_PAGES = 1200
-# 每頁最多 enqueue 幾多新連結，防止爆炸擴張
-MAX_ENQUEUE_PER_PAGE = 40
+# 偽裝 User-Agent
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+}
+
+TIMEOUT = 15
+MAX_ITEMS = 200
+FETCH_SLEEP = 0.2  # 9News 網站反應較快，可稍快
+GLOBAL_DEADLINE_SECS = 10 * 60  # 10分鐘大限
 
 NINE_HOST = "www.9news.com.au"
 ROBOTS_URL = "https://www.9news.com.au/robots.txt"
+SYD = ZoneInfo("Australia/Sydney")
+
+# 標題黑名單
+BLOCKED_TITLES = (
+    "Contact Us", "About Us", "Terms and Conditions", "Privacy Policy",
+    "Advertise with us", "Nine for Brands", "Accessibility", "Help",
+    "TV Guide", "Live Streaming", "Weather", "Send us your photos",
+    "Coupons", "Meet the team"
+)
+
+# 網域/路徑黑名單 (過濾垃圾 Link)
+BLOCKED_DOMAINS = (
+    "9now.com.au", "stream.9now.com.au", "login.nine.com.au", 
+    "help.nine.com.au", "schema.org", "w3.org", "facebook.com", 
+    "twitter.com", "instagram.com", "pinterest.com"
+)
 
 ENTRY_BASES = [
     "https://www.9news.com.au/",
@@ -37,7 +50,6 @@ ENTRY_BASES = [
     "https://www.9news.com.au/technology",
     "https://www.9news.com.au/entertainment",
     "https://www.9news.com.au/sport",
-    "https://www.9news.com.au/traffic",
 ]
 
 SECTION_ALLOWED_PREFIXES = ("https://www.9news.com.au/",)
@@ -47,40 +59,6 @@ GN_URL = (
     "?q=site:9news.com.au"
     "&hl=en-AU&gl=AU&ceid=AU:en"
 )
-
-# ---------------- 時區（悉尼，自動處理 AEST/AEDT） ----------------
-SYD = ZoneInfo("Australia/Sydney")
-
-def to_iso(dt: datetime) -> str:
-    return dt.isoformat()
-
-def ensure_utc(dt: datetime) -> datetime:
-    if dt.tzinfo is None:
-        return dt.replace(tzinfo=timezone.utc)
-    return dt.astimezone(timezone.utc)
-
-def as_sydney(dt_utc: datetime) -> datetime:
-    return dt_utc.astimezone(SYD)
-
-# ---------------- URL 過濾（來源層擋非新聞） ----------------
-# 9News 上常見的「非新聞」類別（人員介紹、公司資訊、條款等）
-NINE_BLOCKLIST_PARTS = [
-    "/meet-the-team",
-    "/reporter", "/reporters",
-    "/presenter", "/presenters",
-    "/about", "/about-us",
-    "/contact", "/advertise",
-    "/terms", "/privacy",
-    "/live-blog",
-    "/galleries", "/gallery",
-]
-
-def is_non_news_url(url: str) -> bool:
-    """判斷 9News URL 是否屬 profile/公司資訊等非新聞頁"""
-    u = (url or "").lower()
-    if "9news.com.au" not in u:
-        return False
-    return any(part in u for part in NINE_BLOCKLIST_PARTS)
 
 # ---------------- 小工具 ----------------
 def iso_now(): return datetime.now(timezone.utc).isoformat()
@@ -95,143 +73,136 @@ def normalize_date(raw: str | None) -> str | None:
         dt = datetime.fromisoformat(s.replace("Z",""))
         if not dt.tzinfo: dt = dt.replace(tzinfo=timezone.utc)
         return dt.astimezone(timezone.utc).isoformat()
-    except Exception:
-        pass
+    except: pass
     try:
         from email.utils import parsedate_to_datetime
         dt = parsedate_to_datetime(s)
         if not dt: return None
         if not dt.tzinfo: dt = dt.replace(tzinfo=timezone.utc)
         return dt.astimezone(timezone.utc).isoformat()
-    except Exception:
-        return None
+    except: return None
 
 def fetch(url: str) -> requests.Response:
     r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
     r.raise_for_status()
     return r
-    
-def fetch_html(url: str) -> str | None:
-    """HEAD 預檢 Content-Type；只在 HTML 類型先 GET 全文。"""
-    try:
-        h = requests.head(url, headers=HEADERS, timeout=5, allow_redirects=True)
-        if h.status_code >= 400:
-            return None
-        if not _is_probably_html(h):
-            return None
-    except Exception:
-        return None
-    try:
-        r = fetch(url)
-        return r.text if _is_probably_html(r) else None
-    except Exception:
-        return None
 
-def _sanitize_url(u: str, base: str) -> str | None:
-    """清理抽到嘅 URL：相對→絕對；去尾部雜訊/標點/多餘連結片段。"""
-    if not u:
-        return None
+def ensure_utc(dt: datetime) -> datetime:
+    if dt.tzinfo is None: return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+def as_sydney(dt_utc: datetime) -> datetime:
+    return ensure_utc(dt_utc).astimezone(SYD)
+
+def parse_iso_dt(s: str | None) -> datetime | None:
+    if not s: return None
+    try:
+        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+    except: return None
+    if dt.tzinfo is None: dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+# ---------------- Link 清洗與判斷 ----------------
+NON_ARTICLE_SEGMENTS = (
+    "/videos/", "/video/", "/gallery/", "/galleries/", "/meet-the-team",
+    "/reporter/", "/presenter/", "/privacy", "/terms", "/contact",
+    "/live-blog", "/weather", "/traffic"
+)
+MEDIA_EXTS = (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".svg",".webp",".webm",".m3u8",".js",".css")
+
+def sanitize_url(u: str, base: str) -> str | None:
+    if not u: return None
     u = html.unescape(u).strip()
-    if u.startswith("//"):
-        u = "https:" + u
-    if u.startswith("/"):
-        u = urljoin(base, u)
-    # 取第一段，防止 "url1 http://url2"
-    u = u.split()[0]
-    # 去尾部常見的符號（包括令 9News video link 404 的尾部 '-'）
-    u = u.rstrip('"\')]>.,;:-')
-    # 簡單合法性
-    p = urlparse(u)
-    if not (p.scheme in ("http", "https") and p.netloc):
+    if u.startswith("//"): u = "https:" + u
+    if u.startswith("/"): u = urljoin(base, u)
+    
+    # 移除 fragment (#) 和 query (?)，新聞通常唔需要 query
+    u = u.split("#",1)[0].split("?",1)[0]
+    u = u.rstrip("/")
+    
+    try:
+        p = urlparse(u)
+        if p.scheme not in ("http", "https"): return None
+        
+        # 網域過濾
+        netloc = p.netloc.lower()
+        if "9news.com.au" not in netloc: return None
+        if any(bad in netloc for bad in BLOCKED_DOMAINS): return None
+        
+        # 路徑過濾
+        path = p.path.lower()
+        if any(path.endswith(ext) for ext in MEDIA_EXTS): return None
+        if any(seg in path for seg in NON_ARTICLE_SEGMENTS): return None
+        
+        # 9News 文章通常至少有 2 層 (section/slug)
+        parts = [x for x in path.strip("/").split("/") if x]
+        if len(parts) < 2: return None
+        
+        return u
+    except:
         return None
-    return u
 
 def canonicalize_link(url: str, html_text: str | None = None) -> str:
-    # 只接受 9news.com.au 內部 canonical；去到 Stan/9Now 就忽略
-    orig = url
+    # [Fix] 移除了內部的 import urlparse，避免 UnboundLocalError
     if html_text:
         try:
             soup = BeautifulSoup(html_text, "html.parser")
             link_tag = soup.find("link", rel=lambda x: x and "canonical" in x)
             if link_tag and link_tag.get("href"):
-                cand = link_tag["href"].strip()
-                from urllib.parse import urlparse
-                host = urlparse(cand).netloc.lower()
-                if "9news.com.au" in host:
-                    url = cand
-                else:
-                    url = orig  # 忽略外站 canonical（如 stan.com.au / 9now.com.au）
-        except Exception:
-            pass
+                c_url = link_tag["href"].strip()
+                if c_url.startswith("//"): c_url = "https:" + c_url
+                # 只信賴 9news 站內的 canonical
+                if "9news.com.au" in urlparse(c_url).netloc.lower():
+                    url = c_url
+        except: pass
+    
     if url.startswith("//"): url = "https:" + url
-    p = urlparse(url)
-    scheme = "https"
-    netloc = p.netloc.lower()
-    path = (p.path or "/").rstrip("/") or "/"
-    return f"{scheme}://{netloc}{path}"
-
-# 由 ISO8601（可帶 Z）還原成 datetime（UTC）
-def parse_iso_to_utc_dt(s: str | None) -> datetime | None:
-    if not s:
-        return None
     try:
-        # 支援 …Z 或 ±hh:mm
-        ss = s.replace("Z", "+00:00")
-        dt = datetime.fromisoformat(ss)
-        if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
-        return dt.astimezone(timezone.utc)
-    except Exception:
-        return None
+        p = urlparse(url)
+        scheme = "https"
+        netloc = p.netloc.lower()
+        path = p.path.rstrip("/")
+        if not path: path = "/"
+        return f"{scheme}://{netloc}{path}"
+    except:
+        return url
 
-# ---------------- Category 判斷（URL 優先） ----------------
+# ---------------- Category 判斷 ----------------
 def _slug_title(slug: str) -> str:
     m = {
-        "national": "National",
-        "world": "World",
-        "politics": "Politics",
-        "business": "Business",
-        "health": "Health",
-        "technology": "Technology",
-        "entertainment": "Entertainment",
-        "sport": "Sport",
-        "traffic": "Traffic",
+        "national": "National", "world": "World", "politics": "Politics",
+        "business": "Business", "health": "Health", "technology": "Technology",
+        "entertainment": "Entertainment", "sport": "Sport", "traffic": "Traffic"
     }
-    return m.get(slug, slug.capitalize())
+    return m.get(slug.lower(), slug.capitalize())
 
 def category_from_url(u: str) -> str | None:
     try:
         p = urlparse(u)
         parts = [x for x in (p.path or "").strip("/").split("/") if x]
-        if parts:
-            return _slug_title(parts[0])
-    except Exception:
-        pass
+        if parts: return _slug_title(parts[0])
+    except: pass
     return None
 
-# ---------------- JSON-LD / meta 解析 ----------------
+# ---------------- JSON-LD / Meta 解析 ----------------
 def parse_json_ld(html_text: str):
     try:
         soup = BeautifulSoup(html_text, "html.parser")
         for tag in soup.find_all("script", type=lambda t: t and "ld+json" in t):
             txt = tag.string or tag.get_text() or ""
-            try:
-                data = json.loads(txt)
-            except Exception:
-                continue
+            try: data = json.loads(txt)
+            except: continue
 
             def select(obj: dict) -> dict | None:
                 if not isinstance(obj, dict): return None
                 t = obj.get("@type")
                 if isinstance(t, list): t = next((x for x in t if isinstance(x, str)), None)
-                if t not in ("NewsArticle", "Article", "BlogPosting"): return None
-                date = (
-                    obj.get("datePublished") or obj.get("uploadDate") or
-                    obj.get("dateCreated") or obj.get("dateModified") or ""
-                )
+                if t not in ("NewsArticle", "Article", "BlogPosting", "ReportageNewsArticle"): return None
+                
+                date = (obj.get("datePublished") or obj.get("uploadDate") or obj.get("dateCreated") or obj.get("dateModified") or "")
                 section = obj.get("articleSection")
-                if isinstance(section, list):
-                    section = next((x for x in section if isinstance(x, str)), None)
+                if isinstance(section, list): section = next((x for x in section if isinstance(x, str)), None)
+                
                 return {
                     "headline": obj.get("headline") or obj.get("name") or "",
                     "description": obj.get("description") or "",
@@ -253,20 +224,16 @@ def parse_json_ld(html_text: str):
                         got = scan(each)
                         if got: return got
                 return None
-
+            
             candidate = scan(data)
             if candidate: return candidate
-    except Exception:
-        pass
+    except: pass
     return {}
 
 def extract_meta_from_html(html_text: str):
     soup = BeautifulSoup(html_text, "html.parser")
-    title = (soup.find("meta", property="og:title") or {}).get("content") \
-        or (soup.title.string if soup.title else "") or ""
-    desc = (soup.find("meta", property="og:description") or {}).get("content") \
-        or (soup.find("meta", attrs={"name": "description"}) or {}).get("content") \
-        or ""
+    title = (soup.find("meta", property="og:title") or {}).get("content") or (soup.title.string if soup.title else "") or ""
+    desc = (soup.find("meta", property="og:description") or {}).get("content") or (soup.find("meta", attrs={"name": "description"}) or {}).get("content") or ""
     pub = (
         (soup.find("meta", property="article:published_time") or {}).get("content")
         or (soup.find("meta", property="og:article:published_time") or {}).get("content")
@@ -276,16 +243,18 @@ def extract_meta_from_html(html_text: str):
         or (soup.find("meta", attrs={"name": "date"}) or {}).get("content")
         or None
     )
-    section = (
-        (soup.find("meta", property="article:section") or {}).get("content")
-        or (soup.find("meta", attrs={"name": "section"}) or {}).get("content")
-        or None
-    )
+    section = ((soup.find("meta", property="article:section") or {}).get("content") or (soup.find("meta", attrs={"name": "section"}) or {}).get("content") or None)
     return clean(title), clean(desc), pub, section
 
 def make_item(url: str, html_text: str, hint_section: str | None = None):
-    section = category_from_url(url) or hint_section
+    link_final = canonicalize_link(url, html_text)
+    
+    # 雙重檢查 domain
+    if "9news.com.au" not in urlparse(link_final).netloc.lower(): return None
+
+    section = category_from_url(link_final) or hint_section
     ld = parse_json_ld(html_text)
+    
     if ld:
         title = clean(ld.get("headline", "")) or None
         desc = clean(ld.get("description", "")) or ""
@@ -298,37 +267,83 @@ def make_item(url: str, html_text: str, hint_section: str | None = None):
         t2, d2, p2, s2 = extract_meta_from_html(html_text)
         title = t2; desc = d2; pub = normalize_date(p2); section = section or s2
 
-    link_final = canonicalize_link(url, html_text)
-    # 最終 domain 白名單：只收 9news.com.au
-    from urllib.parse import urlparse
-    host_final = urlparse(link_final).netloc.lower()
-    if "9news.com.au" not in host_final:
-        return None
-    # ⏱️ 本地時間欄位（以 UTC -> Sydney 顯示）
-    pub_dt_utc = parse_iso_to_utc_dt(pub)
-    fetched_utc = ensure_utc(datetime.now(timezone.utc))
+    now_utc = ensure_utc(datetime.now(timezone.utc))
+    pub_dt_utc = parse_iso_dt(pub) if pub else None
+    
     return {
         "id": hashlib.md5(link_final.encode()).hexdigest(),
-         "title": title or link_final,
-         "link": link_final,
-         "summary": desc,
-         "publishedAt": pub,
-         "source": "9News",
-        "fetchedAt": to_iso(fetched_utc),
-        # 👇 新增：顯示友好用（AEST/AEDT）
-        "publishedAtLocal": to_iso(as_sydney(pub_dt_utc)) if pub_dt_utc else None,
-        "fetchedAtLocal": to_iso(as_sydney(fetched_utc)),
+        "title": title or link_final,
+        "link": link_final,
+        "summary": desc,
+        "publishedAt": pub,
+        "source": "9News",
+        "fetchedAt": now_utc.isoformat(),
+        "publishedAtLocal": (as_sydney(pub_dt_utc).isoformat() if pub_dt_utc else None),
+        "fetchedAtLocal": as_sydney(now_utc).isoformat(),
         "localTimezone": "Australia/Sydney",
         "sourceCategory": section,
+        "sourceCategories": [section] if section else None,
     }
 
-# ---------------- A) robots.txt ➜ sitemap ----------------
+# ---------------- Link Collection ----------------
+def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
+    links, seen = [], set()
+    soup = BeautifulSoup(html_text, "html.parser")
+    for a in soup.find_all("a", href=True):
+        u = sanitize_url(a["href"], base)
+        if u and u not in seen:
+            seen.add(u); links.append(u)
+    return links
+
+def collect_from_entrypages() -> dict[str, str | None]:
+    out = {}
+    for base in ENTRY_BASES:
+        hint = category_from_url(base)
+        try:
+            html_text = fetch(base).text
+            for u in links_from_html_anywhere(html_text, base=base):
+                if u not in out: out[u] = hint
+        except: pass
+        time.sleep(0.2)
+    return out
+
+# ---------------- 爬蟲 ----------------
+def crawl_site(seeds: list[str], max_pages: int = 30) -> list[str]:
+    q = deque(); seen_pages = set(); found_articles = set()
+    for s in seeds:
+        if sanitize_url(s, s) or s in ENTRY_BASES:
+            q.append(s); seen_pages.add(s)
+            
+    pages_visited = 0
+    start_ts = time.time()
+    
+    while q and pages_visited < max_pages:
+        if time.time() - start_ts > GLOBAL_DEADLINE_SECS: break
+        
+        url = q.popleft()
+        try: html_text = fetch(url).text
+        except: continue
+        
+        for art in links_from_html_anywhere(html_text, base=url):
+            found_articles.add(art)
+        
+        soup = BeautifulSoup(html_text, "html.parser")
+        for a in soup.find_all("a", href=True):
+            u = sanitize_url(a["href"], url)
+            if u and u not in seen_pages:
+                # 簡單限制爬蟲深度：只爬首頁和第一層 section
+                if u in ENTRY_BASES or (category_from_url(u) and len(urlparse(u).path.split('/')) < 4):
+                    seen_pages.add(u); q.append(u)
+                    
+        pages_visited += 1
+        time.sleep(FETCH_SLEEP)
+    return list(found_articles)
+
+# ---------------- Robots & Sitemap ----------------
 SITEMAP_RE = re.compile(r"(?im)^\s*Sitemap:\s*(https?://\S+)\s*$")
 def sitemaps_from_robots() -> list[str]:
-    try:
-        txt = fetch(ROBOTS_URL).text
-    except Exception as e:
-        print(f"[WARN] robots fetch fail: {e}", file=sys.stderr); return []
+    try: txt = fetch(ROBOTS_URL).text
+    except: return []
     return SITEMAP_RE.findall(txt)
 
 def parse_sitemap_urls(xml_text: str) -> list[str]:
@@ -340,7 +355,7 @@ def parse_sitemap_urls(xml_text: str) -> list[str]:
             if loc.text: urls.append(loc.text.strip())
         for loc in root.findall(".//sm:sitemap/sm:loc", ns):
             if loc.text: urls.append(loc.text.strip())
-    except ET.ParseError:
+    except:
         urls = [m.group(1) for m in re.finditer(r"<loc>\s*(.*?)\s*</loc>", xml_text)]
     return urls
 
@@ -351,190 +366,48 @@ def collect_from_sitemaps() -> list[str]:
         try:
             xml = fetch(sm).text
             for u in parse_sitemap_urls(xml):
-                # 只收 9news domain，並濾走所有 .xml 項
-                if "9news.com.au" not in u:
-                    continue
-                if u.lower().endswith(".xml"):
-                    continue
-                out.append(u)
-        except Exception as e:
-            print(f"[WARN] sitemap fail {sm}: {e}", file=sys.stderr)
+                if sanitize_url(u, u):
+                    out.append(u)
+        except: continue
         if len(out) >= 12 * MAX_ITEMS: break
     seen = set(); uniq = []
     for u in out:
-        if u not in seen:
-            seen.add(u); uniq.append(u)
+        u_clean = u.rstrip("/")
+        if u_clean not in seen:
+            seen.add(u_clean); uniq.append(u)
     return uniq
 
-def _is_probably_html(resp: requests.Response) -> bool:
-    ct = resp.headers.get("Content-Type", "").lower()
-    return ("text/html" in ct) or ("application/xhtml+xml" in ct)
-    
-# ---------------- B) 入口頁抽 link ----------------
-ARTICLE_HREF_RE = re.compile(r'https?://(?:www\.)?9news\.com\.au/[A-Za-z0-9\-/_.]+')
-REL_ARTICLE_RE = re.compile(r'/[A-Za-z0-9\-/_.]+')
-JUNK_TITLE_RE = re.compile(r'^(https?://|SVG namespace\b)', re.I)
-
-def sanitize_9news(u: str, base: str) -> str | None:
-    if not u: return None
-    u = html.unescape(u).strip()
-    if u.startswith("//"): u = "https:" + u
-    if u.startswith("/"): u = urljoin(base, u)
-    u = u.split("#",1)[0]
-    p = urlparse(u)
-    if p.scheme not in ("http","https"): return None
-    if NINE_HOST not in p.netloc: return None
-    # 直接濾走 9Now/stream 類連結（唔係新聞內文）
-    if "9now.com.au" in p.netloc or "stream.9now.com.au" in p.netloc:
-        return None
-    if any(u.lower().endswith(ext) for ext in (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".webp",".svg")):
-        return None
-    if any(d in p.netloc.lower() for d in BLOCKED_DOMAINS):
-        return None
-    return u
-
-def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
-    links = set()
-    soup = BeautifulSoup(html_text, "html.parser")
-    for a in soup.find_all("a", href=True):
-        raw = a["href"]
-        href = _sanitize_url(raw, base)
-        if href and "/news/" in href:
-            links.add(href)
-    # 2) script/JSON 文字內的 URL
-    for m in ARTICLE_HREF_RE.finditer(html_text):
-        u = _sanitize_url(m.group(0), base)
-        if u:
-            links.add(u)
-    for m in REL_ARTICLE_RE.finditer(html_text):
-        u = _sanitize_url(urljoin(base, m.group(0)), base)
-        if u:
-            links.add(u)
-    return list(links)
-
-def collect_from_entrypages() -> dict[str, str | None]:
-    out: dict[str, str | None] = {}
-    for base in ENTRY_BASES:
-        hint = category_from_url(base)
-        try:
-            html_text = fetch(base).text
-            for u in links_from_html_anywhere(html_text, base=base):
-                out.setdefault(u, hint)
-        except Exception as e:
-            print(f"[WARN] entry scrape fail {base}: {e}", file=sys.stderr)
-        time.sleep(0.2)
-    return out
-
-# ---------------- C) 淺層 BFS（硬上限 8000） ----------------
-_ASSET_EXTS = (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".svg",".webp",".webm",".m3u8")
-BLOCKED_DOMAINS = ("stan.com.au", "9now.com.au", "stream.9now.com.au")
-
-def should_visit(url: str) -> bool:
-    if not url.startswith(SECTION_ALLOWED_PREFIXES): 
-        return False
-    u = url.lower()
-    if any(u.endswith(ext) for ext in _ASSET_EXTS): 
-        return False
-    # 濾走非新聞常見路徑 / 外站宣傳域
-    if is_non_news_url(u):
-        return False
-    from urllib.parse import urlparse
-    host = urlparse(u).netloc.lower()
-    if host.endswith(BLOCKED_DOMAINS):
-        return False
-    # 限制 path 深度
-    try:
-        depth = len([p for p in urlparse(u).path.split("/") if p])
-        if depth > 6:
-            return False
-    except Exception:
-        pass
-    return True
-
-def crawl_site(seeds: list[str], max_pages: int = MAX_CRAWL_PAGES) -> list[str]:
-    """
-    淺層 BFS；最多巡航 max_pages（預設 1200），並設全局時間限制，避免爆走。
-    """
-    q = deque()
-    seen_pages: set[str] = set()
-    found_articles: set[str] = set()
-
-    for s in seeds:
-        if should_visit(s):
-            q.append(s)
-            seen_pages.add(s)
-
-    pages_visited = 0
-    start_ts = time.time()
-
-    while q and pages_visited < max_pages:
-        if time.time() - start_ts > GLOBAL_DEADLINE_SECS:
-            break
-
-        url = q.popleft()
-        try:
-            html_text = fetch_html(url)
-        except Exception as e:
-            print(f"[WARN] crawl fetch fail {url}: {e}", file=sys.stderr)
-            continue
-
-        if not html_text:
-            pages_visited += 1
-            time.sleep(FETCH_SLEEP)
-            continue
-
-        for art in links_from_html_anywhere(html_text, base=url):
-            found_articles.add(art)
-
-        soup = BeautifulSoup(html_text, "html.parser")
-        enq = 0
-        for a in soup.find_all("a", href=True):
-            if enq >= MAX_ENQUEUE_PER_PAGE:
-                break
-            href = a["href"]
-            if href.startswith("/"):
-                href = urljoin(url, href)
-            if href and href not in seen_pages and should_visit(href):
-                seen_pages.add(href)
-                q.append(href)
-                enq += 1
-
-        pages_visited += 1
-        time.sleep(FETCH_SLEEP)
-
-    return list(found_articles)
-
-# ---------------- D) Google News 補位 ----------------
+# ---------------- Google News ----------------
 def extract_9news_from_text(text: str) -> str | None:
     if not text: return None
     text = html.unescape(text)
     for m in re.finditer(r'https?://[^\s\'">]+', text):
         u = m.group(0)
-        if "9news.com.au" in u:
-            return u
+        if "9news.com.au" in u: return u
     return None
 
 def decode_gn_item(link_text: str, guid_text: str | None, desc_html: str | None) -> str | None:
-    if link_text and "9news.com.au" in link_text: return link_text.strip()
-    if guid_text and "9news.com.au" in guid_text: return guid_text.strip()
-    u = extract_9news_from_text(desc_html or "")
-    if u: return u
-    if link_text and "news.google.com" in link_text:
-        try:
-            p = urlparse(link_text); qs = parse_qs(p.query)
-            for key in ("u","url","q"):
-                if key in qs and qs[key]:
-                    cand = unquote(qs[key][0])
-                    if "9news.com.au" in cand: return cand
-        except Exception:
-            pass
+    cand = None
+    if link_text and "9news.com.au" in link_text: cand = link_text.strip()
+    elif guid_text and "9news.com.au" in guid_text: cand = guid_text.strip()
+    else:
+        u = extract_9news_from_text(desc_html or "")
+        if u: cand = u
+        elif link_text and "news.google.com" in link_text:
+            try:
+                p = urlparse(link_text); qs = parse_qs(p.query)
+                for key in ("u","url","q"):
+                    if key in qs and qs[key]:
+                        c = unquote(qs[key][0])
+                        if "9news.com.au" in c: cand = c
+            except: pass
+    if cand:
+        return sanitize_url(cand, cand)
     return None
 
 def collect_from_google_news() -> list[str]:
-    try:
-        xml = fetch(GN_URL).text
-    except Exception as e:
-        print(f"[WARN] google news fetch fail: {e}", file=sys.stderr); return []
+    try: xml = fetch(GN_URL).text
+    except: return []
     urls = []
     try:
         root = ET.fromstring(xml)
@@ -543,23 +416,20 @@ def collect_from_google_news() -> list[str]:
             guid_text = (it.findtext("guid") or "").strip()
             desc_html = it.findtext("description") or ""
             real = decode_gn_item(link_text, guid_text, desc_html)
-            if real and "9news.com.au" in real:
-                urls.append(real)
-    except Exception as e:
-        print(f"[WARN] parse google news rss fail: {e}", file=sys.stderr); return []
+            if real: urls.append(real)
+    except: return []
     seen = set(); uniq = []
     for u in urls:
-        if u not in seen:
-            seen.add(u); uniq.append(u)
+        if u not in seen: seen.add(u); uniq.append(u)
     return uniq
 
-# ---------------- 輸出 ----------------
+# ---------------- Output ----------------
 def json_out(items, path):
     now_utc = ensure_utc(datetime.now(timezone.utc))
     payload = {
         "source": "9News",
-        "generatedAt": to_iso(now_utc),
-        "generatedAtLocal": to_iso(as_sydney(now_utc)),
+        "generatedAt": now_utc.isoformat(),
+        "generatedAtLocal": as_sydney(now_utc).isoformat(),
         "localTimezone": "Australia/Sydney",
         "count": len(items),
         "items": items
@@ -568,10 +438,8 @@ def json_out(items, path):
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
 def rss_out(items, path):
-    try:
-        from feedgen.feed import FeedGenerator
-    except Exception as e:
-        print("[WARN] feedgen not available, skip XML:", e, file=sys.stderr); return
+    try: from feedgen.feed import FeedGenerator
+    except: return
     fg = FeedGenerator()
     fg.title("9News – Aggregated (Unofficial)")
     fg.link(href="https://www.9news.com.au/", rel='alternate')
@@ -583,7 +451,7 @@ def rss_out(items, path):
         fe.description(it.get("summary") or it["title"])
     fg.rss_file(path)
 
-# ---------------- 主程式 ----------------
+# ---------------- Main ----------------
 if __name__ == "__main__":
     urls_a = collect_from_sitemaps()
     print(f"[INFO] sitemap urls: {len(urls_a)}", file=sys.stderr)
@@ -593,85 +461,86 @@ if __name__ == "__main__":
     urls_b = list(url_to_hint.keys())
     print(f"[INFO] entry page urls: {len(urls_b)}", file=sys.stderr)
 
-    urls_crawl = crawl_site(seeds=seed_pages, max_pages=8000)
-    print(f"[INFO] crawl urls (capped at 8000): {len(urls_crawl)}", file=sys.stderr)
+    # 這裡 max_pages 設為 30 已經非常足夠
+    urls_crawl = crawl_site(seeds=seed_pages, max_pages=30)
+    print(f"[INFO] crawl urls: {len(urls_crawl)}", file=sys.stderr)
 
     hint_map = dict(url_to_hint)
     seen, merged = set(), []
-    for u in urls_a + urls_b + urls_crawl:
-        if u not in seen:
-            seen.add(u); merged.append(u)
+    
+    # 優化順序
+    for u in urls_b + urls_crawl + urls_a:
+        u_clean = u.rstrip("/")
+        if u_clean not in seen and sanitize_url(u_clean, u_clean):
+            seen.add(u_clean); merged.append(u_clean)
+
+    # 🔥 350 Cap，防止 Timeout
+    LIMIT_PROCESS = 350
+    if len(merged) > LIMIT_PROCESS:
+        print(f"[INFO] Capping items to {LIMIT_PROCESS}...", file=sys.stderr)
+        merged = merged[:LIMIT_PROCESS]
 
     articles = []
-    seen_links = set()
+    seen_ids = set()
+    
+    print(f"[INFO] Fetching {len(merged)} items...", file=sys.stderr)
     start_ts = time.time()
-    for u in merged:
+
+    for i, u in enumerate(merged):
         if time.time() - start_ts > GLOBAL_DEADLINE_SECS:
+            print("[WARN] Deadline reached, stopping fetch.", file=sys.stderr)
             break
-        # 🚫 保險：任何 .xml 一律跳過（另外在 fetch_html 亦會擋）
-        if u.lower().endswith(".xml"):
-            continue
-        # 🚫 來源層過濾：剔除 9News 非新聞頁（例如 meet-the-team）
-        if is_non_news_url(u):
-            continue
+        if i % 50 == 0: print(f"[INFO] Processing {i}/{len(merged)}...", file=sys.stderr)
+        
         try:
-            html_text = fetch_html(u)
-            if not html_text:
-                continue
+            html_text = fetch(u).text
             hint = hint_map.get(u)
             item = make_item(u, html_text, hint_section=hint)
-            if not item:
-                continue
-            # 以 link 去重（可選）
-            if any(x["link"] == item["link"] for x in articles):
-                continue
+            
+            if not item or item["id"] in seen_ids: continue
+            if not item["title"]: continue
+
+            # 標題過濾
+            title_lower = item["title"].lower()
+            if any(bad.lower() in title_lower for bad in BLOCKED_TITLES): continue
+
+            seen_ids.add(item["id"])
             articles.append(item)
-            # 夠數就停，唔好再嘥時間巡航
-            if len(articles) >= MAX_ITEMS:
-                break
             time.sleep(FETCH_SLEEP)
         except Exception as e:
             print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
 
-    if len(articles) < MAX_ITEMS // 2 and (time.time() - start_ts) <= GLOBAL_DEADLINE_SECS:
+    # GN 補位
+    if len(articles) < MAX_ITEMS // 2:
         print("[INFO] few items; fallback Google News", file=sys.stderr)
         urls_gn = collect_from_google_news()
-        print(f"[INFO] google news urls: {len(urls_gn)}", file=sys.stderr)
+        gn_count = 0
         for u in urls_gn:
-            # 同樣在 GN fallback 過濾非新聞頁
-            if is_non_news_url(u):
-                continue
+            if gn_count >= 50: break
             try:
-                html_text  = fetch(u).text
-                link_final = canonicalize_link(u, html_text)
-                # GN fallback 亦套用同樣的垃圾濾波
-                if ("9now.com.au" in link_final) or ("stream.9now.com.au" in link_final):
-                    continue
+                html_text = fetch(u).text
                 item = make_item(u, html_text)
-                if not item:
-                    continue
-                # 題目質檢：空、像 URL、或已知垃圾題目 → 丟掉
-                title = (item.get("title") or "").strip()
-                if not title or JUNK_TITLE_RE.search(title):
-                    continue
-                if link_final in seen_links:
-                    continue
-                seen_links.add(link_final)
+                if not item or item["id"] in seen_ids: continue
+                if not item["title"]: continue
+                
+                title_lower = item["title"].lower()
+                if any(bad.lower() in title_lower for bad in BLOCKED_TITLES): continue
+
+                seen_ids.add(item["id"])
                 articles.append(item)
-                if len(articles) >= MAX_ITEMS:
-                    break
+                gn_count += 1
                 time.sleep(FETCH_SLEEP)
-            except Exception as e:
-                print(f"[WARN] GN article fetch fail {u}: {e}", file=sys.stderr)
+            except: pass
 
     def key_dt(it):
         s = it.get("publishedAt")
         if not s: return datetime.min.replace(tzinfo=timezone.utc)
         try: return datetime.fromisoformat(s.replace("Z","+00:00"))
-        except Exception: return datetime.min.replace(tzinfo=timezone.utc)
+        except: return datetime.min.replace(tzinfo=timezone.utc)
 
     articles.sort(key=key_dt, reverse=True)
     latest = articles[:MAX_ITEMS]
+    
     json_out(latest, "nine_en.json")
     rss_out(latest, "nine_en.xml")
     print(f"[DONE] output {len(latest)} items", file=sys.stderr)
