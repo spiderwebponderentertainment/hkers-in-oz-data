@@ -10,10 +10,17 @@ from xml.etree import ElementTree as ET
 from zoneinfo import ZoneInfo
 
 # ---------------- 基本設定 ----------------
-HEADERS = {"User-Agent": "HKersInOZBot/1.0 (+news-aggregator; contact: you@example.com)"}
+# 🔥 [修正重點] 偽裝成 Chrome 瀏覽器，防止 403 Forbidden
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://7news.com.au/"
+}
+
 TIMEOUT = 25
 MAX_ITEMS = 200
-FETCH_SLEEP = 0.5  # 稍微加長一點，對 7News 溫柔點
+FETCH_SLEEP = 0.5
 
 SEVEN_HOST = "7news.com.au"
 ROBOTS_URL = "https://7news.com.au/robots.txt"
@@ -86,7 +93,6 @@ def parse_iso_dt(s: str | None) -> datetime | None:
     return dt.astimezone(timezone.utc)
 
 def canonicalize_link(url: str, html_text: str | None = None) -> str:
-    # 優先使用 HTML 內的 canonical tag
     if html_text:
         try:
             soup = BeautifulSoup(html_text, "html.parser")
@@ -98,25 +104,24 @@ def canonicalize_link(url: str, html_text: str | None = None) -> str:
                     url = c_url
         except: pass
     
-    # 標準化 URL 字串
     if url.startswith("//"): url = "https:" + url
     try:
         p = urlparse(url)
         scheme = "https"
         netloc = p.netloc.lower()
-        # 統一移除結尾斜線，防止 /news 與 /news/ 變兩條
         path = p.path.rstrip("/")
         if not path: path = "/"
         return f"{scheme}://{netloc}{path}"
     except:
         return url
 
-# 🔥 加強版黑名單：過濾奇怪 Story
+# 🔥 加強版黑名單 (已加入 support, 7you 等)
 NON_ARTICLE_SEGMENTS = (
     "/video/", "/watch/", "/weather/", "/privacy", "/terms", "/contact", 
     "/coupons/", "/competitions/", "/sunrise/", "/the-morning-show/", 
     "/spotlight/", "/sitemap", "/tag/", "/category/", "/live/", 
-    "/profile/", "/login", "/register", "/search", "/authors/"
+    "/profile/", "/login", "/register", "/search", "/authors/",
+    "support.7news", "/7you", "/fixtures"
 )
 MEDIA_EXTS = (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".webp",".svg",".webm",".m3u8",".js",".css",".json")
 
@@ -129,10 +134,9 @@ def looks_like_article_url(u: str) -> bool:
         
         p = urlparse(u)
         if p.scheme not in ("http","https"): return False
+        if "support." in (p.netloc or ""): return False
         if SEVEN_HOST not in (p.netloc or ""): return False
         
-        # 7NEWS 文章結構通常要有 slug，例如 /news/local/something
-        # 如果路徑太短，通常是首頁或分類頁
         parts = [x for x in (p.path or "").strip("/").split("/") if x]
         if len(parts) < 1: return False
         
@@ -227,9 +231,7 @@ def extract_meta_from_html(html_text: str):
     return clean(title), clean(desc), pub, section
 
 def make_item(url: str, html_text: str, hint_section: str | None = None):
-    # 預先 canonicalize URL
     link_final = canonicalize_link(url, html_text)
-    
     section = category_from_url(link_final) or hint_section
     ld = parse_json_ld(html_text)
     
@@ -291,15 +293,12 @@ def collect_from_sitemaps() -> list[str]:
         try:
             xml = fetch(sm).text
             for u in parse_sitemap_urls(xml):
-                # 簡單過濾
                 if "7news.com.au" in u and looks_like_article_url(u):
                     out.append(u)
         except: continue
         if len(out) >= 12 * MAX_ITEMS: break
-    
     seen = set(); uniq = []
     for u in out:
-        # 預先去尾部斜線去重
         u_clean = u.rstrip("/")
         if u_clean not in seen:
             seen.add(u_clean); uniq.append(u)
@@ -311,11 +310,9 @@ def sanitize_7news(u: str, base: str) -> str | None:
     u = html.unescape(u).strip()
     if u.startswith("//"): u = "https:" + u
     if u.startswith("/"): u = urljoin(base, u)
-    u = u.split("#",1)[0].split("?",1)[0] # 預先去 query string
-    u = u.rstrip("/") # 預先去斜線
-    
-    if looks_like_article_url(u):
-        return u
+    u = u.split("#",1)[0].split("?",1)[0]
+    u = u.rstrip("/")
+    if looks_like_article_url(u): return u
     return None
 
 def links_from_html_anywhere(html_text: str, base: str) -> list[str]:
@@ -345,24 +342,19 @@ def crawl_site(seeds: list[str], max_pages: int = 30) -> list[str]:
     for s in seeds:
         if looks_like_article_url(s) or s in ENTRY_BASES:
             q.append(s); seen_pages.add(s)
-            
     pages_visited = 0
     while q and pages_visited < max_pages:
         url = q.popleft()
         try: html_text = fetch(url).text
         except: continue
-        
         for art in links_from_html_anywhere(html_text, base=url):
             found_articles.add(art)
-        
         soup = BeautifulSoup(html_text, "html.parser")
         for a in soup.find_all("a", href=True):
             u = sanitize_7news(a["href"], url)
             if u and u not in seen_pages:
-                # 只爬首頁和 Section 頁，不深入文章內頁
                 if u in ENTRY_BASES or (category_from_url(u) and len(urlparse(u).path.split('/')) < 4):
                     seen_pages.add(u); q.append(u)
-                    
         pages_visited += 1
         time.sleep(FETCH_SLEEP)
     return list(found_articles)
@@ -391,7 +383,6 @@ def decode_gn_item(link_text: str, guid_text: str | None, desc_html: str | None)
                         c = unquote(qs[key][0])
                         if SEVEN_HOST in c: cand = c
             except: pass
-    
     if cand:
         cand = cand.split("?", 1)[0].rstrip("/")
         if looks_like_article_url(cand): return cand
@@ -410,11 +401,38 @@ def collect_from_google_news() -> list[str]:
             real = decode_gn_item(link_text, guid_text, desc_html)
             if real: urls.append(real)
     except: return []
-    
     seen = set(); uniq = []
     for u in urls:
         if u not in seen: seen.add(u); uniq.append(u)
     return uniq
+
+# ---------------- 輸出 (上次漏左呢Part!!) ----------------
+def json_out(items, path):
+    now_utc = ensure_utc(datetime.now(timezone.utc))
+    payload = {
+        "source": "7NEWS",
+        "generatedAt": now_utc.isoformat(),
+        "generatedAtLocal": as_sydney(now_utc).isoformat(),
+        "localTimezone": "Australia/Sydney",
+        "count": len(items),
+        "items": items
+    }
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+def rss_out(items, path):
+    try: from feedgen.feed import FeedGenerator
+    except: return
+    fg = FeedGenerator()
+    fg.title("7NEWS – Aggregated (Unofficial)")
+    fg.link(href="https://7news.com.au/", rel='alternate')
+    fg.description("Auto-generated (headings & summaries only).")
+    fg.language("en")
+    for it in items:
+        fe = fg.add_entry()
+        fe.id(it["id"]); fe.title(it["title"]); fe.link(href=it["link"])
+        fe.description(it.get("summary") or it["title"])
+    fg.rss_file(path)
 
 # ---------------- 主程式 ----------------
 if __name__ == "__main__":
@@ -429,38 +447,31 @@ if __name__ == "__main__":
     urls_crawl = crawl_site(seeds=seed_pages, max_pages=30)
     print(f"[INFO] crawl urls: {len(urls_crawl)}", file=sys.stderr)
 
-    # 合併去重
     hint_map = dict(url_to_hint)
     seen, merged = set(), []
     
-    # 優化順序：Entry (最新) > Crawl > Sitemap
     for u in urls_b + urls_crawl + urls_a:
         u_clean = u.rstrip("/")
         if u_clean not in seen and looks_like_article_url(u_clean):
             seen.add(u_clean); merged.append(u_clean)
 
-    # 🔥 關鍵：限制處理數量 (350)，防止 Timeout
     LIMIT_PROCESS = 350
     if len(merged) > LIMIT_PROCESS:
         print(f"[INFO] Capping items to {LIMIT_PROCESS}...", file=sys.stderr)
         merged = merged[:LIMIT_PROCESS]
 
     articles = []
-    seen_ids = set() # 用 ID 去重
+    seen_ids = set()
     
     print(f"[INFO] Fetching {len(merged)} items...", file=sys.stderr)
     for i, u in enumerate(merged):
         if i % 50 == 0: print(f"[INFO] Processing {i}/{len(merged)}...", file=sys.stderr)
         try:
             html_text = fetch(u).text
-            # Hint 優先用 map 裡的，否則 fallback 到 url
             hint = hint_map.get(u)
             item = make_item(u, html_text, hint_section=hint)
             
-            # 雙重保險去重 (用 canonical 之後的 ID)
             if item["id"] in seen_ids: continue
-            
-            # 再檢查一次 title，如果沒有 title 可能是垃圾頁
             if not item["title"]: continue
             
             seen_ids.add(item["id"])
@@ -469,7 +480,6 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
 
-    # Google News 補位
     if len(articles) < MAX_ITEMS // 2:
         print("[INFO] few items; fallback Google News", file=sys.stderr)
         urls_gn = collect_from_google_news()
@@ -481,7 +491,6 @@ if __name__ == "__main__":
                 item = make_item(u, html_text)
                 if item["id"] in seen_ids: continue
                 if not item["title"]: continue
-                
                 seen_ids.add(item["id"])
                 articles.append(item)
                 gn_count += 1
@@ -497,6 +506,7 @@ if __name__ == "__main__":
     articles.sort(key=key_dt, reverse=True)
     latest = articles[:MAX_ITEMS]
     
+    # 呢度終於唔會 Error 啦！
     json_out(latest, "seven_en.json")
     rss_out(latest, "seven_en.xml")
     print(f"[DONE] output {len(latest)} items", file=sys.stderr)
