@@ -12,6 +12,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # ✅ 關鍵 1：防止跑到一半被殺死
     permissions:
       contents: write
     env:
@@ -30,7 +31,6 @@ jobs:
           git config user.name "news-bot"
           git config user.email "news-bot@users.noreply.github.com"
 
-      # ✅ 先與遠端同步，確保工作樹乾淨
       - name: Rebase onto latest main
         run: |
           git fetch origin main
@@ -71,6 +71,7 @@ jobs:
             echo "No changes."
           fi
 
+      # ✅ 關鍵 2：改用 -Xtheirs 強制覆蓋，解決 Merge Conflict
       - name: Push with retry
         run: |
           if [[ -n "$(git log origin/main..HEAD)" ]]; then
@@ -80,7 +81,8 @@ jobs:
                 exit 0
               fi
               echo "Push failed, retrying (attempt $((n+1))/3)…"
-              git pull --rebase origin main || true
+              # 這裡的意思是：如果有衝突，優先使用「機械人剛剛生成」的版本
+              git pull --rebase -Xtheirs origin main || true
               n=$((n+1))
               sleep 3
             done
@@ -90,7 +92,6 @@ jobs:
             echo "Nothing to push."
           fi
 
-# ───────── Push 完立即清 CDN，同步預熱 jsDelivr ─────────
       - name: Purge jsDelivr cache
         if: ${{ always() }}
         shell: bash
