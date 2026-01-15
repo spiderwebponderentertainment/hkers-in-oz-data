@@ -10,7 +10,6 @@ from xml.etree import ElementTree as ET
 from zoneinfo import ZoneInfo
 
 # ---------------- 基本設定 ----------------
-# 🔥 [修正重點] 偽裝成 Chrome 瀏覽器，防止 403 Forbidden
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
@@ -25,6 +24,23 @@ FETCH_SLEEP = 0.5
 SEVEN_HOST = "7news.com.au"
 ROBOTS_URL = "https://7news.com.au/robots.txt"
 SYD = ZoneInfo("Australia/Sydney")
+
+# 🔥 [新功能] 標題黑名單 (Title Blacklist)
+# 凡是標題包含這些字眼 (不分大細寫)，一律丟棄
+BLOCKED_TITLES = (
+    "About Us",
+    "Download The 7NEWS app today",
+    "Editorial Policy",
+    "Sponsored Content",
+    "Newsletters",
+    "Contact Us",
+    "Terms & Conditions",
+    "Privacy Policy",
+    "Code of Conduct",
+    "Advertise with us",
+    "FAQs",
+    "7plus"
+)
 
 # 入口
 ENTRY_BASES = [
@@ -115,13 +131,13 @@ def canonicalize_link(url: str, html_text: str | None = None) -> str:
     except:
         return url
 
-# 🔥 加強版黑名單 (已加入 support, 7you 等)
+# 🔥 URL 黑名單 (已加入 /world/world 防止 404 warning)
 NON_ARTICLE_SEGMENTS = (
     "/video/", "/watch/", "/weather/", "/privacy", "/terms", "/contact", 
     "/coupons/", "/competitions/", "/sunrise/", "/the-morning-show/", 
     "/spotlight/", "/sitemap", "/tag/", "/category/", "/live/", 
     "/profile/", "/login", "/register", "/search", "/authors/",
-    "support.7news", "/7you", "/fixtures"
+    "support.7news", "/7you", "/fixtures", "/world/world"
 )
 MEDIA_EXTS = (".mp3",".mp4",".m4a",".jpg",".jpeg",".png",".gif",".pdf",".webp",".svg",".webm",".m3u8",".js",".css",".json")
 
@@ -406,7 +422,7 @@ def collect_from_google_news() -> list[str]:
         if u not in seen: seen.add(u); uniq.append(u)
     return uniq
 
-# ---------------- 輸出 (上次漏左呢Part!!) ----------------
+# ---------------- 輸出 ----------------
 def json_out(items, path):
     now_utc = ensure_utc(datetime.now(timezone.utc))
     payload = {
@@ -474,6 +490,12 @@ if __name__ == "__main__":
             if item["id"] in seen_ids: continue
             if not item["title"]: continue
             
+            # 🔥 [標題過濾] 凡是標題含有黑名單字眼，即刻 Skip
+            title_lower = item["title"].lower()
+            if any(bad_word.lower() in title_lower for bad_word in BLOCKED_TITLES):
+                # print(f"[INFO] Skipped blocked title: {item['title']}", file=sys.stderr)
+                continue
+
             seen_ids.add(item["id"])
             articles.append(item)
             time.sleep(FETCH_SLEEP)
@@ -489,8 +511,15 @@ if __name__ == "__main__":
             try:
                 html_text = fetch(u).text
                 item = make_item(u, html_text)
+                
                 if item["id"] in seen_ids: continue
                 if not item["title"]: continue
+                
+                # 🔥 [標題過濾] 同樣適用於 Google News 補位
+                title_lower = item["title"].lower()
+                if any(bad_word.lower() in title_lower for bad_word in BLOCKED_TITLES):
+                    continue
+
                 seen_ids.add(item["id"])
                 articles.append(item)
                 gn_count += 1
@@ -506,7 +535,6 @@ if __name__ == "__main__":
     articles.sort(key=key_dt, reverse=True)
     latest = articles[:MAX_ITEMS]
     
-    # 呢度終於唔會 Error 啦！
     json_out(latest, "seven_en.json")
     rss_out(latest, "seven_en.xml")
     print(f"[DONE] output {len(latest)} items", file=sys.stderr)
