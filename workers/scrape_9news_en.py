@@ -10,7 +10,6 @@ from bs4 import BeautifulSoup
 from xml.etree import ElementTree as ET
 
 # ---------------- 基本設定 ----------------
-# 偽裝 User-Agent
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
@@ -18,8 +17,8 @@ HEADERS = {
 
 TIMEOUT = 15
 MAX_ITEMS = 200
-FETCH_SLEEP = 0.2  # 9News 網站反應較快，可稍快
-GLOBAL_DEADLINE_SECS = 10 * 60  # 10分鐘大限
+FETCH_SLEEP = 0.2
+GLOBAL_DEADLINE_SECS = 10 * 60
 
 NINE_HOST = "www.9news.com.au"
 ROBOTS_URL = "https://www.9news.com.au/robots.txt"
@@ -33,7 +32,7 @@ BLOCKED_TITLES = (
     "Coupons", "Meet the team"
 )
 
-# 網域/路徑黑名單 (過濾垃圾 Link)
+# 網域/路徑黑名單
 BLOCKED_DOMAINS = (
     "9now.com.au", "stream.9now.com.au", "login.nine.com.au", 
     "help.nine.com.au", "schema.org", "w3.org", "facebook.com", 
@@ -60,9 +59,23 @@ GN_URL = (
     "&hl=en-AU&gl=AU&ceid=AU:en"
 )
 
-# ---------------- 小工具 ----------------
+# ---------------- 小工具 (已升級 Clean 功能) ----------------
 def iso_now(): return datetime.now(timezone.utc).isoformat()
-def clean(s: str) -> str: return re.sub(r"\s+", " ", (s or "")).strip()
+
+def clean(s: str) -> str:
+    """
+    清洗字串：
+    1. Unescape HTML entities (e.g. &nbsp; -> space)
+    2. Remove HTML tags (e.g. <p>, <div>)
+    3. Strip extra whitespace
+    """
+    if not s: return ""
+    # 1. 解碼
+    s = html.unescape(s)
+    # 2. 移除 HTML Tags <...>
+    s = re.sub(r'<[^>]+>', '', s)
+    # 3. 移除多餘空格
+    return re.sub(r"\s+", " ", s).strip()
 
 def normalize_date(raw: str | None) -> str | None:
     if not raw: return None
@@ -116,7 +129,6 @@ def sanitize_url(u: str, base: str) -> str | None:
     if u.startswith("//"): u = "https:" + u
     if u.startswith("/"): u = urljoin(base, u)
     
-    # 移除 fragment (#) 和 query (?)，新聞通常唔需要 query
     u = u.split("#",1)[0].split("?",1)[0]
     u = u.rstrip("/")
     
@@ -124,17 +136,14 @@ def sanitize_url(u: str, base: str) -> str | None:
         p = urlparse(u)
         if p.scheme not in ("http", "https"): return None
         
-        # 網域過濾
         netloc = p.netloc.lower()
         if "9news.com.au" not in netloc: return None
         if any(bad in netloc for bad in BLOCKED_DOMAINS): return None
         
-        # 路徑過濾
         path = p.path.lower()
         if any(path.endswith(ext) for ext in MEDIA_EXTS): return None
         if any(seg in path for seg in NON_ARTICLE_SEGMENTS): return None
         
-        # 9News 文章通常至少有 2 層 (section/slug)
         parts = [x for x in path.strip("/").split("/") if x]
         if len(parts) < 2: return None
         
@@ -143,7 +152,6 @@ def sanitize_url(u: str, base: str) -> str | None:
         return None
 
 def canonicalize_link(url: str, html_text: str | None = None) -> str:
-    # [Fix] 移除了內部的 import urlparse，避免 UnboundLocalError
     if html_text:
         try:
             soup = BeautifulSoup(html_text, "html.parser")
@@ -151,7 +159,6 @@ def canonicalize_link(url: str, html_text: str | None = None) -> str:
             if link_tag and link_tag.get("href"):
                 c_url = link_tag["href"].strip()
                 if c_url.startswith("//"): c_url = "https:" + c_url
-                # 只信賴 9news 站內的 canonical
                 if "9news.com.au" in urlparse(c_url).netloc.lower():
                     url = c_url
         except: pass
@@ -248,8 +255,6 @@ def extract_meta_from_html(html_text: str):
 
 def make_item(url: str, html_text: str, hint_section: str | None = None):
     link_final = canonicalize_link(url, html_text)
-    
-    # 雙重檢查 domain
     if "9news.com.au" not in urlparse(link_final).netloc.lower(): return None
 
     section = category_from_url(link_final) or hint_section
@@ -331,7 +336,6 @@ def crawl_site(seeds: list[str], max_pages: int = 30) -> list[str]:
         for a in soup.find_all("a", href=True):
             u = sanitize_url(a["href"], url)
             if u and u not in seen_pages:
-                # 簡單限制爬蟲深度：只爬首頁和第一層 section
                 if u in ENTRY_BASES or (category_from_url(u) and len(urlparse(u).path.split('/')) < 4):
                     seen_pages.add(u); q.append(u)
                     
@@ -461,20 +465,17 @@ if __name__ == "__main__":
     urls_b = list(url_to_hint.keys())
     print(f"[INFO] entry page urls: {len(urls_b)}", file=sys.stderr)
 
-    # 這裡 max_pages 設為 30 已經非常足夠
     urls_crawl = crawl_site(seeds=seed_pages, max_pages=30)
     print(f"[INFO] crawl urls: {len(urls_crawl)}", file=sys.stderr)
 
     hint_map = dict(url_to_hint)
     seen, merged = set(), []
     
-    # 優化順序
     for u in urls_b + urls_crawl + urls_a:
         u_clean = u.rstrip("/")
         if u_clean not in seen and sanitize_url(u_clean, u_clean):
             seen.add(u_clean); merged.append(u_clean)
 
-    # 🔥 350 Cap，防止 Timeout
     LIMIT_PROCESS = 350
     if len(merged) > LIMIT_PROCESS:
         print(f"[INFO] Capping items to {LIMIT_PROCESS}...", file=sys.stderr)
@@ -500,7 +501,6 @@ if __name__ == "__main__":
             if not item or item["id"] in seen_ids: continue
             if not item["title"]: continue
 
-            # 標題過濾
             title_lower = item["title"].lower()
             if any(bad.lower() in title_lower for bad in BLOCKED_TITLES): continue
 
@@ -510,7 +510,6 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"[WARN] fetch article fail {u}: {e}", file=sys.stderr)
 
-    # GN 補位
     if len(articles) < MAX_ITEMS // 2:
         print("[INFO] few items; fallback Google News", file=sys.stderr)
         urls_gn = collect_from_google_news()
