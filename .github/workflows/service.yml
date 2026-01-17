@@ -2,7 +2,7 @@ name: Sync Google Sheet to JSON (push main)
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 * * * *"   # every hour
   workflow_dispatch:
 
 permissions:
@@ -12,11 +12,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SHEET_CSV_URL: "https://docs.google.com/spreadsheets/d/1kHUqAVX7t_HJ4RbKsvbAryeFc3d9XWj_Zw7iU8h4Jfw/export?format=csv&gid=87935078"
+      # ✅ 用 export CSV，唔好用 /edit URL
+      SHEET_URL: "https://docs.google.com/spreadsheets/d/1kHUqAVX7t_HJ4RbKsvbAryeFc3d9XWj_Zw7iU8h4Jfw/export?format=csv&gid=87935078"
       OUT_JSON: "services.json"
 
     steps:
-      - name: Checkout repo (main)
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
           ref: main
@@ -35,84 +36,64 @@ jobs:
       - name: Fetch Google Sheet CSV
         run: |
           set -e
-          CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$SHEET_CSV_URL")
+          echo "→ Download: $SHEET_URL"
+          CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$SHEET_URL")
+          echo "HTTP_STATUS=$CODE"
           if [ "$CODE" -ne 200 ]; then
-            echo "Download failed ($CODE)" >&2
+            echo "Download failed ($CODE) — first 500 bytes:" >&2
             head -c 500 sheet.csv >&2 || true
             exit 1
           fi
-          wc -l sheet.csv || true
+          echo "---- head (first 2 lines) ----"
           head -n 2 sheet.csv || true
 
-      - name: Convert CSV to JSON (for App)
+      - name: Convert CSV to JSON
         run: |
           python - <<'PY'
-          import pandas as pd, json, sys
+          import json
+          import pandas as pd
 
           df = pd.read_csv("sheet.csv", dtype=str, keep_default_na=False, encoding="utf-8")
 
-          df.columns = [c.replace("\u00A0", " ").strip() for c in df.columns]
-
-          required = [
+          # 你而家 services sheet header（你貼過嗰套）
+          expected = [
             "itemId","nameZh","nameEn","categoryId","states","phone","website","actionType",
             "descZh","descEn","rank","enabled","hoursZh","hoursEn"
           ]
-          missing = [c for c in required if c not in df.columns]
+
+          # 嚴格模式：缺欄就直接 fail，避免生成怪檔
+          missing = [c for c in expected if c not in df.columns]
           if missing:
-            print("Missing columns:", missing, file=sys.stderr)
-            sys.exit(1)
+            raise SystemExit(f"Missing columns in sheet: {missing}. Got columns: {list(df.columns)}")
 
-          def clean(v):
-            s = str(v).replace("\u00A0"," ").strip()
-            return s if s else None
+          df = df[expected].copy()
 
-          def split_states(v):
-            s = clean(v)
-            if not s: 
-              return []
-            s = s.replace("；",";").replace("，",",")
-            for sp in ["|","/","、","／"]:
-              s = s.replace(sp, ",")
-            parts = []
-            for chunk in s.split(","):
-              chunk = chunk.strip()
-              if chunk:
-                parts.append(chunk.upper())
-            return parts
+          # normalize boolean/rank
+          def norm_enabled(v):
+            s = (v or "").strip().lower()
+            return s in ("true","1","yes","y","是","有")
+
+          def norm_rank(v):
+            s = (v or "").strip()
+            try:
+              return int(float(s)) if s else None
+            except:
+              return None
 
           out = []
           for _, r in df.iterrows():
-            if not (clean(r["nameZh"]) or clean(r["nameEn"])):
-              continue
+            item = {k: (r[k].strip() if isinstance(r[k], str) else r[k]) for k in expected}
 
-            rank_raw = clean(r["rank"])
-            try:
-              rank_val = int(rank_raw) if rank_raw is not None else None
-            except Exception:
-              rank_val = None
+            item["enabled"] = norm_enabled(item.get("enabled"))
+            item["rank"] = norm_rank(item.get("rank"))
 
-            enabled_raw = (clean(r["enabled"]) or "").lower()
-            enabled_val = enabled_raw in ("1","true","yes","y")
+            # states 保留你原本格式（CSV 係 "NSW, VIC, ..."）
+            # 如你想 App 直接用 array，可以喺呢度 split
+            # item["states"] = [x.strip() for x in (item["states"] or "").split(",") if x.strip()]
 
-            item = {
-              "itemId": clean(r["itemId"]),
-              "nameZh": clean(r["nameZh"]),
-              "nameEn": clean(r["nameEn"]),
-              "categoryId": clean(r["categoryId"]),
-              "states": split_states(r["states"]),
-              "phone": clean(r["phone"]),
-              "website": clean(r["website"]),
-              "actionType": clean(r["actionType"]),
-              "descZh": clean(r["descZh"]),
-              "descEn": clean(r["descEn"]),
-              "rank": rank_val,
-              "enabled": enabled_val,
-              "hoursZh": clean(r["hoursZh"]),
-              "hoursEn": clean(r["hoursEn"]),
-            }
             out.append(item)
 
-          with open("services.json","w",encoding="utf-8") as f:
+          with open("services.json", "w", encoding="utf-8") as f:
             json.dump(out, f, ensure_ascii=False, indent=2)
 
           print("Wrote services.json items =", len(out))
@@ -121,14 +102,17 @@ jobs:
       - name: Commit & push to main (only if changed)
         run: |
           set -e
-          if git diff --quiet -- services.json; then
-            echo "No changes in services.json. Skip commit."
-            exit 0
-          fi
-
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          # 只 add 你輸出檔（避免亂 commit）
           git add services.json
+
+          # 如果冇變更，就退出
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
           git commit -m "chore: sync services.json from Google Sheet"
-          git push origin HEAD:main
+          git push origin main
