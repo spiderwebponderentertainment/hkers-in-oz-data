@@ -1,4 +1,4 @@
-name: Sync Google Sheet to TSV
+name: Sync Google Sheet to JSON (push main)
 
 on:
   schedule:
@@ -7,25 +7,25 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SHEET_URL: "https://docs.google.com/spreadsheets/d/1kHUqAVX7t_HJ4RbKsvbAryeFc3d9XWj_Zw7iU8h4Jfw/edit?gid=87935078#gid=87935078"
-      OUT_TSV: "services.tsv"
+      SHEET_CSV_URL: "https://docs.google.com/spreadsheets/d/1kHUqAVX7t_HJ4RbKsvbAryeFc3d9XWj_Zw7iU8h4Jfw/export?format=csv&gid=87935078"
+      OUT_JSON: "services.json"
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repo (main)
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install Python dependencies
         run: |
@@ -35,50 +35,100 @@ jobs:
       - name: Fetch Google Sheet CSV
         run: |
           set -e
-          echo "→ Try: $SHEET_URL"
-          CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$SHEET_URL")
-          echo "HTTP_STATUS=$CODE"
+          CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$SHEET_CSV_URL")
           if [ "$CODE" -ne 200 ]; then
-            echo "Download failed ($CODE) — first 500 bytes of response:" >&2
+            echo "Download failed ($CODE)" >&2
             head -c 500 sheet.csv >&2 || true
             exit 1
           fi
           wc -l sheet.csv || true
-          echo "---- head ----"; head -n 2 sheet.csv || true
+          head -n 2 sheet.csv || true
 
-      - name: Convert CSV to TSV (preserve column order)
+      - name: Convert CSV to JSON (for App)
         run: |
           python - <<'PY'
-          import pandas as pd
+          import pandas as pd, json, sys
 
-          df = pd.read_csv('sheet.csv', dtype=str, keep_default_na=False, encoding='utf-8')
+          df = pd.read_csv("sheet.csv", dtype=str, keep_default_na=False, encoding="utf-8")
 
-          # 如果你想「固定欄位順序」，就喺呢度寫死欄位名（同你 sheet header 一致）
-          expected = [
+          df.columns = [c.replace("\u00A0", " ").strip() for c in df.columns]
+
+          required = [
             "itemId","nameZh","nameEn","categoryId","states","phone","website","actionType",
             "descZh","descEn","rank","enabled","hoursZh","hoursEn"
           ]
-          # 只取存在嘅欄位，避免報錯；亦可以改成嚴格模式：缺欄就 exit 1
-          cols = [c for c in expected if c in df.columns]
-          df = df[cols]
+          missing = [c for c in required if c not in df.columns]
+          if missing:
+            print("Missing columns:", missing, file=sys.stderr)
+            sys.exit(1)
 
-          # 輸出 TSV
-          out = "services.tsv"
-          df.to_csv(out, sep="\t", index=False, encoding="utf-8")
-          print("Wrote", out, "rows=", len(df), "cols=", len(df.columns))
+          def clean(v):
+            s = str(v).replace("\u00A0"," ").strip()
+            return s if s else None
+
+          def split_states(v):
+            s = clean(v)
+            if not s: 
+              return []
+            s = s.replace("；",";").replace("，",",")
+            for sp in ["|","/","、","／"]:
+              s = s.replace(sp, ",")
+            parts = []
+            for chunk in s.split(","):
+              chunk = chunk.strip()
+              if chunk:
+                parts.append(chunk.upper())
+            return parts
+
+          out = []
+          for _, r in df.iterrows():
+            if not (clean(r["nameZh"]) or clean(r["nameEn"])):
+              continue
+
+            rank_raw = clean(r["rank"])
+            try:
+              rank_val = int(rank_raw) if rank_raw is not None else None
+            except Exception:
+              rank_val = None
+
+            enabled_raw = (clean(r["enabled"]) or "").lower()
+            enabled_val = enabled_raw in ("1","true","yes","y")
+
+            item = {
+              "itemId": clean(r["itemId"]),
+              "nameZh": clean(r["nameZh"]),
+              "nameEn": clean(r["nameEn"]),
+              "categoryId": clean(r["categoryId"]),
+              "states": split_states(r["states"]),
+              "phone": clean(r["phone"]),
+              "website": clean(r["website"]),
+              "actionType": clean(r["actionType"]),
+              "descZh": clean(r["descZh"]),
+              "descEn": clean(r["descEn"]),
+              "rank": rank_val,
+              "enabled": enabled_val,
+              "hoursZh": clean(r["hoursZh"]),
+              "hoursEn": clean(r["hoursEn"]),
+            }
+            out.append(item)
+
+          with open("services.json","w",encoding="utf-8") as f:
+            json.dump(out, f, ensure_ascii=False, indent=2)
+
+          print("Wrote services.json items =", len(out))
           PY
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: "chore: sync services.tsv from Google Sheet"
-          title: "chore: sync services.tsv from Google Sheet"
-          body: |
-            Auto-generated by workflow.
-            - Source: Google Sheet (published CSV)
-            - Output: `services.tsv`
-          branch: automation/sheet-sync
-          token: ${{ secrets.GITHUB_TOKEN }}
-          delete-branch: true
-          add-paths: |
-            services.tsv
+      - name: Commit & push to main (only if changed)
+        run: |
+          set -e
+          if git diff --quiet -- services.json; then
+            echo "No changes in services.json. Skip commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add services.json
+          git commit -m "chore: sync services.json from Google Sheet"
+          git push origin HEAD:main
