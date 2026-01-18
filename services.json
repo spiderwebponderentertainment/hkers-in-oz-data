@@ -2368,22 +2368,6 @@
     "hoursEn": "Business hours (see website)"
   },
   {
-    "itemId": "legal-legal-aid-qld-indigenous",
-    "nameZh": "Legal Aid QLD（原住民專線）",
-    "nameEn": "Legal Aid Queensland (Indigenous Line)",
-    "categoryId": "legal",
-    "states": "QLD",
-    "phone": "1300 650 143",
-    "website": "https://www.legalaid.qld.gov.au",
-    "actionType": "phone",
-    "descZh": "昆州原住民法律建議專線（時段制）。",
-    "descEn": "Indigenous legal advice line in Queensland (hours vary).",
-    "rank": 153,
-    "enabled": true,
-    "hoursZh": "辦公時間（以官網為準）",
-    "hoursEn": "Business hours (see website)"
-  },
-  {
     "itemId": "legal-wa-yarning",
     "nameZh": "Legal Aid WA（Legal Yarning）",
     "nameEn": "Legal Aid WA (Legal Yarning Service)",
@@ -3038,22 +3022,6 @@
     "enabled": true,
     "hoursZh": "辦公時間（以官網為準）",
     "hoursEn": "Business hours (see website)"
-  },
-  {
-    "itemId": "support-thirrili",
-    "nameZh": "原住民喪親/創傷支援",
-    "nameEn": "Thirrili National Indigenous Postvention Service",
-    "categoryId": "support",
-    "states": "NSW, VIC, QLD, SA, NT, WA, TAS, ACT",
-    "phone": "1800 805 801",
-    "website": "https://thirrili.com.au",
-    "actionType": "phone",
-    "descZh": "為 Aboriginal and Torres Strait Islander 社群提供喪親及創傷支援。",
-    "descEn": "Postvention support for Aboriginal and Torres Strait Islander communities.",
-    "rank": 195,
-    "enabled": true,
-    "hoursZh": "24/7",
-    "hoursEn": "24/7"
   },
   {
     "itemId": "support-gambling-helpline",
