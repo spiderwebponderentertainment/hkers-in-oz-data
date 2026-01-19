@@ -15478,6 +15478,16 @@
       "Brisbane"
     ],
     "email": null,
+    "hkFeaturesEn": [
+      "HK-style dishes"
+    ],
+    "hkFeaturesZh": [
+      "香港菜式"
+    ],
+    "hkOwnerStatusEn": "Yes",
+    "hkOwnerStatusZh": "是",
+    "lat": -27.5009627,
+    "lng": 153.0766572,
     "nameEn": "Lotus Haven",
     "nameZh": "蓮香園",
     "phone": null,
@@ -15492,5 +15502,33 @@
       "香港餐廳"
     ],
     "website": null
+  },
+  {
+    "address": null,
+    "branchName": null,
+    "category": "organisation",
+    "chainId": null,
+    "cities": [
+      "Brisbane"
+    ],
+    "email": "HKCUAQ@gmail.com",
+    "hkFeaturesEn": [
+      "HKers Activity"
+    ],
+    "hkFeaturesZh": [
+      "香港人活動"
+    ],
+    "hkOwnerStatusEn": "Yes",
+    "hkOwnerStatusZh": "是",
+    "nameEn": "Hong Kong Culture and Unity Association QLD Inc",
+    "nameZh": "香港文化聯會",
+    "phone": null,
+    "states": [
+      "QLD"
+    ],
+    "suburb": null,
+    "tagsEn": [],
+    "tagsZh": [],
+    "website": "https://hkcua.org.au/"
   }
 ]
