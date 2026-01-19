@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   build:
@@ -20,11 +19,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install Python dependencies
         run: |
@@ -52,7 +52,6 @@ jobs:
           import pandas as pd, json, re, sys
 
           def norm_header(h: str) -> str:
-              # 將 NBSP 變普通空格、trim、轉小寫
               return str(h).replace('\u00A0',' ').strip().lower()
 
           def norm_str(v):
@@ -89,7 +88,6 @@ jobs:
           except Exception as e:
               print('CSV read error:', e); sys.exit(1)
 
-          # 建立「正規化後表頭」→「原表頭」對照
           colmap = {norm_header(c): c for c in df.columns}
           print("== Debug: normalized headers ==")
           for k,v in colmap.items():
@@ -100,11 +98,9 @@ jobs:
                   key = norm_header(cand)
                   if key in colmap:
                       return df[colmap[key]]
-              # 找唔到就回一列空白，並打印提示
               print("[WARN] missing column among:", cands, file=sys.stderr)
               return pd.Series(['']*len(df))
 
-          # 基本欄位
           col_name_zh = get_col('namezh','name_zh','中文名')
           col_name_en = get_col('nameen','name_en','英文名')
           col_tags_zh = get_col('tagszh','tags_zh','標籤_中')
@@ -123,7 +119,6 @@ jobs:
           col_lat = get_col('lat')
           col_lng = get_col('lng')
 
-          # sponsor / ad
           col_isSponsored = get_col('issponsored','is_sponsored')
           col_sponsorTier = get_col('sponsortier','sponsor_tier')
           col_sponsorStart= get_col('sponsorstart','sponsor_start')
@@ -131,17 +126,16 @@ jobs:
           col_adLink      = get_col('adlink','ad_link')
           col_adNote      = get_col('adnote','ad_note')
 
-          # 🔥 HK owner / features（加入備選名、大小寫兼容）
           col_hkOwnerZh = get_col('hkownerstatuszh','hk_owner_status_zh','ownerstatuszh')
           col_hkOwnerEn = get_col('hkownerstatusen','hk_owner_status_en','ownerstatusen')
           col_hkFeatZh  = get_col('hkfeatureszh','hk_features_zh','hkfeaturezh','hk_feature_zh')
-          col_hkFeatEn  = get_col('hkfeaturesen','hk_features_en','hkfeatureen','hk_feature_en','hkfeaturesen ')  # 尾空格也兼容
+          col_hkFeatEn  = get_col('hkfeaturesen','hk_features_en','hkfeatureen','hk_feature_en','hkfeaturesen ')
 
           out = []
           for i in range(len(df)):
               nameZh = norm_str(col_name_zh.iloc[i])
               nameEn = norm_str(col_name_en.iloc[i])
-              if not (nameZh or nameEn): 
+              if not (nameZh or nameEn):
                   continue
 
               item = {
@@ -159,21 +153,19 @@ jobs:
                 'branchName' : norm_str(col_branchName.iloc[i]),
               }
 
-              # states / cities
               item['states'] = norm_states(col_states.iloc[i])
               cities = split_list(col_cities.iloc[i])
               if cities: item['cities'] = cities
 
-              # lat/lng
               lat = norm_str(col_lat.iloc[i]); lng = norm_str(col_lng.iloc[i])
               if lat or lng:
                   item['lat'] = to_float(lat)
                   item['lng'] = to_float(lng)
 
-              # sponsor
               isSponsored = norm_str(col_isSponsored.iloc[i])
               if isSponsored is not None:
                   item['isSponsored'] = isSponsored.lower() in ('1','true','yes','y','是','有')
+
               for (k, series) in [
                   ('sponsorTier',  col_sponsorTier),
                   ('sponsorStart', col_sponsorStart),
@@ -185,7 +177,6 @@ jobs:
                   if k == 'adLink': v = norm_url(v)
                   if v is not None: item[k] = v
 
-              # ✅ 香港相關（只在有值時輸出）
               hkOwnerZh = norm_str(col_hkOwnerZh.iloc[i])
               hkOwnerEn = norm_str(col_hkOwnerEn.iloc[i])
               if hkOwnerZh: item['hkOwnerStatusZh'] = hkOwnerZh
@@ -201,7 +192,6 @@ jobs:
               json.dump(out, f, ensure_ascii=False, indent=2, sort_keys=True)
 
           print('Wrote businesses.json with', len(out), 'items')
-          # 額外：數下幾多項有 hkFeaturesEn
           cnt_en = sum(1 for it in out if 'hkFeaturesEn' in it)
           print('Items with hkFeaturesEn:', cnt_en)
           PY
@@ -220,17 +210,20 @@ jobs:
           print("items with hkFeaturesEn:", len(have_en))
           PY
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: "chore: sync businesses.json from Google Sheet"
-          title: "chore: sync businesses.json from Google Sheet"
-          body: |
-            Auto-generated by **Sync Google Sheet to JSON** workflow.
-            - Source: Google Sheet (published CSV)
-            - Output: `businesses.json`
-          branch: automation/sheet-sync
-          token: ${{ secrets.GITHUB_TOKEN }}
-          delete-branch: true
-          add-paths: |
-            businesses.json
+      - name: Commit & push to main (only if changed)
+        run: |
+          set -e
+          if git diff --quiet -- businesses.json; then
+            echo "No changes in businesses.json — skip commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add businesses.json
+          git commit -m "chore: sync businesses.json from Google Sheet"
+
+          git pull --rebase origin main
+          git push origin HEAD:main
+
