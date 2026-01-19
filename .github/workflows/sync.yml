@@ -2,7 +2,7 @@ name: Sync Google Sheet to JSON
 
 on:
   schedule:
-    - cron: "0 * * * *"   # 每小時跑一次
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SHEET_URL: "https://docs.google.com/spreadsheets/d/1kHUqAVX7t_HJ4RbKsvbAryeFc3d9XWj_Zw7iU8h4Jfw/export?format=csv&gid=0"
+      SHEET_CSV: ".tmp/sheet.csv"
 
     steps:
       - name: Checkout repo
@@ -34,22 +35,25 @@ jobs:
       - name: Fetch Google Sheet CSV
         run: |
           set -e
+          mkdir -p .tmp
           echo "→ Try: $SHEET_URL"
-          CODE=$(curl -sSL -w "%{http_code}" -o sheet.csv "$SHEET_URL")
+          CODE=$(curl -sSL -w "%{http_code}" -o "$SHEET_CSV" "$SHEET_URL")
           echo "HTTP_STATUS=$CODE"
           if [ "$CODE" -ne 200 ]; then
             echo "Download failed ($CODE) — first 500 bytes of response:" >&2
-            head -c 500 sheet.csv >&2 || true
+            head -c 500 "$SHEET_CSV" >&2 || true
             exit 1
           fi
           echo "==== sheet.csv meta ===="
-          wc -l sheet.csv || true
-          echo "---- head ----"; head -n 2 sheet.csv || true
+          wc -l "$SHEET_CSV" || true
+          echo "---- head ----"; head -n 2 "$SHEET_CSV" || true
 
       - name: Convert CSV to JSON (with HK fields, robust headers)
         run: |
           python - <<'PY'
-          import pandas as pd, json, re, sys
+          import pandas as pd, json, re, sys, os
+
+          SHEET_CSV = os.environ.get("SHEET_CSV", ".tmp/sheet.csv")
 
           def norm_header(h: str) -> str:
               return str(h).replace('\u00A0',' ').strip().lower()
@@ -84,14 +88,11 @@ jobs:
               return s
 
           try:
-              df = pd.read_csv('sheet.csv', dtype=str, keep_default_na=False, encoding='utf-8')
+              df = pd.read_csv(SHEET_CSV, dtype=str, keep_default_na=False, encoding='utf-8')
           except Exception as e:
               print('CSV read error:', e); sys.exit(1)
 
           colmap = {norm_header(c): c for c in df.columns}
-          print("== Debug: normalized headers ==")
-          for k,v in colmap.items():
-              print(f"  {k!r}  <-  {v!r}")
 
           def get_col(*cands):
               for cand in cands:
@@ -192,22 +193,6 @@ jobs:
               json.dump(out, f, ensure_ascii=False, indent=2, sort_keys=True)
 
           print('Wrote businesses.json with', len(out), 'items')
-          cnt_en = sum(1 for it in out if 'hkFeaturesEn' in it)
-          print('Items with hkFeaturesEn:', cnt_en)
-          PY
-
-      - name: Validate output
-        run: |
-          echo "---- keys check (first 3 items) ----"
-          python - <<'PY'
-          import json
-          data = json.load(open('businesses.json'))
-          for i, it in enumerate(data[:3]):
-              print(i, sorted(it.keys()))
-          bad = [i for i,it in enumerate(data) if 'name' in it]
-          print("items with legacy 'name' key:", len(bad))
-          have_en = [i for i,it in enumerate(data) if 'hkFeaturesEn' in it]
-          print("items with hkFeaturesEn:", len(have_en))
           PY
 
       - name: Commit & push to main (only if changed)
@@ -223,6 +208,9 @@ jobs:
 
           git add businesses.json
           git commit -m "chore: sync businesses.json from Google Sheet"
+
+          git pull --rebase origin main
+          git push origin HEAD:main
 
           git pull --rebase origin main
           git push origin HEAD:main
