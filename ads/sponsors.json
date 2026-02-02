@@ -7,5 +7,25 @@
     "startDate": "2025-08-25",
     "endDate": "2026-03-01",
     "weight": 100
+  },
+   {
+    "id": "JANPOST",
+    "campaign": "JANSTREAMING",
+    "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/blob/main/ads/Jan%202026%20EDM-Chi.jpg",
+    "linkURL": "https://https://spiderwebponder.media/online-streaming-homepage",
+    "note": "JANSTREAMING",
+    "startDate": "2025-08-25",
+    "endDate": "2026-03-31",
+    "weight": 50
+  },
+  {
+    "id": "FEBPOST",
+    "campaign": "JANSTREAMING",
+    "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/blob/main/ads/FEB%202026%20EDM-07.jpg",
+    "linkURL": "https://https://spiderwebponder.media/online-streaming-homepage",
+    "note": "FEBSTREAMING",
+    "startDate": "2025-08-25",
+    "endDate": "2026-04-30",
+    "weight": 50
   }
 ]
