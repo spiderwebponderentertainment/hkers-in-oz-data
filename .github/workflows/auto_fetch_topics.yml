@@ -1,0 +1,41 @@
+name: Auto Fetch Pulse Topics
+
+# 定義幾時觸發呢個機械人
+on:
+  schedule:
+    - cron: '0 */4 * * *'  # 每 4 個鐘自動行一次
+  workflow_dispatch:       # 俾你可以喺 GitHub 網頁手動撳掣 Run
+
+# 俾權限個機械人可以改你個 Repo 嘅檔案
+permissions:
+  contents: write
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 下載最新代碼
+        uses: actions/checkout@v4
+
+      - name: 🐍 設定 Python 環境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 📦 安裝需要嘅套件
+        run: pip install requests
+
+      - name: 🚀 執行抓取程式 (✅ 已修正路徑)
+        run: python workers/fetch_pulse_topics.py 
+
+      - name: 💾 自動 Commit 同 Push 更新
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 將更新咗嘅 JSON 加入去
+          # (因為喺 root 行 Python，所以生出嚟嘅 JSON 會喺 root)
+          git add topic_london_eto.json topic_taipo_fire.json
+          
+          # 檢查有冇實質改動，有新新聞先會 Commit，無新新聞就乜都唔做
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 自動更新專題新聞 JSON" && git push)
