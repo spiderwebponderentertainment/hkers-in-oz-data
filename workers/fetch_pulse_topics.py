@@ -1,29 +1,36 @@
 import requests
-import xml.etree.ElementTree as ET
+import feedparser
 import json
 import sys
 import os
 import re
 import html
 from datetime import datetime, timezone
-from email.utils import parsedate_to_datetime
+import time
 
 # ---------------- 設定 ----------------
-# 追新聞的專題 RSS Feed 網址 (WordPress 預設結構)
+# 準備多條備用 Feed 路線，防止 WordPress 唔認得 /c/
 TOPICS = {
     "london_eto": {
-        "rss_url": "https://pulsehknews.com/c/londonetotrial/feed/",
+        "rss_urls": [
+            "https://pulsehknews.com/c/londonetotrial/feed/",
+            "https://pulsehknews.com/category/londonetotrial/feed/",
+            "https://pulsehknews.com/feed/?category_name=londonetotrial"
+        ],
         "output_file": "topic_london_eto.json",
         "display_name": "倫敦經貿辦案"
     },
     "taipo_fire": {
-        "rss_url": "https://pulsehknews.com/c/taipofire/feed/",
+        "rss_urls": [
+            "https://pulsehknews.com/c/taipofire/feed/",
+            "https://pulsehknews.com/category/taipofire/feed/",
+            "https://pulsehknews.com/feed/?category_name=taipofire"
+        ],
         "output_file": "topic_taipo_fire.json",
         "display_name": "宏福苑大火"
     }
 }
 
-# ✅ 偽裝成 Google 官方的 RSS 抓取機械人，令 Cloudflare 放行
 HEADERS = {
     "User-Agent": "FeedFetcher-Google; (+http://www.google.com/feedfetcher.html)",
     "Accept": "application/rss+xml, application/xml, text/xml"
@@ -31,68 +38,67 @@ HEADERS = {
 
 # ---------------- 工具函數 ----------------
 def clean_html(raw_html: str) -> str:
-    """清除 HTML 標籤並解碼 Entities"""
     if not raw_html:
         return ""
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return html.unescape(clean_text).strip()
 
-def fetch_rss_pages(base_rss_url: str) -> list:
-    """抓取 RSS Feed，並嘗試自動翻頁獲取舊文章"""
+def fetch_rss_pages(urls_to_try: list) -> list:
     all_items = []
-    page = 1
     
-    while True:
-        # WordPress RSS 分頁語法: ?paged=2
-        url = f"{base_rss_url}?paged={page}" if page > 1 else base_rss_url
-        print(f"  正在讀取 RSS 第 {page} 頁...")
-        
+    for url in urls_to_try:
+        print(f"  正在嘗試連線: {url}")
         try:
             r = requests.get(url, headers=HEADERS, timeout=15)
-            # 如果去到無文章嘅頁面，會回傳 404
             if r.status_code != 200:
-                break
+                print(f"    [失敗] 伺服器回傳 {r.status_code}")
+                continue
                 
-            # 解析 XML
-            root = ET.fromstring(r.text)
-            items = root.findall(".//item")
+            # 使用 feedparser 解析 (自動支援 RSS, Atom 等所有格式)
+            feed = feedparser.parse(r.text)
             
-            if not items:
-                break
+            if not feed.entries:
+                print(f"    [空檔案] 成功連線，但 XML 入面無文章。")
+                # 印出頭 200 個字俾我哋 Debug，睇下伺服器俾咗咩鬼嘢我哋
+                print(f"    偵錯資訊: {r.text[:200]}")
+                continue
                 
-            for item in items:
-                title = item.findtext("title") or ""
-                link = item.findtext("link") or ""
-                desc = item.findtext("description") or ""
-                pub_date_str = item.findtext("pubDate") or ""
+            print(f"    [成功] 喺呢條 Link 搵到 {len(feed.entries)} 篇文章！")
+            
+            for entry in feed.entries:
+                title = getattr(entry, "title", "")
+                link = getattr(entry, "link", "")
+                desc = getattr(entry, "summary", getattr(entry, "description", ""))
                 
-                # 將 RSS 的日期 (RFC 822) 轉為 ISO 8601 (UTC)
+                # 處理時間格式
                 try:
-                    dt = parsedate_to_datetime(pub_date_str)
-                    pub_date_iso = dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                    if hasattr(entry, "published_parsed") and entry.published_parsed:
+                        dt = datetime.fromtimestamp(time.mktime(entry.published_parsed), timezone.utc)
+                    else:
+                        dt = datetime.now(timezone.utc)
+                    pub_date_iso = dt.strftime("%Y-%m-%dT%H:%M:%SZ")
                 except:
                     pub_date_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
                 
                 all_items.append({
-                    "id": link,  # 使用網址作為唯一 ID
+                    "id": link,
                     "title": clean_html(title),
                     "link": link,
                     "summary": clean_html(desc),
                     "publishedAt": pub_date_iso,
-                    "source": "追新聞",
+                    "source": "追光者",
                     "sourceCategory": "專題報導"
                 })
-                
-            page += 1
+            
+            # 只要有一條 Link 成功攞到嘢，就收工，唔洗再試下一條備用 Link
+            break 
             
         except Exception as e:
-            print(f"    [警告] 讀取 RSS 時發生錯誤: {e}")
-            break
+            print(f"    [警告] 讀取時發生錯誤: {e}")
             
     return all_items
 
 def load_existing_json(file_path: str) -> list:
-    """讀取 Repo 內現有的 JSON，作為歷史資料庫"""
     if os.path.exists(file_path):
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -109,10 +115,13 @@ def main():
     for topic_key, config in TOPICS.items():
         print(f"\n[INFO] 開始處理專題: {config['display_name']}")
         try:
-            # 1. 抓取最新 RSS 新聞
-            new_items = fetch_rss_pages(config["rss_url"])
-            print(f"  成功從網站抓取了 {len(new_items)} 篇新聞")
+            # 1. 抓取最新 RSS 新聞 (會自動試 3 條 Link)
+            new_items = fetch_rss_pages(config["rss_urls"])
             
+            if not new_items:
+                print(f"  [放棄] 試盡所有 Link 都無文章。")
+                continue
+                
             # 2. 讀取舊有歷史新聞
             existing_items = load_existing_json(config["output_file"])
             print(f"  從本地資料庫載入 {len(existing_items)} 篇歷史紀錄")
