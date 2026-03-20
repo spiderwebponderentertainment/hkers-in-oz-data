@@ -27,8 +27,7 @@ jobs:
           python-version: '3.10'
 
       - name: 📦 安裝需要嘅套件
-        # ✅ 已轉用 curl_cffi，用嚟突破 Cloudflare 429 防火牆
-        run: pip install curl_cffi
+        run: pip install requests
 
       - name: 🚀 執行抓取程式
         run: python workers/fetch_pulse_topics.py 
