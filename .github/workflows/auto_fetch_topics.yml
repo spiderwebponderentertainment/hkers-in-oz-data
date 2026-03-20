@@ -27,7 +27,7 @@ jobs:
           python-version: '3.10'
 
       - name: 📦 安裝需要嘅套件
-        run: pip install requests feedparser
+        run: pip install requests
 
       - name: 🚀 執行抓取程式
         run: python workers/fetch_pulse_topics.py 
