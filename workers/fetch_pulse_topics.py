@@ -1,6 +1,4 @@
-import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+from curl_cffi import requests
 import json
 import sys
 import re
@@ -9,14 +7,6 @@ import html
 import time
 
 # ---------------- 設定 ----------------
-# ✅ 1. 偽裝成真人用嘅 Chrome 瀏覽器
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "application/json, text/plain, */*",
-    "Accept-Language": "zh-HK,zh-TW;q=0.9,zh;q=0.8,en;q=0.7",
-    "Referer": "https://pulsehknews.com/"
-}
-
 WP_API_BASE = "https://pulsehknews.com/wp-json/wp/v2"
 
 TOPICS = {
@@ -32,15 +22,6 @@ TOPICS = {
     }
 }
 
-# ✅ 2. 建立一個「識得自動重試」的 Session
-def get_session():
-    session = requests.Session()
-    # 如果撞到 429 (Too Many Requests) 或者 50X 錯誤，自動重試 5 次，每次等待時間加倍
-    retries = Retry(total=5, backoff_factor=2, status_forcelist=[429, 500, 502, 503, 504])
-    session.mount('https://', HTTPAdapter(max_retries=retries))
-    session.headers.update(HEADERS)
-    return session
-
 # ---------------- 工具函數 ----------------
 def clean_html(raw_html: str) -> str:
     if not raw_html:
@@ -51,7 +32,10 @@ def clean_html(raw_html: str) -> str:
 def fetch_category_id(session, slug: str) -> int:
     url = f"{WP_API_BASE}/categories?slug={slug}"
     r = session.get(url, timeout=15)
-    r.raise_for_status()
+    
+    if r.status_code != 200:
+        raise Exception(f"API 拒絕連線，Status Code: {r.status_code}")
+        
     data = r.json()
     if not data:
         raise ValueError(f"找不到 slug 為 '{slug}' 的分類！")
@@ -64,11 +48,20 @@ def fetch_all_posts_by_category(session, category_id: int) -> list:
         url = f"{WP_API_BASE}/posts?categories={category_id}&per_page=100&page={page}&_embed=1"
         print(f"  Fetching page {page} for category {category_id}...")
         
-        r = session.get(url, timeout=20)
-        if r.status_code == 400 and "rest_post_invalid_page_number" in r.text:
-            break
-        r.raise_for_status()
-        
+        # 加入重試機制
+        max_retries = 3
+        for attempt in range(max_retries):
+            r = session.get(url, timeout=20)
+            if r.status_code == 200:
+                break
+            elif r.status_code == 400 and "rest_post_invalid_page_number" in r.text:
+                return all_posts # 已經揭到最尾一頁
+            else:
+                print(f"    [警告] 頁面 {page} 讀取失敗 (Status {r.status_code})，準備重試...")
+                time.sleep(3)
+        else:
+            raise Exception(f"無法讀取第 {page} 頁，已放棄。")
+            
         posts = r.json()
         if not posts:
             break
@@ -80,8 +73,7 @@ def fetch_all_posts_by_category(session, category_id: int) -> list:
             break
             
         page += 1
-        # ✅ 3. 翻頁之間加少少 Delay，扮真人
-        time.sleep(1.5)
+        time.sleep(2) # 翻頁之間停 2 秒
         
     return all_posts
 
@@ -107,7 +99,9 @@ def process_post(post: dict, source_name: str) -> dict:
 # ---------------- 主程式 ----------------
 def main():
     now_utc = datetime.now(timezone.utc).isoformat()
-    session = get_session() # 啟動強效 Session
+    
+    # ✅ 關鍵：啟動完美偽裝 Chrome 120 的 Session
+    session = requests.Session(impersonate="chrome120")
     
     for topic_key, config in TOPICS.items():
         print(f"\n[INFO] 開始處理專題: {config['display_name']}")
@@ -115,7 +109,6 @@ def main():
             cat_id = fetch_category_id(session, config["slug"])
             print(f"  取得 Category ID: {cat_id}")
             
-            # 專題之間停多陣
             time.sleep(2)
             
             raw_posts = fetch_all_posts_by_category(session, cat_id)
@@ -139,7 +132,6 @@ def main():
         except Exception as e:
             print(f"[ERROR] 處理專題 {config['display_name']} 時發生錯誤: {e}", file=sys.stderr)
             
-        # 處理完一個專題，抖長啲時間先搞下一個
         time.sleep(3)
 
 if __name__ == "__main__":
