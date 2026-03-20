@@ -28,6 +28,7 @@ jobs:
 
       - name: 📦 安裝需要嘅套件
         run: pip install requests
+        run: pip install requests feedparser
 
       - name: 🚀 執行抓取程式
         run: python workers/fetch_pulse_topics.py 
