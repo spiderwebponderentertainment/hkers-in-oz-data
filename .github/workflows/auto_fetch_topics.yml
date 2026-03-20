@@ -10,7 +10,7 @@ on:
 permissions:
   contents: write
 
-# ✅ 新增呢段：主動升級去 Node.js 24，消除 Warning
+# 主動升級去 Node.js 24，消除 Warning
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -27,7 +27,8 @@ jobs:
           python-version: '3.10'
 
       - name: 📦 安裝需要嘅套件
-        run: pip install requests
+        # ✅ 已轉用 curl_cffi，用嚟突破 Cloudflare 429 防火牆
+        run: pip install curl_cffi
 
       - name: 🚀 執行抓取程式
         run: python workers/fetch_pulse_topics.py 
@@ -37,8 +38,9 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 將更新咗嘅 JSON 加入去
-          git add topic_london_eto.json topic_taipo_fire.json
+          # ✅ 防爆機制：檢查檔案係咪真係成功生到出嚟，有先至 Add，無就略過
+          if [ -f "topic_london_eto.json" ]; then git add topic_london_eto.json; fi
+          if [ -f "topic_taipo_fire.json" ]; then git add topic_taipo_fire.json; fi
           
           # 檢查有冇實質改動，有新新聞先會 Commit，無新新聞就乜都唔做
           git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 自動更新專題新聞 JSON" && git push)
