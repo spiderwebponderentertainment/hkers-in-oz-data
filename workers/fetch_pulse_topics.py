@@ -1,74 +1,101 @@
-import requests
+import cloudscraper
+from bs4 import BeautifulSoup
 import json
 import sys
 import os
-import re
-import html
+import time
 from datetime import datetime, timezone
 
 # ---------------- 設定 ----------------
-# 追新聞的專題 RSS Feed 網址
+# 今次我哋直接讀取你喺瀏覽器見到嘅網頁，唔再依賴 API 或 RSS
 TOPICS = {
     "london_eto": {
-        "rss_url": "https://pulsehknews.com/c/londonetotrial/feed/",
+        "url": "https://pulsehknews.com/c/londonetotrial/",
         "output_file": "topic_london_eto.json",
         "display_name": "倫敦經貿辦案"
     },
     "taipo_fire": {
-        "rss_url": "https://pulsehknews.com/c/taipofire/feed/",
+        "url": "https://pulsehknews.com/c/taipofire/",
         "output_file": "topic_taipo_fire.json",
         "display_name": "宏福苑大火"
     }
 }
 
 # ---------------- 工具函數 ----------------
-def clean_html(raw_html: str) -> str:
-    """清除 HTML 標籤並解碼 Entities"""
-    if not raw_html:
-        return ""
-    clean_text = re.sub(r'<[^>]+>', '', raw_html)
-    return html.unescape(clean_text).strip()
-
-def fetch_via_rss2json(rss_url: str) -> list:
-    """透過合法的 rss2json 服務，繞過 Cloudflare 直接獲取 JSON"""
-    # rss2json 嘅免費 API
-    api_url = f"https://api.rss2json.com/v1/api.json?rss_url={rss_url}"
-    print(f"  呼叫 rss2json 服務中...")
+def fetch_html_and_parse(url: str) -> list:
+    """使用 cloudscraper 突破 Cloudflare，並用 BeautifulSoup 拆解 HTML"""
+    print(f"  正在模擬人類瀏覽器載入網頁: {url}")
+    
+    # 建立一個突破 Cloudflare 嘅 Scraper (模擬 Chrome)
+    scraper = cloudscraper.create_scraper(
+        browser={
+            'browser': 'chrome',
+            'platform': 'windows',
+            'desktop': True
+        }
+    )
     
     try:
-        r = requests.get(api_url, timeout=20)
-        data = r.json()
-        
-        if data.get("status") != "ok":
-            print(f"    [失敗] rss2json 無法讀取: {data.get('message')}")
+        r = scraper.get(url, timeout=20)
+        if r.status_code != 200:
+            print(f"    [失敗] 網頁回傳代碼: {r.status_code}")
             return []
             
+        # 開始用 BeautifulSoup 拆解網頁 HTML
+        soup = BeautifulSoup(r.text, 'html.parser')
         items = []
-        for item in data.get("items", []):
-            pub_date_str = item.get("pubDate", "") # 格式: "YYYY-MM-DD HH:MM:SS"
+        
+        # 尋找所有文章區塊 (支援大部分 WordPress Theme 嘅寫法)
+        articles = soup.find_all('article')
+        if not articles:
+            # 如果無 <article> tag，就搵帶有 post 類別嘅 div
+            articles = soup.find_all('div', class_=lambda c: c and ('post' in c or 'item' in c))
             
-            # 將日期轉為標準的 ISO 8601 格式
-            try:
-                dt = datetime.strptime(pub_date_str, "%Y-%m-%d %H:%M:%S")
-                dt = dt.replace(tzinfo=timezone.utc)
-                pub_date_iso = dt.strftime("%Y-%m-%dT%H:%M:%SZ")
-            except:
-                pub_date_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-            items.append({
-                "id": item.get("link"),
-                "title": clean_html(item.get("title", "")),
-                "link": item.get("link"),
-                "summary": clean_html(item.get("description", "")),
-                "publishedAt": pub_date_iso,
-                "source": "追新聞",
-                "sourceCategory": "專題報導"
-            })
+        print(f"    [分析] 喺網頁表面搵到 {len(articles)} 個文章區塊。")
+        
+        for art in articles:
+            # 1. 搵標題同 Link (通常喺 h2, h3 入面嘅 <a>)
+            title_elem = art.find(['h2', 'h3', 'h4'])
+            if not title_elem:
+                continue
+                
+            a_tag = title_elem.find('a')
+            if not a_tag:
+                a_tag = title_elem if title_elem.name == 'a' else None
+                if not a_tag:
+                    continue
+                    
+            title = a_tag.get_text(strip=True)
+            link = a_tag.get('href')
             
+            # 2. 搵時間
+            time_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            time_elem = art.find('time')
+            if time_elem and time_elem.get('datetime'):
+                time_iso = time_elem.get('datetime')
+                
+            # 3. 搵簡介
+            summary = ""
+            excerpt_elem = art.find(class_=lambda c: c and ('excerpt' in c or 'summary' in c))
+            if excerpt_elem:
+                summary = excerpt_elem.get_text(strip=True)
+                
+            # 確認有標題同 Link 先加入清單
+            if title and link:
+                items.append({
+                    "id": link,
+                    "title": title,
+                    "link": link,
+                    "summary": summary,
+                    "publishedAt": time_iso,
+                    "source": "追光者",
+                    "sourceCategory": "專題報導"
+                })
+                
         return items
         
     except Exception as e:
-        print(f"    [警告] 呼叫 API 時發生錯誤: {e}")
+        print(f"    [錯誤] 抓取 HTML 時發生錯誤: {e}")
         return []
 
 def load_existing_json(file_path: str) -> list:
@@ -89,11 +116,10 @@ def main():
     for topic_key, config in TOPICS.items():
         print(f"\n[INFO] 開始處理專題: {config['display_name']}")
         try:
-            # 1. 透過 rss2json 獲取最新新聞
-            new_items = fetch_via_rss2json(config["rss_url"])
-            print(f"  成功從網站抓取了 {len(new_items)} 篇新聞")
+            # 1. 視覺化刮網頁
+            new_items = fetch_html_and_parse(config["url"])
+            print(f"  成功從網頁刮到 {len(new_items)} 篇新聞")
             
-            # 如果無新聞，跳過儲存步驟
             if not new_items:
                 print("  [放棄] 無法取得新文章，保留原有檔案。")
                 continue
@@ -102,18 +128,18 @@ def main():
             existing_items = load_existing_json(config["output_file"])
             print(f"  從本地資料庫載入 {len(existing_items)} 篇歷史紀錄")
             
-            # 3. 合併並去除重複 (以 Link 為 Key)
+            # 3. 合併並去除重複
             merged_dict = {item["link"]: item for item in existing_items}
             for item in new_items:
                 merged_dict[item["link"]] = item
                 
             final_items = list(merged_dict.values())
             
-            # 4. 根據日期由新到舊排序
+            # 4. 排序
             final_items.sort(key=lambda x: x["publishedAt"], reverse=True)
             print(f"  合併後總共有 {len(final_items)} 篇新聞")
             
-            # 5. 輸出存檔
+            # 5. 輸出
             payload = {
                 "topic": config["display_name"],
                 "generatedAt": now_utc,
@@ -128,6 +154,9 @@ def main():
             
         except Exception as e:
             print(f"[ERROR] 處理專題 {config['display_name']} 時發生錯誤: {e}", file=sys.stderr)
+            
+        # 專題之間停 3 秒，免得太密俾人 Block
+        time.sleep(3)
 
 if __name__ == "__main__":
     main()
