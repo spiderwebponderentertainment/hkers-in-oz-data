@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+# ✅ 新增呢段：主動升級去 Node.js 24，消除 Warning
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   update-json:
     runs-on: ubuntu-latest
@@ -25,7 +29,7 @@ jobs:
       - name: 📦 安裝需要嘅套件
         run: pip install requests
 
-      - name: 🚀 執行抓取程式 (✅ 已修正路徑)
+      - name: 🚀 執行抓取程式
         run: python workers/fetch_pulse_topics.py 
 
       - name: 💾 自動 Commit 同 Push 更新
@@ -34,7 +38,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           
           # 將更新咗嘅 JSON 加入去
-          # (因為喺 root 行 Python，所以生出嚟嘅 JSON 會喺 root)
           git add topic_london_eto.json topic_taipo_fire.json
           
           # 檢查有冇實質改動，有新新聞先會 Commit，無新新聞就乜都唔做
