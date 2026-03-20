@@ -1,10 +1,11 @@
-from curl_cffi import requests
+import requests
 import json
 import sys
 import re
 from datetime import datetime, timezone
 import html
 import time
+from urllib.parse import quote
 
 # ---------------- 設定 ----------------
 WP_API_BASE = "https://pulsehknews.com/wp-json/wp/v2"
@@ -22,6 +23,33 @@ TOPICS = {
     }
 }
 
+# ---------------- 核心：Proxy 隱身工具 ----------------
+def fetch_via_proxy(target_url: str):
+    """利用免費的中間人 Proxy 去繞過 GitHub IP 封鎖"""
+    
+    # 準備兩條免費嘅 Proxy 路線，一條死咗就自動用另一條
+    proxies = [
+        f"https://api.allorigins.win/raw?url={quote(target_url)}",
+        f"https://api.codetabs.com/v1/proxy/?quest={quote(target_url)}"
+    ]
+    
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
+    
+    for proxy_url in proxies:
+        try:
+            r = requests.get(proxy_url, headers=headers, timeout=20)
+            # 只要成功攞到料，就即刻回傳
+            if r.status_code == 200:
+                return r
+        except Exception:
+            pass
+        # 轉路線前停 1 秒
+        time.sleep(1)
+        
+    raise Exception(f"所有 Proxy 皆無法突破防線。目標: {target_url}")
+
 # ---------------- 工具函數 ----------------
 def clean_html(raw_html: str) -> str:
     if not raw_html:
@@ -29,51 +57,42 @@ def clean_html(raw_html: str) -> str:
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return html.unescape(clean_text).strip()
 
-def fetch_category_id(session, slug: str) -> int:
+def fetch_category_id(slug: str) -> int:
     url = f"{WP_API_BASE}/categories?slug={slug}"
-    r = session.get(url, timeout=15)
-    
-    if r.status_code != 200:
-        raise Exception(f"API 拒絕連線，Status Code: {r.status_code}")
-        
+    # ✅ 改用 Proxy 去敲門
+    r = fetch_via_proxy(url)
     data = r.json()
-    if not data:
+    
+    if not data or not isinstance(data, list):
         raise ValueError(f"找不到 slug 為 '{slug}' 的分類！")
     return data[0]["id"]
 
-def fetch_all_posts_by_category(session, category_id: int) -> list:
+def fetch_all_posts_by_category(category_id: int) -> list:
     all_posts = []
     page = 1
     while True:
         url = f"{WP_API_BASE}/posts?categories={category_id}&per_page=100&page={page}&_embed=1"
         print(f"  Fetching page {page} for category {category_id}...")
         
-        # 加入重試機制
-        max_retries = 3
-        for attempt in range(max_retries):
-            r = session.get(url, timeout=20)
-            if r.status_code == 200:
-                break
-            elif r.status_code == 400 and "rest_post_invalid_page_number" in r.text:
-                return all_posts # 已經揭到最尾一頁
-            else:
-                print(f"    [警告] 頁面 {page} 讀取失敗 (Status {r.status_code})，準備重試...")
-                time.sleep(3)
-        else:
-            raise Exception(f"無法讀取第 {page} 頁，已放棄。")
+        try:
+            # ✅ 改用 Proxy 去敲門
+            r = fetch_via_proxy(url)
+            posts = r.json()
+        except Exception as e:
+            print(f"    [警告] 停止翻頁: {e}")
+            break
             
-        posts = r.json()
-        if not posts:
+        if not posts or not isinstance(posts, list):
             break
             
         all_posts.extend(posts)
         
-        total_pages = int(r.headers.get("X-WP-TotalPages", 1))
-        if page >= total_pages:
+        # 如果攞到嘅文章少過 100 篇，代表已經係最後一頁
+        if len(posts) < 100:
             break
             
         page += 1
-        time.sleep(2) # 翻頁之間停 2 秒
+        time.sleep(2)
         
     return all_posts
 
@@ -100,18 +119,15 @@ def process_post(post: dict, source_name: str) -> dict:
 def main():
     now_utc = datetime.now(timezone.utc).isoformat()
     
-    # ✅ 關鍵：啟動完美偽裝 Chrome 120 的 Session
-    session = requests.Session(impersonate="chrome120")
-    
     for topic_key, config in TOPICS.items():
         print(f"\n[INFO] 開始處理專題: {config['display_name']}")
         try:
-            cat_id = fetch_category_id(session, config["slug"])
-            print(f"  取得 Category ID: {cat_id}")
+            cat_id = fetch_category_id(config["slug"])
+            print(f"  成功取得 Category ID: {cat_id}")
             
             time.sleep(2)
             
-            raw_posts = fetch_all_posts_by_category(session, cat_id)
+            raw_posts = fetch_all_posts_by_category(cat_id)
             print(f"  共抓取了 {len(raw_posts)} 篇文章")
             
             processed_items = [process_post(p, "追新聞") for p in raw_posts]
