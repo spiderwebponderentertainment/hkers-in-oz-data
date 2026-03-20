@@ -1,22 +1,25 @@
 name: Auto Fetch Pulse Topics
 
-# 定義幾時觸發呢個機械人
 on:
   schedule:
-    - cron: '0 */4 * * *'  # 每 4 個鐘自動行一次
-  workflow_dispatch:       # 俾你可以喺 GitHub 網頁手動撳掣 Run
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
 
-# 俾權限個機械人可以改你個 Repo 嘅檔案
 permissions:
   contents: write
 
-# 主動升級去 Node.js 24，消除 Warning
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: auto-fetch-pulse-topics
+  cancel-in-progress: true
 
 jobs:
   update-json:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
       - name: 📥 下載最新代碼
         uses: actions/checkout@v4
@@ -24,22 +27,33 @@ jobs:
       - name: 🐍 設定 Python 環境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: 📦 安裝需要嘅套件
-        run: pip install cloudscraper beautifulsoup4
+        run: |
+          python -m pip install --upgrade pip
+          pip install cloudscraper beautifulsoup4
 
       - name: 🚀 執行抓取程式
-        run: python workers/fetch_pulse_topics.py 
+        run: python workers/fetch_pulse_topics.py
+
+      - name: 📂 檢查輸出檔案
+        run: |
+          ls -lah
+          [ -f "topic_london_eto.json" ] && echo "找到 topic_london_eto.json"
+          [ -f "topic_taipo_fire.json" ] && echo "找到 topic_taipo_fire.json"
 
       - name: 💾 自動 Commit 同 Push 更新
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          
-          # ✅ 防爆機制：檢查檔案係咪真係成功生到出嚟，有先至 Add，無就略過
+
           if [ -f "topic_london_eto.json" ]; then git add topic_london_eto.json; fi
           if [ -f "topic_taipo_fire.json" ]; then git add topic_taipo_fire.json; fi
-          
-          # 檢查有冇實質改動，有新新聞先會 Commit，無新新聞就乜都唔做
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 自動更新專題新聞 JSON" && git push)
+
+          if git diff --cached --quiet; then
+            echo "冇新變更，唔需要 commit"
+          else
+            git commit -m "🔄 自動更新專題新聞 JSON"
+            git push
+          fi
