@@ -1,10 +1,554 @@
 {
   "source": "7NEWS",
-  "generatedAt": "2026-04-13T14:24:27.290114+00:00",
-  "generatedAtLocal": "2026-04-14T00:24:27.290114+10:00",
+  "generatedAt": "2026-04-13T16:05:38.269823+00:00",
+  "generatedAtLocal": "2026-04-14T02:05:38.269823+10:00",
   "localTimezone": "Australia/Sydney",
   "count": 200,
   "items": [
+    {
+      "id": "97daa95212eac33f1183232e1e9c0b27",
+      "title": "ACT Politics News: Latest & Breaking Political News from Canberra | 7NEWS",
+      "link": "https://7news.com.au/politics/act",
+      "summary": "7News brings you the latest ACT Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's ACT political news, live updates & all the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:00:00.573171+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:00.573171+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Politics",
+      "sourceCategories": [
+        "Politics"
+      ]
+    },
+    {
+      "id": "283927644a6c5f8a1b30b099f2ef03bb",
+      "title": "Tasmania Politics News: Latest & Breaking Political News from Tas | 7NEWS",
+      "link": "https://7news.com.au/politics/tas",
+      "summary": "7News brings you the latest Tasmannia Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's TAS political news, live updates & all the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:00:05.362796+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:05.362796+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Politics",
+      "sourceCategories": [
+        "Politics"
+      ]
+    },
+    {
+      "id": "a324df8710bf8372b243f7f7cebac399",
+      "title": "NT Politics News: Latest & Breaking Political News from Northern Territory | 7NEWS",
+      "link": "https://7news.com.au/politics/nt",
+      "summary": "7News brings you the latest NT Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's NT political news, live updates & all the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:00:15.373158+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:15.373158+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Politics",
+      "sourceCategories": [
+        "Politics"
+      ]
+    },
+    {
+      "id": "f10c49a7d29c0826d5d33b36f09c338e",
+      "title": "Ukraine News: Latest & Breaking Ukraine News Headlines & Updates | 7NEWS",
+      "link": "https://7news.com.au/news/ukraine",
+      "summary": "7NEWS brings you the latest Ukraine news from Australia and around the world. Stay up to date with all of the breaking Ukrainian headlines. Today's Ukrainian news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:00:31.547602+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:31.547602+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "f76511624c178b390236a72ec3d539be",
+      "title": "Finance News: Latest & Breaking Financial Headlines - Today's Finance News Updates from Australia | 7NEWS",
+      "link": "https://7news.com.au/business/finance",
+      "summary": "The latest news headlines in finance, business, technology and banking from Australia and the world. Stay up to date with all of the breaking Finance headlines. Today's Financial news, live updates & all the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:01:17.351426+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:17.351426+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Business",
+      "sourceCategories": [
+        "Business"
+      ]
+    },
+    {
+      "id": "5b40ef2c956cbd3516d3919415dd6fa2",
+      "title": "Bank News: Latest Banking News from Australia | 7NEWS",
+      "link": "https://7news.com.au/business/banking",
+      "summary": "The latest banking news from Australia including interest rates and updates from the big four banks. Stay up to date with all of the breaking Bank headlines. Today's Banking news, live updates & all the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:01:18.396899+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:18.396899+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Business",
+      "sourceCategories": [
+        "Business"
+      ]
+    },
+    {
+      "id": "15e577b2af8f8ef107d3eedb4d3307bf",
+      "title": "Retail News: Latest Retail Industry News Australia | 7NEWS",
+      "link": "https://7news.com.au/business/retail",
+      "summary": "Retail industry headlines, bargains, updates and news from Australian department stores and shopping centres. Stay up to date with all of the breaking Retail headlines. Today's Retail news, live updates & all the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:01:19.376329+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:19.376329+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Business",
+      "sourceCategories": [
+        "Business"
+      ]
+    },
+    {
+      "id": "1d284872a0f60ef0f6ea8a65e60bdae9",
+      "title": "Economic News: Latest Economy News & Updates from Australia and Around the World | 7NEWS",
+      "link": "https://7news.com.au/business/economy",
+      "summary": "7News brings you the latest Economic news from Australia and around the world. Stay up to date with all of the breaking Economic headlines. Today's Economy news, live updates & all the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:01:21.412045+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:21.412045+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Business",
+      "sourceCategories": [
+        "Business"
+      ]
+    },
+    {
+      "id": "b29adceb09a4f30a04e6b7a4ff186647",
+      "title": "Stock Market News: Today's Market Headlines & Latest Updates from Australia | 7NEWS",
+      "link": "https://7news.com.au/business/markets",
+      "summary": "ASX, Wall Street & NASDAQ stock market news, interest rates and financial headlines from Australia and the world. Stay up to date with all of the breaking Stock Market headlines. Today's Market news, live updates & all the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:01:22.598664+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:22.598664+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Business",
+      "sourceCategories": [
+        "Business"
+      ]
+    },
+    {
+      "id": "017eac2aff8c3c8ab5ebd66b160b8020",
+      "title": "Business News: Latest & Breaking Business News, Updates and Today's Headlines from Australia | 7NEWS",
+      "link": "https://7news.com.au/business",
+      "summary": "The latest business news including market updates, mining news, property development and the start-ups you should know about. Stay up to date with all of the breaking Business headlines. Today's Business news, live updates & all the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:01:27.981410+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:27.981410+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Business",
+      "sourceCategories": [
+        "Business"
+      ]
+    },
+    {
+      "id": "82acfae0574d58c9b7f983e383e37101",
+      "title": "Human Interest News: Latest & Breaking Human Interest Headlines & News Updates from TodaY | 7NEWS",
+      "link": "https://7news.com.au/lifestyle/human-interest",
+      "summary": "7NEWS brings you the latest Human Interest news from Australia and around the world. Stay up to date with all of the breaking Human Interest headlines. Today's Human Interest news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:03:14.595469+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:14.595469+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Lifestyle",
+      "sourceCategories": [
+        "Lifestyle"
+      ]
+    },
+    {
+      "id": "d3d4c04d0caa7bc1951d05ac4fba4991",
+      "title": "Tech Reviews News: Latest & Breaking Tech Reviews Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/technology/reviews",
+      "summary": "7NEWS brings you the latest Tech Reviews news from Australia and around the world. Stay up to date with all of the breaking Tech Reviews headlines. Today's Tech Reviews news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:03:31.062485+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:31.062485+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Technology",
+      "sourceCategories": [
+        "Technology"
+      ]
+    },
+    {
+      "id": "1fac91e451429a67ef58fdba7b57d71a",
+      "title": "Space News: Latest & Breaking Space Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/technology/space",
+      "summary": "7NEWS brings you the latest Space news from Australia and around the world. Stay up to date with all of the breaking Space headlines. Today's Space news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:03:32.874257+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:32.874257+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Technology",
+      "sourceCategories": [
+        "Technology"
+      ]
+    },
+    {
+      "id": "1d92277a6f1a37dcbce0d1a0de9f8180",
+      "title": "Gaming News: Latest & Breaking Gaming Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/technology/gaming",
+      "summary": "7NEWS brings you the latest Gaming news from Australia and around the world. Stay up to date with all of the breaking Gaming headlines. Today's Gaming news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:03:34.123414+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:34.123414+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Technology",
+      "sourceCategories": [
+        "Technology"
+      ]
+    },
+    {
+      "id": "f254c706ab512ee7bdd1fd96fd8847a7",
+      "title": "Science News: Latest & Breaking Science Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/technology/science",
+      "summary": "7NEWS brings you the latest Science news from Australia and around the world. Stay up to date with all of the breaking Science headlines. Today's Science news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:03:35.119385+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:35.119385+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Technology",
+      "sourceCategories": [
+        "Technology"
+      ]
+    },
+    {
+      "id": "26515562804fa61681f8900dc33c91ca",
+      "title": "Smartphones News: Latest & Breaking Smartphones Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/technology/smartphones",
+      "summary": "7NEWS brings you the latest Smartphones news from Australia and around the world. Stay up to date with all of the breaking Smartphones headlines. Today's Smartphones news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:03:36.211272+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:36.211272+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Technology",
+      "sourceCategories": [
+        "Technology"
+      ]
+    },
+    {
+      "id": "56ae2ee225454a5ad7be41be8f59fc69",
+      "title": "Gadget News: Latest & Breaking Gadget Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/technology/gadgets",
+      "summary": "7NEWS brings you the latest Gadget news from Australia and around the world. Stay up to date with all of the breaking Gadget headlines. Today's Gadget news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:03:38.082130+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:38.082130+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Technology",
+      "sourceCategories": [
+        "Technology"
+      ]
+    },
+    {
+      "id": "2fccd0b3b75c1f9e714c2f4b16127b1e",
+      "title": "Perth News: Latest & Breaking News Today - Local News Headlines & Updates from Perth WA | 7NEWS",
+      "link": "https://7news.com.au/news/perth",
+      "summary": "7NEWS brings you the latest local news from Perth. Stay up to date with all of the breaking headlines from Perth WA. Today's Perth news, live updates & all the latest breaking news stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:22.896733+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:22.896733+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "85fa573d72afc7cfee6f6416d1fdb5af",
+      "title": "WA News: Latest & Breaking Local News Headlines from Western Australia | 7NEWS",
+      "link": "https://7news.com.au/news/wa",
+      "summary": "7News brings you the latest local news from WA and Perth now. Stay up to date with all of the breaking headlines from Western Australia. Today's Western Australian news, live updates & the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:36.561976+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:36.561976+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "2740aa8abbdaf27238101db576559b11",
+      "title": "Education News: Latest & Breaking Education Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/news/education",
+      "summary": "7NEWS brings you the latest Education news from Australia and around the world. Stay up to date with all of the breaking Education headlines. Today's Education news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:39.514210+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:39.514210+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "8ce0ba3f73a7681a79fd7f255532f49c",
+      "title": "Vic News: Latest & Breaking Local News Headlines from Victoria | 7NEWS",
+      "link": "https://7news.com.au/news/vic",
+      "summary": "7News brings you the latest local news from Victoria. Stay up to date with all of the breaking headlines from VIC. Today's Victorian news, live updates & the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:44.670599+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:44.670599+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "3b0c56b654bbe56db59c5e8959683c65",
+      "title": "Public Health News: Latest & Breaking Public Health Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/news/public-health",
+      "summary": "7NEWS brings you the latest Public Health news from Australia and around the world. Stay up to date with all of the breaking Public Health headlines. Today's Public Health news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:45.948248+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:45.948248+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "5c15da80b985582f93936669073e611f",
+      "title": "NSW Police News: Latest & Breaking New South Wales Police Headlines & News Updates from Australia | 7NEWS",
+      "link": "https://7news.com.au/news/nsw-police",
+      "summary": "7NEWS brings you the latest NSW Police news from Australia. Stay up to date with all of the breaking Police headlines. Today's New South Wales Police news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:52.153114+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:52.153114+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "092ecc51043f35e48c652fc87110b8a6",
+      "title": "Queensland News: Latest & Breaking Local News Headlines from QLD | 7NEWS",
+      "link": "https://7news.com.au/news/qld",
+      "summary": "7News brings you the latest local news from Queensland. Stay up to date with all of the breaking headlines from QLD. Today's Queensland news, live updates & the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:54.552199+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:54.552199+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "f65f7ca8ecf0352c592b8a410c778aaa",
+      "title": "Tasmania News: Latest & Breaking Local Tasmanian News Headlines | 7NEWS",
+      "link": "https://7news.com.au/news/tas",
+      "summary": "7News brings you the latest local news from Tasmania. Stay up to date with all of the breaking headlines from TAS. Today's Tasmanian news, live updates & the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:55.524714+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:55.524714+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "6c0939bd6d0a7076e7b018c88da709e0",
+      "title": "SA News: Latest & Breaking Local News Headlines from South Australia | 7NEWS",
+      "link": "https://7news.com.au/news/sa",
+      "summary": "7News brings you the latest local news from SA. Stay up to date with all of the breaking headlines from South Australia. Today's South Australian news, live updates & the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:00.760896+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:00.760896+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "147634b7f40030db7cae5c291cc0e6a2",
+      "title": "War News: Latest & Breaking Conflict Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/news/conflict",
+      "summary": "7NEWS brings you the latest War news from Australia and around the world. Stay up to date with all of the breaking Conflict and War headlines. Today's War news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:01.787311+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:01.787311+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "8cfa2f0cc7d67d94de9dfd081ac0517a",
+      "title": "NT News: Latest & Breaking Local News Headlines from Northern Territory | 7NEWS",
+      "link": "https://7news.com.au/news/nt",
+      "summary": "7News brings you the latest local news from NT. Stay up to date with all of the breaking headlines from Northern Territory. Today's NT news, live updates & the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:06.254337+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:06.254337+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "7759aab463a509fa728f362ad7fcc57a",
+      "title": "GoFundMe News: Latest & Breaking GoFundMe News, Updates and Today's Headlines from Australia | 7NEWS",
+      "link": "https://7news.com.au/business/gofundme",
+      "summary": "7NEWS brings you the latest GoFundMe news from Australia and around the world. Stay up to date with all of the breaking GoFundMe headlines. Today's GoFundMe news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:09.443741+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:09.443741+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Business",
+      "sourceCategories": [
+        "Business"
+      ]
+    },
+    {
+      "id": "ccdb2ef26576d204c05787ff15203514",
+      "title": "ACT News: Latest & Breaking Local News Headlines from Australian Capital Territory | 7NEWS",
+      "link": "https://7news.com.au/news/act",
+      "summary": "7News brings you the latest local news from ACT. Stay up to date with all of the breaking headlines from Australian Capital Territory. Today's ACT news, live updates & the latest breaking stories from 7News.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:16.977165+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:16.977165+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "f986009fb22379d0dccd10bddacb5f27",
+      "title": "Crime News: Latest & Breaking Crime Headlines & News Updates from Today | 7NEWS",
+      "link": "https://7news.com.au/news/crime",
+      "summary": "7NEWS brings you the latest Crime news from Australia and around the world. Stay up to date with all of the breaking Crime headlines. Today's Crime news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:28.198593+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:28.198593+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "56b6213f39b136f99fe28c71a17cb3aa",
+      "title": "Brisbane News: Latest & Breaking News Today - Local News Headlines & Updates from Brisbane QLD | 7NEWS",
+      "link": "https://7news.com.au/news/brisbane",
+      "summary": "7NEWS brings you the latest local news from Brisbane. Stay up to date with all of the breaking headlines from Brisbane QLD. Today's Brisbane news, live updates & all the latest breaking news stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:30.590310+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:30.590310+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "033f061b32347bfc5d87eefc723eff4b",
+      "title": "Sydney News: Latest & Breaking News Today - Local News Headlines & Updates from Sydney NSW | 7NEWS",
+      "link": "https://7news.com.au/news/sydney",
+      "summary": "7NEWS brings you the latest local news from Sydney. Stay up to date with all of the breaking headlines from Sydney NSW. Today's Sydney news, live updates & all the latest breaking news stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:35.619693+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:35.619693+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "b6f23dbce2955160ca9fad8f26e9d8fb",
+      "title": "Victoria Police News: Latest & Breaking Vic Police Headlines & News Updates from Australia | 7NEWS",
+      "link": "https://7news.com.au/news/victoria-police",
+      "summary": "7NEWS brings you the latest Victoria Police news from Australia. Stay up to date with all of the breaking Police headlines. Today's Vic Police news, live updates & all the latest breaking stories from 7NEWS.",
+      "publishedAt": "2026-04-13T16:00:00+00:00",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:36.541410+00:00",
+      "publishedAtLocal": "2026-04-14T02:00:00+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:36.541410+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
     {
       "id": "677c928a37793b55a37f14f9aafb802c",
       "title": "Man arrested after allegedly assaulting, threatening to kill woman with firearm in Cessnock, NSW",
@@ -12,9 +556,9 @@
       "summary": "The 34-year-old will appear in court on Tuesday.",
       "publishedAt": "2026-04-13T14:11:25.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:28.725812+00:00",
+      "fetchedAt": "2026-04-13T15:57:09.160453+00:00",
       "publishedAtLocal": "2026-04-14T00:11:25+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:28.725812+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:09.160453+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -28,9 +572,9 @@
       "summary": "‘We’re incredibly disappointed.’",
       "publishedAt": "2026-04-13T13:23:21.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:59.511397+00:00",
+      "fetchedAt": "2026-04-13T15:57:38.801472+00:00",
       "publishedAtLocal": "2026-04-13T23:23:21+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:59.511397+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:38.801472+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -44,9 +588,9 @@
       "summary": "It took more than an hour for emergency services to get him out.",
       "publishedAt": "2026-04-13T13:20:55.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:30.031288+00:00",
+      "fetchedAt": "2026-04-13T15:57:10.378312+00:00",
       "publishedAtLocal": "2026-04-13T23:20:55+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:30.031288+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:10.378312+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -60,9 +604,9 @@
       "summary": "‘We can’t go back to open season.’",
       "publishedAt": "2026-04-13T11:44:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:33.285043+00:00",
+      "fetchedAt": "2026-04-13T15:57:12.179287+00:00",
       "publishedAtLocal": "2026-04-13T21:44:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:33.285043+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:12.179287+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -76,9 +620,9 @@
       "summary": "‘I just wonder about what Sydney have actually bought.’",
       "publishedAt": "2026-04-13T11:04:06.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:34.315457+00:00",
+      "fetchedAt": "2026-04-13T15:57:13.987533+00:00",
       "publishedAtLocal": "2026-04-13T21:04:06+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:34.315457+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:13.987533+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -92,9 +636,9 @@
       "summary": "The incriminating evidence could lead police straight to his door.",
       "publishedAt": "2026-04-13T09:37:25.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:34.973037+00:00",
+      "fetchedAt": "2026-04-13T15:57:16.058278+00:00",
       "publishedAtLocal": "2026-04-13T19:37:25+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:34.973037+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:16.058278+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -108,9 +652,9 @@
       "summary": "The 62-year-old said one of the pair held up a phone reading ‘this is a robbery’.",
       "publishedAt": "2026-04-13T09:17:19.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:16.752873+00:00",
+      "fetchedAt": "2026-04-13T15:58:49.674142+00:00",
       "publishedAtLocal": "2026-04-13T19:17:19+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:16.752873+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:49.674142+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -124,9 +668,9 @@
       "summary": "Honda’s 0 Series EV lineup has been scaled back globally, but the remaining compact SUV is still being evaluated for local showrooms.",
       "publishedAt": "2026-04-13T09:09:35.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:59.114183+00:00",
+      "fetchedAt": "2026-04-13T15:58:34.925754+00:00",
       "publishedAtLocal": "2026-04-13T19:09:35+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:59.114183+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:34.925754+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Motoring",
       "sourceCategories": [
@@ -140,9 +684,9 @@
       "summary": "The 13-year-old is alleged to have committed a crime daily for more than two months.",
       "publishedAt": "2026-04-13T09:03:09.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:29.384748+00:00",
+      "fetchedAt": "2026-04-13T15:57:09.768531+00:00",
       "publishedAtLocal": "2026-04-13T19:03:09+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:29.384748+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:09.768531+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -156,9 +700,9 @@
       "summary": "The new chiefs will be forced to confront a number of challenges.",
       "publishedAt": "2026-04-13T09:01:53.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:31.910306+00:00",
+      "fetchedAt": "2026-04-13T15:57:15.458685+00:00",
       "publishedAtLocal": "2026-04-13T19:01:53+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:31.910306+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:15.458685+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -172,9 +716,9 @@
       "summary": "The Coalition is weighing up a range of reforms as families cry out for more support.",
       "publishedAt": "2026-04-13T08:45:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:28.056477+00:00",
+      "fetchedAt": "2026-04-13T15:57:08.550554+00:00",
       "publishedAtLocal": "2026-04-13T18:45:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:28.056477+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:08.550554+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -188,9 +732,9 @@
       "summary": "‘The rope had cut through to the bone.’",
       "publishedAt": "2026-04-13T08:39:39.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:24:25.729912+00:00",
+      "fetchedAt": "2026-04-13T16:05:15.875966+00:00",
       "publishedAtLocal": "2026-04-13T18:39:39+10:00",
-      "fetchedAtLocal": "2026-04-14T00:24:25.729912+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:15.875966+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -204,9 +748,9 @@
       "summary": "The postcodes where one in three residents are smokers have been revealed as the Coalition considers halving tobacco excise.",
       "publishedAt": "2026-04-13T08:37:29.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:36.957223+00:00",
+      "fetchedAt": "2026-04-13T15:57:17.092233+00:00",
       "publishedAtLocal": "2026-04-13T18:37:29+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:36.957223+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:17.092233+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -220,9 +764,9 @@
       "summary": "The superstar said he would ‘fight to the hills’ to clear his name, but that might have become more difficult.",
       "publishedAt": "2026-04-13T08:22:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:58.471334+00:00",
+      "fetchedAt": "2026-04-13T15:57:18.516637+00:00",
       "publishedAtLocal": "2026-04-13T18:22:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:58.471334+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:18.516637+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -236,9 +780,9 @@
       "summary": "‘Seems like unicorn conditions.’",
       "publishedAt": "2026-04-13T08:06:39.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:01.448178+00:00",
+      "fetchedAt": "2026-04-13T15:57:41.576505+00:00",
       "publishedAtLocal": "2026-04-13T18:06:39+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:01.448178+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:41.576505+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -246,15 +790,31 @@
       ]
     },
     {
-      "id": "8d52ac74602ac54ed3076eec175c0be7",
-      "title": "Man charged after 17-year-old stabbed centimetres from his heart at Gold Coast home",
-      "link": "https://7news.com.au/news/man-charged-after-17-year-old-stabbed-centimetres-from-his-heart-at-gold-coast-home-c-22133254",
-      "summary": "The boy was rushed to hospital in a critical condition and placed in a coma.",
-      "publishedAt": "2026-04-13T07:17:12.000Z",
+      "id": "3b0a3f8f683955eb3c4d2d04c2b241f5",
+      "title": "Dismembered saltwater crocodile found dumped in Adelaide’s northern suburbs",
+      "link": "https://7news.com.au/news/dismembered-saltwater-crocodile-found-dumped-in-adelaides-northern-suburbs-c-22133588",
+      "summary": "The nearest wild populations of the species are almost 3000km away from the grisly find.",
+      "publishedAt": "2026-04-13T07:26:28.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:49.174059+00:00",
-      "publishedAtLocal": "2026-04-13T17:17:12+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:49.174059+10:00",
+      "fetchedAt": "2026-04-13T16:04:19.463942+00:00",
+      "publishedAtLocal": "2026-04-13T17:26:28+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:19.463942+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "df931403d7bf693dd6404dff02eb6f8e",
+      "title": "Teen swept into coastal cave in dramatic surf rescue at Warriewood in Sydney’s north",
+      "link": "https://7news.com.au/news/teen-swept-into-coastal-cave-in-dramatic-surf-rescue-at-warriewood-in-sydneys-north-c-22134072",
+      "summary": "Rescuers briefly lost sight of the boy before he was spotted inside a coastal cave.",
+      "publishedAt": "2026-04-13T07:04:21.000Z",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:05:26.870449+00:00",
+      "publishedAtLocal": "2026-04-13T17:04:21+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:26.870449+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -268,9 +828,9 @@
       "summary": "The US president’s plans for the Gulf draw similarities to the 1980s Tanker War — a conflict in the Strait of Hormuz which provided lessons on the many deadly ways that things can go wrong.",
       "publishedAt": "2026-04-13T06:53:16.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:37.614500+00:00",
+      "fetchedAt": "2026-04-13T15:57:07.937837+00:00",
       "publishedAtLocal": "2026-04-13T16:53:16+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:37.614500+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:07.937837+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -284,9 +844,9 @@
       "summary": "The Victorian ministers are leaving politics just months ahead of the November state election.",
       "publishedAt": "2026-04-13T06:34:18.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:25.524700+00:00",
+      "fetchedAt": "2026-04-13T15:58:57.141500+00:00",
       "publishedAtLocal": "2026-04-13T16:34:18+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:25.524700+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:57.141500+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -300,9 +860,9 @@
       "summary": "‘I had no chips on the table.’",
       "publishedAt": "2026-04-13T06:31:12.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:03.797720+00:00",
+      "fetchedAt": "2026-04-13T16:01:32.458255+00:00",
       "publishedAtLocal": "2026-04-13T16:31:12+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:03.797720+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:32.458255+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -316,9 +876,9 @@
       "summary": "Record fuel prices and rising EV sales appear to have delayed the introduction of a proposed road user charge for EVs.",
       "publishedAt": "2026-04-13T06:06:55.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:00.937936+00:00",
+      "fetchedAt": "2026-04-13T15:58:36.010776+00:00",
       "publishedAtLocal": "2026-04-13T16:06:55+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:00.937936+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:36.010776+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Motoring",
       "sourceCategories": [
@@ -332,9 +892,9 @@
       "summary": "Police have confirmed the worst following a devastating crash which brought morning commuters to a halt.",
       "publishedAt": "2026-04-13T06:00:12.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:47.360596+00:00",
+      "fetchedAt": "2026-04-13T16:04:26.227710+00:00",
       "publishedAtLocal": "2026-04-13T16:00:12+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:47.360596+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:26.227710+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -348,29 +908,13 @@
       "summary": "The Broncos’ woes are mounting by the day with the latest issue coming to the fore at training on Monday.",
       "publishedAt": "2026-04-13T05:35:23.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:00.829142+00:00",
+      "fetchedAt": "2026-04-13T16:01:29.540106+00:00",
       "publishedAtLocal": "2026-04-13T15:35:23+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:00.829142+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:29.540106+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
         "Sport"
-      ]
-    },
-    {
-      "id": "1d4c38debca51d73bcd490bde4c03b39",
-      "title": "Maree Crabtree trial: Son overdosed before alleged smoothie murder on the Gold Coast, court hears",
-      "link": "https://7news.com.au/news/crime/maree-crabtree-trial-son-overdosed-before-alleged-smoothie-murder-on-the-gold-coast-court-hears-c-22132479",
-      "summary": "Maree Mavis Crabtree is alleged to have killed her 26-year-old son Jonathan with an overdose of painkillers in a smoothie.",
-      "publishedAt": "2026-04-13T05:24:22.000Z",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:24:17.971030+00:00",
-      "publishedAtLocal": "2026-04-13T15:24:22+10:00",
-      "fetchedAtLocal": "2026-04-14T00:24:17.971030+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
       ]
     },
     {
@@ -380,9 +924,9 @@
       "summary": "Football Australia was once described as ‘homeless’ by Graham Arnold. Now FIFA has intervened.",
       "publishedAt": "2026-04-13T05:20:30.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:06.901170+00:00",
+      "fetchedAt": "2026-04-13T16:01:38.821204+00:00",
       "publishedAtLocal": "2026-04-13T15:20:30+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:06.901170+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:38.821204+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -396,9 +940,9 @@
       "summary": "A cab/chassis body style wasn’t originally planned for the Shark 6, but strong customer demand prompted BYD to change course.",
       "publishedAt": "2026-04-13T05:16:02.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:02.840323+00:00",
+      "fetchedAt": "2026-04-13T15:58:37.172510+00:00",
       "publishedAtLocal": "2026-04-13T15:16:02+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:02.840323+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:37.172510+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Motoring",
       "sourceCategories": [
@@ -412,9 +956,9 @@
       "summary": "The rideshare giant has also revealed how long it expects the measure to stay.",
       "publishedAt": "2026-04-13T05:14:44.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:13.770822+00:00",
+      "fetchedAt": "2026-04-13T16:03:39.085407+00:00",
       "publishedAtLocal": "2026-04-13T15:14:44+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:13.770822+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:39.085407+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -428,9 +972,9 @@
       "summary": "The Chinese brand is continuing work on a larger ute for local showrooms as the segment grows despite record fuel prices.",
       "publishedAt": "2026-04-13T04:56:37.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:04.041515+00:00",
+      "fetchedAt": "2026-04-13T15:58:38.169209+00:00",
       "publishedAtLocal": "2026-04-13T14:56:37+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:04.041515+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:38.169209+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Motoring",
       "sourceCategories": [
@@ -444,9 +988,9 @@
       "summary": "‘It’s been a struggle. It’s a struggle every day.’",
       "publishedAt": "2026-04-13T04:54:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:21:45.772128+00:00",
+      "fetchedAt": "2026-04-13T16:03:12.070684+00:00",
       "publishedAtLocal": "2026-04-13T14:54:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:21:45.772128+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:12.070684+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -460,9 +1004,25 @@
       "summary": "Chery is bringing yet another brand to Australia, but this one has a distinctly British flavour to it with a British name to boot.",
       "publishedAt": "2026-04-13T04:19:39.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:08.189157+00:00",
+      "fetchedAt": "2026-04-13T16:05:25.560938+00:00",
       "publishedAtLocal": "2026-04-13T14:19:39+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:08.189157+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:25.560938+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Motoring",
+      "sourceCategories": [
+        "Motoring"
+      ]
+    },
+    {
+      "id": "c03ab5cf152f4a3b16d554f6fe5e2a94",
+      "title": "Defective Ford F-150 Lightning EVs from collapsed conversion firm can now be fixed... at a cost",
+      "link": "https://7news.com.au/motoring/defective-ford-f-150-lightning-evs-from-collapsed-conversion-firm-can-now-be-fixed-at-a-cost-c-22132573",
+      "summary": "A rival Queensland converter will step in to repair faulty battery-electric pickup trucks which could pose a burn risk.",
+      "publishedAt": "2026-04-13T03:48:51.000Z",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:17.343024+00:00",
+      "publishedAtLocal": "2026-04-13T13:48:51+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:17.343024+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Motoring",
       "sourceCategories": [
@@ -476,9 +1036,9 @@
       "summary": "‘This sounds like an overpriced PowerPoint.’",
       "publishedAt": "2026-04-13T03:19:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:12.216447+00:00",
+      "fetchedAt": "2026-04-13T16:04:34.306501+00:00",
       "publishedAtLocal": "2026-04-13T13:19:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:12.216447+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:34.306501+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -492,9 +1052,9 @@
       "summary": "‘People look at it in two ways but realistically he did that in a private sort of setting.’",
       "publishedAt": "2026-04-13T02:56:07.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:02.609003+00:00",
+      "fetchedAt": "2026-04-13T16:01:30.590139+00:00",
       "publishedAtLocal": "2026-04-13T12:56:07+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:02.609003+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:30.590139+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -508,9 +1068,9 @@
       "summary": "The crestfallen Aussie tennis player and his partner went silent for months.",
       "publishedAt": "2026-04-13T02:26:44.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:50.055996+00:00",
+      "fetchedAt": "2026-04-13T16:02:20.259933+00:00",
       "publishedAtLocal": "2026-04-13T12:26:44+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:50.055996+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:20.259933+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -524,9 +1084,9 @@
       "summary": "The prime minister has defended the government’s strategies to combat the fuel crisis.",
       "publishedAt": "2026-04-13T01:27:40.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:27.455616+00:00",
+      "fetchedAt": "2026-04-13T15:59:00.345190+00:00",
       "publishedAtLocal": "2026-04-13T11:27:40+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:27.455616+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:00.345190+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -540,9 +1100,9 @@
       "summary": "The Duke of Sussex is accused of triggering ‘an onslaught of cyber-bullying’.",
       "publishedAt": "2026-04-13T00:44:29.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:07.035279+00:00",
+      "fetchedAt": "2026-04-13T16:05:29.481102+00:00",
       "publishedAtLocal": "2026-04-13T10:44:29+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:07.035279+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:29.481102+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -556,9 +1116,9 @@
       "summary": "The former world No.1 blew his best shot at winning the green jacket - but there was a silver lining.",
       "publishedAt": "2026-04-12T23:53:26.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:08.834621+00:00",
+      "fetchedAt": "2026-04-13T16:01:40.592529+00:00",
       "publishedAtLocal": "2026-04-13T09:53:26+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:08.834621+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:40.592529+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -572,9 +1132,9 @@
       "summary": "High drama on the final hole almost flipped the result on its head but the world No.2 prevailed again.",
       "publishedAt": "2026-04-12T23:05:51.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:05.152441+00:00",
+      "fetchedAt": "2026-04-13T16:01:33.614746+00:00",
       "publishedAtLocal": "2026-04-13T09:05:51+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:05.152441+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:33.614746+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -588,9 +1148,9 @@
       "summary": "The ousted leader was a close ally of both US President Donald Trump and Russian President Vladimir Putin.",
       "publishedAt": "2026-04-12T21:50:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:29.631188+00:00",
+      "fetchedAt": "2026-04-13T15:59:01.532037+00:00",
       "publishedAtLocal": "2026-04-13T07:50:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:29.631188+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:01.532037+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -604,9 +1164,9 @@
       "summary": "John Donaldson famously ‘walked his daughter up the aisle and gave Denmark its Crown Princess’.",
       "publishedAt": "2026-04-12T21:19:24.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:33.514506+00:00",
+      "fetchedAt": "2026-04-13T15:58:10.326353+00:00",
       "publishedAtLocal": "2026-04-13T07:19:24+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:33.514506+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:10.326353+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -620,9 +1180,9 @@
       "summary": "Follow along as we cover all the breaking news of the tenuous ceasefire holding back conflict between Iran, the United States and Israel.",
       "publishedAt": "2026-04-12T19:50:21.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:31.858604+00:00",
+      "fetchedAt": "2026-04-13T15:59:02.690187+00:00",
       "publishedAtLocal": "2026-04-13T05:50:21+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:31.858604+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:02.690187+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -636,9 +1196,9 @@
       "summary": "Sunrise with Natalie Barr, Matt Shirvington, Edwina Bartholomew, Sam Mac and Mark Beretta is the latest news, sport, entertainment and weather. Win with the Cash Cow. Australia's most popular brekky show - Weekdays from 5:30am, weekends from 7am on Channel 7.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:18.128260+00:00",
+      "fetchedAt": "2026-04-13T15:56:58.621758+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:18.128260+10:00",
+      "fetchedAtLocal": "2026-04-14T01:56:58.621758+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sunrise",
       "sourceCategories": [
@@ -652,9 +1212,9 @@
       "summary": "The Morning Show with Larry Emdur and Kylie Gillies is the latest news, lifestyle, recipes, entertainment and weather. The Morning Show brings you a mix of news, entertainment, lifestyle and human interest stories - Weekdays from 9:00am across Australia.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:18.811221+00:00",
+      "fetchedAt": "2026-04-13T15:56:59.261359+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:18.811221+10:00",
+      "fetchedAtLocal": "2026-04-14T01:56:59.261359+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "The-morning-show",
       "sourceCategories": [
@@ -668,9 +1228,9 @@
       "summary": "The latest in Spotlight",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:19.493887+00:00",
+      "fetchedAt": "2026-04-13T15:56:59.903539+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:19.493887+10:00",
+      "fetchedAtLocal": "2026-04-14T01:56:59.903539+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Spotlight",
       "sourceCategories": [
@@ -684,9 +1244,9 @@
       "summary": "7NEWS brings you the latest Podcasts news from Australia and around the world. Stay up to date with all of the breaking Podcast headlines. Today's Podcasts news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:20.445814+00:00",
+      "fetchedAt": "2026-04-13T15:57:00.572844+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:20.445814+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:00.572844+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Podcasts",
       "sourceCategories": [
@@ -700,9 +1260,9 @@
       "summary": "7News brings you the latest local news from NSW. Stay up to date with all of the breaking headlines from New South Wales. Today's NSW news, live updates & the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:22.983865+00:00",
+      "fetchedAt": "2026-04-13T15:57:01.702837+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:22.983865+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:01.702837+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -716,9 +1276,9 @@
       "summary": "Watch the latest news videos from Australia and around the world on 7News. Stay up to date with all of the breaking sport, politics, entertainment, finance, weather and business headlines. Today's news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:23.704186+00:00",
+      "fetchedAt": "2026-04-13T15:57:02.373378+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:23.704186+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:02.373378+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Video",
       "sourceCategories": [
@@ -732,9 +1292,9 @@
       "summary": "Stay up to date with the latest sport news, live updates and breaking stories from 7Sport, AFL, Cricket, Olympics, NRL, Soccer and more with 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:24.492840+00:00",
+      "fetchedAt": "2026-04-13T15:57:04.617401+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:24.492840+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:04.617401+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -748,9 +1308,9 @@
       "summary": "Home and lifestyle news headlines, products and solutions including health, travel, food and garden. 7News brings you the latest Lifestyle news from Australia and around the world. Stay up to date with all of the breaking Lifestyle headlines & news updates",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:25.223942+00:00",
+      "fetchedAt": "2026-04-13T15:57:05.303551+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:25.223942+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:05.303551+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -764,9 +1324,9 @@
       "summary": "Stay up to date with all the breaking entertainment headlines and news updates from Australia and around the world with 7NEWS. Get the latest celebrity news and showbiz gossip you need to know.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:25.935483+00:00",
+      "fetchedAt": "2026-04-13T15:57:05.964841+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:25.935483+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:05.964841+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -780,9 +1340,9 @@
       "summary": "The latest political news out of Parliament House in Canberra and full election coverage from Australia and the world. 7News brings you the latest Politics news from Australia and around the world. Stay up to date with all of the breaking political headlines & election results. Today's Politics news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:26.730441+00:00",
+      "fetchedAt": "2026-04-13T15:57:06.714713+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:26.730441+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:06.714713+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -796,9 +1356,9 @@
       "summary": "7News brings you the latest Motoring news from Australia and around the world. Stay up to date with all of the breaking Motoring headlines & news updates. Today's Motoring news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:27.401072+00:00",
+      "fetchedAt": "2026-04-13T15:57:07.325581+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:27.401072+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:07.325581+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Motoring",
       "sourceCategories": [
@@ -812,9 +1372,9 @@
       "summary": "7News brings you the latest AFL news from Australia. Stay up to date with all of the breaking Football headlines & results. Today's AFL news, live updates & all of the latest breaking news stories from the Australian Football League, WAFL, SAFL and AFLW.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:38.958181+00:00",
+      "fetchedAt": "2026-04-13T15:57:19.756594+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:38.958181+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:19.756594+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -828,9 +1388,9 @@
       "summary": "7NEWS brings you the latest AFLW news from Australia. Stay up to date with all of the breaking AFLW headlines & results. Today's AFLW news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:39.612161+00:00",
+      "fetchedAt": "2026-04-13T15:57:20.375569+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:39.612161+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:20.375569+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -844,9 +1404,9 @@
       "summary": "7News brings you the latest Cricket news from Australia and around the world. Stay up to date with all of the breaking Cricket headlines & results. Today's Cricket news, live updates & all of the latest breaking news stories from the Ashes, Test Cricket, ODIs, Big Bash and Sheffield Shield.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:40.307646+00:00",
+      "fetchedAt": "2026-04-13T15:57:21.017806+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:40.307646+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:21.017806+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -860,9 +1420,9 @@
       "summary": "7News brings you the latest NRL news from Australia. Stay up to date with all of the breaking NRL headlines & results. Today's NRL news, live updates & all of the latest breaking news stories from the NRL, State of Origin, Test & Rugby League.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:42.137146+00:00",
+      "fetchedAt": "2026-04-13T15:57:23.195674+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:42.137146+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:23.195674+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -876,9 +1436,9 @@
       "summary": "7News brings you the latest Football news from Australia and around the world. Stay up to date with all of the breaking Soccer headlines & results. Today's Soccer news, live updates & all of the latest breaking news stories from the EPL, A-League and International Football.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:44.352497+00:00",
+      "fetchedAt": "2026-04-13T15:57:24.306035+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:44.352497+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:24.306035+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -892,9 +1452,9 @@
       "summary": "7News brings you the latest Motorsport news from Australia and around the world. Stay up to date with all of the breaking Motorsport headlines & results. Today's Motorsport news, live updates & all of the latest breaking news stories from the F1, V8 Supercars, MotoGP and more.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:46.201206+00:00",
+      "fetchedAt": "2026-04-13T15:57:25.296838+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:46.201206+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:25.296838+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -908,9 +1468,9 @@
       "summary": "7News brings you the latest Horse Racing news from Australia and around the world. Stay up to date with all of the breaking Horse Racing headlines & results. Today's racing news, live updates & all of the latest breaking news stories from the Emirates Melbourne Cup and Cox Plate.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:47.425126+00:00",
+      "fetchedAt": "2026-04-13T15:57:27.344238+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:47.425126+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:27.344238+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -924,9 +1484,9 @@
       "summary": "7News brings you the latest Tennis news from Australia and around the world. Stay up to date with all of the breaking Tennis headlines & results. Today's Tennis news, live updates & all of the latest breaking news stories from the ATP Tour, WTA Tour and Davis Cup.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:48.575133+00:00",
+      "fetchedAt": "2026-04-13T15:57:28.428597+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:48.575133+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:28.428597+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -940,9 +1500,9 @@
       "summary": "7News brings you the latest UFC news from Australia and around the world. Stay up to date with all of the breaking UFC headlines & results. Today's UFC news, live updates & all of the latest breaking news stories from the Ultimate Fighting Championship.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:50.038297+00:00",
+      "fetchedAt": "2026-04-13T15:57:29.988562+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:50.038297+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:29.988562+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -956,9 +1516,9 @@
       "summary": "7News brings you the latest Rugby news from Australia and around the world. Stay up to date with all of the breaking Rugby Union headlines & results. Today's Rugby news, live updates & all of the latest breaking news stories from the World Cup, Super Rugby, Rugby Championship, Six Nations and Rugby Union",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:51.243271+00:00",
+      "fetchedAt": "2026-04-13T15:57:32.027410+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:51.243271+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:32.027410+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -972,9 +1532,9 @@
       "summary": "7News brings you the latest Basketball news from Australia and around the world. Stay up to date with all of the breaking Basketball headlines & results. Today's Basketball news, live updates & all of the latest breaking news stories from the NBA, NBL and international basketball.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:53.172083+00:00",
+      "fetchedAt": "2026-04-13T15:57:34.233823+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:53.172083+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:34.233823+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -988,9 +1548,9 @@
       "summary": "7News brings you the latest Golf news from Australia and around the world. Stay up to date with all of the breaking Golf headlines & results. Today's Golf news, live updates & all of the latest breaking news stories from the PGA Tour and European Tour.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:54.901182+00:00",
+      "fetchedAt": "2026-04-13T15:57:35.344383+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:54.901182+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:35.344383+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -1004,9 +1564,9 @@
       "summary": "7NEWS brings you the latest Mixed Martial Arts news from Australia and around the world. Stay up to date with all of the breaking MMA headlines & results. Today's Mixed Martial Arts news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:56.073731+00:00",
+      "fetchedAt": "2026-04-13T15:57:36.478673+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:56.073731+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:36.478673+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -1020,9 +1580,9 @@
       "summary": "7News brings you the latest Boxing news from Australia and around the world. Stay up to date with all of the breaking Boxing headlines & results. Today's Boxing news, live updates & all of the latest breaking news stories from the WBA, WBC, IBF and WBO.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:57.090063+00:00",
+      "fetchedAt": "2026-04-13T15:57:37.758973+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:57.090063+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:37.758973+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -1036,9 +1596,9 @@
       "summary": "7NEWS brings you the latest Recipe news from from Sunrise and The Morning Show. Stay up to date with all of the breaking Recipe headlines. Today's Recipe news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:03.385496+00:00",
+      "fetchedAt": "2026-04-13T15:57:42.672339+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:03.385496+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:42.672339+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -1052,9 +1612,9 @@
       "summary": "Latest celebrity gossip and news headlines featuring the latest from TV, video, photos & entertainment. 7News brings you the latest TV news from Australia and around the world. Stay up to date with all of the breaking Television headlines & news updates.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:04.588909+00:00",
+      "fetchedAt": "2026-04-13T15:57:44.499259+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:04.588909+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:44.499259+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1068,9 +1628,9 @@
       "summary": "All the latest entertainment news headlines from Australia, Hollywood and the world. 7News brings you the latest Celebrity news from Australia and around the world. Stay up to date with all of the breaking Celeb headlines & news updates.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:05.658003+00:00",
+      "fetchedAt": "2026-04-13T15:57:45.911001+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:05.658003+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:45.911001+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1084,9 +1644,9 @@
       "summary": "Upcoming movies, cinema releases, movie trailers and latest breaking film news headlines from Australia and the world. 7News brings you the latest Movie news from Australia and around the world. Stay up to date with all of the breaking Film headlines & news updates.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:11.017781+00:00",
+      "fetchedAt": "2026-04-13T15:57:47.708830+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:11.017781+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:47.708830+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1100,9 +1660,9 @@
       "summary": "Find the latest music news, current and upcoming releases as well as headlines from Australia and the world. 7News brings you the latest Music news from Australia and around the world. Stay up to date with all of the breaking Music headlines & news updates.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:12.882268+00:00",
+      "fetchedAt": "2026-04-13T15:57:49.956548+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:12.882268+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:49.956548+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1116,9 +1676,9 @@
       "summary": "The latest Home and Away spoilers and cast announcements from the hit Channel 7 TV show. Get it all direct from Summer Bay.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:17.159392+00:00",
+      "fetchedAt": "2026-04-13T15:57:53.627631+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:17.159392+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:53.627631+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1132,9 +1692,9 @@
       "summary": "7NEWS brings you the latest The Voice news from Australia. Stay up to date with all of the breaking The Voice headlines. Today's The Voice Australia news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:18.379595+00:00",
+      "fetchedAt": "2026-04-13T15:57:56.402031+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:18.379595+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:56.402031+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1148,9 +1708,9 @@
       "summary": "7NEWS brings you the latest SAS Australia news. Stay up to date with all of the breaking SAS Australia headlines. Today's SAS Australia news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:20.338207+00:00",
+      "fetchedAt": "2026-04-13T15:57:58.345656+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:20.338207+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:58.345656+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1164,9 +1724,9 @@
       "summary": "The latest in My Kitchen Rules: My Kitchen Rules News, Updates & Today's Headlines",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:22.028531+00:00",
+      "fetchedAt": "2026-04-13T15:57:59.543264+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:22.028531+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:59.543264+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1180,9 +1740,9 @@
       "summary": "The latest in Farmer Wants A Wife: Farmer Wants A Wife News, Updates & Today's Headlines",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:23.922476+00:00",
+      "fetchedAt": "2026-04-13T15:58:01.069242+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:23.922476+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:01.069242+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1196,9 +1756,9 @@
       "summary": "The latest in Australian Idol: Australian Idol News, Updates & Today's Headlines",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:25.775319+00:00",
+      "fetchedAt": "2026-04-13T15:58:02.637860+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:25.775319+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:02.637860+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1212,9 +1772,9 @@
       "summary": "7NEWS brings you the latest Dancing With The Stars news from Australia. Stay up to date with all of the breaking Dancing With The Stars headlines. Today's Dancing With The Stars Australia news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:27.014403+00:00",
+      "fetchedAt": "2026-04-13T15:58:05.584046+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:27.014403+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:05.584046+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -1228,9 +1788,9 @@
       "summary": "Health tips, medical updates and general wellbeing news headlines from Australia and the world. 7News brings you the latest Health & Wellbeing news from Australia and around the world. Stay up to date with all of the breaking medical headlines & news updates.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:38.808924+00:00",
+      "fetchedAt": "2026-04-13T15:58:15.651110+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:38.808924+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:15.651110+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -1244,9 +1804,9 @@
       "summary": "7NEWS brings you the latest Shopping news from Australia and around the world. Stay up to date with all of the breaking Shopping headlines. Today's Shopping news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:40.651026+00:00",
+      "fetchedAt": "2026-04-13T15:58:16.816813+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:40.651026+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:16.816813+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -1260,9 +1820,9 @@
       "summary": "7NEWS brings you the latest Parenting news from Australia and around the world. Stay up to date with all of the breaking Parenting headlines, tips, advice & hacks. Today's Parenting news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:43.085217+00:00",
+      "fetchedAt": "2026-04-13T15:58:18.604731+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:43.085217+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:18.604731+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -1276,9 +1836,9 @@
       "summary": "Recipe ideas, cooking and food news headlines and recalls, hacks and information from Australia and the world. 7News brings you the latest Food news from Australia and around the world. Stay up to date with all of the breaking Food headlines & news updates.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:44.132051+00:00",
+      "fetchedAt": "2026-04-13T15:58:19.607025+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:44.132051+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:19.607025+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -1292,9 +1852,9 @@
       "summary": "7NEWS brings you the latest Personal Finance news from Australia and around the world. Stay up to date with all of the breaking Personal Finance headlines. Today's Personal Finance news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:46.220775+00:00",
+      "fetchedAt": "2026-04-13T15:58:21.358938+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:46.220775+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:21.358938+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -1308,9 +1868,9 @@
       "summary": "The latest news headlines on mortgages, interest rates, market insights, property prices and rental markets. 7News brings you the latest Real Estate news from Australia and around the world. Stay up to date with all of the breaking Property headlines & news updates.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:47.353576+00:00",
+      "fetchedAt": "2026-04-13T15:58:22.619127+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:47.353576+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:22.619127+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -1324,9 +1884,9 @@
       "summary": "7NEWS brings you the latest Pets news from Australia and around the world. Stay up to date with all of the breaking Pets headlines. Today's Pets news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:49.315232+00:00",
+      "fetchedAt": "2026-04-13T15:58:23.780887+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:49.315232+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:23.780887+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -1340,9 +1900,9 @@
       "summary": "Breaking world news headlines for today from the US, North America, UK and Europe, South America, Asia and the Middle East. Stay up to date with all of the breaking headlines from around the World. Today's World news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:05.922170+00:00",
+      "fetchedAt": "2026-04-13T15:58:40.607780+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:05.922170+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:40.607780+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1356,9 +1916,9 @@
       "summary": "7News brings you the latest news from Asia Pacific. Stay up to date with all of the breaking headlines from China, Japan, India, Russia and other countries in Asia Pacific. Today's Asian Pacific news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:07.207084+00:00",
+      "fetchedAt": "2026-04-13T15:58:42.019103+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:07.207084+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:42.019103+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1372,9 +1932,9 @@
       "summary": "7News brings you the latest news from North America. Stay up to date with all of the breaking headlines from United States of America and Canada. Today's Northern American news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:09.049062+00:00",
+      "fetchedAt": "2026-04-13T15:58:43.937241+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:09.049062+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:43.937241+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1388,9 +1948,9 @@
       "summary": "7News brings you the latest news from Middle East. Stay up to date with all of the breaking headlines from Saudi Arabia, Turkey, Lebanon, Egypt and other countries in the Middle East. Today's Middle Eastern news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:10.131081+00:00",
+      "fetchedAt": "2026-04-13T15:58:45.014691+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:10.131081+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:45.014691+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1404,9 +1964,9 @@
       "summary": "7NEWS brings you the latest news from Europe. Stay up to date with all of the breaking headlines from Europe. Today's European news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:11.978229+00:00",
+      "fetchedAt": "2026-04-13T15:58:46.138414+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:11.978229+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:46.138414+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1420,9 +1980,9 @@
       "summary": "7News brings you the latest news from Africa. Stay up to date with all of the breaking headlines from South Africa, Kenya, Nigeria and Zimbabwe and other countries in Africa. Today's African news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:13.706526+00:00",
+      "fetchedAt": "2026-04-13T15:58:47.360252+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:13.706526+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:47.360252+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1436,9 +1996,9 @@
       "summary": "7News brings you the latest news from Latin America. Stay up to date with all of the breaking headlines from Brazil, Mexico, Peru and other countries in Latin America. Today's Latin American news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:15.442531+00:00",
+      "fetchedAt": "2026-04-13T15:58:48.551120+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:15.442531+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:48.551120+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1452,9 +2012,9 @@
       "summary": "Stay up to date with all the latest breaking news headlines in sports, politics, entertainment, finance, weather, and business from 7NEWS. Live updates and today's news.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:18.052688+00:00",
+      "fetchedAt": "2026-04-13T15:58:50.285101+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:18.052688+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:50.285101+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1468,9 +2028,9 @@
       "summary": "Australia federal politics news from Labor, Liberal and The Greens, with election coverage and policy information. 7News brings you the latest Federal Politics news from Australia. Stay up to date with all of the breaking Australian Politics headlines & election results. Today's Federal Politics news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:19.806701+00:00",
+      "fetchedAt": "2026-04-13T15:58:52.205713+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:19.806701+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:52.205713+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -1484,9 +2044,9 @@
       "summary": "7NEWS brings you the latest State Politics news from Australia. Stay up to date with all of the breaking State Political headlines. Today's State Politics news, live updates & all the latest breaking stories from 7NEWS.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:21.533912+00:00",
+      "fetchedAt": "2026-04-13T15:58:53.400288+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:21.533912+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:53.400288+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -1500,9 +2060,9 @@
       "summary": "The latest world politics news headlines, information and videos covering Donald Trump, Brexit and other world events. 7News brings you the latest World Political. Stay up to date with all of the breaking global political headlines & results. Today's world politics news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:23.770344+00:00",
+      "fetchedAt": "2026-04-13T15:58:55.213755+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:23.770344+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:55.213755+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -1516,9 +2076,9 @@
       "summary": "7News brings you the latest NSW Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's NSW political news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:51.966688+00:00",
+      "fetchedAt": "2026-04-13T15:59:21.317218+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:51.966688+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:21.317218+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -1532,9 +2092,9 @@
       "summary": "7News brings you the latest Victoria Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's Vic political news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:58.199626+00:00",
+      "fetchedAt": "2026-04-13T15:59:29.126673+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:58.199626+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:29.126673+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -1548,9 +2108,9 @@
       "summary": "7News brings you the latest Queensland Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's QLD political news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:04.367538+00:00",
+      "fetchedAt": "2026-04-13T15:59:34.723037+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:04.367538+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:34.723037+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -1564,9 +2124,9 @@
       "summary": "7News brings you the latest SA Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's SA political news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:13.778299+00:00",
+      "fetchedAt": "2026-04-13T15:59:45.064092+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:13.778299+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:45.064092+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
@@ -1580,557 +2140,13 @@
       "summary": "7News brings you the latest WA Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's WA political news, live updates & all the latest breaking stories from 7News.",
       "publishedAt": "2026-04-12T16:00:00+00:00",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:22.422298+00:00",
+      "fetchedAt": "2026-04-13T15:59:52.351555+00:00",
       "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:22.422298+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:52.351555+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Politics",
       "sourceCategories": [
         "Politics"
-      ]
-    },
-    {
-      "id": "97daa95212eac33f1183232e1e9c0b27",
-      "title": "ACT Politics News: Latest & Breaking Political News from Canberra | 7NEWS",
-      "link": "https://7news.com.au/politics/act",
-      "summary": "7News brings you the latest ACT Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's ACT political news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:30.666802+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:30.666802+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Politics",
-      "sourceCategories": [
-        "Politics"
-      ]
-    },
-    {
-      "id": "283927644a6c5f8a1b30b099f2ef03bb",
-      "title": "Tasmania Politics News: Latest & Breaking Political News from Tas | 7NEWS",
-      "link": "https://7news.com.au/politics/tas",
-      "summary": "7News brings you the latest Tasmannia Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's TAS political news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:36.154334+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:36.154334+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Politics",
-      "sourceCategories": [
-        "Politics"
-      ]
-    },
-    {
-      "id": "a324df8710bf8372b243f7f7cebac399",
-      "title": "NT Politics News: Latest & Breaking Political News from Northern Territory | 7NEWS",
-      "link": "https://7news.com.au/politics/nt",
-      "summary": "7News brings you the latest NT Politics news from Australia. Stay up to date with all of the breaking state politics headlines & election results. Today's NT political news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:44.436349+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:44.436349+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Politics",
-      "sourceCategories": [
-        "Politics"
-      ]
-    },
-    {
-      "id": "f10c49a7d29c0826d5d33b36f09c338e",
-      "title": "Ukraine News: Latest & Breaking Ukraine News Headlines & Updates | 7NEWS",
-      "link": "https://7news.com.au/news/ukraine",
-      "summary": "7NEWS brings you the latest Ukraine news from Australia and around the world. Stay up to date with all of the breaking Ukrainian headlines. Today's Ukrainian news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:03.108365+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:03.108365+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "f76511624c178b390236a72ec3d539be",
-      "title": "Finance News: Latest & Breaking Financial Headlines - Today's Finance News Updates from Australia | 7NEWS",
-      "link": "https://7news.com.au/business/finance",
-      "summary": "The latest news headlines in finance, business, technology and banking from Australia and the world. Stay up to date with all of the breaking Finance headlines. Today's Financial news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:45.476056+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:45.476056+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Business",
-      "sourceCategories": [
-        "Business"
-      ]
-    },
-    {
-      "id": "5b40ef2c956cbd3516d3919415dd6fa2",
-      "title": "Bank News: Latest Banking News from Australia | 7NEWS",
-      "link": "https://7news.com.au/business/banking",
-      "summary": "The latest banking news from Australia including interest rates and updates from the big four banks. Stay up to date with all of the breaking Bank headlines. Today's Banking news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:47.814942+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:47.814942+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Business",
-      "sourceCategories": [
-        "Business"
-      ]
-    },
-    {
-      "id": "15e577b2af8f8ef107d3eedb4d3307bf",
-      "title": "Retail News: Latest Retail Industry News Australia | 7NEWS",
-      "link": "https://7news.com.au/business/retail",
-      "summary": "Retail industry headlines, bargains, updates and news from Australian department stores and shopping centres. Stay up to date with all of the breaking Retail headlines. Today's Retail news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:48.977443+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:48.977443+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Business",
-      "sourceCategories": [
-        "Business"
-      ]
-    },
-    {
-      "id": "1d284872a0f60ef0f6ea8a65e60bdae9",
-      "title": "Economic News: Latest Economy News & Updates from Australia and Around the World | 7NEWS",
-      "link": "https://7news.com.au/business/economy",
-      "summary": "7News brings you the latest Economic news from Australia and around the world. Stay up to date with all of the breaking Economic headlines. Today's Economy news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:50.765961+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:50.765961+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Business",
-      "sourceCategories": [
-        "Business"
-      ]
-    },
-    {
-      "id": "b29adceb09a4f30a04e6b7a4ff186647",
-      "title": "Stock Market News: Today's Market Headlines & Latest Updates from Australia | 7NEWS",
-      "link": "https://7news.com.au/business/markets",
-      "summary": "ASX, Wall Street & NASDAQ stock market news, interest rates and financial headlines from Australia and the world. Stay up to date with all of the breaking Stock Market headlines. Today's Market news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:52.552727+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:52.552727+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Business",
-      "sourceCategories": [
-        "Business"
-      ]
-    },
-    {
-      "id": "017eac2aff8c3c8ab5ebd66b160b8020",
-      "title": "Business News: Latest & Breaking Business News, Updates and Today's Headlines from Australia | 7NEWS",
-      "link": "https://7news.com.au/business",
-      "summary": "The latest business news including market updates, mining news, property development and the start-ups you should know about. Stay up to date with all of the breaking Business headlines. Today's Business news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:58.907681+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:58.907681+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Business",
-      "sourceCategories": [
-        "Business"
-      ]
-    },
-    {
-      "id": "82acfae0574d58c9b7f983e383e37101",
-      "title": "Human Interest News: Latest & Breaking Human Interest Headlines & News Updates from TodaY | 7NEWS",
-      "link": "https://7news.com.au/lifestyle/human-interest",
-      "summary": "7NEWS brings you the latest Human Interest news from Australia and around the world. Stay up to date with all of the breaking Human Interest headlines. Today's Human Interest news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:21:48.299867+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:21:48.299867+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Lifestyle",
-      "sourceCategories": [
-        "Lifestyle"
-      ]
-    },
-    {
-      "id": "d3d4c04d0caa7bc1951d05ac4fba4991",
-      "title": "Tech Reviews News: Latest & Breaking Tech Reviews Headlines & News Updates from Today | 7NEWS",
-      "link": "https://7news.com.au/technology/reviews",
-      "summary": "7NEWS brings you the latest Tech Reviews news from Australia and around the world. Stay up to date with all of the breaking Tech Reviews headlines. Today's Tech Reviews news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:03.911613+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:03.911613+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Technology",
-      "sourceCategories": [
-        "Technology"
-      ]
-    },
-    {
-      "id": "1fac91e451429a67ef58fdba7b57d71a",
-      "title": "Space News: Latest & Breaking Space Headlines & News Updates from Today | 7NEWS",
-      "link": "https://7news.com.au/technology/space",
-      "summary": "7NEWS brings you the latest Space news from Australia and around the world. Stay up to date with all of the breaking Space headlines. Today's Space news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:05.627430+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:05.627430+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Technology",
-      "sourceCategories": [
-        "Technology"
-      ]
-    },
-    {
-      "id": "1d92277a6f1a37dcbce0d1a0de9f8180",
-      "title": "Gaming News: Latest & Breaking Gaming Headlines & News Updates from Today | 7NEWS",
-      "link": "https://7news.com.au/technology/gaming",
-      "summary": "7NEWS brings you the latest Gaming news from Australia and around the world. Stay up to date with all of the breaking Gaming headlines. Today's Gaming news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:07.354220+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:07.354220+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Technology",
-      "sourceCategories": [
-        "Technology"
-      ]
-    },
-    {
-      "id": "f254c706ab512ee7bdd1fd96fd8847a7",
-      "title": "Science News: Latest & Breaking Science Headlines & News Updates from Today | 7NEWS",
-      "link": "https://7news.com.au/technology/science",
-      "summary": "7NEWS brings you the latest Science news from Australia and around the world. Stay up to date with all of the breaking Science headlines. Today's Science news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:09.088641+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:09.088641+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Technology",
-      "sourceCategories": [
-        "Technology"
-      ]
-    },
-    {
-      "id": "26515562804fa61681f8900dc33c91ca",
-      "title": "Smartphones News: Latest & Breaking Smartphones Headlines & News Updates from Today | 7NEWS",
-      "link": "https://7news.com.au/technology/smartphones",
-      "summary": "7NEWS brings you the latest Smartphones news from Australia and around the world. Stay up to date with all of the breaking Smartphones headlines. Today's Smartphones news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:11.003183+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:11.003183+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Technology",
-      "sourceCategories": [
-        "Technology"
-      ]
-    },
-    {
-      "id": "56ae2ee225454a5ad7be41be8f59fc69",
-      "title": "Gadget News: Latest & Breaking Gadget Headlines & News Updates from Today | 7NEWS",
-      "link": "https://7news.com.au/technology/gadgets",
-      "summary": "7NEWS brings you the latest Gadget news from Australia and around the world. Stay up to date with all of the breaking Gadget headlines. Today's Gadget news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:12.548609+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:12.548609+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Technology",
-      "sourceCategories": [
-        "Technology"
-      ]
-    },
-    {
-      "id": "f706cc4ce7e8d0b73042e640bb2247c7",
-      "title": "Royal News: Todays Latest Royal Family News, Headlines & Updates | 7NEWS",
-      "link": "https://7news.com.au/entertainment/royal-family",
-      "summary": "7NEWS brings you the latest Royal Family news from Britain and around the world. Stay up to date with all of the breaking Royal Family headlines & gossip. Today's Royal news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:00.400410+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:00.400410+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Entertainment",
-      "sourceCategories": [
-        "Entertainment"
-      ]
-    },
-    {
-      "id": "f986009fb22379d0dccd10bddacb5f27",
-      "title": "Crime News: Latest & Breaking Crime Headlines & News Updates from Today | 7NEWS",
-      "link": "https://7news.com.au/news/crime",
-      "summary": "7NEWS brings you the latest Crime news from Australia and around the world. Stay up to date with all of the breaking Crime headlines. Today's Crime news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:17.154930+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:17.154930+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "2b615b835d538a9e514fd577dc829cae",
-      "title": "Queensland Police News: Latest & Breaking Qld Police Headlines & News Updates from Australia | 7NEWS",
-      "link": "https://7news.com.au/news/queensland-police",
-      "summary": "7NEWS brings you the latest Queensland Police news from Australia. Stay up to date with all of the breaking Police headlines. Today's Qld Police news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:21.348910+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:21.348910+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "2fccd0b3b75c1f9e714c2f4b16127b1e",
-      "title": "Perth News: Latest & Breaking News Today - Local News Headlines & Updates from Perth WA | 7NEWS",
-      "link": "https://7news.com.au/news/perth",
-      "summary": "7NEWS brings you the latest local news from Perth. Stay up to date with all of the breaking headlines from Perth WA. Today's Perth news, live updates & all the latest breaking news stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:29.255355+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:29.255355+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "3b0c56b654bbe56db59c5e8959683c65",
-      "title": "Public Health News: Latest & Breaking Public Health Headlines & News Updates from Today | 7NEWS",
-      "link": "https://7news.com.au/news/public-health",
-      "summary": "7NEWS brings you the latest Public Health news from Australia and around the world. Stay up to date with all of the breaking Public Health headlines. Today's Public Health news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:32.154637+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:32.154637+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "092ecc51043f35e48c652fc87110b8a6",
-      "title": "Queensland News: Latest & Breaking Local News Headlines from QLD | 7NEWS",
-      "link": "https://7news.com.au/news/qld",
-      "summary": "7News brings you the latest local news from Queensland. Stay up to date with all of the breaking headlines from QLD. Today's Queensland news, live updates & the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:39.185775+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:39.185775+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "301e2601af47a573f813d93fce42c081",
-      "title": "Crime News Melbourne: Latest & Breaking Crime News, Updates and Today's Headlines from Melbourne Vic | 7NEWS",
-      "link": "https://7news.com.au/news/crime-melbourne",
-      "summary": "7NEWS brings you the latest Crime Melbourne news. Stay up to date with all of the breaking Crime headlines from Melbourne Vic. Today's Crime news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:41.033422+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:41.033422+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "6c0939bd6d0a7076e7b018c88da709e0",
-      "title": "SA News: Latest & Breaking Local News Headlines from South Australia | 7NEWS",
-      "link": "https://7news.com.au/news/sa",
-      "summary": "7News brings you the latest local news from SA. Stay up to date with all of the breaking headlines from South Australia. Today's South Australian news, live updates & the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:42.423255+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:42.423255+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "5c15da80b985582f93936669073e611f",
-      "title": "NSW Police News: Latest & Breaking New South Wales Police Headlines & News Updates from Australia | 7NEWS",
-      "link": "https://7news.com.au/news/nsw-police",
-      "summary": "7NEWS brings you the latest NSW Police news from Australia. Stay up to date with all of the breaking Police headlines. Today's New South Wales Police news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:46.155122+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:46.155122+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "033f061b32347bfc5d87eefc723eff4b",
-      "title": "Sydney News: Latest & Breaking News Today - Local News Headlines & Updates from Sydney NSW | 7NEWS",
-      "link": "https://7news.com.au/news/sydney",
-      "summary": "7NEWS brings you the latest local news from Sydney. Stay up to date with all of the breaking headlines from Sydney NSW. Today's Sydney news, live updates & all the latest breaking news stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:50.658492+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:50.658492+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "8cddf179ba93c20c9bb8d0108ede5db5",
-      "title": "Melbourne News: Latest & Breaking News Today - Local News Headlines & Updates from Melbourne VIC | 7NEWS",
-      "link": "https://7news.com.au/news/melbourne",
-      "summary": "7NEWS brings you the latest local news from Melbourne. Stay up to date with all of the breaking headlines from Melbourne VIC. Today's Melbourne news, live updates & all the latest breaking news stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:53.175482+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:53.175482+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "b6f23dbce2955160ca9fad8f26e9d8fb",
-      "title": "Victoria Police News: Latest & Breaking Vic Police Headlines & News Updates from Australia | 7NEWS",
-      "link": "https://7news.com.au/news/victoria-police",
-      "summary": "7NEWS brings you the latest Victoria Police news from Australia. Stay up to date with all of the breaking Police headlines. Today's Vic Police news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:54.440502+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:54.440502+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "8ce0ba3f73a7681a79fd7f255532f49c",
-      "title": "Vic News: Latest & Breaking Local News Headlines from Victoria | 7NEWS",
-      "link": "https://7news.com.au/news/vic",
-      "summary": "7News brings you the latest local news from Victoria. Stay up to date with all of the breaking headlines from VIC. Today's Victorian news, live updates & the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:56.982957+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:56.982957+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "f65f7ca8ecf0352c592b8a410c778aaa",
-      "title": "Tasmania News: Latest & Breaking Local Tasmanian News Headlines | 7NEWS",
-      "link": "https://7news.com.au/news/tas",
-      "summary": "7News brings you the latest local news from Tasmania. Stay up to date with all of the breaking headlines from TAS. Today's Tasmanian news, live updates & the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:58.834263+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:58.834263+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "147634b7f40030db7cae5c291cc0e6a2",
-      "title": "War News: Latest & Breaking Conflict Headlines & News Updates from Today | 7NEWS",
-      "link": "https://7news.com.au/news/conflict",
-      "summary": "7NEWS brings you the latest War news from Australia and around the world. Stay up to date with all of the breaking Conflict and War headlines. Today's War news, live updates & all the latest breaking stories from 7NEWS.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:24:03.526016+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:24:03.526016+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "85fa573d72afc7cfee6f6416d1fdb5af",
-      "title": "WA News: Latest & Breaking Local News Headlines from Western Australia | 7NEWS",
-      "link": "https://7news.com.au/news/wa",
-      "summary": "7News brings you the latest local news from WA and Perth now. Stay up to date with all of the breaking headlines from Western Australia. Today's Western Australian news, live updates & the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:24:10.821035+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:24:10.821035+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "20578e28a94e5de4a122f73d30f25c87",
-      "title": "Australian News: Latest & Breaking National News in Australia | 7NEWS",
-      "link": "https://7news.com.au/news/australia",
-      "summary": "7News brings you the latest local news from Australia. Stay up to date with all of the breaking sport, politics, entertainment, finance, weather and business headlines. Today's Australian news, live updates & all the latest breaking stories from 7News.",
-      "publishedAt": "2026-04-12T16:00:00+00:00",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:24:24.433110+00:00",
-      "publishedAtLocal": "2026-04-13T02:00:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:24:24.433110+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
       ]
     },
     {
@@ -2140,9 +2156,9 @@
       "summary": "‘This is something I have been pushing for since I was elected.’",
       "publishedAt": "2026-04-12T12:35:32.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:33.644660+00:00",
+      "fetchedAt": "2026-04-13T15:59:03.688528+00:00",
       "publishedAtLocal": "2026-04-12T22:35:32+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:33.644660+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:03.688528+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2156,25 +2172,9 @@
       "summary": "The announcement came after US-Iran peace talks collapsed without a deal.",
       "publishedAt": "2026-04-12T12:30:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:34.998595+00:00",
+      "fetchedAt": "2026-04-13T15:59:06.452210+00:00",
       "publishedAtLocal": "2026-04-12T22:30:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:34.998595+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "2149cba1e048df21285563671bbed420",
-      "title": "Australia test-fires first locally assembled missiles in over 50 years",
-      "link": "https://7news.com.au/news/australia-test-fires-first-locally-assembled-missiles-in-over-50-years-c-22129858",
-      "summary": "‘This starts to build additional capacity, really, for the global demand.’",
-      "publishedAt": "2026-04-12T11:50:10.000Z",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:52.021410+00:00",
-      "publishedAtLocal": "2026-04-12T21:50:10+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:52.021410+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:06.452210+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2188,9 +2188,9 @@
       "summary": "Umpire audio picked up the moment the player was told he was on report.",
       "publishedAt": "2026-04-12T11:49:02.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:10.872865+00:00",
+      "fetchedAt": "2026-04-13T16:01:42.001366+00:00",
       "publishedAtLocal": "2026-04-12T21:49:02+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:10.872865+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:42.001366+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2204,9 +2204,9 @@
       "summary": "A hidden danger could be lurking inside every glass of water.",
       "publishedAt": "2026-04-12T11:27:42.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:54.887872+00:00",
+      "fetchedAt": "2026-04-13T15:58:29.205832+00:00",
       "publishedAtLocal": "2026-04-12T21:27:42+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:54.887872+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:29.205832+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2220,9 +2220,9 @@
       "summary": "A crucial genetic change that has been hiding in plain sight has been identified.",
       "publishedAt": "2026-04-12T10:24:39.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:56.060317+00:00",
+      "fetchedAt": "2026-04-13T15:58:31.324350+00:00",
       "publishedAtLocal": "2026-04-12T20:24:39+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:56.060317+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:31.324350+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2236,9 +2236,9 @@
       "summary": "The young gun ‘let himself down’ after giving away five free kicks and a 50m penalty.",
       "publishedAt": "2026-04-12T10:07:26.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:15.978052+00:00",
+      "fetchedAt": "2026-04-13T16:04:37.600236+00:00",
       "publishedAtLocal": "2026-04-12T20:07:26+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:15.978052+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:37.600236+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2252,9 +2252,9 @@
       "summary": "‘I look forward to audiences meeting Amelia in the coming months.’",
       "publishedAt": "2026-04-12T09:53:07.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:29.635563+00:00",
+      "fetchedAt": "2026-04-13T15:58:06.942293+00:00",
       "publishedAtLocal": "2026-04-12T19:53:07+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:29.635563+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:06.942293+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -2268,9 +2268,9 @@
       "summary": "It wouldn’t be shared with other jurisdictions, and the state government would still expect its cut of the national stockpile.",
       "publishedAt": "2026-04-12T09:24:30.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:54.444579+00:00",
+      "fetchedAt": "2026-04-13T16:01:23.951606+00:00",
       "publishedAtLocal": "2026-04-12T19:24:30+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:54.444579+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:23.951606+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2284,9 +2284,9 @@
       "summary": "The debate comes as a report found that most criminal cases end in guilty pleas, not trials, helping with heavy caseloads.",
       "publishedAt": "2026-04-12T08:36:38.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:24:26.789694+00:00",
+      "fetchedAt": "2026-04-13T16:04:12.640127+00:00",
       "publishedAtLocal": "2026-04-12T18:36:38+10:00",
-      "fetchedAtLocal": "2026-04-14T00:24:26.789694+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:12.640127+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Podcasts",
       "sourceCategories": [
@@ -2300,29 +2300,13 @@
       "summary": "‘It’s disappointing that we perform like that in front of them.’",
       "publishedAt": "2026-04-12T08:31:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:12.906888+00:00",
+      "fetchedAt": "2026-04-13T16:01:43.251211+00:00",
       "publishedAtLocal": "2026-04-12T18:31:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:12.906888+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:43.251211+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
         "Sport"
-      ]
-    },
-    {
-      "id": "42cdfa6aa0e26cb1e3ebf97b788dc3c0",
-      "title": "Queen Mary of Denmark’s father, John Dalgleish Donaldson, dies aged 84 in Tasmania",
-      "link": "https://7news.com.au/news/queen-mary-of-denmarks-father-john-dalgleish-donaldson-dies-aged-84-in-tasmania-c-22129387",
-      "summary": "The Queen paid tribute to her father in an emotional statement.",
-      "publishedAt": "2026-04-12T07:05:33.000Z",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:02.195527+00:00",
-      "publishedAtLocal": "2026-04-12T17:05:33+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:02.195527+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
       ]
     },
     {
@@ -2332,9 +2316,9 @@
       "summary": "He escaped from a hospital while awaiting deportation.",
       "publishedAt": "2026-04-12T06:48:12.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:55.729322+00:00",
+      "fetchedAt": "2026-04-13T16:05:31.616005+00:00",
       "publishedAtLocal": "2026-04-12T16:48:12+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:55.729322+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:31.616005+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2348,25 +2332,9 @@
       "summary": "‘It would also be my dream knowing that Henry’s big goals don’t have to be impacted by my poor health.’",
       "publishedAt": "2026-04-12T03:55:09.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:52.524045+00:00",
+      "fetchedAt": "2026-04-13T15:57:19.143590+00:00",
       "publishedAtLocal": "2026-04-12T13:55:09+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:52.524045+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "5ee7cab1c69bfc77fb713d63c829f7d7",
-      "title": "Three men charged after police chase uncovers alleged ‘kill car’ linked to Sydney shootings",
-      "link": "https://7news.com.au/news/three-men-charged-after-police-chase-uncovers-alleged-kill-car-linked-to-sydney-shootings-c-22128727",
-      "summary": "During the chase, police allege the men threw jerry cans from the vehicle on a motorway.",
-      "publishedAt": "2026-04-12T02:31:40.000Z",
-      "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:24:15.596945+00:00",
-      "publishedAtLocal": "2026-04-12T12:31:40+10:00",
-      "fetchedAtLocal": "2026-04-14T00:24:15.596945+10:00",
+      "fetchedAtLocal": "2026-04-14T01:57:19.143590+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2380,9 +2348,9 @@
       "summary": "Jason Day remained cool in crisis as chaos unfolded around him and now has a shot at the green jacket.",
       "publishedAt": "2026-04-12T00:50:11.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:56.224941+00:00",
+      "fetchedAt": "2026-04-13T16:02:27.286003+00:00",
       "publishedAtLocal": "2026-04-12T10:50:11+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:56.224941+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:27.286003+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2396,9 +2364,9 @@
       "summary": "‘Just a terrible question. Next question.’",
       "publishedAt": "2026-04-11T23:40:24.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:58.182609+00:00",
+      "fetchedAt": "2026-04-13T16:02:28.296159+00:00",
       "publishedAtLocal": "2026-04-12T09:40:24+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:58.182609+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:28.296159+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2412,9 +2380,9 @@
       "summary": "Follow along as we cover all the breaking news of the tenuous ceasefire holding back conflict between Iran, the United States and Israel.",
       "publishedAt": "2026-04-11T21:28:46.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:37.304960+00:00",
+      "fetchedAt": "2026-04-13T15:59:08.188242+00:00",
       "publishedAtLocal": "2026-04-12T07:28:46+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:37.304960+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:08.188242+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2428,9 +2396,9 @@
       "summary": "‘If anyone was in there they weren’t going to be able to get out.’",
       "publishedAt": "2026-04-11T12:39:41.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:55.867574+00:00",
+      "fetchedAt": "2026-04-13T16:01:25.808259+00:00",
       "publishedAtLocal": "2026-04-11T22:39:41+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:55.867574+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:25.808259+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2444,9 +2412,9 @@
       "summary": "Ads will play across television and digital platforms on how you can play your part.",
       "publishedAt": "2026-04-11T12:10:43.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:39.300137+00:00",
+      "fetchedAt": "2026-04-13T15:59:09.476402+00:00",
       "publishedAtLocal": "2026-04-11T22:10:43+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:39.300137+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:09.476402+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2460,9 +2428,9 @@
       "summary": "Experts are warning of the serious dangers the counterfeit versions possess.",
       "publishedAt": "2026-04-11T09:23:03.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:53.753427+00:00",
+      "fetchedAt": "2026-04-13T15:58:27.426751+00:00",
       "publishedAtLocal": "2026-04-11T19:23:03+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:53.753427+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:27.426751+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2476,9 +2444,9 @@
       "summary": "‘There’s a certain type of politician that when they feel uncomfortable ... they just get personal.’",
       "publishedAt": "2026-04-11T07:48:50.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:41.138955+00:00",
+      "fetchedAt": "2026-04-13T15:59:10.490388+00:00",
       "publishedAtLocal": "2026-04-11T17:48:50+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:41.138955+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:10.490388+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2492,9 +2460,9 @@
       "summary": "The superstar was odds-on to make it 12 from 12, but fell short in the Queen Elizabeth Stakes.",
       "publishedAt": "2026-04-11T07:26:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:43.690623+00:00",
+      "fetchedAt": "2026-04-13T16:02:12.106235+00:00",
       "publishedAtLocal": "2026-04-11T17:26:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:43.690623+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:12.106235+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2508,9 +2476,9 @@
       "summary": "The 22-year-old held off a host of established stars to clinch victory.",
       "publishedAt": "2026-04-11T07:02:29.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:28.910596+00:00",
+      "fetchedAt": "2026-04-13T16:01:55.808613+00:00",
       "publishedAtLocal": "2026-04-11T17:02:29+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:28.910596+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:55.808613+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2524,9 +2492,9 @@
       "summary": "The longshot held off challengers to win the marathon staying test.",
       "publishedAt": "2026-04-11T06:49:47.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:44.909841+00:00",
+      "fetchedAt": "2026-04-13T16:02:13.125176+00:00",
       "publishedAtLocal": "2026-04-11T16:49:47+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:44.909841+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:13.125176+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2540,9 +2508,9 @@
       "summary": "Alleged crime syndicates have committed similar offences across two states.",
       "publishedAt": "2026-04-11T03:56:13.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:57.670287+00:00",
+      "fetchedAt": "2026-04-13T16:01:26.974234+00:00",
       "publishedAtLocal": "2026-04-11T13:56:13+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:57.670287+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:26.974234+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2556,9 +2524,9 @@
       "summary": "‘A cyclone of this intensity leaves no other option.’",
       "publishedAt": "2026-04-11T02:27:16.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:29.952184+00:00",
+      "fetchedAt": "2026-04-13T16:01:57.209107+00:00",
       "publishedAtLocal": "2026-04-11T12:27:16+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:29.952184+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:57.209107+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2572,9 +2540,9 @@
       "summary": "Applause erupted in NASA’s mission control as astronauts emerged from the spacecraft.",
       "publishedAt": "2026-04-11T00:26:31.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:52.276235+00:00",
+      "fetchedAt": "2026-04-13T16:00:22.766506+00:00",
       "publishedAtLocal": "2026-04-11T10:26:31+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:52.276235+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:22.766506+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2588,9 +2556,9 @@
       "summary": "Advocates say uncertainty is weighing heavily on the disability community, warning cost-cutting must not come at the expense of essential support.",
       "publishedAt": "2026-04-10T21:53:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:43.141937+00:00",
+      "fetchedAt": "2026-04-13T15:59:12.721389+00:00",
       "publishedAtLocal": "2026-04-11T07:53:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:43.141937+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:12.721389+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2604,9 +2572,9 @@
       "summary": "Follow along as we cover all the breaking news as the conflict between Iran, the United States and Israel escalates.",
       "publishedAt": "2026-04-10T21:37:47.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:54.366395+00:00",
+      "fetchedAt": "2026-04-13T16:00:24.045888+00:00",
       "publishedAtLocal": "2026-04-11T07:37:47+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:54.366395+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:24.045888+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2620,9 +2588,9 @@
       "summary": "‘I never thought it would happen to me.’",
       "publishedAt": "2026-04-10T21:06:20.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:58.086562+00:00",
+      "fetchedAt": "2026-04-13T15:58:33.556320+00:00",
       "publishedAtLocal": "2026-04-11T07:06:20+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:58.086562+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:33.556320+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -2636,9 +2604,9 @@
       "summary": "As peace talks are set to begin, the ceasefire remains fragile.",
       "publishedAt": "2026-04-10T12:03:54.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:55.588357+00:00",
+      "fetchedAt": "2026-04-13T16:00:25.815605+00:00",
       "publishedAtLocal": "2026-04-10T22:03:54+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:55.588357+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:25.815605+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2652,9 +2620,9 @@
       "summary": "Some are choosing between food and treatment, with many unable to afford non-subsidised medicines, a study found.",
       "publishedAt": "2026-04-10T07:17:56.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:21:32.727370+00:00",
+      "fetchedAt": "2026-04-13T16:02:58.742629+00:00",
       "publishedAtLocal": "2026-04-10T17:17:56+10:00",
-      "fetchedAtLocal": "2026-04-14T00:21:32.727370+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:58.742629+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2668,9 +2636,9 @@
       "summary": "It took weeks of testing to uncover baking’s top secrets — and now the public needs to know.",
       "publishedAt": "2026-04-10T06:42:00.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:21:42.981577+00:00",
+      "fetchedAt": "2026-04-13T16:03:07.063325+00:00",
       "publishedAtLocal": "2026-04-10T16:42:00+10:00",
-      "fetchedAtLocal": "2026-04-14T00:21:42.981577+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:07.063325+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -2684,9 +2652,9 @@
       "summary": "Disgraced former prince Andrew Mountbatten-Windsor has been criticised for still ‘giving it large’ after his eviction from the Royal Lodge.",
       "publishedAt": "2026-04-10T06:07:55.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:38.050831+00:00",
+      "fetchedAt": "2026-04-13T16:04:59.779202+00:00",
       "publishedAtLocal": "2026-04-10T16:07:55+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:38.050831+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:59.779202+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2700,9 +2668,9 @@
       "summary": "Four teams will transform two rundown homes under the watchful eye of billionaire businessman Adrian Portelli.",
       "publishedAt": "2026-04-10T05:58:53.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:31.434425+00:00",
+      "fetchedAt": "2026-04-13T15:58:08.299788+00:00",
       "publishedAtLocal": "2026-04-10T15:58:53+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:31.434425+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:08.299788+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -2716,9 +2684,9 @@
       "summary": "McDonald’s has quietly discontinued a popular menu item, leaving fans of the dessert shocked and ‘heartbroken’.",
       "publishedAt": "2026-04-10T05:35:16.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:21:30.780132+00:00",
+      "fetchedAt": "2026-04-13T16:02:57.696459+00:00",
       "publishedAtLocal": "2026-04-10T15:35:16+10:00",
-      "fetchedAtLocal": "2026-04-14T00:21:30.780132+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:57.696459+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2732,9 +2700,9 @@
       "summary": "His girlfriend made the shocking discovery at 4.15am.",
       "publishedAt": "2026-04-10T04:51:47.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:57.099504+00:00",
+      "fetchedAt": "2026-04-13T16:00:27.785596+00:00",
       "publishedAtLocal": "2026-04-10T14:51:47+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:57.099504+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:27.785596+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2748,9 +2716,9 @@
       "summary": "The country voted to put Harlan, Kalani and Kesha through to the competition’s grand final.",
       "publishedAt": "2026-04-10T04:44:22.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:24:07.705171+00:00",
+      "fetchedAt": "2026-04-13T16:04:50.846431+00:00",
       "publishedAtLocal": "2026-04-10T14:44:22+10:00",
-      "fetchedAtLocal": "2026-04-14T00:24:07.705171+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:50.846431+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -2764,9 +2732,9 @@
       "summary": "A statement has been issued and officials are working closely with emergency services.",
       "publishedAt": "2026-04-10T03:38:41.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:31.111589+00:00",
+      "fetchedAt": "2026-04-13T16:01:58.975211+00:00",
       "publishedAtLocal": "2026-04-10T13:38:41+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:31.111589+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:58.975211+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2780,9 +2748,9 @@
       "summary": "The Bridesmaids star has previously spoken about body image and how her attitude has shifted.",
       "publishedAt": "2026-04-10T03:33:55.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:35.282774+00:00",
+      "fetchedAt": "2026-04-13T15:58:13.022859+00:00",
       "publishedAtLocal": "2026-04-10T13:33:55+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:35.282774+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:13.022859+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -2796,9 +2764,25 @@
       "summary": "The best-selling novelist has long appeared in public in a wig and glasses while writing under a pseudonym.",
       "publishedAt": "2026-04-10T01:47:41.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:16:37.064400+00:00",
+      "fetchedAt": "2026-04-13T15:58:14.489141+00:00",
       "publishedAtLocal": "2026-04-10T11:47:41+10:00",
-      "fetchedAtLocal": "2026-04-14T00:16:37.064400+10:00",
+      "fetchedAtLocal": "2026-04-14T01:58:14.489141+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Entertainment",
+      "sourceCategories": [
+        "Entertainment"
+      ]
+    },
+    {
+      "id": "31e70e56ea26981da8affd0ba9a98bd2",
+      "title": "Hip-hop legend Afrika Bambaataa dead at 67",
+      "link": "https://7news.com.au/entertainment/hip-hop-legend-afrika-bambaataa-dead-at-67-c-22120896",
+      "summary": "‘With his passing, we reflect on his contributions to the genre and broader culture.’",
+      "publishedAt": "2026-04-10T00:20:05.000Z",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:35.566483+00:00",
+      "publishedAtLocal": "2026-04-10T10:20:05+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:35.566483+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Entertainment",
       "sourceCategories": [
@@ -2812,9 +2796,9 @@
       "summary": "‘With the greatest of respect, I just don’t think this is a particularly serious contribution.’",
       "publishedAt": "2026-04-09T23:28:46.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:18:59.288949+00:00",
+      "fetchedAt": "2026-04-13T16:00:29.364251+00:00",
       "publishedAtLocal": "2026-04-10T09:28:46+10:00",
-      "fetchedAtLocal": "2026-04-14T00:18:59.288949+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:29.364251+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2828,9 +2812,9 @@
       "summary": "The Aussie veteran has hopped straight off the plane and walked into a nightmare.",
       "publishedAt": "2026-04-09T23:27:57.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:22.784612+00:00",
+      "fetchedAt": "2026-04-13T16:01:50.726045+00:00",
       "publishedAtLocal": "2026-04-10T09:27:57+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:22.784612+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:50.726045+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2844,9 +2828,9 @@
       "summary": "The US first lady has pushed the scandal back into the spotlight.",
       "publishedAt": "2026-04-09T23:18:21.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:12.414470+00:00",
+      "fetchedAt": "2026-04-13T16:00:42.047364+00:00",
       "publishedAtLocal": "2026-04-10T09:18:21+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:12.414470+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:42.047364+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2860,9 +2844,9 @@
       "summary": "Follow along as we cover all the breaking news as the conflict between Iran, the United States and Israel escalates.",
       "publishedAt": "2026-04-09T20:22:13.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:01.318022+00:00",
+      "fetchedAt": "2026-04-13T16:00:30.485308+00:00",
       "publishedAtLocal": "2026-04-10T06:22:13+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:01.318022+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:30.485308+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2876,9 +2860,9 @@
       "summary": "China’s recent military deployments in our region prompted the alert.",
       "publishedAt": "2026-04-09T10:32:12.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:45.459470+00:00",
+      "fetchedAt": "2026-04-13T15:59:14.127102+00:00",
       "publishedAtLocal": "2026-04-09T20:32:12+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:45.459470+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:14.127102+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2892,9 +2876,9 @@
       "summary": "I was ready for the gala dinners, yoga, sound healing and cocktails — until they realised what I do for work.",
       "publishedAt": "2026-04-09T07:27:27.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:15:38.294191+00:00",
+      "fetchedAt": "2026-04-13T16:04:21.122674+00:00",
       "publishedAtLocal": "2026-04-09T17:27:27+10:00",
-      "fetchedAtLocal": "2026-04-14T00:15:38.294191+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:21.122674+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -2908,9 +2892,9 @@
       "summary": "Australians lost more than $2 billion to scams in 2025.",
       "publishedAt": "2026-04-09T04:57:42.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:21:35.373989+00:00",
+      "fetchedAt": "2026-04-13T16:03:00.705015+00:00",
       "publishedAtLocal": "2026-04-09T14:57:42+10:00",
-      "fetchedAtLocal": "2026-04-14T00:21:35.373989+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:00.705015+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2924,9 +2908,9 @@
       "summary": "‘This is not business as usual ... this is additional supply here in Australia that they will be able to source.’",
       "publishedAt": "2026-04-09T02:18:26.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:24:01.151694+00:00",
+      "fetchedAt": "2026-04-13T16:05:24.508371+00:00",
       "publishedAtLocal": "2026-04-09T12:18:26+10:00",
-      "fetchedAtLocal": "2026-04-14T00:24:01.151694+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:24.508371+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2940,9 +2924,9 @@
       "summary": "The now 62-year-old’s daughter was facing him when he admitted to the grisly murders.",
       "publishedAt": "2026-04-09T00:23:31.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:19:13.472152+00:00",
+      "fetchedAt": "2026-04-13T16:00:43.848045+00:00",
       "publishedAtLocal": "2026-04-09T10:23:31+10:00",
-      "fetchedAtLocal": "2026-04-14T00:19:13.472152+10:00",
+      "fetchedAtLocal": "2026-04-14T02:00:43.848045+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2956,9 +2940,9 @@
       "summary": "The ‘Ketamine Queen’ has learned her fate for her part in the actor’s fatal overdose.",
       "publishedAt": "2026-04-08T22:23:35.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:14.174194+00:00",
+      "fetchedAt": "2026-04-13T16:05:04.142513+00:00",
       "publishedAtLocal": "2026-04-09T08:23:35+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:14.174194+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:04.142513+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2972,9 +2956,9 @@
       "summary": "‘The crowd started cheering to the beat of his racquet smashes.’",
       "publishedAt": "2026-04-08T21:03:34.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:51.285917+00:00",
+      "fetchedAt": "2026-04-13T16:02:22.102278+00:00",
       "publishedAtLocal": "2026-04-09T07:03:34+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:51.285917+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:22.102278+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -2988,9 +2972,9 @@
       "summary": "The devastating strain reached Antarctica from South America in 2023 and has caused mass sea bird deaths and killed seals.",
       "publishedAt": "2026-04-08T10:43:07.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:15.028943+00:00",
+      "fetchedAt": "2026-04-13T16:03:40.368556+00:00",
       "publishedAtLocal": "2026-04-08T20:43:07+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:15.028943+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:40.368556+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -3004,9 +2988,9 @@
       "summary": "‘I was just overwhelmed by the gesture.’",
       "publishedAt": "2026-04-08T06:50:50.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:21:37.505345+00:00",
+      "fetchedAt": "2026-04-13T16:03:02.662635+00:00",
       "publishedAtLocal": "2026-04-08T16:50:50+10:00",
-      "fetchedAtLocal": "2026-04-14T00:21:37.505345+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:02.662635+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -3020,9 +3004,9 @@
       "summary": "‘You’re totally hypocritical.’",
       "publishedAt": "2026-04-08T05:59:58.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:23:44.299313+00:00",
+      "fetchedAt": "2026-04-13T16:05:13.817396+00:00",
       "publishedAtLocal": "2026-04-08T15:59:58+10:00",
-      "fetchedAtLocal": "2026-04-14T00:23:44.299313+10:00",
+      "fetchedAtLocal": "2026-04-14T02:05:13.817396+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -3036,13 +3020,29 @@
       "summary": "The 28-year-old’s solicitor asked the court to vary the bail conditions and remove a night-time curfew.",
       "publishedAt": "2026-04-08T05:47:23.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:21:22.497809+00:00",
+      "fetchedAt": "2026-04-13T16:02:49.044655+00:00",
       "publishedAtLocal": "2026-04-08T15:47:23+10:00",
-      "fetchedAtLocal": "2026-04-14T00:21:22.497809+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:49.044655+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
         "Sport"
+      ]
+    },
+    {
+      "id": "a44b45209fae47ef834834533206644d",
+      "title": "Jackie O allegedly complained multiple times about co-host Kyle Sandilands before on-air fight",
+      "link": "https://7news.com.au/business/media/jackie-o-allegedly-complained-multiple-times-about-co-host-kyle-sandilands-before-on-air-fight-c-22110681",
+      "summary": "Henderson and her former co-host Kyle Sandilands are each suing their radio bosses over the end of their multi-million-dollar contracts.",
+      "publishedAt": "2026-04-08T05:36:57.000Z",
+      "source": "7NEWS",
+      "fetchedAt": "2026-04-13T16:04:27.442618+00:00",
+      "publishedAtLocal": "2026-04-08T15:36:57+10:00",
+      "fetchedAtLocal": "2026-04-14T02:04:27.442618+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Business",
+      "sourceCategories": [
+        "Business"
       ]
     },
     {
@@ -3052,9 +3052,9 @@
       "summary": "The news comes two years after the filly made worldwide headlines.",
       "publishedAt": "2026-04-08T05:20:18.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:45.994909+00:00",
+      "fetchedAt": "2026-04-13T16:02:14.324344+00:00",
       "publishedAtLocal": "2026-04-08T15:20:18+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:45.994909+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:14.324344+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -3068,9 +3068,9 @@
       "summary": "Police say he contacted the women through social media after their trips before his behaviour allegedly escalated into threats and assault.",
       "publishedAt": "2026-04-08T04:00:52.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:16.797363+00:00",
+      "fetchedAt": "2026-04-13T16:03:43.255084+00:00",
       "publishedAtLocal": "2026-04-08T14:00:52+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:16.797363+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:43.255084+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -3084,9 +3084,9 @@
       "summary": "It is the first time humans have seen the far side of the moon with their own eyes — here is what they captured.",
       "publishedAt": "2026-04-08T02:08:20.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:18.032258+00:00",
+      "fetchedAt": "2026-04-13T16:03:44.536152+00:00",
       "publishedAtLocal": "2026-04-08T12:08:20+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:18.032258+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:44.536152+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -3100,9 +3100,9 @@
       "summary": "Thousands of families are struggling with rotting waste as a bitter council fight takes a nasty turn.",
       "publishedAt": "2026-04-08T01:33:16.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:17:59.255911+00:00",
+      "fetchedAt": "2026-04-13T15:59:30.899423+00:00",
       "publishedAtLocal": "2026-04-08T11:33:16+10:00",
-      "fetchedAtLocal": "2026-04-14T00:17:59.255911+10:00",
+      "fetchedAtLocal": "2026-04-14T01:59:30.899423+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -3116,9 +3116,9 @@
       "summary": "New research shows where downsizers can gain the most.",
       "publishedAt": "2026-04-08T01:20:54.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:21:38.786268+00:00",
+      "fetchedAt": "2026-04-13T16:03:04.407825+00:00",
       "publishedAtLocal": "2026-04-08T11:20:54+10:00",
-      "fetchedAtLocal": "2026-04-14T00:21:38.786268+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:04.407825+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Lifestyle",
       "sourceCategories": [
@@ -3132,9 +3132,9 @@
       "summary": "‘I don’t want to die wondering. This is my last chance.’",
       "publishedAt": "2026-04-07T22:34:48.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:14.453011+00:00",
+      "fetchedAt": "2026-04-13T16:01:44.727972+00:00",
       "publishedAtLocal": "2026-04-08T08:34:48+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:14.453011+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:44.727972+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -3148,9 +3148,9 @@
       "summary": "Authorities are killing an average of 32 dodgy websites a day but the fight is far from over.",
       "publishedAt": "2026-04-07T22:26:51.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:22:20.025609+00:00",
+      "fetchedAt": "2026-04-13T16:03:45.867787+00:00",
       "publishedAtLocal": "2026-04-08T08:26:51+10:00",
-      "fetchedAtLocal": "2026-04-14T00:22:20.025609+10:00",
+      "fetchedAtLocal": "2026-04-14T02:03:45.867787+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -3164,9 +3164,9 @@
       "summary": "It’s the latest in a growing list of mistakes that have gone against Adelaide in close games.",
       "publishedAt": "2026-04-07T11:01:52.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:36.395039+00:00",
+      "fetchedAt": "2026-04-13T16:02:04.290189+00:00",
       "publishedAtLocal": "2026-04-07T21:01:52+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:36.395039+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:04.290189+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -3180,9 +3180,9 @@
       "summary": "Officials returned to the club to find grass had been burnt with an estimated five-figure sum of damage.",
       "publishedAt": "2026-04-07T10:24:07.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:37.860405+00:00",
+      "fetchedAt": "2026-04-13T16:02:06.114398+00:00",
       "publishedAtLocal": "2026-04-07T20:24:07+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:37.860405+10:00",
+      "fetchedAtLocal": "2026-04-14T02:02:06.114398+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -3196,9 +3196,9 @@
       "summary": "The 39-year-old allegedly stopped before the testing site, and then blew over double the legal limit.",
       "publishedAt": "2026-04-07T08:51:58.000Z",
       "source": "7NEWS",
-      "fetchedAt": "2026-04-13T14:20:24.782371+00:00",
+      "fetchedAt": "2026-04-13T16:01:51.911197+00:00",
       "publishedAtLocal": "2026-04-07T18:51:58+10:00",
-      "fetchedAtLocal": "2026-04-14T00:20:24.782371+10:00",
+      "fetchedAtLocal": "2026-04-14T02:01:51.911197+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
