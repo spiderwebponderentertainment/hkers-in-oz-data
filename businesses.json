@@ -15532,7 +15532,7 @@
     "website": "https://hkcua.org.au/"
   },
   {
-    "address": "Chatswood Park, Chatswood NSW 2067",
+    "address": "35 Orchard Rd, Chatswood NSW 2067",
     "branchName": null,
     "category": "leisure",
     "chainId": null,
@@ -15548,6 +15548,8 @@
     ],
     "hkOwnerStatusEn": "Yes",
     "hkOwnerStatusZh": "是",
+    "lat": -33.800071,
+    "lng": 151.182896,
     "nameEn": "Kelvin Chinese Martial Arts",
     "nameZh": null,
     "phone": null,
@@ -15610,5 +15612,39 @@
       "美甲美容店"
     ],
     "website": "https://www.quartz nails.com.au"
+  },
+  {
+    "address": "3 Orange Lane, Norwood, SA 5067",
+    "branchName": null,
+    "category": "health",
+    "chainId": null,
+    "cities": [
+      "Adelaide"
+    ],
+    "email": "gigilam.physio@gmail.com",
+    "hkFeaturesEn": [
+      "Provide Cantonese service"
+    ],
+    "hkFeaturesZh": [
+      "提供廣東話服務"
+    ],
+    "hkOwnerStatusEn": "Yes",
+    "hkOwnerStatusZh": "是",
+    "lat": -34.920216,
+    "lng": 138.632905,
+    "nameEn": "Gigi Lam 物理治療",
+    "nameZh": "Gigi Lam 物理治療",
+    "phone": "0485008371",
+    "states": [
+      "SA"
+    ],
+    "suburb": "Norwood, North East Adelaide (Home Visits available)",
+    "tagsEn": [
+      "Physiotherapy"
+    ],
+    "tagsZh": [
+      "物理治療"
+    ],
+    "website": "https://gigilamphysiotherapy.com.au/"
   }
 ]
