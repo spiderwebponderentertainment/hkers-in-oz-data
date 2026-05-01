@@ -1,11 +1,11 @@
 [
   {
-    "id": "GoodGamePoster",
-    "campaign": "GoodGame",
-    "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/main/ads/Good%20Game%20Poster%20S.jpeg",
+    "id": "VSODPOSTER",
+    "campaign": "VSOD",
+    "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/main/ads/VOTSOD%20Aus%20Poster%20with%20dates_S.jpeg",
     "linkURL": "https://spiderwebponder.media",
-    "startDate": "2025-08-25",
-    "endDate": "2026-03-01",
+    "startDate": "2026-04-25",
+    "endDate": "2026-07-01",
     "weight": 100
   },
    {
@@ -19,13 +19,13 @@
     "weight": 50
   },
   {
-    "id": "FEBPOST",
-    "campaign": "FEBSTREAMING",
-    "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/main/ads/FEB%202026%20EDM-07.jpg",
+    "id": "MAYPOST",
+    "campaign": "MAYSTREAMING",
+    "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/main/ads/MAY%202026%20EDM-13.jpg",
     "linkURL": "https://spiderwebponder.media/online-streaming-homepage",
-    "note": "FEBSTREAMING",
-    "startDate": "2025-08-25",
-    "endDate": "2026-04-30",
+    "note": "MAYSTREAMING",
+    "startDate": "2026-04-25",
+    "endDate": "2026-07-01",
     "weight": 50
   }
 ]
