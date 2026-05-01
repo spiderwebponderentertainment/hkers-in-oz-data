@@ -7,6 +7,16 @@
     "note": "Online Streaming",
     "startDate": "2025-08-25",
     "endDate": "2026-06-30",
+    "weight": 20
+  },
+  {
+    "id": "VSOD",
+    "campaign": "VSOD",
+    "imageURL": "https://raw.githubusercontent.com/spiderwebponderentertainment/hkers-in-oz-data/main/ads/VOTSOD%20Aus%20Horizontal%20Poster.jpg",
+    "linkURL": "https://spiderwebponder.media",
+    "note": "Theatrical Release",
+    "startDate": "2026-04-25",
+    "endDate": "2026-06-30",
     "weight": 100
   }
 ]
