@@ -1,20 +1,532 @@
 {
   "source": "ABC News (EN) Aggregate",
-  "generatedAt": "2026-05-19T23:50:27.749168+00:00",
-  "generatedAtLocal": "2026-05-20T09:50:27.749168+10:00",
+  "generatedAt": "2026-05-20T04:53:59.816637+00:00",
+  "generatedAtLocal": "2026-05-20T14:53:59.816637+10:00",
   "localTimezone": "Australia/Sydney",
   "count": 200,
   "items": [
     {
+      "id": "405bf3b8d034d1f7e0ad24cc9907dbc3",
+      "title": "Man jailed over manslaughter of surfer Guy Haymes in Manly apartment",
+      "link": "https://www.abc.net.au/news/2026-05-20/nsw-man-jailed-manslaughter-surfer-guy-haymes-manly-apartment/106701364",
+      "summary": "Guy Haymes died after being assaulted in a dispute over $50 at a Manly apartment in February 2024.",
+      "publishedAt": "2026-05-20T04:26:51+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:18.478114+00:00",
+      "publishedAtLocal": "2026-05-20T14:26:51+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:18.478114+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "d2f661e309d548ab8536a25c7ad7cb01",
+      "title": "NT Police officer found not guilty of coercing former partner to withdraw assault charge",
+      "link": "https://www.abc.net.au/news/2026-05-20/nt-police-officer-acquitted-attempting-pervert-course-of-justice/106695700",
+      "summary": "A Northern Territory Police officer has been cleared of coercing his former partner into withdrawing an assault charge after facing trial on one count of attempting to pervert the course of justice.",
+      "publishedAt": "2026-05-20T04:24:54+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:34.180234+00:00",
+      "publishedAtLocal": "2026-05-20T14:24:54+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:34.180234+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "ade871ac2eb38f7412c50e030b83910c",
+      "title": "Jai Arrow, South Sydney and Queensland Maroons star, retires from NRL due to motor neurone disease",
+      "link": "https://www.abc.net.au/news/2026-05-20/jai-arrow-retires-from-nrl-due-to-neurological-condition/106701748",
+      "summary": "Rabbitohs and Maroons enforcer Jai Arrow announces he will step away from rugby league after being diagnosed with motor neurone disease.",
+      "publishedAt": "2026-05-20T03:52:11+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:40.552399+00:00",
+      "publishedAtLocal": "2026-05-20T13:52:11+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:40.552399+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "5a986c249ce992e944a146142eaa6b78",
+      "title": "Doctor fined $30k for self-publishing unauthorised pictures of patients",
+      "link": "https://www.abc.net.au/news/2026-05-20/lachlan-rathie-fined-over-self-published-photo-book/106700442",
+      "summary": "An anaesthetist who worked at Toowoomba Hospital has been fined $30,000 for professional misconduct after he included confidential patient information in a self-published book.",
+      "publishedAt": "2026-05-20T03:42:38+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:18.828342+00:00",
+      "publishedAtLocal": "2026-05-20T13:42:38+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:18.828342+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "5874f207aaf55cdc040fdace292522f6",
+      "title": "Three Aussies in Giro d'Italia top 10 after key time trial as Filippo Ganna claims victory",
+      "link": "https://www.abc.net.au/news/2026-05-20/oconnor-makes-giro-ditalia-move-in-time-trial/106700928",
+      "summary": "Ben O'Connor uses his Perth experience to impress in the Giro d'Italia's only time trial stage of 2026, leapfrogging fellow West Australian Jai Hindley in the overall standings, with another Perth boy Michael Storer just behind them.",
+      "publishedAt": "2026-05-20T03:32:24+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:39.258635+00:00",
+      "publishedAtLocal": "2026-05-20T13:32:24+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:39.258635+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "6919ec40da3da4ddbcae7a5266621c88",
+      "title": "San Diego mosque shooting victims hailed as heroes and mourned by community",
+      "link": "https://www.abc.net.au/news/2026-05-20/san-diego-mosque-shooting-victims-hailed-as-heroes/106701072",
+      "summary": "Three people killed by two shooters at a San Diego mosque were beloved pillars of the community and died while saving 140 children in the building at the time of the attack, authorities say.",
+      "publishedAt": "2026-05-20T03:31:20+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:42.486214+00:00",
+      "publishedAtLocal": "2026-05-20T13:31:20+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:42.486214+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "3d57e1b6edf18b17273144a94bc77281",
+      "title": "Ocean Census project discovers 1,121 new species of ocean life around the world in one year",
+      "link": "https://www.abc.net.au/news/2026-05-20/ocean-census-marine-scientists-discover-thousands-of-new-species/106700356",
+      "summary": "Thousands of species have been discovered lurking and thriving in our oceans, as part of an effort to catalogue 100,000 new species.",
+      "publishedAt": "2026-05-20T03:17:07+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:14.723935+00:00",
+      "publishedAtLocal": "2026-05-20T13:17:07+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:14.723935+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "c4e600d70aa9285061f588fd3a0faca8",
+      "title": "Marine species encountered on Ocean Census expeditions",
+      "link": "https://www.abc.net.au/news/2026-05-20/species-encountered-on-ocean-census-expeditions/106700952",
+      "summary": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
+      "publishedAt": "2026-05-20T03:17:07.000Z",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:47:40.262517+00:00",
+      "publishedAtLocal": "2026-05-20T13:17:07+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:40.262517+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "dbf42ba210e82aa0604fdf2341030238",
+      "title": "Ocean Census discovers over 1,100 new marine species",
+      "link": "https://www.abc.net.au/news/2026-05-20/ocean-census-discovers-over-1-100-new-marine-species-/106700514",
+      "summary": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
+      "publishedAt": "2026-05-20T03:17:07.000Z",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:53:05.577593+00:00",
+      "publishedAtLocal": "2026-05-20T13:17:07+10:00",
+      "fetchedAtLocal": "2026-05-20T14:53:05.577593+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "c6127659b5781c83ea3908587fa47c2a",
+      "title": "Tasmanian government businesses defy premier's call for public disclosure logs",
+      "link": "https://www.abc.net.au/news/2026-05-20/tas-government-businesses-defy-premier/106700726",
+      "summary": "Tasmanian government-owned businesses or companies are being threatened with legislation to force them to disclose right-to-information documents publicly after nine of them failed to respond to the premier's request.",
+      "publishedAt": "2026-05-20T03:16:34+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:39.912772+00:00",
+      "publishedAtLocal": "2026-05-20T13:16:34+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:39.912772+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "63b3138ce24f3500e68ca6bee8b8b460",
+      "title": "Man to face court over alleged rape at Mount Pleasant",
+      "link": "https://www.abc.net.au/news/2026-05-20/man-to-face-court-over-alleged-rape-at-mount-pleasant/106701238",
+      "summary": "A man who allegedly broke into a home and sexually assaulted the occupant will face court charged with aggravated serious criminal trespass and rape.",
+      "publishedAt": "2026-05-20T03:13:30+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:24.592457+00:00",
+      "publishedAtLocal": "2026-05-20T13:13:30+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:24.592457+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "cd7f28bca409bf75244871640f9fc0a7",
+      "title": "$1 million reward offered to solve 31-year mystery of opal miner's death",
+      "link": "https://www.abc.net.au/news/2026-05-20/million-dollar-reward-lightning-ridge-opal-miner-paul-murray/106699580",
+      "summary": "More than 30 years on, mystery still surrounds the death of opal miner Paul Murray. NSW Police hope the offer of a $1 million reward will breathe new life into the investigation.",
+      "publishedAt": "2026-05-20T02:55:24+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:06.060517+00:00",
+      "publishedAtLocal": "2026-05-20T12:55:24+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:06.060517+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "ffe095b8898f88c4a4f7b8c614ad17d7",
+      "title": "Federal government prepares diphtheria support package after more than 220 cases reported",
+      "link": "https://www.abc.net.au/news/2026-05-20/federal-government-diphtheria-support-cases-grow/106700196",
+      "summary": "Federal and state governments have mobilised to address the largest outbreak of diphtheria in recent memory, with the Commonwealth preparing a support package for a disease once considered almost eradicated.",
+      "publishedAt": "2026-05-20T02:51:17+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:10.944130+00:00",
+      "publishedAtLocal": "2026-05-20T12:51:17+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:10.944130+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "0df0b75fcb1718d004acf3a14f44acf8",
+      "title": "Apprehension as Dhilmar buys one of Australia's largest coal mining operations",
+      "link": "https://www.abc.net.au/news/2026-05-20/anglo-american-sale-dhilmar-sparks-community-concern/106697588",
+      "summary": "Anglo American has operated metallurgical coal mines in Queensland since the turn of the century. Now, a UK-based company has bought them all.",
+      "publishedAt": "2026-05-20T02:41:25+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:23.745153+00:00",
+      "publishedAtLocal": "2026-05-20T12:41:25+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:23.745153+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "7be68aaea911b5cca0fe8c1e83a293f7",
+      "title": "One dead after multi-vehicle crash near Victorian-New South Wales border town of Mildura",
+      "link": "https://www.abc.net.au/news/2026-05-20/man-dead-after-crash-near-nsw-vic-border/106700934",
+      "summary": "NSW Police say a van had rear-ended a vehicle, causing the vehicle to collide with a B-double truck travelling the opposite way.",
+      "publishedAt": "2026-05-20T02:40:24+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:23.348319+00:00",
+      "publishedAtLocal": "2026-05-20T12:40:24+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:23.348319+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "52e7b4d0ad1fd59e3fb1184f11d3465b",
+      "title": "Infant death sparks call for use of church land to tackle homelessness in Wagga Wagga",
+      "link": "https://www.abc.net.au/news/2026-05-20/wagga-faith-homeless-solution/106698190",
+      "summary": "Church land is being touted as a potential solution to the homelessness crisis in a southern NSW city still reeling from the death of a newborn baby in a tent almost three weeks ago.",
+      "publishedAt": "2026-05-20T02:37:49+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:14.290072+00:00",
+      "publishedAtLocal": "2026-05-20T12:37:49+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:14.290072+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "c187667d90115db26db2478a89e5c846",
+      "title": "Matildas squad named for Mexico friendlies with teen keeper included",
+      "link": "https://www.abc.net.au/news/2026-05-20/matildas-squad-named-for-mexico-friendlies/106701048",
+      "summary": "Mary Fowler, Ellie Carpenter and Steph Catley are back in the Matildas squad for games against Mexico, while a teenager has been called up.",
+      "publishedAt": "2026-05-20T02:27:42+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:59.499099+00:00",
+      "publishedAtLocal": "2026-05-20T12:27:42+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:59.499099+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "746501c5a607f7e0f264ac144888885e",
+      "title": "Fraud case dropped against Australian Olympic swimmer Neil Brooks",
+      "link": "https://www.abc.net.au/news/2026-05-20/neil-brooks-fraud-case-dropped-court/106700524",
+      "summary": "Neil Brooks and his wife Linda Brooks were both charged with one count of fraud in 2017, but were formally discharged on Wednesday.",
+      "publishedAt": "2026-05-20T02:23:47+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:00.330500+00:00",
+      "publishedAtLocal": "2026-05-20T12:23:47+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:00.330500+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "293e8b53143c342ffa2436a4f830be92",
+      "title": "City of Perth is 'diabolical', minister says, amid calls for wider WA council reforms",
+      "link": "https://www.abc.net.au/news/2026-05-20/city-of-perth-diabolical-wa-local-government-council-reforms/106700930",
+      "summary": "The \"diabolical\" City of Perth should be merged with its neighbouring council, a WA government minister has claimed, describing the \"pettiness, infighting, immaturity\" by elected members as \"galling.\"",
+      "publishedAt": "2026-05-20T02:20:24+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:41.191252+00:00",
+      "publishedAtLocal": "2026-05-20T12:20:24+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:41.191252+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "10c37d9c3a4cb35a57296b05f52b09eb",
+      "title": "NSW MP Mark Latham's former partner Nathalie Matthews withdraws application for private AVO",
+      "link": "https://www.abc.net.au/news/2026-05-20/nsw-private-avo-against-mark-latham-withdrawn-nathalie-matthews/106700290",
+      "summary": "A private apprehended violence order (AVO) application against NSW independent MP Mark Latham that was initiated by his former partner has been withdrawn.",
+      "publishedAt": "2026-05-20T02:19:25+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:19.883730+00:00",
+      "publishedAtLocal": "2026-05-20T12:19:25+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:19.883730+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "5cde1fdc50c1a6b7808dcf8f65ba1051",
+      "title": "James Blee, 24, found guilty of helping father with Newcastle cocaine shipment",
+      "link": "https://www.abc.net.au/news/2026-05-20/james-lake-kusviandy-blee-guilty-newcastle-cocaine-importation/106673764",
+      "summary": "A Queensland man has been found guilty of involvement with his father's attempt to smuggle a massive amount of cocaine into the NSW port city.",
+      "publishedAt": "2026-05-20T02:16:25+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:23.978286+00:00",
+      "publishedAtLocal": "2026-05-20T12:16:25+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:23.978286+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "26ffdc69097bd026cd0a699a6b606e3b",
+      "title": "What life is like as an older parent, or being born to one",
+      "link": "https://www.abc.net.au/news/2026-05-20/readers-on-having-kids-later-in-life/106678164",
+      "summary": "After publishing our story on having babies in your 40s, we heard from readers on what being, or having, an older parent is like.",
+      "publishedAt": "2026-05-20T02:00:42+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:32.467764+00:00",
+      "publishedAtLocal": "2026-05-20T12:00:42+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:32.467764+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "e1708544689065a235b62ad7a0919e44",
+      "title": "Greenland PM repeats message to US that the nation is not for sale after Trump envoy talks",
+      "link": "https://www.abc.net.au/news/2026-05-20/greenland-not-for-sale-prime-minister-says/106700172",
+      "summary": "Jeff Landry, appointed by Donald Trump in December as the US special envoy to Greenland, has met the country's prime minister in the capital Nuuk.",
+      "publishedAt": "2026-05-20T01:38:30+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:06.697267+00:00",
+      "publishedAtLocal": "2026-05-20T11:38:30+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:06.697267+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "ebc745247e1f31150007ec04c9e847f5",
+      "title": "Live: Xi hosts Putin in China days after Trump state visit",
+      "link": "https://www.abc.net.au/news/2026-05-20/xi-hosts-putin-for-china-visit-live-blog/106694790",
+      "summary": "The two leaders are expected to discuss bilateral economic relations and \"key international and regional issues\", according to the Kremlin. Follow live.",
+      "publishedAt": "2026-05-20T01:31:26+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:11.391713+00:00",
+      "publishedAtLocal": "2026-05-20T11:31:26+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:11.391713+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "c57dfa7a3aa724bbf26ba4271596b5a6",
+      "title": "AVG Travels fallout deepens as more customers report cancelled or rescheduled tours",
+      "link": "https://www.abc.net.au/news/2026-05-20/avg-travels-tour-company-cancellations-refunds/106597488",
+      "summary": "The ABC has been contacted by more than 100 travellers since first reporting on the matter on Monday, with some claiming their tours were cancelled at the last minute and itineraries changed.",
+      "publishedAt": "2026-05-20T01:06:50+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:22.691504+00:00",
+      "publishedAtLocal": "2026-05-20T11:06:50+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:22.691504+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "ef71ba899526dcfdf36161b0fef6ba5a",
+      "title": "Plans to revive WA's once-booming nickel plants to cash in on high gold prices",
+      "link": "https://www.abc.net.au/news/2026-05-20/wa-nickel-plants-retrofit-process-gold-high-prices/106438482",
+      "summary": "Idle infrastructure from WA's once-booming nickel industry is set to be retrofitted to produce gold bars amid historic high prices for the precious metal.",
+      "publishedAt": "2026-05-20T00:29:38+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:03.270951+00:00",
+      "publishedAtLocal": "2026-05-20T10:29:38+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:03.270951+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "ef87d518d5554b2b1cca88d9497719bb",
+      "title": "Maldives investigates if Italian divers went too deep in fatal cave dive",
+      "link": "https://www.abc.net.au/news/2026-05-20/italian-cave-divers-maldives-investigation-too-deep/106699158",
+      "summary": "A Maldives government official says a permit was given to study soft corals, but authorities were unaware the group planned to cave dive.",
+      "publishedAt": "2026-05-20T00:26:46+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:56.522505+00:00",
+      "publishedAtLocal": "2026-05-20T10:26:46+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:56.522505+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "440766e9c6baca502ea47886424fd5a7",
+      "title": "Homesharer allegedly accessed disabled man's bank account to spend over $54,000",
+      "link": "https://www.abc.net.au/news/2026-05-20/homesharer-accused-of-defrauding-disabled-man-out-of-thousands/106699970",
+      "summary": "A 70-year-old appointed homesharer faces court charged with 264 fraud offences after allegedly accessing the bank account of an intellectually disabled man who was living with him and spending over $54,000.",
+      "publishedAt": "2026-05-20T00:06:10+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:47:34.322507+00:00",
+      "publishedAtLocal": "2026-05-20T10:06:10+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:34.322507+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "cc474d93b126482dc4a925297ed59bf8",
+      "title": "CPSU slams proposed staff cuts at Victoria's State Control Centre",
+      "link": "https://www.abc.net.au/news/2026-05-20/victoria-state-control-centre-restructure-alarms-cpsu/106696306",
+      "summary": "The State Control Centre, which responds to natural disasters like bushfires and floods, is to shed around two thirds of its full-time equivalent staff according to the Community and Public Sector Union.",
+      "publishedAt": "2026-05-19T23:50:13+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:42:26.666564+00:00",
+      "publishedAtLocal": "2026-05-20T09:50:13+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:26.666564+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "0b07183562b26d62e7203bd2f3770138",
+      "title": "Melbourne's Bianca Adler, 18, becomes youngest Australian to summit Mount Everest",
+      "link": "https://www.abc.net.au/news/2026-05-20/bianca-adler-becomes-youngest-australian-to-summit-everest/106699918",
+      "summary": "A social media post just before 8am AEST announced that Bianca Adler had reached the top of the world's tallest mountain.",
+      "publishedAt": "2026-05-19T23:46:40+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:57.153462+00:00",
+      "publishedAtLocal": "2026-05-20T09:46:40+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:57.153462+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "7ddd5201ca71f7d64eecaba40c85c3e3",
+      "title": "Israel says no live ammunition used by troops filmed firing at Gaza flotilla boats",
+      "link": "https://www.abc.net.au/news/2026-05-20/israeli-forces-fire-shots-at-gaza-flotilla-organisers-say/106699628",
+      "summary": "The Australian government says it is engaging with Israel over the welfare of 11 Australians detained, as Israeli forces fire \"non-lethal\" shots at two boats in a Gaza-bound aid flotilla.",
+      "publishedAt": "2026-05-19T23:42:17+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:24.384888+00:00",
+      "publishedAtLocal": "2026-05-20T09:42:17+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:24.384888+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "6c3d80fd2411307a324b8c8a14a1abd1",
+      "title": "NRL confirms Tigers, Eels, Titans and Storm will play 2027 Las Vegas fixtures",
+      "link": "https://www.abc.net.au/news/2026-05-20/nrl-confirms-tigers-eels-titans-storm-2027-las-vegas-teams/106700026",
+      "summary": "Jarome Luai will begin his final season with the Wests Tigers in Las Vegas, with the NRL unveiling its teams for next year's season-openers.",
+      "publishedAt": "2026-05-19T23:36:47+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:14.256471+00:00",
+      "publishedAtLocal": "2026-05-20T09:36:47+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:14.256471+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
       "id": "65dd5a2581f0a0285474733ce2538041",
       "title": "ACT to fund dozens of new emergency services roles after review found 'chronic' ambulance understaffing",
       "link": "https://www.abc.net.au/news/2026-05-20/act-government-94-million-paramedics-firefighters/106699772",
-      "summary": "The ACT government will fund dozens of new emergency service roles after a review found ambulance staffing was unable to keep up with demand, particularly overnight.",
+      "summary": "The ACT government has unveiled a $94.3 million emergency services package, but the union says it still falls short by about 50 staff needed to prevent future station closures.",
       "publishedAt": "2026-05-19T23:32:29+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:47:53.238634+00:00",
+      "fetchedAt": "2026-05-20T04:48:20.288867+00:00",
       "publishedAtLocal": "2026-05-20T09:32:29+10:00",
-      "fetchedAtLocal": "2026-05-20T09:47:53.238634+10:00",
+      "fetchedAtLocal": "2026-05-20T14:48:20.288867+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -28,25 +540,9 @@
       "summary": "Storm Hunter is a step closer to her first French Open main draw appearance since 2023, as Priscilla Hon and Maddison Inglis fall short in the qualifiers.",
       "publishedAt": "2026-05-19T23:22:25+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:49.299223+00:00",
+      "fetchedAt": "2026-05-20T04:41:30.129721+00:00",
       "publishedAtLocal": "2026-05-20T09:22:25+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:49.299223+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "0923312f84c4a0e8724da70f127a34c1",
-      "title": "'A disgrace': Fears for domestic violence victims as WA court closures loom",
-      "link": "https://www.abc.net.au/news/2026-05-20/court-shutdown-concerns-for-domestic-violence/106696570",
-      "summary": "The doors of 26 regional and remote courthouses in WA will shut for three months, leaving lawyers confused and concerned about consequences for domestic violence legal matters.",
-      "publishedAt": "2026-05-19T23:16:17+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:55.115876+00:00",
-      "publishedAtLocal": "2026-05-20T09:16:17+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:55.115876+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:30.129721+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -60,9 +556,9 @@
       "summary": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
       "publishedAt": "2026-05-19T23:07:48.000Z",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:47.810961+00:00",
+      "fetchedAt": "2026-05-20T04:47:53.504596+00:00",
       "publishedAtLocal": "2026-05-20T09:07:48+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:47.810961+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:53.504596+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -76,9 +572,9 @@
       "summary": "A 20-year-old man charged with the murder of another man during a brawl in Arnhem Land last month has been bailed to live with family far from the location of the death, in the Tiwi Islands.",
       "publishedAt": "2026-05-19T23:07:14+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:15.047705+00:00",
+      "fetchedAt": "2026-05-20T04:52:04.030974+00:00",
       "publishedAtLocal": "2026-05-20T09:07:14+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:15.047705+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:04.030974+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -92,9 +588,9 @@
       "summary": "Scientists analysing a database of photos find two humpback whales travelled from Queensland to Brazil, covering a record distance of 14,200km.",
       "publishedAt": "2026-05-19T23:01:18+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:20.382737+00:00",
+      "fetchedAt": "2026-05-20T04:41:27.910754+00:00",
       "publishedAtLocal": "2026-05-20T09:01:18+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:20.382737+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:27.910754+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -108,9 +604,9 @@
       "summary": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
       "publishedAt": "2026-05-19T22:51:37.000Z",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:42:44.436922+00:00",
+      "fetchedAt": "2026-05-20T04:48:35.243186+00:00",
       "publishedAtLocal": "2026-05-20T08:51:37+10:00",
-      "fetchedAtLocal": "2026-05-20T09:42:44.436922+10:00",
+      "fetchedAtLocal": "2026-05-20T14:48:35.243186+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -124,9 +620,9 @@
       "summary": "The Victorian Fisheries Authority wants to host a carp virus trial, but the federal government says it needs regulatory approval, which will delay research.",
       "publishedAt": "2026-05-19T22:30:07+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:00.528068+00:00",
+      "fetchedAt": "2026-05-20T04:42:50.379222+00:00",
       "publishedAtLocal": "2026-05-20T08:30:07+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:00.528068+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:50.379222+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -135,14 +631,14 @@
     },
     {
       "id": "ed09f44eb58ace2f820fe39845d464aa",
-      "title": "Live: ASX to fall as inflation worries lead to US government debt sell-off",
+      "title": "Live: ASX falls as inflation worries lead to US government debt sell-off",
       "link": "https://www.abc.net.au/news/2026-05-20/asx-markets-business-live-news/106699784",
-      "summary": "The Australian share market is likely to fall in early trade after a US bond sell-off triggered further losses on Wall Street. Oil prices slipped after Donald Trump said he had been an hour away from ordering an attack on Iran before postponing it. Follow live.",
+      "summary": "The Australian share market fell after a US bond sell-off triggered further losses on Wall Street. Oil prices slipped after Donald Trump said he had been an hour away from ordering an attack on Iran before postponing it. Follow live.",
       "publishedAt": "2026-05-19T22:04:32+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:41.367451+00:00",
+      "fetchedAt": "2026-05-20T04:41:03.219765+00:00",
       "publishedAtLocal": "2026-05-20T08:04:32+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:41.367451+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:03.219765+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -156,9 +652,9 @@
       "summary": "Cracks in the ground in outback Australia caused by a magnitude-5.5 earthquake could help researchers predict future seismic activity.",
       "publishedAt": "2026-05-19T22:00:21+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:13.506334+00:00",
+      "fetchedAt": "2026-05-20T04:44:15.772498+00:00",
       "publishedAtLocal": "2026-05-20T08:00:21+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:13.506334+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:15.772498+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -172,9 +668,9 @@
       "summary": "Six Australian women, along with their children and grandchildren, look likely to leave a camp in Syria within days.",
       "publishedAt": "2026-05-19T21:50:44+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:09.906636+00:00",
+      "fetchedAt": "2026-05-20T04:42:07.324338+00:00",
       "publishedAtLocal": "2026-05-20T07:50:44+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:09.906636+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:07.324338+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -188,9 +684,9 @@
       "summary": "The US has set up a fund to compensate Americans deemed victims of \"lawfare\". Democrats say it is \"pure theft of public funds\" to pay the president's allies.",
       "publishedAt": "2026-05-19T21:45:13+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:06.824796+00:00",
+      "fetchedAt": "2026-05-20T04:41:15.347977+00:00",
       "publishedAtLocal": "2026-05-20T07:45:13+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:06.824796+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:15.347977+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -199,14 +695,14 @@
     },
     {
       "id": "c1d989baa5e4122de8c290ecf11fe7ed",
-      "title": "Man dead, four injured in Canley Heights shooting believed to be linked to organised crime",
+      "title": "One killed, four injured in 'brazen, violent attack' inside Sydney home",
       "link": "https://www.abc.net.au/news/2026-05-20/man-dead-four-injured-in-canley-heights-sydney-shooting/106699672",
-      "summary": "A man has died and four others have been seriously injured following a Canley Heights shooting, which is believed to be organised crime-related.",
+      "summary": "A man with links to rap group OneFour has died and four others have been seriously injured following a Canley Heights shooting, which is believed to be organised crime-related.",
       "publishedAt": "2026-05-19T21:39:30+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:54.313521+00:00",
+      "fetchedAt": "2026-05-20T04:41:55.020280+00:00",
       "publishedAtLocal": "2026-05-20T07:39:30+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:54.313521+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:55.020280+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -220,25 +716,9 @@
       "summary": "Southampton loses its chance to gain promotion to the Premier League after being caught spying on Middlesbrough and two other rivals.",
       "publishedAt": "2026-05-19T21:33:06+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:49.786164+00:00",
+      "fetchedAt": "2026-05-20T04:41:28.587943+00:00",
       "publishedAtLocal": "2026-05-20T07:33:06+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:49.786164+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "f8c85379eef0558bb923d1b90c70e84c",
-      "title": "Victorian border community still waiting for a new bridge 60 years after planning began",
-      "link": "https://www.abc.net.au/news/2026-05-20/victoria-nsw-swan-hill-bridge-replacement-waiting-game/106674658",
-      "summary": "Businesses relying on heavy transport to move goods across the Victoria-NSW border near Swan Hill say they are growing frustrated at the continual delays in replacing a 130-year-old wooden bridge.",
-      "publishedAt": "2026-05-19T21:30:33+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:55.829296+00:00",
-      "publishedAtLocal": "2026-05-20T07:30:33+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:55.829296+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:28.587943+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -252,9 +732,9 @@
       "summary": "Authorities have revealed the teenagers who killed three people at a San Diego mosque met online and shared a \"broad hatred\" toward different religions and races.",
       "publishedAt": "2026-05-19T21:30:29+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:43.383690+00:00",
+      "fetchedAt": "2026-05-20T04:41:10.648722+00:00",
       "publishedAtLocal": "2026-05-20T07:30:29+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:43.383690+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:10.648722+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -268,9 +748,9 @@
       "summary": "A \"beautiful\" optical illusion has been impacting sunsets in Australia's north, with a little-known weather phenomenon appearing to split golden hour into different coloured beams.",
       "publishedAt": "2026-05-19T21:17:14+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:10.478479+00:00",
+      "fetchedAt": "2026-05-20T04:41:02.218198+00:00",
       "publishedAtLocal": "2026-05-20T07:17:14+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:10.478479+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:02.218198+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -279,14 +759,14 @@
     },
     {
       "id": "4e81bb9d8045cdf3e10bfe50cb902dd8",
-      "title": "Live: Coalition to unveil campaign to win over small businesses after budget",
+      "title": "Live: Liberal frontbencher won't say if shadow cabinet was consulted on non-citizen welfare cuts",
       "link": "https://www.abc.net.au/news/2026-05-20/federal-politics-live-blog-cgt-changes/106698634",
-      "summary": "Shadow Treasurer Tim Wilson will today formally unveil a new opposition campaign he says will \"back\" the small businesses of Australia. Follow live.",
+      "summary": "Shadow Health Minister Anne Ruston has not said whether shadow cabinet was consulted on a Coalition proposal to cut welfare to non-citizens, including permanent residents. Follow live.",
       "publishedAt": "2026-05-19T21:16:02+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:57.449203+00:00",
+      "fetchedAt": "2026-05-20T04:42:20.770417+00:00",
       "publishedAtLocal": "2026-05-20T07:16:02+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:57.449203+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:20.770417+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -300,9 +780,9 @@
       "summary": "Mice in their millions are eating grain crops, destroying food, and invading houses. Here's how it all started.",
       "publishedAt": "2026-05-19T21:00:05+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:42.874077+00:00",
+      "fetchedAt": "2026-05-20T04:41:17.649732+00:00",
       "publishedAtLocal": "2026-05-20T07:00:05+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:42.874077+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:17.649732+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -316,9 +796,9 @@
       "summary": "In the three weeks since the alleged murder of five-year-old Kumanjayi Little Baby in Alice Springs, the NT's child protection system has come under intense scrutiny. Now, former child protection workers are speaking out about why they believe the system is broken.",
       "publishedAt": "2026-05-19T20:56:35+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:27.848456+00:00",
+      "fetchedAt": "2026-05-20T04:41:58.032088+00:00",
       "publishedAtLocal": "2026-05-20T06:56:35+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:27.848456+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:58.032088+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -332,9 +812,9 @@
       "summary": "Arsenal's long wait for a Premier League title comes to an end as title challengers Manchester City drop points at Bournemouth.",
       "publishedAt": "2026-05-19T20:41:07+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:59.264364+00:00",
+      "fetchedAt": "2026-05-20T04:41:51.845412+00:00",
       "publishedAtLocal": "2026-05-20T06:41:07+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:59.264364+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:51.845412+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -348,9 +828,9 @@
       "summary": "A man died while in the custody of Queensland's most crowded police watch house. The police union says the bottleneck is being caused by outdated prison service work practices.",
       "publishedAt": "2026-05-19T20:31:38+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:12.502007+00:00",
+      "fetchedAt": "2026-05-20T04:44:41.750912+00:00",
       "publishedAtLocal": "2026-05-20T06:31:38+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:12.502007+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:41.750912+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -364,9 +844,9 @@
       "summary": "A former track photographer, Georgia Tillyer bought her car, lovingly-named Night Fury, and learnt how to drive manual to enter her first event at Sydney Motorsport Park.",
       "publishedAt": "2026-05-19T20:24:41+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:55.868053+00:00",
+      "fetchedAt": "2026-05-20T04:43:17.573493+00:00",
       "publishedAtLocal": "2026-05-20T06:24:41+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:55.868053+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:17.573493+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -380,9 +860,9 @@
       "summary": "A British police force has said it is investigating two allegations of child sex abuse following information in documents relating to the late sex offender Jeffrey Epstein.",
       "publishedAt": "2026-05-19T20:19:56+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:41.365880+00:00",
+      "fetchedAt": "2026-05-20T04:50:52.614522+00:00",
       "publishedAtLocal": "2026-05-20T06:19:56+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:41.365880+10:00",
+      "fetchedAtLocal": "2026-05-20T14:50:52.614522+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -396,9 +876,9 @@
       "summary": "Police say a car was travelling along the Princes Highway when the driver lost control and crashed into a tree about 1:20am.",
       "publishedAt": "2026-05-19T19:38:49+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:14.224221+00:00",
+      "fetchedAt": "2026-05-20T04:50:27.528650+00:00",
       "publishedAtLocal": "2026-05-20T05:38:49+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:14.224221+10:00",
+      "fetchedAtLocal": "2026-05-20T14:50:27.528650+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -412,9 +892,9 @@
       "summary": "They may not be scheduled to play their first AFL game until 2028, but the Tasmania Devils have claimed their first scalp — booting Hawthorn out of the state which has been its second home for more than two decades.",
       "publishedAt": "2026-05-19T19:32:58+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:42.158398+00:00",
+      "fetchedAt": "2026-05-20T04:40:57.642289+00:00",
       "publishedAtLocal": "2026-05-20T05:32:58+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:42.158398+10:00",
+      "fetchedAtLocal": "2026-05-20T14:40:57.642289+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -428,9 +908,9 @@
       "summary": "Tasmania's largest private mental health hospital, which was given a $2 million lifeline by the state government last year, had its corporate governance placed under review, following a formal complaint by the facility's former chief executive.",
       "publishedAt": "2026-05-19T19:31:29+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:08.025327+00:00",
+      "fetchedAt": "2026-05-20T04:43:36.033662+00:00",
       "publishedAtLocal": "2026-05-20T05:31:29+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:08.025327+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:36.033662+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -444,9 +924,9 @@
       "summary": "Flashing lights on the roadside should mean one thing, but the RACQ says many drivers are not following their safety obligations.",
       "publishedAt": "2026-05-19T19:27:32+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:47.532622+00:00",
+      "fetchedAt": "2026-05-20T04:42:47.068506+00:00",
       "publishedAtLocal": "2026-05-20T05:27:32+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:47.532622+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:47.068506+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -460,9 +940,9 @@
       "summary": "\"Manosphere\" rhetoric is getting louder online, but can men showcasing different lifestyles and values online cut through that noise?",
       "publishedAt": "2026-05-19T19:18:36+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:21.077633+00:00",
+      "fetchedAt": "2026-05-20T04:41:48.787390+00:00",
       "publishedAtLocal": "2026-05-20T05:18:36+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:21.077633+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:48.787390+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -476,9 +956,9 @@
       "summary": "Property developers are using an affordable housing scheme to bypass normal planning requirements and win fast-tracked approval for contentious projects across Melbourne.",
       "publishedAt": "2026-05-19T19:03:08+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:44.854121+00:00",
+      "fetchedAt": "2026-05-20T04:41:54.034620+00:00",
       "publishedAtLocal": "2026-05-20T05:03:08+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:44.854121+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:54.034620+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -492,9 +972,9 @@
       "summary": "One startup founder who helped spread viral memes about capital gains tax reforms says the campaign was aimed at attracting attention after the budget, and not necessarily focused on accuracy.",
       "publishedAt": "2026-05-19T19:00:00+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:48.817567+00:00",
+      "fetchedAt": "2026-05-20T04:41:29.227636+00:00",
       "publishedAtLocal": "2026-05-20T05:00:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:48.817567+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:29.227636+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -508,9 +988,9 @@
       "summary": "Jotham Napat has confirmed Vanuatu has agreed to two pacts with both countries, but is not happy with either party.",
       "publishedAt": "2026-05-19T18:57:52+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:58.586131+00:00",
+      "fetchedAt": "2026-05-20T04:42:05.194560+00:00",
       "publishedAtLocal": "2026-05-20T04:57:52+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:58.586131+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:05.194560+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -524,9 +1004,9 @@
       "summary": "Before rising conflict pushed the Strait of Hormuz into the spotlight as a choke point vital to economies globally, tourism transformed women's lives.",
       "publishedAt": "2026-05-19T18:54:59+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:58.237923+00:00",
+      "fetchedAt": "2026-05-20T04:42:07.972950+00:00",
       "publishedAtLocal": "2026-05-20T04:54:59+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:58.237923+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:07.972950+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -540,25 +1020,9 @@
       "summary": "Labor MPs are gearing up for a hard sell on the impact of the federal government's tax changes on some small businesses, trusts and shares, despite many reporting \"positive\" feedback on housing reforms.",
       "publishedAt": "2026-05-19T18:51:33+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:08.258487+00:00",
+      "fetchedAt": "2026-05-20T04:41:12.891339+00:00",
       "publishedAtLocal": "2026-05-20T04:51:33+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:08.258487+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "e0565901bae1f5f6b08f3dbe778c400c",
-      "title": "Travel quiz, May 20: Got the Wednesday blues? Let's take a trip around the world",
-      "link": "https://www.abc.net.au/news/2026-05-20/travel-quiz-may-20/106620558",
-      "summary": "Can you name the city in this picture? And what is the Canadian specialty food \"beaver tail\"?",
-      "publishedAt": "2026-05-19T18:30:00+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:42.925707+00:00",
-      "publishedAtLocal": "2026-05-20T04:30:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:42.925707+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:12.891339+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -572,9 +1036,25 @@
       "summary": "French Canadian duo Angine de Poitrine are riding a wave of interest after a video of their live performance exploded in popularity, aided by a comical reaction by many on YouTube struggling to understand how their music is made.",
       "publishedAt": "2026-05-19T18:30:00+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:40.835472+00:00",
+      "fetchedAt": "2026-05-20T04:41:43.172993+00:00",
       "publishedAtLocal": "2026-05-20T04:30:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:40.835472+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:43.172993+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "e0565901bae1f5f6b08f3dbe778c400c",
+      "title": "Travel quiz, May 20: Got the Wednesday blues? Let's take a trip around the world",
+      "link": "https://www.abc.net.au/news/2026-05-20/travel-quiz-may-20/106620558",
+      "summary": "Can you name the city in this picture? And what is the Canadian specialty food \"beaver tail\"?",
+      "publishedAt": "2026-05-19T18:30:00+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:41:43.813590+00:00",
+      "publishedAtLocal": "2026-05-20T04:30:00+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:43.813590+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -588,9 +1068,9 @@
       "summary": "Russian President Vladimir Putin smiles as he greets Chinese Foreign Minister Wang Yi at the airport in Beijing.",
       "publishedAt": "2026-05-19T16:35:13+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:39.233970+00:00",
+      "fetchedAt": "2026-05-20T04:41:00.156376+00:00",
       "publishedAtLocal": "2026-05-20T02:35:13+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:39.233970+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:00.156376+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -604,9 +1084,9 @@
       "summary": "Reports have been circulating that the ICC is preparing to issue warrants against Israel's far-right finance minister, Bezalel Smotrich.",
       "publishedAt": "2026-05-19T16:12:31+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:06.309482+00:00",
+      "fetchedAt": "2026-05-20T04:41:58.858987+00:00",
       "publishedAtLocal": "2026-05-20T02:12:31+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:06.309482+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:58.858987+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -620,9 +1100,9 @@
       "summary": "A family spokesperson confirmed Jonathan Andic was being questioned by investigators. His father, Isak Andic, died in December 2024.",
       "publishedAt": "2026-05-19T11:54:06+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:40.881243+00:00",
+      "fetchedAt": "2026-05-20T04:42:40.413169+00:00",
       "publishedAtLocal": "2026-05-19T21:54:06+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:40.881243+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:40.413169+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -636,25 +1116,9 @@
       "summary": "Australia is wasting more than $1 billion each year building off-street car parks that end up unused and unwanted, a Grattan report has found.",
       "publishedAt": "2026-05-19T11:07:24+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:27.356646+00:00",
+      "fetchedAt": "2026-05-20T04:41:27.294928+00:00",
       "publishedAtLocal": "2026-05-19T21:07:24+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:27.356646+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "2801c2a55a6acbbe197b5e4dcf5a3207",
-      "title": "Two of four Italian divers' bodies recovered from underwater cave in Maldives",
-      "link": "https://www.abc.net.au/news/2026-05-19/two-of-four-italian-divers-bodies-recovered-from-underwater-cave/106698966",
-      "summary": "Finnish divers recovered the bodies after they were located deep inside an underwater cave in the Maldives.",
-      "publishedAt": "2026-05-19T10:13:51+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:10.046587+00:00",
-      "publishedAtLocal": "2026-05-19T20:13:51+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:10.046587+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:27.294928+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -668,9 +1132,9 @@
       "summary": "Sarah Ferguson presents Australia's premier daily current affairs program, delivering agenda-setting public affairs journalism and interviews that hold the powerful to account. Plus political analysis from Laura Tingle.",
       "publishedAt": "2026-05-19T10:00:29.000Z",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:20.446236+00:00",
+      "fetchedAt": "2026-05-20T04:44:12.224962+00:00",
       "publishedAtLocal": "2026-05-19T20:00:29+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:20.446236+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:12.224962+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -684,9 +1148,9 @@
       "summary": "An 82-year-old South Australian man died after he ingested prescription medication that was meant for another person and had been incorrectly labelled, a coronial inquest is told.",
       "publishedAt": "2026-05-19T09:58:31+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:01.071523+00:00",
+      "fetchedAt": "2026-05-20T04:43:55.779929+00:00",
       "publishedAtLocal": "2026-05-19T19:58:31+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:01.071523+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:55.779929+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -700,9 +1164,9 @@
       "summary": "Latest trusted news from the world of finance and business.",
       "publishedAt": "2026-05-19T08:53:40.000Z",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:44.196729+00:00",
+      "fetchedAt": "2026-05-20T04:42:48.866839+00:00",
       "publishedAtLocal": "2026-05-19T18:53:40+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:44.196729+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:48.866839+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -716,9 +1180,9 @@
       "summary": "Geraldton police investigate whether complaints about hooning were behind an alleged assault that left a father-of-three in a critical condition.",
       "publishedAt": "2026-05-19T08:44:22+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:47:22.642158+00:00",
+      "fetchedAt": "2026-05-20T04:46:21.855857+00:00",
       "publishedAtLocal": "2026-05-19T18:44:22+10:00",
-      "fetchedAtLocal": "2026-05-20T09:47:22.642158+10:00",
+      "fetchedAtLocal": "2026-05-20T14:46:21.855857+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -732,9 +1196,9 @@
       "summary": "The Titan Ridge Volcano is erupting in the Bismarck Sea, sending ash and smoke into the sky and prompting authorities to warn of possible tsunamis in the area.",
       "publishedAt": "2026-05-19T07:45:53+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:12.584688+00:00",
+      "fetchedAt": "2026-05-20T04:42:43.861688+00:00",
       "publishedAtLocal": "2026-05-19T17:45:53+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:12.584688+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:43.861688+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -748,41 +1212,9 @@
       "summary": "At 75 years old, Jacky Hudson will tread an unlikely path for a great-grandmother after earning selection in Australia's Commonwealth Games lawn bowls squad.",
       "publishedAt": "2026-05-19T07:40:35+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:09.121974+00:00",
+      "fetchedAt": "2026-05-20T04:43:25.861193+00:00",
       "publishedAtLocal": "2026-05-19T17:40:35+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:09.121974+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "08f1e927aef2ebb4dd25a2d96940db50",
-      "title": "Man charged after alleged shotgun incident in Hobart's Blackmans Bay",
-      "link": "https://www.abc.net.au/news/2026-05-19/man-charged-after-blackmans-bay-shotgun-fired-incident/106698666",
-      "summary": "A 27-year-old man has been charged with a raft of offences following an alleged shooting incident in Hobart's southern suburbs.",
-      "publishedAt": "2026-05-19T07:33:31+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:42:27.099197+00:00",
-      "publishedAtLocal": "2026-05-19T17:33:31+10:00",
-      "fetchedAtLocal": "2026-05-20T09:42:27.099197+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "a30411f0cc444094814eddb21c8401ea",
-      "title": "Planned upgrades to Collins Class submarines scaled back",
-      "link": "https://www.abc.net.au/news/2026-05-19/planned-upgrades-to-collins-class-submarines-scaled-back/106698460",
-      "summary": "A massive program of upgrades to Australia's aging fleet of Collins Class submarines, aimed at keeping them in the water a decade longer, is being scaled back.",
-      "publishedAt": "2026-05-19T07:17:48+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:21.153778+00:00",
-      "publishedAtLocal": "2026-05-19T17:17:48+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:21.153778+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:25.861193+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -796,9 +1228,9 @@
       "summary": "A Queensland massage therapist has been imprisoned for raping a client who says \"silence is not consent\" and that the \"degrading\" experience devastated her emotionally, physically and financially.",
       "publishedAt": "2026-05-19T07:01:00+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:50:03.259102+00:00",
+      "fetchedAt": "2026-05-20T04:47:58.739824+00:00",
       "publishedAtLocal": "2026-05-19T17:01:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:50:03.259102+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:58.739824+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -812,9 +1244,9 @@
       "summary": "Cricket Australia has spoken with BBL franchises about a plan to open this season's BBL with a showdown in India.",
       "publishedAt": "2026-05-19T06:53:11+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:42.551692+00:00",
+      "fetchedAt": "2026-05-20T04:43:22.556841+00:00",
       "publishedAtLocal": "2026-05-19T16:53:11+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:42.551692+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:22.556841+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -828,9 +1260,9 @@
       "summary": "Snowtown killer James Vlassakis's image can be revealed after South Australia's highest court lifted a suppression order made 25 years ago.",
       "publishedAt": "2026-05-19T06:33:09+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:50:11.458364+00:00",
+      "fetchedAt": "2026-05-20T04:47:59.447109+00:00",
       "publishedAtLocal": "2026-05-19T16:33:09+10:00",
-      "fetchedAtLocal": "2026-05-20T09:50:11.458364+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:59.447109+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -844,9 +1276,9 @@
       "summary": "Peter Stone was acting CEO when the BOM launched its new website, which was widely criticised for its costs and poor design.",
       "publishedAt": "2026-05-19T05:54:03+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:12.404550+00:00",
+      "fetchedAt": "2026-05-20T04:44:14.888605+00:00",
       "publishedAtLocal": "2026-05-19T15:54:03+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:12.404550+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:14.888605+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -860,9 +1292,25 @@
       "summary": "As flash flooding from record-setting rainfall recedes, some south-east Queensland residents feel that Bureau of Meteorology forecasts fell short of what was experienced.",
       "publishedAt": "2026-05-19T05:45:41+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:28.467821+00:00",
+      "fetchedAt": "2026-05-20T04:45:44.279018+00:00",
       "publishedAtLocal": "2026-05-19T15:45:41+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:28.467821+10:00",
+      "fetchedAtLocal": "2026-05-20T14:45:44.279018+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "de7e150bf173e25b3d31e567e0b2169d",
+      "title": "Tribunal's first refusal of a pet in rental since Tasmanian laws changed",
+      "link": "https://www.abc.net.au/news/2026-05-19/tas-tribunal-first-refusal-of-pet-in-rental-since-new-laws/106695758",
+      "summary": "A landlord's decision to deny a tenant's request to keep a 6-month-old rescue kitten in a unit has been upheld, despite new Tasmanian laws intended to make it easier to keep pets in rentals.",
+      "publishedAt": "2026-05-19T05:39:39+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:52:24.864306+00:00",
+      "publishedAtLocal": "2026-05-19T15:39:39+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:24.864306+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -876,9 +1324,9 @@
       "summary": "The Reserve Bank is growing increasingly anxious about price pressures building in the economy and its chief economist has raised the risk of a recession in post-budget remarks.",
       "publishedAt": "2026-05-19T05:19:17+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:56.708364+00:00",
+      "fetchedAt": "2026-05-20T04:42:18.199596+00:00",
       "publishedAtLocal": "2026-05-19T15:19:17+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:56.708364+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:18.199596+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -892,9 +1340,25 @@
       "summary": "An independent economist warns Canberrans will need to pay higher taxes and charges if the ACT government continues the same amount of spending on infrastructure and services.",
       "publishedAt": "2026-05-19T05:19:14+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:43.279349+00:00",
+      "fetchedAt": "2026-05-20T04:42:52.020314+00:00",
       "publishedAtLocal": "2026-05-19T15:19:14+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:43.279349+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:52.020314+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "e3f79886a492c8ff7578a183e98e53bf",
+      "title": "Former Brisbane GP Stan Theodoros charged with 148 counts of rape and sexual assault",
+      "link": "https://www.abc.net.au/news/2026-05-19/gp-stellios-theodoros-charges-148-counts-rape-sexual-assault/106661536",
+      "summary": "A former Brisbane doctor has been charged with 148 counts of rape and sexual assault following an extensive police investigation.",
+      "publishedAt": "2026-05-19T05:11:56+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:47:10.486205+00:00",
+      "publishedAtLocal": "2026-05-19T15:11:56+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:10.486205+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -908,25 +1372,9 @@
       "summary": "A crackdown in Iran drove a surge in the number of people executed worldwide in 2025, but China remains the \"leading executioner,\" human rights group Amnesty International says.",
       "publishedAt": "2026-05-19T05:11:56+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:41.211017+00:00",
+      "fetchedAt": "2026-05-20T04:49:25.353361+00:00",
       "publishedAtLocal": "2026-05-19T15:11:56+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:41.211017+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "64ff93339ef85814430dc2aa7abfd207",
-      "title": "Why Cuba is warning US military action could spark 'bloodbath' after months of rising tensions",
-      "link": "https://www.abc.net.au/news/2026-05-19/cuba-us-tensions-explained/106695706",
-      "summary": "Cuban President Miguel Díaz-Canel Bermúdez says Cuba's right to defend itself should not be used by the US as justification for a potential war.",
-      "publishedAt": "2026-05-19T04:58:07+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:49:56.558250+00:00",
-      "publishedAtLocal": "2026-05-19T14:58:07+10:00",
-      "fetchedAtLocal": "2026-05-20T09:49:56.558250+10:00",
+      "fetchedAtLocal": "2026-05-20T14:49:25.353361+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -940,9 +1388,9 @@
       "summary": "The anarchic, ARIA-winning group has been hit with a hefty fine by the Sydney Opera House before its first national tour in more than 30 years.",
       "publishedAt": "2026-05-19T04:57:03+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:01.075002+00:00",
+      "fetchedAt": "2026-05-20T04:42:11.803953+00:00",
       "publishedAtLocal": "2026-05-19T14:57:03+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:01.075002+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:11.803953+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -956,9 +1404,9 @@
       "summary": "Sam Walker has always seemed like a player destined for the highest levels of rugby league, but ahead of his State of Origin debut, it's impossible to know what comes next for the new Queensland halfback.",
       "publishedAt": "2026-05-19T04:37:49+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:05.948069+00:00",
+      "fetchedAt": "2026-05-20T04:43:04.598497+00:00",
       "publishedAtLocal": "2026-05-19T14:37:49+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:05.948069+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:04.598497+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -972,9 +1420,25 @@
       "summary": "Two people have died from Murray Valley encephalitis in Alice Springs, sparking a health alert for the rare mosquito-borne disease across the Northern Territory.",
       "publishedAt": "2026-05-19T04:12:26+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:34.844308+00:00",
+      "fetchedAt": "2026-05-20T04:43:43.352022+00:00",
       "publishedAtLocal": "2026-05-19T14:12:26+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:34.844308+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:43.352022+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "1e46b88e5111a3533dbc734821dc59aa",
+      "title": "Randwick mayor defends parking meter plan for popular eastern Sydney beaches",
+      "link": "https://www.abc.net.au/news/2026-05-19/randwick-mayor-defends-beaches-parking-meter-plan/106695894",
+      "summary": "A recent survey of residents found 54 per cent supported the plan that would introduce paid parking for visitors.",
+      "publishedAt": "2026-05-19T04:10:18+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:50:10.740767+00:00",
+      "publishedAtLocal": "2026-05-19T14:10:18+10:00",
+      "fetchedAtLocal": "2026-05-20T14:50:10.740767+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -988,9 +1452,9 @@
       "summary": "With stocks set to expire in August, the FluMist nasal spray has been made free for all children over the age of two.",
       "publishedAt": "2026-05-19T04:01:10+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:04.144677+00:00",
+      "fetchedAt": "2026-05-20T04:44:00.997488+00:00",
       "publishedAtLocal": "2026-05-19T14:01:10+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:04.144677+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:00.997488+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1004,9 +1468,9 @@
       "summary": "The defence team for Tanika Bromley, who is charged over the murder of Queensland teenager Pheobe Bishop, raises issues about delays in receiving parts of the brief of evidence.",
       "publishedAt": "2026-05-19T03:56:44+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:42:33.307368+00:00",
+      "fetchedAt": "2026-05-20T04:53:43.579068+00:00",
       "publishedAtLocal": "2026-05-19T13:56:44+10:00",
-      "fetchedAtLocal": "2026-05-20T09:42:33.307368+10:00",
+      "fetchedAtLocal": "2026-05-20T14:53:43.579068+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1020,9 +1484,9 @@
       "summary": "A legal showdown between two of the tech world's most powerful men has reached its end. Here's what we learned throughout the trial.",
       "publishedAt": "2026-05-19T03:50:33+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:48.628734+00:00",
+      "fetchedAt": "2026-05-20T04:42:47.919258+00:00",
       "publishedAtLocal": "2026-05-19T13:50:33+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:48.628734+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:47.919258+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1036,9 +1500,9 @@
       "summary": "The funding will go towards 24 new, permanent positions within the office to meet its increasing case load, Attorney-General Tara Cheyne said.",
       "publishedAt": "2026-05-19T03:41:18+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:47:20.782699+00:00",
+      "fetchedAt": "2026-05-20T04:52:13.611288+00:00",
       "publishedAtLocal": "2026-05-19T13:41:18+10:00",
-      "fetchedAtLocal": "2026-05-20T09:47:20.782699+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:13.611288+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1052,9 +1516,9 @@
       "summary": "Two teenagers opened fire at the largest mosque in San Diego, California on Monday, killing three men. Here is what we know about the attack.",
       "publishedAt": "2026-05-19T03:34:05+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:49:59.745450+00:00",
+      "fetchedAt": "2026-05-20T04:53:28.592326+00:00",
       "publishedAtLocal": "2026-05-19T13:34:05+10:00",
-      "fetchedAtLocal": "2026-05-20T09:49:59.745450+10:00",
+      "fetchedAtLocal": "2026-05-20T14:53:28.592326+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1068,9 +1532,9 @@
       "summary": "The end of a broadcast deal between Network 10 and Win Television is set to leave three regional markets without access to multiple channels.",
       "publishedAt": "2026-05-19T03:24:58+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:40.403518+00:00",
+      "fetchedAt": "2026-05-20T04:50:39.443925+00:00",
       "publishedAtLocal": "2026-05-19T13:24:58+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:40.403518+10:00",
+      "fetchedAtLocal": "2026-05-20T14:50:39.443925+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1084,9 +1548,9 @@
       "summary": "Kalman Tal, 66, died soon after he asked for his left foot to be cut off in a public park with a battery-powered saw, a court has heard, but the man who performed the amputation has pleaded not guilty to murder.",
       "publishedAt": "2026-05-19T03:11:03+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:43.679770+00:00",
+      "fetchedAt": "2026-05-20T04:48:50.136379+00:00",
       "publishedAtLocal": "2026-05-19T13:11:03+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:43.679770+10:00",
+      "fetchedAtLocal": "2026-05-20T14:48:50.136379+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1100,9 +1564,9 @@
       "summary": "A woman has faced court over the death of a man she allegedly attacked in a \"road rage\" incident at a shopping centre car park on the NSW South Coast.",
       "publishedAt": "2026-05-19T03:10:13+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:43:00.489609+00:00",
+      "fetchedAt": "2026-05-20T04:52:10.883833+00:00",
       "publishedAtLocal": "2026-05-19T13:10:13+10:00",
-      "fetchedAtLocal": "2026-05-20T09:43:00.489609+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:10.883833+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1116,9 +1580,9 @@
       "summary": "SA Power Networks is investing about $10 million to combat insulator pollution, which has been linked to repeated power outages across regional South Australia over summer.",
       "publishedAt": "2026-05-19T02:55:02+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:40:16.695852+00:00",
+      "fetchedAt": "2026-05-20T04:51:43.028169+00:00",
       "publishedAtLocal": "2026-05-19T12:55:02+10:00",
-      "fetchedAtLocal": "2026-05-20T09:40:16.695852+10:00",
+      "fetchedAtLocal": "2026-05-20T14:51:43.028169+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1132,9 +1596,9 @@
       "summary": "Researchers say they are still far from identifying the cause of a deadly paralytic illness spreading through populations of the iconic Australian birds.",
       "publishedAt": "2026-05-19T02:37:23+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:41.716859+00:00",
+      "fetchedAt": "2026-05-20T04:43:52.494371+00:00",
       "publishedAtLocal": "2026-05-19T12:37:23+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:41.716859+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:52.494371+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1148,9 +1612,9 @@
       "summary": "A formal apology is given in Tasmania's parliament for the past practice of taking human specimens from autopsies and displaying them in a museum without the knowledge of family members.",
       "publishedAt": "2026-05-19T02:14:50+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:33.886985+00:00",
+      "fetchedAt": "2026-05-20T04:43:38.972506+00:00",
       "publishedAtLocal": "2026-05-19T12:14:50+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:33.886985+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:38.972506+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1164,9 +1628,9 @@
       "summary": "KA was \"stripped\" of her culture as a child and has been on a journey to reclaim her connection to her Filipina heritage.",
       "publishedAt": "2026-05-19T02:09:58+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:23.573846+00:00",
+      "fetchedAt": "2026-05-20T04:41:41.830115+00:00",
       "publishedAtLocal": "2026-05-19T12:09:58+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:23.573846+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:41.830115+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1180,9 +1644,9 @@
       "summary": "The 47-year-old has faced court charged with what police describe as the \"particularly violent\" murder of his wife and sons in Sydney's south-west.",
       "publishedAt": "2026-05-19T01:24:11+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:48:15.026097+00:00",
+      "fetchedAt": "2026-05-20T04:51:10.351926+00:00",
       "publishedAtLocal": "2026-05-19T11:24:11+10:00",
-      "fetchedAtLocal": "2026-05-20T09:48:15.026097+10:00",
+      "fetchedAtLocal": "2026-05-20T14:51:10.351926+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1196,9 +1660,9 @@
       "summary": "Hawthorn is less than pleased after being forced to cease playing home games in Tasmania ahead of the Devils' AFL entry.",
       "publishedAt": "2026-05-19T01:19:33+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:54.249163+00:00",
+      "fetchedAt": "2026-05-20T04:43:27.810268+00:00",
       "publishedAtLocal": "2026-05-19T11:19:33+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:54.249163+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:27.810268+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1212,9 +1676,9 @@
       "summary": "Carlo Ancelotti includes Brazil's all-time leading goalscorer in his first FIFA World Cup squad.",
       "publishedAt": "2026-05-19T01:01:57+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:02.578890+00:00",
+      "fetchedAt": "2026-05-20T04:43:10.055937+00:00",
       "publishedAtLocal": "2026-05-19T11:01:57+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:02.578890+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:10.055937+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1222,15 +1686,15 @@
       ]
     },
     {
-      "id": "d9d422b76149fcb63d7ed22af80fa43a",
-      "title": "Australians detained after Israel intercepted Gaza-bound flotilla",
-      "link": "https://www.abc.net.au/news/2026-05-19/australians-detained-after-israel-halts-gaza-flotilla/106695764",
-      "summary": "Israeli forces detain 11 Australians after its navy intercepts ships seeking to break Israel's maritime blockade of Gaza, flotilla organisers say.",
-      "publishedAt": "2026-05-19T01:01:37+00:00",
+      "id": "96d0a8103a629c64690cd0838918d35b",
+      "title": "Shelter WA calls for targeted Airbnb ban as report reveals long-term rentals outnumbered 15–1",
+      "link": "https://www.abc.net.au/news/2026-05-19/calls-to-ban-new-airbnbs-in-wa-rentals-outnumbered-15-1/106588942",
+      "summary": "There are renewed calls for a ban on short-stay rentals as a new report shows holiday homes vastly outnumber permanent rentals in small regional communities.",
+      "publishedAt": "2026-05-19T01:00:21+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:49:10.955287+00:00",
-      "publishedAtLocal": "2026-05-19T11:01:37+10:00",
-      "fetchedAtLocal": "2026-05-20T09:49:10.955287+10:00",
+      "fetchedAt": "2026-05-20T04:46:51.228036+00:00",
+      "publishedAtLocal": "2026-05-19T11:00:21+10:00",
+      "fetchedAtLocal": "2026-05-20T14:46:51.228036+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1244,9 +1708,9 @@
       "summary": "An ongoing diphtheria outbreak in the Northern Territory has now spread across its borders to Western Australia, Queensland and South Australia, with Health Minister Mark Butler describing it as the nation's worst \"for decades\".",
       "publishedAt": "2026-05-19T00:55:24+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:40.925843+00:00",
+      "fetchedAt": "2026-05-20T04:43:35.385666+00:00",
       "publishedAtLocal": "2026-05-19T10:55:24+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:40.925843+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:35.385666+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1260,9 +1724,9 @@
       "summary": "The cash-strapped World Health Organization is sending a team of experts to the Democratic Republic of the Congo as hundreds of cases of Ebola are suspected.",
       "publishedAt": "2026-05-19T00:37:32+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:46.114314+00:00",
+      "fetchedAt": "2026-05-20T04:43:51.835255+00:00",
       "publishedAtLocal": "2026-05-19T10:37:32+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:46.114314+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:51.835255+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1276,9 +1740,9 @@
       "summary": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
       "publishedAt": "2026-05-19T00:27:39.000Z",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:31.542440+00:00",
+      "fetchedAt": "2026-05-20T04:43:57.636699+00:00",
       "publishedAtLocal": "2026-05-19T10:27:39+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:31.542440+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:57.636699+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1292,9 +1756,9 @@
       "summary": "Tim Bull has announced he will not contest the November election, after representing Gippsland East for the National Party for 16 years.",
       "publishedAt": "2026-05-19T00:26:20+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:49:21.161572+00:00",
+      "fetchedAt": "2026-05-20T04:47:36.885474+00:00",
       "publishedAtLocal": "2026-05-19T10:26:20+10:00",
-      "fetchedAtLocal": "2026-05-20T09:49:21.161572+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:36.885474+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1308,9 +1772,9 @@
       "summary": "Mark Fuhrman was one of the first two police detectives sent to investigate the 1994 killings of OJ Simpson's ex-wife, Nicole Brown Simpson, and her friend, Ronald Goldman, in Los Angeles.",
       "publishedAt": "2026-05-19T00:16:14+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:46:31.780665+00:00",
+      "fetchedAt": "2026-05-20T04:51:39.094398+00:00",
       "publishedAtLocal": "2026-05-19T10:16:14+10:00",
-      "fetchedAtLocal": "2026-05-20T09:46:31.780665+10:00",
+      "fetchedAtLocal": "2026-05-20T14:51:39.094398+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1324,9 +1788,9 @@
       "summary": "When Chris Stehbens spied a lost ambulance driving up and down his road during a Triple Zero (000) emergency response, he was not surprised by the struggle to find the right address.",
       "publishedAt": "2026-05-18T23:59:31+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:50.498182+00:00",
+      "fetchedAt": "2026-05-20T04:43:37.357808+00:00",
       "publishedAtLocal": "2026-05-19T09:59:31+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:50.498182+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:37.357808+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1340,9 +1804,9 @@
       "summary": "Alexander Rossi has been taken to hospital after a heavy crash during Indy 500 practice that saw two other cars wrecked just days out from the most prestigious race on the American calendar.",
       "publishedAt": "2026-05-18T23:57:35+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:19.151851+00:00",
+      "fetchedAt": "2026-05-20T04:43:11.060868+00:00",
       "publishedAtLocal": "2026-05-19T09:57:35+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:19.151851+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:11.060868+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1356,9 +1820,9 @@
       "summary": "Kai Havertz emerges Arsenal's hero after scoring the winner against Burnley, and is spared a sending-off for a horror tackle.",
       "publishedAt": "2026-05-18T23:46:15+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:10.674508+00:00",
+      "fetchedAt": "2026-05-20T04:49:35.781157+00:00",
       "publishedAtLocal": "2026-05-19T09:46:15+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:10.674508+10:00",
+      "fetchedAtLocal": "2026-05-20T14:49:35.781157+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1372,9 +1836,9 @@
       "summary": "In this remote East Kimberley community, where the local court has been shut for almost two years due to security concerns, the closure of the nearest regional court from June 1 is raising concerns about justice.",
       "publishedAt": "2026-05-18T22:58:57+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:48:11.533663+00:00",
+      "fetchedAt": "2026-05-20T04:49:09.207880+00:00",
       "publishedAtLocal": "2026-05-19T08:58:57+10:00",
-      "fetchedAtLocal": "2026-05-20T09:48:11.533663+10:00",
+      "fetchedAtLocal": "2026-05-20T14:49:09.207880+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1388,9 +1852,9 @@
       "summary": "In the face of protests, the remnants of a historic flour mill in Mount Gambier are now a pile of crumbled stone. The site will be developed into a multi-storey hotel complex and townhouses.",
       "publishedAt": "2026-05-18T22:01:46+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:48:01.545469+00:00",
+      "fetchedAt": "2026-05-20T04:45:36.636441+00:00",
       "publishedAtLocal": "2026-05-19T08:01:46+10:00",
-      "fetchedAtLocal": "2026-05-20T09:48:01.545469+10:00",
+      "fetchedAtLocal": "2026-05-20T14:45:36.636441+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1398,15 +1862,15 @@
       ]
     },
     {
-      "id": "da4bf19a04ecfbfb607aac78c1a83d51",
-      "title": "Joe Ingles signs with NBL side Melbourne United for 2026–27 season",
-      "link": "https://www.abc.net.au/news/2026-05-19/basketball-joe-ingles-signs-nbl-melbourne-united/106693056",
-      "summary": "The legendary Boomers and NBA star will return to Australia's NBL for the first time since 2009, signing with Melbourne United for two years.",
-      "publishedAt": "2026-05-18T22:00:33+00:00",
+      "id": "70cd9f68626e128aac92e22ede71f2f4",
+      "title": "UK's Channel 4 removes all Married at First Sight episodes after BBC reports sexual assault allegations",
+      "link": "https://www.abc.net.au/news/2026-05-19/uk-channel-4-removes-married-at-first-sight-show/106695278",
+      "summary": "British broadcaster Channel 4 removes all previous seasons of Married at First Sight after rape allegations come to light.",
+      "publishedAt": "2026-05-18T21:50:25+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:55.704359+00:00",
-      "publishedAtLocal": "2026-05-19T08:00:33+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:55.704359+10:00",
+      "fetchedAt": "2026-05-20T04:52:02.356473+00:00",
+      "publishedAtLocal": "2026-05-19T07:50:25+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:02.356473+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1420,25 +1884,9 @@
       "summary": "Bernard Tomic is just two wins from reaching his first main draw of the French Open since 2019 after being the only Australian to enjoy success in the qualifiers.",
       "publishedAt": "2026-05-18T21:50:02+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:56.597597+00:00",
+      "fetchedAt": "2026-05-20T04:43:20.533588+00:00",
       "publishedAtLocal": "2026-05-19T07:50:02+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:56.597597+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "fdb469cbbcdc4d4c98647ab683ed75b1",
-      "title": "ASX jumps more than 1 per cent in rebound rally — as it happened",
-      "link": "https://www.abc.net.au/news/2026-05-19/asx-markets-business-live-news-may-18-2026/106694576",
-      "summary": "The local share market rebounded Monday's heavy selling, as shares in Tuas made back some of their heavy losses. Look back on the day's events and insights from our business reporters on the ABC News markets blog.",
-      "publishedAt": "2026-05-18T21:20:00+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:45:37.501370+00:00",
-      "publishedAtLocal": "2026-05-19T07:20:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:45:37.501370+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:20.533588+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1452,9 +1900,9 @@
       "summary": "Changes are being made to massive program aiming to upgrade and extend the life of Australia's aging fleet of Collins Class submarines, Defence Minister Richard Marles has confirmed.",
       "publishedAt": "2026-05-18T21:11:22+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:14.569406+00:00",
+      "fetchedAt": "2026-05-20T04:41:09.365120+00:00",
       "publishedAtLocal": "2026-05-19T07:11:22+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:14.569406+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:09.365120+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1468,9 +1916,9 @@
       "summary": "Widespread flooding in north-west Queensland killed more than 90,000 head of livestock this year, but farmers will have to go it alone if they want to rebuild.",
       "publishedAt": "2026-05-18T21:01:46+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:15.980579+00:00",
+      "fetchedAt": "2026-05-20T04:41:44.445746+00:00",
       "publishedAtLocal": "2026-05-19T07:01:46+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:15.980579+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:44.445746+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1484,9 +1932,9 @@
       "summary": "Almost 50 high school students and teachers have been rescued after becoming stranded by floodwater at a national park in the Scenic Rim.",
       "publishedAt": "2026-05-18T20:58:24+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:59.808317+00:00",
+      "fetchedAt": "2026-05-20T04:41:46.882876+00:00",
       "publishedAtLocal": "2026-05-19T06:58:24+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:59.808317+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:46.882876+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1500,9 +1948,9 @@
       "summary": "Pat Cummins delivers when his team needs it most with crucial wickets as Sunrisers Hyderabad beat Chennai Super Kings.",
       "publishedAt": "2026-05-18T20:53:49+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:15.250314+00:00",
+      "fetchedAt": "2026-05-20T04:43:12.270312+00:00",
       "publishedAtLocal": "2026-05-19T06:53:49+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:15.250314+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:12.270312+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1516,9 +1964,9 @@
       "summary": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
       "publishedAt": "2026-05-18T20:47:56.000Z",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:43:47.360209+00:00",
+      "fetchedAt": "2026-05-20T04:52:53.022962+00:00",
       "publishedAtLocal": "2026-05-19T06:47:56+10:00",
-      "fetchedAtLocal": "2026-05-20T09:43:47.360209+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:53.022962+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1532,9 +1980,9 @@
       "summary": "Two teenage gunmen opened fire at San Diego's largest mosque, killing three men before they were later found dead, police say.",
       "publishedAt": "2026-05-18T20:28:09+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:40:49.610689+00:00",
+      "fetchedAt": "2026-05-20T04:46:54.810260+00:00",
       "publishedAtLocal": "2026-05-19T06:28:09+10:00",
-      "fetchedAtLocal": "2026-05-20T09:40:49.610689+10:00",
+      "fetchedAtLocal": "2026-05-20T14:46:54.810260+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1548,9 +1996,9 @@
       "summary": "Australia's reigning Queen of Pop discusses her relationships with Nick Cave and the late Michael Hutchence, and being tapped to headline the AFL grand final's pre-game entertainment.",
       "publishedAt": "2026-05-18T20:22:33+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:13.693421+00:00",
+      "fetchedAt": "2026-05-20T04:44:45.032946+00:00",
       "publishedAtLocal": "2026-05-19T06:22:33+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:13.693421+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:45.032946+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1564,9 +2012,25 @@
       "summary": "Another National of Trust South Australia branch goes public about its financial dispute with the high-profile heritage group, as the state opposition announces it will refer members' concerns to a parliamentary committee.",
       "publishedAt": "2026-05-18T20:03:40+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:41.580109+00:00",
+      "fetchedAt": "2026-05-20T04:51:29.245696+00:00",
       "publishedAtLocal": "2026-05-19T06:03:40+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:41.580109+10:00",
+      "fetchedAtLocal": "2026-05-20T14:51:29.245696+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "7de2936c81ea3f6c540bc7f3f6368456",
+      "title": "Woman dies after being hit by ute on Pacific Motorway near Beenleigh",
+      "link": "https://www.abc.net.au/news/2026-05-19/pacific-highway-woman-hit-by-car-dies/106694026",
+      "summary": "Police say initial enquiries indicate a female was out of her vehicle when she was struck.",
+      "publishedAt": "2026-05-18T20:01:38+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:53:59.415423+00:00",
+      "publishedAtLocal": "2026-05-19T06:01:38+10:00",
+      "fetchedAtLocal": "2026-05-20T14:53:59.415423+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1580,9 +2044,9 @@
       "summary": "The NSW government will permit secondary dwellings such as granny flats in some areas affected by noise from Western Sydney International Airport.",
       "publishedAt": "2026-05-18T19:46:36+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:23.757227+00:00",
+      "fetchedAt": "2026-05-20T04:48:01.017512+00:00",
       "publishedAtLocal": "2026-05-19T05:46:36+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:23.757227+10:00",
+      "fetchedAtLocal": "2026-05-20T14:48:01.017512+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1596,9 +2060,9 @@
       "summary": "High-volume salmon mortalities last year swamped Tasmania's waste streams as companies scrambled to find somewhere to accept them, documents show. There are now concerns the state remains unprepared for future mass deaths.",
       "publishedAt": "2026-05-18T19:32:46+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:04.916257+00:00",
+      "fetchedAt": "2026-05-20T04:41:35.654586+00:00",
       "publishedAtLocal": "2026-05-19T05:32:46+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:04.916257+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:35.654586+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1612,9 +2076,9 @@
       "summary": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
       "publishedAt": "2026-05-18T19:32:46.000Z",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:45:43.950623+00:00",
+      "fetchedAt": "2026-05-20T04:53:16.756196+00:00",
       "publishedAtLocal": "2026-05-19T05:32:46+10:00",
-      "fetchedAtLocal": "2026-05-20T09:45:43.950623+10:00",
+      "fetchedAtLocal": "2026-05-20T14:53:16.756196+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1622,15 +2086,15 @@
       ]
     },
     {
-      "id": "1860e6fa70d820ed5713f4c089d7f749",
-      "title": "Donald Trump says he has postponed a planned new strike on Iran",
-      "link": "https://www.abc.net.au/news/2026-05-19/us-israel-continue-strikes-on-iran/106695134",
-      "summary": "US President Donald Trump says an attack on Iran that was \"scheduled for tomorrow\" has been postponed at the request of Gulf state leaders.",
-      "publishedAt": "2026-05-18T19:25:40+00:00",
+      "id": "3a7fd543abc94b018797135791599e94",
+      "title": "Jim Soorley reveals how Brisbane was almost cut off from its water supply because of a secret mouse experiment",
+      "link": "https://www.abc.net.au/news/2026-05-19/jim-soorley-reveals-mouse-water-crisis/106691570",
+      "summary": "Brisbane was days away from running out of drinkable water in the 1990s due to a secret mouse experiment that was kept hidden from the public … until now.",
+      "publishedAt": "2026-05-18T19:31:37+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:42:30.331813+00:00",
-      "publishedAtLocal": "2026-05-19T05:25:40+10:00",
-      "fetchedAtLocal": "2026-05-20T09:42:30.331813+10:00",
+      "fetchedAt": "2026-05-20T04:45:57.680277+00:00",
+      "publishedAtLocal": "2026-05-19T05:31:37+10:00",
+      "fetchedAtLocal": "2026-05-20T14:45:57.680277+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1644,9 +2108,9 @@
       "summary": "The lead-up to state budget day is normally a time for flashy funding announcements. But as Tasmania stares down the barrel of $7 billion of debt, things are looking a bit bleaker.",
       "publishedAt": "2026-05-18T19:24:19+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:23.443936+00:00",
+      "fetchedAt": "2026-05-20T04:49:47.588693+00:00",
       "publishedAtLocal": "2026-05-19T05:24:19+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:23.443936+10:00",
+      "fetchedAtLocal": "2026-05-20T14:49:47.588693+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1660,9 +2124,9 @@
       "summary": "At least $57 billion worth of infrastructure in Victoria is vulnerable to more frequent and severe bushfires, floods and extreme heat. This figure is expected to grow.",
       "publishedAt": "2026-05-18T18:50:48+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:47:42.298993+00:00",
+      "fetchedAt": "2026-05-20T04:53:21.683896+00:00",
       "publishedAtLocal": "2026-05-19T04:50:48+10:00",
-      "fetchedAtLocal": "2026-05-20T09:47:42.298993+10:00",
+      "fetchedAtLocal": "2026-05-20T14:53:21.683896+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1671,14 +2135,14 @@
     },
     {
       "id": "de382ee7c4823bab198052b8af8e8e84",
-      "title": "People using super for weight loss surgery, but those looking overseas face risks",
+      "title": "People using super for weight-loss surgery, but those looking overseas face risks",
       "link": "https://www.abc.net.au/news/2026-05-19/weight-loss-surgery-superannuation-overseas-risks/106675332",
-      "summary": "Weight loss surgery has become an increasingly common option for people grappling with obesity — and many are funding it using retirement savings.",
+      "summary": "Weight-loss surgery has become an increasingly common option for people grappling with obesity — and many are funding it using retirement savings.",
       "publishedAt": "2026-05-18T18:46:12+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:49.385554+00:00",
+      "fetchedAt": "2026-05-20T04:43:50.905655+00:00",
       "publishedAtLocal": "2026-05-19T04:46:12+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:49.385554+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:50.905655+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1692,9 +2156,9 @@
       "summary": "Some young Australians locked out of the property market due to unaffordable housing have pursued ETFs and \"rentvesting\" as a way to build financial security. Here's what they make of the budget's CGT reforms.",
       "publishedAt": "2026-05-18T18:43:50+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:42.050222+00:00",
+      "fetchedAt": "2026-05-20T04:41:45.971220+00:00",
       "publishedAtLocal": "2026-05-19T04:43:50+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:42.050222+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:45.971220+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1708,9 +2172,9 @@
       "summary": "As the federal budget prompts howls of protest from those who earn the bulk of their income from owning assets rather than working, we shouldn't forget the relative privilege that has allowed many of those people to take those risks.",
       "publishedAt": "2026-05-18T18:41:44+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:22.809405+00:00",
+      "fetchedAt": "2026-05-20T04:42:30.526333+00:00",
       "publishedAtLocal": "2026-05-19T04:41:44+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:22.809405+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:30.526333+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1724,9 +2188,9 @@
       "summary": "While financial tension between partners isn't always about money, many people clash over values, spending habits and how they respond to financial pressure.",
       "publishedAt": "2026-05-18T18:30:00+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:28.549012+00:00",
+      "fetchedAt": "2026-05-20T04:41:55.886811+00:00",
       "publishedAtLocal": "2026-05-19T04:30:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:28.549012+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:55.886811+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1740,9 +2204,9 @@
       "summary": "What do you do when your stolen film wins a slew of awards for the thief? In the case of these filmmakers, you travel across the globe to hunt him down.",
       "publishedAt": "2026-05-18T18:30:00+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:56.902171+00:00",
+      "fetchedAt": "2026-05-20T04:42:10.322460+00:00",
       "publishedAtLocal": "2026-05-19T04:30:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:56.902171+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:10.322460+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1756,9 +2220,9 @@
       "summary": "Australians are the world's biggest gamblers, losing billions every year. But the true cost goes far beyond the financial.",
       "publishedAt": "2026-05-18T18:30:00+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:45.328608+00:00",
+      "fetchedAt": "2026-05-20T04:43:54.933683+00:00",
       "publishedAtLocal": "2026-05-19T04:30:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:45.328608+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:54.933683+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1772,9 +2236,9 @@
       "summary": "The ABC Timelines quiz is back to test your knowledge of some of the most iconic movie quotes of the 2000s.",
       "publishedAt": "2026-05-18T18:30:00+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:43:34.515683+00:00",
+      "fetchedAt": "2026-05-20T04:50:29.627488+00:00",
       "publishedAtLocal": "2026-05-19T04:30:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:43:34.515683+10:00",
+      "fetchedAtLocal": "2026-05-20T14:50:29.627488+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1788,9 +2252,9 @@
       "summary": "The Tesla boss accused OpenAI of wrongfully trying to enrich investors and insiders at the nonprofit's expense, and failing to prioritise AI's safety.",
       "publishedAt": "2026-05-18T17:47:29+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:11.450990+00:00",
+      "fetchedAt": "2026-05-20T04:44:07.498599+00:00",
       "publishedAtLocal": "2026-05-19T03:47:29+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:11.450990+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:07.498599+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1804,9 +2268,9 @@
       "summary": "One of the men was detained by a zookeeper and arrested after allegedly climbing a fence and breaking into the enclosure.",
       "publishedAt": "2026-05-18T17:27:49+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:47:15.270306+00:00",
+      "fetchedAt": "2026-05-20T04:52:48.019988+00:00",
       "publishedAtLocal": "2026-05-19T03:27:49+10:00",
-      "fetchedAtLocal": "2026-05-20T09:47:15.270306+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:48.019988+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1820,9 +2284,9 @@
       "summary": "Pouria Zaratifoukolaei, who works for a Persian-language outlet critical of the Iranian government, was attacked near his home in London in 2024.",
       "publishedAt": "2026-05-18T15:52:38+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:45:53.969806+00:00",
+      "fetchedAt": "2026-05-20T04:52:51.133674+00:00",
       "publishedAtLocal": "2026-05-19T01:52:38+10:00",
-      "fetchedAtLocal": "2026-05-20T09:45:53.969806+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:51.133674+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1836,9 +2300,9 @@
       "summary": "Voters in the region of Andalusia have sent the ruling Spain's Socialists yet another warning, adding to concerns Pedro Sánchez's government could suffer an electoral wipe-out in a nationwide vote.",
       "publishedAt": "2026-05-18T15:40:54+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:48:47.004276+00:00",
+      "fetchedAt": "2026-05-20T04:47:50.074719+00:00",
       "publishedAtLocal": "2026-05-19T01:40:54+10:00",
-      "fetchedAtLocal": "2026-05-20T09:48:47.004276+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:50.074719+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1852,9 +2316,9 @@
       "summary": "A man, 47, has been charged after three people were found dead in a home in Sydney's south-west in what police allege is a domestic violence-related incident.",
       "publishedAt": "2026-05-18T11:10:44+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:42:10.094974+00:00",
+      "fetchedAt": "2026-05-20T04:48:58.913174+00:00",
       "publishedAtLocal": "2026-05-18T21:10:44+10:00",
-      "fetchedAtLocal": "2026-05-20T09:42:10.094974+10:00",
+      "fetchedAtLocal": "2026-05-20T14:48:58.913174+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1868,9 +2332,9 @@
       "summary": "A WA police assistant commissioner faces trial accused of stalking a female subordinate officer and using a restricted computer system to track her movements.",
       "publishedAt": "2026-05-18T10:58:41+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:48:19.047254+00:00",
+      "fetchedAt": "2026-05-20T04:46:06.835338+00:00",
       "publishedAtLocal": "2026-05-18T20:58:41+10:00",
-      "fetchedAtLocal": "2026-05-20T09:48:19.047254+10:00",
+      "fetchedAtLocal": "2026-05-20T14:46:06.835338+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1884,9 +2348,9 @@
       "summary": "A jury has heard police officer Karol Jarentowski repeatedly attempted to pressure his former partner into dropping aggravated assault charges against him, including at one point threatening her child support.",
       "publishedAt": "2026-05-18T10:17:12+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:48:08.669950+00:00",
+      "fetchedAt": "2026-05-20T04:52:34.288764+00:00",
       "publishedAtLocal": "2026-05-18T20:17:12+10:00",
-      "fetchedAtLocal": "2026-05-20T09:48:08.669950+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:34.288764+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1900,9 +2364,9 @@
       "summary": "Sarah Ferguson presents Australia's premier daily current affairs program, delivering agenda-setting public affairs journalism and interviews that hold the powerful to account. Plus political analysis from Laura Tingle.",
       "publishedAt": "2026-05-18T10:11:56.000Z",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:47.757622+00:00",
+      "fetchedAt": "2026-05-20T04:43:59.204764+00:00",
       "publishedAtLocal": "2026-05-18T20:11:56+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:47.757622+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:59.204764+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1916,9 +2380,9 @@
       "summary": "Romelda Aiken-George is supposed to be retired. Instead, the 37-year-old goal shooter is breaking all kinds of records and reinventing herself in her 19th season. After her 255th national league game on the weekend, she reveals the secret to her longevity.",
       "publishedAt": "2026-05-18T09:31:54+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:13.584753+00:00",
+      "fetchedAt": "2026-05-20T04:43:25.217805+00:00",
       "publishedAtLocal": "2026-05-18T19:31:54+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:13.584753+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:25.217805+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1932,9 +2396,9 @@
       "summary": "The 1963 Näku Dhäruk or Yirrkala bark petitions led to Australia's first land rights law. A new book about them just won two prizes at the NSW Literary Awards.",
       "publishedAt": "2026-05-18T09:30:33+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:43.942774+00:00",
+      "fetchedAt": "2026-05-20T04:41:19.159281+00:00",
       "publishedAtLocal": "2026-05-18T19:30:33+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:43.942774+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:19.159281+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1948,9 +2412,25 @@
       "summary": "Latest trusted news from the world of finance and business.",
       "publishedAt": "2026-05-18T08:48:46.000Z",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:45.577736+00:00",
+      "fetchedAt": "2026-05-20T04:42:49.744235+00:00",
       "publishedAtLocal": "2026-05-18T18:48:46+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:45.577736+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:49.744235+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "f2533b1638343a6d80690dfc22e727f7",
+      "title": "Rajesh Jiwan, 56, charged with murder after woman's body found in Hobart home",
+      "link": "https://www.abc.net.au/news/2026-05-18/rajesh-jiwan-charged-with-murder-after-body-found-new-town/106692308",
+      "summary": "A 56-year-old man has been charged with murder after the body of a woman was found in a Hobart residence over the weekend.",
+      "publishedAt": "2026-05-18T08:27:17+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:46:52.067145+00:00",
+      "publishedAtLocal": "2026-05-18T18:27:17+10:00",
+      "fetchedAtLocal": "2026-05-20T14:46:52.067145+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1964,25 +2444,9 @@
       "summary": "The approach to tackling shark attacks has changed dramatically since the 2013 catch-and-kill policy, with a focus on shark tagging and tracking. But it's never enough to stop fatal attacks.",
       "publishedAt": "2026-05-18T08:26:26+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:41:16.456620+00:00",
+      "fetchedAt": "2026-05-20T04:51:17.508381+00:00",
       "publishedAtLocal": "2026-05-18T18:26:26+10:00",
-      "fetchedAtLocal": "2026-05-20T09:41:16.456620+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "a063a9eb232fe522785ba25ccad15316",
-      "title": "Israeli forces intercept Gaza flotilla with Australians on board, organisers say",
-      "link": "https://www.abc.net.au/news/2026-05-18/israeli-forces-start-intercepting-gaza-flotilla/106694178",
-      "summary": "The organisers of a flotilla of ships trying to break Israel's maritime blockade of Gaza say Israel's navy is intercepting the group off the coast of Cyprus.",
-      "publishedAt": "2026-05-18T08:25:58+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:49:32.240474+00:00",
-      "publishedAtLocal": "2026-05-18T18:25:58+10:00",
-      "fetchedAtLocal": "2026-05-20T09:49:32.240474+10:00",
+      "fetchedAtLocal": "2026-05-20T14:51:17.508381+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -1996,9 +2460,9 @@
       "summary": "An inquiry into the state of live music in NSW hears from industry stakeholders looking to service younger audiences sprawled across Greater Sydney.",
       "publishedAt": "2026-05-18T08:22:00+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:46:36.594116+00:00",
+      "fetchedAt": "2026-05-20T04:47:31.538811+00:00",
       "publishedAtLocal": "2026-05-18T18:22:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:46:36.594116+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:31.538811+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2012,9 +2476,9 @@
       "summary": "Collingwood champion Pendlebury will break the AFL games record against West Coast but hasn't pondered his future beyond then.",
       "publishedAt": "2026-05-18T08:13:21+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:21.136175+00:00",
+      "fetchedAt": "2026-05-20T04:43:02.919988+00:00",
       "publishedAtLocal": "2026-05-18T18:13:21+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:21.136175+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:02.919988+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2022,15 +2486,15 @@
       ]
     },
     {
-      "id": "e3623ba9cdffa5e3e3b73eb77fa1b6e6",
-      "title": "US Africa Command conducts additional strikes against Islamic State militants in Nigeria",
-      "link": "https://www.abc.net.au/news/2026-05-18/us-strikes-islamic-state-militants-nigeria/106693954",
-      "summary": "The US Africa Command announced the strikes days after Trump claimed to have killed the group's second-in-command.",
-      "publishedAt": "2026-05-18T08:03:38+00:00",
+      "id": "eaeba4736dec0faa842c6e8c4421112b",
+      "title": "Innisfail man accused of paying to watch live videos of overseas child sex abuse",
+      "link": "https://www.abc.net.au/news/2026-05-18/innisfail-man-charged-watching-live-child-sex-abuse/106693452",
+      "summary": "Police allege the 38-year-old from the state's far north took part in more than 40 live shows on an online platform. WARNING: This story contains details of child sexual abuse.",
+      "publishedAt": "2026-05-18T07:09:15+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:41:22.392435+00:00",
-      "publishedAtLocal": "2026-05-18T18:03:38+10:00",
-      "fetchedAtLocal": "2026-05-20T09:41:22.392435+10:00",
+      "fetchedAt": "2026-05-20T04:51:43.890945+00:00",
+      "publishedAtLocal": "2026-05-18T17:09:15+10:00",
+      "fetchedAtLocal": "2026-05-20T14:51:43.890945+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2044,9 +2508,9 @@
       "summary": "Australia suspends private colleges from applying to offer new courses to international students as part of a crackdown on abuse in the student visa system.",
       "publishedAt": "2026-05-18T07:00:07+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:49.277541+00:00",
+      "fetchedAt": "2026-05-20T04:41:45.081191+00:00",
       "publishedAtLocal": "2026-05-18T17:00:07+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:49.277541+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:45.081191+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2060,9 +2524,9 @@
       "summary": "China is \"playing a hard game\" with its stranglehold on the global minerals and metals market and Australian smelters need taxpayer support to \"play hard back\".",
       "publishedAt": "2026-05-18T06:59:44+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:41:06.756267+00:00",
+      "fetchedAt": "2026-05-20T04:51:59.118741+00:00",
       "publishedAtLocal": "2026-05-18T16:59:44+10:00",
-      "fetchedAtLocal": "2026-05-20T09:41:06.756267+10:00",
+      "fetchedAtLocal": "2026-05-20T14:51:59.118741+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2076,9 +2540,25 @@
       "summary": "The guilty man embarked on a two-week crime spree after his relationship soured with his business partner, who he also assaulted in front of the man's children.",
       "publishedAt": "2026-05-18T06:52:26+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:14.430648+00:00",
+      "fetchedAt": "2026-05-20T04:53:36.576764+00:00",
       "publishedAtLocal": "2026-05-18T16:52:26+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:14.430648+10:00",
+      "fetchedAtLocal": "2026-05-20T14:53:36.576764+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "553180f1292a64f48e2c5735386e906a",
+      "title": "SA premier plays down social media posts attempting to reveal his home address amid golf course controversy",
+      "link": "https://www.abc.net.au/news/2026-05-18/premier-peter-malinauskas-on-social-media-golf-course-protests/106692934",
+      "summary": "SA Premier Peter Malinauskas has played down social media posts attempting to reveal his home address in the aftermath of hundreds of trees being removed for the $45 million North Adelaide Golf Course.",
+      "publishedAt": "2026-05-18T06:43:47+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:53:27.960023+00:00",
+      "publishedAtLocal": "2026-05-18T16:43:47+10:00",
+      "fetchedAtLocal": "2026-05-20T14:53:27.960023+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2092,9 +2572,9 @@
       "summary": "A cull of 20,000 native birds on a Northern Territory cattle station will not be going ahead.",
       "publishedAt": "2026-05-18T06:28:13+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:46:33.879887+00:00",
+      "fetchedAt": "2026-05-20T04:49:56.957185+00:00",
       "publishedAtLocal": "2026-05-18T16:28:13+10:00",
-      "fetchedAtLocal": "2026-05-20T09:46:33.879887+10:00",
+      "fetchedAtLocal": "2026-05-20T14:49:56.957185+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2108,9 +2588,9 @@
       "summary": "Anglo American says it has sold its five steelmaking coal mines in central Queensland to a UK mining company Dhilmar Ltd for up to $5.43 billion.",
       "publishedAt": "2026-05-18T06:27:05+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:42:41.867474+00:00",
+      "fetchedAt": "2026-05-20T04:47:46.293035+00:00",
       "publishedAtLocal": "2026-05-18T16:27:05+10:00",
-      "fetchedAtLocal": "2026-05-20T09:42:41.867474+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:46.293035+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2124,9 +2604,9 @@
       "summary": "Pianist Jayson Gillham is suing the Melbourne Symphony Orchestra in the Federal Court over political discrimination after comments he made about Gaza on stage during a 2024 performance.",
       "publishedAt": "2026-05-18T06:03:34+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:50:13.440808+00:00",
+      "fetchedAt": "2026-05-20T04:49:28.141672+00:00",
       "publishedAtLocal": "2026-05-18T16:03:34+10:00",
-      "fetchedAtLocal": "2026-05-20T09:50:13.440808+10:00",
+      "fetchedAtLocal": "2026-05-20T14:49:28.141672+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2140,25 +2620,9 @@
       "summary": "The Coalition seizes on the federal government's broken tax promises, claiming a \"death tax\" has been sneaked into changes to trusts passed on through inheritance. The treasurer says that is a scare campaign.",
       "publishedAt": "2026-05-18T05:53:10+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:16.674918+00:00",
+      "fetchedAt": "2026-05-20T04:42:29.124418+00:00",
       "publishedAtLocal": "2026-05-18T15:53:10+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:16.674918+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "fa4ffa4b7ffaab111ae0501c9b267ba0",
-      "title": "Man who moved fridge with Isla Bell's body inside previously jailed for violent attack against woman",
-      "link": "https://www.abc.net.au/news/2026-05-18/man-who-moved-isla-bell-body-fridge-previous-jail-attack-woman/106692876",
-      "summary": "The ABC can reveal Eyal Yaffe previously served time for assaulting and choking a woman who he threatened to \"stuff in a suitcase\".",
-      "publishedAt": "2026-05-18T05:33:39+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:41:53.485757+00:00",
-      "publishedAtLocal": "2026-05-18T15:33:39+10:00",
-      "fetchedAtLocal": "2026-05-20T09:41:53.485757+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:29.124418+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2172,9 +2636,9 @@
       "summary": "Koby Weaver, 21, was sentenced last month to two years' jail, after he ran into a brawl between two of his friends and two off-duty officers.",
       "publishedAt": "2026-05-18T05:12:46+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:40.136121+00:00",
+      "fetchedAt": "2026-05-20T04:47:17.031114+00:00",
       "publishedAtLocal": "2026-05-18T15:12:46+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:40.136121+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:17.031114+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2188,9 +2652,9 @@
       "summary": "From vegetarian chilli to hearty soup, these easy recipes might convince you to add beans to your regular dinner rotation.",
       "publishedAt": "2026-05-18T05:00:21+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:12.005858+00:00",
+      "fetchedAt": "2026-05-20T04:42:16.188928+00:00",
       "publishedAtLocal": "2026-05-18T15:00:21+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:12.005858+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:16.188928+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2204,9 +2668,9 @@
       "summary": "Reece Walsh's generational run to end 2025 was almost without peer, but he has rejoined the ranks of the mortals to start this year.",
       "publishedAt": "2026-05-18T04:42:18+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:50.838933+00:00",
+      "fetchedAt": "2026-05-20T04:43:23.212405+00:00",
       "publishedAtLocal": "2026-05-18T14:42:18+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:50.838933+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:23.212405+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2220,9 +2684,9 @@
       "summary": "Federal Court documents show employees of the Vitrinite group of companies are collectively owed more than $16 million in entitlements. The mine near Dysart in Central Queensland has faced ongoing financial difficulties, exacerbated by lower coal prices.",
       "publishedAt": "2026-05-18T04:37:54+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:50:17.560819+00:00",
+      "fetchedAt": "2026-05-20T04:50:16.092649+00:00",
       "publishedAtLocal": "2026-05-18T14:37:54+10:00",
-      "fetchedAtLocal": "2026-05-20T09:50:17.560819+10:00",
+      "fetchedAtLocal": "2026-05-20T14:50:16.092649+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2236,9 +2700,9 @@
       "summary": "SA public health chief Nicola Spurrier opens up about the moment when she was knocked from her bike by a car last year, and recounted the experience — which left her with broken bones and fearing for her life — only hours after a 39-year-old motorcyclist was killed in a crash in the Adelaide Hills.",
       "publishedAt": "2026-05-18T04:08:04+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:59.017745+00:00",
+      "fetchedAt": "2026-05-20T04:43:45.545219+00:00",
       "publishedAtLocal": "2026-05-18T14:08:04+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:59.017745+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:45.545219+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2246,31 +2710,15 @@
       ]
     },
     {
-      "id": "f4721ec5b88321af22794228c32c107a",
-      "title": "Man pleads not guilty to murder but guilty to manslaughter in park amputation trial",
-      "link": "https://www.abc.net.au/news/2026-05-18/john-yalu-pleads-not-guilty-circular-saw-murder-trial-kalman-tal/106691118",
-      "summary": "The trial of a man who allegedly performed an amputation on a 66-year-old, causing his death, is likely to focus on the accused's \"state of mind\" and intention, a court hears.",
-      "publishedAt": "2026-05-18T04:01:12+00:00",
+      "id": "a159f266646a17c9e4dcd32395c9ac8c",
+      "title": "Tasmanian polling shows One Nation would win a 'number of seats' in next state election",
+      "link": "https://www.abc.net.au/news/2026-05-18/one-nation-surges-in-popularity-emrs-poll-tasmania/106691168",
+      "summary": "A recent Tasmanian poll has shown that One Nation would win a \"number of seats\" in the next state election.",
+      "publishedAt": "2026-05-18T04:05:34+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:45:34.232882+00:00",
-      "publishedAtLocal": "2026-05-18T14:01:12+10:00",
-      "fetchedAtLocal": "2026-05-20T09:45:34.232882+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "e6a34a840de2366746e29542702e078e",
-      "title": "Horror MotoGP crashes at Catalan Grand Prix leaves rider with broken neck",
-      "link": "https://www.abc.net.au/news/2026-05-18/motogp-catalan-grand-prix-alex-marquez-broken-neck/106692508",
-      "summary": "Alex Márquez is lucky to be alive after he spectacularly wrecked his MotoGP bike during the Catalan Grand Prix in Barcelona, while Johann Zarco was also taken to hospital after an equally terrifying crash later in the race.",
-      "publishedAt": "2026-05-18T03:53:56+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:43:59.459379+00:00",
-      "publishedAtLocal": "2026-05-18T13:53:56+10:00",
-      "fetchedAtLocal": "2026-05-20T09:43:59.459379+10:00",
+      "fetchedAt": "2026-05-20T04:44:34.928516+00:00",
+      "publishedAtLocal": "2026-05-18T14:05:34+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:34.928516+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2284,9 +2732,9 @@
       "summary": "The federal treasurer orders another six companies to divest their holdings in Northern Minerals as concerns grow in Canberra that Chinese-backed investors are trying to seize control of the rare earths mining company.",
       "publishedAt": "2026-05-18T03:46:17+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:07.558366+00:00",
+      "fetchedAt": "2026-05-20T04:44:18.475439+00:00",
       "publishedAtLocal": "2026-05-18T13:46:17+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:07.558366+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:18.475439+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2300,9 +2748,9 @@
       "summary": "Corbie Walpole's legal team has argued the sentencing judge failed to properly consider psychiatric evidence about her mental health at the time of the offending.",
       "publishedAt": "2026-05-18T03:42:18+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:35.875345+00:00",
+      "fetchedAt": "2026-05-20T04:44:01.857924+00:00",
       "publishedAtLocal": "2026-05-18T13:42:18+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:35.875345+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:01.857924+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2316,9 +2764,25 @@
       "summary": "Anthony Albanese says he remains \"very confident\" in the future of steelmaking in Whyalla, and says the federal government is \"continuing to work\" with lead producer Nyrstar to secure its operations in Port Pirie and Hobart.",
       "publishedAt": "2026-05-18T03:25:18+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:47:09.788621+00:00",
+      "fetchedAt": "2026-05-20T04:48:53.232263+00:00",
       "publishedAtLocal": "2026-05-18T13:25:18+10:00",
-      "fetchedAtLocal": "2026-05-20T09:47:09.788621+10:00",
+      "fetchedAtLocal": "2026-05-20T14:48:53.232263+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "6dec81987521443f8eb9c9b85b9b1eff",
+      "title": "Tasmania Police investigating near-miss between truck and two motorcycles",
+      "link": "https://www.abc.net.au/news/2026-05-18/near-miss-between-truck-and-motorcycles-tasmania/106692118",
+      "summary": "Police are investigating after dashcam footage emerged of a large truck narrowly avoiding hitting two motorcyclists on a rural road in Tasmania.",
+      "publishedAt": "2026-05-18T03:12:28+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:46:05.118453+00:00",
+      "publishedAtLocal": "2026-05-18T13:12:28+10:00",
+      "fetchedAtLocal": "2026-05-20T14:46:05.118453+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2332,9 +2796,9 @@
       "summary": "Farm groups have welcomed the chemical regulator's long-awaited decision to approve double-strength mouse baits amid plague numbers in Western Australia and South Australia.",
       "publishedAt": "2026-05-18T03:10:59+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:52.158115+00:00",
+      "fetchedAt": "2026-05-20T04:43:48.214506+00:00",
       "publishedAtLocal": "2026-05-18T13:10:59+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:52.158115+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:48.214506+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2342,15 +2806,31 @@
       ]
     },
     {
-      "id": "3bc1fd83e2d3acee3db5829878a35d3e",
-      "title": "Mice fill seeding bins as WA farmers try to plant the 2026 crop.",
-      "link": "https://www.abc.net.au/news/2026-05-18/mouse-plague-ugc/106691398",
-      "summary": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
-      "publishedAt": "2026-05-18T03:10:59.000Z",
+      "id": "d605488e328badd058fe3983d1bdd7bc",
+      "title": "Parramatta City Council unveils plan for Chinatown in 'underutilised' part of Western Sydney",
+      "link": "https://www.abc.net.au/news/2026-05-18/parramatta-chinatown-plan-unveiled/106691382",
+      "summary": "The Parramatta City Council is planning a new Chinatown in an \"under-utilised\" part of the Western Sydney CBD, but community members want to see more than just food businesses.",
+      "publishedAt": "2026-05-18T03:01:38+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:47:14.363120+00:00",
-      "publishedAtLocal": "2026-05-18T13:10:59+10:00",
-      "fetchedAtLocal": "2026-05-20T09:47:14.363120+10:00",
+      "fetchedAt": "2026-05-20T04:53:10.618022+00:00",
+      "publishedAtLocal": "2026-05-18T13:01:38+10:00",
+      "fetchedAtLocal": "2026-05-20T14:53:10.618022+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "26bb745fc444a33bd3a6fa728a4b3323",
+      "title": "Jonas Vingegaard claims second Giro d'Italia stage win, Jai Hindley fighting for podium spot",
+      "link": "https://www.abc.net.au/news/2026-05-18/jonas-vingegaard-second-giro-d-italia-stage-win/106691924",
+      "summary": "Jai Hindley insists that the Giro d'Italia is not over despite Jonas Vinegagaard proving his mountain dominance with another impressive victory on stage nine.",
+      "publishedAt": "2026-05-18T02:29:02+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:52:27.854268+00:00",
+      "publishedAtLocal": "2026-05-18T12:29:02+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:27.854268+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2364,9 +2844,9 @@
       "summary": "A Kiwi couple in a remote port town on WA's south coast have shared an unlikely discovery, a live frog in a bag of Woolworths lettuce.",
       "publishedAt": "2026-05-18T02:24:31+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:13.238942+00:00",
+      "fetchedAt": "2026-05-20T04:52:21.868010+00:00",
       "publishedAtLocal": "2026-05-18T12:24:31+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:13.238942+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:21.868010+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2380,9 +2860,9 @@
       "summary": "Yutthawichan Phetrchaisak is remanded in custody after being charged with the murder of a 42-year-old man north of Bundaberg.",
       "publishedAt": "2026-05-18T01:56:40+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:47:35.833775+00:00",
+      "fetchedAt": "2026-05-20T04:52:08.112737+00:00",
       "publishedAtLocal": "2026-05-18T11:56:40+10:00",
-      "fetchedAtLocal": "2026-05-20T09:47:35.833775+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:08.112737+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2396,9 +2876,25 @@
       "summary": "Labor candidate Luke Richmond will become the next member for Stafford, but the party's vote dropped several points.",
       "publishedAt": "2026-05-18T01:31:18+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:40:39.508054+00:00",
+      "fetchedAt": "2026-05-20T04:46:58.285328+00:00",
       "publishedAtLocal": "2026-05-18T11:31:18+10:00",
-      "fetchedAtLocal": "2026-05-20T09:40:39.508054+10:00",
+      "fetchedAtLocal": "2026-05-20T14:46:58.285328+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "519bbf879db0871d6707467a7a370941",
+      "title": "Coffs Coast woman killed, three injured after crash at Karangi",
+      "link": "https://www.abc.net.au/news/2026-05-18/woman-killed-in-karangi-crash/106691102",
+      "summary": "Police are investigating after a car flipped after crashing into a power pole.",
+      "publishedAt": "2026-05-18T01:06:49+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:50:47.471588+00:00",
+      "publishedAtLocal": "2026-05-18T11:06:49+10:00",
+      "fetchedAtLocal": "2026-05-20T14:50:47.471588+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2412,9 +2908,9 @@
       "summary": "Speaking after Donald Trump's meeting with China's president, Taiwan's leader says the island will not be sacrificed or traded and will not give up its free way of life.",
       "publishedAt": "2026-05-18T00:12:07+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:38.242729+00:00",
+      "fetchedAt": "2026-05-20T04:42:43.227587+00:00",
       "publishedAtLocal": "2026-05-18T10:12:07+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:38.242729+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:43.227587+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2428,9 +2924,25 @@
       "summary": "Rochelle Gregory has clothed everyone from Paris Hilton to Dua Lipa. Now the designer is using film to candidly explore her mental health battle while showcasing her latest collection.",
       "publishedAt": "2026-05-17T22:53:54+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:00.208873+00:00",
+      "fetchedAt": "2026-05-20T04:43:31.925814+00:00",
       "publishedAtLocal": "2026-05-18T08:53:54+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:00.208873+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:31.925814+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "News",
+      "sourceCategories": [
+        "News"
+      ]
+    },
+    {
+      "id": "fb233f7710dc7b72d55159e3f21c4c11",
+      "title": "Albany hydrotherapy pool reopening rejected despite study finding it 'justifiable'",
+      "link": "https://www.abc.net.au/news/2026-05-18/albany-hydrotherapy-pool-feasibility/106687884",
+      "summary": "The WA health minister rejects recommissioning Albany's public hydrotherapy pool despite a feasibility study saying there is a justifiable cause to do so.",
+      "publishedAt": "2026-05-17T22:00:02+00:00",
+      "source": "ABC News",
+      "fetchedAt": "2026-05-20T04:47:23.638115+00:00",
+      "publishedAtLocal": "2026-05-18T08:00:02+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:23.638115+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2444,41 +2956,9 @@
       "summary": "A national company estimates many Queensland homes are unprepared as the deadline to install compliant smoke alarms nears.",
       "publishedAt": "2026-05-17T21:33:28+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:06.527541+00:00",
+      "fetchedAt": "2026-05-20T04:43:32.845805+00:00",
       "publishedAtLocal": "2026-05-18T07:33:28+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:06.527541+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "7ba3efd37bc8fbca55b83ceaa20ed6db",
-      "title": "ASX down after Wall Street losses, AUD also lower, oil rises — as it happened",
-      "link": "https://www.abc.net.au/news/2026-05-18/asx-markets-business-news-live-updates-monday-18-may/106689974",
-      "summary": "The ASX 200 finishes the first session of the trading week with a fall of 1.45 per cent, continuing its downward trend this month. Meanwhile, uncertainty over the Iran war has sent Brent crude oil above $110 a barrel.",
-      "publishedAt": "2026-05-17T21:19:41+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:47:30.212093+00:00",
-      "publishedAtLocal": "2026-05-18T07:19:41+10:00",
-      "fetchedAtLocal": "2026-05-20T09:47:30.212093+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "4479ceab0078453b488a457c59213699",
-      "title": "Albanese rejects claim discretionary trust plan amounts to 'death tax' — as it happened",
-      "link": "https://www.abc.net.au/news/2026-05-18/federal-politics-live-blog-budget-reaction/106690804",
-      "summary": "Prime Minister Anthony Albanese has rejected suggestion the government's planned tax on discretionary trusts amounts to a so-called \"death tax\".",
-      "publishedAt": "2026-05-17T21:10:53+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:49:28.984890+00:00",
-      "publishedAtLocal": "2026-05-18T07:10:53+10:00",
-      "fetchedAtLocal": "2026-05-20T09:49:28.984890+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:32.845805+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2492,9 +2972,9 @@
       "summary": "Billy Slater leaves Reece Walsh out of his squad for State of Origin I, while coach Laurie Daley accidentally announces the name of an ex-Queensland player.",
       "publishedAt": "2026-05-17T21:08:16+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:11.089068+00:00",
+      "fetchedAt": "2026-05-20T04:42:17.223118+00:00",
       "publishedAtLocal": "2026-05-18T07:08:16+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:11.089068+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:17.223118+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2508,9 +2988,9 @@
       "summary": "Animal shelters across New South Wales sound the alarm on a worsening stray cat crisis.",
       "publishedAt": "2026-05-17T21:00:09+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:43:18.729922+00:00",
+      "fetchedAt": "2026-05-20T04:50:48.347290+00:00",
       "publishedAtLocal": "2026-05-18T07:00:09+10:00",
-      "fetchedAtLocal": "2026-05-20T09:43:18.729922+10:00",
+      "fetchedAtLocal": "2026-05-20T14:50:48.347290+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2524,25 +3004,9 @@
       "summary": "Dozens of Central Land Council Aboriginal rangers gathered east of Alice Springs last week for the 2026 Women's Ranger Camp — a time for health, learning and healing in the wake of the town's recent loss of Kumanjayi Little Baby.",
       "publishedAt": "2026-05-17T20:59:46+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:42:15.521943+00:00",
+      "fetchedAt": "2026-05-20T04:48:31.746167+00:00",
       "publishedAtLocal": "2026-05-18T06:59:46+10:00",
-      "fetchedAtLocal": "2026-05-20T09:42:15.521943+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "c7f949ad2deaa05d60d94f5f2bb9c844",
-      "title": "Criminal cases at risk of being halted as NT legal aid crisis leaves people without lawyers",
-      "link": "https://www.abc.net.au/news/2026-05-18/nt-criminal-cases-at-risk-halted-legal-aid-crisis/106678552",
-      "summary": "Lawyers in the Northern Territory are commencing a landmark legal challenge that could require courts to halt some cases due to defendants being unable to access a lawyer amid a worsening legal aid crisis.",
-      "publishedAt": "2026-05-17T20:43:44+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:46:35.791138+00:00",
-      "publishedAtLocal": "2026-05-18T06:43:44+10:00",
-      "fetchedAtLocal": "2026-05-20T09:46:35.791138+10:00",
+      "fetchedAtLocal": "2026-05-20T14:48:31.746167+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2556,9 +3020,9 @@
       "summary": "About 10 new suspected victims have come forward as part of a French probe into the network of late US sex offender Jeffrey Epstein.",
       "publishedAt": "2026-05-17T20:38:24+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:00.672989+00:00",
+      "fetchedAt": "2026-05-20T04:51:48.528863+00:00",
       "publishedAtLocal": "2026-05-18T06:38:24+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:00.672989+10:00",
+      "fetchedAtLocal": "2026-05-20T14:51:48.528863+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2572,9 +3036,9 @@
       "summary": "A South Australian landowner has spotted elk on her property, outside containment lines of deer farms. There are no known established wild elk herds in this state.",
       "publishedAt": "2026-05-17T20:34:53+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:42:24.886709+00:00",
+      "fetchedAt": "2026-05-20T04:47:50.903402+00:00",
       "publishedAtLocal": "2026-05-18T06:34:53+10:00",
-      "fetchedAtLocal": "2026-05-20T09:42:24.886709+10:00",
+      "fetchedAtLocal": "2026-05-20T14:47:50.903402+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2582,15 +3046,15 @@
       ]
     },
     {
-      "id": "8bc1a42177b48723e2181b5d020cf55d",
-      "title": "Iran weekly briefing: A new front emerges, plus the fallout from Trump-Xi and whispers of renewed strikes",
-      "link": "https://www.abc.net.au/news/2026-05-18/iran-israel-war-news-briefing/106690744",
-      "summary": "The UAE shifts from target to combatant amid reports the US and Israel are preparing to renew strikes on Iran, writes Matthew Doran.",
-      "publishedAt": "2026-05-17T20:31:48+00:00",
+      "id": "bfbbea7d4710b136d376ffc58a5b462c",
+      "title": "Commercial activity in Sydney's historic Callan Park one step closer as new foreshore plan revealed",
+      "link": "https://www.abc.net.au/news/2026-05-18/callan-park-foreshore-master-plan-sydney-inner-west-cafe-hope/106674376",
+      "summary": "A new foreshore plan for Callan Park in Sydney's inner west includes a cafe, but the future of commercial opportunities at the site depends now on the passing of amended legislation.",
+      "publishedAt": "2026-05-17T20:27:23+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:43:46.188252+00:00",
-      "publishedAtLocal": "2026-05-18T06:31:48+10:00",
-      "fetchedAtLocal": "2026-05-20T09:43:46.188252+10:00",
+      "fetchedAt": "2026-05-20T04:44:17.593835+00:00",
+      "publishedAtLocal": "2026-05-18T06:27:23+10:00",
+      "fetchedAtLocal": "2026-05-20T14:44:17.593835+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2604,9 +3068,9 @@
       "summary": "The South Australian government has put all its chips on the table for the Whyalla steelworks and Port Pirie lead smelter. The next six months will be critical.",
       "publishedAt": "2026-05-17T20:04:37+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:48:54.817675+00:00",
+      "fetchedAt": "2026-05-20T04:52:42.711433+00:00",
       "publishedAtLocal": "2026-05-18T06:04:37+10:00",
-      "fetchedAtLocal": "2026-05-20T09:48:54.817675+10:00",
+      "fetchedAtLocal": "2026-05-20T14:52:42.711433+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2620,9 +3084,9 @@
       "summary": "A 20-bed facility in the Melbourne suburb of Collingwood will close in 2027 after operating for just a few years following legal reforms.",
       "publishedAt": "2026-05-17T19:51:03+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:32.571588+00:00",
+      "fetchedAt": "2026-05-20T04:43:34.712212+00:00",
       "publishedAtLocal": "2026-05-18T05:51:03+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:32.571588+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:34.712212+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2636,9 +3100,9 @@
       "summary": "More than $170,000 in donations from developers has been given to Queensland state politicians since laws banning developer donations were overturned in March.",
       "publishedAt": "2026-05-17T19:34:38+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:22.111597+00:00",
+      "fetchedAt": "2026-05-20T04:41:10.015932+00:00",
       "publishedAtLocal": "2026-05-18T05:34:38+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:22.111597+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:10.015932+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2652,9 +3116,9 @@
       "summary": "Both Australia and New Zealand strive to protect Super Rugby Pacific as their premier domestic competition, even it if it has consequences for the Wallabies and All Blacks.",
       "publishedAt": "2026-05-17T19:17:00+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:58.236821+00:00",
+      "fetchedAt": "2026-05-20T04:43:15.035265+00:00",
       "publishedAtLocal": "2026-05-18T05:17:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:58.236821+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:15.035265+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2668,9 +3132,9 @@
       "summary": "A former NSW Labor powerbroker and state disability minister pivotal in advocating for the establishment of the NDIS has warned against rushing through sweeping changes to the scheme.",
       "publishedAt": "2026-05-17T19:11:47+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:03.428454+00:00",
+      "fetchedAt": "2026-05-20T04:43:41.729130+00:00",
       "publishedAtLocal": "2026-05-18T05:11:47+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:03.428454+10:00",
+      "fetchedAtLocal": "2026-05-20T14:43:41.729130+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2684,9 +3148,9 @@
       "summary": "The Albanese government and the opposition both want to turn back the clock on the Australian tax system.",
       "publishedAt": "2026-05-17T18:58:06+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:07.568118+00:00",
+      "fetchedAt": "2026-05-20T04:42:15.277658+00:00",
       "publishedAtLocal": "2026-05-18T04:58:06+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:07.568118+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:15.277658+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2700,9 +3164,9 @@
       "summary": "As Australians pay more on their mortgages, some countries have had no rise in their interest rate in recent years. So what's going on?",
       "publishedAt": "2026-05-17T18:57:09+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:30.532413+00:00",
+      "fetchedAt": "2026-05-20T04:41:08.525945+00:00",
       "publishedAtLocal": "2026-05-18T04:57:09+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:30.532413+10:00",
+      "fetchedAtLocal": "2026-05-20T14:41:08.525945+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2716,9 +3180,9 @@
       "summary": "Helium is used in health care and to make microchips and semiconductors, but the Middle East war has affected supply. Some think it is an opportunity for Australia's gas industry.",
       "publishedAt": "2026-05-17T18:54:54+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:46.787542+00:00",
+      "fetchedAt": "2026-05-20T04:42:51.074452+00:00",
       "publishedAtLocal": "2026-05-18T04:54:54+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:46.787542+10:00",
+      "fetchedAtLocal": "2026-05-20T14:42:51.074452+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
@@ -2732,473 +3196,9 @@
       "summary": "Abu Dhabi officials say radiation levels are normal and there was no damage to the plant, but authorities are now working to determine who carried out the attack.",
       "publishedAt": "2026-05-17T18:51:31+00:00",
       "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:49:09.100026+00:00",
+      "fetchedAt": "2026-05-20T04:45:53.925765+00:00",
       "publishedAtLocal": "2026-05-18T04:51:31+10:00",
-      "fetchedAtLocal": "2026-05-20T09:49:09.100026+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "b482bde7b85dacbc02786effd5362d2c",
-      "title": "Reasons it's hard to end a long-term relationship, even when you want to",
-      "link": "https://www.abc.net.au/news/2026-05-18/why-it-is-so-hard-to-end-a-long-term-relationship/106619878",
-      "summary": "It's not just practical and emotional reasons that get in the way of executing a break-up. There are many ways your brain is making you want to stay.",
-      "publishedAt": "2026-05-17T18:50:12+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:35:37.669614+00:00",
-      "publishedAtLocal": "2026-05-18T04:50:12+10:00",
-      "fetchedAtLocal": "2026-05-20T09:35:37.669614+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "66452ab3e487ee7d72cafd83b5a564fb",
-      "title": "Andrew McLachlan condemns party's stance on permanent migrants",
-      "link": "https://www.abc.net.au/news/2026-05-18/andrew-mclachlan-concerns-over-liberal-migration-welfare-cuts-/106689784",
-      "summary": "Senator Andrew McLachlan raises concerns over Angus Taylor's use of the term \"mass immigration\" and plan to push tax-paying migrants off welfare benefits.",
-      "publishedAt": "2026-05-17T18:43:24+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:29.323955+00:00",
-      "publishedAtLocal": "2026-05-18T04:43:24+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:29.323955+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "40384fbedad7ca81179543532b917e3e",
-      "title": "Older Australians concerned about Labor's plan to reduce private health insurance rebates",
-      "link": "https://www.abc.net.au/news/2026-05-18/aged-care-government-private-health-rebates/106684476",
-      "summary": "The federal government plans to reduce private health insurance rebates for older Australians, a move one advocate fears could \"tip many over the edge\".",
-      "publishedAt": "2026-05-17T18:42:23+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:55.882302+00:00",
-      "publishedAtLocal": "2026-05-18T04:42:23+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:55.882302+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "9215bf174870ab82a9d07b9001581fb5",
-      "title": "The ripples of the Iran war are everywhere",
-      "link": "https://www.abc.net.au/news/2026-05-18/the-ripples-of-the-iran-war-are-everywhere/106591410",
-      "summary": "It has been more than two months since the US and Israel launched strikes in Iran. But the impact of the conflict continues globally.",
-      "publishedAt": "2026-05-17T18:39:13+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:40.157682+00:00",
-      "publishedAtLocal": "2026-05-18T04:39:13+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:40.157682+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "692bb24d63b6df348f69d9082a38023b",
-      "title": "Dave Hughes on family, sobriety and creating laughter until his dying day",
-      "link": "https://www.abc.net.au/news/2026-05-18/dave-hughes-the-assembly/106652534",
-      "summary": "Comedian Dave Hughes spoke to The Assembly about why he quit alcohol at 22, being \"addicted to work\" and the type of dad he's trying to be for his three kids.",
-      "publishedAt": "2026-05-17T18:30:00+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:38.165545+00:00",
-      "publishedAtLocal": "2026-05-18T04:30:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:38.165545+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "cb2b3952f3ed6b6f89b7e99ba841b5d3",
-      "title": "This week in history quiz, May 18: Where was Pac-Man first released?",
-      "link": "https://www.abc.net.au/news/2026-05-18/this-week-in-history-quiz-may-18/106670152",
-      "summary": "In what year did John Howard become a federal MP? And which country got to play Pac-Man first? Test yourself in this week's history quiz.",
-      "publishedAt": "2026-05-17T18:30:00+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:43:45.095607+00:00",
-      "publishedAtLocal": "2026-05-18T04:30:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:43:45.095607+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "cf4de2de677aa6365e79d07ab95eab62",
-      "title": "Six stores ordered to shut as WA's illegal tobacco laws come into force",
-      "link": "https://www.abc.net.au/news/2026-05-17/six-shops-ordered-to-shut-under-new-illegal-tobacco-laws-/106689786",
-      "summary": "More than 140,000 illegal cigarettes have been seized and six stores ordered to close down, days after Western Australia's new tobacco laws came into force.",
-      "publishedAt": "2026-05-17T08:10:03+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:44.635180+00:00",
-      "publishedAtLocal": "2026-05-17T18:10:03+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:44.635180+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "9b7697800d949200b0cf2a18da0233e6",
-      "title": "Perth father Steven Mattaboni identified as Rottnest shark attack victim",
-      "link": "https://www.abc.net.au/news/2026-05-17/steven-mattaboni-identified-as-rottnest-shark-attack-victim/106689444",
-      "summary": "The wife of 38-year-old Perth man Steven Mattaboni says her family's \"hearts are irrevocably broken\" after he was killed in a shark attack while spearfishing off the coast of Rottnest Island on Saturday.",
-      "publishedAt": "2026-05-17T03:39:17+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:36:17.788742+00:00",
-      "publishedAtLocal": "2026-05-17T13:39:17+10:00",
-      "fetchedAtLocal": "2026-05-20T09:36:17.788742+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "8e763d56b82280d16be13e369cd22473",
-      "title": "Blues suffer Origin blow, Ponga will 'play anywhere' for Maroons",
-      "link": "https://www.abc.net.au/news/2026-05-17/nrl-magic-round-titans-knights-warriors-broncos-panthers-dragons/106669968",
-      "summary": "NSW has been dealt a State of Origin blow ahead of the Blues' team announcement on Monday, with Latrell Mitchell ruling himself out of Game I selection.",
-      "publishedAt": "2026-05-17T03:19:48+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:17.985628+00:00",
-      "publishedAtLocal": "2026-05-17T13:19:48+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:17.985628+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "137291bd92ade00c55a91094502511de",
-      "title": "Harley heroics lift Eagles to stunning upset win over Giants",
-      "link": "https://www.abc.net.au/news/2026-05-17/afl-r10-bombers-dockers-saints-tigers-eagles-giants-live-blog/106689516",
-      "summary": "West Coast surges to a third victory of the season, defeating GWS by 17 points while St Kilda and Fremantle also enjoy Sunday wins.",
-      "publishedAt": "2026-05-17T02:24:43+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:23.148831+00:00",
-      "publishedAtLocal": "2026-05-17T12:24:43+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:23.148831+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "a54222f644fbf3a6088750fb48729ca3",
-      "title": "Love story: How an Aussie rocker and a punk grandma found harmony",
-      "link": "https://www.abc.net.au/news/2026-05-17/love-story-how-an-aussie-rocker-punk-grandma-found-harmony/106562184",
-      "summary": "Singer/guitarist Mick Medew and self-proclaimed punk grandma Ursula Collie were in their mid-50s when they met and bonded over a mutual love of live music. A decade on, they're musical and life partners.",
-      "publishedAt": "2026-05-17T02:00:00+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:49:52.686364+00:00",
-      "publishedAtLocal": "2026-05-17T12:00:00+10:00",
-      "fetchedAtLocal": "2026-05-20T09:49:52.686364+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "8000a372e981d6c7ae98955c017d2cf3",
-      "title": "Labor claims victory in Stafford by-election in Brisbane, LNP concedes candidate 'just won't get there'",
-      "link": "https://www.abc.net.au/news/2026-05-17/labor-claims-victory-stafford-by-election-luke-richmond/106689404",
-      "summary": "Labor candidate Luke Richmond claims victory over the LNP's Fiona Hammond in a tight race in the north Brisbane electorate of Stafford.",
-      "publishedAt": "2026-05-17T01:28:53+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:46:50.801193+00:00",
-      "publishedAtLocal": "2026-05-17T11:28:53+10:00",
-      "fetchedAtLocal": "2026-05-20T09:46:50.801193+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "1c48f6c9a8ee3852134ab3cd3612cad2",
-      "title": "Jim Chalmers defends impact of tax changes on young investors",
-      "link": "https://www.abc.net.au/news/2026-05-17/jim-chalmers-defends-impact-of-tax-changes-on-young-investors/106689268",
-      "summary": "Jim Chalmers says it is better for young people to invest based on economic rather than tax outcomes, and argued they can still access negative gearing by buying up new homes.",
-      "publishedAt": "2026-05-17T01:09:30+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:26.930323+00:00",
-      "publishedAtLocal": "2026-05-17T11:09:30+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:26.930323+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "a9551dc7888934c1d23c327c594ba5c5",
-      "title": "Reef restoration brings back marine life and boosts Swan River's health",
-      "link": "https://www.abc.net.au/news/2026-05-17/restoration-of-reefs-improves-swan-river-health/106681406",
-      "summary": "Work is underway to restore Perth's Swan River and help its severely degraded riverbed, where 1 million tonnes of limestone was taken in the 1990s.",
-      "publishedAt": "2026-05-17T00:30:01+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:02.650284+00:00",
-      "publishedAtLocal": "2026-05-17T10:30:01+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:02.650284+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "06934622007738118a20e658c6207e3e",
-      "title": "Western Australia's first fainting goats settle into farm near Busselton",
-      "link": "https://www.abc.net.au/news/2026-05-17/western-australia-first-fainting-goat-breeders/106678976",
-      "summary": "The goats, which \"faint\" when stressed or excited, have travelled to a farm near Busselton, where they will be bred as pets.",
-      "publishedAt": "2026-05-17T00:00:42+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:03.570210+00:00",
-      "publishedAtLocal": "2026-05-17T10:00:42+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:03.570210+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "124f2fb4082e30c8ebe66557a71503d2",
-      "title": "Eurovision key moments: from Euro-pop to Euro-slop as Delta Goodrem makes Australia proud",
-      "link": "https://www.abc.net.au/news/2026-05-17/eurovision-key-takeaways/106686378",
-      "summary": "Slept through Eurovision this year? Here's what you missed from Europe's favourite song contest, with boycotts, ballads and a Bulgarian song called Bangaranga making headlines.",
-      "publishedAt": "2026-05-16T23:43:10+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:04.358015+00:00",
-      "publishedAtLocal": "2026-05-17T09:43:10+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:04.358015+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "4591be4a8e913fd25b1dd408236ebcab",
-      "title": "Manchester City wins FA Cup final over Chelsea, Pep Guardiola maintains Premier League trophy focus",
-      "link": "https://www.abc.net.au/news/2026-05-17/manchester-city-fa-cup-final-victory-over-chelsea/106689266",
-      "summary": "Manchester City's FA Cup celebrations after a 1-0 win over Chelsea will be low key, as the team refocuses on its tight Premier League title race with Arsenal.",
-      "publishedAt": "2026-05-16T23:17:50+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:12.361975+00:00",
-      "publishedAtLocal": "2026-05-17T09:17:50+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:12.361975+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "e56c76641d5ef7acfbd0a2c70a30aabc",
-      "title": "First photo of wild Myrmeleon houstoni taken by unsuspecting Mildura woman on bushwalk",
-      "link": "https://www.abc.net.au/news/2026-05-17/bug-species-inaturalist-walking-bush-insect-discovery-photo/106679772",
-      "summary": "There were no known photographs taken in the wild of the Myrmeleon houstoni until a regional Victorian woman snapped a photo of one while on a bushwalk.",
-      "publishedAt": "2026-05-16T22:59:46+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:40:36.287625+00:00",
-      "publishedAtLocal": "2026-05-17T08:59:46+10:00",
-      "fetchedAtLocal": "2026-05-20T09:40:36.287625+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "db91bd3e5dfa7c34c5a52a1a8aa8c58b",
-      "title": "Canberra family creates foundation for youth sports to honour daughter killed in bus crash",
-      "link": "https://www.abc.net.au/news/2026-05-17/womans-death-inspires-family-to-invest-in-youth-sports/106687784",
-      "summary": "Uqasha Imran was fatally injured when a bus driver struck her on her motorcycle in 2025. Now, her family are promoting the importance of organ donation while helping other young athletes like her.",
-      "publishedAt": "2026-05-16T22:33:40+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:38:40.115144+00:00",
-      "publishedAtLocal": "2026-05-17T08:33:40+10:00",
-      "fetchedAtLocal": "2026-05-20T09:38:40.115144+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "6654196112957691196513c67627dcca",
-      "title": "Tasmanian town of Ross working to be accredited by Dark Sky International",
-      "link": "https://www.abc.net.au/news/2026-05-17/tasmania-ross-dark-sky-accreditation-tourism/106620330",
-      "summary": "The northern Tasmanian town of Ross is working to protect its night sky, a years-long process that would see it formally recognised for its darkness and clarity.",
-      "publishedAt": "2026-05-16T22:24:10+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:39:14.673400+00:00",
-      "publishedAtLocal": "2026-05-17T08:24:10+10:00",
-      "fetchedAtLocal": "2026-05-20T09:39:14.673400+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "788a21bc7400caa6323d9e4b6831396d",
-      "title": "Rider, Stacey Smith completes a full run at the Topar campdraft in April this year.",
-      "link": "https://www.abc.net.au/news/2026-05-17/what-does-a-campdraft-look-like-/106676422",
-      "summary": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
-      "publishedAt": "2026-05-16T21:58:35.000Z",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:37:51.845325+00:00",
-      "publishedAtLocal": "2026-05-17T07:58:35+10:00",
-      "fetchedAtLocal": "2026-05-20T09:37:51.845325+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "b87ccadc5159f58e9f59e6e919660fbd",
-      "title": "Topar Campdraft Clinic riders take the reins and get hooked on the sport",
-      "link": "https://www.abc.net.au/news/2026-05-17/topar-campdrafting-clinic-riders-learn-sport/106583756",
-      "summary": "Amid the red dirt and flies of an outback stockyard, thrillseekers with a passion for horses learn about a quintessential Aussie sport.",
-      "publishedAt": "2026-05-16T21:58:35+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:45:39.400193+00:00",
-      "publishedAtLocal": "2026-05-17T07:58:35+10:00",
-      "fetchedAtLocal": "2026-05-20T09:45:39.400193+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "ba806702724f2c45df49638c9a5d1cd9",
-      "title": "APY Art Centre Collective calls for federal inquiry into First Nations art industry",
-      "link": "https://www.abc.net.au/news/2026-05-17/apy-art-collective-federal-inquiry-call/106647780",
-      "summary": "APY Art Centre Collective members say a voluntary code of conduct isn't protecting artists from financial exploitation and misconduct in the industry.",
-      "publishedAt": "2026-05-16T21:33:02+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:42:04.950799+00:00",
-      "publishedAtLocal": "2026-05-17T07:33:02+10:00",
-      "fetchedAtLocal": "2026-05-20T09:42:04.950799+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "507c201c7050df5ba1dc4aad7c981a5c",
-      "title": "Could wine provide Australia's next source of biofuel?",
-      "link": "https://www.abc.net.au/news/2026-05-17/wine-oversupply-to-fuel-demand-petrol-cars-high-prices/106638346",
-      "summary": "Australia's wine industry is investigating whether its current 263 million litre glut of wine would be better used as biofuel to power cars, trucks or even aircraft.",
-      "publishedAt": "2026-05-16T21:30:26+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:50:10.780305+00:00",
-      "publishedAtLocal": "2026-05-17T07:30:26+10:00",
-      "fetchedAtLocal": "2026-05-20T09:50:10.780305+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "b52f532c1cc90b96fbe70aa2a1b12925",
-      "title": "Victoria's political donation system remains a free-for-all ahead of election",
-      "link": "https://www.abc.net.au/news/2026-05-17/victoria-electoral-act-political-donations-governmnet-new-laws/106687658",
-      "summary": "With only six months before the state election, the Victorian government struggles to devise new donation laws after the High Court found previous laws unconstitutional.",
-      "publishedAt": "2026-05-16T21:10:22+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:40:03.090390+00:00",
-      "publishedAtLocal": "2026-05-17T07:10:22+10:00",
-      "fetchedAtLocal": "2026-05-20T09:40:03.090390+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "0fe5e4c68a10f918c5bfd2683d265d5e",
-      "title": "Gurrumul’s ARIA Hall of Fame honour brings pride and reflection for family",
-      "link": "https://www.abc.net.au/news/2026-05-17/gurrumul-enters-aria-hall-of-fame-10-years-after-death/106686418",
-      "summary": "Nearly a decade since his death, Gurrumul is set to be inducted into the ARIA Hall of Fame, bringing pride and reflection to a remote part of Australia.",
-      "publishedAt": "2026-05-16T21:09:28+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:40:51.538624+00:00",
-      "publishedAtLocal": "2026-05-17T07:09:28+10:00",
-      "fetchedAtLocal": "2026-05-20T09:40:51.538624+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "7cbfc3544d0d3ad47fb56246d994b5f5",
-      "title": "First home buyers buoyed by negative gearing, capital gains changes at first Saturday auctions since budget",
-      "link": "https://www.abc.net.au/news/2026-05-17/saturday-auctions-after-budget-tax-reforms-first-home-buyer-bids/106688408",
-      "summary": "The government says the changes are aimed at levelling the playing field for young buyers bidding against property investors, while the opposition is pledging to undo the reforms, citing their potential to raise rents.",
-      "publishedAt": "2026-05-16T21:06:57+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:44:20.513089+00:00",
-      "publishedAtLocal": "2026-05-17T07:06:57+10:00",
-      "fetchedAtLocal": "2026-05-20T09:44:20.513089+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "729f9dfee25a179dd6a5aee621b12ef9",
-      "title": "NSW government funds Aboriginal-led south coast sea urchin enterprise with $1.48m grant",
-      "link": "https://www.abc.net.au/news/2026-05-17/nsw-government-grant-aboriginal-led-sea-urchin-enterprise/106627704",
-      "summary": "After decades of fighting for their traditional fishing rights, Aboriginal custodians are now fighting to save their sea country from ecological collapse.",
-      "publishedAt": "2026-05-16T21:04:05+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:43:17.994334+00:00",
-      "publishedAtLocal": "2026-05-17T07:04:05+10:00",
-      "fetchedAtLocal": "2026-05-20T09:43:17.994334+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "News",
-      "sourceCategories": [
-        "News"
-      ]
-    },
-    {
-      "id": "656556374790210c35b421aa49bd1870",
-      "title": "Sam Kerr ties Chelsea's goals record in final Women's Super League match",
-      "link": "https://www.abc.net.au/news/2026-05-17/sam-kerr-ties-chelsea-wsl-goals-record-in-final-match/106689094",
-      "summary": "Sam Kerr ties the record for the most Women's Super League goals for Chelsea as she plays her final match with the London club after more than six years.",
-      "publishedAt": "2026-05-16T20:54:19+00:00",
-      "source": "ABC News",
-      "fetchedAt": "2026-05-19T23:43:02.350395+00:00",
-      "publishedAtLocal": "2026-05-17T06:54:19+10:00",
-      "fetchedAtLocal": "2026-05-20T09:43:02.350395+10:00",
+      "fetchedAtLocal": "2026-05-20T14:45:53.925765+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "News",
       "sourceCategories": [
