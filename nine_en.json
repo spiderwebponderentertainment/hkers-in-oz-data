@@ -1,9 +1,9 @@
 {
   "source": "9News",
-  "generatedAt": "2026-06-02T18:36:51.609034+00:00",
-  "generatedAtLocal": "2026-06-03T04:36:51.609034+10:00",
+  "generatedAt": "2026-06-02T21:45:39.602835+00:00",
+  "generatedAtLocal": "2026-06-03T07:45:39.602835+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 2,
+  "count": 3,
   "items": [
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
@@ -12,9 +12,9 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-06-02T18:35:57.328958+00:00",
+      "fetchedAt": "2026-06-02T21:44:35.470042+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-06-03T04:35:57.328958+10:00",
+      "fetchedAtLocal": "2026-06-03T07:44:35.470042+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -28,13 +28,29 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-06-02T18:35:58.100778+00:00",
+      "fetchedAt": "2026-06-02T21:44:36.403406+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-06-03T04:35:58.100778+10:00",
+      "fetchedAtLocal": "2026-06-03T07:44:36.403406+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
         "Travel"
+      ]
+    },
+    {
+      "id": "7b1593d9c26e2d51b1cd785025f626b8",
+      "title": "Latest technology news headlines, updates & new tech innovation | 9News",
+      "link": "https://www.9news.com.au/technology/2",
+      "summary": "Latest technology news stories including consumer electronics, science and space technology, gadgets, internet tech, medical devices, websites and social tech, cryptocurrencies and other technology news headlines",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-06-02T21:45:33.280495+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-06-03T07:45:33.280495+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Technology",
+      "sourceCategories": [
+        "Technology"
       ]
     }
   ]
