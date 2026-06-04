@@ -1,10 +1,26 @@
 {
   "source": "9News",
-  "generatedAt": "2026-06-03T23:29:59.675506+00:00",
-  "generatedAtLocal": "2026-06-04T09:29:59.675506+10:00",
+  "generatedAt": "2026-06-04T02:57:34.239061+00:00",
+  "generatedAtLocal": "2026-06-04T12:57:34.239061+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 2,
+  "count": 3,
   "items": [
+    {
+      "id": "f49fa6d45287e94a531163d895db0d52",
+      "title": "The 9News app is changing",
+      "link": "https://www.9news.com.au/national/new-9news-app/57bd9581-50b0-43eb-a46e-be882ced6bf6",
+      "summary": "The 9News app is changing",
+      "publishedAt": "2026-05-31T13:54:05Z",
+      "source": "9News",
+      "fetchedAt": "2026-06-04T02:57:16.344940+00:00",
+      "publishedAtLocal": "2026-05-31T23:54:05+10:00",
+      "fetchedAtLocal": "2026-06-04T12:57:16.344940+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "National",
+      "sourceCategories": [
+        "National"
+      ]
+    },
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
       "title": "Middle East | Latest News Headlines | Nine.com.au",
@@ -12,9 +28,9 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-06-03T23:29:06.011276+00:00",
+      "fetchedAt": "2026-06-04T02:56:28.528353+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-06-04T09:29:06.011276+10:00",
+      "fetchedAtLocal": "2026-06-04T12:56:28.528353+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -28,9 +44,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-06-03T23:29:06.808823+00:00",
+      "fetchedAt": "2026-06-04T02:56:29.583389+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-06-04T09:29:06.808823+10:00",
+      "fetchedAtLocal": "2026-06-04T12:56:29.583389+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
