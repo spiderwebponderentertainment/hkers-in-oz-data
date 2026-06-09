@@ -1,10 +1,26 @@
 {
   "source": "9News",
-  "generatedAt": "2026-06-09T13:41:57.351576+00:00",
-  "generatedAtLocal": "2026-06-09T23:41:57.351576+10:00",
+  "generatedAt": "2026-06-09T16:29:04.067557+00:00",
+  "generatedAtLocal": "2026-06-10T02:29:04.067557+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 1,
+  "count": 3,
   "items": [
+    {
+      "id": "0d28c7f80e0915d21ec53d85e37e317b",
+      "title": "Hundreds arrested in violent clashes as fans celebrate Paris Saint-Germain's Champions League win",
+      "link": "https://www.9news.com.au/world/champions-league-paris-violent-clashes-as-fans-celebrate-paris-saintgermains-champions-league-win/f55864a2-76ec-4781-ad9c-babb098d8b6f",
+      "summary": "Police have detained 780 people involved in violent clashes in Paris and other French cities that erupted after Paris Saint-Germain won the Champions League title.",
+      "publishedAt": "2026-05-31T12:22:01Z",
+      "source": "9News",
+      "fetchedAt": "2026-06-09T16:28:46.501435+00:00",
+      "publishedAtLocal": "2026-05-31T22:22:01+10:00",
+      "fetchedAtLocal": "2026-06-10T02:28:46.501435+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World",
+      "sourceCategories": [
+        "World"
+      ]
+    },
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
       "title": "Middle East | Latest News Headlines | Nine.com.au",
@@ -12,13 +28,29 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-06-09T13:40:34.382506+00:00",
+      "fetchedAt": "2026-06-09T16:27:57.522084+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-06-09T23:40:34.382506+10:00",
+      "fetchedAtLocal": "2026-06-10T02:27:57.522084+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
         "World-news"
+      ]
+    },
+    {
+      "id": "5bf0a1ab2daa21cf3244fa4d9a8f9746",
+      "title": "Australia | Latest News Headlines | Nine.com.au",
+      "link": "https://www.9news.com.au/travel/australia",
+      "summary": "The latest Australia news, articles and analysis from Nine.com.au",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-06-09T16:27:58.412902+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-06-10T02:27:58.412902+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Travel",
+      "sourceCategories": [
+        "Travel"
       ]
     }
   ]
