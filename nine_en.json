@@ -1,9 +1,9 @@
 {
   "source": "9News",
-  "generatedAt": "2026-06-10T02:45:52.181360+00:00",
-  "generatedAtLocal": "2026-06-10T12:45:52.181360+10:00",
+  "generatedAt": "2026-06-10T07:04:29.344180+00:00",
+  "generatedAtLocal": "2026-06-10T17:04:29.344180+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 2,
+  "count": 3,
   "items": [
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
@@ -12,9 +12,9 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-06-10T02:44:19.974357+00:00",
+      "fetchedAt": "2026-06-10T07:03:10.812319+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-06-10T12:44:19.974357+10:00",
+      "fetchedAtLocal": "2026-06-10T17:03:10.812319+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -28,13 +28,29 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-06-10T02:44:22.997829+00:00",
+      "fetchedAt": "2026-06-10T07:03:12.198108+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-06-10T12:44:22.997829+10:00",
+      "fetchedAtLocal": "2026-06-10T17:03:12.198108+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
         "Travel"
+      ]
+    },
+    {
+      "id": "f1d792358b81eac01bdf229aed6f49b3",
+      "title": "Business news headlines - 9News",
+      "link": "https://www.9news.com.au/business/2",
+      "summary": "Latest business news, company tax, government regulations, CEOs, entrepreneurs, customers, and big business strategy",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-06-10T07:04:11.722900+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-06-10T17:04:11.722900+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Business",
+      "sourceCategories": [
+        "Business"
       ]
     }
   ]
