@@ -1,8 +1,25 @@
 {
   "source": "9News",
-  "generatedAt": "2026-06-25T04:58:21.178351+00:00",
-  "generatedAtLocal": "2026-06-25T14:58:21.178351+10:00",
+  "generatedAt": "2026-06-25T08:44:19.776826+00:00",
+  "generatedAtLocal": "2026-06-25T18:44:19.776826+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 0,
-  "items": []
+  "count": 1,
+  "items": [
+    {
+      "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
+      "title": "Middle East | Latest News Headlines | Nine.com.au",
+      "link": "https://www.9news.com.au/world-news/middle-east",
+      "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-06-25T08:38:33.455723+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-06-25T18:38:33.455723+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
+      ]
+    }
+  ]
 }
