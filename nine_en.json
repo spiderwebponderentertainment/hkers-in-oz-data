@@ -1,20 +1,20 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-16T14:16:52.506337+00:00",
-  "generatedAtLocal": "2026-08-17T00:16:52.506337+10:00",
+  "generatedAt": "2026-08-16T15:15:25.695068+00:00",
+  "generatedAtLocal": "2026-08-17T01:15:25.695068+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 28,
+  "count": 34,
   "items": [
     {
-      "id": "a52a2f6a7c611e605f82f17c560bec04",
+      "id": "efb83bf93565d8625acd62532f6b2370",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/australia-news/sa",
+      "link": "https://www.9news.com.au/australia-news/act",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:54.189072+00:00",
+      "fetchedAt": "2026-08-16T15:14:27.822345+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:54.189072+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:27.822345+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Australia-news",
       "sourceCategories": [
@@ -22,51 +22,19 @@
       ]
     },
     {
-      "id": "308a4a3e8f252f2dc4ae6acd34a1abaf",
+      "id": "52cfcf4a01b52f6d7a18f1a6963ca342",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/australia-news/wa",
+      "link": "https://www.9news.com.au/australia-news/today-show",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:54.406196+00:00",
+      "fetchedAt": "2026-08-16T15:14:28.294660+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:54.406196+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:28.294660+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Australia-news",
       "sourceCategories": [
         "Australia-news"
-      ]
-    },
-    {
-      "id": "1b475e4879a83d79ea827fd7c7e09fea",
-      "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/politics-26lj",
-      "summary": "",
-      "publishedAt": null,
-      "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:55.275627+00:00",
-      "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:55.275627+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Topic",
-      "sourceCategories": [
-        "Topic"
-      ]
-    },
-    {
-      "id": "6720db1a98387e575f27c61184d0eb79",
-      "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/crime-5w4",
-      "summary": "",
-      "publishedAt": null,
-      "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:55.494012+00:00",
-      "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:55.494012+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Topic",
-      "sourceCategories": [
-        "Topic"
       ]
     },
     {
@@ -76,9 +44,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:56.378021+00:00",
+      "fetchedAt": "2026-08-16T15:14:28.697711+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:56.378021+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:28.697711+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -92,9 +60,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:56.818848+00:00",
+      "fetchedAt": "2026-08-16T15:14:29.041608+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:56.818848+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:29.041608+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -108,9 +76,25 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:57.368016+00:00",
+      "fetchedAt": "2026-08-16T15:14:29.527550+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:57.368016+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:29.527550+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
+      ]
+    },
+    {
+      "id": "1203bb888ae057b5e66972865cdfea02",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/world-news/africa",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-16T15:14:29.811007+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-17T01:14:29.811007+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -124,9 +108,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:58.039286+00:00",
+      "fetchedAt": "2026-08-16T15:14:30.234343+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:58.039286+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:30.234343+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -140,9 +124,25 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:58.690507+00:00",
+      "fetchedAt": "2026-08-16T15:14:30.641581+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:58.690507+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:30.641581+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Sport",
+      "sourceCategories": [
+        "Sport"
+      ]
+    },
+    {
+      "id": "ea685136794491afb5b3baa479d949a9",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/sport/cricket",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-16T15:14:30.923812+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-17T01:14:30.923812+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -156,9 +156,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:15:59.574930+00:00",
+      "fetchedAt": "2026-08-16T15:14:31.325919+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:15:59.574930+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:31.325919+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -166,15 +166,15 @@
       ]
     },
     {
-      "id": "ae9cd9da4025cd0606343d63ec4afcf4",
+      "id": "d1b6d26a7cb9c963373ad6e6063559bb",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/sport/horse-racing",
+      "link": "https://www.9news.com.au/sport/paralympics",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:00.002416+00:00",
+      "fetchedAt": "2026-08-16T15:14:33.124015+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:00.002416+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:33.124015+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -182,19 +182,67 @@
       ]
     },
     {
-      "id": "cebe2d40c4f77015659125993725d97a",
+      "id": "444fc988fcf3b734cc54acf9faf3a12b",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/sport/swimming",
+      "link": "https://www.9news.com.au/lifestyle/money",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:00.219850+00:00",
+      "fetchedAt": "2026-08-16T15:14:33.467049+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:00.219850+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:33.467049+10:00",
       "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Sport",
+      "sourceCategory": "Lifestyle",
       "sourceCategories": [
-        "Sport"
+        "Lifestyle"
+      ]
+    },
+    {
+      "id": "1a0e8282375d416c2d17b36a96a80e0e",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/lifestyle/fashion-beauty",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-16T15:14:33.749528+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-17T01:14:33.749528+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Lifestyle",
+      "sourceCategories": [
+        "Lifestyle"
+      ]
+    },
+    {
+      "id": "8a3b05c5a8b8395557c039d544414be9",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/lifestyle/homes",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-16T15:14:34.029481+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-17T01:14:34.029481+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Lifestyle",
+      "sourceCategories": [
+        "Lifestyle"
+      ]
+    },
+    {
+      "id": "470113b9501c46783ba2fac1b5507122",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/lifestyle/food",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-16T15:14:34.311893+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-17T01:14:34.311893+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Lifestyle",
+      "sourceCategories": [
+        "Lifestyle"
       ]
     },
     {
@@ -204,9 +252,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:02.104664+00:00",
+      "fetchedAt": "2026-08-16T15:14:34.953054+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:02.104664+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:34.953054+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -214,19 +262,19 @@
       ]
     },
     {
-      "id": "3e5681d4723e51f24c650e5f0861706a",
+      "id": "b1549c24e6e33f3f12db4e781bdded85",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/travel/international",
+      "link": "https://www.9news.com.au/tv-shows/lego-masters",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:02.323118+00:00",
+      "fetchedAt": "2026-08-16T15:14:35.861797+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:02.323118+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:35.861797+10:00",
       "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Travel",
+      "sourceCategory": "Tv-shows",
       "sourceCategories": [
-        "Travel"
+        "Tv-shows"
       ]
     },
     {
@@ -236,9 +284,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:02.862641+00:00",
+      "fetchedAt": "2026-08-16T15:14:36.147352+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:02.862641+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:36.147352+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
@@ -252,9 +300,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:03.106172+00:00",
+      "fetchedAt": "2026-08-16T15:14:36.554582+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:03.106172+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:36.554582+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Shopping",
       "sourceCategories": [
@@ -262,19 +310,35 @@
       ]
     },
     {
-      "id": "b92a881ada8f80462a405e83b72f8a16",
+      "id": "4788dbda2daa918e7e1ac2f63d25aaf3",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/shopping/health-fitness",
+      "link": "https://www.9news.com.au/shopping/gift-ideas",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:03.350832+00:00",
+      "fetchedAt": "2026-08-16T15:14:37.345055+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:03.350832+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:37.345055+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Shopping",
       "sourceCategories": [
         "Shopping"
+      ]
+    },
+    {
+      "id": "0aa64b041bbba82b244571ada2145c09",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/aussie-stars-6imr",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-16T15:14:38.214376+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-17T01:14:38.214376+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Topic",
+      "sourceCategories": [
+        "Topic"
       ]
     },
     {
@@ -284,9 +348,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:07.387449+00:00",
+      "fetchedAt": "2026-08-16T15:14:40.829218+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:07.387449+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:40.829218+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
@@ -294,15 +358,15 @@
       ]
     },
     {
-      "id": "361f9cc1f9294319fa5ec4dba3404cc0",
+      "id": "ea1662b3f331e239d3230ff43edd10cb",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/quizzes-1qx",
+      "link": "https://www.9news.com.au/topic/bird-flu-6guv",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:11.053256+00:00",
+      "fetchedAt": "2026-08-16T15:14:54.738105+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:11.053256+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:54.738105+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
@@ -310,15 +374,47 @@
       ]
     },
     {
-      "id": "84647e0a65894303443b881c56b7c0cf",
+      "id": "445a111f8f5388c0032166ac699170e3",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/lottery-26ke",
+      "link": "https://www.9news.com.au/topic/queensland-lla",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:21.244076+00:00",
+      "fetchedAt": "2026-08-16T15:14:56.271289+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:21.244076+10:00",
+      "fetchedAtLocal": "2026-08-17T01:14:56.271289+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Topic",
+      "sourceCategories": [
+        "Topic"
+      ]
+    },
+    {
+      "id": "619f3ca6cf2ba63e93089417928cd30d",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/australia-news/act/hunt-for-mystery-aussie-owed-40-million-20260627-p60ak3.html",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-16T15:14:59.411068+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-17T01:14:59.411068+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Australia-news",
+      "sourceCategories": [
+        "Australia-news"
+      ]
+    },
+    {
+      "id": "e87c3c1967bff69440e301f7d1667edc",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/powerball-26l7",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-16T15:14:59.692693+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-17T01:14:59.692693+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
@@ -332,9 +428,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:22.779829+00:00",
+      "fetchedAt": "2026-08-16T15:15:02.139528+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:22.779829+10:00",
+      "fetchedAtLocal": "2026-08-17T01:15:02.139528+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Australia-news",
       "sourceCategories": [
@@ -342,35 +438,19 @@
       ]
     },
     {
-      "id": "053cc1285a24fc215978cbcfef69260c",
+      "id": "5a64230332d7ac50fe9bb801cd560cf2",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/world-news/africa/ebola-virus-outbreak-who-chief-visits-eastern-congo-20260531-p602ej.html",
+      "link": "https://www.9news.com.au/topic/fire-5xa",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:31.103057+00:00",
+      "fetchedAt": "2026-08-16T15:15:10.118077+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:31.103057+10:00",
+      "fetchedAtLocal": "2026-08-17T01:15:10.118077+10:00",
       "localTimezone": "Australia/Sydney",
-      "sourceCategory": "World-news",
+      "sourceCategory": "Topic",
       "sourceCategories": [
-        "World-news"
-      ]
-    },
-    {
-      "id": "f537c510fde03064bde066ad265fef5a",
-      "title": "Page not found",
-      "link": "https://www.9news.com.au/world-news/africa/ebola-outbreak-democratic-republic-of-congo-africa-cases-pass-900-20260525-p60085.html",
-      "summary": "",
-      "publishedAt": null,
-      "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:31.759768+00:00",
-      "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:31.759768+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "World-news",
-      "sourceCategories": [
-        "World-news"
+        "Topic"
       ]
     },
     {
@@ -380,9 +460,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:32.387547+00:00",
+      "fetchedAt": "2026-08-16T15:15:12.489489+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:32.387547+10:00",
+      "fetchedAtLocal": "2026-08-17T01:15:12.489489+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -390,19 +470,19 @@
       ]
     },
     {
-      "id": "9de9365b550e5fab95f8a507d2cac90a",
+      "id": "8148a022fd67364bf4ce6303a00d42c7",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/war-ho3",
+      "link": "https://www.9news.com.au/world-news/middle-east/lebanon-yellow-zone-life-crisis-worker-ghenwa-hanna-farah-20260722-p60hho.html",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:32.813665+00:00",
+      "fetchedAt": "2026-08-16T15:15:12.772177+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:32.813665+10:00",
+      "fetchedAtLocal": "2026-08-17T01:15:12.772177+10:00",
       "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Topic",
+      "sourceCategory": "World-news",
       "sourceCategories": [
-        "Topic"
+        "World-news"
       ]
     },
     {
@@ -412,13 +492,29 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:33.464533+00:00",
+      "fetchedAt": "2026-08-16T15:15:13.821732+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:33.464533+10:00",
+      "fetchedAtLocal": "2026-08-17T01:15:13.821732+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
         "Topic"
+      ]
+    },
+    {
+      "id": "c489fbc4eeb4426c02fb225aca81ff89",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/travel/cruising/cruise-news-headlines-2026-things-to-know-australia-new-zealand-pacific-mediterranean-20260113-p5ntm4.html",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-16T15:15:20.784029+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-17T01:15:20.784029+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Travel",
+      "sourceCategories": [
+        "Travel"
       ]
     },
     {
@@ -428,9 +524,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:39.670713+00:00",
+      "fetchedAt": "2026-08-16T15:15:21.579555+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:39.670713+10:00",
+      "fetchedAtLocal": "2026-08-17T01:15:21.579555+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
@@ -444,9 +540,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-16T14:16:39.887490+00:00",
+      "fetchedAt": "2026-08-16T15:15:22.525155+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-17T00:16:39.887490+10:00",
+      "fetchedAtLocal": "2026-08-17T01:15:22.525155+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
