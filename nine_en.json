@@ -1,10 +1,26 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-18T16:24:39.019040+00:00",
-  "generatedAtLocal": "2026-08-19T02:24:39.019040+10:00",
+  "generatedAt": "2026-08-18T17:22:08.883074+00:00",
+  "generatedAtLocal": "2026-08-19T03:22:08.883074+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 6,
+  "count": 12,
   "items": [
+    {
+      "id": "129e9adcfb7615a7d6ec6617f4647f12",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/world-news/new-zealand",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-18T17:21:10.177294+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T03:21:10.177294+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
+      ]
+    },
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
       "title": "Middle East | Latest News Headlines | Nine.com.au",
@@ -12,13 +28,29 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-18T16:23:21.272773+00:00",
+      "fetchedAt": "2026-08-18T17:21:10.548228+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T02:23:21.272773+10:00",
+      "fetchedAtLocal": "2026-08-19T03:21:10.548228+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
         "World-news"
+      ]
+    },
+    {
+      "id": "7824ad2542613bf9698d214268af88c6",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/sport/nrl/nrlw",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-18T17:21:11.162602+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T03:21:11.162602+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Sport",
+      "sourceCategories": [
+        "Sport"
       ]
     },
     {
@@ -28,9 +60,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-18T16:23:22.898595+00:00",
+      "fetchedAt": "2026-08-18T17:21:12.229864+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T02:23:22.898595+10:00",
+      "fetchedAtLocal": "2026-08-19T03:21:12.229864+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -44,9 +76,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-18T16:23:25.866856+00:00",
+      "fetchedAt": "2026-08-18T17:21:14.949390+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T02:23:25.866856+10:00",
+      "fetchedAtLocal": "2026-08-19T03:21:14.949390+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -60,13 +92,45 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-18T16:23:28.511577+00:00",
+      "fetchedAt": "2026-08-18T17:21:16.516549+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T02:23:28.511577+10:00",
+      "fetchedAtLocal": "2026-08-19T03:21:16.516549+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
         "Tv-shows"
+      ]
+    },
+    {
+      "id": "40bbf3072756cb52a349f1b8684be139",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/shopping/style-fashion",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-18T17:21:16.866509+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T03:21:16.866509+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Shopping",
+      "sourceCategories": [
+        "Shopping"
+      ]
+    },
+    {
+      "id": "7f4891fe0d825df078b71df43abab122",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/shopping/kitchen",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-18T17:21:17.282084+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T03:21:17.282084+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Shopping",
+      "sourceCategories": [
+        "Shopping"
       ]
     },
     {
@@ -76,9 +140,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-18T16:23:44.168466+00:00",
+      "fetchedAt": "2026-08-18T17:21:24.543447+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T02:23:44.168466+10:00",
+      "fetchedAtLocal": "2026-08-19T03:21:24.543447+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
@@ -92,13 +156,45 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-18T16:24:16.397466+00:00",
+      "fetchedAt": "2026-08-18T17:21:49.532765+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T02:24:16.397466+10:00",
+      "fetchedAtLocal": "2026-08-19T03:21:49.532765+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Australia-news",
       "sourceCategories": [
         "Australia-news"
+      ]
+    },
+    {
+      "id": "615c72cfdbda86084103b37d2f894423",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/africa-lez",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-18T17:21:57.830514+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T03:21:57.830514+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Topic",
+      "sourceCategories": [
+        "Topic"
+      ]
+    },
+    {
+      "id": "2375addf989a6fc8715d5a7ba3a2cb4d",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/world-news/middle-east/melbourne-crime-kingpin-jailed-for-life-in-iraq-20260728-p60jex.html",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-18T17:21:58.950327+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T03:21:58.950327+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
       ]
     }
   ]
