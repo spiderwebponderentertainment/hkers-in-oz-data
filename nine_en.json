@@ -1,10 +1,26 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-19T08:28:41.271608+00:00",
-  "generatedAtLocal": "2026-08-19T18:28:41.271608+10:00",
+  "generatedAt": "2026-08-19T09:27:18.248540+00:00",
+  "generatedAtLocal": "2026-08-19T19:27:18.248540+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 9,
+  "count": 13,
   "items": [
+    {
+      "id": "a52a2f6a7c611e605f82f17c560bec04",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/australia-news/sa",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T09:26:04.245741+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T19:26:04.245741+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Australia-news",
+      "sourceCategories": [
+        "Australia-news"
+      ]
+    },
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
       "title": "Middle East | Latest News Headlines | Nine.com.au",
@@ -12,9 +28,9 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T08:27:47.413111+00:00",
+      "fetchedAt": "2026-08-19T09:26:05.091269+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T18:27:47.413111+10:00",
+      "fetchedAtLocal": "2026-08-19T19:26:05.091269+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -28,9 +44,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T08:27:49.321619+00:00",
+      "fetchedAt": "2026-08-19T09:26:05.842830+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T18:27:49.321619+10:00",
+      "fetchedAtLocal": "2026-08-19T19:26:05.842830+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
@@ -44,9 +60,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T08:27:51.415784+00:00",
+      "fetchedAt": "2026-08-19T09:26:07.977024+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T18:27:51.415784+10:00",
+      "fetchedAtLocal": "2026-08-19T19:26:07.977024+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -60,9 +76,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T08:27:53.735204+00:00",
+      "fetchedAt": "2026-08-19T09:26:08.785601+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T18:27:53.735204+10:00",
+      "fetchedAtLocal": "2026-08-19T19:26:08.785601+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
@@ -76,9 +92,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T08:27:53.977359+00:00",
+      "fetchedAt": "2026-08-19T09:26:09.110692+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T18:27:53.977359+10:00",
+      "fetchedAtLocal": "2026-08-19T19:26:09.110692+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Shopping",
       "sourceCategories": [
@@ -92,9 +108,25 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T08:28:10.077703+00:00",
+      "fetchedAt": "2026-08-19T09:26:28.070183+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T18:28:10.077703+10:00",
+      "fetchedAtLocal": "2026-08-19T19:26:28.070183+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Topic",
+      "sourceCategories": [
+        "Topic"
+      ]
+    },
+    {
+      "id": "a4a9e83af1b4aeee0940212194595383",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/best-deals-of-the-week-26ol",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T09:26:30.156930+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T19:26:30.156930+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
@@ -108,13 +140,29 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T08:28:13.227761+00:00",
+      "fetchedAt": "2026-08-19T09:26:32.944069+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T18:28:13.227761+10:00",
+      "fetchedAtLocal": "2026-08-19T19:26:32.944069+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
         "Topic"
+      ]
+    },
+    {
+      "id": "adf7047ff66fda1af0a1bc6c314e7da6",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/australia-news/tas/nurse-and-mother-of-two-senselessly-killed-by-man-fleeing-crime-scene-20260727-p60iui.html",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T09:26:47.113805+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T19:26:47.113805+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Australia-news",
+      "sourceCategories": [
+        "Australia-news"
       ]
     },
     {
@@ -124,9 +172,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T08:28:27.958445+00:00",
+      "fetchedAt": "2026-08-19T09:26:58.005789+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T18:28:27.958445+10:00",
+      "fetchedAtLocal": "2026-08-19T19:26:58.005789+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
@@ -134,15 +182,31 @@
       ]
     },
     {
-      "id": "67ea771699c2f567d26c0a2ab7995ca0",
+      "id": "2375addf989a6fc8715d5a7ba3a2cb4d",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/israel-iran-conflict-6hpk",
+      "link": "https://www.9news.com.au/world-news/middle-east/melbourne-crime-kingpin-jailed-for-life-in-iraq-20260728-p60jex.html",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T08:28:28.650949+00:00",
+      "fetchedAt": "2026-08-19T09:26:59.591395+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T18:28:28.650949+10:00",
+      "fetchedAtLocal": "2026-08-19T19:26:59.591395+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
+      ]
+    },
+    {
+      "id": "9f75b4c843f69591ad29d42e273520b9",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/cost-of-living-jfq",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T09:27:02.269341+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T19:27:02.269341+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
