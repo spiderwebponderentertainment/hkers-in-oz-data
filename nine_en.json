@@ -1,10 +1,26 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-19T10:22:20.724921+00:00",
-  "generatedAtLocal": "2026-08-19T20:22:20.724921+10:00",
+  "generatedAt": "2026-08-19T11:20:10.980734+00:00",
+  "generatedAtLocal": "2026-08-19T21:20:10.980734+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 9,
+  "count": 14,
   "items": [
+    {
+      "id": "37e77ab36366a47ce6d504434ec9d77d",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/australia-news/a-current-affair",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T11:18:50.258943+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T21:18:50.258943+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Australia-news",
+      "sourceCategories": [
+        "Australia-news"
+      ]
+    },
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
       "title": "Middle East | Latest News Headlines | Nine.com.au",
@@ -12,13 +28,29 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T10:21:19.562389+00:00",
+      "fetchedAt": "2026-08-19T11:18:50.768428+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T20:21:19.562389+10:00",
+      "fetchedAtLocal": "2026-08-19T21:18:50.768428+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
         "World-news"
+      ]
+    },
+    {
+      "id": "7824ad2542613bf9698d214268af88c6",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/sport/nrl/nrlw",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T11:18:51.094979+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T21:18:51.094979+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Sport",
+      "sourceCategories": [
+        "Sport"
       ]
     },
     {
@@ -28,13 +60,45 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T10:21:21.877461+00:00",
+      "fetchedAt": "2026-08-19T11:18:51.738060+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T20:21:21.877461+10:00",
+      "fetchedAtLocal": "2026-08-19T21:18:51.738060+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Sport",
       "sourceCategories": [
         "Sport"
+      ]
+    },
+    {
+      "id": "d1b6d26a7cb9c963373ad6e6063559bb",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/sport/paralympics",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T11:18:52.864786+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T21:18:52.864786+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Sport",
+      "sourceCategories": [
+        "Sport"
+      ]
+    },
+    {
+      "id": "40237b1d6f14d634df0aea0ce62601e3",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/lifestyle/royals",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T11:18:53.114431+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T21:18:53.114431+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Lifestyle",
+      "sourceCategories": [
+        "Lifestyle"
       ]
     },
     {
@@ -44,9 +108,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T10:21:25.784665+00:00",
+      "fetchedAt": "2026-08-19T11:18:53.903333+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T20:21:25.784665+10:00",
+      "fetchedAtLocal": "2026-08-19T21:18:53.903333+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -60,9 +124,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T10:21:26.818339+00:00",
+      "fetchedAt": "2026-08-19T11:18:54.571155+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T20:21:26.818339+10:00",
+      "fetchedAtLocal": "2026-08-19T21:18:54.571155+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
@@ -76,9 +140,25 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T10:21:27.281922+00:00",
+      "fetchedAt": "2026-08-19T11:18:54.897617+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T20:21:27.281922+10:00",
+      "fetchedAtLocal": "2026-08-19T21:18:54.897617+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Shopping",
+      "sourceCategories": [
+        "Shopping"
+      ]
+    },
+    {
+      "id": "7f4891fe0d825df078b71df43abab122",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/shopping/kitchen",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T11:18:55.342423+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T21:18:55.342423+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Shopping",
       "sourceCategories": [
@@ -92,9 +172,25 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T10:21:46.239918+00:00",
+      "fetchedAt": "2026-08-19T11:19:29.284659+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T20:21:46.239918+10:00",
+      "fetchedAtLocal": "2026-08-19T21:19:29.284659+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Topic",
+      "sourceCategories": [
+        "Topic"
+      ]
+    },
+    {
+      "id": "a4a9e83af1b4aeee0940212194595383",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/best-deals-of-the-week-26ol",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-19T11:19:31.659838+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-19T21:19:31.659838+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
@@ -108,9 +204,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T10:21:49.563322+00:00",
+      "fetchedAt": "2026-08-19T11:19:33.184355+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T20:21:49.563322+10:00",
+      "fetchedAtLocal": "2026-08-19T21:19:33.184355+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Topic",
       "sourceCategories": [
@@ -118,35 +214,19 @@
       ]
     },
     {
-      "id": "615c72cfdbda86084103b37d2f894423",
+      "id": "adf7047ff66fda1af0a1bc6c314e7da6",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/africa-lez",
+      "link": "https://www.9news.com.au/australia-news/tas/nurse-and-mother-of-two-senselessly-killed-by-man-fleeing-crime-scene-20260727-p60iui.html",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-19T10:22:06.925106+00:00",
+      "fetchedAt": "2026-08-19T11:19:45.753673+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T20:22:06.925106+10:00",
+      "fetchedAtLocal": "2026-08-19T21:19:45.753673+10:00",
       "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Topic",
+      "sourceCategory": "Australia-news",
       "sourceCategories": [
-        "Topic"
-      ]
-    },
-    {
-      "id": "67ea771699c2f567d26c0a2ab7995ca0",
-      "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/israel-iran-conflict-6hpk",
-      "summary": "",
-      "publishedAt": null,
-      "source": "9News",
-      "fetchedAt": "2026-08-19T10:22:07.634790+00:00",
-      "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-19T20:22:07.634790+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Topic",
-      "sourceCategories": [
-        "Topic"
+        "Australia-news"
       ]
     }
   ]
