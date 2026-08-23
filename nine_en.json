@@ -1,9 +1,9 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-23T00:54:17.350897+00:00",
-  "generatedAtLocal": "2026-08-23T10:54:17.350897+10:00",
+  "generatedAt": "2026-08-23T02:21:55.262505+00:00",
+  "generatedAtLocal": "2026-08-23T12:21:55.262505+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 3,
+  "count": 6,
   "items": [
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
@@ -12,9 +12,9 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-23T00:53:09.000877+00:00",
+      "fetchedAt": "2026-08-23T02:21:04.929481+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-23T10:53:09.000877+10:00",
+      "fetchedAtLocal": "2026-08-23T12:21:04.929481+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -28,9 +28,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-23T00:53:16.352613+00:00",
+      "fetchedAt": "2026-08-23T02:21:09.810524+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-23T10:53:16.352613+10:00",
+      "fetchedAtLocal": "2026-08-23T12:21:09.810524+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -44,13 +44,61 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-23T00:53:19.808301+00:00",
+      "fetchedAt": "2026-08-23T02:21:11.972856+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-23T10:53:19.808301+10:00",
+      "fetchedAtLocal": "2026-08-23T12:21:11.972856+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
         "Tv-shows"
+      ]
+    },
+    {
+      "id": "40bbf3072756cb52a349f1b8684be139",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/shopping/style-fashion",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-23T02:21:12.540316+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-23T12:21:12.540316+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Shopping",
+      "sourceCategories": [
+        "Shopping"
+      ]
+    },
+    {
+      "id": "043b57b380c997911b966a96ef49afa4",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/nrl-265k",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-23T02:21:25.618585+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-23T12:21:25.618585+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Topic",
+      "sourceCategories": [
+        "Topic"
+      ]
+    },
+    {
+      "id": "17d60c066603129f52eeb70d5a588950",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/property-market-60w",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-23T02:21:32.550230+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-23T12:21:32.550230+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Topic",
+      "sourceCategories": [
+        "Topic"
       ]
     }
   ]
