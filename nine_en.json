@@ -1,10 +1,26 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-24T09:39:40.998151+00:00",
-  "generatedAtLocal": "2026-08-24T19:39:40.998151+10:00",
+  "generatedAt": "2026-08-24T10:31:45.803429+00:00",
+  "generatedAtLocal": "2026-08-24T20:31:45.803429+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 3,
+  "count": 9,
   "items": [
+    {
+      "id": "d81a5873c70df25fc41a5a21c29053d3",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/australia-news/nsw",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-24T10:30:51.993321+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-24T20:30:51.993321+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Australia-news",
+      "sourceCategories": [
+        "Australia-news"
+      ]
+    },
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
       "title": "Middle East | Latest News Headlines | Nine.com.au",
@@ -12,13 +28,45 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-24T09:38:51.041169+00:00",
+      "fetchedAt": "2026-08-24T10:30:54.964815+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-24T19:38:51.041169+10:00",
+      "fetchedAtLocal": "2026-08-24T20:30:54.964815+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
         "World-news"
+      ]
+    },
+    {
+      "id": "66ad60d79285f62d2f19bd491c76c465",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/sport/combat-sports",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-24T10:30:56.687731+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-24T20:30:56.687731+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Sport",
+      "sourceCategories": [
+        "Sport"
+      ]
+    },
+    {
+      "id": "40237b1d6f14d634df0aea0ce62601e3",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/lifestyle/royals",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-24T10:30:58.055443+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-24T20:30:58.055443+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Lifestyle",
+      "sourceCategories": [
+        "Lifestyle"
       ]
     },
     {
@@ -28,9 +76,25 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-24T09:38:51.885901+00:00",
+      "fetchedAt": "2026-08-24T10:30:59.668128+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-24T19:38:51.885901+10:00",
+      "fetchedAtLocal": "2026-08-24T20:30:59.668128+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Travel",
+      "sourceCategories": [
+        "Travel"
+      ]
+    },
+    {
+      "id": "3e5681d4723e51f24c650e5f0861706a",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/travel/international",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-24T10:30:59.885191+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-24T20:30:59.885191+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -44,13 +108,45 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-24T09:38:54.192994+00:00",
+      "fetchedAt": "2026-08-24T10:31:01.779848+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-24T19:38:54.192994+10:00",
+      "fetchedAtLocal": "2026-08-24T20:31:01.779848+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
         "Tv-shows"
+      ]
+    },
+    {
+      "id": "b92a881ada8f80462a405e83b72f8a16",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/shopping/health-fitness",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-24T10:31:02.832964+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-24T20:31:02.832964+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Shopping",
+      "sourceCategories": [
+        "Shopping"
+      ]
+    },
+    {
+      "id": "2375addf989a6fc8715d5a7ba3a2cb4d",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/world-news/middle-east/melbourne-crime-kingpin-jailed-for-life-in-iraq-20260728-p60jex.html",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-24T10:31:35.417127+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-24T20:31:35.417127+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
       ]
     }
   ]
