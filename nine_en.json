@@ -1,9 +1,9 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-25T20:20:52.046166+00:00",
-  "generatedAtLocal": "2026-08-26T06:20:52.046166+10:00",
+  "generatedAt": "2026-08-25T21:21:26.377102+00:00",
+  "generatedAtLocal": "2026-08-26T07:21:26.377102+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 4,
+  "count": 5,
   "items": [
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
@@ -12,13 +12,29 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-25T20:20:13.168975+00:00",
+      "fetchedAt": "2026-08-25T21:20:43.698802+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T06:20:13.168975+10:00",
+      "fetchedAtLocal": "2026-08-26T07:20:43.698802+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
         "World-news"
+      ]
+    },
+    {
+      "id": "66ad60d79285f62d2f19bd491c76c465",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/sport/combat-sports",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-25T21:20:45.813708+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-26T07:20:45.813708+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Sport",
+      "sourceCategories": [
+        "Sport"
       ]
     },
     {
@@ -28,9 +44,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-25T20:20:15.009895+00:00",
+      "fetchedAt": "2026-08-25T21:20:46.818819+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T06:20:15.009895+10:00",
+      "fetchedAtLocal": "2026-08-26T07:20:46.818819+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -44,9 +60,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-25T20:20:16.199618+00:00",
+      "fetchedAt": "2026-08-25T21:20:47.397674+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T06:20:16.199618+10:00",
+      "fetchedAtLocal": "2026-08-26T07:20:47.397674+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
@@ -54,19 +70,19 @@
       ]
     },
     {
-      "id": "043b57b380c997911b966a96ef49afa4",
+      "id": "adf7047ff66fda1af0a1bc6c314e7da6",
       "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/nrl-265k",
+      "link": "https://www.9news.com.au/australia-news/tas/nurse-and-mother-of-two-senselessly-killed-by-man-fleeing-crime-scene-20260727-p60iui.html",
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-25T20:20:18.679545+00:00",
+      "fetchedAt": "2026-08-25T21:21:08.761373+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T06:20:18.679545+10:00",
+      "fetchedAtLocal": "2026-08-26T07:21:08.761373+10:00",
       "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Topic",
+      "sourceCategory": "Australia-news",
       "sourceCategories": [
-        "Topic"
+        "Australia-news"
       ]
     }
   ]
