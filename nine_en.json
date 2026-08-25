@@ -1,7 +1,7 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-25T06:34:29.506922+00:00",
-  "generatedAtLocal": "2026-08-25T16:34:29.506922+10:00",
+  "generatedAt": "2026-08-25T07:39:19.208030+00:00",
+  "generatedAtLocal": "2026-08-25T17:39:19.208030+10:00",
   "localTimezone": "Australia/Sydney",
   "count": 4,
   "items": [
@@ -12,13 +12,29 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-25T06:33:40.741890+00:00",
+      "fetchedAt": "2026-08-25T07:38:20.907020+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-25T16:33:40.741890+10:00",
+      "fetchedAtLocal": "2026-08-25T17:38:20.907020+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
         "World-news"
+      ]
+    },
+    {
+      "id": "7824ad2542613bf9698d214268af88c6",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/sport/nrl/nrlw",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-25T07:38:21.560956+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-25T17:38:21.560956+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Sport",
+      "sourceCategories": [
+        "Sport"
       ]
     },
     {
@@ -28,9 +44,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-25T06:33:42.531097+00:00",
+      "fetchedAt": "2026-08-25T07:38:27.065255+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-25T16:33:42.531097+10:00",
+      "fetchedAtLocal": "2026-08-25T17:38:27.065255+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -44,29 +60,13 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-25T06:33:42.897418+00:00",
+      "fetchedAt": "2026-08-25T07:38:29.643156+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-25T16:33:42.897418+10:00",
+      "fetchedAtLocal": "2026-08-25T17:38:29.643156+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
         "Tv-shows"
-      ]
-    },
-    {
-      "id": "3af7d0e8fa3c525403bf11164538656d",
-      "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/community-6ima",
-      "summary": "",
-      "publishedAt": null,
-      "source": "9News",
-      "fetchedAt": "2026-08-25T06:33:52.771864+00:00",
-      "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-25T16:33:52.771864+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Topic",
-      "sourceCategories": [
-        "Topic"
       ]
     }
   ]
