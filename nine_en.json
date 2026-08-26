@@ -1,9 +1,9 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-26T10:28:43.842998+00:00",
-  "generatedAtLocal": "2026-08-26T20:28:43.842998+10:00",
+  "generatedAt": "2026-08-26T11:22:58.599273+00:00",
+  "generatedAtLocal": "2026-08-26T21:22:58.599273+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 4,
+  "count": 5,
   "items": [
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
@@ -12,29 +12,13 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-26T10:27:41.315534+00:00",
+      "fetchedAt": "2026-08-26T11:22:21.880602+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T20:27:41.315534+10:00",
+      "fetchedAtLocal": "2026-08-26T21:22:21.880602+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
         "World-news"
-      ]
-    },
-    {
-      "id": "7824ad2542613bf9698d214268af88c6",
-      "title": "Page not found",
-      "link": "https://www.9news.com.au/sport/nrl/nrlw",
-      "summary": "",
-      "publishedAt": null,
-      "source": "9News",
-      "fetchedAt": "2026-08-26T10:27:41.675511+00:00",
-      "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T20:27:41.675511+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Sport",
-      "sourceCategories": [
-        "Sport"
       ]
     },
     {
@@ -44,9 +28,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-26T10:27:44.639544+00:00",
+      "fetchedAt": "2026-08-26T11:22:22.611552+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T20:27:44.639544+10:00",
+      "fetchedAtLocal": "2026-08-26T21:22:22.611552+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -60,13 +44,45 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-26T10:27:45.508449+00:00",
+      "fetchedAt": "2026-08-26T11:22:24.355495+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T20:27:45.508449+10:00",
+      "fetchedAtLocal": "2026-08-26T21:22:24.355495+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
         "Tv-shows"
+      ]
+    },
+    {
+      "id": "043b57b380c997911b966a96ef49afa4",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/nrl-265k",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-26T11:22:28.846286+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-26T21:22:28.846286+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Topic",
+      "sourceCategories": [
+        "Topic"
+      ]
+    },
+    {
+      "id": "2375addf989a6fc8715d5a7ba3a2cb4d",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/world-news/middle-east/melbourne-crime-kingpin-jailed-for-life-in-iraq-20260728-p60jex.html",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-26T11:22:47.942613+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-26T21:22:47.942613+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
       ]
     }
   ]
