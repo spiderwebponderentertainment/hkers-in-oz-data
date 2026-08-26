@@ -1,9 +1,9 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-26T06:36:39.676670+00:00",
-  "generatedAtLocal": "2026-08-26T16:36:39.676670+10:00",
+  "generatedAt": "2026-08-26T07:41:39.794135+00:00",
+  "generatedAtLocal": "2026-08-26T17:41:39.794135+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 3,
+  "count": 4,
   "items": [
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
@@ -12,9 +12,9 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-26T06:35:21.822986+00:00",
+      "fetchedAt": "2026-08-26T07:40:14.883376+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T16:35:21.822986+10:00",
+      "fetchedAtLocal": "2026-08-26T17:40:14.883376+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -28,9 +28,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-26T06:35:27.507049+00:00",
+      "fetchedAt": "2026-08-26T07:40:20.938568+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T16:35:27.507049+10:00",
+      "fetchedAtLocal": "2026-08-26T17:40:20.938568+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -44,13 +44,29 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-26T06:35:28.203841+00:00",
+      "fetchedAt": "2026-08-26T07:40:25.953216+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T16:35:28.203841+10:00",
+      "fetchedAtLocal": "2026-08-26T17:40:25.953216+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
         "Tv-shows"
+      ]
+    },
+    {
+      "id": "2375addf989a6fc8715d5a7ba3a2cb4d",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/world-news/middle-east/melbourne-crime-kingpin-jailed-for-life-in-iraq-20260728-p60jex.html",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-26T07:41:27.815705+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-26T17:41:27.815705+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
       ]
     }
   ]
