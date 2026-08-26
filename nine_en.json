@@ -1,10 +1,26 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-26T04:33:42.811969+00:00",
-  "generatedAtLocal": "2026-08-26T14:33:42.811969+10:00",
+  "generatedAt": "2026-08-26T05:28:03.826852+00:00",
+  "generatedAtLocal": "2026-08-26T15:28:03.826852+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 2,
+  "count": 5,
   "items": [
+    {
+      "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
+      "title": "Middle East | Latest News Headlines | Nine.com.au",
+      "link": "https://www.9news.com.au/world-news/middle-east",
+      "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-26T05:27:19.439576+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-26T15:27:19.439576+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
+      ]
+    },
     {
       "id": "5bf0a1ab2daa21cf3244fa4d9a8f9746",
       "title": "Australia | Latest News Headlines | Nine.com.au",
@@ -12,9 +28,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-26T04:33:00.816711+00:00",
+      "fetchedAt": "2026-08-26T05:27:22.873740+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T14:33:00.816711+10:00",
+      "fetchedAtLocal": "2026-08-26T15:27:22.873740+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -28,13 +44,45 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-26T04:33:03.001892+00:00",
+      "fetchedAt": "2026-08-26T05:27:23.221070+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-26T14:33:03.001892+10:00",
+      "fetchedAtLocal": "2026-08-26T15:27:23.221070+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
         "Tv-shows"
+      ]
+    },
+    {
+      "id": "043b57b380c997911b966a96ef49afa4",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/topic/nrl-265k",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-26T05:27:25.688341+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-26T15:27:25.688341+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Topic",
+      "sourceCategories": [
+        "Topic"
+      ]
+    },
+    {
+      "id": "2375addf989a6fc8715d5a7ba3a2cb4d",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/world-news/middle-east/melbourne-crime-kingpin-jailed-for-life-in-iraq-20260728-p60jex.html",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-26T05:27:53.584620+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-26T15:27:53.584620+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
       ]
     }
   ]
