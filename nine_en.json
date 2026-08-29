@@ -1,9 +1,9 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-29T14:53:40.957337+00:00",
-  "generatedAtLocal": "2026-08-30T00:53:40.957337+10:00",
+  "generatedAt": "2026-08-29T18:06:47.838937+00:00",
+  "generatedAtLocal": "2026-08-30T04:06:47.838937+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 5,
+  "count": 3,
   "items": [
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
@@ -12,9 +12,9 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-29T14:52:45.693089+00:00",
+      "fetchedAt": "2026-08-29T18:05:48.447417+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-30T00:52:45.693089+10:00",
+      "fetchedAtLocal": "2026-08-30T04:05:48.447417+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
@@ -28,9 +28,9 @@
       "summary": "The latest Australia news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-29T14:52:48.157726+00:00",
+      "fetchedAt": "2026-08-29T18:05:56.385373+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-30T00:52:48.157726+10:00",
+      "fetchedAtLocal": "2026-08-30T04:05:56.385373+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Travel",
       "sourceCategories": [
@@ -44,45 +44,13 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-29T14:52:49.878048+00:00",
+      "fetchedAt": "2026-08-29T18:05:56.807065+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-30T00:52:49.878048+10:00",
+      "fetchedAtLocal": "2026-08-30T04:05:56.807065+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
         "Tv-shows"
-      ]
-    },
-    {
-      "id": "40bbf3072756cb52a349f1b8684be139",
-      "title": "Page not found",
-      "link": "https://www.9news.com.au/shopping/style-fashion",
-      "summary": "",
-      "publishedAt": null,
-      "source": "9News",
-      "fetchedAt": "2026-08-29T14:52:50.282521+00:00",
-      "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-30T00:52:50.282521+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Shopping",
-      "sourceCategories": [
-        "Shopping"
-      ]
-    },
-    {
-      "id": "043b57b380c997911b966a96ef49afa4",
-      "title": "Page not found",
-      "link": "https://www.9news.com.au/topic/nrl-265k",
-      "summary": "",
-      "publishedAt": null,
-      "source": "9News",
-      "fetchedAt": "2026-08-29T14:52:52.786733+00:00",
-      "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-30T00:52:52.786733+10:00",
-      "localTimezone": "Australia/Sydney",
-      "sourceCategory": "Topic",
-      "sourceCategories": [
-        "Topic"
       ]
     }
   ]
