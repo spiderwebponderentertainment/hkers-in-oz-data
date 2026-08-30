@@ -1,9 +1,9 @@
 {
   "source": "9News",
-  "generatedAt": "2026-08-30T18:21:31.022301+00:00",
-  "generatedAtLocal": "2026-08-31T04:21:31.022301+10:00",
+  "generatedAt": "2026-08-30T21:48:12.054460+00:00",
+  "generatedAtLocal": "2026-08-31T07:48:12.054460+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 2,
+  "count": 4,
   "items": [
     {
       "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
@@ -12,13 +12,45 @@
       "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-30T18:20:20.556972+00:00",
+      "fetchedAt": "2026-08-30T21:47:28.031709+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-31T04:20:20.556972+10:00",
+      "fetchedAtLocal": "2026-08-31T07:47:28.031709+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "World-news",
       "sourceCategories": [
         "World-news"
+      ]
+    },
+    {
+      "id": "7824ad2542613bf9698d214268af88c6",
+      "title": "Page not found",
+      "link": "https://www.9news.com.au/sport/nrl/nrlw",
+      "summary": "",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-30T21:47:28.276098+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-31T07:47:28.276098+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Sport",
+      "sourceCategories": [
+        "Sport"
+      ]
+    },
+    {
+      "id": "5bf0a1ab2daa21cf3244fa4d9a8f9746",
+      "title": "Australia | Latest News Headlines | Nine.com.au",
+      "link": "https://www.9news.com.au/travel/australia",
+      "summary": "The latest Australia news, articles and analysis from Nine.com.au",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-08-30T21:47:29.251743+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-08-31T07:47:29.251743+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Travel",
+      "sourceCategories": [
+        "Travel"
       ]
     },
     {
@@ -28,9 +60,9 @@
       "summary": "",
       "publishedAt": null,
       "source": "9News",
-      "fetchedAt": "2026-08-30T18:20:31.977569+00:00",
+      "fetchedAt": "2026-08-30T21:47:29.672897+00:00",
       "publishedAtLocal": null,
-      "fetchedAtLocal": "2026-08-31T04:20:31.977569+10:00",
+      "fetchedAtLocal": "2026-08-31T07:47:29.672897+10:00",
       "localTimezone": "Australia/Sydney",
       "sourceCategory": "Tv-shows",
       "sourceCategories": [
