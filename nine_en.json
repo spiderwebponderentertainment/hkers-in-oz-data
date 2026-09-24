@@ -1,8 +1,41 @@
 {
   "source": "9News",
-  "generatedAt": "2026-09-23T21:57:54.895419+00:00",
-  "generatedAtLocal": "2026-09-24T07:57:54.895419+10:00",
+  "generatedAt": "2026-09-24T00:11:24.410368+00:00",
+  "generatedAtLocal": "2026-09-24T10:11:24.410368+10:00",
   "localTimezone": "Australia/Sydney",
-  "count": 0,
-  "items": []
+  "count": 2,
+  "items": [
+    {
+      "id": "e38b6c77ca7d2b7c857c912c2a5320d5",
+      "title": "Middle East | Latest News Headlines | Nine.com.au",
+      "link": "https://www.9news.com.au/world-news/middle-east",
+      "summary": "The latest Middle East news, articles and analysis from Nine.com.au",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-09-24T00:10:32.875675+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-09-24T10:10:32.875675+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "World-news",
+      "sourceCategories": [
+        "World-news"
+      ]
+    },
+    {
+      "id": "5bf0a1ab2daa21cf3244fa4d9a8f9746",
+      "title": "Australia | Latest News Headlines | Nine.com.au",
+      "link": "https://www.9news.com.au/travel/australia",
+      "summary": "The latest Australia news, articles and analysis from Nine.com.au",
+      "publishedAt": null,
+      "source": "9News",
+      "fetchedAt": "2026-09-24T00:10:34.736808+00:00",
+      "publishedAtLocal": null,
+      "fetchedAtLocal": "2026-09-24T10:10:34.736808+10:00",
+      "localTimezone": "Australia/Sydney",
+      "sourceCategory": "Travel",
+      "sourceCategories": [
+        "Travel"
+      ]
+    }
+  ]
 }
